@@ -1,0 +1,549 @@
+---
+title: "Multi-Omic Report"
+subtitle: "Knight Cancer Research Institute"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+    toc_collapsed: TRUE
+    toc_depth: 3
+    number_sections: FALSE
+    theme: united
+    keep_md: TRUE
+params:
+  eset: NA
+  annot: NA
+  type: NA
+  log_transform: NA
+  data_format: NA
+  include_norm: NA
+  norm: NA
+  norm_plots: NA
+  eset_prenorm: NA
+  include_PCA: NA
+  PCA_densities: NA
+  PCA_ellipse: NA
+  PCA_label: NA
+  PCA_shape: NA
+  include_UMAP: NA
+  UMAP_shape: NA
+  UMAP_label: NA
+  include_MD: NA
+  MD_label: NA
+  MD_cutoff: NA
+  MD_contrasts: NA
+  include_corr: NA
+  corr_shape: NA
+  corr_type: NA
+  corr_numbers: NA
+  include_heatmap: NA
+  heatmap_kcluster: NA
+  heatmap_rowcluster: NA
+  heatmap_zscore: NA
+  include_volcano: NA
+  volcano_label: NA
+  volcano_yaxis: NA
+  volcano_FCcutoff: NA
+  volcano_Pcutoff: NA
+  contrasts: NA
+  model_equation: NA
+  linear_model: NA
+  include_dif_heatmap: NA
+  dif_heatmap_kcluster: NA
+  dif_heatmap_rowcluster: NA
+  dif_heatmap_zscore: NA
+  rendered_by_shiny: FALSE
+  species: NA
+  enrichment_database: NA
+  enrichment: NA
+  enrichplots: NA
+  enriched: NA
+  geneList: NA
+---
+
+> Right-click on any images to open them in a new tab, save them to your computer, or copy them.
+
+# Dataset Information
+
+An overview of the dataset uploaded and groups, contrasts, and expression set used in generating the analyses in the report.
+
+### Name
+
+The name that was provided in the annotation file. 
+
+```{r, echo = FALSE}
+print(params$type)
+```
+
+### Format
+
+The format of the data file uploaded.
+
+```{r, echo = FALSE}
+print(params$data_format)
+```
+
+### Contrasts
+
+Contrasts based on the user specified groups. Contrasts will compare each group to a reference group or all groups to one another.
+
+```{r, echo = FALSE}
+print(params$contrasts)
+```
+
+### Model Equation
+
+The format of the equation used to design the limma linear model which is used for differential analysis.
+
+```{r, echo = FALSE}
+print(params$model_equation)
+```
+
+### Expression Set
+
+An overview of the structure of the expression set used for the majority of analyses output, showing the first five rows.
+
+```{css, echo = FALSE}
+.scroll-400 {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-y: scroll;
+  background-color: inherit;
+}
+```
+
+```{r, echo = FALSE, class.output = "scroll-400"}
+library(kableExtra)
+knitr::kable(head(Biobase::exprs(params$eset))) %>%
+  kable_styling() %>%
+  scroll_box(width = "100%")
+```
+
+```{r Normalization Header, echo = FALSE, results = 'asis', eval = params$include_norm}
+cat("# Normalization")
+```
+
+```{r Normalization Description, echo = FALSE, results = 'asis', eval = params$include_norm}
+cat("Normalization plots show how the data changes pre and post normalization. If no normalization method was chosen, only one plot will be generated. MA plots, named for their two axes: log ratio (M) and mean values (A), are used to determine whether normalization needs to be performed before performing data analysis. The RLE or Relative Log Expression plot cannot be rendered if no normalization method was chosen.")
+```
+
+```{r Normalization Plots, echo = FALSE, fig.height = 7, fig.width = 10}
+if (params$include_norm == TRUE) {
+  if (params$rendered_by_shiny) {
+    shiny::setProgress(0.1)
+    shiny::incProgress(detail = paste("Generating normalization plots..."))} 
+  
+  for (plot in params$norm_plots){
+    if (plot != "MA"){
+      intensityNormPlots(eset = params$eset_prenorm,
+                         norm = params$norm, 
+                         type = params$type, 
+                         plottype = plot,
+                         zero_cutoff = 0.3,
+                         min_feature = 0.01,
+                         norm_by_batches = F,
+                         ma_array = NA)
+    } else if (plot == "MA"){
+      list <- 1:ncol(params$eset)
+      for (num in list){
+        intensityNormPlots(eset = params$eset_prenorm,
+                           norm = params$norm, 
+                           type = params$type, 
+                           plottype = plot,
+                           zero_cutoff = 0.3,
+                           min_feature = 0.01,
+                           norm_by_batches = F,
+                           ma_array = num)
+      }
+    }
+  }
+}
+```
+
+```{r PCA Header, echo = FALSE, results = 'asis', eval = params$include_PCA}
+cat("# PCA Plot")
+```
+
+```{r PCA Description, echo = FALSE, results = 'asis', eval = params$include_PCA}
+cat("Principal Component Analysis is a useful tool for assessing similarity among factors of a high dimensional data set.")
+```
+
+```{r PCA Plot, echo = FALSE, fig.height = 7, fig.width = 10}
+if (params$include_PCA == TRUE) {
+  if (params$rendered_by_shiny) {
+    shiny::setProgress(0.2)
+    shiny::incProgress(detail = paste("Generating PCA plot..."))} 
+  
+  plot(drawPCA(eset = params$eset, 
+               x_axis = "PC1", 
+               y_axis = "PC2", 
+               type = params$type, 
+               color = "Paired",
+               include_densities = params$PCA_densities,
+               shapes = params$PCA_shape,
+               title_add = "",
+               add_labels = params$PCA_label,
+               add_ellipse = params$PCA_ellipse))
+  
+  plot(drawPCApercentages(eset = params$eset))
+  
+}
+```
+
+```{r UMAP Header, echo = FALSE, results = 'asis', eval = params$include_UMAP}
+cat("# UMAP")
+```
+
+```{r UMAP Description, echo = FALSE, results = 'asis', eval = params$include_UMAP}
+cat("UMAP, or Uniform Manifold Approximation and Projection, is used for dimensionality reduction and data visualization. It is commonly compared to its predecessor, t-SNE or t-distributed Stochastic Neighbor Embedding, but is generally much faster.")
+```
+
+```{r UMAP, echo = FALSE, fig.height = 7, fig.width = 10}
+if (params$include_UMAP == TRUE) {
+  if (params$rendered_by_shiny) {
+    shiny::setProgress(0.3)
+    shiny::incProgress(detail = paste("Generating UMAP..."))} 
+  
+  plot(drawUMAP(eset = params$eset, 
+                type = params$type, 
+                color = "Paired", 
+                title_add = "",
+                add_labels = params$UMAP_label,
+                shapes = params$UMAP_shape))
+}
+```
+
+```{r MD Header, echo = FALSE, results = 'asis', eval = params$include_MD}
+cat("# MD Plots")
+```
+
+```{r MD Description, echo = FALSE, results = 'asis', eval = params$include_MD}
+cat("Mean-Difference plots are used to visualize log-intensity ratios, or 'differences', versus log-intensity averages, or 'means'.")
+```
+
+```{r MD Plots, echo = FALSE, fig.height = 7, fig.width = 10}
+if (params$include_MD == TRUE) {
+  if (params$rendered_by_shiny) {
+    shiny::setProgress(0.4)
+    shiny::incProgress(detail = paste("Generating MD plots..."))} 
+  
+  MD_contrasts <- params$MD_contrasts
+  
+  MD_contrasts_new <- gsub("-", "_", params$contrasts)
+  MD_contrasts_new <- paste("logfc_", MD_contrasts_new, sep = "")
+  
+  for (contrast in MD_contrasts_new){  
+    if (contrast %in% MD_contrasts){
+      plot(drawMD(annot = params$annot,
+                  eset = params$eset,
+                  fc_cutoff = params$MD_cutoff,
+                  up_color = 'red',
+                  down_color = 'royalblue',
+                  title_add = "",
+                  label_number = 20,
+                  add_labels = params$MD_label,
+                  label_specific = FALSE,
+                  label_specific_gene = NULL,
+                  return_logfc_index = FALSE,
+                  logfc_index_choice = contrast))
+    }
+  }
+}
+```
+
+```{r Correlation Header, echo = FALSE, results = 'asis', eval = params$include_corr}
+cat("# Correlation Plot")
+```
+
+```{r Correlation Description, echo = FALSE, results = 'asis', eval = params$include_corr}
+cat("The correlation plot shows relative correlation values among the groups of the data set. The legend on the right shows the color scale for positive and negative correlations.")
+```
+
+```{r Correlation Plot, echo = FALSE, fig.height = 10, fig.width = 10}
+if (params$include_corr == TRUE) {
+  if (params$rendered_by_shiny) {
+    shiny::setProgress(0.5)
+    shiny::incProgress(detail = paste("Generating correlation plot..."))}
+  
+  plot(variationPlot(eset = params$eset,
+                     plot = TRUE,
+                     numbers = params$corr_numbers,
+                     shape = params$corr_shape,
+                     neg_color = 'royalblue',
+                     pos_color = 'red',
+                     type = params$corr_type,
+                     title = "",
+                     report = TRUE))
+}
+```
+
+```{r Heatmap Header, echo = FALSE, results = 'asis', eval = params$include_heatmap}
+cat("# Heatmap")
+```
+
+```{r Heatmap Description, echo = FALSE, results = 'asis', eval = params$include_heatmap}
+cat("This heatmap shows a comprehensive overview of the data set and is not subsetted.")
+```
+
+```{r Heatmap, echo = FALSE, fig.height = 10, fig.width = 10}
+if (params$include_heatmap == TRUE) {
+  if (params$rendered_by_shiny) {
+    shiny::setProgress(0.6)
+    shiny::incProgress(detail = paste("Generating heatmap..."))}
+  
+  ComplexHeatmap::draw(drawHeatmaps(eset = params$eset, 
+                       type = params$type, 
+                       title_add = '', 
+                       mapcolor = "Spectral",
+                       group_color = "Emrld",
+                       annot = params$annot, 
+                       subset = 'subset_variable',
+                       show_row_names = NULL, 
+                       cluster_samples = params$heatmap_rowcluster, 
+                       kclustering = params$heatmap_kcluster,
+                       log2 = params$log_transform,
+                       zscore = params$heatmap_zscore,
+                       differential_heatmap = FALSE))
+}
+```
+
+```{r Volcano Header, echo = FALSE, results = 'asis', eval = params$include_volcano}
+cat("# Volcano Plots")
+```
+
+```{r Volcano Description, echo = FALSE, results = 'asis', eval = params$include_volcano}
+cat("The volcano plots are generated based on the options selected for the linear model. Each contrast (or if contrasts are not selected each group) has its own correlating volcano plot. The volcano plots show log fold change values on the x-axis and log p-values or adjusted p-values on the y-axis.")
+```
+
+```{r Volcano Plot, echo = FALSE, fig.height = 7, fig.width = 10}
+if (params$include_volcano == TRUE) {
+  if (params$rendered_by_shiny) {
+    shiny::setProgress(0.7)
+    shiny::incProgress(detail = paste("Generating volcano plots..."))} 
+  
+  for (item in params$contrasts){
+    table <- makeTopTable(fit = params$linear_model,
+                          coef = item,
+                          coef_options = params$contrasts,
+                          number_genes = nrow(params$eset),
+                          logfc_th_add = FALSE,
+                          logfc_th = NULL)
+    
+    plot(drawVolcano(dat = table, 
+                     type = params$type,
+                     add_labels = params$volcano_label,
+                     v = params$volcano_yaxis,
+                     up_color = 'red',
+                     down_color = 'royalblue',
+                     title_add = '',
+                     title_type = item,
+                     top_values = params$volcano_Pcutoff,
+                     top_fc = params$volcano_FCcutoff,
+                     label_specific = FALSE,
+                     label_specific_gene = NULL,
+                     label_number = 10))
+  }
+}
+```
+
+```{r Differential Heatmaps Header, echo = FALSE, results = 'asis', eval = params$include_dif_heatmap}
+cat("# Differential Heatmaps")
+```
+
+```{r Dif Heatmap Description, echo = FALSE, results = 'asis', eval = params$include_dif_heatmap}
+cat("The differential heatmaps are based on the output of the limma linear model. Each contrast or group has a corresponding heatmap, which is subset by the top 50  most variable rows/genes.")
+```
+
+```{r Differential Heatmaps, echo = FALSE, fig.height = 10, fig.width = 10}
+if (params$include_dif_heatmap == TRUE) {
+  if (params$rendered_by_shiny) {
+    shiny::setProgress(0.8)
+    shiny::incProgress(detail = paste("Generating differential heatmaps..."))} 
+  
+  for (item in params$contrasts){
+    table <- makeTopTable(fit = params$linear_model,
+                          coef = item,
+                          coef_options = params$contrasts,
+                          number_genes = nrow(params$eset),
+                          logfc_th_add = FALSE,
+                          logfc_th = NULL)
+    
+    ComplexHeatmap::draw(drawHeatmaps(eset = params$eset, 
+                         type = params$type, 
+                         title_add = '', 
+                         mapcolor = "Spectral",
+                         group_color = "Emrld",
+                         annot = params$annot, 
+                         subset = "top_table_rows",
+                         show_row_names = NULL, 
+                         cluster_samples = params$dif_heatmap_rowcluster, 
+                         kclustering = params$dif_heatmap_kcluster,
+                         log2 = params$log_transform,
+                         zscore = params$dif_heatmap_zscore,
+                         differential_heatmap = TRUE,
+                         top_table = table,
+                         dif_title = item,
+                         dif_number_rows = 50))
+  }
+}
+```
+
+# Enrichment
+
+```{r, echo = FALSE}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.8)
+  shiny::incProgress(detail = paste("Starting enrichment..."))} 
+```
+
+## Parameters
+
+### Species
+
+The selected species that correlated with the data input.
+
+```{r Enrichment Species, echo = FALSE}
+cat(params$species)
+```
+
+### Database
+
+Which gene set/pathway database was used for enrichment analysis.
+
+```{r Enrichment Database, echo = FALSE}
+cat(params$enrichment_database)
+```
+
+### Enrichment Type
+
+Either Gene Set Enrichment Analysis (GSEA) or Over-Representation Analysis (ORA).
+
+```{r Enrichment Type, echo = FALSE}
+if (params$enrichment == "GSEA"){
+  cat("GSEA")
+} else {
+  cat("ORA")
+}
+```
+
+```{r Dot Plot Header, echo = FALSE, results = 'asis', eval = ("dot" %in% params$enrichplots)}
+cat("## Dot Plot")
+```
+
+```{r Dot Plot Description, echo = FALSE, results = 'asis', eval = ("dot" %in% params$enrichplots)}
+cat("The dot plot depicts the enrichment scores (p-values) via color-coded points, and gene ratio as position relative to the x-axis. Gene count is represented by the size of the point.")
+```
+
+```{r Dot Plot, echo = FALSE, fig.height = 10, fig.width = 10}
+if ("dot" %in% params$enrichplots) {
+
+  if (params$enrichment == "GSEA"){
+    for (i in 1:length(params$enriched)){
+    plot(enrichedPlots(enriched = params$enriched[[i]],
+                       gmt = params$enrichment_database,
+                       geneList = params$geneList[[i]],
+                       contrast = params$contrasts[i],
+                       plottype = "dot",
+                       dotplot_title = paste("Dot Plot"),
+                       dotplot_categories = 20))
+    }
+  } else {
+    plot(enrichedPlots(enriched = params$enriched[[1]],
+                       gmt = params$enrichment_database,
+                       geneList = params$geneList[[1]],
+                       contrast = '',
+                       plottype = "dot",
+                       dotplot_title = paste("Dot Plot"),
+                       dotplot_categories = 20))
+  }
+}
+```
+
+```{r CNET Header, echo = FALSE, results = 'asis', eval = ("cnet" %in% params$enrichplots)}
+cat("## CNET Plot")
+```
+
+```{r CNET Plot Description, echo = FALSE, results = 'asis', eval = ("cnet" %in% params$enrichplots)}
+cat("The circular network plot is constructed based on hierarchical clustering of enriched terms, and connections represent similarities between terms. Nodes in the plot represent individual terms or gene sets, and the connections between nodes indicate relationships or similarities between them. The color of nodes can be customized based on adjusted p-values or combined scores. The size of nodes is proportional to the number of genes in each category.")
+```
+
+```{r CNET Plot, echo = FALSE, results = 'asis', eval = ("cnet" %in% params$enrichplots)}
+if ("cnet" %in% params$enrichplots) {
+  
+  if (params$enrichment == "GSEA"){
+    for (i in 1:length(params$enriched)){
+      plot(enrichedPlots(enriched = params$enriched[[i]],
+                         gmt = params$enrichment_database,
+                         geneList = params$geneList[[i]],
+                         contrast = params$contrasts[i],
+                         plottype = "cnet",
+                         cnetplot_categories = 5,
+                         cnetplot_layout = "kk",
+                         cnetplot_label = "category",
+                         cnet_title = paste("Gene Set Network Plot")))
+    }
+  } else {
+    plot(enrichedPlots(enriched = params$enriched[[1]],
+                       gmt = params$enrichment_database,
+                       geneList = params$geneList[[1]],
+                       contrast = '',
+                       plottype = "cnet",
+                       cnetplot_categories = 5,
+                       cnetplot_layout = "kk",
+                       cnetplot_label = "category",
+                       cnet_title = paste("Gene Set Network Plot")))
+  }
+}
+```
+
+```{r EMAP Header, echo = FALSE, results = 'asis', eval = ("emap" %in% params$enrichplots)}
+cat("## EMAP Plot")
+```
+
+```{r EMAP Plot Description, echo = FALSE, results = 'asis', eval = ("emap" %in% params$enrichplots)}
+cat("According to the Yu lab, \"the enrichment map organizes enriched terms into a network with edges connecting overlapping gene sets. In this way, mutually overlapping gene sets are tend to cluster together, making it easy to identify functional modules.\"")
+```
+
+```{r EMAP Plot, echo = FALSE, results = 'asis', eval = ("emap" %in% params$enrichplots)}
+if ("emap" %in% params$enrichplots) {
+  if (params$enrichment == "GSEA") {
+    for (i in 1:length(params$enriched)){
+      plot(enrichedPlots(enriched = params$enriched[[i]],
+                         gmt = params$enrichment_database,
+                         geneList = params$geneList[[i]],
+                         contrast = params$contrasts[i],
+                         plottype = "emap",
+                         emap_categories = 30,
+                         emap_title = paste("Enrichment Map"),
+                         emap_category_label = 0.5))
+    }
+      
+  } else {
+    plot(enrichedPlots(enriched = params$enriched[[1]],
+                       gmt = params$enrichment_database,
+                       geneList = params$geneList[[1]],
+                       contrast = '',
+                       plottype = "emap",
+                       emap_categories = 30,
+                       emap_title = paste("Enrichment Map"),
+                       emap_category_label = 0.5))
+  }
+}
+```
+
+```{r, echo = FALSE}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.9)
+  shiny::incProgress(detail = paste("Finishing up..."))} 
+```
+
+
+# Session Info
+
+See information about the system that generated this report below.
+
+```{r Session Info, echo = FALSE}
+utils::sessionInfo()
+```
+

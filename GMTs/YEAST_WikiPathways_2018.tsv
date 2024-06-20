@@ -1,0 +1,1243 @@
+pathway	feature_ids
+Glucose-1-phosphate metabolism_WP260	GSY1
+Glucose-1-phosphate metabolism_WP260	GLC3
+Glucose-1-phosphate metabolism_WP260	GSY2
+Glucose-1-phosphate metabolism_WP260	UGP1
+Glucose-1-phosphate metabolism_WP260	PGM2
+Glucose-1-phosphate metabolism_WP260	YHL012W
+Glucose-1-phosphate metabolism_WP260	PGM1
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE8
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE6
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE4
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE13
+De Novo Biosynthesis of Purine Nucleotides_WP203	IMD3
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE1
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE2
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE12
+De Novo Biosynthesis of Purine Nucleotides_WP203	IMD4
+De Novo Biosynthesis of Purine Nucleotides_WP203	IMD2
+De Novo Biosynthesis of Purine Nucleotides_WP203	YNK1
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE17
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE5,7
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADE16
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADK1
+De Novo Biosynthesis of Purine Nucleotides_WP203	ADK2
+De Novo Biosynthesis of Purine Nucleotides_WP203	RNR3
+De Novo Biosynthesis of Purine Nucleotides_WP203	RNR4
+De Novo Biosynthesis of Purine Nucleotides_WP203	GUA1
+De Novo Biosynthesis of Purine Nucleotides_WP203	RNR1
+De Novo Biosynthesis of Purine Nucleotides_WP203	RNR2
+RuMP cycle, containing Oxidative Branch of the Pentose Phosphate Pathway and formaldehyde assimilation_WP332	GND1
+RuMP cycle, containing Oxidative Branch of the Pentose Phosphate Pathway and formaldehyde assimilation_WP332	SOL3
+RuMP cycle, containing Oxidative Branch of the Pentose Phosphate Pathway and formaldehyde assimilation_WP332	SFA1
+RuMP cycle, containing Oxidative Branch of the Pentose Phosphate Pathway and formaldehyde assimilation_WP332	SOL4
+RuMP cycle, containing Oxidative Branch of the Pentose Phosphate Pathway and formaldehyde assimilation_WP332	GND2
+RuMP cycle, containing Oxidative Branch of the Pentose Phosphate Pathway and formaldehyde assimilation_WP332	FDH1
+RuMP cycle, containing Oxidative Branch of the Pentose Phosphate Pathway and formaldehyde assimilation_WP332	ZWF1
+RuMP cycle, containing Oxidative Branch of the Pentose Phosphate Pathway and formaldehyde assimilation_WP332	YJL068C
+Pentose Phosphate Pathway_WP369	GND1
+Pentose Phosphate Pathway_WP369	SOL3
+Pentose Phosphate Pathway_WP369	SOL4
+Pentose Phosphate Pathway_WP369	GND2
+Pentose Phosphate Pathway_WP369	RKI1
+Pentose Phosphate Pathway_WP369	TAL1
+Pentose Phosphate Pathway_WP369	TKL2
+Pentose Phosphate Pathway_WP369	TKL1
+Pentose Phosphate Pathway_WP369	ZWF1
+Pentose Phosphate Pathway_WP369	RPE1
+Fatty Acid Biosynthesis, Initial Steps_WP137	ACC1
+Fatty Acid Biosynthesis, Initial Steps_WP137	OAR1
+Fatty Acid Biosynthesis, Initial Steps_WP137	MCT1
+Fatty Acid Biosynthesis, Initial Steps_WP137	FAS1
+Fatty Acid Biosynthesis, Initial Steps_WP137	FAS2
+Fatty Acid Biosynthesis, Initial Steps_WP137	CEM1
+Fatty Acid Biosynthesis, Initial Steps_WP137	HFA1
+Glucose Repression_WP2836	SIP1
+Glucose Repression_WP2836	HXT7
+Glucose Repression_WP2836	SIP2
+Glucose Repression_WP2836	SNF1
+Glucose Repression_WP2836	GLC7
+Glucose Repression_WP2836	REG1
+Glucose Repression_WP2836	ELM1
+Glucose Repression_WP2836	GAL83
+Glucose Repression_WP2836	SAC1
+Glucose Repression_WP2836	SNF4
+Glucose Repression_WP2836	TOS1
+Nucleotide Metabolism_WP321	ADE13
+Nucleotide Metabolism_WP321	POL3
+Nucleotide Metabolism_WP321	IMD4
+Nucleotide Metabolism_WP321	PRS3
+Nucleotide Metabolism_WP321	PRS2
+Nucleotide Metabolism_WP321	POL1
+Nucleotide Metabolism_WP321	MIP1
+Nucleotide Metabolism_WP321	RNR3
+Nucleotide Metabolism_WP321	SPE3
+Threonine Biosynthesis_WP331	THR4
+Threonine Biosynthesis_WP331	THR1
+Threonine Biosynthesis_WP331	HOM2
+Threonine Biosynthesis_WP331	HOM3
+Threonine Biosynthesis_WP331	HOM6
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	SLC1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	CDS1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	CRD1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	GPT2
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	LPP1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	AYR1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	SCT1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	PSD1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	OPI3
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	PGS1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	PSD2
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	CPT1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	CHO2
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	CHO1
+Phosphatidic Acid and Phospholipid Biosynthesis_WP472	PAH1
+Isoleucine Biosynthesis_WP250	ILV6
+Isoleucine Biosynthesis_WP250	BAT2
+Isoleucine Biosynthesis_WP250	ILV5
+Isoleucine Biosynthesis_WP250	BAT1
+Isoleucine Biosynthesis_WP250	ILV2
+Isoleucine Biosynthesis_WP250	ILV3
+Isoleucine Biosynthesis_WP250	ILV1
+Genes of Meiotic Recombination_WP377	HOP1
+Genes of Meiotic Recombination_WP377	SPO11
+Genes of Meiotic Recombination_WP377	MEI4
+Genes of Meiotic Recombination_WP377	RAD50
+Genes of Meiotic Recombination_WP377	XRS2
+Genes of Meiotic Recombination_WP377	RAD51
+Genes of Meiotic Recombination_WP377	RAD52
+Genes of Meiotic Recombination_WP377	RAD57
+Genes of Meiotic Recombination_WP377	RAD55
+Genes of Meiotic Recombination_WP377	MEK1
+Genes of Meiotic Recombination_WP377	RED1
+Genes of Meiotic Recombination_WP377	REC102
+Genes of Meiotic Recombination_WP377	REC114
+Genes of Meiotic Recombination_WP377	MRE11
+Genes of Meiotic Recombination_WP377	REC104
+Genes of Meiotic Recombination_WP377	REC107
+Trehalose Anabolism_WP398	TSL1
+Trehalose Anabolism_WP398	ATH1
+Trehalose Anabolism_WP398	UGP1
+Trehalose Anabolism_WP398	NTH1
+Trehalose Anabolism_WP398	TPS3
+Trehalose Anabolism_WP398	TPS2
+Trehalose Anabolism_WP398	TPS1
+Trehalose Anabolism_WP398	PGM2
+Trehalose Anabolism_WP398	YHL012W
+Trehalose Anabolism_WP398	PGM1
+Glycolysis and Gluconeogenesis_WP515	PDC5
+Glycolysis and Gluconeogenesis_WP515	PDC6
+Glycolysis and Gluconeogenesis_WP515	TPI1
+Glycolysis and Gluconeogenesis_WP515	PDC1
+Glycolysis and Gluconeogenesis_WP515	MDH2
+Glycolysis and Gluconeogenesis_WP515	MDH3
+Glycolysis and Gluconeogenesis_WP515	PDA1
+Glycolysis and Gluconeogenesis_WP515	PDX1
+Glycolysis and Gluconeogenesis_WP515	PYK2
+Glycolysis and Gluconeogenesis_WP515	FBA1
+Glycolysis and Gluconeogenesis_WP515	LAT1
+Glycolysis and Gluconeogenesis_WP515	PYC2
+Glycolysis and Gluconeogenesis_WP515	PYC1
+Glycolysis and Gluconeogenesis_WP515	HXK2
+Glycolysis and Gluconeogenesis_WP515	HXK1
+Glycolysis and Gluconeogenesis_WP515	CDC19
+Glycolysis and Gluconeogenesis_WP515	OAC1
+Glycolysis and Gluconeogenesis_WP515	FBP1
+Glycolysis and Gluconeogenesis_WP515	MAE1
+Glycolysis and Gluconeogenesis_WP515	TDH3
+Glycolysis and Gluconeogenesis_WP515	TDH2
+Glycolysis and Gluconeogenesis_WP515	ACS2
+ACS1	ALD6
+ACS1	HEM15
+ACS1	ALD4
+ACS1	PDB1
+ACS1	ENO1
+ACS1	ENO2
+ACS1	GPM1
+ACS1	ADH4
+ACS1	ADH5
+ACS1	ADH2
+ACS1	ADH3
+ACS1	LPD1
+ACS1	ADH1
+ACS1	PGK1
+ACS1	PFK2
+ACS1	PGI1
+ACS1	MDH1
+ACS1	PFK1
+DNA Replication_WP13	RFA2
+DNA Replication_WP13	RFC4
+DNA Replication_WP13	RFC5
+DNA Replication_WP13	TAH11
+DNA Replication_WP13	RFC2
+DNA Replication_WP13	RFA1
+DNA Replication_WP13	RFC3
+DNA Replication_WP13	RFC1
+DNA Replication_WP13	CDC7
+DNA Replication_WP13	PRI1
+DNA Replication_WP13	CDC6
+DNA Replication_WP13	PRI2
+DNA Replication_WP13	UBI4
+DNA Replication_WP13	MCM4
+DNA Replication_WP13	MCM5
+DNA Replication_WP13	MCM6
+DNA Replication_WP13	MCM7
+DNA Replication_WP13	MCM2
+DNA Replication_WP13	MCM3
+DNA Replication_WP13	POL3
+DNA Replication_WP13	POL12
+DNA Replication_WP13	POL2
+POL30	POL31
+POL30	POL1
+POL30	MCM10
+POL30	RPL40A
+POL30	RPL40B
+POL30	CDC45
+POL30	ORC2
+POL30	DPB2
+Glycogen Catabolism_WP478	GPH1
+Glycogen Catabolism_WP478	SGA1
+Glycogen Catabolism_WP478	GDB1
+Glycogen Catabolism_WP478	PGM2
+Glycogen Catabolism_WP478	PGM1
+Glutamate degradation VII_WP559	AAT1
+Glutamate degradation VII_WP559	AAT2
+Glutamate degradation VII_WP559	FUM1
+Glutamate degradation VII_WP559	LSC2
+Glutamate degradation VII_WP559	LSC1
+Glutamate degradation VII_WP559	SDH4
+Glutamate degradation VII_WP559	SDH2
+Glutamate degradation VII_WP559	SDH3
+Glutamate degradation VII_WP559	SDH1
+Cytoplasmic Ribosomal Proteins_WP210	RPP1A
+Cytoplasmic Ribosomal Proteins_WP210	RPL33A
+Cytoplasmic Ribosomal Proteins_WP210	RPP1B
+Cytoplasmic Ribosomal Proteins_WP210	RPL21A
+Cytoplasmic Ribosomal Proteins_WP210	RPL33B
+Cytoplasmic Ribosomal Proteins_WP210	RPL21B
+Cytoplasmic Ribosomal Proteins_WP210	RPS24B
+Cytoplasmic Ribosomal Proteins_WP210	RPS24A
+Cytoplasmic Ribosomal Proteins_WP210	RPL17A
+Cytoplasmic Ribosomal Proteins_WP210	RPS8A
+Cytoplasmic Ribosomal Proteins_WP210	RPL2B
+Cytoplasmic Ribosomal Proteins_WP210	RPL2A
+Cytoplasmic Ribosomal Proteins_WP210	RPL17B
+Cytoplasmic Ribosomal Proteins_WP210	RPS8B
+Cytoplasmic Ribosomal Proteins_WP210	RPL25
+Cytoplasmic Ribosomal Proteins_WP210	RPL28
+Cytoplasmic Ribosomal Proteins_WP210	RPL29
+Cytoplasmic Ribosomal Proteins_WP210	RPL10
+Cytoplasmic Ribosomal Proteins_WP210	RPS6B
+Cytoplasmic Ribosomal Proteins_WP210	RPL20A
+Cytoplasmic Ribosomal Proteins_WP210	RPL20B
+Cytoplasmic Ribosomal Proteins_WP210	RPS23B
+RPS11A	RPS23A
+RPS11A	RPL1A
+RPS11A	RPL16A
+RPS11A	RPL16B
+RPS11A	RPS7B
+RPS11A	RPS7A
+RPS11A	RPS11B
+RPS11A	RPL1B
+RPS11A	RPS19A
+RPS11A	RPS5
+RPS11A	RPS2
+RPS11A	RPS3
+RPS11A	RPL9A
+RPS11A	RPS19B
+RPS11A	RPL9B
+RPS11A	RPL43A
+RPS11A	RPL43B
+RPS11A	RPL31A
+RPS11A	RPS1B
+RPS11A	RPS1A
+RPS11A	RPS22A
+RPS11A	RPL4B
+RPS11A	RPL4A
+RPS11A	RPL27A
+RPL15A	RPS10B
+RPL15A	RPL15B
+RPL15A	RPS10A
+RPL15A	RPS20
+RPL15A	RPS18B
+RPL15A	RPS18A
+RPL15A	RPL5
+RPL15A	RPL3
+RPL15A	RPL30
+RPL15A	RPL32
+RPL15A	RPP2B
+RPL15A	RPL14B
+RPL15A	RPP2A
+RPL15A	RPS0A
+RPL15A	RPL42A
+RPL15A	RPL42B
+RPL15A	RPS0B
+RPL15A	RPS15
+RPL15A	RPS9B
+RPL15A	RPS9A
+RPL15A	RPL26A
+RPL15A	RPL26B
+RPL15A	RPL14A
+RPL15A	RPS21A
+RPL39	RPL38
+RPL39	RPS12
+RPL39	RPS17B
+RPL39	RPS17A
+RPL39	RPS29B
+RPL39	RPS29A
+RPL39	RPS13
+RPL39	RPL13A
+RPL39	RPL13B
+RPL39	RPL41A
+RPL39	RPL41B
+RPL39	RPL6B
+RPL39	RPL6A
+RPL39	RPL37A
+RPL39	RPL37B
+RPL39	RPP0
+RPL39	RPS16B
+RPL39	RPS16A
+RPL39	RPS28B
+RPL39	RPL36B
+RPL39	RPL24A
+RPL39	RPL12A
+RPL39	RPL24B
+RPL39	RPL12B
+RPL40A	RPL40B
+RPL40A	RPL36A
+RPL40A	RPS31
+RPL40A	RPS27B
+RPL40A	RPS27A
+RPL40A	RPL35A
+RPL40A	RPL35B
+RPL40A	RPL23A
+RPL40A	RPL23B
+RPL40A	RPL11B
+RPL40A	RPL19A
+RPL40A	RPS14B
+RPL40A	RPS26B
+RPL40A	RPL19B
+RPL40A	RPS14A
+RPL40A	RPS30B
+RPL40A	RPS30A
+RPL40A	RPS6A
+RPL40A	RPS26A
+RPL40A	RPL8B
+RPL40A	RPL8A
+RPL40A	RLP7
+RPL40A	RPS4A
+RPL40A	RPL34A
+RPL22A	RPL34B
+RPL22A	RPS4B
+RPL22A	RPL22B
+RPL22A	RPL7B
+RPL22A	RPL18A
+RPL22A	RPS25A
+RPL22A	RPL18B
+RPL22A	RPL7A
+Glutathione-Glutaredoxin Redox Reaction_WP392	GPX1
+Glutathione-Glutaredoxin Redox Reaction_WP392	GLR1
+Glutathione-Glutaredoxin Redox Reaction_WP392	GPX2
+Glutathione-Glutaredoxin Redox Reaction_WP392	GTT1
+Glutathione-Glutaredoxin Redox Reaction_WP392	GTT2
+Glutathione-Glutaredoxin Redox Reaction_WP392	HYR1
+Fatty acid oxidation_WP91	POX1
+Fatty acid oxidation_WP91	FOX2
+Fatty acid oxidation_WP91	ECI1
+Fatty acid oxidation_WP91	FAT1
+Fatty acid oxidation_WP91	DCI1
+Fatty acid oxidation_WP91	FAA1
+Fatty acid oxidation_WP91	FAA2
+Fatty acid oxidation_WP91	FAA3
+Fatty acid oxidation_WP91	FAA4
+Fatty acid oxidation_WP91	POT1
+TCA Cycle - Detailed_WP296	IDH1
+TCA Cycle - Detailed_WP296	MDH2
+TCA Cycle - Detailed_WP296	MDH3
+TCA Cycle - Detailed_WP296	IDH2
+TCA Cycle - Detailed_WP296	KGD2
+TCA Cycle - Detailed_WP296	KGD1
+TCA Cycle - Detailed_WP296	PYC2
+TCA Cycle - Detailed_WP296	PYC1
+TCA Cycle - Detailed_WP296	FUM1
+TCA Cycle - Detailed_WP296	LSC2
+TCA Cycle - Detailed_WP296	LSC1
+TCA Cycle - Detailed_WP296	SDH4
+TCA Cycle - Detailed_WP296	ACO2
+TCA Cycle - Detailed_WP296	MDH1
+TCA Cycle - Detailed_WP296	CIT3
+TCA Cycle - Detailed_WP296	SDH2
+TCA Cycle - Detailed_WP296	CIT2
+TCA Cycle - Detailed_WP296	CIT1
+TCA Cycle - Detailed_WP296	SDH3
+TCA Cycle - Detailed_WP296	ACO1
+TCA Cycle - Detailed_WP296	SDH1
+Arginine Biosynthesis_WP275	ARG3
+Arginine Biosynthesis_WP275	ARG4
+Arginine Biosynthesis_WP275	ARG1
+Arginine Biosynthesis_WP275	ARG2
+Arginine Biosynthesis_WP275	ARG5,6
+Arginine Biosynthesis_WP275	ARG7
+Arginine Biosynthesis_WP275	ARG8
+Tryptophan Degradation_WP301	PDC5
+Tryptophan Degradation_WP301	PDC6
+Tryptophan Degradation_WP301	ARO9
+Tryptophan Degradation_WP301	SFA1
+Tryptophan Degradation_WP301	PDC1
+Tryptophan Degradation_WP301	ARO10
+Tryptophan Degradation_WP301	ARO8
+Tryptophan Degradation_WP301	ADH4
+Tryptophan Degradation_WP301	ADH5
+Tryptophan Degradation_WP301	ADH2
+Tryptophan Degradation_WP301	ADH3
+Tryptophan Degradation_WP301	ADH1
+Principle Pathways of Carbon Metabolism_WP112	TPI1
+Principle Pathways of Carbon Metabolism_WP112	RKI1
+Principle Pathways of Carbon Metabolism_WP112	PDA1
+Principle Pathways of Carbon Metabolism_WP112	GPP1
+Principle Pathways of Carbon Metabolism_WP112	PYK2
+Principle Pathways of Carbon Metabolism_WP112	GPP2
+Principle Pathways of Carbon Metabolism_WP112	LAT1
+Principle Pathways of Carbon Metabolism_WP112	PYC2
+Principle Pathways of Carbon Metabolism_WP112	GND1
+Principle Pathways of Carbon Metabolism_WP112	PYC1
+Principle Pathways of Carbon Metabolism_WP112	FUM1
+Principle Pathways of Carbon Metabolism_WP112	GPD1
+Principle Pathways of Carbon Metabolism_WP112	GND2
+Principle Pathways of Carbon Metabolism_WP112	TAL1
+Principle Pathways of Carbon Metabolism_WP112	LSC2
+Principle Pathways of Carbon Metabolism_WP112	GPD2
+Principle Pathways of Carbon Metabolism_WP112	LSC1
+Principle Pathways of Carbon Metabolism_WP112	MLS1
+Principle Pathways of Carbon Metabolism_WP112	CDC19
+Principle Pathways of Carbon Metabolism_WP112	ACO2
+Principle Pathways of Carbon Metabolism_WP112	TKL2
+Principle Pathways of Carbon Metabolism_WP112	FBP1
+Principle Pathways of Carbon Metabolism_WP112	MAE1
+TKL1	ACO1
+TKL1	ACS2
+TKL1	GLK1
+TKL1	LPD1
+TKL1	PGK1
+TKL1	SDH4
+TKL1	SDH2
+TKL1	ICL1
+TKL1	PCK1
+TKL1	SDH3
+TKL1	SDH1
+TKL1	PDC5
+TKL1	IDH1
+TKL1	PDC6
+TKL1	SOL3
+TKL1	PDC1
+TKL1	MDH2
+TKL1	SOL4
+TKL1	MDH3
+TKL1	IDH2
+TKL1	PDX1
+TKL1	GUT2
+TKL1	KGD2
+GUT1	KGD1
+GUT1	FBA1
+GUT1	RPE1
+GUT1	HXK2
+GUT1	HXK1
+GUT1	DAL7
+GUT1	TDH3
+GUT1	TDH2
+GUT1	TDH1
+GUT1	ACS1
+GUT1	ALD6
+GUT1	ALD4
+GUT1	PDB1
+GUT1	ENO1
+GUT1	ENO2
+GUT1	ZWF1
+GUT1	GPM1
+GUT1	ADH4
+GUT1	ADH5
+GUT1	ADH2
+GUT1	ADH3
+GUT1	ADH1
+GUT1	PFK2
+GUT1	IDP1
+PGI1	MDH1
+PGI1	CIT3
+PGI1	CIT2
+PGI1	CIT1
+PGI1	IDP2
+PGI1	PFK1
+Pentose Phosphate Pathway 2_WP670	SOL3
+Pentose Phosphate Pathway 2_WP670	SOL4
+Pentose Phosphate Pathway 2_WP670	SOL1
+Pentose Phosphate Pathway 2_WP670	RKI1
+Pentose Phosphate Pathway 2_WP670	SOL2
+Pentose Phosphate Pathway 2_WP670	ZWF1
+Pentose Phosphate Pathway 2_WP670	RPE1
+Pentose Phosphate Pathway 2_WP670	GND1
+Pentose Phosphate Pathway 2_WP670	GND2
+Pentose Phosphate Pathway 2_WP670	TAL1
+Pentose Phosphate Pathway 2_WP670	TKL2
+Pentose Phosphate Pathway 2_WP670	TKL1
+Lysine Biosynthesis_WP533	LYS9
+Lysine Biosynthesis_WP533	LYS2
+Lysine Biosynthesis_WP533	LYS1
+Lysine Biosynthesis_WP533	LYS20
+Lysine Biosynthesis_WP533	LYS21
+Lysine Biosynthesis_WP533	LYS4
+Lysine Biosynthesis_WP533	LYS12
+Phospholipid Biosynthesis_WP9	PGS1
+Phospholipid Biosynthesis_WP9	CDS1
+Phospholipid Biosynthesis_WP9	CRD1
+Phospholipid Biosynthesis_WP9	PSD2
+Phospholipid Biosynthesis_WP9	CHO2
+Phospholipid Biosynthesis_WP9	CHO1
+Phospholipid Biosynthesis_WP9	PSD1
+Phospholipid Biosynthesis_WP9	OPI3
+Leucine Biosynthesis_WP180	BAT2
+Leucine Biosynthesis_WP180	LEU4
+Leucine Biosynthesis_WP180	BAT1
+Leucine Biosynthesis_WP180	LEU2
+Leucine Biosynthesis_WP180	LEU1
+Leucine Biosynthesis_WP180	LEU9
+Isoleucine, Leucine, and Valine biosynthesis_WP198	ILV6
+Isoleucine, Leucine, and Valine biosynthesis_WP198	BAT2
+Isoleucine, Leucine, and Valine biosynthesis_WP198	ILV5
+Isoleucine, Leucine, and Valine biosynthesis_WP198	LEU4
+Isoleucine, Leucine, and Valine biosynthesis_WP198	BAT1
+Isoleucine, Leucine, and Valine biosynthesis_WP198	LEU2
+Isoleucine, Leucine, and Valine biosynthesis_WP198	LEU1
+Isoleucine, Leucine, and Valine biosynthesis_WP198	ILV2
+Isoleucine, Leucine, and Valine biosynthesis_WP198	ILV3
+Isoleucine, Leucine, and Valine biosynthesis_WP198	ILV1
+Isoleucine, Leucine, and Valine biosynthesis_WP198	LEU9
+Protein Modifications_WP346	CDC43
+Protein Modifications_WP346	RAM1
+Protein Modifications_WP346	RAM2
+Protein Modifications_WP346	PMT5
+Protein Modifications_WP346	PMT4
+Protein Modifications_WP346	PMT6
+Protein Modifications_WP346	PMT1
+Protein Modifications_WP346	BPL1
+Protein Modifications_WP346	PMT3
+Protein Modifications_WP346	PMT2
+Protein Modifications_WP346	BET2
+Glutamate biosynthesis_WP77	GLT1
+Glutamate biosynthesis_WP77	GDH1
+Glutamate biosynthesis_WP77	GDH3
+Glutamate biosynthesis_WP77	GLN1
+Glutamate biosynthesis_WP77	IDP1
+Glutamate biosynthesis_WP77	IDP2
+Glutamate biosynthesis_WP77	IDP3
+Serine-isocitrate lyase pathway_WP390	MDH2
+Serine-isocitrate lyase pathway_WP390	MDH3
+Serine-isocitrate lyase pathway_WP390	ENO1
+Serine-isocitrate lyase pathway_WP390	ENO2
+Serine-isocitrate lyase pathway_WP390	ERR1
+Serine-isocitrate lyase pathway_WP390	ERR2
+Serine-isocitrate lyase pathway_WP390	GPM1
+Serine-isocitrate lyase pathway_WP390	ERR3
+Serine-isocitrate lyase pathway_WP390	GPM3
+Serine-isocitrate lyase pathway_WP390	ACO2
+Serine-isocitrate lyase pathway_WP390	MDH1
+Serine-isocitrate lyase pathway_WP390	CIT3
+Serine-isocitrate lyase pathway_WP390	CIT2
+Serine-isocitrate lyase pathway_WP390	ICL1
+Serine-isocitrate lyase pathway_WP390	ACO1
+Serine-isocitrate lyase pathway_WP390	SHM1
+Serine-isocitrate lyase pathway_WP390	SHM2
+De Novo NAD Biosynthesis_WP541	BNA5
+De Novo NAD Biosynthesis_WP541	BNA4
+De Novo NAD Biosynthesis_WP541	BNA3
+De Novo NAD Biosynthesis_WP541	BNA2
+De Novo NAD Biosynthesis_WP541	BNA1
+De Novo NAD Biosynthesis_WP541	NMA1
+De Novo NAD Biosynthesis_WP541	NMA2
+De Novo NAD Biosynthesis_WP541	QNS1
+De Novo NAD Biosynthesis_WP541	BNA6
+Valine Biosynthesis_WP2	ILV6
+Valine Biosynthesis_WP2	BAT2
+Valine Biosynthesis_WP2	BAT1
+Valine Biosynthesis_WP2	ILV2
+Valine Biosynthesis_WP2	ILV3
+Sulfate assimilation pathway II_WP579	MET3
+Sulfate assimilation pathway II_WP579	MET14
+Sulfate assimilation pathway II_WP579	MET10
+Sulfate assimilation pathway II_WP579	MET17
+Sulfate assimilation pathway II_WP579	MET5
+Sulfate assimilation pathway II_WP579	MET16
+MAPK Signaling Pathway_WP510	FKS1
+MAPK Signaling Pathway_WP510	YPD1
+MAPK Signaling Pathway_WP510	FUS1
+MAPK Signaling Pathway_WP510	MID2
+MAPK Signaling Pathway_WP510	PKC1
+MAPK Signaling Pathway_WP510	MSN2
+MAPK Signaling Pathway_WP510	DIG1
+MAPK Signaling Pathway_WP510	CDC42
+MAPK Signaling Pathway_WP510	SHO1
+MAPK Signaling Pathway_WP510	HOG1
+MAPK Signaling Pathway_WP510	STE20
+MAPK Signaling Pathway_WP510	FAR1
+MAPK Signaling Pathway_WP510	MF(ALPHA)1
+MAPK Signaling Pathway_WP510	MCM1
+MAPK Signaling Pathway_WP510	SSK2
+MAPK Signaling Pathway_WP510	SSK1
+MAPK Signaling Pathway_WP510	SLG1
+MAPK Signaling Pathway_WP510	KSS1
+MAPK Signaling Pathway_WP510	MKK1
+MAPK Signaling Pathway_WP510	GLO1
+MAPK Signaling Pathway_WP510	STE3
+MAPK Signaling Pathway_WP510	STE4
+SWI4	RAS2
+SWI4	STE2
+SWI4	BNI1
+SWI4	MFA1
+SWI4	SLT2
+SWI4	RHO1
+SWI4	CTT1
+SWI4	STE18
+SWI4	CDC24
+SWI4	STE7
+SWI4	PBS2
+SWI4	STE5
+SWI4	MSG5
+SWI4	GPA1
+SWI4	TEC1
+SWI4	BEM1
+SWI4	BCK1
+SWI4	MLP1
+SWI4	RLM1
+SWI4	STE11
+SWI4	GSC2
+SWI4	STE12
+SWI4	SLN1
+Isoleucine Degradation_WP178	PDC5
+Isoleucine Degradation_WP178	BAT2
+Isoleucine Degradation_WP178	PDC6
+Isoleucine Degradation_WP178	PDC1
+Isoleucine Degradation_WP178	BAT1
+Isoleucine Degradation_WP178	ARO10
+Isoleucine Degradation_WP178	THI3
+Tryptophan Degradation Via Kynurenine_WP452	BNA5
+Tryptophan Degradation Via Kynurenine_WP452	BNA4
+Tryptophan Degradation Via Kynurenine_WP452	BNA3
+Tryptophan Degradation Via Kynurenine_WP452	BNA2
+Tryptophan Degradation Via Kynurenine_WP452	BNA1
+Tryptophan Degradation Via Kynurenine_WP452	BNA6
+Proteasome Degradation_WP158	PRE1
+Proteasome Degradation_WP158	PRE3
+Proteasome Degradation_WP158	PRE2
+Proteasome Degradation_WP158	PRE10
+Proteasome Degradation_WP158	UBI4
+Proteasome Degradation_WP158	PRE9
+Proteasome Degradation_WP158	PRE8
+Proteasome Degradation_WP158	PRE5
+Proteasome Degradation_WP158	PRE4
+Proteasome Degradation_WP158	PRE7
+Proteasome Degradation_WP158	PRE6
+Proteasome Degradation_WP158	RPT5
+Proteasome Degradation_WP158	UBC5
+Proteasome Degradation_WP158	RPT6
+Proteasome Degradation_WP158	UBC4
+Proteasome Degradation_WP158	RPT3
+Proteasome Degradation_WP158	UBA1
+Proteasome Degradation_WP158	RPT4
+Proteasome Degradation_WP158	RPT1
+Proteasome Degradation_WP158	RPT2
+Proteasome Degradation_WP158	HTA2
+Proteasome Degradation_WP158	HTZ1
+PUP1	RPN8
+PUP1	RPN5
+PUP1	PUP2
+PUP1	RPN6
+PUP1	RPN3
+PUP1	RPN1
+PUP1	RPN10
+PUP1	RPN2
+PUP1	RPN9
+PUP1	NAS6
+PUP1	SCL1
+PUP1	NAS2
+PUP1	RPN12
+Glycolysis_WP253	TPI1
+Glycolysis_WP253	ENO1
+Glycolysis_WP253	PYK2
+Glycolysis_WP253	ENO2
+Glycolysis_WP253	FBA1
+Glycolysis_WP253	ERR1
+Glycolysis_WP253	ERR2
+Glycolysis_WP253	GPM1
+Glycolysis_WP253	ERR3
+Glycolysis_WP253	GPM3
+Glycolysis_WP253	PGK1
+Glycolysis_WP253	PFK2
+Glycolysis_WP253	CDC19
+Glycolysis_WP253	PGI1
+Glycolysis_WP253	TDH3
+Glycolysis_WP253	TDH2
+Glycolysis_WP253	PFK1
+Glycolysis_WP253	TDH1
+TCA Cycle_WP490	IDH1
+TCA Cycle_WP490	MDH2
+TCA Cycle_WP490	MDH3
+TCA Cycle_WP490	IDH2
+TCA Cycle_WP490	PDA1
+TCA Cycle_WP490	PDX1
+TCA Cycle_WP490	KGD2
+TCA Cycle_WP490	KGD1
+TCA Cycle_WP490	LAT1
+TCA Cycle_WP490	PYC2
+TCA Cycle_WP490	PYC1
+TCA Cycle_WP490	FUM1
+TCA Cycle_WP490	LSC2
+TCA Cycle_WP490	LSC1
+TCA Cycle_WP490	DAL7
+TCA Cycle_WP490	MLS1
+TCA Cycle_WP490	ACO2
+TCA Cycle_WP490	MAE1
+TCA Cycle_WP490	ACO1
+TCA Cycle_WP490	PDB1
+TCA Cycle_WP490	LPD1
+TCA Cycle_WP490	IDP1
+SDH4	MDH1
+SDH4	CIT3
+SDH4	SDH2
+SDH4	CIT2
+SDH4	ICL1
+SDH4	CIT1
+SDH4	SDH3
+SDH4	IDP2
+SDH4	SDH1
+m-cresol degradation_WP172	AAD3
+m-cresol degradation_WP172	AAD10
+m-cresol degradation_WP172	AAD4
+m-cresol degradation_WP172	AAD14
+m-cresol degradation_WP172	AAD15
+m-cresol degradation_WP172	AAD6
+Phenylalanine Degradation_WP573	PDC5
+Phenylalanine Degradation_WP573	ADH4
+Phenylalanine Degradation_WP573	ADH5
+Phenylalanine Degradation_WP573	ADH2
+Phenylalanine Degradation_WP573	PDC6
+Phenylalanine Degradation_WP573	ADH3
+Phenylalanine Degradation_WP573	ARO9
+Phenylalanine Degradation_WP573	SFA1
+Phenylalanine Degradation_WP573	PDC1
+Phenylalanine Degradation_WP573	ADH1
+Phenylalanine Degradation_WP573	ARO10
+Cholesterol Biosynthesis_WP132	IDI1
+Cholesterol Biosynthesis_WP132	ERG20
+Cholesterol Biosynthesis_WP132	ERG12
+Cholesterol Biosynthesis_WP132	ERG13
+Cholesterol Biosynthesis_WP132	ERG11
+Cholesterol Biosynthesis_WP132	ERG25
+Cholesterol Biosynthesis_WP132	ERG26
+Cholesterol Biosynthesis_WP132	HMG1
+Cholesterol Biosynthesis_WP132	MVD1
+Cholesterol Biosynthesis_WP132	ERG1
+Cholesterol Biosynthesis_WP132	ERG3
+Cholesterol Biosynthesis_WP132	ERG7
+Cholesterol Biosynthesis_WP132	ERG9
+Histidine Biosynthesis_WP514	HIS4
+Histidine Biosynthesis_WP514	HIS3
+Histidine Biosynthesis_WP514	HIS6
+Histidine Biosynthesis_WP514	HIS5
+Histidine Biosynthesis_WP514	HIS7
+Histidine Biosynthesis_WP514	HIS2
+Histidine Biosynthesis_WP514	HIS1
+Serine and Glycine biosynthesis_WP218	SER3
+Serine and Glycine biosynthesis_WP218	SER1
+Serine and Glycine biosynthesis_WP218	SER2
+Serine and Glycine biosynthesis_WP218	SHM1
+Serine and Glycine biosynthesis_WP218	SHM2
+Panothenate and Coenzyme A Biosynthesis_WP462	FMS1
+Panothenate and Coenzyme A Biosynthesis_WP462	ALD2
+Panothenate and Coenzyme A Biosynthesis_WP462	ALD3
+Panothenate and Coenzyme A Biosynthesis_WP462	ECM31
+Panothenate and Coenzyme A Biosynthesis_WP462	CAB5
+Panothenate and Coenzyme A Biosynthesis_WP462	CAB4
+Panothenate and Coenzyme A Biosynthesis_WP462	CAB3
+Panothenate and Coenzyme A Biosynthesis_WP462	PAN5
+Panothenate and Coenzyme A Biosynthesis_WP462	SIS2
+Panothenate and Coenzyme A Biosynthesis_WP462	CAB2
+Panothenate and Coenzyme A Biosynthesis_WP462	CAB1
+Panothenate and Coenzyme A Biosynthesis_WP462	VHS3
+Panothenate and Coenzyme A Biosynthesis_WP462	PAN6
+De Novo Biosyn. of Pyrimidine Deoxyribonucleotides_WP36	CDC21
+De Novo Biosyn. of Pyrimidine Deoxyribonucleotides_WP36	YNK1
+De Novo Biosyn. of Pyrimidine Deoxyribonucleotides_WP36	RNR3
+De Novo Biosyn. of Pyrimidine Deoxyribonucleotides_WP36	CDC8
+De Novo Biosyn. of Pyrimidine Deoxyribonucleotides_WP36	RNR4
+De Novo Biosyn. of Pyrimidine Deoxyribonucleotides_WP36	RNR1
+De Novo Biosyn. of Pyrimidine Deoxyribonucleotides_WP36	DUT1
+De Novo Biosyn. of Pyrimidine Deoxyribonucleotides_WP36	RNR2
+Non-Oxidative Branch of the Pentose Pathway_WP379	GND1
+Non-Oxidative Branch of the Pentose Pathway_WP379	GND2
+Non-Oxidative Branch of the Pentose Pathway_WP379	RKI1
+Non-Oxidative Branch of the Pentose Pathway_WP379	TAL1
+Non-Oxidative Branch of the Pentose Pathway_WP379	TKL2
+Non-Oxidative Branch of the Pentose Pathway_WP379	TKL1
+Non-Oxidative Branch of the Pentose Pathway_WP379	ZWF1
+Non-Oxidative Branch of the Pentose Pathway_WP379	RPE1
+Nutrient control of ribosomal gene expression_WP2869	RRN3
+Nutrient control of ribosomal gene expression_WP2869	TPK3
+Nutrient control of ribosomal gene expression_WP2869	YAK1
+Nutrient control of ribosomal gene expression_WP2869	TPK2
+Nutrient control of ribosomal gene expression_WP2869	GPR1
+Nutrient control of ribosomal gene expression_WP2869	TPK1
+Nutrient control of ribosomal gene expression_WP2869	SCH9
+Nutrient control of ribosomal gene expression_WP2869	RPO21
+Nutrient control of ribosomal gene expression_WP2869	FHL1
+Nutrient control of ribosomal gene expression_WP2869	CRF1
+Nutrient control of ribosomal gene expression_WP2869	IFH1
+Nutrient control of ribosomal gene expression_WP2869	RPO31
+Nutrient control of ribosomal gene expression_WP2869	CYR1
+Nutrient control of ribosomal gene expression_WP2869	SFP1
+Nutrient control of ribosomal gene expression_WP2869	MAF1
+Tryptophan Biosynthesis_WP165	TRP5
+Tryptophan Biosynthesis_WP165	TRP4
+Tryptophan Biosynthesis_WP165	TRP3
+Tryptophan Biosynthesis_WP165	TRP2
+Tryptophan Biosynthesis_WP165	TRP1
+Xylulose-monophosphate cycle_WP361	FBA1
+Xylulose-monophosphate cycle_WP361	DAK2
+Xylulose-monophosphate cycle_WP361	FBP1
+Xylulose-monophosphate cycle_WP361	TKL1
+Xylulose-monophosphate cycle_WP361	DAK1
+Aerobic Glycerol Catabolism_WP224	TPI1
+Aerobic Glycerol Catabolism_WP224	GUT2
+Aerobic Glycerol Catabolism_WP224	ENO1
+Aerobic Glycerol Catabolism_WP224	PYK2
+Aerobic Glycerol Catabolism_WP224	GUT1
+Aerobic Glycerol Catabolism_WP224	ENO2
+Aerobic Glycerol Catabolism_WP224	ERR1
+Aerobic Glycerol Catabolism_WP224	ERR2
+Aerobic Glycerol Catabolism_WP224	GPM1
+Aerobic Glycerol Catabolism_WP224	ERR3
+Aerobic Glycerol Catabolism_WP224	GPD1
+Aerobic Glycerol Catabolism_WP224	GPD2
+Aerobic Glycerol Catabolism_WP224	PGK1
+Aerobic Glycerol Catabolism_WP224	CDC19
+Aerobic Glycerol Catabolism_WP224	TDH3
+Aerobic Glycerol Catabolism_WP224	TDH2
+Aerobic Glycerol Catabolism_WP224	TDH1
+Superpathway of Glutamate Biosynthesis_WP191	GLT1
+Superpathway of Glutamate Biosynthesis_WP191	GDH1
+Superpathway of Glutamate Biosynthesis_WP191	GDH3
+Superpathway of Glutamate Biosynthesis_WP191	GLN1
+Superpathway of Glutamate Biosynthesis_WP191	IDP1
+Superpathway of Glutamate Biosynthesis_WP191	IDP2
+Superpathway of Glutamate Biosynthesis_WP191	IDP3
+Gluconeogenesis_WP156	MDH2
+Gluconeogenesis_WP156	MDH3
+Gluconeogenesis_WP156	MDH1
+Gluconeogenesis_WP156	ERR1
+Gluconeogenesis_WP156	MAE1
+Gluconeogenesis_WP156	ERR2
+Gluconeogenesis_WP156	PCK1
+Riboflavin, FMN, and FAD Biosynthesis_WP381	RIB2
+Riboflavin, FMN, and FAD Biosynthesis_WP381	RIB3
+Riboflavin, FMN, and FAD Biosynthesis_WP381	RIB1
+Riboflavin, FMN, and FAD Biosynthesis_WP381	FAD1
+Riboflavin, FMN, and FAD Biosynthesis_WP381	FMN1
+Riboflavin, FMN, and FAD Biosynthesis_WP381	RIB7
+Riboflavin, FMN, and FAD Biosynthesis_WP381	RIB4
+Riboflavin, FMN, and FAD Biosynthesis_WP381	RIB5
+Sulfur Amino Acid biosynthesis_WP7	MET14
+Sulfur Amino Acid biosynthesis_WP7	STR3
+Sulfur Amino Acid biosynthesis_WP7	MET10
+Sulfur Amino Acid biosynthesis_WP7	STR2
+Sulfur Amino Acid biosynthesis_WP7	CYS4
+Sulfur Amino Acid biosynthesis_WP7	CYS3
+Sulfur Amino Acid biosynthesis_WP7	MET2
+Sulfur Amino Acid biosynthesis_WP7	MET3
+Sulfur Amino Acid biosynthesis_WP7	SAM2
+Sulfur Amino Acid biosynthesis_WP7	SAM1
+Sulfur Amino Acid biosynthesis_WP7	MET17
+Sulfur Amino Acid biosynthesis_WP7	MET5
+Sulfur Amino Acid biosynthesis_WP7	MET16
+Sulfur Amino Acid biosynthesis_WP7	MET6
+Asparagine degradation_WP432	AAT1
+Asparagine degradation_WP432	AAT2
+Asparagine degradation_WP432	ASP3-2
+Asparagine degradation_WP432	ASP3-1
+Asparagine degradation_WP432	ASP3-4
+Asparagine degradation_WP432	ASP3-3
+Asparagine degradation_WP432	ASP1
+Translation Factors_WP32	RPG1
+Translation Factors_WP32	GCN3
+Translation Factors_WP32	GCD2
+Translation Factors_WP32	GCD1
+Translation Factors_WP32	CAF20
+Translation Factors_WP32	GCD6
+Translation Factors_WP32	EFB1
+Translation Factors_WP32	GCD7
+Translation Factors_WP32	CDC33
+Translation Factors_WP32	SUP35
+Translation Factors_WP32	HCR1
+Translation Factors_WP32	TIF1
+Translation Factors_WP32	TEF4
+Translation Factors_WP32	PRT1
+Translation Factors_WP32	CLU1
+Translation Factors_WP32	TEF2
+Translation Factors_WP32	TEF1
+Translation Factors_WP32	FUN12
+Translation Factors_WP32	CAM1
+Translation Factors_WP32	NIP1
+Translation Factors_WP32	TIF4631
+Translation Factors_WP32	GCD11
+FIR1	GCD10
+FIR1	TIF4632
+FIR1	IFM1
+FIR1	TIF6
+FIR1	TIF5
+FIR1	ANB1
+FIR1	TIF3
+FIR1	TIF2
+FIR1	SUI3
+FIR1	SUI2
+FIR1	SUI1
+FIR1	TIF34
+FIR1	HYP2
+FIR1	TIF11
+FIR1	TIF35
+FIR1	SUP45
+FIR1	EFT1
+FIR1	EFT2
+Mitochondrial tRNA Synthetases_WP62	VAS1
+Mitochondrial tRNA Synthetases_WP62	MSR1
+Mitochondrial tRNA Synthetases_WP62	SLM5
+Mitochondrial tRNA Synthetases_WP62	MST1
+Mitochondrial tRNA Synthetases_WP62	HTS1
+Mitochondrial tRNA Synthetases_WP62	MSM1
+Mitochondrial tRNA Synthetases_WP62	MSK1
+Mitochondrial tRNA Synthetases_WP62	ISM1
+Mitochondrial tRNA Synthetases_WP62	NAM2
+Mitochondrial tRNA Synthetases_WP62	MSF1
+Mitochondrial tRNA Synthetases_WP62	MSE1
+Mitochondrial tRNA Synthetases_WP62	MSD1
+Mitochondrial tRNA Synthetases_WP62	MSY1
+Mitochondrial tRNA Synthetases_WP62	MSW1
+Cell Cycle and Cell Division_WP414	MAD3
+Cell Cycle and Cell Division_WP414	MAD2
+Cell Cycle and Cell Division_WP414	MAD1
+Cell Cycle and Cell Division_WP414	GIN4
+Cell Cycle and Cell Division_WP414	BRN1
+Cell Cycle and Cell Division_WP414	ESP1
+Cell Cycle and Cell Division_WP414	CDC20
+Cell Cycle and Cell Division_WP414	LTE1
+Cell Cycle and Cell Division_WP414	CDC14
+Cell Cycle and Cell Division_WP414	CRT10
+Cell Cycle and Cell Division_WP414	CDC15
+Cell Cycle and Cell Division_WP414	CDC16
+Cell Cycle and Cell Division_WP414	SCO1
+Cell Cycle and Cell Division_WP414	DOC1
+Cell Cycle and Cell Division_WP414	FAR1
+Cell Cycle and Cell Division_WP414	MEC1
+Cell Cycle and Cell Division_WP414	MEC3
+Cell Cycle and Cell Division_WP414	RAD9
+Cell Cycle and Cell Division_WP414	PHO81
+Cell Cycle and Cell Division_WP414	PHO80
+Cell Cycle and Cell Division_WP414	SWE1
+Cell Cycle and Cell Division_WP414	CDC23
+CDC26	CDH1
+CDC26	CDC27
+CDC26	CDC28
+CDC26	DBF20
+CDC26	PHO85
+CDC26	GRR1
+CDC26	FUS3
+CDC26	MOB1
+CDC26	NET1
+CDC26	RAD17
+CDC26	YCG1
+CDC26	UBA1
+CDC26	CAK1
+CDC26	MPS1
+CDC26	CLB5
+CDC26	MET30
+CDC26	SIC1
+CDC26	TUP1
+CDC26	CLB3
+CDC26	CLB1
+CDC26	SMC4
+CDC26	BFA1
+CDC26	SMC2
+CDC26	MBP1
+PDS1	CYC8
+PDS1	SKP1
+PDS1	MIH1
+PDS1	APC11
+PDS1	PEX2
+PDS1	CDC7
+PDS1	CDC6
+PDS1	CDC5
+PDS1	CDC4
+PDS1	PCL1
+PDS1	CHK1
+PDS1	SCC2
+PDS1	MCM4
+PDS1	MCM5
+PDS1	MCM6
+PDS1	MCM7
+PDS1	MCM2
+PDS1	MCM3
+PDS1	SWI5
+PDS1	SWI4
+PDS1	ORC6
+PDS1	ORC5
+PDS1	RAD24
+PDS1	ORC2
+ORC1	ORC4
+ORC1	ORC3
+ORC1	SWI6
+ORC1	RAD26
+ORC1	APC4
+ORC1	APC1
+ORC1	APC2
+ORC1	YCS4
+ORC1	SSL2
+ORC1	RAD53
+ORC1	CDC34
+ORC1	DBF4
+ORC1	DBF2
+ORC1	CKS1
+ORC1	RAD1
+ORC1	HSL1
+ORC1	CDC53
+ORC1	CDC45
+ORC1	DDC1
+ORC1	CLN3
+ORC1	TEM1
+ORC1	CLN1
+ORC1	HSL7
+ORC1	PHO5
+PHO4	APC9
+PHO4	BUB3
+PHO4	BUB2
+PHO4	BUB1
+PHO4	APC5
+PHO4	PHO2
+PHO4	DAM1
+Ribose and Deoxyribose Phosphate Metabolism_WP220	CDD1
+Ribose and Deoxyribose Phosphate Metabolism_WP220	RBK1
+Ribose and Deoxyribose Phosphate Metabolism_WP220	RKI1
+Ribose and Deoxyribose Phosphate Metabolism_WP220	TKL2
+Ribose and Deoxyribose Phosphate Metabolism_WP220	TKL1
+Isoleucine and Valine biosynthesis_WP359	ILV6
+Isoleucine and Valine biosynthesis_WP359	BAT2
+Isoleucine and Valine biosynthesis_WP359	ILV5
+Isoleucine and Valine biosynthesis_WP359	LEU4
+Isoleucine and Valine biosynthesis_WP359	BAT1
+Isoleucine and Valine biosynthesis_WP359	LEU2
+Isoleucine and Valine biosynthesis_WP359	LEU1
+Isoleucine and Valine biosynthesis_WP359	ILV2
+Isoleucine and Valine biosynthesis_WP359	ILV3
+Isoleucine and Valine biosynthesis_WP359	ILV1
+Isoleucine and Valine biosynthesis_WP359	LEU9
+Eukaryotic Transcription Initiation_WP425	SSL2
+Eukaryotic Transcription Initiation_WP425	TAF13
+Eukaryotic Transcription Initiation_WP425	RPO21
+Eukaryotic Transcription Initiation_WP425	TAF12
+Eukaryotic Transcription Initiation_WP425	RET1
+Eukaryotic Transcription Initiation_WP425	TOA2
+Eukaryotic Transcription Initiation_WP425	RPC25
+Eukaryotic Transcription Initiation_WP425	KIN28
+Eukaryotic Transcription Initiation_WP425	TAF9
+Eukaryotic Transcription Initiation_WP425	TAF7
+Eukaryotic Transcription Initiation_WP425	RAD3
+Eukaryotic Transcription Initiation_WP425	TAF6
+Eukaryotic Transcription Initiation_WP425	TAF5
+Eukaryotic Transcription Initiation_WP425	RPO26
+Eukaryotic Transcription Initiation_WP425	RPC19
+Eukaryotic Transcription Initiation_WP425	TFB4
+Eukaryotic Transcription Initiation_WP425	TFB3
+Eukaryotic Transcription Initiation_WP425	TFB2
+Eukaryotic Transcription Initiation_WP425	RPB3
+Eukaryotic Transcription Initiation_WP425	RPB2
+Eukaryotic Transcription Initiation_WP425	RPB11
+Eukaryotic Transcription Initiation_WP425	RPC11
+SPT15	SUA7
+SPT15	RPB7
+SPT15	RPB8
+SPT15	RPB5
+SPT15	RPA190
+SPT15	CCL1
+SPT15	TFG2
+SPT15	RPA135
+UDP-Glucose Conversion_WP109	PPA2
+UDP-Glucose Conversion_WP109	IPP1
+UDP-Glucose Conversion_WP109	UGP1
+UDP-Glucose Conversion_WP109	GAL10
+UDP-Glucose Conversion_WP109	YHL012W
+Octane oxidation_WP552	FAT1
+Octane oxidation_WP552	FAA1
+Octane oxidation_WP552	FAA2
+Octane oxidation_WP552	FAA3
+Octane oxidation_WP552	FAA4
+NAD Salvage Pathway_WP171	NPT1
+NAD Salvage Pathway_WP171	NMA1
+NAD Salvage Pathway_WP171	NMA2
+NAD Salvage Pathway_WP171	QNS1
+NAD Salvage Pathway_WP171	NPY1
+NAD Salvage Pathway_WP171	PNC1
+Upiquinone Q Prenylation_WP287	COQ5
+Upiquinone Q Prenylation_WP287	CAT5
+Upiquinone Q Prenylation_WP287	COQ3
+Upiquinone Q Prenylation_WP287	COQ2
+Upiquinone Q Prenylation_WP287	COQ6
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	HIS4
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	HIS3
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	HIS6
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	HIS5
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	PRS3
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	PRS2
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	PRS5
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	PRS4
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	ADE8
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	ADE6
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	ADE4
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	IMD3
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	ADE1
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	ADE2
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	IMD4
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	IMD2
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	YNK1
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	ADE5,7
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	URA10
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	RNR3
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	RNR4
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	RNR1
+Superpathway of Histidine, Purine, and Pyrimidine_WP416	RNR2
+NA	URA4
+NA	URA3
+NA	URA2
+NA	URA1
+NA	ADE13
+NA	ADE17
+NA	URA8
+NA	URA7
+NA	ADE16
+NA	URA6
+NA	URA5
+NA	PRS1
+NA	GUA1
+NA	HIS2
+NA	HIS1
+Toluene degradation_WP60	AAD3
+Toluene degradation_WP60	AAD10
+Toluene degradation_WP60	AAD4
+Toluene degradation_WP60	AAD14
+Toluene degradation_WP60	AAD15
+Toluene degradation_WP60	AAD6
+Trehalose Degradation, Low Osmolarity_WP70	ATH1
+Trehalose Degradation, Low Osmolarity_WP70	NTH1
+Trehalose Degradation, Low Osmolarity_WP70	GLK1
+Trehalose Degradation, Low Osmolarity_WP70	NTH2
+Trehalose Degradation, Low Osmolarity_WP70	TPS2
+Threonine and Methionine biosynthesis_WP423	MET2
+Threonine and Methionine biosynthesis_WP423	THR4
+Threonine and Methionine biosynthesis_WP423	THR1
+Threonine and Methionine biosynthesis_WP423	HOM2
+Threonine and Methionine biosynthesis_WP423	MET17
+Threonine and Methionine biosynthesis_WP423	HOM3
+Threonine and Methionine biosynthesis_WP423	MET6
+Threonine and Methionine biosynthesis_WP423	HOM6
+P-cymene Degradation_WP181	AAD3
+P-cymene Degradation_WP181	AAD10
+P-cymene Degradation_WP181	AAD4
+P-cymene Degradation_WP181	AAD14
+P-cymene Degradation_WP181	AAD15
+P-cymene Degradation_WP181	AAD6
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	YNK1
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA8
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA7
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA6
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA10
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA5
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA4
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA3
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA2
+De Novo Biosynthesis of Pyrimidine Ribonucleotides_WP92	URA1
+Glutamate degradation III_WP503	LSC2
+Glutamate degradation III_WP503	LSC1
+Glutamate degradation III_WP503	GDH2
+Glutamate degradation III_WP503	KGD2
+Glutamate degradation III_WP503	KGD1
+Lactose degradation and Galactose metabolism_WP546	GAL7
+Lactose degradation and Galactose metabolism_WP546	GAL10
+Lactose degradation and Galactose metabolism_WP546	PGM2
+Lactose degradation and Galactose metabolism_WP546	GAL1
+Lactose degradation and Galactose metabolism_WP546	PGM1
+Starch and Cellulose Biosynthesis_WP257	GLC3
+Starch and Cellulose Biosynthesis_WP257	UGP1
+Starch and Cellulose Biosynthesis_WP257	PGM2
+Starch and Cellulose Biosynthesis_WP257	YHL012W
+Starch and Cellulose Biosynthesis_WP257	PGM1
+Sphingolipid Metabolism_WP370	IPT1
+Sphingolipid Metabolism_WP370	LAC1
+Sphingolipid Metabolism_WP370	TSC10
+Sphingolipid Metabolism_WP370	LCB3
+Sphingolipid Metabolism_WP370	CSG2
+Sphingolipid Metabolism_WP370	LCB2
+Sphingolipid Metabolism_WP370	LCB1
+Sphingolipid Metabolism_WP370	SUR2
+Sphingolipid Metabolism_WP370	SUR1
+Sphingolipid Metabolism_WP370	LCB5
+Sphingolipid Metabolism_WP370	LCB4
+Sphingolipid Metabolism_WP370	AUR1
+Sphingolipid Metabolism_WP370	YPC1
+Sphingolipid Metabolism_WP370	YDC1
+Sphingolipid Metabolism_WP370	YSR3
+Sphingolipid Metabolism_WP370	LAG1
+Colanic Acid Building Blocks Biosynthesis_WP121	UGP1
+Colanic Acid Building Blocks Biosynthesis_WP121	GAL7
+Colanic Acid Building Blocks Biosynthesis_WP121	GAL10
+Colanic Acid Building Blocks Biosynthesis_WP121	PSA1
+Colanic Acid Building Blocks Biosynthesis_WP121	PMI40
+Colanic Acid Building Blocks Biosynthesis_WP121	SEC53
+Colanic Acid Building Blocks Biosynthesis_WP121	GAL1
+Colanic Acid Building Blocks Biosynthesis_WP121	YHL012W
+Cytoplasmic tRNA Synthetases_WP219	ILS1
+Cytoplasmic tRNA Synthetases_WP219	ALA1
+Cytoplasmic tRNA Synthetases_WP219	DED81
+Cytoplasmic tRNA Synthetases_WP219	TYS1
+Cytoplasmic tRNA Synthetases_WP219	KRS1
+Cytoplasmic tRNA Synthetases_WP219	GRS2
+Cytoplasmic tRNA Synthetases_WP219	FRS1
+Cytoplasmic tRNA Synthetases_WP219	DPS1
+Cytoplasmic tRNA Synthetases_WP219	SES1
+Cytoplasmic tRNA Synthetases_WP219	GUS1
+Cytoplasmic tRNA Synthetases_WP219	GLN4
+Cytoplasmic tRNA Synthetases_WP219	CDC60
+Cytoplasmic tRNA Synthetases_WP219	FRS2
+Cytoplasmic tRNA Synthetases_WP219	WRS1
+Cytoplasmic tRNA Synthetases_WP219	MES1
+Cytoplasmic tRNA Synthetases_WP219	YNL247W
+Cytoplasmic tRNA Synthetases_WP219	AIM10
+Cytoplasmic tRNA Synthetases_WP219	YDR341C
+Cytoplasmic tRNA Synthetases_WP219	THS1
+Salvage Pathways of Pyrimidine Ribonucleotides_WP95	CDD1
+Salvage Pathways of Pyrimidine Ribonucleotides_WP95	URH1
+Salvage Pathways of Pyrimidine Ribonucleotides_WP95	YNK1
+Salvage Pathways of Pyrimidine Ribonucleotides_WP95	FCY1
+Salvage Pathways of Pyrimidine Ribonucleotides_WP95	URK1
+Salvage Pathways of Pyrimidine Ribonucleotides_WP95	FUR1
+Sulfate assimilation and copper detoxification_WP4173	SUL1
+Sulfate assimilation and copper detoxification_WP4173	MET14
+Sulfate assimilation and copper detoxification_WP4173	STR3
+Sulfate assimilation and copper detoxification_WP4173	MET10
+Sulfate assimilation and copper detoxification_WP4173	STR2
+Sulfate assimilation and copper detoxification_WP4173	CYS4
+Sulfate assimilation and copper detoxification_WP4173	CYS3
+Sulfate assimilation and copper detoxification_WP4173	FTR1
+Sulfate assimilation and copper detoxification_WP4173	MET2
+Sulfate assimilation and copper detoxification_WP4173	MET3
+Sulfate assimilation and copper detoxification_WP4173	THR4
+Sulfate assimilation and copper detoxification_WP4173	THR1
+Sulfate assimilation and copper detoxification_WP4173	FRE1
+Sulfate assimilation and copper detoxification_WP4173	MET17
+Sulfate assimilation and copper detoxification_WP4173	MET5
+Sulfate assimilation and copper detoxification_WP4173	FET3
+Sulfate assimilation and copper detoxification_WP4173	SSU1
+Sulfate assimilation and copper detoxification_WP4173	MET16

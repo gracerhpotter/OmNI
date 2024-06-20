@@ -1,0 +1,4414 @@
+pathway	feature_ids
+VEGFR 3 signaling	Vegfd
+VEGFR 3 signaling	Vegfc
+VEGFR 3 signaling	Casp9
+VEGFR 3 signaling	Bad
+VEGFR 3 signaling	Shc1
+VEGFR 3 signaling	Nos3
+VEGFR 3 signaling	Itpkc
+VEGFR 3 signaling	Flt4
+VEGFR 3 signaling	Mapk1
+VEGFR 3 signaling	Plcg1
+VEGFR 3 signaling	Mapk3
+VEGFR 3 signaling	Akt1
+VEGFR 3 signaling	Pik3cg
+VEGFR 3 signaling	Grb2
+Integrin mediated cell adhesion	Mapk7
+Integrin mediated cell adhesion	Ilk
+Integrin mediated cell adhesion	rCG_48194
+Integrin mediated cell adhesion	Braf
+Integrin mediated cell adhesion	Mapk4
+Integrin mediated cell adhesion	Itgam
+Integrin mediated cell adhesion	Pdpk1
+Integrin mediated cell adhesion	Akt3
+Integrin mediated cell adhesion	Akt2
+Integrin mediated cell adhesion	Rac2
+Integrin mediated cell adhesion	Itgae
+Integrin mediated cell adhesion	rCG_51808
+Integrin mediated cell adhesion	Rac1
+Integrin mediated cell adhesion	Itgal
+Integrin mediated cell adhesion	Vav3
+Integrin mediated cell adhesion	Rap1b
+Integrin mediated cell adhesion	Selenop
+Integrin mediated cell adhesion	Itgad
+Integrin mediated cell adhesion	Itgb6
+Integrin mediated cell adhesion	Vav2
+Integrin mediated cell adhesion	Itga2b
+Integrin mediated cell adhesion	Itgb1
+Integrin mediated cell adhesion	Mylk2
+Integrin mediated cell adhesion	Itgb4
+Integrin mediated cell adhesion	Itgb5
+Integrin mediated cell adhesion	Itgb2
+Integrin mediated cell adhesion	Itgb3
+Integrin mediated cell adhesion	Tln1
+Integrin mediated cell adhesion	Raf1
+Integrin mediated cell adhesion	Crk
+Integrin mediated cell adhesion	Sos1
+Integrin mediated cell adhesion	Pik3r2
+Integrin mediated cell adhesion	Vcl
+Integrin mediated cell adhesion	Vasp
+Integrin mediated cell adhesion	Arhgef7
+Integrin mediated cell adhesion	Shc3
+Integrin mediated cell adhesion	Src
+Integrin mediated cell adhesion	Itga8
+Integrin mediated cell adhesion	Itga6
+Integrin mediated cell adhesion	Map2k6
+Integrin mediated cell adhesion	Bcar1
+Integrin mediated cell adhesion	Pak1
+Integrin mediated cell adhesion	Itga3
+Integrin mediated cell adhesion	Itga4
+Integrin mediated cell adhesion	Itga1
+Integrin mediated cell adhesion	Itga2
+Integrin mediated cell adhesion	Rho
+Integrin mediated cell adhesion	Pak6
+Integrin mediated cell adhesion	Fyn
+Integrin mediated cell adhesion	Pak3
+Integrin mediated cell adhesion	Pak2
+Integrin mediated cell adhesion	Pak4
+Integrin mediated cell adhesion	Cdc42
+Integrin mediated cell adhesion	Mapk12
+Integrin mediated cell adhesion	Capn9
+Integrin mediated cell adhesion	Git2
+Integrin mediated cell adhesion	Cav3
+Integrin mediated cell adhesion	Capn5
+Integrin mediated cell adhesion	Cav2
+Integrin mediated cell adhesion	Cav1
+Integrin mediated cell adhesion	Capn7
+Integrin mediated cell adhesion	Capn6
+Integrin mediated cell adhesion	Capn1
+Integrin mediated cell adhesion	Capn3
+Integrin mediated cell adhesion	Capn2
+Integrin mediated cell adhesion	Ptk2
+Integrin mediated cell adhesion	Map2k3
+Integrin mediated cell adhesion	Map2k2
+Integrin mediated cell adhesion	Map2k1
+Integrin mediated cell adhesion	Capns1
+Integrin mediated cell adhesion	Rock2
+Integrin mediated cell adhesion	Mapk10
+Integrin mediated cell adhesion	Shc1
+Integrin mediated cell adhesion	Mapk1
+Integrin mediated cell adhesion	Akt1
+Integrin mediated cell adhesion	Grb2
+Inflammatory response pathway	Cxhxorf65
+Inflammatory response pathway	Il2ra
+Inflammatory response pathway	Il2rb
+Inflammatory response pathway	Il2
+Inflammatory response pathway	Il4
+Inflammatory response pathway	Vtn
+Inflammatory response pathway	Tnfrsf1a
+Inflammatory response pathway	Il5
+Inflammatory response pathway	Ifng
+Inflammatory response pathway	Cd40lg
+Inflammatory response pathway	Lamb1
+Inflammatory response pathway	Cd86
+Inflammatory response pathway	Col1a2
+Inflammatory response pathway	Cd40
+Inflammatory response pathway	Col1a1
+Inflammatory response pathway	Cd80
+Inflammatory response pathway	rCG_31387
+Inflammatory response pathway	Lama5
+Inflammatory response pathway	Il2rg
+Inflammatory response pathway	Lck
+Inflammatory response pathway	Il4ra
+Inflammatory response pathway	Il5ra
+Inflammatory response pathway	Lamc1
+Inflammatory response pathway	Lamc2
+Inflammatory response pathway	Thbs1
+Relationship between glutathione and NADPH	Gsn
+Relationship between glutathione and NADPH	Tfrc
+Relationship between glutathione and NADPH	Casp3
+Relationship between glutathione and NADPH	Gss
+Relationship between glutathione and NADPH	Gsr
+Relationship between glutathione and NADPH	Anpep
+Relationship between glutathione and NADPH	Kif1b
+Relationship between glutathione and NADPH	Pgm1_predicted
+Relationship between glutathione and NADPH	Gck
+Relationship between glutathione and NADPH	Abcc1
+Relationship between glutathione and NADPH	Tfr2
+Relationship between glutathione and NADPH	Gstp1
+Relationship between glutathione and NADPH	Bax
+Relationship between glutathione and NADPH	Fas
+Relationship between glutathione and NADPH	Pgls
+Relationship between glutathione and NADPH	Cdkn1a
+Relationship between glutathione and NADPH	Tkt
+Relationship between glutathione and NADPH	Dffa
+Relationship between glutathione and NADPH	Dffb
+Relationship between glutathione and NADPH	Txn1
+Relationship between glutathione and NADPH	Gpi
+Relationship between glutathione and NADPH	Mapk8
+Relationship between glutathione and NADPH	rCG_31394
+Relationship between glutathione and NADPH	Pklr
+Relationship between glutathione and NADPH	Rpe
+Relationship between glutathione and NADPH	Alox5
+Relationship between glutathione and NADPH	Taldo1
+Relationship between glutathione and NADPH	Dpep2
+Relationship between glutathione and NADPH	Eno1
+Relationship between glutathione and NADPH	rCG_30049
+Relationship between glutathione and NADPH	Aldoa
+Relationship between glutathione and NADPH	Map3k5
+Relationship between glutathione and NADPH	Rpia
+Relationship between glutathione and NADPH	Pfkl
+Relationship between glutathione and NADPH	rCG_53923
+Relationship between glutathione and NADPH	Nnt
+Relationship between glutathione and NADPH	Fth1
+Relationship between glutathione and NADPH	Pgam2
+Relationship between glutathione and NADPH	Ugp2
+Relationship between glutathione and NADPH	Gclm
+Relationship between glutathione and NADPH	Tp53
+Relationship between glutathione and NADPH	Ugdh
+Relationship between glutathione and NADPH	Pgm1
+Relationship between glutathione and NADPH	Ugt8
+Relationship between glutathione and NADPH	Ptgr1
+Relationship between glutathione and NADPH	Ltc4s
+Relationship between glutathione and NADPH	Nqo1
+Relationship between glutathione and NADPH	rCG_43800
+Mitochondrial gene expression	Myef2
+Mitochondrial gene expression	Gabpb2
+Mitochondrial gene expression	Tfam
+Mitochondrial gene expression	Pprc1
+Mitochondrial gene expression	Ppp3ca
+Mitochondrial gene expression	Tfb1m
+Mitochondrial gene expression	Tfb2m
+Mitochondrial gene expression	Camk4
+Mitochondrial gene expression	rCG_47936
+Mitochondrial gene expression	Prkar1b
+Mitochondrial gene expression	Mterf1
+Mitochondrial gene expression	Mterfd1
+Mitochondrial gene expression	Ppargc1a
+Mitochondrial gene expression	Nrf1_predicted
+Mitochondrial gene expression	Ppargc1b
+Mitochondrial gene expression	Polrmt_predicted
+Mitochondrial gene expression	Gabpa
+IL 5 signaling pathway	rCG_48194
+IL 5 signaling pathway	Itgam
+IL 5 signaling pathway	Bax
+IL 5 signaling pathway	Rac1
+IL 5 signaling pathway	Itgb2
+IL 5 signaling pathway	Raf1
+IL 5 signaling pathway	Pik3r2
+IL 5 signaling pathway	Mapk9
+IL 5 signaling pathway	Socs1
+IL 5 signaling pathway	Rap1gap
+IL 5 signaling pathway	Aps
+IL 5 signaling pathway	Pla2g4a
+IL 5 signaling pathway	Elk1
+IL 5 signaling pathway	rCG_53745
+IL 5 signaling pathway	Crkl
+IL 5 signaling pathway	Csf2rb
+IL 5 signaling pathway	Pim1
+IL 5 signaling pathway	Jak2
+IL 5 signaling pathway	Foxo3
+IL 5 signaling pathway	Jak1
+IL 5 signaling pathway	Sox4
+IL 5 signaling pathway	Sdcbp
+IL 5 signaling pathway	Alox5ap
+IL 5 signaling pathway	Syk
+IL 5 signaling pathway	Hcls1
+IL 5 signaling pathway	Gsk3b
+IL 5 signaling pathway	Hck
+IL 5 signaling pathway	Prkcb
+IL 5 signaling pathway	Prkcd
+IL 5 signaling pathway	Rps6ka1
+IL 5 signaling pathway	Btk
+IL 5 signaling pathway	Pik3r1
+IL 5 signaling pathway	Unc119
+IL 5 signaling pathway	Ptpn6
+IL 5 signaling pathway	Ptpn11
+IL 5 signaling pathway	Lyn
+IL 5 signaling pathway	Jun
+IL 5 signaling pathway	Mapk14
+IL 5 signaling pathway	Ptk2b
+IL 5 signaling pathway	Nfkbia
+IL 5 signaling pathway	Stat5a
+IL 5 signaling pathway	Map2k2
+IL 5 signaling pathway	Shc2_predicted
+IL 5 signaling pathway	rCG_34857
+IL 5 signaling pathway	rCG_26528
+IL 5 signaling pathway	Stat3
+IL 5 signaling pathway	Cdkn1b
+IL 5 signaling pathway	Il2rb
+IL 5 signaling pathway	Il5
+IL 5 signaling pathway	Il5ra
+IL 5 signaling pathway	Alox5
+IL 5 signaling pathway	Shc1
+IL 5 signaling pathway	Mapk1
+IL 5 signaling pathway	Mapk3
+IL 5 signaling pathway	Akt1
+IL 5 signaling pathway	Pik3cg
+IL 5 signaling pathway	Grb2
+Non homologous end joining	Xrcc6
+Non homologous end joining	Rad50
+Non homologous end joining	Xrcc4
+Amino acid conjugation of benzoic acid	Glyat
+Amino acid conjugation of benzoic acid	Acss2_predicted
+Estrogen signaling	Ilk
+Estrogen signaling	rCG_48194
+Estrogen signaling	Braf
+Estrogen signaling	Sos1
+Estrogen signaling	Mapk9
+Estrogen signaling	Src
+Estrogen signaling	Elk1
+Estrogen signaling	Jun
+Estrogen signaling	Mapk14
+Estrogen signaling	Map2k1
+Estrogen signaling	Shc2_predicted
+Estrogen signaling	Ikbkb
+Estrogen signaling	rCG_33890
+Estrogen signaling	Mnat1
+Estrogen signaling	rCG_31110
+Estrogen signaling	Hdac3
+Estrogen signaling	Hdac2
+Estrogen signaling	Taf13
+Estrogen signaling	Taf12
+Estrogen signaling	Gtf2f2
+Estrogen signaling	Tbp
+Estrogen signaling	Ccnh
+Estrogen signaling	Prkaca
+Estrogen signaling	Fos
+Estrogen signaling	Gtf2b
+Estrogen signaling	Gtf2e1
+Estrogen signaling	Gtf2e2
+Estrogen signaling	Polr2c
+Estrogen signaling	Polr2a
+Estrogen signaling	Polr2b
+Estrogen signaling	Taf9
+Estrogen signaling	Polr2g
+Estrogen signaling	Polr2h
+Estrogen signaling	Polr2f
+Estrogen signaling	Polr2i
+Estrogen signaling	Polr2j
+Estrogen signaling	Gtf2h2
+Estrogen signaling	Gtf2h4
+Estrogen signaling	Gtf2h3
+Estrogen signaling	Gngt1
+Estrogen signaling	Ercc2
+Estrogen signaling	Ccnd1
+Estrogen signaling	Ercc3
+Estrogen signaling	Gper1
+Estrogen signaling	Crebbp
+Estrogen signaling	Brca1
+Estrogen signaling	Gnb1
+Estrogen signaling	Taf7
+Estrogen signaling	Taf6
+Estrogen signaling	Chuk
+Estrogen signaling	Taf5
+Estrogen signaling	Mapk1
+Estrogen signaling	Akt1
+Estrogen signaling	Grb2
+p38 Mapk signaling pathway	MGC112775
+p38 Mapk signaling pathway	Mapkapk2
+p38 Mapk signaling pathway	Mapk14
+p38 Mapk signaling pathway	Ripk1
+p38 Mapk signaling pathway	Mapkapk5
+p38 Mapk signaling pathway	rCG_48194
+p38 Mapk signaling pathway	Map2k4
+p38 Mapk signaling pathway	Map3k1
+p38 Mapk signaling pathway	Rps6ka5
+p38 Mapk signaling pathway	Tgfbr1
+p38 Mapk signaling pathway	rCG_26528
+p38 Mapk signaling pathway	Daxx
+p38 Mapk signaling pathway	Rac1
+p38 Mapk signaling pathway	Pla2g4a
+p38 Mapk signaling pathway	Elk1
+p38 Mapk signaling pathway	Map2k6
+p38 Mapk signaling pathway	Map3k5
+p38 Mapk signaling pathway	Shc1
+p38 Mapk signaling pathway	Cdc42
+p38 Mapk signaling pathway	Max
+p38 Mapk signaling pathway	Map3k9
+p38 Mapk signaling pathway	Mef2d
+p38 Mapk signaling pathway	Map3k7
+p38 Mapk signaling pathway	Tgfb2
+p38 Mapk signaling pathway	Tradd
+p38 Mapk signaling pathway	Hspb1
+p38 Mapk signaling pathway	Traf2
+p38 Mapk signaling pathway	Grb2
+VEGF receptor signal transduction	Mapkapk2
+VEGF receptor signal transduction	Vegfc
+VEGF receptor signal transduction	Src
+VEGF receptor signal transduction	Sh2d2a
+VEGF receptor signal transduction	Dag1
+VEGF receptor signal transduction	Pgf
+VEGF receptor signal transduction	Prkci
+VEGF receptor signal transduction	Vegfa
+VEGF receptor signal transduction	Fastkd2
+VEGF receptor signal transduction	Rac1
+VEGF receptor signal transduction	Kras
+VEGF receptor signal transduction	Hspbp1
+VEGF receptor signal transduction	Pik3r3
+VEGF receptor signal transduction	Vegfb
+VEGF receptor signal transduction	Casp9
+VEGF receptor signal transduction	Bad
+VEGF receptor signal transduction	Shc1
+VEGF receptor signal transduction	Nos3
+VEGF receptor signal transduction	Mapk1
+VEGF receptor signal transduction	Plcg1
+VEGF receptor signal transduction	Akt1
+VEGF receptor signal transduction	Raf1
+VEGF receptor signal transduction	Grb2
+Beta oxidation of unsaturated fatty acids	Hadhb
+Beta oxidation of unsaturated fatty acids	Eci1
+Beta oxidation of unsaturated fatty acids	Acadm
+Beta oxidation of unsaturated fatty acids	rCG_61339
+Beta oxidation of unsaturated fatty acids	Decr1
+Hypertrophy model	Il1a
+Hypertrophy model	Ifrd1
+Hypertrophy model	Il1r1
+Hypertrophy model	Ccn1
+Hypertrophy model	Nr4a3
+Hypertrophy model	Atf3
+Hypertrophy model	Ifng
+Hypertrophy model	Myog
+Hypertrophy model	Jund
+Hypertrophy model	Wdr1
+Hypertrophy model	Eif4ebp1
+Hypertrophy model	Ankrd1
+Hypertrophy model	Eif4e
+Hypertrophy model	Hbegf
+Hypertrophy model	Zeb1
+Oxidative stress response	Mapk14
+Oxidative stress response	Gsr
+Oxidative stress response	Nfix
+Oxidative stress response	Gpx3
+Oxidative stress response	Hmox1
+Oxidative stress response	rCG_51087
+Oxidative stress response	Mapk10
+Oxidative stress response	Sod3
+Oxidative stress response	Sod2
+Oxidative stress response	Sod1
+Oxidative stress response	Txn2
+Oxidative stress response	Txnrd2
+Oxidative stress response	Cyba
+Oxidative stress response	Cyp1a1
+Oxidative stress response	Cat
+Oxidative stress response	Gstt2
+Oxidative stress response	Mgst1
+Oxidative stress response	Xdh
+Oxidative stress response	Fos
+Oxidative stress response	Nqo1
+GPCRs other	Prokr2
+GPCRs other	Adora2a
+GPCRs other	Adgrg1
+GPCRs other	Ednra
+GPCRs other	rCG_33776
+GPCRs other	Gnrhr
+GPCRs other	Edg1
+GPCRs other	Grm1
+GPCRs other	rCG_23682
+GPCRs other	Htr7
+GPCRs other	rCG_49551
+GPCRs other	Fshr
+GPCRs other	Grm8
+GPCRs other	Htr2a
+GPCRs other	Gpr61
+GPCRs other	rCG_25384
+GPCRs other	Or1n1
+GPCRs other	Ccr5
+GPCRs other	Gpr176
+GPCRs other	Gpr132
+GPCRs other	Adra1d
+GPCRs other	Alg6
+GPCRs other	Cckbr
+GPCRs other	Adgrl2
+GPCRs other	Adgrl3
+GPCRs other	Gpr135
+GPCRs other	rCG_30551
+GPCRs other	Sstr2
+GPCRs other	Smo
+GPCRs other	Htr1f
+GPCRs other	Taar3
+GPCRs other	Taar2
+GPCRs other	Ntsr1_predicted
+GPCRs other	Rxfp1
+GPCRs other	Taar5
+GPCRs other	Ghrhr
+GPCRs other	Gpr183
+GPCRs other	C5ar2
+GPCRs other	F2r
+GPCRs other	rCG_50055
+GPCRs other	Or2a5
+GPCRs other	Ptgfr
+GPCRs other	Chrm2
+GPCRs other	Gpr88
+GPCRs other	Hrh4
+GPCRs other	rCG_36827
+GPCRs other	Or2f1
+GPCRs other	Drd3
+GPCRs other	Drd4
+GPCRs other	Cnr1
+GPCRs other	Grpr
+GPCRs other	Uts2r
+GPCRs other	Il8ra
+GPCRs other	rCG_28504
+GPCRs other	Or1e1
+GPCRs other	Adora3
+GPCRs other	Or10a5
+GPCRs other	Ltb4r2
+GPCRs other	Lgr6
+GPCRs other	Or10a2
+Fatty acid omega oxidation	Cyp1a1
+Fatty acid omega oxidation	rCG_28558
+Fatty acid omega oxidation	Adh4
+Fatty acid omega oxidation	Adh1
+Fatty acid omega oxidation	Aldh2
+Fatty acid omega oxidation	Cyp2e1
+Fatty acid omega oxidation	Cyp4a2
+Fatty acid omega oxidation	rCG_47846
+Fatty acid omega oxidation	Cyp3a2
+Fatty acid omega oxidation	Adh7
+Fatty acid omega oxidation	Adh6
+Biosynthesis of aldosterone and cortisol	Cyp21a1
+Biosynthesis of aldosterone and cortisol	Cyp11b2
+Biosynthesis of aldosterone and cortisol	Cyp17a1
+Biosynthesis of aldosterone and cortisol	rCG_51795
+Nuclear receptors	Nr2c2
+Nuclear receptors	Nr2e1
+Nuclear receptors	Hnf4a
+Nuclear receptors	rCG_37716
+Nuclear receptors	Nr1i3
+Nuclear receptors	Nr1i2
+Nuclear receptors	Esrrb
+Nuclear receptors	rCG_60716
+Nuclear receptors	Rara
+Nuclear receptors	Rarb
+Nuclear receptors	Nr2f6
+Nuclear receptors	Thrb
+Nuclear receptors	Thra
+Nuclear receptors	Nr1d2
+Nuclear receptors	Nr2f2
+Nuclear receptors	Vdr
+Nuclear receptors	Nr2f1
+Nuclear receptors	Nr1h3
+Nuclear receptors	Rorc
+Nuclear receptors	Nr1h2
+Nuclear receptors	Ppard
+Nuclear receptors	Ppara
+Nuclear receptors	Pparg
+Nuclear receptors	rCG_47936
+Nuclear receptors	Esr2
+Nuclear receptors	Rxra
+Nuclear receptors	Ror1
+Nuclear receptors	Rxrg
+Nuclear receptors	Nr5a2
+Nuclear receptors	Nr4a2
+Nuclear receptors	Nr3c1
+Matrix metalloproteinases	Mmp24
+Matrix metalloproteinases	Mmp14
+Matrix metalloproteinases	Mmp15
+Matrix metalloproteinases	Mmp16
+Matrix metalloproteinases	Mmp17
+Matrix metalloproteinases	Mmp28
+Matrix metalloproteinases	Mmp2
+Matrix metalloproteinases	Timp3
+Matrix metalloproteinases	Timp2
+Matrix metalloproteinases	Mmp9
+Matrix metalloproteinases	Tnf
+Matrix metalloproteinases	Bsg
+Matrix metalloproteinases	Tcf20
+Matrix metalloproteinases	rCG_29565
+Matrix metalloproteinases	Mmp21
+Matrix metalloproteinases	Cep295nl
+Matrix metalloproteinases	Mmp11
+Matrix metalloproteinases	Mmp23
+Acetate mediated promotion of metabolic syndrome	Gast
+Acetate mediated promotion of metabolic syndrome	rCG_48472
+Wnt signaling pathway and pluripotency	Prkci
+Wnt signaling pathway and pluripotency	Ppard
+Wnt signaling pathway and pluripotency	Mapk9
+Wnt signaling pathway and pluripotency	Prkd1
+Wnt signaling pathway and pluripotency	Pafah1b1
+Wnt signaling pathway and pluripotency	Ppp2r3a
+Wnt signaling pathway and pluripotency	Sox2
+Wnt signaling pathway and pluripotency	Ppp2r2c
+Wnt signaling pathway and pluripotency	Ctnnd1_predicted
+Wnt signaling pathway and pluripotency	Gsk3b
+Wnt signaling pathway and pluripotency	Ppp2r2b
+Wnt signaling pathway and pluripotency	Ctbp1
+Wnt signaling pathway and pluripotency	Prkcb
+Wnt signaling pathway and pluripotency	Wnt5a
+Wnt signaling pathway and pluripotency	Prkcd
+Wnt signaling pathway and pluripotency	Ctbp2
+Wnt signaling pathway and pluripotency	Wnt5b
+Wnt signaling pathway and pluripotency	Wnt9b
+Wnt signaling pathway and pluripotency	Ppp2cb
+Wnt signaling pathway and pluripotency	Ppp2ca
+Wnt signaling pathway and pluripotency	rCG_41849
+Wnt signaling pathway and pluripotency	Prkcq
+Wnt signaling pathway and pluripotency	Lrp6_predicted
+Wnt signaling pathway and pluripotency	Jun
+Wnt signaling pathway and pluripotency	Prkch
+Wnt signaling pathway and pluripotency	Ptpa
+Wnt signaling pathway and pluripotency	Prkce
+Wnt signaling pathway and pluripotency	Axin1
+Wnt signaling pathway and pluripotency	Axin2
+Wnt signaling pathway and pluripotency	Csnk1e
+Wnt signaling pathway and pluripotency	Wnt16
+Wnt signaling pathway and pluripotency	Fbxw2
+Wnt signaling pathway and pluripotency	Mapk10
+Wnt signaling pathway and pluripotency	Lef1
+Wnt signaling pathway and pluripotency	Wnt11
+Wnt signaling pathway and pluripotency	rCG_40802
+Wnt signaling pathway and pluripotency	Nlk
+Wnt signaling pathway and pluripotency	Ppp2r5c
+Wnt signaling pathway and pluripotency	Nkd2
+Wnt signaling pathway and pluripotency	Nkd1
+Wnt signaling pathway and pluripotency	Lrp5
+Wnt signaling pathway and pluripotency	Wnt7b
+Wnt signaling pathway and pluripotency	Dvl1
+Wnt signaling pathway and pluripotency	Dvl2
+Wnt signaling pathway and pluripotency	Tmem97
+Wnt signaling pathway and pluripotency	Dvl3
+Wnt signaling pathway and pluripotency	Tcf7_predicted
+Wnt signaling pathway and pluripotency	Wnt7a
+Wnt signaling pathway and pluripotency	Wnt2
+Wnt signaling pathway and pluripotency	Prkcz
+Wnt signaling pathway and pluripotency	Wnt4
+Wnt signaling pathway and pluripotency	Cd44
+Wnt signaling pathway and pluripotency	Wnt3
+Wnt signaling pathway and pluripotency	Pou5f1
+Wnt signaling pathway and pluripotency	Fosl1
+Wnt signaling pathway and pluripotency	Fzd3
+Wnt signaling pathway and pluripotency	Ccnd2
+Wnt signaling pathway and pluripotency	Fzd2
+Wnt signaling pathway and pluripotency	Fzd4
+Wnt signaling pathway and pluripotency	Fzd9
+Wnt signaling pathway and pluripotency	rCG_56026
+Wnt signaling pathway and pluripotency	Nanog
+Wnt signaling pathway and pluripotency	Ppp2r2a
+Wnt signaling pathway and pluripotency	Wnt2b
+Wnt signaling pathway and pluripotency	Ppp2r1a
+Wnt signaling pathway and pluripotency	Ppp2r5e
+Wnt signaling pathway and pluripotency	Apc
+Wnt signaling pathway and pluripotency	Ppm1j
+Wnt signaling pathway and pluripotency	Ccnd1
+Wnt signaling pathway and pluripotency	Crebbp
+Wnt signaling pathway and pluripotency	Tp53
+Wnt signaling pathway and pluripotency	Map3k7
+Mismatch repair	Msh2
+Mismatch repair	Rfc1
+Mismatch repair	Pold1
+Mismatch repair	Pcna
+Mismatch repair	Lig1
+Small ligand GPCRs	Cnr1
+Small ligand GPCRs	Mtnr1a
+Small ligand GPCRs	Ptgir_predicted
+Small ligand GPCRs	Tbxa2r
+Small ligand GPCRs	Edg2
+Small ligand GPCRs	Cnr2
+Small ligand GPCRs	Ptgdr
+Small ligand GPCRs	Edg6_predicted
+Small ligand GPCRs	Ptger4
+Small ligand GPCRs	Ptafr
+Small ligand GPCRs	Edg1
+Small ligand GPCRs	Ptger2
+Small ligand GPCRs	Ptger3
+Small ligand GPCRs	Ptger1
+Small ligand GPCRs	Ptgfr
+Small ligand GPCRs	S1pr3
+Interactions between CFTR and other ion channels	Slc9a3r1
+Interactions between CFTR and other ion channels	rCG_28062
+Interactions between CFTR and other ion channels	Scnn1b
+Interactions between CFTR and other ion channels	Scnn1g
+Interactions between CFTR and other ion channels	Yap1
+G1 to S cell cycle control	Pole2
+G1 to S cell cycle control	Mcm7
+G1 to S cell cycle control	Ccne1
+G1 to S cell cycle control	Pola2
+G1 to S cell cycle control	Ccne2
+G1 to S cell cycle control	Gadd45a
+G1 to S cell cycle control	Creb3l1
+G1 to S cell cycle control	Cdkn1b
+G1 to S cell cycle control	Necab3
+G1 to S cell cycle control	rCG_51568
+G1 to S cell cycle control	Orc6
+G1 to S cell cycle control	Atf6b
+G1 to S cell cycle control	Orc1l
+G1 to S cell cycle control	Cdkn1a
+G1 to S cell cycle control	Orc3l
+G1 to S cell cycle control	Ccng2_predicted
+G1 to S cell cycle control	Mnat1
+G1 to S cell cycle control	Cdkn2b
+G1 to S cell cycle control	Tfdp1
+G1 to S cell cycle control	Cdkn2c
+G1 to S cell cycle control	Cldn5
+G1 to S cell cycle control	Rb1
+G1 to S cell cycle control	Ccnb1
+G1 to S cell cycle control	rCG_50062
+G1 to S cell cycle control	Rpa2
+G1 to S cell cycle control	Ccnh
+G1 to S cell cycle control	Myt1
+G1 to S cell cycle control	LOC362304
+G1 to S cell cycle control	Cdc2a
+G1 to S cell cycle control	Cdk6
+G1 to S cell cycle control	Wee1
+G1 to S cell cycle control	Rbl1
+G1 to S cell cycle control	Orc4l
+G1 to S cell cycle control	Mdm2
+G1 to S cell cycle control	E2f1
+G1 to S cell cycle control	E2f2
+G1 to S cell cycle control	Mcm4
+G1 to S cell cycle control	E2f3
+G1 to S cell cycle control	Mcm6
+G1 to S cell cycle control	E2f6
+G1 to S cell cycle control	Pole
+G1 to S cell cycle control	Cdkn1c
+G1 to S cell cycle control	rCG_62522
+G1 to S cell cycle control	Mcm2
+G1 to S cell cycle control	Pcna
+G1 to S cell cycle control	Ccnd1
+G1 to S cell cycle control	Tp53
+Phase I biotransformations non P450	Ces2j
+Phase I biotransformations non P450	Esd
+Phase I biotransformations non P450	Lipa
+Phase I biotransformations non P450	Ces5a
+Phase I biotransformations non P450	Pon3
+Phase I biotransformations non P450	Pon1
+Phase I biotransformations non P450	Pon2
+Insulin signaling	rCG_48194
+Insulin signaling	Map2k4
+Insulin signaling	Map3k1
+Insulin signaling	Mapk4
+Insulin signaling	Rps6ka5
+Insulin signaling	Pdpk1
+Insulin signaling	Akt2
+Insulin signaling	Rac2
+Insulin signaling	Prkci
+Insulin signaling	Rac1
+Insulin signaling	Eif4ebp1
+Insulin signaling	Eif4e
+Insulin signaling	Raf1
+Insulin signaling	Crk
+Insulin signaling	Sos1
+Insulin signaling	Pik3r2
+Insulin signaling	Shc3
+Insulin signaling	Map2k6
+Insulin signaling	Cyth3
+Insulin signaling	Grb14
+Insulin signaling	Trib3
+Insulin signaling	Irs2
+Insulin signaling	Map3k8
+Insulin signaling	Mapk12
+Insulin signaling	Map3k6
+Insulin signaling	Map3k4
+Insulin signaling	Stxbp1
+Insulin signaling	Stxbp2
+Insulin signaling	Stxbp3
+Insulin signaling	Prkaa1
+Insulin signaling	Prkaa2
+Insulin signaling	Reg1
+Insulin signaling	Gyg1
+Insulin signaling	Kif5b
+Insulin signaling	Cblc
+Insulin signaling	Tsc2
+Insulin signaling	Cblb
+Insulin signaling	Tsc1
+Insulin signaling	Map2k2
+Insulin signaling	Map3k3
+Insulin signaling	Map2k1
+Insulin signaling	rCG_47188
+Insulin signaling	Map3k2
+Insulin signaling	Insr
+Insulin signaling	Mapk10
+Insulin signaling	Flot2
+Insulin signaling	Flot1
+Insulin signaling	Map4k5
+Insulin signaling	Map4k3
+Insulin signaling	Rab4a
+Insulin signaling	Rps6kb1
+Insulin signaling	Rheb
+Insulin signaling	Rps6kb2
+Insulin signaling	Pik3cd
+Insulin signaling	Map4k4_predicted
+Insulin signaling	Egr1
+Insulin signaling	Xbp1
+Insulin signaling	Kif3a
+Insulin signaling	Pik3c2a
+Insulin signaling	Pik3c2g
+Insulin signaling	Map4k1
+Insulin signaling	Ehd2
+Insulin signaling	Snap25
+Insulin signaling	Snap23
+Insulin signaling	Lipe
+Insulin signaling	Frap1
+Insulin signaling	Igf1r
+Insulin signaling	Rptor
+Insulin signaling	Arf1
+Insulin signaling	Pik3c3
+Insulin signaling	Gys2
+Insulin signaling	Rhoj
+Insulin signaling	Mapk8
+Insulin signaling	Slc2a1
+Insulin signaling	Slc2a4
+Insulin signaling	Ptprf
+Insulin signaling	Foxo1
+Rrad	Inpp4a
+Rrad	rCG_54220
+Rrad	Ppp1r3a
+Rrad	Vamp2
+Rrad	Map3k5
+Rrad	Rps6ka3
+Rrad	Rps6ka4
+Rrad	Mink1
+Rrad	Pfkl
+Rrad	Rps6ka2
+Rrad	Sgk2
+Rrad	Sos2
+Rrad	Sgk1
+Rrad	Myo1c
+Rrad	Enpp1
+Rrad	Map2k7
+Rrad	Ptpn1
+Rrad	Gab1_predicted
+Rrad	Stx4
+Rrad	Inppl1
+Rrad	Mapk13
+Rrad	Pten
+Rrad	Map3k11
+Rrad	Map3k13
+Rrad	Map3k14
+Rrad	Mapk11
+Rrad	Mapk9
+Rrad	Socs1
+Rrad	Aps
+Rrad	Elk1
+Rrad	rCG_53745
+Rrad	Foxo3
+Rrad	Gsk3b
+Rrad	Prkcb
+Rrad	Prkcd
+Rrad	Rps6ka1
+Rrad	Pik3r1
+Rrad	Ptpn11
+Rrad	Prkcq
+Rrad	Jun
+Rrad	Prkch
+Rrad	Mapk14
+Rrad	Shc2_predicted
+Rrad	Ikbkb
+Rrad	Prkcz
+Rrad	Fos
+Rrad	Shc1
+Rrad	Map3k9
+Rrad	Mapk1
+Rrad	Map3k7
+Rrad	Mapk3
+Rrad	Akt1
+Rrad	Pik3cg
+Rrad	Grb2
+Serotonin and anxiety	Htr2a
+Serotonin and anxiety	Ppp3ca
+Serotonin and anxiety	Nlgn1
+Serotonin and anxiety	Adra1a
+Serotonin and anxiety	Plek
+Serotonin and anxiety	Crh
+Serotonin and anxiety	Htr2c
+Serotonin and anxiety	Prkcb
+Serotonin and anxiety	Htr1a
+Serotonin and anxiety	Grin2d
+Serotonin and anxiety	Fos
+Insulin induced PI3K Akt and MAPK in hepatocytes	Tsc2
+Insulin induced PI3K Akt and MAPK in hepatocytes	Tsc1
+Insulin induced PI3K Akt and MAPK in hepatocytes	rCG_57481
+Insulin induced PI3K Akt and MAPK in hepatocytes	Acly
+Insulin induced PI3K Akt and MAPK in hepatocytes	Gbl
+Insulin induced PI3K Akt and MAPK in hepatocytes	Pfkfb2
+Insulin induced PI3K Akt and MAPK in hepatocytes	Akt1s1_predicted
+Insulin induced PI3K Akt and MAPK in hepatocytes	Rps6kb1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Foxk1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Rheb
+Insulin induced PI3K Akt and MAPK in hepatocytes	rCG_23030
+Insulin induced PI3K Akt and MAPK in hepatocytes	Eif4ebp1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Eif4e
+Insulin induced PI3K Akt and MAPK in hepatocytes	Frap1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Raf1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Rptor
+Insulin induced PI3K Akt and MAPK in hepatocytes	Sos1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Pik3c3
+Insulin induced PI3K Akt and MAPK in hepatocytes	Gys2
+Insulin induced PI3K Akt and MAPK in hepatocytes	Foxo1
+Insulin induced PI3K Akt and MAPK in hepatocytes	rCG_53745
+Insulin induced PI3K Akt and MAPK in hepatocytes	rCG_54220
+Insulin induced PI3K Akt and MAPK in hepatocytes	Bad
+Insulin induced PI3K Akt and MAPK in hepatocytes	Shc1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Irs2
+Insulin induced PI3K Akt and MAPK in hepatocytes	Mapk1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Rps6ka1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Mapk3
+Insulin induced PI3K Akt and MAPK in hepatocytes	Akt1
+Insulin induced PI3K Akt and MAPK in hepatocytes	Grb2
+Heme biosynthesis	Alad
+Heme biosynthesis	Fech
+Heme biosynthesis	Cpox
+Heme biosynthesis	Uros
+Heme biosynthesis	Urod
+Heme biosynthesis	Ppox
+Osteoclast	Atp6v1e1
+Osteoclast	Ifnar1
+Osteoclast	Trpv5
+Osteoclast	Ifnb1
+Osteoclast	Gpr68
+Osteoclast	Zcchc2
+Osteoclast	Ctsk
+Osteoclast	Itgb3
+Osteoclast	Pdgfb
+Osteoclast	Spp1
+Osteoclast	Tnfsf11
+Osteoclast	Slc9a1
+Fructose metabolism in proximal tubules	Mfsd4b
+Fructose metabolism in proximal tubules	rCG_62047
+Fructose metabolism in proximal tubules	Gpi
+Fructose metabolism in proximal tubules	Tpi1
+Fructose metabolism in proximal tubules	G6pc
+Fructose metabolism in proximal tubules	Slc5a10
+Fructose metabolism in proximal tubules	Sord
+Fructose metabolism in proximal tubules	Aldob
+Fructose metabolism in proximal tubules	Hk1
+Fructose metabolism in proximal tubules	rCG_48042
+Fructose metabolism in proximal tubules	rCG_27858
+Fructose metabolism in proximal tubules	Fbp1
+Fructose metabolism in proximal tubules	Pfkm
+Fructose metabolism in proximal tubules	Aldoa
+Fructose metabolism in proximal tubules	Slc2a5
+Fructose metabolism in proximal tubules	Pfkp
+Fructose metabolism in proximal tubules	Pfkl
+Homologous recombination	Rad51
+Homologous recombination	Pold2
+Homologous recombination	Brca2
+Homologous recombination	Rad52
+Homologous recombination	Pold4
+Homologous recombination	Pold3
+Homologous recombination	Nbn
+Homologous recombination	Rad50
+Homologous recombination	Pold1
+Statin pathway	Cyp7a1
+Statin pathway	Pltp
+Statin pathway	Lcat
+Statin pathway	Abca1
+Statin pathway	Scarb1
+Statin pathway	Dgat1
+Statin pathway	Apoc1
+Statin pathway	Soat1
+Statin pathway	Mttp
+Statin pathway	Hmgcr
+Statin pathway	Lpl
+Statin pathway	Apoe
+Thick ascending limb transporters	Slc4a7
+Thick ascending limb transporters	Slc12a1
+Thick ascending limb transporters	Atp1b1
+Thick ascending limb transporters	Slc9a2
+Thick ascending limb transporters	Slc9a3
+Thick ascending limb transporters	Atp1a1
+Thick ascending limb transporters	Aqp1
+Thick ascending limb transporters	rCG_42031
+Thick ascending limb transporters	Kcnk12
+Thick ascending limb transporters	Kcnk13
+Thick ascending limb transporters	Ca2
+Thick ascending limb transporters	Ca4
+Thick ascending limb transporters	Kcnq1
+Thick ascending limb transporters	Kcnj16
+Thick ascending limb transporters	Clcnkb
+Thick ascending limb transporters	Clcnka
+TCA cycle	Suclg1
+TCA cycle	Suclg2
+TCA cycle	Pdk4
+TCA cycle	Aco2
+TCA cycle	Dld
+TCA cycle	Sucla2
+TCA cycle	Pdk2
+TCA cycle	Fh
+TCA cycle	Mdh1
+TCA cycle	Mor1
+TCA cycle	Sdhc
+TCA cycle	Pdhb
+TCA cycle	Pdk3_mapped
+TCA cycle	Sdhb
+TCA cycle	LOC360975
+TCA cycle	Sdha
+TCA cycle	Idh3b
+TCA cycle	Afdn
+TCA cycle	Pdha1
+TCA cycle	Pc
+Proteasome degradation	Psmb7
+Proteasome degradation	Uchl1
+Proteasome degradation	Psmd8
+Proteasome degradation	Psmd3
+Proteasome degradation	Psmb1
+Proteasome degradation	Psmd2
+Proteasome degradation	Psmd5
+Proteasome degradation	Psmb2
+Proteasome degradation	Psmd4
+Proteasome degradation	Ube2d3
+Proteasome degradation	Ube2d1
+Proteasome degradation	rCG_45322
+Proteasome degradation	Ifng
+Proteasome degradation	Psmc6
+Proteasome degradation	rCG_38543
+Proteasome degradation	Psmc5
+Proteasome degradation	Psma5
+Proteasome degradation	Rpn2
+Proteasome degradation	Psmc2
+Proteasome degradation	Psmc1
+Proteasome degradation	Psmc4
+Proteasome degradation	Rpn1
+Proteasome degradation	Psmc3
+Proteasome degradation	Psme2
+Proteasome degradation	Psme1
+Proteasome degradation	Psmd12
+Proteasome degradation	Ube2b
+Proteasome degradation	Psmd13
+Proteasome degradation	rCG_61627
+Proteasome degradation	rCG_63409
+Proteasome degradation	Psmb9
+Proteasome degradation	Psmb8
+Proteasome degradation	Psmd7_predicted
+Proteasome degradation	Psmb5
+Proteasome degradation	Psmb4
+Proteasome degradation	Psmd11_predicted
+Proteasome degradation	Psmd6
+Proteasome degradation	rCG_37146
+Selenium micronutrient network	Gsr
+Selenium micronutrient network	Gpx3
+Selenium micronutrient network	Alox5
+Selenium micronutrient network	Fads2
+Selenium micronutrient network	Sod1
+Selenium micronutrient network	Tbxas1
+Selenium micronutrient network	Mt-co1
+Selenium micronutrient network	Gpx6
+Selenium micronutrient network	Mtr
+Selenium micronutrient network	Kmo
+Selenium micronutrient network	Cat
+Selenium micronutrient network	Selenop
+Selenium micronutrient network	Tbxt
+Selenium micronutrient network	Fads1
+Selenium micronutrient network	Ptgds
+Selenium micronutrient network	Xdh
+Selenium micronutrient network	Ptgis
+Selenium micronutrient network	Pnpo
+Selenium micronutrient network	Mt-co2
+Selenium micronutrient network	Mthfr
+Selenium micronutrient network	Selenok
+Genetic alterations of lung cancer	Smad2
+Genetic alterations of lung cancer	Tgfb1
+Genetic alterations of lung cancer	Mdm2
+Genetic alterations of lung cancer	Smad4
+Genetic alterations of lung cancer	E2f1
+Genetic alterations of lung cancer	Ccne1
+Genetic alterations of lung cancer	Map2k1
+Genetic alterations of lung cancer	Necab3
+Genetic alterations of lung cancer	Ccnd1
+Genetic alterations of lung cancer	Cdkn1a
+Genetic alterations of lung cancer	Crebbp
+Genetic alterations of lung cancer	Pik3cd
+Genetic alterations of lung cancer	Rb1
+Genetic alterations of lung cancer	Tp53
+Genetic alterations of lung cancer	Pik3ca
+Genetic alterations of lung cancer	Mapk1
+Genetic alterations of lung cancer	Erbb2
+Genetic alterations of lung cancer	Bmyc
+Genetic alterations of lung cancer	Tgfb2
+Genetic alterations of lung cancer	Dmp1
+Genetic alterations of lung cancer	Akt1
+Genetic alterations of lung cancer	Egfr
+Genetic alterations of lung cancer	Raf1
+Genetic alterations of lung cancer	Rasl11b
+Nucleotide metabolism	rCG_34286
+Nucleotide metabolism	rCG_61374
+Nucleotide metabolism	Sat1
+Nucleotide metabolism	rCG_56426
+Nucleotide metabolism	Impdh1_predicted
+Nucleotide metabolism	Srm
+Nucleotide metabolism	rCG_47045
+Nucleotide metabolism	Dhfr
+Nucleotide metabolism	Prps2
+Nucleotide metabolism	rCG_43201
+Nucleotide metabolism	Pold1
+Nucleotide metabolism	Adsl_predicted
+Nucleotide metabolism	Polg
+Nucleotide metabolism	Adss
+Cardiovascular signaling	Vegfd
+Cardiovascular signaling	Casp3
+Cardiovascular signaling	Pgf
+Cardiovascular signaling	Selenop
+Cardiovascular signaling	Vav2
+Cardiovascular signaling	Col1a1
+Cardiovascular signaling	Wnt2
+Cardiovascular signaling	Erbb2
+Cardiovascular signaling	Arhgef7
+Cardiovascular signaling	Mapk8
+Cardiovascular signaling	Wnt2b
+Cardiovascular signaling	Map2k6
+Cardiovascular signaling	Col11a1
+Cardiovascular signaling	Tnc
+Cardiovascular signaling	Pdgfra
+Cardiovascular signaling	Rras2
+Cardiovascular signaling	rCG_48326
+Cardiovascular signaling	Wasf1
+Cardiovascular signaling	rCG_38211
+Cardiovascular signaling	Vwf
+Cardiovascular signaling	Egf
+Cardiovascular signaling	Casp6
+Cardiovascular signaling	Col4a1
+Cardiovascular signaling	Col5a1
+Cardiovascular signaling	Casp2
+Cardiovascular signaling	Akt1
+Cardiovascular signaling	rCG_31023
+Cardiovascular signaling	Hspb1
+Cardiovascular signaling	Thbs2
+Cardiovascular signaling	Capn6
+Glucuronidation	Ugt2b7
+Glucuronidation	Pgm5
+Glucuronidation	Ugt2b35
+Glucuronidation	Ugt2a1
+Glucuronidation	Ugt2b10
+Glucuronidation	Ugt2a3
+Glucuronidation	Ugp2
+Glucuronidation	Pgm1_predicted
+Glucuronidation	Ugdh
+Glucuronidation	Hk1
+Glucuronidation	Pgm1
+Glucuronidation	rCG_57068
+ACE inhibitor pathway	Ren1
+ACE inhibitor pathway	Ace
+ACE inhibitor pathway	Nos3
+ACE inhibitor pathway	Agtr1b
+ACE inhibitor pathway	Kng2l1
+ACE inhibitor pathway	Agtr2
+ACE inhibitor pathway	Bdkrb2
+ACE inhibitor pathway	Kng2
+ACE inhibitor pathway	Agt
+Glucocorticoid effect on target gene expression	Rras
+Glucocorticoid effect on target gene expression	Anxa1
+Glucocorticoid effect on target gene expression	Adrb2
+Glucocorticoid effect on target gene expression	Fkbp4
+Glucocorticoid effect on target gene expression	Hsp90ab1
+Glucocorticoid effect on target gene expression	Nfkbia
+Glucocorticoid effect on target gene expression	Mt-co2
+Glucocorticoid effect on target gene expression	Pla2g4a
+Glucocorticoid effect on target gene expression	Tsc22d3
+Glucocorticoid effect on target gene expression	Nr3c1
+Glucocorticoid effect on target gene expression	Hspa4
+Apoptosis modulation by HSP70	Casp3
+Apoptosis modulation by HSP70	Ripk1
+Apoptosis modulation by HSP70	Map3k1
+Apoptosis modulation by HSP70	Mapk10
+Apoptosis modulation by HSP70	Fas
+Apoptosis modulation by HSP70	Tnfrsf1a
+Apoptosis modulation by HSP70	Casp9
+Apoptosis modulation by HSP70	Casp7
+Apoptosis modulation by HSP70	rCG_38211
+Apoptosis modulation by HSP70	rCG_52466
+Apoptosis modulation by HSP70	Pdcd8
+Apoptosis modulation by HSP70	Fadd
+Apoptosis modulation by HSP70	Casp6
+Apoptosis modulation by HSP70	Faslg
+Apoptosis modulation by HSP70	Bid
+Apoptosis modulation by HSP70	Casp2
+MAPK signaling pathway	rCG_48194
+MAPK signaling pathway	Braf
+MAPK signaling pathway	Akt3
+MAPK signaling pathway	Gadd45a
+MAPK signaling pathway	Akt2
+MAPK signaling pathway	Rac2
+MAPK signaling pathway	rCG_51808
+MAPK signaling pathway	Rac1
+MAPK signaling pathway	Rap1b
+MAPK signaling pathway	Raf1
+MAPK signaling pathway	Crk
+MAPK signaling pathway	Sos1
+MAPK signaling pathway	Map2k6
+MAPK signaling pathway	Pak1
+MAPK signaling pathway	Pak2
+MAPK signaling pathway	Cdc42
+MAPK signaling pathway	Map3k8
+MAPK signaling pathway	Mapk12
+MAPK signaling pathway	Map3k6
+MAPK signaling pathway	Map3k4
+MAPK signaling pathway	Map2k2
+MAPK signaling pathway	Map2k1
+MAPK signaling pathway	Map3k2
+MAPK signaling pathway	Mapk10
+MAPK signaling pathway	Map4k3
+MAPK signaling pathway	Tnfrsf1a
+MAPK signaling pathway	Map4k4_predicted
+MAPK signaling pathway	Map4k1
+MAPK signaling pathway	Mapk8
+MAPK signaling pathway	Map3k5
+MAPK signaling pathway	Rps6ka3
+MAPK signaling pathway	Rps6ka4
+MAPK signaling pathway	Sos2
+MAPK signaling pathway	Tp53
+MAPK signaling pathway	Map2k7
+MAPK signaling pathway	Mapk13
+MAPK signaling pathway	Map3k11
+MAPK signaling pathway	Map3k13
+MAPK signaling pathway	Map3k14
+MAPK signaling pathway	Casp3
+MAPK signaling pathway	Mapk11
+MAPK signaling pathway	Fas
+MAPK signaling pathway	Ppp3ca
+MAPK signaling pathway	Pdgfb
+MAPK signaling pathway	Mapk9
+MAPK signaling pathway	Pla2g4a
+MAPK signaling pathway	Elk1
+MAPK signaling pathway	Crkl
+MAPK signaling pathway	Prkcd
+MAPK signaling pathway	Jun
+MAPK signaling pathway	Mapk14
+MAPK signaling pathway	rCG_26528
+MAPK signaling pathway	Ikbkb
+MAPK signaling pathway	Prkaca
+MAPK signaling pathway	Fos
+MAPK signaling pathway	Chuk
+MAPK signaling pathway	Max
+MAPK signaling pathway	Map3k7
+MAPK signaling pathway	Tgfb2
+MAPK signaling pathway	Hspb1
+MAPK signaling pathway	Traf2
+MAPK signaling pathway	MGC112775
+MAPK signaling pathway	Mapkapk2
+MAPK signaling pathway	Mapkapk5
+MAPK signaling pathway	Map2k4
+MAPK signaling pathway	Map3k1
+MAPK signaling pathway	Rps6ka5
+MAPK signaling pathway	Tgfbr1
+MAPK signaling pathway	Daxx
+MAPK signaling pathway	Jund
+MAPK signaling pathway	Egfr
+MAPK signaling pathway	Il1a
+MAPK signaling pathway	Tgfb1
+MAPK signaling pathway	Il1r1
+MAPK signaling pathway	Rras2
+MAPK signaling pathway	Egf
+MAPK signaling pathway	rCG_31023
+Faslg	Cacng8
+Faslg	Cacng7
+Faslg	Cacng1
+Faslg	Cacng4
+Faslg	Cacng3
+Faslg	rCG_46815
+Faslg	Prkcc
+Faslg	Rasgrp3
+Faslg	Rasgrp4
+Faslg	Rasgrp1
+Faslg	Stk4_predicted
+Faslg	Rasa1
+Faslg	rCG_24111
+Faslg	Pdgfa
+Faslg	Fgfr3
+Faslg	Fgfr4
+Faslg	Fgfr1
+Faslg	Fgfr2
+Faslg	Rasgrp2_predicted
+Faslg	Cd14
+Faslg	Gng12
+Faslg	Fgf16
+Faslg	Fgf17
+Faslg	Pla2g4f
+Faslg	Fgf14
+Faslg	Pla2g4b
+Faslg	Fgf18
+Faslg	Pla2g4e
+Faslg	Fgf19
+Faslg	Pla2g4d
+Faslg	Ikbkg
+Faslg	Fgf12
+Faslg	Fgf13
+Faslg	Fgf10
+Faslg	Fgf11
+Faslg	Ptprr
+Faslg	Nfkb2
+Faslg	Prkacb_predicted
+Faslg	Mapt
+Faslg	rCG_61446
+Faslg	Map2k1ip1
+Faslg	Fgf20
+Faslg	Cacna2d1
+Faslg	rCG_26305
+Faslg	Cacna2d3
+Faslg	Dusp3
+Faslg	Ntf4
+Faslg	Hspa1l
+Faslg	Dusp4
+Faslg	Ntf3
+Faslg	rCG_64130
+Faslg	Dusp9
+Faslg	Dusp8
+Faslg	Cacnb4
+Faslg	Cacnb1
+Faslg	Cacnb2
+Faslg	Taok2
+Faslg	Taok1
+Faslg	JIK
+Faslg	Mos
+Faslg	rCG_52028
+Faslg	Mef2c
+Faslg	Rapgef2
+Faslg	Il1b
+Faslg	Mapk8ip3
+Faslg	Cacna1g
+Faslg	Cacna1h
+Faslg	Cacna1e
+Faslg	Cacna1f
+Faslg	Cacna1c
+Faslg	Cacna1a
+Faslg	Cacna1b
+Faslg	Fgf2
+Faslg	Fgf1
+Faslg	Fgf3
+Faslg	Fgf6
+Faslg	Fgf5
+Fgf7	Cacna1s
+Fgf7	Fgf9
+Fgf7	Rela
+Fgf7	Relb
+Fgf7	Flnc
+Fgf7	Flnb
+Fgf7	Cdc25b
+Fgf7	Elk4_predicted
+Fgf7	rCG_59826
+Fgf7	Tgfb3
+Fgf7	Nf1
+Fgf7	Ppp3cc
+Fgf7	Ppp3cb
+Fgf7	rCG_33568
+Fgf7	Rasgrf2
+Fgf7	Mapk8ip
+Fgf7	Ppp5c
+Fgf7	Traf6
+Fgf7	rCG_29421
+Fgf7	Nfatc3
+Fgf7	Ngf
+Fgf7	Gna12
+Fgf7	Dusp16
+Fgf7	Ppm1a
+Fgf7	Ptpn7
+Fgf7	Arrb2
+Fgf7	Arrb1
+Fgf7	Dusp10
+Fgf7	Ntrk1
+Fgf7	Il1r2
+Fgf7	Nlk
+Fgf7	Tmem97
+Fgf7	Mapk1
+Fgf7	Mapk3
+Fgf7	Akt1
+Fgf7	Grb2
+Glycogen metabolism	Gyg1
+Glycogen metabolism	Ptpa
+Glycogen metabolism	Gbe1
+Glycogen metabolism	Phkb
+Glycogen metabolism	Ppp2r5b
+Glycogen metabolism	Calm2
+Glycogen metabolism	Ppp2r5a
+Glycogen metabolism	Phka2
+Glycogen metabolism	Ppp2r5c
+Glycogen metabolism	Pygb
+Glycogen metabolism	Phkg1
+Glycogen metabolism	Phkg2
+Glycogen metabolism	Agl
+Glycogen metabolism	Pygl
+Glycogen metabolism	Pygm
+Glycogen metabolism	Gys2
+Glycogen metabolism	Ppp2r2a
+Glycogen metabolism	Ppp2r1a
+Glycogen metabolism	rCG_53745
+Glycogen metabolism	Ppp2r5e
+Glycogen metabolism	rCG_54220
+Glycogen metabolism	Ppp2r3a
+Glycogen metabolism	Ppp2r2c
+Glycogen metabolism	Ugp2
+Glycogen metabolism	Gsk3b
+Glycogen metabolism	Ppp2r2b
+Glycogen metabolism	Pgm1
+Glycogen metabolism	Ppp2cb
+Glycogen metabolism	Ppp2ca
+Estrogen metabolism	Cyp1a1
+Estrogen metabolism	Sult1e1
+Estrogen metabolism	Gstm1
+Estrogen metabolism	Comt
+Estrogen metabolism	Sult1a1
+Estrogen metabolism	Arsl
+Estrogen metabolism	Cyp1b1
+Estrogen metabolism	Nqo1
+Proximal tubule transporters	Slc9a3r1
+Proximal tubule transporters	Atp1b1
+Proximal tubule transporters	Slc9a3
+Proximal tubule transporters	Atp1a1
+Proximal tubule transporters	Ca2
+Proximal tubule transporters	Ca4
+Proximal tubule transporters	rCG_35332
+Proximal tubule transporters	Car15_predicted
+Proximal tubule transporters	Slc20a2
+Proximal tubule transporters	Slc22a6
+Proximal tubule transporters	rCG_55143
+Proximal tubule transporters	Slc26a1
+Proximal tubule transporters	Tctn2
+Proximal tubule transporters	Atp6v1e1
+Proximal tubule transporters	Atp6v0a2
+Proximal tubule transporters	rCG_39078
+Proximal tubule transporters	Car14
+Proximal tubule transporters	Atp6v1g3
+Proximal tubule transporters	Atp6v0e2
+Proximal tubule transporters	Atp6v0a1
+Proximal tubule transporters	rCG_39138
+Proximal tubule transporters	Nherf2
+Proximal tubule transporters	Slc1a1
+Proximal tubule transporters	Atp6v0c
+Proximal tubule transporters	Slc4a4
+Proximal tubule transporters	Slc6a19
+Proximal tubule transporters	Slc7a6
+Proximal tubule transporters	Slc34a1
+Proximal tubule transporters	Slc7a7
+Proximal tubule transporters	Slc13a3
+Proximal tubule transporters	Slc9a8
+Proximal tubule transporters	Slc13a1
+Proximal tubule transporters	Slc7a8
+Proximal tubule transporters	Slc13a2
+Proximal tubule transporters	Slc7a9
+Proximal tubule transporters	Atp6v1b2
+Proximal tubule transporters	rCG_35986
+Proximal tubule transporters	Atp6v0d1
+Proximal tubule transporters	Atp6v1b1
+Proximal tubule transporters	Slc16a10
+Proximal tubule transporters	Atp6v1g1
+Proximal tubule transporters	rCG_52629
+Proximal tubule transporters	Slc22a8
+Proximal tubule transporters	Atp6v1d
+Proximal tubule transporters	Atp6v1h
+Lipid droplet metabolism	Lpin3
+Lipid droplet metabolism	Pnpla2_predicted
+Lipid droplet metabolism	Aup1
+Lipid droplet metabolism	Gpat2
+Lipid droplet metabolism	Plin2
+Lipid droplet metabolism	Lpin1
+Lipid droplet metabolism	Bscl2
+Lipid droplet metabolism	Agpat5
+Lipid droplet metabolism	Dgat2
+Lipid droplet metabolism	Acsl1
+Lipid droplet metabolism	Gpd2
+Lipid droplet metabolism	Acsl3
+Lipid droplet metabolism	Agpat3
+Lipid droplet metabolism	Agpat4
+Lipid droplet metabolism	Fitm2
+Lipid droplet metabolism	Agpat1
+Lipid droplet metabolism	Agpat2_predicted
+Lipid droplet metabolism	Lipa
+Lipid droplet metabolism	Dgat1
+Lipid droplet metabolism	Soat1
+Focal adhesion	Vegfd
+Focal adhesion	Vegfc
+Focal adhesion	Mapk7
+Focal adhesion	Ilk
+Focal adhesion	rCG_48194
+Focal adhesion	Braf
+Focal adhesion	Mapk4
+Focal adhesion	Itgam
+Focal adhesion	Pdpk1
+Focal adhesion	Akt3
+Focal adhesion	Akt2
+Focal adhesion	Pgf
+Focal adhesion	Rac2
+Focal adhesion	Itgae
+Focal adhesion	rCG_51808
+Focal adhesion	Rac1
+Focal adhesion	Itgal
+Focal adhesion	Comp
+Focal adhesion	Rap1b
+Focal adhesion	Ppp1r12a
+Focal adhesion	Selenop
+Focal adhesion	Vegfb
+Focal adhesion	Tnn
+Focal adhesion	Itgad
+Focal adhesion	Kdr
+Focal adhesion	Itgb6
+Focal adhesion	Tnr
+Focal adhesion	Hgf
+Focal adhesion	Itga2b
+Focal adhesion	Actb
+Focal adhesion	Itgb1
+Focal adhesion	Arhgap5
+Focal adhesion	Mylk2
+Focal adhesion	Reln
+Focal adhesion	Lama4
+Focal adhesion	Pik3ca
+Focal adhesion	Itgb5
+Focal adhesion	Erbb2
+Focal adhesion	Thbs3
+Focal adhesion	Itgb2
+Focal adhesion	Thbs4
+Focal adhesion	Itgb3
+Focal adhesion	Tln1
+Focal adhesion	Blk
+Focal adhesion	Egfr
+Focal adhesion	Raf1
+Focal adhesion	Lamc3_predicted
+Focal adhesion	Srms
+Focal adhesion	Crk
+Focal adhesion	Txk
+Focal adhesion	Sos1
+Focal adhesion	Pdgfc
+Focal adhesion	Pik3r2
+Focal adhesion	Vcl
+Focal adhesion	Chad
+Focal adhesion	Vasp
+Focal adhesion	Tesk2
+Focal adhesion	Tnk2
+Focal adhesion	Shc3
+Focal adhesion	Ptk6
+Focal adhesion	Igf1
+Focal adhesion	Src
+Focal adhesion	Itga8
+Focal adhesion	Mylk
+Focal adhesion	Itga6
+Focal adhesion	Ibsp
+Focal adhesion	Pelo
+Focal adhesion	Map2k6
+Focal adhesion	Flt1
+Focal adhesion	Bcar1
+Focal adhesion	rCG_35203
+Focal adhesion	Pak1
+Focal adhesion	Itga3
+Focal adhesion	Fgr
+Focal adhesion	Itga4
+Focal adhesion	Actn1
+Focal adhesion	Pik3r5
+Col11a1	Col11a2
+Col11a1	Tnc
+Col11a1	Lamb3
+Col11a1	Pak6
+Col11a1	Pdgfra
+Col11a1	Fyn
+Col11a1	Pak5
+Col11a1	Pak3
+Col11a1	Col6a2
+Col11a1	Pak2
+Col11a1	Styk1
+Col11a1	Pak4
+Col11a1	Tnk1_predicted
+Col11a1	Cdc42
+Col11a1	Pip5k1c
+Col11a1	Vwf
+Col11a1	Mapk12
+Col11a1	Egf
+Col11a1	Cav3
+Col11a1	Col4a1
+Col11a1	Col5a1
+Col11a1	Cav2
+Col11a1	Cav1
+Col11a1	Thbs2
+Col11a1	Capn1
+Col11a1	Ptk2
+Col11a1	Map2k3
+Col11a1	Map2k2
+Col11a1	Map2k1
+Col11a1	Rock2
+Col11a1	Vtn
+Col11a1	Pik3cd
+Col11a1	Lamb1
+Col11a1	Col1a2
+Col11a1	Col1a1
+Col11a1	Lama5
+Col11a1	Igf1r
+Col11a1	rCG_46815
+Col11a1	Lamc1
+Col11a1	Lamc2
+Col11a1	Thbs1
+Col11a1	Mapk8
+Col11a1	Pdgfa
+Col11a1	Pten
+Col11a1	Pdgfb
+Col11a1	Spp1
+Col11a1	Mapk9
+Col11a1	Elk1
+Col11a1	Gsk3b
+Col11a1	Hck
+Col11a1	Pik3r1
+Col11a1	Jun
+Col11a1	Mapk14
+Col11a1	Ccnd2
+Col11a1	Ccnd1
+Col11a1	Bad
+Col11a1	Shc1
+Col11a1	Mapk1
+Col11a1	Akt1
+Col11a1	Pik3cg
+Col11a1	Grb2
+Renin angiotensin system	Map2k4
+Renin angiotensin system	Map3k1
+Renin angiotensin system	Anpep
+Renin angiotensin system	Rac1
+Renin angiotensin system	Pik3ca
+Renin angiotensin system	Raf1
+Renin angiotensin system	Mapk9
+Renin angiotensin system	Elk1
+Renin angiotensin system	Pak1
+Renin angiotensin system	Rela
+Renin angiotensin system	Jak2
+Renin angiotensin system	Pak6
+Renin angiotensin system	Pak5
+Renin angiotensin system	Pak2
+Renin angiotensin system	Pak4
+Renin angiotensin system	Ctsg
+Renin angiotensin system	Plcb1
+Renin angiotensin system	Cpa3
+Renin angiotensin system	Mme
+Renin angiotensin system	Enpep
+Renin angiotensin system	Ctsa
+Renin angiotensin system	Nln
+Renin angiotensin system	Agtr1a
+Renin angiotensin system	Cma1
+Renin angiotensin system	Prkcq
+Renin angiotensin system	Lnpep
+Renin angiotensin system	Jun
+Renin angiotensin system	Mas1
+Renin angiotensin system	Itpr3
+Renin angiotensin system	Ptk2b
+Renin angiotensin system	Ptk2
+Renin angiotensin system	Itpr2
+Renin angiotensin system	Itpr1
+Renin angiotensin system	Ren1
+Renin angiotensin system	Ace
+Renin angiotensin system	rCG_26528
+Renin angiotensin system	Stat3
+Renin angiotensin system	Mapk10
+Renin angiotensin system	Agt
+Renin angiotensin system	Ikbkb
+Renin angiotensin system	Prkaca
+Renin angiotensin system	Fos
+Renin angiotensin system	Mapk8
+Renin angiotensin system	Ptgir_predicted
+Renin angiotensin system	Shc1
+Renin angiotensin system	Map2k7
+Renin angiotensin system	Ikbkg
+Renin angiotensin system	Mapk1
+Renin angiotensin system	Mapk3
+Renin angiotensin system	Mapk13
+Renin angiotensin system	Grb2
+Apoptosis	Casp3
+Apoptosis	Ripk1
+Apoptosis	Map2k4
+Apoptosis	Map3k1
+Apoptosis	Bax
+Apoptosis	Fas
+Apoptosis	Dffa
+Apoptosis	Dffb
+Apoptosis	Mdm2
+Apoptosis	Igf1
+Apoptosis	Rela
+Apoptosis	Pik3r1
+Apoptosis	Casp2
+Apoptosis	Jun
+Apoptosis	Nfkbia
+Apoptosis	Prf1
+Apoptosis	Birc5
+Apoptosis	Bcl2l11
+Apoptosis	Trp63
+Apoptosis	LOC100360940
+Apoptosis	Mapk10
+Apoptosis	Bcl2l2
+Apoptosis	Bnip3l
+Apoptosis	Irf3
+Apoptosis	Irf4
+Apoptosis	Irf1
+Apoptosis	Irf2
+Apoptosis	Ikbkb
+Apoptosis	Tnfrsf1a
+Apoptosis	Pmaip1
+Apoptosis	Lta
+Apoptosis	Irf7
+Apoptosis	Irf5
+Apoptosis	Irf6
+Apoptosis	rCG_47275
+Apoptosis	Casp7
+Apoptosis	Bak1
+Apoptosis	Tp73
+Apoptosis	Fadd
+Apoptosis	Nfkbib
+Apoptosis	Tnfrsf25
+Apoptosis	Faslg
+Apoptosis	Bid
+Apoptosis	Igf2
+Apoptosis	rCG_31387
+Apoptosis	Igf1r
+Apoptosis	Casp9
+Apoptosis	Bad
+Apoptosis	Chuk
+Apoptosis	Tp53
+Apoptosis	Ikbkg
+Apoptosis	Tradd
+Apoptosis	Akt1
+Apoptosis	Traf2
+Glutathione metabolism	Gstt1
+Glutathione metabolism	Ggt1
+Glutathione metabolism	Oplah
+Glutathione metabolism	Gss
+Glutathione metabolism	Gsr
+Glutathione metabolism	Anpep
+Glutathione metabolism	Gpx3
+Glutathione metabolism	Gstt2
+Glutathione metabolism	Gclm
+Glutathione metabolism	Ggt5
+Glutathione metabolism	Gstm6_predicted
+Glutathione metabolism	Gstm6
+Glutathione metabolism	Gstm3
+Glutathione metabolism	rCG_43800
+Glutathione metabolism	Gstm2
+ErbB signaling pathway	Jun
+ErbB signaling pathway	Cblc
+ErbB signaling pathway	Ptk2
+ErbB signaling pathway	rCG_48194
+ErbB signaling pathway	Stat5a
+ErbB signaling pathway	Map2k1
+ErbB signaling pathway	Shc2_predicted
+ErbB signaling pathway	Akt3
+ErbB signaling pathway	Cdkn1b
+ErbB signaling pathway	Rps6kb1
+ErbB signaling pathway	Cdkn1a
+ErbB signaling pathway	Erbb2
+ErbB signaling pathway	Eif4ebp1
+ErbB signaling pathway	Hbegf
+ErbB signaling pathway	Egfr
+ErbB signaling pathway	Frap1
+ErbB signaling pathway	Crk
+ErbB signaling pathway	Sos1
+ErbB signaling pathway	Ereg
+ErbB signaling pathway	Camk2a
+ErbB signaling pathway	Mapk8
+ErbB signaling pathway	Abl1
+ErbB signaling pathway	Src
+ErbB signaling pathway	Tgfa
+ErbB signaling pathway	Nrg2
+ErbB signaling pathway	Nrg1
+ErbB signaling pathway	Elk1
+ErbB signaling pathway	Areg
+ErbB signaling pathway	Btc
+ErbB signaling pathway	Pik3r5
+ErbB signaling pathway	Pak4
+ErbB signaling pathway	Bad
+ErbB signaling pathway	Gsk3b
+ErbB signaling pathway	Map2k7
+ErbB signaling pathway	Egf
+ErbB signaling pathway	Mapk1
+ErbB signaling pathway	Gab1_predicted
+ErbB signaling pathway	Plcg1
+ErbB signaling pathway	Grb2
+Regulation of actin cytoskeleton	Braf
+Regulation of actin cytoskeleton	Mapk4
+Regulation of actin cytoskeleton	Rac2
+Regulation of actin cytoskeleton	Rac1
+Regulation of actin cytoskeleton	Pik3r3
+Regulation of actin cytoskeleton	Ppp1r12a
+Regulation of actin cytoskeleton	Actb
+Regulation of actin cytoskeleton	Pik3ca
+Regulation of actin cytoskeleton	Egfr
+Regulation of actin cytoskeleton	Raf1
+Regulation of actin cytoskeleton	Crk
+Regulation of actin cytoskeleton	Sos1
+Regulation of actin cytoskeleton	Pik3r2
+Regulation of actin cytoskeleton	Vcl
+Regulation of actin cytoskeleton	Arhgef7
+Regulation of actin cytoskeleton	Mylk
+Regulation of actin cytoskeleton	Bcar1
+Regulation of actin cytoskeleton	rCG_35203
+Regulation of actin cytoskeleton	Pak1
+Regulation of actin cytoskeleton	Actn1
+Regulation of actin cytoskeleton	Itga1
+Regulation of actin cytoskeleton	Pik3r5
+Regulation of actin cytoskeleton	Pak6
+Regulation of actin cytoskeleton	Pdgfra
+Regulation of actin cytoskeleton	Pak5
+Regulation of actin cytoskeleton	Rras2
+Regulation of actin cytoskeleton	Pak3
+Regulation of actin cytoskeleton	Pak2
+Regulation of actin cytoskeleton	rCG_48326
+Regulation of actin cytoskeleton	Pak4
+Regulation of actin cytoskeleton	Wasf1
+Regulation of actin cytoskeleton	Cdc42
+Regulation of actin cytoskeleton	Pip5k1c
+Regulation of actin cytoskeleton	Egf
+Regulation of actin cytoskeleton	Ptk2
+Regulation of actin cytoskeleton	Map2k2
+Regulation of actin cytoskeleton	Map2k1
+Regulation of actin cytoskeleton	Rock2
+Regulation of actin cytoskeleton	Bdkrb2
+Regulation of actin cytoskeleton	rCG_30551
+Regulation of actin cytoskeleton	Rras
+Regulation of actin cytoskeleton	Pik3cd
+Regulation of actin cytoskeleton	Pik3c2a
+Regulation of actin cytoskeleton	Pik3c2g
+Regulation of actin cytoskeleton	F2r
+Regulation of actin cytoskeleton	Chrm2
+Regulation of actin cytoskeleton	rCG_46815
+Regulation of actin cytoskeleton	Pik3c3
+Regulation of actin cytoskeleton	Pdgfa
+Regulation of actin cytoskeleton	Fgfr3
+Regulation of actin cytoskeleton	Fgfr4
+Regulation of actin cytoskeleton	Cfl2
+Regulation of actin cytoskeleton	Fgfr1
+Regulation of actin cytoskeleton	rCG_26623
+Regulation of actin cytoskeleton	Fgfr2
+Regulation of actin cytoskeleton	Pfn1
+Regulation of actin cytoskeleton	Pip4k2a
+Regulation of actin cytoskeleton	Cd14
+Regulation of actin cytoskeleton	Arhgef6
+Regulation of actin cytoskeleton	Gng12
+Regulation of actin cytoskeleton	Arhgef1
+Regulation of actin cytoskeleton	Fgf16
+Regulation of actin cytoskeleton	Bdkrb1
+Regulation of actin cytoskeleton	Fgf17
+Regulation of actin cytoskeleton	Myh10
+Regulation of actin cytoskeleton	Nckap1
+Regulation of actin cytoskeleton	Fgf14
+Regulation of actin cytoskeleton	Chrm4
+Regulation of actin cytoskeleton	Sos2
+Regulation of actin cytoskeleton	rCG_47675
+Regulation of actin cytoskeleton	Fgf18
+Regulation of actin cytoskeleton	Pik3c2b
+Regulation of actin cytoskeleton	Ssh3
+Regulation of actin cytoskeleton	Fgf19
+Regulation of actin cytoskeleton	Ssh2
+Regulation of actin cytoskeleton	Vil2
+Regulation of actin cytoskeleton	Cyfip2
+Arpc5	Fgf13
+Arpc5	Fgf10
+Arpc5	Enah
+Arpc5	Fgf11
+Arpc5	rCG_51800
+Arpc5	Iqgap1
+Arpc5	Baiap2
+Arpc5	Git1
+Arpc5	Gsn
+Arpc5	F2
+Arpc5	Fgf23
+Arpc5	Rassf7
+Arpc5	Fgf20
+Arpc5	Gna13
+Arpc5	Fgd1
+Arpc5	Pip5k2b
+Arpc5	Arhgap35
+Arpc5	Wasf2
+Arpc5	Limk1
+Arpc5	rCG_57481
+Arpc5	Pip5k1b
+Arpc5	Mos
+Arpc5	rCG_52028
+Arpc5	Pdgfb
+Arpc5	Slc9a1
+Arpc5	Fgf2
+Arpc5	Fgf1
+Arpc5	Fgf3
+Arpc5	Fgf6
+Arpc5	Fgf5
+Arpc5	Fgf8
+Arpc5	Fgf7
+Arpc5	Fgf9
+Arpc5	rCG_48472
+Arpc5	Pik3r1
+Arpc5	Gna12
+Arpc5	Apc
+Arpc5	Mapk1
+Arpc5	Mapk3
+Arpc5	Pik3cg
+p53 signal pathway	Mdm2
+p53 signal pathway	Casp3
+p53 signal pathway	Ccne1
+p53 signal pathway	Igf1
+p53 signal pathway	Gadd45g
+p53 signal pathway	rCG_37705
+p53 signal pathway	Bax
+p53 signal pathway	Gtse1
+p53 signal pathway	Fas
+p53 signal pathway	Bbc3
+p53 signal pathway	Igfbp3
+p53 signal pathway	Perp
+p53 signal pathway	Pmaip1
+p53 signal pathway	Siah1
+p53 signal pathway	Parp1
+p53 signal pathway	Casp9
+p53 signal pathway	Tp53
+p53 signal pathway	Bid
+p53 signal pathway	Cdc2a
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Mapk7
+Nuclear factor erythroid derived 2 like 2 signaling pathway	rCG_48194
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Map3k1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Prkci
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3r3
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Actb
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3ca
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Raf1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3r2
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Hmox1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Map2k6
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Sod3
+Nuclear factor erythroid derived 2 like 2 signaling pathway	rCG_35203
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Sod2
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Sod1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3r5
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstt2
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Fyn
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Rras2
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Mgst1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Map2k1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Rras
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3cd
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3c2a
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3c2g
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstm6_predicted
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstm6
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstm3
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstm2
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstt1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Prkcc
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3c3
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Txn1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Mapk8
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Slc2a1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Taldo1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Aldoa
+Nuclear factor erythroid derived 2 like 2 signaling pathway	rCG_53923
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Fth1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Pik3c2b
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gclm
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Tp53
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Map2k7
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Ugdh
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Nqo1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	rCG_43800
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gss
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gsr
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Abcc1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstp1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Cdkn1a
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Akr7a3
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Akr7a2
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Prkd3
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Eif2ak3
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstk1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	rCG_52028
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Herpud1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Sqstm1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Acta1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Acta2
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Abcc3
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Abcc4
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Cdc34
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Vcp
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstm5
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Gstm4
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Mafg
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Ubb
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Mapk9
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Slc1a4
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Mafk
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Actg2
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Bach1
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Dhcr7
+Nuclear factor erythroid derived 2 like 2 signaling pathway	rCG_50201
+Nuclear factor erythroid derived 2 like 2 signaling pathway	Ephx1
+Slc35b1	Dnajc5
+Slc35b1	Aldh3a1
+Slc35b1	Xpo1
+Slc35b1	Gsto1
+Slc35b1	Mgst3
+Slc35b1	Gsto2
+Slc35b1	Cbr1
+Slc35b1	Nfe2l2
+Slc35b1	Ldhb
+Slc35b1	Gsk3b
+Slc35b1	Pik3r6
+Slc35b1	rCG_62477
+Slc35b1	Scarb1
+Slc35b1	Prkcb
+Slc35b1	Slc7a11
+Slc35b1	Prkcd
+Slc35b1	Mgst2_predicted
+Slc35b1	Dnajb4
+Slc35b1	Actc1
+Slc35b1	Pik3r1
+Slc35b1	Nqo2
+Slc35b1	Fmo1
+Slc35b1	Akr1b10
+Slc35b1	Hip2_predicted
+Slc35b1	Prkcq
+Slc35b1	Usp14
+Slc35b1	Jun
+Slc35b1	Ran
+Slc35b1	Mapk14
+Slc35b1	Prkce
+Slc35b1	Gstm1
+Slc35b1	Prkcz
+Slc35b1	Fosl1
+Slc35b1	Psmc6
+Slc35b1	Psmc5
+Slc35b1	Psmc2
+Slc35b1	Psmc4
+Slc35b1	Psmc3
+Slc35b1	Crebbp
+Slc35b1	Brca1
+Slc35b1	Mapk1
+Slc35b1	Map3k7
+Slc35b1	Mapk3
+Ethanol metabolism resulting in production of ROS by CYP2E1	Maff
+Ethanol metabolism resulting in production of ROS by CYP2E1	Mafg
+Ethanol metabolism resulting in production of ROS by CYP2E1	Nfe2l2
+Ethanol metabolism resulting in production of ROS by CYP2E1	Map2k2
+Ethanol metabolism resulting in production of ROS by CYP2E1	Mapk8
+Ethanol metabolism resulting in production of ROS by CYP2E1	Cyp2e1
+Ethanol metabolism resulting in production of ROS by CYP2E1	Map2k1
+Ethanol metabolism resulting in production of ROS by CYP2E1	Prkcb
+Synthesis and degradation of ketone bodies	Hmgcl
+Synthesis and degradation of ketone bodies	Bdh1
+Synthesis and degradation of ketone bodies	Oxct1
+Synthesis and degradation of ketone bodies	Hmgcs2
+Wnt myofibroblastic activation of hepatic stellate cells	Pparg
+Folic acid network	Gsr
+Folic acid network	Gpx3
+Folic acid network	Msrb1
+Folic acid network	Selenow
+Folic acid network	Alox5
+Folic acid network	Cbs
+Folic acid network	Fads2
+Folic acid network	Sod1
+Folic acid network	Mt-co1
+Folic acid network	Txnrd2
+Folic acid network	Gpx6
+Folic acid network	Mtr
+Folic acid network	Kmo
+Folic acid network	Cat
+Folic acid network	Tbxt
+Folic acid network	Ptgds
+Folic acid network	Xdh
+Folic acid network	Ptgis
+Folic acid network	Pnpo
+Folic acid network	Mt-co2
+Folic acid network	Mthfr
+Folic acid network	Selenok
+Complement and coagulation cascades	F2
+Complement and coagulation cascades	Vwf
+Complement and coagulation cascades	rCG_41849
+Complement and coagulation cascades	Kng2l1
+Complement and coagulation cascades	Cr2
+Complement and coagulation cascades	Serping1
+Complement and coagulation cascades	Cr1l
+Complement and coagulation cascades	Kng2
+Complement and coagulation cascades	C3ar1
+Complement and coagulation cascades	Serpinf2
+Complement and coagulation cascades	Mbl1
+Complement and coagulation cascades	Fgb
+Complement and coagulation cascades	Masp1
+Complement and coagulation cascades	Masp2
+Complement and coagulation cascades	Tfpi
+Complement and coagulation cascades	F3
+Complement and coagulation cascades	C4a
+Complement and coagulation cascades	F7
+Complement and coagulation cascades	F8
+Complement and coagulation cascades	Serpina5
+Complement and coagulation cascades	F9
+Complement and coagulation cascades	Plaur
+Complement and coagulation cascades	rCG_21770
+Complement and coagulation cascades	F2r
+Complement and coagulation cascades	Cfb
+Complement and coagulation cascades	Cfd
+Complement and coagulation cascades	C1qb
+Complement and coagulation cascades	C1qa
+Complement and coagulation cascades	Cfh
+Complement and coagulation cascades	Cfi
+Complement and coagulation cascades	Plg
+Complement and coagulation cascades	C2
+Complement and coagulation cascades	Proc
+Complement and coagulation cascades	C6
+Complement and coagulation cascades	C9
+Complement and coagulation cascades	Serpind1
+Complement and coagulation cascades	C8b_mapped
+Complement and coagulation cascades	rCG_59057
+Complement and coagulation cascades	F10
+Complement and coagulation cascades	C1s
+Complement and coagulation cascades	C1r
+Complement and coagulation cascades	F12
+Complement and coagulation cascades	Plat
+Complement and coagulation cascades	Thbd
+Complement and coagulation cascades	Pros1
+Complement and coagulation cascades	Bdkrb1
+Complement and coagulation cascades	Serpinc1
+Complement and coagulation cascades	rCG_20666
+Complement and coagulation cascades	Cd59
+Complement and coagulation cascades	Mcp
+Complement and coagulation cascades	A2m
+Complement and coagulation cascades	Cpb2
+Complement and coagulation cascades	Cd55
+Complement and coagulation cascades	C1qc
+Intracellular trafficking of CFTR	Slc9a3r1
+Intracellular trafficking of CFTR	rCG_28062
+Intracellular trafficking of CFTR	Vil2
+Intracellular trafficking of CFTR	Rab7
+Intracellular trafficking of CFTR	Myo6
+Intracellular trafficking of CFTR	Fblim1
+Intracellular trafficking of CFTR	Rab9a
+Intracellular trafficking of CFTR	Rhoq
+Intracellular trafficking of CFTR	Rab5a
+Intracellular trafficking of CFTR	Rab11a
+GPCRs class C metabotropic glutamate pheromone	rCG_41019
+GPCRs class C metabotropic glutamate pheromone	Gprc5a
+GPCRs class C metabotropic glutamate pheromone	Grm8
+GPCRs class C metabotropic glutamate pheromone	rCG_56083
+GPCRs class C metabotropic glutamate pheromone	Casr
+GPCRs class C metabotropic glutamate pheromone	rCG_34884
+GPCRs class C metabotropic glutamate pheromone	Gprc5d
+GPCRs class C metabotropic glutamate pheromone	Gprc5c
+GPCRs class C metabotropic glutamate pheromone	Grm2
+GPCRs class C metabotropic glutamate pheromone	Grm5
+GPCRs class C metabotropic glutamate pheromone	Grm4
+GPCRs class C metabotropic glutamate pheromone	Gabbr1
+GPCRs class C metabotropic glutamate pheromone	Gabbr2
+GPCRs class C metabotropic glutamate pheromone	Grm1
+Adipogenesis	Lpin3
+Adipogenesis	Plin2
+Adipogenesis	Lpin1
+Adipogenesis	Bscl2
+Adipogenesis	Gadd45a
+Adipogenesis	Necab3
+Adipogenesis	Socs3
+Adipogenesis	Nrip1
+Adipogenesis	Ahr
+Adipogenesis	Lifr
+Adipogenesis	Prlr
+Adipogenesis	Agpat2_predicted
+Adipogenesis	Cyp26b1
+Adipogenesis	Foxc2
+Adipogenesis	rCG_61008
+Adipogenesis	Twist1
+Adipogenesis	Ebf1
+Adipogenesis	Ptgis
+Adipogenesis	Mif
+Adipogenesis	Rb1
+Adipogenesis	Retn
+Adipogenesis	Lmna
+Adipogenesis	Cyp26a1
+Adipogenesis	Mbnl1
+Adipogenesis	Frzb
+Adipogenesis	Cntfr
+Adipogenesis	Gata3
+Adipogenesis	Gata4
+Adipogenesis	Gata2
+Adipogenesis	Rbl1
+Adipogenesis	Gh1
+Adipogenesis	Hif1a
+Adipogenesis	Tgfb1
+Adipogenesis	Il6
+Adipogenesis	E2f1
+Adipogenesis	Id3
+Adipogenesis	Gtf3a
+Adipogenesis	Ndn
+Adipogenesis	Cisd1
+Adipogenesis	Igf1
+Adipogenesis	Pck1
+Adipogenesis	Pck2
+Adipogenesis	Egr2
+Adipogenesis	Lif
+Adipogenesis	Bmp4
+Adipogenesis	Bmp3
+Adipogenesis	Wwtr1
+Adipogenesis	Bmp2
+Adipogenesis	Bmp1
+Adipogenesis	Tcf1
+Adipogenesis	Plin1
+Adipogenesis	Adipoq
+Adipogenesis	Epas1
+Adipogenesis	rCG_42248
+Adipogenesis	Trib3
+Adipogenesis	rCG_36773
+Adipogenesis	Irs2
+Adipogenesis	Sfrp4
+Adipogenesis	Rbl2
+Adipogenesis	Klf15
+Adipogenesis	Ncor1
+Adipogenesis	Il6st
+Adipogenesis	Ucp1
+Adipogenesis	Gadd45b
+Adipogenesis	Pnpla3
+Adipogenesis	Pbef1
+Adipogenesis	Cebpb
+Adipogenesis	Ncoa2
+Adipogenesis	Zmpste24
+Adipogenesis	Ncoa1
+Adipogenesis	rCG_57790
+Adipogenesis	Asip
+Adipogenesis	Osm
+Adipogenesis	Celf1
+Adipogenesis	Ncor2_predicted
+Adipogenesis	Dlk1
+Adipogenesis	Mixl1
+Klf6	Mef2b
+Klf6	Agt
+Klf6	Klf5
+Klf6	Lep
+Klf6	Spock1
+Klf6	Srebf1
+Klf6	Lipe
+Klf6	Slc2a4
+Klf6	Foxo1
+Klf6	Nr3c1
+Klf6	Rara
+Klf6	Fas
+Klf6	Cdkn1a
+Klf6	Nr2f1
+Klf6	Nr1h3
+Klf6	Ppard
+Klf6	Ppara
+Klf6	Pparg
+Klf6	Rxra
+Klf6	Mef2c
+Klf6	Rxrg
+Klf6	Ppargc1a
+Klf6	Socs1
+Klf6	Tnf
+Klf6	rCG_48472
+Klf6	Wnt5b
+Klf6	Lpl
+Klf6	Stat5a
+Klf6	rCG_34857
+Klf6	Stat3
+Klf6	Dvl1
+Klf6	rCG_21770
+Klf6	Cfd
+Klf6	Mef2d
+Notch signaling pathway	Ncor2_predicted
+Notch signaling pathway	Aph1a
+Notch signaling pathway	Ncstn
+Notch signaling pathway	Dtx2
+Notch signaling pathway	rCG_31110
+Notch signaling pathway	Dvl1
+Notch signaling pathway	Dtx4
+Notch signaling pathway	Dvl2
+Notch signaling pathway	Dll3
+Notch signaling pathway	Rbpjl
+Notch signaling pathway	Dvl3
+Notch signaling pathway	Mfng
+Notch signaling pathway	Hes1
+Notch signaling pathway	Numb
+Notch signaling pathway	Hes5
+Notch signaling pathway	RGD1565144_predicted
+Notch signaling pathway	Jag1
+Notch signaling pathway	Kat2a
+Notch signaling pathway	Rfng
+Notch signaling pathway	Notch4
+Notch signaling pathway	Numbl
+Notch signaling pathway	Notch1
+Notch signaling pathway	Notch2
+Notch signaling pathway	Lfng
+Notch signaling pathway	Notch3
+Notch signaling pathway	Psen1
+Notch signaling pathway	Psen2
+Notch signaling pathway	Crebbp
+Notch signaling pathway	Ctbp1
+Notch signaling pathway	Ctbp2
+Osteoblast signaling	rCG_46815
+Osteoblast signaling	Pdgfra
+Osteoblast signaling	Fgf23
+Osteoblast signaling	Bglap2
+Osteoblast signaling	Col1a1
+Osteoblast signaling	Pth
+Osteoblast signaling	Slc34a1
+Osteoblast signaling	Tnfsf11
+Irinotecan pathway	Bche
+Irinotecan pathway	Abcc1
+Irinotecan pathway	rCG_44263
+Irinotecan pathway	Abcc2
+Irinotecan pathway	Ces1f
+Irinotecan pathway	Ces1e
+Irinotecan pathway	Ces2c
+Irinotecan pathway	Abcg2
+Striated muscle contraction	Actn3
+Striated muscle contraction	Myl2
+Striated muscle contraction	Mybpc3
+Striated muscle contraction	Vim
+Striated muscle contraction	Myl9
+Striated muscle contraction	Myh6
+Striated muscle contraction	Acta1
+Striated muscle contraction	Acta2
+Striated muscle contraction	rCG_35203
+Striated muscle contraction	Tnnt3
+Striated muscle contraction	Tnnt2
+Striated muscle contraction	rCG_62531
+Striated muscle contraction	Tnnt1
+Striated muscle contraction	rCG_54533
+Striated muscle contraction	Tnnc2
+Striated muscle contraction	Tnnc1
+Striated muscle contraction	Tmod1
+Striated muscle contraction	rCG_34493
+Striated muscle contraction	Tpm4
+Striated muscle contraction	Tpm2
+Striated muscle contraction	Actc1
+Striated muscle contraction	rCG_30552
+Striated muscle contraction	Tnni3
+Striated muscle contraction	Tnni2
+Striated muscle contraction	Tnni1
+Striated muscle contraction	Myh3
+IL 6 signaling pathway	Mapt
+IL 6 signaling pathway	Mapkapk2
+IL 6 signaling pathway	Casp3
+IL 6 signaling pathway	rCG_48194
+IL 6 signaling pathway	Map2k4
+IL 6 signaling pathway	Ppp2r3b
+IL 6 signaling pathway	Foxo4
+IL 6 signaling pathway	Gab2
+IL 6 signaling pathway	Daxx
+IL 6 signaling pathway	Il6r
+IL 6 signaling pathway	Bmx
+IL 6 signaling pathway	Cdk9
+IL 6 signaling pathway	Socs3
+IL 6 signaling pathway	Tec
+IL 6 signaling pathway	rCG_27814
+IL 6 signaling pathway	Rac1
+IL 6 signaling pathway	Cdk5
+IL 6 signaling pathway	Fes
+IL 6 signaling pathway	Rb1
+IL 6 signaling pathway	Erbb2
+IL 6 signaling pathway	Eif4ebp1
+IL 6 signaling pathway	Eif4e
+IL 6 signaling pathway	Raf1
+IL 6 signaling pathway	Sos1
+IL 6 signaling pathway	Pik3r2
+IL 6 signaling pathway	Il6
+IL 6 signaling pathway	Map2k6
+IL 6 signaling pathway	Fgr
+IL 6 signaling pathway	Jak2
+IL 6 signaling pathway	Foxo3
+IL 6 signaling pathway	Jak1
+IL 6 signaling pathway	Tcf1
+IL 6 signaling pathway	Fyn
+IL 6 signaling pathway	Ppp2r3a
+IL 6 signaling pathway	Ppp2r2c
+IL 6 signaling pathway	Gsk3b
+IL 6 signaling pathway	Ppp2r2b
+IL 6 signaling pathway	Hck
+IL 6 signaling pathway	Map3k4
+IL 6 signaling pathway	Prkcd
+IL 6 signaling pathway	Il6st
+IL 6 signaling pathway	Btk
+IL 6 signaling pathway	Pik3r1
+IL 6 signaling pathway	Ppp2cb
+IL 6 signaling pathway	Ppp2ca
+IL 6 signaling pathway	Cebpb
+IL 6 signaling pathway	Ptpn11
+IL 6 signaling pathway	Lyn
+IL 6 signaling pathway	Jun
+IL 6 signaling pathway	Ncoa1
+IL 6 signaling pathway	Mapk14
+IL 6 signaling pathway	Ptpa
+IL 6 signaling pathway	Ptk2b
+IL 6 signaling pathway	Ptk2
+IL 6 signaling pathway	Stat5a
+IL 6 signaling pathway	Map2k2
+IL 6 signaling pathway	Map2k1
+IL 6 signaling pathway	rCG_34857
+IL 6 signaling pathway	Stat3
+IL 6 signaling pathway	Ppp2r5b
+IL 6 signaling pathway	Ppp2r5a
+IL 6 signaling pathway	Nlk
+IL 6 signaling pathway	Ppp2r5c
+IL 6 signaling pathway	Rps6kb1
+IL 6 signaling pathway	rCG_31110
+IL 6 signaling pathway	Tmem97
+IL 6 signaling pathway	Cd40
+IL 6 signaling pathway	Fos
+IL 6 signaling pathway	Mapk8
+IL 6 signaling pathway	Ppp2r2a
+IL 6 signaling pathway	Foxo1
+IL 6 signaling pathway	Ppp2r1a
+IL 6 signaling pathway	Ppp2r5e
+IL 6 signaling pathway	Crebbp
+IL 6 signaling pathway	Rps6ka2
+IL 6 signaling pathway	Casp9
+IL 6 signaling pathway	Sgk1
+Shc1	Mapk1
+Shc1	Gab1_predicted
+Shc1	Map3k7
+Shc1	Plcg1
+Shc1	Mapk3
+Shc1	Inppl1
+Shc1	Akt1
+Shc1	Hspb1
+Shc1	Grb2
+Nucleotide GPCRs	Adora2b
+Nucleotide GPCRs	P2ry6
+Nucleotide GPCRs	P2ry2
+Nucleotide GPCRs	Adora1
+Nucleotide GPCRs	P2ry1
+Nucleotide GPCRs	Lpar4
+Nucleotide GPCRs	Adora2a
+Nucleotide GPCRs	rCG_36973
+Nucleotide GPCRs	Adora3
+IL 1 signaling pathway	Capn1
+IL 1 signaling pathway	Map3k14
+IL 1 signaling pathway	Nfkbia
+IL 1 signaling pathway	Map2k1
+IL 1 signaling pathway	Il1r2
+IL 1 signaling pathway	Capns1
+IL 1 signaling pathway	Il1rap
+IL 1 signaling pathway	Peli1
+IL 1 signaling pathway	Nfkbib
+IL 1 signaling pathway	Tollip_predicted
+IL 1 signaling pathway	Sqstm1
+IL 1 signaling pathway	Irak4
+IL 1 signaling pathway	Prkcz
+IL 1 signaling pathway	Il1b
+IL 1 signaling pathway	Irak3
+IL 1 signaling pathway	Irak2
+IL 1 signaling pathway	Elp1
+IL 1 signaling pathway	Sirpa
+IL 1 signaling pathway	Il1rn
+IL 1 signaling pathway	Il1a
+IL 1 signaling pathway	Il1r1
+IL 1 signaling pathway	Mapk8
+IL 1 signaling pathway	Rela
+IL 1 signaling pathway	rCG_59826
+IL 1 signaling pathway	Chuk
+IL 1 signaling pathway	Mapk1
+IL 1 signaling pathway	Traf6
+IL 1 signaling pathway	Map3k7
+IL 1 signaling pathway	Plcg1
+IL 1 signaling pathway	Mapk3
+IL 1 signaling pathway	Akt1
+IL 1 signaling pathway	Ptpn11
+Angiotensin II signaling acute in thick ascending limbs	Mas1
+Angiotensin II signaling acute in thick ascending limbs	Itpr3
+Angiotensin II signaling acute in thick ascending limbs	Arrb2
+Angiotensin II signaling acute in thick ascending limbs	Itpr2
+Angiotensin II signaling acute in thick ascending limbs	Itpr1
+Angiotensin II signaling acute in thick ascending limbs	Pdpk1
+Angiotensin II signaling acute in thick ascending limbs	Agtr1b
+Angiotensin II signaling acute in thick ascending limbs	Akt3
+Angiotensin II signaling acute in thick ascending limbs	Akt2
+Angiotensin II signaling acute in thick ascending limbs	Agtr2
+Angiotensin II signaling acute in thick ascending limbs	Calm2
+Angiotensin II signaling acute in thick ascending limbs	Prkaca
+Angiotensin II signaling acute in thick ascending limbs	Gna11
+Angiotensin II signaling acute in thick ascending limbs	Gnaq
+Angiotensin II signaling acute in thick ascending limbs	Prkcc
+Angiotensin II signaling acute in thick ascending limbs	Pde2a
+Angiotensin II signaling acute in thick ascending limbs	Plcg2
+Angiotensin II signaling acute in thick ascending limbs	Dnm1
+Angiotensin II signaling acute in thick ascending limbs	Nox4
+Angiotensin II signaling acute in thick ascending limbs	Agtrap
+Angiotensin II signaling acute in thick ascending limbs	Nos3
+Angiotensin II signaling acute in thick ascending limbs	Plcg1
+Angiotensin II signaling acute in thick ascending limbs	Akt1
+Angiotensin II signaling acute in thick ascending limbs	Agtr1a
+Angiotensin II signaling acute in thick ascending limbs	Pten
+Pentose phosphate pathway	Rpia
+Pentose phosphate pathway	Tkt
+Pentose phosphate pathway	rCG_31394
+Pentose phosphate pathway	Kif1b
+Pentose phosphate pathway	Rpe
+Pentose phosphate pathway	Taldo1
+Pentose phosphate pathway	Pgls
+Pentose phosphate pathway	rCG_43800
+Monoamine GPCRs	Htr2a
+Monoamine GPCRs	Adra1a
+Monoamine GPCRs	Htr2c
+Monoamine GPCRs	Htr1a
+Monoamine GPCRs	Adra1d
+Monoamine GPCRs	rCG_30551
+Monoamine GPCRs	Htr1f
+Monoamine GPCRs	Chrm2
+Monoamine GPCRs	Drd3
+Monoamine GPCRs	Drd4
+Monoamine GPCRs	Adra2a
+Monoamine GPCRs	Adra2c
+Monoamine GPCRs	rCG_31257
+Monoamine GPCRs	Htr4
+Monoamine GPCRs	Hrh1
+Monoamine GPCRs	Htr6
+Monoamine GPCRs	rCG_26623
+Monoamine GPCRs	Drd1
+Monoamine GPCRs	Adrb1
+Monoamine GPCRs	Drd5
+Monoamine GPCRs	Adra1b
+Monoamine GPCRs	Adrb3
+Monoamine GPCRs	rCG_26342
+Monoamine GPCRs	Htr5b
+Monoamine GPCRs	Chrm4
+Monoamine GPCRs	Htr5a
+Monoamine GPCRs	rCG_47675
+Monoamine GPCRs	Htr7
+Cholesterol metabolism	Dhcr7
+Cholesterol metabolism	Srebf1
+Cholesterol metabolism	Idi1
+Cholesterol metabolism	Mvk
+Cholesterol metabolism	Apoc2
+Cholesterol metabolism	Sc4mol
+Cholesterol metabolism	Scarb1
+Cholesterol metabolism	Fdft1
+Cholesterol metabolism	Apoc1
+Cholesterol metabolism	Lss
+Cholesterol metabolism	Soat1
+Cholesterol metabolism	rCG_62819
+Cholesterol metabolism	rCG_62519
+Cholesterol metabolism	Hmgcr
+Cholesterol metabolism	Mvd
+Cholesterol metabolism	Lpl
+Cholesterol metabolism	rCG_44679
+Cholesterol metabolism	Apoe
+IL 3 signaling pathway	Mapkapk2
+IL 3 signaling pathway	Mapk7
+IL 3 signaling pathway	rCG_48194
+IL 3 signaling pathway	Rara
+IL 3 signaling pathway	Gab2
+IL 3 signaling pathway	Bmx
+IL 3 signaling pathway	Rac2
+IL 3 signaling pathway	Socs3
+IL 3 signaling pathway	Tec
+IL 3 signaling pathway	Bax
+IL 3 signaling pathway	rCG_51808
+IL 3 signaling pathway	Rac1
+IL 3 signaling pathway	Fes
+IL 3 signaling pathway	Rxra
+IL 3 signaling pathway	Pik3ca
+IL 3 signaling pathway	Raf1
+IL 3 signaling pathway	Crk
+IL 3 signaling pathway	Gata2
+IL 3 signaling pathway	Sos1
+IL 3 signaling pathway	Pik3r2
+IL 3 signaling pathway	Vcl
+IL 3 signaling pathway	Mapk9
+IL 3 signaling pathway	Dnm1
+IL 3 signaling pathway	Mmp2
+IL 3 signaling pathway	Src
+IL 3 signaling pathway	Mmp9
+IL 3 signaling pathway	rCG_53745
+IL 3 signaling pathway	Crkl
+IL 3 signaling pathway	Pak1
+IL 3 signaling pathway	Csf2rb
+IL 3 signaling pathway	Jak2
+IL 3 signaling pathway	Jak1
+IL 3 signaling pathway	Fyn
+IL 3 signaling pathway	Syk
+IL 3 signaling pathway	Gsk3b
+IL 3 signaling pathway	Cdc42
+IL 3 signaling pathway	Hck
+IL 3 signaling pathway	Prkcb
+IL 3 signaling pathway	Pik3r1
+IL 3 signaling pathway	Ppp2ca
+IL 3 signaling pathway	Ptpn6
+IL 3 signaling pathway	Ywhaq
+IL 3 signaling pathway	Ptpn11
+IL 3 signaling pathway	Matk
+IL 3 signaling pathway	Lyn
+IL 3 signaling pathway	Kcnip3
+IL 3 signaling pathway	Ywhab
+IL 3 signaling pathway	Mapk14
+IL 3 signaling pathway	rCG_34190
+IL 3 signaling pathway	Ptk2
+IL 3 signaling pathway	Fcer2
+IL 3 signaling pathway	Bcl2l1
+IL 3 signaling pathway	Stat5a
+IL 3 signaling pathway	Birc5
+IL 3 signaling pathway	Sfpi1
+IL 3 signaling pathway	Map2k1
+IL 3 signaling pathway	Bcl2l11
+IL 3 signaling pathway	Chek1
+IL 3 signaling pathway	rCG_34857
+IL 3 signaling pathway	Il3ra
+IL 3 signaling pathway	rCG_26528
+IL 3 signaling pathway	Il3
+IL 3 signaling pathway	Stat3
+IL 3 signaling pathway	Selp
+IL 3 signaling pathway	Id1
+IL 3 signaling pathway	Rps6kb2
+IL 3 signaling pathway	Pik3cd
+IL 3 signaling pathway	rCG_31387
+IL 3 signaling pathway	Prkaca
+IL 3 signaling pathway	Lck
+IL 3 signaling pathway	Mapk8
+IL 3 signaling pathway	Slc2a1
+IL 3 signaling pathway	Foxo1
+IL 3 signaling pathway	Bad
+IL 3 signaling pathway	Shc1
+IL 3 signaling pathway	Mapk1
+IL 3 signaling pathway	Gab1_predicted
+Akt1	Hspb1
+Akt1	Grb2
+Burn wound healing	Jun
+Burn wound healing	Casp3
+Burn wound healing	Igf1
+Burn wound healing	Gpr176
+Burn wound healing	Pdgfa
+Burn wound healing	Mmp9
+Burn wound healing	Il10
+Burn wound healing	Syp
+Burn wound healing	Il1rl1
+Burn wound healing	rCG_26856
+Burn wound healing	Adora2b
+Burn wound healing	Glb1
+Burn wound healing	Cdc25b
+Burn wound healing	rCG_21785
+Burn wound healing	Arfgap1
+Burn wound healing	Ccn2
+Burn wound healing	Syk
+Burn wound healing	Ptgis
+Burn wound healing	Col1a1
+Burn wound healing	Tp53
+Burn wound healing	Acta1
+Burn wound healing	Col4a1
+Burn wound healing	Il1b
+Burn wound healing	Ankrd1
+Nod like receptor NLR signaling pathway	Ikbkb
+Nod like receptor NLR signaling pathway	Ephb2
+Nod like receptor NLR signaling pathway	Mapk8
+Nod like receptor NLR signaling pathway	Chuk
+Nod like receptor NLR signaling pathway	Cd40
+Nod like receptor NLR signaling pathway	Ikbkg
+Nod like receptor NLR signaling pathway	Map3k7
+Nod like receptor NLR signaling pathway	Rela
+Toll like receptor signaling pathway	Ripk1
+Toll like receptor signaling pathway	Mapk11
+Toll like receptor signaling pathway	Map2k4
+Toll like receptor signaling pathway	Akt3
+Toll like receptor signaling pathway	Akt2
+Toll like receptor signaling pathway	Rac1
+Toll like receptor signaling pathway	Pik3r3
+Toll like receptor signaling pathway	Ifnb1
+Toll like receptor signaling pathway	Tollip_predicted
+Toll like receptor signaling pathway	Irak4
+Toll like receptor signaling pathway	Pik3ca
+Toll like receptor signaling pathway	Il1b
+Toll like receptor signaling pathway	Spp1
+Toll like receptor signaling pathway	Pik3r2
+Toll like receptor signaling pathway	Ifnar1
+Toll like receptor signaling pathway	Il6
+Toll like receptor signaling pathway	Mapk9
+Toll like receptor signaling pathway	Map2k6
+Toll like receptor signaling pathway	Tnf
+Toll like receptor signaling pathway	Rela
+Toll like receptor signaling pathway	Pik3r5
+Toll like receptor signaling pathway	rCG_59826
+Toll like receptor signaling pathway	Map3k8
+Toll like receptor signaling pathway	Mapk12
+Toll like receptor signaling pathway	Traf6
+Toll like receptor signaling pathway	Pik3r1
+Toll like receptor signaling pathway	Jun
+Toll like receptor signaling pathway	Mapk14
+Toll like receptor signaling pathway	Nfkbia
+Toll like receptor signaling pathway	Map2k3
+Toll like receptor signaling pathway	Map2k2
+Toll like receptor signaling pathway	Map2k1
+Toll like receptor signaling pathway	Mapk10
+Toll like receptor signaling pathway	Irf3
+Toll like receptor signaling pathway	Ikbkb
+Toll like receptor signaling pathway	Irf7
+Toll like receptor signaling pathway	Pik3cd
+Toll like receptor signaling pathway	Irf5
+Toll like receptor signaling pathway	Il12b
+Toll like receptor signaling pathway	Cd86
+Toll like receptor signaling pathway	Il12a
+Toll like receptor signaling pathway	Ikbke
+Toll like receptor signaling pathway	Cd40
+Toll like receptor signaling pathway	Ticam2
+Toll like receptor signaling pathway	Fadd
+Toll like receptor signaling pathway	Lbp
+Toll like receptor signaling pathway	Cd80
+Toll like receptor signaling pathway	Ly96
+Toll like receptor signaling pathway	Ifna4
+Toll like receptor signaling pathway	Fos
+Toll like receptor signaling pathway	Tlr7
+Toll like receptor signaling pathway	Tlr6
+Toll like receptor signaling pathway	Tlr5
+Toll like receptor signaling pathway	Tlr4
+Toll like receptor signaling pathway	Tlr3
+Toll like receptor signaling pathway	Tlr2
+Toll like receptor signaling pathway	Cxcl11
+Toll like receptor signaling pathway	Cxcl10
+Toll like receptor signaling pathway	Cxcl9
+Toll like receptor signaling pathway	Mapk8
+Toll like receptor signaling pathway	Ccl5
+Toll like receptor signaling pathway	Ccl4
+Toll like receptor signaling pathway	Ccl3
+Toll like receptor signaling pathway	Cd14
+Toll like receptor signaling pathway	Chuk
+Toll like receptor signaling pathway	Map2k7
+Toll like receptor signaling pathway	Ikbkg
+Toll like receptor signaling pathway	Mapk1
+Toll like receptor signaling pathway	Map3k7
+Toll like receptor signaling pathway	Mapk3
+Toll like receptor signaling pathway	Akt1
+Toll like receptor signaling pathway	Mapk13
+Toll like receptor signaling pathway	Pik3cg
+Toll like receptor signaling pathway	Nfkb2
+G13 signaling pathway	Pik3r2
+G13 signaling pathway	Tnk2
+G13 signaling pathway	Rhpn2
+G13 signaling pathway	Rock2
+G13 signaling pathway	Arhgdib
+G13 signaling pathway	Limk1
+G13 signaling pathway	Mapk10
+G13 signaling pathway	Wasl
+G13 signaling pathway	Cfl2
+G13 signaling pathway	Sh3rf1
+G13 signaling pathway	Cit
+G13 signaling pathway	Cyfip1
+G13 signaling pathway	Rac1
+G13 signaling pathway	Pkn1
+G13 signaling pathway	Pip4k2a
+G13 signaling pathway	Rps6kb1
+G13 signaling pathway	Mybph
+G13 signaling pathway	Arhgef1
+G13 signaling pathway	rCG_61710
+G13 signaling pathway	Pik3cd
+G13 signaling pathway	Pak3
+G13 signaling pathway	Cdc42
+G13 signaling pathway	Map3k4
+G13 signaling pathway	Iqgap1
+mir219 in oligodendrocyte differentiation and myelination	Foxj3_predicted
+mir219 in oligodendrocyte differentiation and myelination	Pdgfra
+mir219 in oligodendrocyte differentiation and myelination	Sox6
+mir219 in oligodendrocyte differentiation and myelination	Elovl7
+mir219 in oligodendrocyte differentiation and myelination	Neurod1
+mir219 in oligodendrocyte differentiation and myelination	rCG_20176
+mir219 in oligodendrocyte differentiation and myelination	Hes5
+Hepatocyte growth factor receptor signaling	Jun
+Hepatocyte growth factor receptor signaling	Ptk2b
+Hepatocyte growth factor receptor signaling	Ptk2
+Hepatocyte growth factor receptor signaling	rCG_48194
+Hepatocyte growth factor receptor signaling	Map2k2
+Hepatocyte growth factor receptor signaling	Map2k1
+Hepatocyte growth factor receptor signaling	Stat3
+Hepatocyte growth factor receptor signaling	rCG_51808
+Hepatocyte growth factor receptor signaling	Rap1b
+Hepatocyte growth factor receptor signaling	Hgf
+Hepatocyte growth factor receptor signaling	Itgb1
+Hepatocyte growth factor receptor signaling	Map4k1
+Hepatocyte growth factor receptor signaling	Pik3ca
+Hepatocyte growth factor receptor signaling	Fos
+Hepatocyte growth factor receptor signaling	Raf1
+Hepatocyte growth factor receptor signaling	Crk
+Hepatocyte growth factor receptor signaling	Sos1
+Hepatocyte growth factor receptor signaling	Mapk8
+Hepatocyte growth factor receptor signaling	Src
+Hepatocyte growth factor receptor signaling	Rasa1
+Hepatocyte growth factor receptor signaling	Elk1
+Hepatocyte growth factor receptor signaling	Crkl
+Hepatocyte growth factor receptor signaling	Pak1
+Hepatocyte growth factor receptor signaling	Itga1
+Hepatocyte growth factor receptor signaling	Met
+Hepatocyte growth factor receptor signaling	Mapk1
+Hepatocyte growth factor receptor signaling	Gab1_predicted
+Hepatocyte growth factor receptor signaling	Mapk3
+Hepatocyte growth factor receptor signaling	Pten
+Hepatocyte growth factor receptor signaling	Ptpn11
+Hepatocyte growth factor receptor signaling	Grb2
+Glucocorticoid metabolism	rCG_55789
+Glucocorticoid metabolism	Hsd11b1
+Glucocorticoid metabolism	Hsd11b2
+Glucocorticoid metabolism	Cyp21a1
+Glucocorticoid metabolism	Cyp17a1
+S1P receptor signal transduction	Gnai3
+S1P receptor signal transduction	Mapk4
+S1P receptor signal transduction	Akt3
+S1P receptor signal transduction	Akt2
+S1P receptor signal transduction	Pik3c2b
+S1P receptor signal transduction	Mapk12
+S1P receptor signal transduction	Plcb1
+S1P receptor signal transduction	Smpd2
+S1P receptor signal transduction	Plcb3
+S1P receptor signal transduction	Mapk1
+S1P receptor signal transduction	Edg1
+S1P receptor signal transduction	Plcb2
+S1P receptor signal transduction	Mapk3
+S1P receptor signal transduction	Asah1
+S1P receptor signal transduction	rCG_53912
+S1P receptor signal transduction	Akt1
+S1P receptor signal transduction	Sphk1
+S1P receptor signal transduction	S1pr3
+S1P receptor signal transduction	Gnai1
+Peptide GPCRs	Ghsr
+Peptide GPCRs	Cckar
+Peptide GPCRs	Ednrb
+Peptide GPCRs	rCG_56054
+Peptide GPCRs	Npy1r
+Peptide GPCRs	Npy5r
+Peptide GPCRs	Brs3
+Peptide GPCRs	rCG_30505
+Peptide GPCRs	Mc2r
+Peptide GPCRs	Oprd1
+Peptide GPCRs	Cxcr4
+Peptide GPCRs	Ccr7
+Peptide GPCRs	Cxcr6
+Peptide GPCRs	Oprl1
+Peptide GPCRs	Ccr6
+Peptide GPCRs	Ccr3
+Peptide GPCRs	Galr2
+Peptide GPCRs	Galr3
+Peptide GPCRs	Galr1
+Peptide GPCRs	Npy4r
+Peptide GPCRs	Lhcgr
+Peptide GPCRs	Sstr5
+Peptide GPCRs	Sstr4
+Peptide GPCRs	Avpr1b
+Peptide GPCRs	Mc5r
+Peptide GPCRs	Oprm1
+Peptide GPCRs	Tacr3
+Peptide GPCRs	Tacr2
+Peptide GPCRs	rCG_59982
+Peptide GPCRs	rCG_62075
+Peptide GPCRs	Fpr1
+Peptide GPCRs	Nmbr
+Peptide GPCRs	Tshr
+Peptide GPCRs	Ccr10
+Peptide GPCRs	Mc4r
+Peptide GPCRs	Tac4
+Peptide GPCRs	Oxtr
+Peptide GPCRs	Npy2r
+Peptide GPCRs	Mc3r
+Peptide GPCRs	Ednra
+Peptide GPCRs	Gnrhr
+Peptide GPCRs	Agtr1a
+Peptide GPCRs	Fshr
+Peptide GPCRs	rCG_25384
+Peptide GPCRs	Ccr5
+Peptide GPCRs	Agtr2
+Peptide GPCRs	Cckbr
+Peptide GPCRs	Bdkrb2
+Peptide GPCRs	C3ar1
+Peptide GPCRs	Sstr2
+Peptide GPCRs	Ntsr1_predicted
+Peptide GPCRs	Grpr
+Peptide GPCRs	Il8ra
+Peptide GPCRs	Bdkrb1
+Aflatoxin B1 metabolism	Akr7a3
+Aflatoxin B1 metabolism	Akr7a2
+Aflatoxin B1 metabolism	Gstm1
+Aflatoxin B1 metabolism	Ephx1
+Myometrial relaxation and contraction pathways	Atf6b
+Myometrial relaxation and contraction pathways	Actb
+Myometrial relaxation and contraction pathways	Mylk2
+Myometrial relaxation and contraction pathways	Il6
+Myometrial relaxation and contraction pathways	Atf3
+Myometrial relaxation and contraction pathways	Oxtr
+Myometrial relaxation and contraction pathways	rCG_50354
+Myometrial relaxation and contraction pathways	Ets2
+Myometrial relaxation and contraction pathways	Rgs4
+Myometrial relaxation and contraction pathways	Rgs5
+Myometrial relaxation and contraction pathways	rCG_35203
+Myometrial relaxation and contraction pathways	Rgs2
+Myometrial relaxation and contraction pathways	Gja1
+Myometrial relaxation and contraction pathways	Rgs3
+Myometrial relaxation and contraction pathways	Rgs1
+Myometrial relaxation and contraction pathways	Crcp
+Myometrial relaxation and contraction pathways	Slc8a1
+Myometrial relaxation and contraction pathways	Rgs9
+Myometrial relaxation and contraction pathways	Rgs6
+Myometrial relaxation and contraction pathways	Rgs7
+Myometrial relaxation and contraction pathways	rCG_41887
+Myometrial relaxation and contraction pathways	Myl4
+Myometrial relaxation and contraction pathways	Rxfp2
+Myometrial relaxation and contraction pathways	Atf5
+Myometrial relaxation and contraction pathways	Gpr182
+Myometrial relaxation and contraction pathways	rCG_44727
+Myometrial relaxation and contraction pathways	Pkib
+Myometrial relaxation and contraction pathways	Calca
+Myometrial relaxation and contraction pathways	Grk5
+Myometrial relaxation and contraction pathways	Pkia
+Myometrial relaxation and contraction pathways	Grk6
+Myometrial relaxation and contraction pathways	Pkig
+Myometrial relaxation and contraction pathways	Dgkz
+Myometrial relaxation and contraction pathways	rCG_32756
+Myometrial relaxation and contraction pathways	Itpr3
+Myometrial relaxation and contraction pathways	Gnb4
+Myometrial relaxation and contraction pathways	Gnb3
+Myometrial relaxation and contraction pathways	Itpr1
+Myometrial relaxation and contraction pathways	rCG_62549
+Myometrial relaxation and contraction pathways	Rln1
+Myometrial relaxation and contraction pathways	Gprk2l
+Myometrial relaxation and contraction pathways	Ryr2
+Myometrial relaxation and contraction pathways	Atp2a3
+Myometrial relaxation and contraction pathways	Atp2a2
+Myometrial relaxation and contraction pathways	Oxt
+Myometrial relaxation and contraction pathways	Adm
+Myometrial relaxation and contraction pathways	Ywhah
+Myometrial relaxation and contraction pathways	Ywhag
+Myometrial relaxation and contraction pathways	Ywhae
+Myometrial relaxation and contraction pathways	Adcy3
+Myometrial relaxation and contraction pathways	Adcy4
+Myometrial relaxation and contraction pathways	Nos1
+Myometrial relaxation and contraction pathways	Adcy2
+Myometrial relaxation and contraction pathways	Adcy7
+Myometrial relaxation and contraction pathways	Guca2a
+Myometrial relaxation and contraction pathways	Rxfp1
+Myometrial relaxation and contraction pathways	Crhr1
+Myometrial relaxation and contraction pathways	Adcy5
+Myometrial relaxation and contraction pathways	Adcy9
+Myometrial relaxation and contraction pathways	Cald1
+Myometrial relaxation and contraction pathways	Pde4b
+Myometrial relaxation and contraction pathways	rCG_33829
+Myometrial relaxation and contraction pathways	Adcy1_predicted
+Myometrial relaxation and contraction pathways	Prkar1a
+Myometrial relaxation and contraction pathways	Rgs20
+Myometrial relaxation and contraction pathways	Camk2g
+Myometrial relaxation and contraction pathways	Rgs17
+Myometrial relaxation and contraction pathways	Prkcc
+Myometrial relaxation and contraction pathways	Camk2d
+Myometrial relaxation and contraction pathways	Rgs19
+Myometrial relaxation and contraction pathways	Camk2b
+Myometrial relaxation and contraction pathways	Gng3
+Myometrial relaxation and contraction pathways	Camk2a
+Myometrial relaxation and contraction pathways	Vkorc1l1
+Myometrial relaxation and contraction pathways	Rgs14
+Myometrial relaxation and contraction pathways	Gng7
+Myometrial relaxation and contraction pathways	Igfbp1
+Gng8	Prkar2b
+Gng8	Rgs10
+Gng8	Corin
+Gng8	Ramp3
+Gng8	Gng12
+Gng8	Prkacb_predicted
+Gng8	Myl2
+Gng8	Crh
+Gng8	Igfbp3
+Gng8	Prkar1b
+Gng8	Acta1
+Gng8	Il1b
+Gng8	Gabpa
+Gng8	Gnaq
+Gng8	Plcg2
+Gng8	Gsto1
+Gng8	Prkd1
+Gng8	Prkcb
+Gng8	Prkcd
+Gng8	Actc1
+Gng8	Ywhaq
+Gng8	Prkcq
+Gng8	Jun
+Gng8	Prkch
+Gng8	Maff
+Gng8	Ywhab
+Gng8	Arrb2
+Gng8	Prkce
+Gng8	Arrb1
+Gng8	rCG_26528
+Gng8	rCG_21785
+Gng8	Prkcz
+Gng8	Fos
+Gng8	Gngt1
+Gng8	Gnb1
+Gng8	Edg2
+Gng8	Nos3
+Gng8	Plcb3
+Gng8	Plcg1
+Translation factors	rCG_27822
+Translation factors	Eif2b3
+Translation factors	Eif2b2
+Translation factors	Eif2b5
+Translation factors	Eif2b4
+Translation factors	Kcnq2
+Translation factors	Eif2s2
+Translation factors	Eif2s1
+Translation factors	rCG_32592
+Translation factors	Eef2k
+Translation factors	Eif2b1
+Translation factors	Eif4h
+Translation factors	Eef2
+Translation factors	Eif1
+Translation factors	Eif1ax
+Translation factors	Eif6
+Translation factors	Eif4a2
+Translation factors	EIF3J
+Translation factors	Eif4a1
+Translation factors	Etf1
+Translation factors	Cluh
+Translation factors	rCG_60267
+Translation factors	Eif2ak3
+Translation factors	Eif4ebp1
+Translation factors	Eif4e
+Translation factors	Eef1a2
+Translation factors	Eef1d
+Translation factors	Eif3s9
+Translation factors	rCG_47618
+Translation factors	Eif2s3
+Translation factors	Eif2ak1
+Translation factors	Eif2ak2
+Translation factors	Eif3f
+Translation factors	Eif4ebp2
+Translation factors	Eif4g1
+Translation factors	Eif4g3
+Translation factors	Paip1_predicted
+Translation factors	rCG_36424
+Translation factors	Eif3a
+Translation factors	Eif3d
+Translation factors	Eif1a
+Translation factors	Eif5b
+Catecholamine synthesis	Ddc
+Catecholamine synthesis	Pnmt
+Catecholamine synthesis	Pah
+Catecholamine synthesis	Dbh
+Catecholamine synthesis	rCG_47367
+G protein signaling pathways	Prkacb_predicted
+G protein signaling pathways	Gnai3
+G protein signaling pathways	rCG_48194
+G protein signaling pathways	Gna13
+G protein signaling pathways	Prkci
+G protein signaling pathways	Ppp3ca
+G protein signaling pathways	Prkd3
+G protein signaling pathways	rCG_52028
+G protein signaling pathways	Prkar1b
+G protein signaling pathways	Pde7b
+G protein signaling pathways	rCG_37658
+G protein signaling pathways	Pde7a
+G protein signaling pathways	Akap7
+G protein signaling pathways	Akap8
+G protein signaling pathways	Slc9a1
+G protein signaling pathways	Akap6
+G protein signaling pathways	Gna11
+G protein signaling pathways	Akap3
+G protein signaling pathways	Gnaq
+G protein signaling pathways	Akap4
+G protein signaling pathways	Akap1
+G protein signaling pathways	Akap2
+G protein signaling pathways	Gnaz
+G protein signaling pathways	Akap12
+G protein signaling pathways	Akap9
+G protein signaling pathways	Akap13
+G protein signaling pathways	Pde8a
+G protein signaling pathways	Pde8b
+G protein signaling pathways	rCG_19927
+G protein signaling pathways	Gna15
+G protein signaling pathways	Gna14
+G protein signaling pathways	Gnal
+G protein signaling pathways	Gnao
+G protein signaling pathways	Gng5
+G protein signaling pathways	Prkd1
+G protein signaling pathways	Pde4c
+G protein signaling pathways	Gnas
+G protein signaling pathways	Pde1c
+G protein signaling pathways	Pde1a
+G protein signaling pathways	Ppp3cc
+G protein signaling pathways	Gng11
+G protein signaling pathways	Prkcb
+G protein signaling pathways	Prkcd
+G protein signaling pathways	rCG_44727
+G protein signaling pathways	Gna12
+G protein signaling pathways	Prkcq
+G protein signaling pathways	Prkch
+G protein signaling pathways	rCG_32756
+G protein signaling pathways	Prkce
+G protein signaling pathways	Gnb3
+G protein signaling pathways	Itpr1
+G protein signaling pathways	Calm2
+G protein signaling pathways	Adcy3
+G protein signaling pathways	Rras
+G protein signaling pathways	Adcy4
+G protein signaling pathways	rCG_21785
+G protein signaling pathways	Adcy2
+G protein signaling pathways	Adcy7
+G protein signaling pathways	Adcy5
+G protein signaling pathways	Adcy9
+G protein signaling pathways	Pde4b
+G protein signaling pathways	Prkcz
+G protein signaling pathways	Prkaca
+G protein signaling pathways	Adcy1_predicted
+G protein signaling pathways	Prkar1a
+G protein signaling pathways	Prkcc
+G protein signaling pathways	Gng3
+G protein signaling pathways	Gng7
+G protein signaling pathways	Gng8
+G protein signaling pathways	Prkar2b
+G protein signaling pathways	Gngt1
+G protein signaling pathways	Gng12
+G protein signaling pathways	Arhgef1
+G protein signaling pathways	Gnb1
+G protein signaling pathways	Plcb3
+G protein signaling pathways	Gnai1
+ATM signaling pathway	Casp3
+ATM signaling pathway	E2f1
+ATM signaling pathway	Ccne1
+ATM signaling pathway	Gadd45a
+ATM signaling pathway	Necab3
+ATM signaling pathway	rCG_37705
+ATM signaling pathway	Bax
+ATM signaling pathway	Ccnd1
+ATM signaling pathway	Cdkn1a
+ATM signaling pathway	Pmaip1
+ATM signaling pathway	Brca1
+ATM signaling pathway	Casp9
+ATM signaling pathway	Rb1
+ATM signaling pathway	Sfnl1
+ATM signaling pathway	rCG_52466
+ATM signaling pathway	Bak1
+ATM signaling pathway	Ccnb1
+ATM signaling pathway	Chek2
+ATM signaling pathway	Tp53
+ATM signaling pathway	Cdc2a
+ATM signaling pathway	Cdk6
+Spinal cord injury	Casp3
+Spinal cord injury	Vim
+Spinal cord injury	rCG_56054
+Spinal cord injury	rCG_26305
+Spinal cord injury	Gadd45a
+Spinal cord injury	Necab3
+Spinal cord injury	Ppp3ca
+Spinal cord injury	Rb1
+Spinal cord injury	Il1b
+Spinal cord injury	Cdc2a
+Spinal cord injury	Il1a
+Spinal cord injury	Tgfb1
+Spinal cord injury	Il6
+Spinal cord injury	E2f1
+Spinal cord injury	Il1r1
+Spinal cord injury	Nox4
+Spinal cord injury	Mmp9
+Spinal cord injury	Gja1
+Spinal cord injury	Chst11_predicted
+Spinal cord injury	Btg2
+Spinal cord injury	Fkbp1a
+Spinal cord injury	Col4a1
+Spinal cord injury	Ptprz1
+Spinal cord injury	Slit2
+Spinal cord injury	Aqp4
+Spinal cord injury	Slit3
+Spinal cord injury	Pdyn
+Spinal cord injury	Rhoc
+Spinal cord injury	Rgma
+Spinal cord injury	Vcan
+Spinal cord injury	Sema6a
+Spinal cord injury	Lilrb2
+Spinal cord injury	Sox9
+Spinal cord injury	Tnfsf13b
+Spinal cord injury	Zfp36
+Spinal cord injury	Gap43
+Spinal cord injury	Rock2
+Spinal cord injury	Arg1
+Spinal cord injury	Prpg2
+Spinal cord injury	Selp
+Spinal cord injury	Omg
+Spinal cord injury	Plxna2
+Spinal cord injury	Epha4
+Spinal cord injury	Il2
+Spinal cord injury	rCG_57618
+Spinal cord injury	Il4
+Spinal cord injury	Mag
+Spinal cord injury	Rtn4r
+Spinal cord injury	Anxa1
+Spinal cord injury	Ngfr
+Spinal cord injury	Ifng
+Spinal cord injury	Nos1
+Spinal cord injury	Pla2g2a
+Spinal cord injury	Ccng1
+Spinal cord injury	Ntn1
+Spinal cord injury	Egr1
+Spinal cord injury	Klk8
+Spinal cord injury	Rtn4
+Spinal cord injury	Bcan
+Spinal cord injury	Tnfsf13
+Spinal cord injury	Gdnf
+Spinal cord injury	Ccl2
+Spinal cord injury	Pla2g5
+Spinal cord injury	Fos
+Spinal cord injury	Mbp
+Spinal cord injury	Cd47
+Spinal cord injury	Cxcl1
+Spinal cord injury	Tlr4
+Spinal cord injury	Cxcl2
+Spinal cord injury	Grin1
+Spinal cord injury	Pla2g6
+Spinal cord injury	Fcgr2a
+Spinal cord injury	Cxcl10
+Spinal cord injury	Nos2
+Spinal cord injury	Ptpra
+Spinal cord injury	Ncan
+Spinal cord injury	rCG_33401
+Ccnd1	Tp53
+Ccnd1	Mapk1
+Ccnd1	Mapk3
+Methylation	Comt
+Methylation	Pnmt
+Methylation	Mat2a
+Methylation	Mat1a
+Methylation	Inmt
+Methylation	Hnmt
+Prostaglandin synthesis and regulation	Ednrb
+Prostaglandin synthesis and regulation	Tbxas1
+Prostaglandin synthesis and regulation	Anxa1
+Prostaglandin synthesis and regulation	Ptgds
+Prostaglandin synthesis and regulation	Ptgis
+Prostaglandin synthesis and regulation	Ptgfr
+Prostaglandin synthesis and regulation	Pla2g4a
+Prostaglandin synthesis and regulation	Anxa8
+Prostaglandin synthesis and regulation	Anxa6
+Prostaglandin synthesis and regulation	Prl
+Prostaglandin synthesis and regulation	S100a6
+Prostaglandin synthesis and regulation	Scgb1a1
+Prostaglandin synthesis and regulation	Edn1
+Prostaglandin synthesis and regulation	Hpgd
+Prostaglandin synthesis and regulation	Ptgir_predicted
+Prostaglandin synthesis and regulation	Anxa5
+Prostaglandin synthesis and regulation	Anxa4
+Prostaglandin synthesis and regulation	Anxa3
+Prostaglandin synthesis and regulation	S100a10
+Prostaglandin synthesis and regulation	Ptgdr
+Prostaglandin synthesis and regulation	Hsd11b1
+Prostaglandin synthesis and regulation	Ptgs1
+Prostaglandin synthesis and regulation	Ednra
+Prostaglandin synthesis and regulation	Hsd11b2
+Prostaglandin synthesis and regulation	Ptgs2
+Prostaglandin synthesis and regulation	Ptger4
+Prostaglandin synthesis and regulation	Ptger2
+Prostaglandin synthesis and regulation	Ptger3
+Prostaglandin synthesis and regulation	Ptger1
+Hexoses metabolism in proximal tubules	Mpc1
+Hexoses metabolism in proximal tubules	Slc2a2
+Hexoses metabolism in proximal tubules	Slc5a2
+Hexoses metabolism in proximal tubules	Pdk1
+Hexoses metabolism in proximal tubules	rCG_38113
+Hexoses metabolism in proximal tubules	Got1
+Hexoses metabolism in proximal tubules	Ppm2c
+Hexoses metabolism in proximal tubules	rCG_39005
+Hexoses metabolism in proximal tubules	RGD1563422_predicted
+Hexoses metabolism in proximal tubules	Ldha
+Hexoses metabolism in proximal tubules	Acly
+Hexoses metabolism in proximal tubules	Mdh1
+Hexoses metabolism in proximal tubules	Mor1
+Hexoses metabolism in proximal tubules	Pdhb
+Hexoses metabolism in proximal tubules	Pdk3_mapped
+Hexoses metabolism in proximal tubules	Pdha1
+Hexoses metabolism in proximal tubules	Pc
+Hexoses metabolism in proximal tubules	Pdk4
+Hexoses metabolism in proximal tubules	rCG_62047
+Hexoses metabolism in proximal tubules	Gpi
+Hexoses metabolism in proximal tubules	Tpi1
+Hexoses metabolism in proximal tubules	Dld
+Hexoses metabolism in proximal tubules	G6pc
+Hexoses metabolism in proximal tubules	Slc5a10
+Hexoses metabolism in proximal tubules	Pdk2
+Hexoses metabolism in proximal tubules	Pklr
+Hexoses metabolism in proximal tubules	Sord
+Hexoses metabolism in proximal tubules	Pck1
+Hexoses metabolism in proximal tubules	Aldob
+Hexoses metabolism in proximal tubules	Hk1
+Hexoses metabolism in proximal tubules	rCG_48042
+Hexoses metabolism in proximal tubules	rCG_27858
+Hexoses metabolism in proximal tubules	Eno1
+Hexoses metabolism in proximal tubules	Fbp1
+Hexoses metabolism in proximal tubules	rCG_30049
+Hexoses metabolism in proximal tubules	Aldoa
+Hexoses metabolism in proximal tubules	Slc2a5
+Hexoses metabolism in proximal tubules	Pfkp
+Hexoses metabolism in proximal tubules	Pfkl
+Hexoses metabolism in proximal tubules	Pgam2
+Hexoses metabolism in proximal tubules	Ldhb
+Hexoses metabolism in proximal tubules	rCG_57464
+Hexoses metabolism in proximal tubules	Psme3
+Hexoses metabolism in proximal tubules	rCG_35810
+Hexoses metabolism in proximal tubules	Aldoc
+Hexoses metabolism in proximal tubules	Eno3
+Hexoses metabolism in proximal tubules	Eno2
+Hexoses metabolism in proximal tubules	rCG_39016
+mRNA processing	Sfrs5
+mRNA processing	Prpf4
+mRNA processing	Phf5a
+mRNA processing	Prpf6
+mRNA processing	Sfrs9
+mRNA processing	Prpf3
+mRNA processing	Scamp3
+mRNA processing	Hnrnpa2b1
+mRNA processing	Supt5h
+mRNA processing	Rnmt
+mRNA processing	Snrnp70
+mRNA processing	Clp1
+mRNA processing	Hnrpd
+mRNA processing	Snrpb2
+mRNA processing	Hrmt1l2
+mRNA processing	Spop
+mRNA processing	Prpf8
+mRNA processing	Hnrnpr
+mRNA processing	Hnrnpu
+mRNA processing	Snrpb
+mRNA processing	Snrpa1
+mRNA processing	Snrpa
+mRNA processing	Clk2
+mRNA processing	Clk3
+mRNA processing	Clk4
+mRNA processing	Mettl3
+mRNA processing	Sfrs12
+mRNA processing	Ptbp1
+mRNA processing	Fus
+mRNA processing	Sfrs10
+mRNA processing	Sugp2
+mRNA processing	Srpk1
+mRNA processing	Cpsf4
+mRNA processing	Cpsf2
+mRNA processing	Cpsf3
+mRNA processing	Ddx1
+mRNA processing	Hnrnpk
+mRNA processing	rCG_52909
+mRNA processing	Sfrs2
+mRNA processing	Hnrnpab
+mRNA processing	rCG_37572
+mRNA processing	Snrpd1_predicted
+mRNA processing	Clasrp
+mRNA processing	rCG_38787
+mRNA processing	Nudt21
+mRNA processing	Tmed10
+mRNA processing	Sfpq
+mRNA processing	Prmt2
+mRNA processing	Dhx16
+mRNA processing	Cstf2
+mRNA processing	Cstf3
+mRNA processing	Dhx15
+mRNA processing	Srsf1
+mRNA processing	Pprf18
+mRNA processing	Cugbp2
+mRNA processing	Ptbp2
+mRNA processing	Srsf7
+mRNA processing	Srsf6
+mRNA processing	Prpf40a_predicted
+mRNA processing	Srsf4
+mRNA processing	Srsf3
+mRNA processing	Celf1
+mRNA processing	Lsm7_predicted
+mRNA processing	rCG_40916
+mRNA processing	Papola_predicted
+mRNA processing	RGD1309198_predicted
+mRNA processing	Srsf10
+mRNA processing	Srrm1
+mRNA processing	LOC302855
+mRNA processing	Rbm17
+mRNA processing	Prpf4b
+mRNA processing	Linc00176
+mRNA processing	LOC308650
+mRNA processing	U2af1
+mRNA processing	Nxf1
+mRNA processing	Sf3a1
+mRNA processing	Sf3a2
+rCG_51900	U2af2
+rCG_51900	Ncbp1
+rCG_51900	Cd2bp2
+rCG_51900	Pabpn1
+rCG_51900	Snrpd3
+rCG_51900	rCG_50488
+rCG_51900	Sf3b2
+rCG_51900	Sf3b3
+rCG_51900	Rbm39
+rCG_51900	Sf3b5
+rCG_51900	Sfswap
+rCG_51900	Srp54
+rCG_51900	Ppm1g
+rCG_51900	Hnrnph1
+rCG_51900	Dicer1
+rCG_51900	Ddx20
+rCG_51900	Rngtt
+rCG_51900	Smc1a
+Polyol pathway	rCG_62047
+Polyol pathway	Sord
+Polyol pathway	Aldob
+Polyol pathway	rCG_27858
+Selenium metabolism selenoproteins	Jun
+Selenium metabolism selenoproteins	Msrb1
+Selenium metabolism selenoproteins	Selenow
+Selenium metabolism selenoproteins	Gpx6
+Selenium metabolism selenoproteins	Selenop
+Selenium metabolism selenoproteins	Selenok
+Selenium metabolism selenoproteins	Fos
+Selenium metabolism selenoproteins	Gpx3
+Selenium metabolism selenoproteins	Selenbp1
+Selenium metabolism selenoproteins	Eefsec
+Selenium metabolism selenoproteins	Crem
+Selenium metabolism selenoproteins	Rela
+Selenium metabolism selenoproteins	Selenof
+Selenium metabolism selenoproteins	Txnrd2
+Selenium metabolism selenoproteins	Sars2
+Selenium metabolism selenoproteins	Selenoi
+Selenium metabolism selenoproteins	Sars1
+Selenium metabolism selenoproteins	Fabp1
+Selenium metabolism selenoproteins	Selenoo
+Selenium metabolism selenoproteins	Selenos
+Selenium metabolism selenoproteins	Dio1
+Selenium metabolism selenoproteins	Nfe2l2
+Selenium metabolism selenoproteins	Selenot
+Selenium metabolism selenoproteins	Dio2
+Selenium metabolism selenoproteins	Dio3
+Selenium metabolism selenoproteins	Selenov
+Selenium metabolism selenoproteins	rCG_33788
+Selenium metabolism selenoproteins	Sephs1
+Selenium metabolism selenoproteins	Trnau1ap
+GPCRs class A rhodopsin like	Ghsr
+GPCRs class A rhodopsin like	Cckar
+GPCRs class A rhodopsin like	Ednrb
+GPCRs class A rhodopsin like	Npy1r
+GPCRs class A rhodopsin like	Npy5r
+GPCRs class A rhodopsin like	Brs3
+GPCRs class A rhodopsin like	rCG_30505
+GPCRs class A rhodopsin like	Mc2r
+GPCRs class A rhodopsin like	Oprd1
+GPCRs class A rhodopsin like	Cxcr4
+GPCRs class A rhodopsin like	Ccr7
+GPCRs class A rhodopsin like	Oprl1
+GPCRs class A rhodopsin like	Ccr6
+GPCRs class A rhodopsin like	Ccr3
+GPCRs class A rhodopsin like	Galr2
+GPCRs class A rhodopsin like	Galr3
+GPCRs class A rhodopsin like	Galr1
+GPCRs class A rhodopsin like	Npy4r
+GPCRs class A rhodopsin like	Lhcgr
+GPCRs class A rhodopsin like	Sstr5
+GPCRs class A rhodopsin like	Sstr4
+GPCRs class A rhodopsin like	Avpr1b
+GPCRs class A rhodopsin like	Mc5r
+GPCRs class A rhodopsin like	Oprm1
+GPCRs class A rhodopsin like	rCG_59982
+GPCRs class A rhodopsin like	rCG_62075
+GPCRs class A rhodopsin like	Fpr1
+GPCRs class A rhodopsin like	Nmbr
+GPCRs class A rhodopsin like	Ccr10
+GPCRs class A rhodopsin like	Mc4r
+GPCRs class A rhodopsin like	Oxtr
+GPCRs class A rhodopsin like	Npy2r
+GPCRs class A rhodopsin like	Mc3r
+GPCRs class A rhodopsin like	Rho
+GPCRs class A rhodopsin like	Adora2a
+GPCRs class A rhodopsin like	Ednra
+GPCRs class A rhodopsin like	rCG_33776
+GPCRs class A rhodopsin like	Htr7
+GPCRs class A rhodopsin like	Agtr1a
+GPCRs class A rhodopsin like	rCG_49551
+GPCRs class A rhodopsin like	Fshr
+GPCRs class A rhodopsin like	Mas1
+GPCRs class A rhodopsin like	Htr2a
+GPCRs class A rhodopsin like	rCG_25384
+GPCRs class A rhodopsin like	Ccr5
+GPCRs class A rhodopsin like	Adra1d
+GPCRs class A rhodopsin like	Agtr2
+GPCRs class A rhodopsin like	Bdkrb2
+GPCRs class A rhodopsin like	Cckbr
+GPCRs class A rhodopsin like	rCG_30551
+GPCRs class A rhodopsin like	Sstr2
+GPCRs class A rhodopsin like	Htr1f
+GPCRs class A rhodopsin like	Ntsr1_predicted
+GPCRs class A rhodopsin like	C5ar2
+GPCRs class A rhodopsin like	F2r
+GPCRs class A rhodopsin like	rCG_50055
+GPCRs class A rhodopsin like	Ptgfr
+GPCRs class A rhodopsin like	Chrm2
+GPCRs class A rhodopsin like	rCG_36827
+GPCRs class A rhodopsin like	Or2f1
+GPCRs class A rhodopsin like	Drd3
+GPCRs class A rhodopsin like	Drd4
+GPCRs class A rhodopsin like	Cnr1
+GPCRs class A rhodopsin like	Grpr
+GPCRs class A rhodopsin like	Il8ra
+GPCRs class A rhodopsin like	Or1e1
+GPCRs class A rhodopsin like	rCG_26623
+GPCRs class A rhodopsin like	Adora3
+GPCRs class A rhodopsin like	Or10a5
+GPCRs class A rhodopsin like	Bdkrb1
+GPCRs class A rhodopsin like	Chrm4
+GPCRs class A rhodopsin like	rCG_47675
+GPCRs class A rhodopsin like	Hcar1
+GPCRs class A rhodopsin like	Or1e1c
+GPCRs class A rhodopsin like	Gpr161
+GPCRs class A rhodopsin like	Rrh
+GPCRs class A rhodopsin like	rCG_50076
+Or2h2	Gpr65
+Or2h2	Or2h1
+Or2h2	Adra1a
+Or2h2	rCG_62979
+Or2h2	rCG_20138
+Or2h2	Gpr63
+Or2h2	Htr2c
+Or2h2	Gpr173
+Or2h2	Htr1a
+Or2h2	Gpr174
+Or2h2	Cmklr1
+Or2h2	Olr226
+Or2h2	Olr588_predicted
+Or2h2	Gpr75
+Or2h2	Agtrl1
+Or2h2	Ffar3
+Or2h2	Adora2b
+Or2h2	Ffar1
+Or2h2	Or2b2
+Or2h2	P2ry6
+Or2h2	Or2j3
+Or2h2	P2ry2
+Or2h2	Hrh3
+Or2h2	Adora1
+Or2h2	Or5v1b
+Or2h2	P2ry1
+Or2h2	Or7a36
+Or2h2	Lpar4
+Or2h2	rCG_36973
+Or2h2	Opn4
+Or2h2	Xcr1
+Or2h2	Lpar5
+Or2h2	Gpr68
+Or2h2	Opn3
+Or2h2	Olr1073
+Or2h2	Gpr19
+Or2h2	rCG_53798
+Or2h2	Gpr15
+Or2h2	Or2c1
+Or2h2	Or13c7d
+Or2h2	Or2t1
+Or2h2	Opn1sw
+Or2h2	Npbwr1
+Or2h2	Nmur2
+Or2h2	Prlhr
+Or2h2	Ntsr2
+Or2h2	Gpr27
+Or2h2	Adra2a
+Or2h2	Gpr22
+Or2h2	Adra2c
+Or2h2	Ccr9
+Or2h2	rCG_31257
+Or2h2	Olr1086_predicted
+Or2h2	Htr4
+Or2h2	Mchr1
+Or2h2	Hrh1
+Or2h2	rCG_27884
+Or2h2	Htr6
+Or2h2	Olr1662_predicted
+Or2h2	Drd1
+Or2h2	Olr811_predicted
+Or2h2	Adrb1
+Or2h2	Gpr37
+Or2h2	Drd5
+Or2h2	Gpr39
+Or2h2	Adra1b
+Or2h2	Or11a4
+Or2h2	Adrb3
+Or2h2	Rgr
+Or2h2	rCG_26342
+Or2h2	Or14j1
+Or2h2	Npffr1
+Or2h2	Htr5a
+Or2h2	Or2f2
+Or2h2	Npffr2
+Or2h2	Ptgdr2
+Or2h2	Hcrtr1
+Gpr37l1	Cysltr2
+Gpr37l1	Cysltr1
+Gpr37l1	Gpr4
+Gpr37l1	Gpr3
+Gpr37l1	Ackr2
+Gpr37l1	Gpr6
+Gpr37l1	P2ry10
+Gpr37l1	Or2ag1
+Gpr37l1	P2ry12
+Gpr37l1	P2ry14
+Gpr37l1	F2rl1
+Gpr37l1	Or10a4
+Gpr37l1	Gpr50
+Gpr37l1	F2rl2
+Gpr37l1	F2rl3
+Gpr37l1	C3ar1
+Gpr37l1	Gper1
+Gpr37l1	Mtnr1a
+Gpr37l1	Ptgir_predicted
+Gpr37l1	Tbxa2r
+Gpr37l1	Cnr2
+Gpr37l1	Ptgdr
+Gpr37l1	Ptger4
+Gpr37l1	Ptafr
+Gpr37l1	Ptger2
+Gpr37l1	Ptger3
+Gpr37l1	Ptger1
+EPO receptor signaling	Sos1
+EPO receptor signaling	Pdk1
+EPO receptor signaling	Socs1
+EPO receptor signaling	Map2k2
+EPO receptor signaling	Stat5a
+EPO receptor signaling	Src
+EPO receptor signaling	Rasa1
+EPO receptor signaling	Map2k1
+EPO receptor signaling	rCG_34857
+EPO receptor signaling	rCG_46072
+EPO receptor signaling	Stat3
+EPO receptor signaling	Jak2
+EPO receptor signaling	rCG_21785
+EPO receptor signaling	Shc1
+EPO receptor signaling	Irs2
+EPO receptor signaling	Mapk1
+EPO receptor signaling	Mapk3
+EPO receptor signaling	Akt1
+EPO receptor signaling	Pik3cg
+EPO receptor signaling	Raf1
+EPO receptor signaling	Grb2
+p53 pathway	Casp3
+p53 pathway	Tsc2
+p53 pathway	Ccne1
+p53 pathway	Chek1
+p53 pathway	Gadd45a
+p53 pathway	Sesn1
+p53 pathway	rCG_53482
+p53 pathway	Serpinb5
+p53 pathway	rCG_37705
+p53 pathway	Bax
+p53 pathway	Adgrb1
+p53 pathway	Gtse1
+p53 pathway	Fas
+p53 pathway	rCG_41524
+p53 pathway	Igfbp3
+p53 pathway	Cd82
+p53 pathway	Cdkn1a
+p53 pathway	Perp
+p53 pathway	Pmaip1
+p53 pathway	Mdm4
+p53 pathway	Siah1
+p53 pathway	Ppm1d
+p53 pathway	Rchy1
+p53 pathway	Ccng1
+p53 pathway	rCG_52466
+p53 pathway	Tp73
+p53 pathway	Ccnb1
+p53 pathway	Bid
+p53 pathway	rCG_21770
+p53 pathway	Cdc2a
+p53 pathway	Cdk6
+p53 pathway	Mdm2
+p53 pathway	Igf1
+p53 pathway	Casp9
+p53 pathway	Sfnl1
+p53 pathway	Chek2
+p53 pathway	Tp53
+p53 pathway	Pten
+Metapathway biotransformation	Hs3st6
+Metapathway biotransformation	Cyp2s1
+Metapathway biotransformation	Cyp4f39
+Metapathway biotransformation	Baat
+Metapathway biotransformation	Naa20
+Metapathway biotransformation	Akr1d1
+Metapathway biotransformation	Cyp4f3
+Metapathway biotransformation	Kcnab2
+Metapathway biotransformation	Kcnab3
+Metapathway biotransformation	rCG_26212
+Metapathway biotransformation	Fmo2
+Metapathway biotransformation	Hs6st3
+Metapathway biotransformation	Fmo5
+Metapathway biotransformation	Fmo4
+Metapathway biotransformation	Cyp26c1
+Metapathway biotransformation	Gal3st4
+Metapathway biotransformation	Gal3st3
+Metapathway biotransformation	Cyp26b1
+Metapathway biotransformation	Cyp26a1
+Metapathway biotransformation	Cyp1a1
+Metapathway biotransformation	Mgst1
+Metapathway biotransformation	rCG_57068
+Metapathway biotransformation	Ugt2a3
+Metapathway biotransformation	Gstm3
+Metapathway biotransformation	Cyp2e1
+Metapathway biotransformation	Cyp21a1
+Metapathway biotransformation	Cyp11b2
+Metapathway biotransformation	Cyp17a1
+Metapathway biotransformation	Gss
+Metapathway biotransformation	Gsr
+Metapathway biotransformation	Gstp1
+Metapathway biotransformation	Akr7a3
+Metapathway biotransformation	Akr7a2
+Metapathway biotransformation	Gstk1
+Metapathway biotransformation	Gstm5
+Metapathway biotransformation	Gstm4
+Metapathway biotransformation	Ephx1
+Metapathway biotransformation	rCG_27858
+Metapathway biotransformation	Akr1a1
+Metapathway biotransformation	Gsto1
+Metapathway biotransformation	Mgst3
+Metapathway biotransformation	Chst11_predicted
+Metapathway biotransformation	Fmo1
+Metapathway biotransformation	Akr1b10
+Metapathway biotransformation	Cyp7a1
+Metapathway biotransformation	Glyat
+Metapathway biotransformation	Chst10
+Metapathway biotransformation	Chst12
+Metapathway biotransformation	Sult1e1
+Metapathway biotransformation	Chst13
+Metapathway biotransformation	Gstm1
+Metapathway biotransformation	Chst14
+Metapathway biotransformation	Comt
+Metapathway biotransformation	Cyp4f17
+Metapathway biotransformation	Sult1a1
+Metapathway biotransformation	Ndst1
+Metapathway biotransformation	Cyp1b1
+Metapathway biotransformation	Cyp4x1
+Metapathway biotransformation	Ndst3
+Metapathway biotransformation	Ndst4
+Metapathway biotransformation	Sult4a1
+Metapathway biotransformation	Cyp11b1
+Metapathway biotransformation	Sult1b1
+Metapathway biotransformation	St2a2
+Metapathway biotransformation	rCG_46192
+Metapathway biotransformation	Hs3st3b1
+Metapathway biotransformation	rCG_56310
+Metapathway biotransformation	Cyp27b1
+Metapathway biotransformation	Cyp2f2
+Metapathway biotransformation	Cyp8b1
+Metapathway biotransformation	Cyp51
+Metapathway biotransformation	Hs2st1
+Metapathway biotransformation	RGD1559923_predicted
+Metapathway biotransformation	Naa50
+Metapathway biotransformation	Nat1
+Metapathway biotransformation	Inmt
+Metapathway biotransformation	Hnmt
+Hs6st1_predicted	Ephx2
+Hs6st1_predicted	Nat9
+Hs6st1_predicted	Sult6b2
+Hs6st1_predicted	Naa40
+Hs6st1_predicted	Cyp2r1_predicted
+Hs6st1_predicted	Nat14
+Hs6st1_predicted	Cyp7b1
+Hs6st1_predicted	Hs3st3a1
+Hs6st1_predicted	Sult2a1
+Hs6st1_predicted	Chst3
+Hs6st1_predicted	Chst5
+Hs6st1_predicted	Chst4
+Hs6st1_predicted	Cyp24a1
+Hs6st1_predicted	Chst9
+Hs6st1_predicted	Akr1c1
+Hs6st1_predicted	rCG_20683
+Hs6st1_predicted	Hs3st2
+Hs6st1_predicted	Hs3st5
+Hs6st1_predicted	rCG_54052
+ID signaling pathway	Ccne1
+ID signaling pathway	Psmd4
+ID signaling pathway	Id1
+ID signaling pathway	Srebf1
+ID signaling pathway	Ccna2
+ID signaling pathway	Myod1
+ID signaling pathway	Id2
+ID signaling pathway	Cd40lg
+ID signaling pathway	Kdr
+ID signaling pathway	Id4
+ID signaling pathway	Msc
+ID signaling pathway	Rb1
+ID signaling pathway	Bmp6
+ID signaling pathway	Pax2
+ID signaling pathway	Myog
+ID signaling pathway	Hes1
+ID signaling pathway	Smad1
+ID signaling pathway	Pax8
+ID signaling pathway	rCG_42133
+ID signaling pathway	Smad5
+ID signaling pathway	Myf5
+ID signaling pathway	Lck
+ID signaling pathway	Rbl1
+ID signaling pathway	Igf1r
+ID signaling pathway	Smad4
+ID signaling pathway	Id3
+ID signaling pathway	Atf3
+ID signaling pathway	Igf1
+ID signaling pathway	Elk1
+ID signaling pathway	Flt1
+ID signaling pathway	Rela
+ID signaling pathway	Bmp2
+ID signaling pathway	Elk4_predicted
+ID signaling pathway	Rbl2
+ID signaling pathway	Egf
+ID signaling pathway	Ngf
+Hedgehog signaling pathway	Gli3
+Hedgehog signaling pathway	Shh
+Hedgehog signaling pathway	Ptch1_predicted
+Hedgehog signaling pathway	Ptch1
+Hedgehog signaling pathway	Sufu
+Hedgehog signaling pathway	Sap18
+Hedgehog signaling pathway	Dyrk1a
+Hedgehog signaling pathway	Gli2_predicted
+Hedgehog signaling pathway	Crebbp
+Hedgehog signaling pathway	Smo
+Hedgehog signaling pathway	Ccnb1
+Hedgehog signaling pathway	Igf2
+Hedgehog signaling pathway	Cdc2a
+Hedgehog signaling pathway	Hhip
+Hedgehog signaling pathway	RGD1565591_predicted
+Hedgehog signaling pathway	Gli1
+Acetylcholine synthesis	Ache
+Acetylcholine synthesis	Pcyt1a
+Acetylcholine synthesis	Ahsg
+Acetylcholine synthesis	Pemt
+Acetylcholine synthesis	Pdha1
+Oxidative phosphorylation	rCG_41951
+Oxidative phosphorylation	Atp5o
+Oxidative phosphorylation	Ndufs8
+Oxidative phosphorylation	Ndufb8_predicted
+Oxidative phosphorylation	Atp5f1
+Oxidative phosphorylation	Mt-nd5
+Oxidative phosphorylation	Adck2
+Oxidative phosphorylation	Mt-nd4
+Oxidative phosphorylation	Mt-atp6
+Oxidative phosphorylation	Mt-nd6
+Oxidative phosphorylation	Mt-nd1
+Oxidative phosphorylation	rCG_58724
+Oxidative phosphorylation	Ndufb6
+Oxidative phosphorylation	Mt-nd3
+Oxidative phosphorylation	Mt-nd4l
+Oxidative phosphorylation	Mt-nd2
+Oxidative phosphorylation	Ndufb7
+Oxidative phosphorylation	Atp5mf
+Oxidative phosphorylation	Ndufv1
+Oxidative phosphorylation	Ndufv3
+Oxidative phosphorylation	Ndufa10l1
+Oxidative phosphorylation	Ndufb2_predicted
+Oxidative phosphorylation	Ndufab1
+Oxidative phosphorylation	Ndufc2
+Oxidative phosphorylation	Ndufb5_predicted
+Oxidative phosphorylation	Ndufa2
+Oxidative phosphorylation	Ndufa5
+Oxidative phosphorylation	Ndufa4
+Oxidative phosphorylation	Gzmc
+Oxidative phosphorylation	Ndufa7
+Oxidative phosphorylation	Ndufa9
+Oxidative phosphorylation	Cd320
+Oxidative phosphorylation	Ndufb10
+Oxidative phosphorylation	rCG_23561
+Oxidative phosphorylation	Atp5s
+Oxidative phosphorylation	rCG_33837
+Oxidative phosphorylation	Ndufs3
+Oxidative phosphorylation	Ndufs2
+Oxidative phosphorylation	Ndufs5
+Oxidative phosphorylation	Ndufs4
+Oxidative phosphorylation	Atp5i
+Oxidative phosphorylation	Mt-co3
+Sulindac metabolic pathway	Cyp1a1
+Sulindac metabolic pathway	Msra
+Sulindac metabolic pathway	Msrb2
+Hypothetical network for drug addiction	Grin1
+Hypothetical network for drug addiction	Camk2b
+Hypothetical network for drug addiction	Prkce
+Hypothetical network for drug addiction	Map2k2
+Hypothetical network for drug addiction	Drd4
+Hypothetical network for drug addiction	Map2k1
+Hypothetical network for drug addiction	Grm5
+Hypothetical network for drug addiction	Grin2d
+Hypothetical network for drug addiction	Drd1
+Hypothetical network for drug addiction	Camk4
+Hypothetical network for drug addiction	Grin2a
+Hypothetical network for drug addiction	Krit1
+Hypothetical network for drug addiction	Acta1
+Hypothetical network for drug addiction	Mapk1
+Hypothetical network for drug addiction	Terf2ip
+Hypothetical network for drug addiction	Prkaca
+Hypothetical network for drug addiction	Gria2
+Hypothetical network for drug addiction	Grm1
+Hypothetical network for drug addiction	Mapk3
+Hypothetical network for drug addiction	Gria1
+Hypothetical network for drug addiction	Adcy1_predicted
+Hypothetical network for drug addiction	Ppa1
+Hypothetical network for drug addiction	Grin2c
+Hypothetical network for drug addiction	Grin2b
+Kit receptor signaling pathway	rCG_48194
+Kit receptor signaling pathway	Tec
+Kit receptor signaling pathway	Fes
+Kit receptor signaling pathway	Vav2
+Kit receptor signaling pathway	Raf1
+Kit receptor signaling pathway	Crk
+Kit receptor signaling pathway	Sos1
+Kit receptor signaling pathway	Pik3r2
+Kit receptor signaling pathway	Socs1
+Kit receptor signaling pathway	Src
+Kit receptor signaling pathway	Aps
+Kit receptor signaling pathway	Crkl
+Kit receptor signaling pathway	Csf2rb
+Kit receptor signaling pathway	Fgr
+Kit receptor signaling pathway	Jak2
+Kit receptor signaling pathway	Fyn
+Kit receptor signaling pathway	Hck
+Kit receptor signaling pathway	Prkcb
+Kit receptor signaling pathway	Rps6ka1
+Kit receptor signaling pathway	Btk
+Kit receptor signaling pathway	Pik3r1
+Kit receptor signaling pathway	Ptpn6
+Kit receptor signaling pathway	Ptpn11
+Kit receptor signaling pathway	Matk
+Kit receptor signaling pathway	Lyn
+Kit receptor signaling pathway	Cblb
+Kit receptor signaling pathway	Stat5a
+Kit receptor signaling pathway	Map2k1
+Kit receptor signaling pathway	rCG_34857
+Kit receptor signaling pathway	Stat3
+Kit receptor signaling pathway	Stap1
+Kit receptor signaling pathway	Mitf
+Kit receptor signaling pathway	Socs5
+Kit receptor signaling pathway	Socs4
+Kit receptor signaling pathway	Socs6
+Kit receptor signaling pathway	Cltc
+Kit receptor signaling pathway	Abl1
+Kit receptor signaling pathway	Sh3kbp1
+Kit receptor signaling pathway	Rasa1
+Kit receptor signaling pathway	Dok1
+Kit receptor signaling pathway	Kit
+Kit receptor signaling pathway	Spred1
+Kit receptor signaling pathway	Mpdz
+Kit receptor signaling pathway	Spred2
+Kit receptor signaling pathway	Grb7
+Kit receptor signaling pathway	Grap
+Kit receptor signaling pathway	Plce1
+Kit receptor signaling pathway	Bad
+Kit receptor signaling pathway	Shc1
+Kit receptor signaling pathway	Mapk1
+Kit receptor signaling pathway	Plcg1
+Kit receptor signaling pathway	Akt1
+Kit receptor signaling pathway	Pik3cg
+Kit receptor signaling pathway	Grb2
+Nuclear receptors in lipid metabolism and toxicity	Cyp7a1
+Nuclear receptors in lipid metabolism and toxicity	Nr1i3
+Nuclear receptors in lipid metabolism and toxicity	Nr1i2
+Nuclear receptors in lipid metabolism and toxicity	Rara
+Nuclear receptors in lipid metabolism and toxicity	Rarb
+Nuclear receptors in lipid metabolism and toxicity	Vdr
+Nuclear receptors in lipid metabolism and toxicity	Nr1h3
+Nuclear receptors in lipid metabolism and toxicity	Ppard
+Nuclear receptors in lipid metabolism and toxicity	Ppara
+Nuclear receptors in lipid metabolism and toxicity	Pparg
+Nuclear receptors in lipid metabolism and toxicity	Cyp26a1
+Nuclear receptors in lipid metabolism and toxicity	Abcc3
+Nuclear receptors in lipid metabolism and toxicity	Cyp27b1
+Nuclear receptors in lipid metabolism and toxicity	Cyp8b1
+Nuclear receptors in lipid metabolism and toxicity	Abcc2
+Nuclear receptors in lipid metabolism and toxicity	Abcb1a
+Nuclear receptors in lipid metabolism and toxicity	Abcd2
+Nuclear receptors in lipid metabolism and toxicity	Abcd3
+Nuclear receptors in lipid metabolism and toxicity	Abcb4
+Nuclear receptors in lipid metabolism and toxicity	Cyp4b1
+Nuclear receptors in lipid metabolism and toxicity	Cyp2b2
+Nuclear receptors in lipid metabolism and toxicity	Cyp2c
+Nuclear receptors in lipid metabolism and toxicity	Cyp2e1
+Nuclear receptors in lipid metabolism and toxicity	Abcg1
+Nuclear receptors in lipid metabolism and toxicity	Abca1
+Nuclear receptors in lipid metabolism and toxicity	Abcg5
+Nuclear receptors in lipid metabolism and toxicity	Abcb11
+Nuclear receptors in lipid metabolism and toxicity	Cyp24a1
+Steroid biosynthesis	Hsd17b7
+Steroid biosynthesis	Hsd3b5
+Steroid biosynthesis	Hsd17b3
+Steroid biosynthesis	Hsd17b4
+Steroid biosynthesis	rCG_51915
+Steroid biosynthesis	Cyp17a1
+Steroid biosynthesis	Hsd17b1
+Steroid biosynthesis	rCG_51795
+Steroid biosynthesis	Hsd17b2
+TNF alpha NF kB signaling pathway	Ripk1
+TNF alpha NF kB signaling pathway	Psmd3
+TNF alpha NF kB signaling pathway	Map3k1
+TNF alpha NF kB signaling pathway	Mcm7
+TNF alpha NF kB signaling pathway	Rps6ka5
+TNF alpha NF kB signaling pathway	Akt2
+TNF alpha NF kB signaling pathway	Src
+TNF alpha NF kB signaling pathway	Map3k8
+TNF alpha NF kB signaling pathway	Casp2
+TNF alpha NF kB signaling pathway	Cav1
+TNF alpha NF kB signaling pathway	Capn3
+TNF alpha NF kB signaling pathway	Ptk2
+TNF alpha NF kB signaling pathway	Map3k3
+TNF alpha NF kB signaling pathway	Map3k2
+TNF alpha NF kB signaling pathway	Papola_predicted
+TNF alpha NF kB signaling pathway	Ywhah
+TNF alpha NF kB signaling pathway	Ywhag
+TNF alpha NF kB signaling pathway	Rps6kb1
+TNF alpha NF kB signaling pathway	Ywhae
+TNF alpha NF kB signaling pathway	Tnfrsf1a
+TNF alpha NF kB signaling pathway	Casp7
+TNF alpha NF kB signaling pathway	Nfkbib
+TNF alpha NF kB signaling pathway	Fadd
+TNF alpha NF kB signaling pathway	rCG_31387
+TNF alpha NF kB signaling pathway	Ikbkg
+TNF alpha NF kB signaling pathway	rCG_33788
+TNF alpha NF kB signaling pathway	Gab1_predicted
+TNF alpha NF kB signaling pathway	Nfkb2
+TNF alpha NF kB signaling pathway	Nkiras1
+TNF alpha NF kB signaling pathway	Nr2c2
+TNF alpha NF kB signaling pathway	Nkiras2
+TNF alpha NF kB signaling pathway	Map3k14
+TNF alpha NF kB signaling pathway	Tbkbp1
+TNF alpha NF kB signaling pathway	Casp3
+TNF alpha NF kB signaling pathway	rCG_54396
+TNF alpha NF kB signaling pathway	Pias3
+TNF alpha NF kB signaling pathway	Fbl
+TNF alpha NF kB signaling pathway	Tnfrsf11a
+TNF alpha NF kB signaling pathway	Csnk2a2_predicted
+TNF alpha NF kB signaling pathway	rCG_37389
+TNF alpha NF kB signaling pathway	Polr1b
+TNF alpha NF kB signaling pathway	Rnf216
+TNF alpha NF kB signaling pathway	Polr1a
+TNF alpha NF kB signaling pathway	Polr1g
+TNF alpha NF kB signaling pathway	rCG_56564
+TNF alpha NF kB signaling pathway	rCG_27814
+TNF alpha NF kB signaling pathway	Casp8ap2
+TNF alpha NF kB signaling pathway	Fbxw11
+TNF alpha NF kB signaling pathway	Polr1e
+TNF alpha NF kB signaling pathway	Txlna
+TNF alpha NF kB signaling pathway	Tank
+TNF alpha NF kB signaling pathway	Actl6a
+TNF alpha NF kB signaling pathway	Smarce1
+TNF alpha NF kB signaling pathway	Btrc
+TNF alpha NF kB signaling pathway	rCG_39658
+TNF alpha NF kB signaling pathway	rCG_35051
+TNF alpha NF kB signaling pathway	Glg1
+TNF alpha NF kB signaling pathway	rCG_20392
+TNF alpha NF kB signaling pathway	Bag4
+TNF alpha NF kB signaling pathway	Wdr68_predicted
+TNF alpha NF kB signaling pathway	Ripk2
+TNF alpha NF kB signaling pathway	Ripk3
+TNF alpha NF kB signaling pathway	Elp1
+TNF alpha NF kB signaling pathway	Cdc34
+TNF alpha NF kB signaling pathway	G3bp2
+TNF alpha NF kB signaling pathway	rCG_21247
+TNF alpha NF kB signaling pathway	Akap8
+TNF alpha NF kB signaling pathway	Cops3
+TNF alpha NF kB signaling pathway	Dpf2_predicted
+TNF alpha NF kB signaling pathway	Kpna6
+TNF alpha NF kB signaling pathway	Kpna3
+TNF alpha NF kB signaling pathway	Kpna2
+TNF alpha NF kB signaling pathway	Dap
+TNF alpha NF kB signaling pathway	Cul1
+TNF alpha NF kB signaling pathway	Bcl3
+TNF alpha NF kB signaling pathway	Ccar2
+TNF alpha NF kB signaling pathway	Traf4
+Faf1	Tnfrsf8
+Faf1	Rela
+Faf1	Mark2
+Faf1	Smarcb1
+Faf1	Alpl
+Faf1	rCG_21664
+Faf1	Csnk2b
+Faf1	rCG_44319
+Faf1	rCG_59826
+Faf1	Fkbp5
+Faf1	LOC310877
+Faf1	Tnip1
+Faf1	Pdcd2
+Faf1	Gsk3b
+Faf1	Nsmaf
+Faf1	Commd1
+Faf1	Trpc4ap
+Faf1	Ktn1
+Faf1	Pebp1
+Faf1	Traf6
+Faf1	Lrpprc
+Faf1	Mtif2
+Faf1	Ppp2ca
+Faf1	Ywhaq
+Faf1	Ptpn11
+Faf1	Ywhab
+Faf1	rCG_34190
+Faf1	Nfkbia
+Faf1	Kcnq1
+Faf1	Ikbkb
+Faf1	rCG_31110
+Faf1	Hdac2
+Faf1	Ikbke
+Faf1	Prkcz
+Faf1	Prkaca
+Faf1	Psmc2
+Faf1	Psmc1
+Faf1	Pkn1
+Faf1	Psmc3
+Faf1	Crebbp
+Faf1	Psmd12
+Faf1	Psmd13
+Faf1	Chuk
+Faf1	Psmd7_predicted
+Faf1	Psmb5
+Faf1	Akt1
+Faf1	Tradd
+Faf1	Hspb1
+Faf1	Psmd6
+Faf1	Traf2
+CFTR activity in the plasma membrane	Slc9a3r1
+CFTR activity in the plasma membrane	rCG_28062
+CFTR activity in the plasma membrane	Prkcc
+CFTR activity in the plasma membrane	rCG_34190
+CFTR activity in the plasma membrane	Nherf2
+CFTR activity in the plasma membrane	Adrb2
+CFTR activity in the plasma membrane	Plcb1
+CFTR activity in the plasma membrane	Vil2
+CFTR activity in the plasma membrane	Plcb3
+CFTR activity in the plasma membrane	Prkaca
+CFTR activity in the plasma membrane	Plcb2
+CFTR activity in the plasma membrane	Plcz1
+CFTR activity in the plasma membrane	Ppp2ca
+CFTR activity in the plasma membrane	Syn1
+CFTR activity in the plasma membrane	Prkaa2
+CFTR activity in the plasma membrane	Pdzk1
+Tryptophan metabolism	Tph1
+Tryptophan metabolism	rCG_53761
+Tryptophan metabolism	Aldh9a1
+Tryptophan metabolism	Hadhsc
+Tryptophan metabolism	Cyp2b15
+Tryptophan metabolism	Hsd17b10
+Tryptophan metabolism	Cyp2j4
+Tryptophan metabolism	Tdo2
+Tryptophan metabolism	Aadat
+Tryptophan metabolism	Cyp4f2
+Tryptophan metabolism	Gcdh_predicted
+Tryptophan metabolism	Aanat
+Tryptophan metabolism	Afmid
+Tryptophan metabolism	Aoc1
+Tryptophan metabolism	Dhcr24
+Tryptophan metabolism	Haao
+Tryptophan metabolism	Asmt
+Tryptophan metabolism	Cyp2d26
+Tryptophan metabolism	rCG_33224
+Tryptophan metabolism	Echs1
+Tryptophan metabolism	rCG_53515
+Tryptophan metabolism	Kynu
+Tryptophan metabolism	Ddc
+Tryptophan metabolism	Cyp2a1
+Tryptophan metabolism	Ube3a
+Tryptophan metabolism	Hrmt1l2
+Tryptophan metabolism	Acmsd
+Tryptophan metabolism	Cyp1b1
+Tryptophan metabolism	Ido1
+Tryptophan metabolism	LOC360975
+Tryptophan metabolism	Mdm2
+Tryptophan metabolism	Cyp2f2
+Tryptophan metabolism	Inmt
+Tryptophan metabolism	Cyp1a1
+Tryptophan metabolism	Cat
+Tryptophan metabolism	Cyp7b1
+Tryptophan metabolism	Aldh2
+Tryptophan metabolism	Cyp2e1
+Tryptophan metabolism	rCG_47846
+IL 9 signaling pathway	Map2k2
+IL 9 signaling pathway	Stat5a
+IL 9 signaling pathway	Map2k1
+IL 9 signaling pathway	rCG_34857
+IL 9 signaling pathway	Stat3
+IL 9 signaling pathway	Cxhxorf65
+IL 9 signaling pathway	Socs3
+IL 9 signaling pathway	Jak1
+IL 9 signaling pathway	Shc1
+IL 9 signaling pathway	Irs2
+IL 9 signaling pathway	Mapk1
+IL 9 signaling pathway	Htatip
+IL 9 signaling pathway	Il9
+IL 9 signaling pathway	Mapk3
+IL 9 signaling pathway	Il2rg
+IL 9 signaling pathway	Pik3r1
+IL 9 signaling pathway	Jak3
+IL 9 signaling pathway	Akt1
+IL 9 signaling pathway	Il9r
+IL 9 signaling pathway	Vcp
+IL 9 signaling pathway	Ptpn11
+IL 9 signaling pathway	Grb2
+IL 2 signaling pathway	MGC112775
+IL 2 signaling pathway	Mapkapk2
+IL 2 signaling pathway	Gab2
+IL 2 signaling pathway	Socs3
+IL 2 signaling pathway	rCG_27814
+IL 2 signaling pathway	rCG_42133
+IL 2 signaling pathway	Pik3ca
+IL 2 signaling pathway	Eif4e
+IL 2 signaling pathway	Raf1
+IL 2 signaling pathway	Crk
+IL 2 signaling pathway	Sos1
+IL 2 signaling pathway	Pik3r2
+IL 2 signaling pathway	Mapk9
+IL 2 signaling pathway	Socs1
+IL 2 signaling pathway	Ets2
+IL 2 signaling pathway	Crkl
+IL 2 signaling pathway	Rela
+IL 2 signaling pathway	Jak2
+IL 2 signaling pathway	Foxo3
+IL 2 signaling pathway	Jak1
+IL 2 signaling pathway	Fyn
+IL 2 signaling pathway	Syk
+IL 2 signaling pathway	Irs2
+IL 2 signaling pathway	Plcb1
+IL 2 signaling pathway	Pik3r1
+IL 2 signaling pathway	Ptpn6
+IL 2 signaling pathway	Ptpn11
+IL 2 signaling pathway	Lyn
+IL 2 signaling pathway	Mapk14
+IL 2 signaling pathway	rCG_34190
+IL 2 signaling pathway	Ptk2b
+IL 2 signaling pathway	Stat5a
+IL 2 signaling pathway	Map2k2
+IL 2 signaling pathway	Map2k1
+IL 2 signaling pathway	rCG_34857
+IL 2 signaling pathway	Stat3
+IL 2 signaling pathway	Cxhxorf65
+IL 2 signaling pathway	Il2ra
+IL 2 signaling pathway	Il2rb
+IL 2 signaling pathway	Il2
+IL 2 signaling pathway	Rps6kb1
+IL 2 signaling pathway	Pik3cd
+IL 2 signaling pathway	Prkcz
+IL 2 signaling pathway	Jak3
+IL 2 signaling pathway	Il2rg
+IL 2 signaling pathway	Lck
+IL 2 signaling pathway	rCG_50488
+IL 2 signaling pathway	rCG_37783
+IL 2 signaling pathway	Frap1
+IL 2 signaling pathway	Cd53
+IL 2 signaling pathway	Itm2b
+IL 2 signaling pathway	Stam
+IL 2 signaling pathway	Nmi
+IL 2 signaling pathway	Mapk8
+IL 2 signaling pathway	Eif3s9
+IL 2 signaling pathway	Shc1
+IL 2 signaling pathway	Chuk
+IL 2 signaling pathway	Mapk1
+IL 2 signaling pathway	Mapk3
+IL 2 signaling pathway	Akt1
+IL 2 signaling pathway	Pik3cg
+IL 2 signaling pathway	Nr3c1
+IL 2 signaling pathway	Grb2
+GPCRs class B secretin like	Calcr
+GPCRs class B secretin like	Adgre5
+GPCRs class B secretin like	Gipr
+GPCRs class B secretin like	Eltd1
+GPCRs class B secretin like	Gcgr
+GPCRs class B secretin like	Sctr
+GPCRs class B secretin like	Adcyap1r1
+GPCRs class B secretin like	Adgrl1
+GPCRs class B secretin like	Glp2r
+GPCRs class B secretin like	Adgrl2
+GPCRs class B secretin like	Vipr2
+GPCRs class B secretin like	Adgrl3
+GPCRs class B secretin like	Calcrl
+GPCRs class B secretin like	Glp1r
+GPCRs class B secretin like	Crhr2
+GPCRs class B secretin like	rCG_25332
+GPCRs class B secretin like	Crhr1
+GPCRs class B secretin like	Ghrhr
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Aimp2
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Maf
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Nfe2l2
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Ephb2
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Mapk8
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Gclm
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Hmox1
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Nqo1
+Transcriptional activation by Nfe2l2 in response to phytochemicals	Cebpb
+Type II interferon signaling IFNG	Sfpi1
+Type II interferon signaling IFNG	Socs3
+Type II interferon signaling IFNG	Irf4
+Type II interferon signaling IFNG	Irf1
+Type II interferon signaling IFNG	Irf2
+Type II interferon signaling IFNG	Ifng
+Type II interferon signaling IFNG	Ifnb1
+Type II interferon signaling IFNG	Il1b
+Type II interferon signaling IFNG	Cxcl10
+Type II interferon signaling IFNG	Nos2
+Type II interferon signaling IFNG	Cxcl9
+Type II interferon signaling IFNG	Socs1
+Type II interferon signaling IFNG	Jak2
+Type II interferon signaling IFNG	Jak1
+Type II interferon signaling IFNG	Ifngr2
+Type II interferon signaling IFNG	Oas1a
+Type II interferon signaling IFNG	Eif2ak2
+Type II interferon signaling IFNG	Ifngr1
+Type II interferon signaling IFNG	C2ta
+Type II interferon signaling IFNG	Tap1
+Type II interferon signaling IFNG	Psmb9
+Type II interferon signaling IFNG	Cybb
+Type II interferon signaling IFNG	Prkcd
+Type II interferon signaling IFNG	Irf8
+Type II interferon signaling IFNG	Isg15
+Type II interferon signaling IFNG	Hist2h4_predicted
+Type II interferon signaling IFNG	Ifit2
+Type II interferon signaling IFNG	Irf9
+Type II interferon signaling IFNG	Ptpn11
+Type II interferon signaling IFNG	Reg1
+TNF alpha and mucus production in lung epythelium	Sos1
+TNF alpha and mucus production in lung epythelium	Il6
+TNF alpha and mucus production in lung epythelium	Nfkbia
+TNF alpha and mucus production in lung epythelium	Tgfa
+TNF alpha and mucus production in lung epythelium	Map2k1
+TNF alpha and mucus production in lung epythelium	Tnf
+TNF alpha and mucus production in lung epythelium	Rela
+TNF alpha and mucus production in lung epythelium	Ikbkb
+TNF alpha and mucus production in lung epythelium	Tnfrsf1a
+TNF alpha and mucus production in lung epythelium	Rps6ka2
+TNF alpha and mucus production in lung epythelium	Shc1
+TNF alpha and mucus production in lung epythelium	Chuk
+TNF alpha and mucus production in lung epythelium	Ikbkg
+TNF alpha and mucus production in lung epythelium	Mapk1
+TNF alpha and mucus production in lung epythelium	Ripk2
+TNF alpha and mucus production in lung epythelium	Tradd
+TNF alpha and mucus production in lung epythelium	Egfr
+TNF alpha and mucus production in lung epythelium	Sp1
+TNF alpha and mucus production in lung epythelium	Raf1
+TNF alpha and mucus production in lung epythelium	Traf2
+TNF alpha and mucus production in lung epythelium	Grb2
+TNF alpha and mucus production in lung epythelium	Tlr4
+Beta oxidation meta pathway	Crat
+Beta oxidation meta pathway	Pnpla2_predicted
+Beta oxidation meta pathway	Cpt2
+Beta oxidation meta pathway	Acads
+Beta oxidation meta pathway	Hadhsc
+Beta oxidation meta pathway	Cpt1a
+Beta oxidation meta pathway	Lipf
+Beta oxidation meta pathway	Acsl5
+Beta oxidation meta pathway	Acsl6
+Beta oxidation meta pathway	Chkb
+Beta oxidation meta pathway	Cpt1b
+Beta oxidation meta pathway	Acsl1
+Beta oxidation meta pathway	Gcdh_predicted
+Beta oxidation meta pathway	Gpd2
+Beta oxidation meta pathway	Acsl3
+Beta oxidation meta pathway	Acss2_predicted
+Beta oxidation meta pathway	Hadhb
+Beta oxidation meta pathway	Echs1
+Beta oxidation meta pathway	Acadm
+Beta oxidation meta pathway	rCG_61339
+Beta oxidation meta pathway	Lipe
+Beta oxidation meta pathway	Tpi1
+Beta oxidation meta pathway	Dld
+Beta oxidation meta pathway	Lpl
+Beta oxidation meta pathway	Acadvl
+EBV LMP1 signaling	Map3k14
+EBV LMP1 signaling	Mapk8
+EBV LMP1 signaling	Ccl5
+EBV LMP1 signaling	Pdlim7
+EBV LMP1 signaling	Rela
+EBV LMP1 signaling	rCG_27814
+EBV LMP1 signaling	Ikbkb
+EBV LMP1 signaling	Chuk
+EBV LMP1 signaling	Ifnb1
+EBV LMP1 signaling	Mapk1
+EBV LMP1 signaling	Traf6
+EBV LMP1 signaling	Map3k7
+EBV LMP1 signaling	Tradd
+EBV LMP1 signaling	Nfkb2
+Brain derived neurotrophic factor	Ngfr
+Brain derived neurotrophic factor	Plg
+Brain derived neurotrophic factor	rCG_26305
+Brain derived neurotrophic factor	Map2k1
+Brain derived neurotrophic factor	rCG_24111
+Brain derived neurotrophic factor	Mapk1
+Brain derived neurotrophic factor	rCG_21770
+Brain derived neurotrophic factor	Plat
+Brain derived neurotrophic factor	Raf1
+Fatty acid biosynthesis	rCG_57790
+Fatty acid biosynthesis	Hadhsc
+Fatty acid biosynthesis	Acsl5
+Fatty acid biosynthesis	Acsl6
+Fatty acid biosynthesis	Acsl1
+Fatty acid biosynthesis	Mecr
+Fatty acid biosynthesis	Echdc3
+Fatty acid biosynthesis	Acly
+Fatty acid biosynthesis	Acsl3
+Fatty acid biosynthesis	Echdc1
+Fatty acid biosynthesis	Echdc2
+Fatty acid biosynthesis	Acaa2
+Fatty acid biosynthesis	Fasn
+Fatty acid biosynthesis	Acss2_predicted
+Fatty acid biosynthesis	Acacb
+Fatty acid biosynthesis	Acaca
+Fatty acid biosynthesis	Echs1
+Fatty acid biosynthesis	Decr1
+Fatty acid biosynthesis	Pc
+Retinol metabolism	rCG_60716
+Retinol metabolism	Rara
+Retinol metabolism	Rarb
+Retinol metabolism	Cyp26b1
+Retinol metabolism	Dhrs3
+Retinol metabolism	rCG_62473
+Retinol metabolism	Rdh12
+Retinol metabolism	Aldh1a3
+Retinol metabolism	Rdh10
+Retinol metabolism	RGD1562168_predicted
+Retinol metabolism	Sult1a1
+Retinol metabolism	Bco1
+Retinol metabolism	Rxra
+Retinol metabolism	RGD1565355
+Retinol metabolism	Cyp26a1
+Retinol metabolism	Npc1l1
+Retinol metabolism	Rxrg
+Retinol metabolism	Abcg8
+Retinol metabolism	Rpe65
+Retinol metabolism	Rbp4
+Retinol metabolism	Retsat
+Retinol metabolism	Crabp2
+Retinol metabolism	Cd36
+Retinol metabolism	Rlbp1
+Retinol metabolism	rCG_28558
+Retinol metabolism	Adh4
+Retinol metabolism	Adh1
+Retinol metabolism	Cyp2e1
+Retinol metabolism	Abcg5
+Retinol metabolism	rCG_47846
+Retinol metabolism	Scarb1
+Retinol metabolism	Lpl
+Retinol metabolism	rCG_54052
+Wnt signaling pathway	rCG_37716
+Wnt signaling pathway	Csnk2a2_predicted
+Wnt signaling pathway	rCG_37389
+Wnt signaling pathway	Rac1
+Wnt signaling pathway	Btrc
+Wnt signaling pathway	Pax2
+Wnt signaling pathway	Cdc2a
+Wnt signaling pathway	Raf1
+Wnt signaling pathway	Skp1a
+Wnt signaling pathway	Smad4
+Wnt signaling pathway	Pias4
+Wnt signaling pathway	Mapk9
+Wnt signaling pathway	Cdh1
+Wnt signaling pathway	Tax1bp3
+Wnt signaling pathway	Dkk1_predicted
+Wnt signaling pathway	Cul1
+Wnt signaling pathway	Sfrp2
+Wnt signaling pathway	Daam1
+Wnt signaling pathway	rCG_56325
+Wnt signaling pathway	Magi3
+Wnt signaling pathway	Crybb2
+Wnt signaling pathway	Mark2
+Wnt signaling pathway	Ror2
+Wnt signaling pathway	Sall1
+Wnt signaling pathway	Csnk1d
+Wnt signaling pathway	Senp2
+Wnt signaling pathway	Csnk2b
+Wnt signaling pathway	Csnk1a1
+Wnt signaling pathway	Dab2
+Wnt signaling pathway	Tfap2a
+Wnt signaling pathway	Hipk2_predicted
+Wnt signaling pathway	Jup
+Wnt signaling pathway	Map1b
+Wnt signaling pathway	Gsk3b
+Wnt signaling pathway	Ctnnbip1
+Wnt signaling pathway	Ankrd6
+Wnt signaling pathway	Ctbp1
+Wnt signaling pathway	Prkcb
+Wnt signaling pathway	Vangl2_predicted
+Wnt signaling pathway	Wnt5a
+Wnt signaling pathway	Mapk8ip
+Wnt signaling pathway	Bcl9
+Wnt signaling pathway	Ctbp2
+Wnt signaling pathway	Dlg1
+Wnt signaling pathway	Dlg2
+Wnt signaling pathway	Dlg4
+Wnt signaling pathway	Tcf4
+Wnt signaling pathway	Ppp2ca
+Wnt signaling pathway	Lrp6_predicted
+Wnt signaling pathway	Jun
+Wnt signaling pathway	Arrb2
+Wnt signaling pathway	Arrb1
+Wnt signaling pathway	Sox9
+Wnt signaling pathway	Axin1
+Wnt signaling pathway	Axin2
+Wnt signaling pathway	Csnk1e
+Wnt signaling pathway	Lef1
+Wnt signaling pathway	rCG_40802
+Wnt signaling pathway	Nlk
+Wnt signaling pathway	Nkd1
+Wnt signaling pathway	Lrp5
+Wnt signaling pathway	Dvl1
+Wnt signaling pathway	Dvl2
+Wnt signaling pathway	Tmem97
+Wnt signaling pathway	Dvl3
+Wnt signaling pathway	Wnt7a
+Wnt signaling pathway	Tbp
+Wnt signaling pathway	Wnt2
+Wnt signaling pathway	Wnt4
+Wnt signaling pathway	Wnt3
+Wnt signaling pathway	Camk2g
+Wnt signaling pathway	Prkcc
+Wnt signaling pathway	Camk2d
+Wnt signaling pathway	Fzd2
+Wnt signaling pathway	Camk2b
+Wnt signaling pathway	Fzd4
+Wnt signaling pathway	Camk2a
+Mapk8	Apc
+Mapk8	Ccnd1
+Mapk8	Mapk1
+Mapk8	Map3k7
+Mapk8	Mapk3
+Mapk8	Akt1

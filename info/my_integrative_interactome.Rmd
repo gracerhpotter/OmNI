@@ -1,0 +1,212 @@
+Clean
+```{r}
+knitr::opts_knit$set(progress = TRUE, verbose = TRUE)
+
+# Start fresh
+rm(list = ls(all.names = TRUE))
+gc()
+```
+
+LOAD REQUIRED LIBRARIES
+```{r}
+knitr::opts_chunk$set(echo = FALSE)
+# Global packages
+library("pacman")
+pacman::p_load(knitr,
+               tidyverse,
+               janitor )
+```
+
+Import PPI databases
+```{r}
+## PPI databses (has good information for interaction type)
+pathwaycommons_db = readr::read_delim('./databases/PathwayCommons12.All.hgnc.txt', delim = "\t", show_col_types = FALSE) 
+pathwaycommons_db_1 = pathwaycommons_db %>%
+  dplyr::filter(!grepl("CTD|MSigDB", INTERACTION_DATA_SOURCE)) %>%
+  dplyr::mutate(., SCORE = ifelse(grepl('interacts-with|in-complex-with', INTERACTION_TYPE), 0.99, # high-confident interactions
+                                  ifelse(grepl('KEGG|HumanCyc', INTERACTION_DATA_SOURCE), 0.99, 0.7))) %>% # high-confident interactions 
+  dplyr::select(PARTICIPANT_A, PARTICIPANT_B, SCORE, INTERACTION_TYPE, INTERACTION_DATA_SOURCE) %>%
+  dplyr::mutate(WEIGHT = SCORE,
+                COST = 1-SCORE )
+
+string_db = readr::read_delim("./databases/my_string_human_all_ppi_v11p5.txt", delim = "\t", show_col_types = FALSE)
+string_db_1 = string_db %>%
+  dplyr::select(PARTICIPANT_A = Participant_A, PARTICIPANT_B = Participant_B, SCORE = Score) %>%
+  dplyr::mutate(WEIGHT = SCORE,
+                COST = 1-SCORE,
+                INTERACTION_TYPE = NA,
+                INTERACTION_DATA_SOURCE = "STRING")
+
+hint_db = readr::read_delim('./databases/HINT_HomoSapiens_binary_hq.txt', delim = "\t", show_col_types = FALSE)
+hint_db_1 = hint_db %>%
+  dplyr::select(PARTICIPANT_A = Gene_A, PARTICIPANT_B = Gene_B) %>%
+  dplyr::mutate_if(is.factor, as.character) %>%
+  dplyr::mutate(SCORE = 0.99,
+                WEIGHT = SCORE,
+                COST = 1-SCORE,
+                INTERACTION_TYPE = NA,
+                INTERACTION_DATA_SOURCE = "HINT")
+
+# Receptor-Ligand interaction
+celltalk_db <- readr::read_delim("./databases/celltalkdb.txt", delim = "\t", show_col_types = FALSE)
+celltalk_db_1 <- celltalk_db %>%
+  dplyr::select(PARTICIPANT_A = ligand_gene_symbol, PARTICIPANT_B = receptor_gene_symbol) %>%
+  na.omit() %>%
+  dplyr::mutate(SCORE = 0.99,
+                WEIGHT = SCORE,
+                COST = 1-SCORE,
+                INTERACTION_TYPE = "ligand-receptor",
+                INTERACTION_DATA_SOURCE = "CellTalkDB")
+
+
+# Kinase-Substrate
+pspplus_db = readr::read_delim("./databases/my_phosphositeplus_dataframe.txt", delim = "\t", show_col_types = FALSE)
+pspplus_db_1 = pspplus_db %>%
+  dplyr::mutate(SUBSTRATE = stringr::str_replace(SUBSTRATE, "_.*", "")) %>%
+  dplyr::distinct(.) %>%
+  dplyr::select(PARTICIPANT_A = KINASE, PARTICIPANT_B = SUBSTRATE) %>%
+  dplyr::mutate(SCORE = 0.99,
+                WEIGHT = SCORE,
+                COST = 1-SCORE,
+                INTERACTION_TYPE = "kinase-substrate",
+                INTERACTION_DATA_SOURCE = "PhosphositePlus")
+
+# Protein-Metabolite database. The database has been downloaded from MetaBridge
+metabol_gene_int = readr::read_csv("./databases/metabolite_gene_interactions.csv", show_col_types = FALSE)
+metabol_gene_int_1 = metabol_gene_int %>% 
+  dplyr::select(KEGG_ID, Gene_Name) %>% 
+  dplyr::rename(PARTICIPANT_A = KEGG_ID, PARTICIPANT_B = Gene_Name) %>%
+  na.omit() %>%
+  dplyr::mutate(SCORE = 0.99,
+                WEIGHT = SCORE,
+                COST = 1-SCORE,
+                INTERACTION_TYPE = "metabolite-gene",
+                INTERACTION_DATA_SOURCE = "KEGG")
+
+```
+
+Merge the databases
+```{r}
+# Combine all of them
+my_integrative_interactome = dplyr::bind_rows(pathwaycommons_db_1,
+                                              string_db_1,
+                                              hint_db_1,
+                                              celltalk_db_1,
+                                              pspplus_db_1,
+                                              metabol_gene_int_1 ) %>% 
+  dplyr::mutate(PARTICIPANT_A = stringr::str_squish(PARTICIPANT_A)) %>%
+  dplyr::mutate(PARTICIPANT_B = stringr::str_squish(PARTICIPANT_B)) %>%
+  dplyr::filter(!grepl("RnaReference|ProteinReference|SmallMoleculeReference|DnaRegionReference|DnaReference|PARTICIPANT_TYPE|RnaRegionReference", INTERACTION_TYPE)) %>%
+  dplyr::filter(!grepl("ENSG", PARTICIPANT_A)) %>%
+  dplyr::filter(!grepl("ENSG", PARTICIPANT_B)) %>%
+  dplyr::mutate_if(is.factor, as.character)
+
+# Identify Duplicate entries
+# Remove redundant/duplicate interactions
+my_integrative_interactome_1 = my_integrative_interactome %>%
+  dplyr::mutate(COMBINATION = paste0(pmin(PARTICIPANT_A, PARTICIPANT_B), pmax(PARTICIPANT_A, PARTICIPANT_B))) %>%
+  dplyr::group_by(COMBINATION) %>%
+  dplyr::mutate(DUPLICATE = ifelse(n() > 1, "Yes", "No")) %>%
+
+  # fill NA values within a group with the valid value within the group
+  dplyr::arrange(desc(COMBINATION)) %>%
+  tidyr::fill(INTERACTION_TYPE, .direction = "downup") %>%
+
+  # merge Sources
+  # keep rows with higher value of SCORE
+  dplyr::mutate(INTERACTION_DATA_SOURCE = stringr::str_squish(INTERACTION_DATA_SOURCE)) %>%
+  dplyr::mutate(INTERACTION_DATA_SOURCE = stringr::str_replace_all(INTERACTION_DATA_SOURCE, ";", "; ")) %>%
+  dplyr::mutate(INTERACTION_DATA_SOURCE = paste(unique(INTERACTION_DATA_SOURCE), collapse = "; ")) %>%
+  dplyr::arrange(desc(SCORE)) %>%
+  dplyr::filter(SCORE == max(SCORE)) %>%
+  dplyr::distinct(COMBINATION, .keep_all = TRUE) %>%
+  dplyr::ungroup() %>%
+  dplyr::select(-DUPLICATE) %>%
+
+  # add KEGG before kegg ids (starts with C followed by 4 numerical values) for identification & replacement later
+  # replace all KEGG ids with CHEBI ids
+  dplyr::mutate(PARTICIPANT_A = ifelse(grepl("^C\\d{4,}", PARTICIPANT_A), paste0("KEGG:", PARTICIPANT_A), PARTICIPANT_A),
+                PARTICIPANT_B = ifelse(grepl("^C\\d{4,}", PARTICIPANT_B), paste0("KEGG:", PARTICIPANT_B), PARTICIPANT_B)  ) %>%
+  dplyr::mutate(PARTICIPANT_A = ifelse(grepl("^KEGG:", PARTICIPANT_A), 
+                                       coalesce(metabolite_mapping_table_modified_1$chebi_id[match(PARTICIPANT_A, metabolite_mapping_table_modified_1$kegg_id)], PARTICIPANT_A), PARTICIPANT_A),
+                PARTICIPANT_B = ifelse(grepl("^KEGG:", PARTICIPANT_B), 
+                                       coalesce(metabolite_mapping_table_modified_1$chebi_id[match(PARTICIPANT_B, metabolite_mapping_table_modified_1$kegg_id)], PARTICIPANT_B), PARTICIPANT_B) ) %>%
+
+  # replace NA with "PPI"
+  dplyr::mutate(INTERACTION_TYPE = ifelse(is.na(INTERACTION_TYPE), "PPI", INTERACTION_TYPE)) %>%
+
+  # write
+  readr::write_delim(., "my_integrative_interactome_genes_metabols_full.txt", delim = "\t")
+
+
+
+# Combine all of them
+gc()
+my_integrative_interactome = dplyr::bind_rows(string_db_1,
+                                              metabol_gene_int_1 ) %>% 
+  dplyr::mutate(PARTICIPANT_A = stringr::str_squish(PARTICIPANT_A)) %>%
+  dplyr::mutate(PARTICIPANT_B = stringr::str_squish(PARTICIPANT_B)) %>%
+  dplyr::filter(!grepl("RnaReference|ProteinReference|SmallMoleculeReference|DnaRegionReference|DnaReference|PARTICIPANT_TYPE|RnaRegionReference", INTERACTION_TYPE)) %>%
+  dplyr::filter(!grepl("ENSG", PARTICIPANT_A)) %>%
+  dplyr::filter(!grepl("ENSG", PARTICIPANT_B)) %>%
+  dplyr::mutate_if(is.factor, as.character)
+
+# Identify Duplicate entries
+# Remove redundant/duplicate interactions
+gc()
+my_integrative_interactome_1 = my_integrative_interactome %>%
+  dplyr::mutate(COMBINATION = paste0(pmin(PARTICIPANT_A, PARTICIPANT_B), pmax(PARTICIPANT_A, PARTICIPANT_B))) %>%
+  dplyr::group_by(COMBINATION) %>%
+  dplyr::mutate(DUPLICATE = ifelse(n() > 1, "Yes", "No")) %>%
+
+  # fill NA values within a group with the valid value within the group
+  dplyr::arrange(desc(COMBINATION)) %>%
+  tidyr::fill(INTERACTION_TYPE, .direction = "downup") %>%
+
+  # merge Sources
+  # keep rows with higher value of SCORE
+  dplyr::mutate(INTERACTION_DATA_SOURCE = stringr::str_squish(INTERACTION_DATA_SOURCE)) %>%
+  dplyr::mutate(INTERACTION_DATA_SOURCE = stringr::str_replace_all(INTERACTION_DATA_SOURCE, ";", "; ")) %>%
+  dplyr::mutate(INTERACTION_DATA_SOURCE = paste(unique(INTERACTION_DATA_SOURCE), collapse = "; ")) %>%
+  dplyr::arrange(desc(SCORE)) %>%
+  dplyr::filter(SCORE == max(SCORE)) %>%
+  dplyr::distinct(COMBINATION, .keep_all = TRUE) %>%
+  dplyr::ungroup() %>%
+  dplyr::select(-DUPLICATE) %>%
+
+  # add KEGG before kegg ids (starts with C followed by 4 numerical values) for identification & replacement later
+  # replace all KEGG ids with CHEBI ids
+  dplyr::mutate(PARTICIPANT_A = ifelse(grepl("^C\\d{4,}", PARTICIPANT_A), paste0("KEGG:", PARTICIPANT_A), PARTICIPANT_A),
+                PARTICIPANT_B = ifelse(grepl("^C\\d{4,}", PARTICIPANT_B), paste0("KEGG:", PARTICIPANT_B), PARTICIPANT_B)  ) %>%
+  dplyr::mutate(PARTICIPANT_A = ifelse(grepl("^KEGG:", PARTICIPANT_A), 
+                                       coalesce(metabolite_mapping_table_modified_1$chebi_id[match(PARTICIPANT_A, metabolite_mapping_table_modified_1$kegg_id)], PARTICIPANT_A), PARTICIPANT_A),
+                PARTICIPANT_B = ifelse(grepl("^KEGG:", PARTICIPANT_B), 
+                                       coalesce(metabolite_mapping_table_modified_1$chebi_id[match(PARTICIPANT_B, metabolite_mapping_table_modified_1$kegg_id)], PARTICIPANT_B), PARTICIPANT_B) ) %>%
+
+  # replace NA with "PPI"
+  dplyr::mutate(INTERACTION_TYPE = ifelse(is.na(INTERACTION_TYPE), "PPI", INTERACTION_TYPE)) %>%
+
+  # write
+  readr::write_delim(., "my_stringdb_interactome_genes_metabols_full.txt", delim = "\t")
+
+
+######
+# check which kegg ids did not get matched
+kegg_id_not = my_integrative_interactome_1 %>%
+  dplyr::select(PARTICIPANT_A) %>%
+  dplyr::filter(grepl("KEGG", PARTICIPANT_A)) %>%
+  dplyr::distinct() %>%
+  dplyr::mutate(PARTICIPANT_A = str_replace(PARTICIPANT_A, "KEGG:", ""))
+#clipr::write_clip(kegg_id_not$PARTICIPANT_A)
+```
+
+Further processing for use with PCSF
+```{r}
+my_integrative_interactome_1 = readr::read_delim("my-integrative-interactome-genes-metabols-full.txt", delim = "\t", show_col_types = FALSE)
+```
+
+Run
+```{r}
+
+```
+

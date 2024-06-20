@@ -1,0 +1,4930 @@
+pathway	feature_ids
+ABC transporters	pgp-3
+ABC transporters	pmp-4
+ABC transporters	pgp-4
+ABC transporters	pmp-3
+ABC transporters	pgp-1
+ABC transporters	mrp-5
+ABC transporters	pgp-2
+ABC transporters	pgp-13
+ABC transporters	pgp-12
+ABC transporters	pmp-2
+ABC transporters	pgp-14
+ABC transporters	pmp-1
+ABC transporters	pgp-11
+ABC transporters	mrp-2
+ABC transporters	mrp-1
+ABC transporters	haf-7
+ABC transporters	haf-6
+ABC transporters	abt-2
+ABC transporters	haf-4
+ABC transporters	pgp-5
+ABC transporters	abtm-1
+ABC transporters	abt-4
+ABC transporters	pgp-9
+ABC transporters	hmt-1
+ABC transporters	haf-9
+AGE-RAGE signaling pathway in diabetic complications	ced-10
+AGE-RAGE signaling pathway in diabetic complications	akt-1
+AGE-RAGE signaling pathway in diabetic complications	age-1
+AGE-RAGE signaling pathway in diabetic complications	akt-2
+AGE-RAGE signaling pathway in diabetic complications	sma-4
+AGE-RAGE signaling pathway in diabetic complications	pmk-1
+AGE-RAGE signaling pathway in diabetic complications	crp-1
+AGE-RAGE signaling pathway in diabetic complications	pmk-3
+AGE-RAGE signaling pathway in diabetic complications	pmk-2
+AGE-RAGE signaling pathway in diabetic complications	pkc-2
+AGE-RAGE signaling pathway in diabetic complications	aap-1
+AGE-RAGE signaling pathway in diabetic complications	pkc-1
+AGE-RAGE signaling pathway in diabetic complications	let-60
+AGE-RAGE signaling pathway in diabetic complications	kgb-1
+AGE-RAGE signaling pathway in diabetic complications	kgb-2
+AGE-RAGE signaling pathway in diabetic complications	mpk-1
+AGE-RAGE signaling pathway in diabetic complications	daf-3
+AGE-RAGE signaling pathway in diabetic complications	egrh-1
+AGE-RAGE signaling pathway in diabetic complications	jnk-1
+AGE-RAGE signaling pathway in diabetic complications	sta-1
+AGE-RAGE signaling pathway in diabetic complications	egl-8
+AGE-RAGE signaling pathway in diabetic complications	rac-2
+AGE-RAGE signaling pathway in diabetic complications	plc-3
+AGE-RAGE signaling pathway in diabetic complications	plc-4
+AGE-RAGE signaling pathway in diabetic complications	cdc-42
+AGE-RAGE signaling pathway in diabetic complications	plc-1
+AGE-RAGE signaling pathway in diabetic complications	mig-2
+AGE-RAGE signaling pathway in diabetic complications	let-2
+AGE-RAGE signaling pathway in diabetic complications	tpa-1
+Alanine, aspartate and glutamate metabolism	ppat-1
+Alanine, aspartate and glutamate metabolism	adsl-1
+Alanine, aspartate and glutamate metabolism	ddo-1
+Alanine, aspartate and glutamate metabolism	ddo-2
+Alanine, aspartate and glutamate metabolism	ddo-3
+Alanine, aspartate and glutamate metabolism	W07E11.1
+Alanine, aspartate and glutamate metabolism	unc-25
+Alanine, aspartate and glutamate metabolism	agxt-1
+Alanine, aspartate and glutamate metabolism	T09B4.8
+Alanine, aspartate and glutamate metabolism	got-2.1
+Alanine, aspartate and glutamate metabolism	got-1.2
+Alanine, aspartate and glutamate metabolism	got-2.2
+Alanine, aspartate and glutamate metabolism	gfat-2
+Alanine, aspartate and glutamate metabolism	gfat-1
+Alanine, aspartate and glutamate metabolism	alh-6
+Alanine, aspartate and glutamate metabolism	pyr-1
+Alanine, aspartate and glutamate metabolism	gln-5
+Alanine, aspartate and glutamate metabolism	alh-7
+Alanine, aspartate and glutamate metabolism	gln-6
+Alanine, aspartate and glutamate metabolism	gln-3
+Alanine, aspartate and glutamate metabolism	gln-1
+Alanine, aspartate and glutamate metabolism	glna-1
+Alanine, aspartate and glutamate metabolism	gln-2
+Alanine, aspartate and glutamate metabolism	asns-1
+Alanine, aspartate and glutamate metabolism	glna-2
+Alanine, aspartate and glutamate metabolism	gdh-1
+Alanine, aspartate and glutamate metabolism	asns-2
+Alanine, aspartate and glutamate metabolism	glna-3
+Alanine, aspartate and glutamate metabolism	gta-1
+Alanine, aspartate and glutamate metabolism	adss-1
+Alanine, aspartate and glutamate metabolism	C32F10.8
+Amino sugar and nucleotide sugar metabolism	F21D5.1
+Amino sugar and nucleotide sugar metabolism	C36A4.4
+Amino sugar and nucleotide sugar metabolism	bre-1
+Amino sugar and nucleotide sugar metabolism	R05F9.6
+Amino sugar and nucleotide sugar metabolism	gna-1
+Amino sugar and nucleotide sugar metabolism	F52B11.2
+Amino sugar and nucleotide sugar metabolism	T03F6.3
+Amino sugar and nucleotide sugar metabolism	ger-1
+Amino sugar and nucleotide sugar metabolism	W06B4.2
+Amino sugar and nucleotide sugar metabolism	cht-4
+Amino sugar and nucleotide sugar metabolism	sqv-1
+Amino sugar and nucleotide sugar metabolism	ZK632.4
+Amino sugar and nucleotide sugar metabolism	chs-1
+Amino sugar and nucleotide sugar metabolism	cht-1
+Amino sugar and nucleotide sugar metabolism	chs-2
+Amino sugar and nucleotide sugar metabolism	K08E3.5
+Amino sugar and nucleotide sugar metabolism	sqv-4
+Amino sugar and nucleotide sugar metabolism	gfat-2
+Amino sugar and nucleotide sugar metabolism	tag-335
+Amino sugar and nucleotide sugar metabolism	F59B2.3
+Amino sugar and nucleotide sugar metabolism	gale-1
+Amino sugar and nucleotide sugar metabolism	gfat-1
+Amino sugar and nucleotide sugar metabolism	gmd-2
+Amino sugar and nucleotide sugar metabolism	ZK1058.3
+Amino sugar and nucleotide sugar metabolism	Y43F4B.5
+Amino sugar and nucleotide sugar metabolism	T05H4.4
+Amino sugar and nucleotide sugar metabolism	C01F1.3
+Amino sugar and nucleotide sugar metabolism	hxk-1
+Amino sugar and nucleotide sugar metabolism	K03H1.13
+Amino sugar and nucleotide sugar metabolism	C05C8.7
+Amino sugar and nucleotide sugar metabolism	Y47D9A.1
+Amino sugar and nucleotide sugar metabolism	Y52B11A.3
+Amino sugar and nucleotide sugar metabolism	hex-1
+Amino sugar and nucleotide sugar metabolism	hpo-19
+Amino sugar and nucleotide sugar metabolism	gpi-1
+Aminoacyl-tRNA biosynthesis	C11G10.t1
+Aminoacyl-tRNA biosynthesis	F35H8.t1
+Aminoacyl-tRNA biosynthesis	C39D10.17
+Aminoacyl-tRNA biosynthesis	C43G2.30
+Aminoacyl-tRNA biosynthesis	F55F3.t2
+Aminoacyl-tRNA biosynthesis	F55F3.t1
+Aminoacyl-tRNA biosynthesis	Y92C3A.t2
+Aminoacyl-tRNA biosynthesis	Y92C3A.t3
+Aminoacyl-tRNA biosynthesis	F53F8.t1
+Aminoacyl-tRNA biosynthesis	C39D10.14
+Aminoacyl-tRNA biosynthesis	B0285.t1
+Aminoacyl-tRNA biosynthesis	F56D12.t1
+Aminoacyl-tRNA biosynthesis	F38E9.7
+Aminoacyl-tRNA biosynthesis	F56D12.t4
+Aminoacyl-tRNA biosynthesis	T07H6.t1
+Aminoacyl-tRNA biosynthesis	T07H6.t2
+Aminoacyl-tRNA biosynthesis	K08E7.t1
+Aminoacyl-tRNA biosynthesis	C43G2.t1
+Aminoacyl-tRNA biosynthesis	F35H8.10
+Aminoacyl-tRNA biosynthesis	C43G2.t2
+Aminoacyl-tRNA biosynthesis	C04F12.t1
+Aminoacyl-tRNA biosynthesis	T01B4.4
+Aminoacyl-tRNA biosynthesis	T01B4.7
+Aminoacyl-tRNA biosynthesis	C39D10.t1
+Aminoacyl-tRNA biosynthesis	T01B4.6
+Aminoacyl-tRNA biosynthesis	C39D10.t2
+Aminoacyl-tRNA biosynthesis	F02H6.72
+Aminoacyl-tRNA biosynthesis	F53F8.10
+Aminoacyl-tRNA biosynthesis	ZC455.14
+Aminoacyl-tRNA biosynthesis	Y7A9D.t2
+Aminoacyl-tRNA biosynthesis	Y7A9D.t1
+Aminoacyl-tRNA biosynthesis	B0513.t1
+Aminoacyl-tRNA biosynthesis	Y7A9D.t3
+Aminoacyl-tRNA biosynthesis	K01A12.t5
+Aminoacyl-tRNA biosynthesis	T01B4.8
+Aminoacyl-tRNA biosynthesis	ZC455.t1
+Aminoacyl-tRNA biosynthesis	K01A12.t4
+Aminoacyl-tRNA biosynthesis	K01A12.t3
+Aminoacyl-tRNA biosynthesis	K01A12.t2
+Aminoacyl-tRNA biosynthesis	Y17G9A.t1
+Aminoacyl-tRNA biosynthesis	K01A12.t1
+Aminoacyl-tRNA biosynthesis	Y51H4A.t7
+Aminoacyl-tRNA biosynthesis	Y22D7AL.17
+Aminoacyl-tRNA biosynthesis	T09B4.19
+Aminoacyl-tRNA biosynthesis	T09B4.t2
+Aminoacyl-tRNA biosynthesis	F27D4.t1
+Aminoacyl-tRNA biosynthesis	D1009.t1
+Aminoacyl-tRNA biosynthesis	D1009.t2
+Aminoacyl-tRNA biosynthesis	T09B4.t1
+Aminoacyl-tRNA biosynthesis	F15G9.t2
+Aminoacyl-tRNA biosynthesis	Y51H4A.t1
+Aminoacyl-tRNA biosynthesis	Y70C5A.t1
+Aminoacyl-tRNA biosynthesis	F15G9.t1
+Aminoacyl-tRNA biosynthesis	Y51H4A.t2
+Aminoacyl-tRNA biosynthesis	T04D3.10
+Aminoacyl-tRNA biosynthesis	Y51H4A.t5
+Aminoacyl-tRNA biosynthesis	T08A9.t1
+Aminoacyl-tRNA biosynthesis	Y51H4A.t6
+Aminoacyl-tRNA biosynthesis	Y51H4A.t3
+Aminoacyl-tRNA biosynthesis	Y51H4A.t4
+Aminoacyl-tRNA biosynthesis	ZK154.8
+Aminoacyl-tRNA biosynthesis	iars-2
+Aminoacyl-tRNA biosynthesis	iars-1
+Aminoacyl-tRNA biosynthesis	F31B12.t1
+Aminoacyl-tRNA biosynthesis	F33G12.t1
+Aminoacyl-tRNA biosynthesis	F49C5.t3
+Aminoacyl-tRNA biosynthesis	Y22D7AL.t4
+Aminoacyl-tRNA biosynthesis	F49C5.t2
+Aminoacyl-tRNA biosynthesis	F49C5.t1
+Aminoacyl-tRNA biosynthesis	Y22D7AL.t3
+Aminoacyl-tRNA biosynthesis	C14F11.16
+Aminoacyl-tRNA biosynthesis	F49C5.t4
+Aminoacyl-tRNA biosynthesis	T04D3.t4
+Aminoacyl-tRNA biosynthesis	T04D3.t3
+Aminoacyl-tRNA biosynthesis	F15D3.t1
+Aminoacyl-tRNA biosynthesis	T04D3.t2
+Aminoacyl-tRNA biosynthesis	T04D3.t1
+Aminoacyl-tRNA biosynthesis	F36D4.t1
+Aminoacyl-tRNA biosynthesis	F36D4.t2
+Aminoacyl-tRNA biosynthesis	C37A2.t1
+Aminoacyl-tRNA biosynthesis	rtw-5
+Aminoacyl-tRNA biosynthesis	rtw-6
+Aminoacyl-tRNA biosynthesis	K04C2.t3
+Aminoacyl-tRNA biosynthesis	C14F11.t1
+Aminoacyl-tRNA biosynthesis	K04C2.t1
+Aminoacyl-tRNA biosynthesis	K04C2.t2
+Aminoacyl-tRNA biosynthesis	F22F1.t9
+Aminoacyl-tRNA biosynthesis	F22F1.t8
+Aminoacyl-tRNA biosynthesis	K02E2.15
+Aminoacyl-tRNA biosynthesis	M01E10.t1
+Aminoacyl-tRNA biosynthesis	M01E10.t2
+Aminoacyl-tRNA biosynthesis	Y57A10B.8
+Aminoacyl-tRNA biosynthesis	ZK563.t1
+Aminoacyl-tRNA biosynthesis	F56C3.t1
+Aminoacyl-tRNA biosynthesis	F31B12.6
+Aminoacyl-tRNA biosynthesis	F39B1.t1
+Aminoacyl-tRNA biosynthesis	B0228.t1
+Aminoacyl-tRNA biosynthesis	C56G3.t1
+Aminoacyl-tRNA biosynthesis	K04C2.10
+Aminoacyl-tRNA biosynthesis	K02E2.t1
+Aminoacyl-tRNA biosynthesis	F42F12.t1
+Aminoacyl-tRNA biosynthesis	C16B8.8
+Aminoacyl-tRNA biosynthesis	ZK262.t1
+Aminoacyl-tRNA biosynthesis	F39B1.t2
+Aminoacyl-tRNA biosynthesis	T14F9.t1
+Aminoacyl-tRNA biosynthesis	Y57G11B.t1
+Aminoacyl-tRNA biosynthesis	ZK262.17
+Aminoacyl-tRNA biosynthesis	Y67D2.t1
+Aminoacyl-tRNA biosynthesis	ZC132.t1
+Aminoacyl-tRNA biosynthesis	F16F9.t1
+Aminoacyl-tRNA biosynthesis	Y66D12A.7
+Aminoacyl-tRNA biosynthesis	K06A4.t1
+Aminoacyl-tRNA biosynthesis	Y38E10A.t1
+Aminoacyl-tRNA biosynthesis	Y49E10.t1
+Aminoacyl-tRNA biosynthesis	R04B3.t1
+Aminoacyl-tRNA biosynthesis	F02E11.t1
+Aminoacyl-tRNA biosynthesis	R04B3.t2
+Aminoacyl-tRNA biosynthesis	C40H5.13
+Aminoacyl-tRNA biosynthesis	Y38E10A.31
+Aminoacyl-tRNA biosynthesis	ZC132.10
+Aminoacyl-tRNA biosynthesis	F49E11.t1
+Aminoacyl-tRNA biosynthesis	F49E11.t2
+Aminoacyl-tRNA biosynthesis	F22F1.t5
+Aminoacyl-tRNA biosynthesis	K08E7.12
+Aminoacyl-tRNA biosynthesis	F22F1.t4
+Aminoacyl-tRNA biosynthesis	F22F1.t7
+Aminoacyl-tRNA biosynthesis	F22F1.t6
+Aminoacyl-tRNA biosynthesis	C40H5.t1
+Aminoacyl-tRNA biosynthesis	Y49E10.32
+Aminoacyl-tRNA biosynthesis	F22F1.t1
+Aminoacyl-tRNA biosynthesis	aars-1
+Aminoacyl-tRNA biosynthesis	F22F1.t3
+Aminoacyl-tRNA biosynthesis	aars-2
+Aminoacyl-tRNA biosynthesis	F22F1.t2
+Aminoacyl-tRNA biosynthesis	C40C9.6
+Aminoacyl-tRNA biosynthesis	K06A4.13
+Aminoacyl-tRNA biosynthesis	C40C9.9
+Aminoacyl-tRNA biosynthesis	T01B4.t3
+Aminoacyl-tRNA biosynthesis	T01B4.t2
+Aminoacyl-tRNA biosynthesis	T01B4.t4
+Aminoacyl-tRNA biosynthesis	H06A10.t1
+Aminoacyl-tRNA biosynthesis	Y57A10C.t1
+Aminoacyl-tRNA biosynthesis	T01B4.t1
+Aminoacyl-tRNA biosynthesis	K02D7.t1
+Aminoacyl-tRNA biosynthesis	F44A2.10
+Aminoacyl-tRNA biosynthesis	C04A11.t1
+Aminoacyl-tRNA biosynthesis	DY3.t1
+Aminoacyl-tRNA biosynthesis	R11G10.t2
+Aminoacyl-tRNA biosynthesis	F15A8.17
+Aminoacyl-tRNA biosynthesis	Y39G10AL.5
+Aminoacyl-tRNA biosynthesis	R11G10.t1
+Aminoacyl-tRNA biosynthesis	F15A8.15
+Aminoacyl-tRNA biosynthesis	wars-1
+Aminoacyl-tRNA biosynthesis	C38C6.9
+Aminoacyl-tRNA biosynthesis	C49F5.t1
+Aminoacyl-tRNA biosynthesis	T22C1.t1
+Aminoacyl-tRNA biosynthesis	F43C9.5
+Aminoacyl-tRNA biosynthesis	F14F7.t1
+Aminoacyl-tRNA biosynthesis	C06G1.t4
+Aminoacyl-tRNA biosynthesis	C06G1.t3
+Aminoacyl-tRNA biosynthesis	C06G1.t2
+Aminoacyl-tRNA biosynthesis	F15A8.t2
+Aminoacyl-tRNA biosynthesis	C06G1.t1
+Aminoacyl-tRNA biosynthesis	Y40C5A.16
+Aminoacyl-tRNA biosynthesis	F15A8.t1
+Aminoacyl-tRNA biosynthesis	C06G4.7
+Aminoacyl-tRNA biosynthesis	Y25C1A.t2
+Aminoacyl-tRNA biosynthesis	Y25C1A.t1
+Aminoacyl-tRNA biosynthesis	F49E7.t1
+Aminoacyl-tRNA biosynthesis	F49E7.t2
+Aminoacyl-tRNA biosynthesis	F49E7.t3
+Aminoacyl-tRNA biosynthesis	B0212.t1
+Aminoacyl-tRNA biosynthesis	C44B7.15
+Aminoacyl-tRNA biosynthesis	W09D6.10
+Aminoacyl-tRNA biosynthesis	H35N09.t2
+Aminoacyl-tRNA biosynthesis	T01G1.t1
+Aminoacyl-tRNA biosynthesis	F56F3.t1
+Aminoacyl-tRNA biosynthesis	Y119D3B.t1
+Aminoacyl-tRNA biosynthesis	H35N09.t1
+Aminoacyl-tRNA biosynthesis	T01G1.t2
+Aminoacyl-tRNA biosynthesis	T05A8.9
+Aminoacyl-tRNA biosynthesis	Y73B6BL.t1
+Aminoacyl-tRNA biosynthesis	Y119D3B.24
+Aminoacyl-tRNA biosynthesis	F55G7.6
+Aminoacyl-tRNA biosynthesis	F44A2.t1
+Aminoacyl-tRNA biosynthesis	C36C9.t2
+Aminoacyl-tRNA biosynthesis	K07C10.5
+Aminoacyl-tRNA biosynthesis	W09D6.t2
+Aminoacyl-tRNA biosynthesis	F13G11.t1
+Aminoacyl-tRNA biosynthesis	W09D6.t1
+Aminoacyl-tRNA biosynthesis	ZK563.8
+Aminoacyl-tRNA biosynthesis	F48E3.t1
+Aminoacyl-tRNA biosynthesis	C09B9.t1
+Aminoacyl-tRNA biosynthesis	C01C4.5
+Aminoacyl-tRNA biosynthesis	R04E5.t5
+Aminoacyl-tRNA biosynthesis	R04E5.t6
+Aminoacyl-tRNA biosynthesis	F29C4.12
+Aminoacyl-tRNA biosynthesis	W06G6.t1
+Aminoacyl-tRNA biosynthesis	W06G6.t2
+Aminoacyl-tRNA biosynthesis	R04E5.t1
+Aminoacyl-tRNA biosynthesis	R04E5.t2
+Aminoacyl-tRNA biosynthesis	R04E5.t3
+Aminoacyl-tRNA biosynthesis	R04E5.t4
+Aminoacyl-tRNA biosynthesis	C16B8.t3
+Aminoacyl-tRNA biosynthesis	C16B8.t1
+Aminoacyl-tRNA biosynthesis	C16B8.t2
+Aminoacyl-tRNA biosynthesis	F49C5.14
+Aminoacyl-tRNA biosynthesis	W06G6.18
+Aminoacyl-tRNA biosynthesis	W06G6.19
+Aminoacyl-tRNA biosynthesis	F49C5.13
+Aminoacyl-tRNA biosynthesis	Y76A2B.t2
+Aminoacyl-tRNA biosynthesis	Y76A2B.t1
+Aminoacyl-tRNA biosynthesis	F49C5.15
+Aminoacyl-tRNA biosynthesis	R01H5.2
+Aminoacyl-tRNA biosynthesis	F36D4.12
+Aminoacyl-tRNA biosynthesis	pars-2
+Aminoacyl-tRNA biosynthesis	pars-1
+Aminoacyl-tRNA biosynthesis	F36D4.10
+Aminoacyl-tRNA biosynthesis	R04E5.16
+Aminoacyl-tRNA biosynthesis	C53D6.t1
+Aminoacyl-tRNA biosynthesis	R04E5.17
+Aminoacyl-tRNA biosynthesis	C28G1.t1
+Aminoacyl-tRNA biosynthesis	R04E5.13
+Aminoacyl-tRNA biosynthesis	F11H8.t1
+Aminoacyl-tRNA biosynthesis	R04E5.14
+Aminoacyl-tRNA biosynthesis	Y82E9BR.t1
+Aminoacyl-tRNA biosynthesis	C28G1.t3
+Aminoacyl-tRNA biosynthesis	C28G1.t2
+Aminoacyl-tRNA biosynthesis	C28G1.t4
+Aminoacyl-tRNA biosynthesis	Y7A9D.63
+Aminoacyl-tRNA biosynthesis	C28G1.7
+Aminoacyl-tRNA biosynthesis	Y7A9D.66
+Aminoacyl-tRNA biosynthesis	F47A4.t1
+Aminoacyl-tRNA biosynthesis	K03H6.t1
+Aminoacyl-tRNA biosynthesis	C28G1.8
+Aminoacyl-tRNA biosynthesis	Y7A9D.62
+Aminoacyl-tRNA biosynthesis	C44B7.t1
+Aminoacyl-tRNA biosynthesis	W06G6.t3
+Aminoacyl-tRNA biosynthesis	K11E4.11
+Aminoacyl-tRNA biosynthesis	C10G8.9
+Aminoacyl-tRNA biosynthesis	K11E4.10
+Aminoacyl-tRNA biosynthesis	K05G3.t1
+Aminoacyl-tRNA biosynthesis	F29C4.t1
+Aminoacyl-tRNA biosynthesis	Y73F8A.t4
+Aminoacyl-tRNA biosynthesis	Y73F8A.t3
+Aminoacyl-tRNA biosynthesis	F35A5.10
+Aminoacyl-tRNA biosynthesis	Y95B8A.t1
+Aminoacyl-tRNA biosynthesis	Y73F8A.t1
+Aminoacyl-tRNA biosynthesis	F35A5.t1
+Aminoacyl-tRNA biosynthesis	T01C1.9
+Aminoacyl-tRNA biosynthesis	C38C6.t1
+Aminoacyl-tRNA biosynthesis	T25E4.t1
+Aminoacyl-tRNA biosynthesis	C06B8.t1
+Aminoacyl-tRNA biosynthesis	Y95B8A.13
+Aminoacyl-tRNA biosynthesis	C13B4.t1
+Aminoacyl-tRNA biosynthesis	C06B8.t3
+Aminoacyl-tRNA biosynthesis	R04D3.14
+Aminoacyl-tRNA biosynthesis	C06B8.t2
+Aminoacyl-tRNA biosynthesis	R04D3.13
+Aminoacyl-tRNA biosynthesis	K11E4.t4
+Aminoacyl-tRNA biosynthesis	C48C5.t3
+Aminoacyl-tRNA biosynthesis	C48C5.t2
+Aminoacyl-tRNA biosynthesis	K11E4.t3
+Aminoacyl-tRNA biosynthesis	K11E4.t2
+Aminoacyl-tRNA biosynthesis	C48C5.t1
+Aminoacyl-tRNA biosynthesis	K11E4.t1
+Aminoacyl-tRNA biosynthesis	K11E4.t6
+Aminoacyl-tRNA biosynthesis	C48C5.t4
+Aminoacyl-tRNA biosynthesis	K11E4.t5
+Aminoacyl-tRNA biosynthesis	F43C9.t1
+Aminoacyl-tRNA biosynthesis	C06B8.15
+Aminoacyl-tRNA biosynthesis	F34H10.7
+Aminoacyl-tRNA biosynthesis	R01H5.t1
+Aminoacyl-tRNA biosynthesis	C26G2.t1
+Aminoacyl-tRNA biosynthesis	R04D3.t5
+Aminoacyl-tRNA biosynthesis	R04D3.t4
+Aminoacyl-tRNA biosynthesis	R04D3.t1
+Aminoacyl-tRNA biosynthesis	W02G9.t1
+Aminoacyl-tRNA biosynthesis	R04D3.t3
+Aminoacyl-tRNA biosynthesis	R04D3.t2
+Aminoacyl-tRNA biosynthesis	T28B4.14
+Aminoacyl-tRNA biosynthesis	C16C8.24
+Aminoacyl-tRNA biosynthesis	ZC449.t1
+Aminoacyl-tRNA biosynthesis	T25B6.10
+Aminoacyl-tRNA biosynthesis	T19C4.19
+Aminoacyl-tRNA biosynthesis	Y39B6A.t10
+Aminoacyl-tRNA biosynthesis	Y105E8A.20
+Aminoacyl-tRNA biosynthesis	C29F4.t1
+Aminoacyl-tRNA biosynthesis	T03E6.t1
+Aminoacyl-tRNA biosynthesis	C17D12.15
+Aminoacyl-tRNA biosynthesis	T25B6.t1
+Aminoacyl-tRNA biosynthesis	T28B4.t1
+Aminoacyl-tRNA biosynthesis	T28B4.t2
+Aminoacyl-tRNA biosynthesis	C17D12.10
+Aminoacyl-tRNA biosynthesis	T19C4.t1
+Aminoacyl-tRNA biosynthesis	C16C8.t1
+Aminoacyl-tRNA biosynthesis	T15B12.t1
+Aminoacyl-tRNA biosynthesis	C16C8.t2
+Aminoacyl-tRNA biosynthesis	C12C8.7
+Aminoacyl-tRNA biosynthesis	C12C8.5
+Aminoacyl-tRNA biosynthesis	C17D12.t1
+Aminoacyl-tRNA biosynthesis	C17D12.t2
+Aminoacyl-tRNA biosynthesis	T02G6.t1
+Aminoacyl-tRNA biosynthesis	T25B6.t2
+Aminoacyl-tRNA biosynthesis	C04C11.8
+Aminoacyl-tRNA biosynthesis	C09B9.80
+Aminoacyl-tRNA biosynthesis	C17D12.t3
+Aminoacyl-tRNA biosynthesis	Y18H1A.t1
+Aminoacyl-tRNA biosynthesis	T03E6.13
+Aminoacyl-tRNA biosynthesis	Y95D11A.t1
+Aminoacyl-tRNA biosynthesis	T02G6.12
+Aminoacyl-tRNA biosynthesis	ZK899.t1
+Aminoacyl-tRNA biosynthesis	F18C5.t1
+Aminoacyl-tRNA biosynthesis	K02E11.t1
+Aminoacyl-tRNA biosynthesis	F41D9.6
+Aminoacyl-tRNA biosynthesis	F28F5.t1
+Aminoacyl-tRNA biosynthesis	C12C8.t4
+Aminoacyl-tRNA biosynthesis	C12C8.t5
+Aminoacyl-tRNA biosynthesis	C12C8.t6
+Aminoacyl-tRNA biosynthesis	C12C8.t1
+Aminoacyl-tRNA biosynthesis	C12C8.t2
+Aminoacyl-tRNA biosynthesis	ZK899.10
+Aminoacyl-tRNA biosynthesis	C12C8.t3
+Aminoacyl-tRNA biosynthesis	K02A4.9
+Aminoacyl-tRNA biosynthesis	C04F2.t1
+Aminoacyl-tRNA biosynthesis	K10C8.5
+Aminoacyl-tRNA biosynthesis	C02D4.t1
+Aminoacyl-tRNA biosynthesis	T22C8.t1
+Aminoacyl-tRNA biosynthesis	T10B9.t1
+Aminoacyl-tRNA biosynthesis	F41A4.3
+Aminoacyl-tRNA biosynthesis	secs-1
+Aminoacyl-tRNA biosynthesis	K02A4.4
+Aminoacyl-tRNA biosynthesis	H17B01.t1
+Aminoacyl-tRNA biosynthesis	K03E6.8
+Aminoacyl-tRNA biosynthesis	Y37A1B.t1
+Aminoacyl-tRNA biosynthesis	F53B6.t1
+Aminoacyl-tRNA biosynthesis	T05A8.10
+Aminoacyl-tRNA biosynthesis	E03E2.t3
+Aminoacyl-tRNA biosynthesis	E03E2.t2
+Aminoacyl-tRNA biosynthesis	E03E2.t1
+Aminoacyl-tRNA biosynthesis	K02D7.8
+Aminoacyl-tRNA biosynthesis	F30F8.t1
+Aminoacyl-tRNA biosynthesis	Y73B3A.t1
+Aminoacyl-tRNA biosynthesis	Y43F4A.t2
+Aminoacyl-tRNA biosynthesis	C15C6.t1
+Aminoacyl-tRNA biosynthesis	F53B6.11
+Aminoacyl-tRNA biosynthesis	B0350.t1
+Aminoacyl-tRNA biosynthesis	F17H10.8
+Aminoacyl-tRNA biosynthesis	W06D4.t1
+Aminoacyl-tRNA biosynthesis	K02B12.t1
+Aminoacyl-tRNA biosynthesis	nars-1
+Aminoacyl-tRNA biosynthesis	C09G12.t1
+Aminoacyl-tRNA biosynthesis	nars-2
+Aminoacyl-tRNA biosynthesis	Y37B11A.t2
+Aminoacyl-tRNA biosynthesis	Y43F4A.t1
+Aminoacyl-tRNA biosynthesis	F32A6.t1
+Aminoacyl-tRNA biosynthesis	C06G1.15
+Aminoacyl-tRNA biosynthesis	F17H10.t1
+Aminoacyl-tRNA biosynthesis	F17A2.t1
+Aminoacyl-tRNA biosynthesis	C06G1.11
+Aminoacyl-tRNA biosynthesis	B0244.t1
+Aminoacyl-tRNA biosynthesis	B0244.t3
+Aminoacyl-tRNA biosynthesis	R11B5.t2
+Aminoacyl-tRNA biosynthesis	R11B5.t3
+Aminoacyl-tRNA biosynthesis	R11B5.t1
+Aminoacyl-tRNA biosynthesis	gars-1
+Aminoacyl-tRNA biosynthesis	Y70C5A.5
+Aminoacyl-tRNA biosynthesis	K01A11.6
+Aminoacyl-tRNA biosynthesis	F41D9.t3
+Aminoacyl-tRNA biosynthesis	F41D9.t4
+Aminoacyl-tRNA biosynthesis	C53C7.t2
+Aminoacyl-tRNA biosynthesis	E03E2.2
+Aminoacyl-tRNA biosynthesis	C53C7.t3
+Aminoacyl-tRNA biosynthesis	F41D9.t1
+Aminoacyl-tRNA biosynthesis	K04C2.9
+Aminoacyl-tRNA biosynthesis	C53C7.t1
+Aminoacyl-tRNA biosynthesis	F41D9.t2
+Aminoacyl-tRNA biosynthesis	W03H1.t1
+Aminoacyl-tRNA biosynthesis	K09A11.t1
+Aminoacyl-tRNA biosynthesis	Y38H6A.t1
+Aminoacyl-tRNA biosynthesis	T28C12.t1
+Aminoacyl-tRNA biosynthesis	F38G1.5
+Aminoacyl-tRNA biosynthesis	glp-4
+Aminoacyl-tRNA biosynthesis	T27B1.t1
+Aminoacyl-tRNA biosynthesis	Y65A5A.t4
+Aminoacyl-tRNA biosynthesis	Y65A5A.26
+Aminoacyl-tRNA biosynthesis	T05A8.t1
+Aminoacyl-tRNA biosynthesis	T05A8.t2
+Aminoacyl-tRNA biosynthesis	T13B5.t1
+Aminoacyl-tRNA biosynthesis	F52E10.9
+Aminoacyl-tRNA biosynthesis	T18D3.t1
+Aminoacyl-tRNA biosynthesis	F52E10.6
+Aminoacyl-tRNA biosynthesis	F52E10.7
+Aminoacyl-tRNA biosynthesis	Y65A5A.t1
+Aminoacyl-tRNA biosynthesis	Y65A5A.t2
+Aminoacyl-tRNA biosynthesis	Y65A5A.t3
+Aminoacyl-tRNA biosynthesis	Y38H6A.10
+Aminoacyl-tRNA biosynthesis	F56F10.t1
+Aminoacyl-tRNA biosynthesis	C02B4.t2
+Aminoacyl-tRNA biosynthesis	T07D10.t1
+Aminoacyl-tRNA biosynthesis	F40H6.t1
+Aminoacyl-tRNA biosynthesis	C02B4.t1
+Aminoacyl-tRNA biosynthesis	C06E4.t1
+Aminoacyl-tRNA biosynthesis	C06E4.20
+Aminoacyl-tRNA biosynthesis	F59C12.9
+Aminoacyl-tRNA biosynthesis	F59C12.7
+Aminoacyl-tRNA biosynthesis	K08B5.t2
+Aminoacyl-tRNA biosynthesis	K08B5.t1
+Aminoacyl-tRNA biosynthesis	F56F10.10
+Aminoacyl-tRNA biosynthesis	Y69A2AR.41
+Aminoacyl-tRNA biosynthesis	F41D9.15
+Aminoacyl-tRNA biosynthesis	H08J11.5
+Aminoacyl-tRNA biosynthesis	H08J11.6
+Aminoacyl-tRNA biosynthesis	F55G7.t2
+Aminoacyl-tRNA biosynthesis	H08J11.7
+Aminoacyl-tRNA biosynthesis	F55G7.t1
+Aminoacyl-tRNA biosynthesis	C16H3.7
+Aminoacyl-tRNA biosynthesis	C16H3.6
+Aminoacyl-tRNA biosynthesis	M01E5.t1
+Aminoacyl-tRNA biosynthesis	Y40H7A.308
+Aminoacyl-tRNA biosynthesis	C42D8.14
+Aminoacyl-tRNA biosynthesis	Y40H7A.309
+Aminoacyl-tRNA biosynthesis	F38E9.t2
+Aminoacyl-tRNA biosynthesis	F38E9.t1
+Aminoacyl-tRNA biosynthesis	F14F7.6
+Aminoacyl-tRNA biosynthesis	Y37A1B.334
+Aminoacyl-tRNA biosynthesis	pstk-1
+Aminoacyl-tRNA biosynthesis	W02H3.t1
+Aminoacyl-tRNA biosynthesis	K03F8.t1
+Aminoacyl-tRNA biosynthesis	cars-1
+Aminoacyl-tRNA biosynthesis	ZK622.t1
+Aminoacyl-tRNA biosynthesis	ZK678.t1
+Aminoacyl-tRNA biosynthesis	ZK678.t2
+Aminoacyl-tRNA biosynthesis	ZK678.t3
+Aminoacyl-tRNA biosynthesis	ZK678.t4
+Aminoacyl-tRNA biosynthesis	C42D8.t1
+Aminoacyl-tRNA biosynthesis	F43E12.t1
+Aminoacyl-tRNA biosynthesis	C05C9.7
+Aminoacyl-tRNA biosynthesis	T10B10.13
+Aminoacyl-tRNA biosynthesis	C37A5.12
+Aminoacyl-tRNA biosynthesis	ZK678.10
+Aminoacyl-tRNA biosynthesis	T10B10.14
+Aminoacyl-tRNA biosynthesis	ZK678.11
+Aminoacyl-tRNA biosynthesis	F58D5.t1
+Aminoacyl-tRNA biosynthesis	T10B10.t1
+Aminoacyl-tRNA biosynthesis	T10B10.t2
+Aminoacyl-tRNA biosynthesis	C52E12.8
+Aminoacyl-tRNA biosynthesis	F31E9.t1
+Aminoacyl-tRNA biosynthesis	F13G11.145
+Aminoacyl-tRNA biosynthesis	C04E7.t1
+Aminoacyl-tRNA biosynthesis	Y37E11AL.16
+Aminoacyl-tRNA biosynthesis	W07G4.t1
+Aminoacyl-tRNA biosynthesis	qars-1
+Aminoacyl-tRNA biosynthesis	T01C1.t1
+Aminoacyl-tRNA biosynthesis	C37A5.t1
+Aminoacyl-tRNA biosynthesis	F11A5.20
+Aminoacyl-tRNA biosynthesis	F11A5.t1
+Aminoacyl-tRNA biosynthesis	C24H11.13
+Aminoacyl-tRNA biosynthesis	F27B10.t1
+Aminoacyl-tRNA biosynthesis	F42D1.t1
+Aminoacyl-tRNA biosynthesis	F27D9.9
+Aminoacyl-tRNA biosynthesis	Y104H12A.t1
+Aminoacyl-tRNA biosynthesis	T23H4.t1
+Aminoacyl-tRNA biosynthesis	K01A11.t1
+Aminoacyl-tRNA biosynthesis	ZC449.10
+Aminoacyl-tRNA biosynthesis	Y43F4A.6
+Aminoacyl-tRNA biosynthesis	Y43F4A.5
+Aminoacyl-tRNA biosynthesis	C24H11.t1
+Aminoacyl-tRNA biosynthesis	F15H9.t1
+Aminoacyl-tRNA biosynthesis	K08H2.t1
+Aminoacyl-tRNA biosynthesis	Y69A2AR.t1
+Aminoacyl-tRNA biosynthesis	F12D9.5
+Aminoacyl-tRNA biosynthesis	Y69A2AR.t2
+Aminoacyl-tRNA biosynthesis	C29F7.9
+Aminoacyl-tRNA biosynthesis	F47G6.t1
+Aminoacyl-tRNA biosynthesis	T26C11.t1
+Aminoacyl-tRNA biosynthesis	Y92C3A.5
+Aminoacyl-tRNA biosynthesis	F59C12.11
+Aminoacyl-tRNA biosynthesis	F21A3.t2
+Aminoacyl-tRNA biosynthesis	F42A10.12
+Aminoacyl-tRNA biosynthesis	F42A10.11
+Aminoacyl-tRNA biosynthesis	Y92C3A.9
+Aminoacyl-tRNA biosynthesis	W01H2.t1
+Aminoacyl-tRNA biosynthesis	F01G12.t1
+Aminoacyl-tRNA biosynthesis	Y95D11A.4
+Aminoacyl-tRNA biosynthesis	F01G12.15
+Aminoacyl-tRNA biosynthesis	Y59E1B.t2
+Aminoacyl-tRNA biosynthesis	C40C9.t2
+Aminoacyl-tRNA biosynthesis	F42A10.t2
+Aminoacyl-tRNA biosynthesis	F42A10.t1
+Aminoacyl-tRNA biosynthesis	C40C9.t1
+Aminoacyl-tRNA biosynthesis	Y71H2AM.t1
+Aminoacyl-tRNA biosynthesis	E01H11.t1
+Aminoacyl-tRNA biosynthesis	T16D1.t1
+Aminoacyl-tRNA biosynthesis	F08F1.t2
+Aminoacyl-tRNA biosynthesis	F08F1.t3
+Aminoacyl-tRNA biosynthesis	F08F1.t1
+Aminoacyl-tRNA biosynthesis	F25F6.3
+Aminoacyl-tRNA biosynthesis	R03E1.5
+Aminoacyl-tRNA biosynthesis	K09C8.11
+Aminoacyl-tRNA biosynthesis	Y43D4A.t2
+Aminoacyl-tRNA biosynthesis	Y43D4A.t1
+Aminoacyl-tRNA biosynthesis	Y92H12A.t1
+Aminoacyl-tRNA biosynthesis	Y4C6B.t3
+Aminoacyl-tRNA biosynthesis	F08F1.19
+Aminoacyl-tRNA biosynthesis	F59C12.t3
+Aminoacyl-tRNA biosynthesis	F21A3.10
+Aminoacyl-tRNA biosynthesis	F59C12.t1
+Aminoacyl-tRNA biosynthesis	F59C12.t2
+Aminoacyl-tRNA biosynthesis	F08F1.14
+Aminoacyl-tRNA biosynthesis	Y4C6B.t2
+Aminoacyl-tRNA biosynthesis	Y4C6B.t1
+Aminoacyl-tRNA biosynthesis	C48C5.7
+Aminoacyl-tRNA biosynthesis	C48C5.6
+Aminoacyl-tRNA biosynthesis	F22G12.t1
+Aminoacyl-tRNA biosynthesis	F22G12.t2
+Aminoacyl-tRNA biosynthesis	C06G4.t1
+Aminoacyl-tRNA biosynthesis	F42H10.10
+Aminoacyl-tRNA biosynthesis	Y4C6B.98
+Aminoacyl-tRNA biosynthesis	ZK617.10
+Aminoacyl-tRNA biosynthesis	ZK617.t1
+Aminoacyl-tRNA biosynthesis	H35N09.3
+Aminoacyl-tRNA biosynthesis	F42H10.t1
+Aminoacyl-tRNA biosynthesis	H35N09.4
+Aminoacyl-tRNA biosynthesis	fars-2
+Aminoacyl-tRNA biosynthesis	fars-3
+Aminoacyl-tRNA biosynthesis	R04F11.t1
+Aminoacyl-tRNA biosynthesis	K03B8.t1
+Aminoacyl-tRNA biosynthesis	sup-24
+Aminoacyl-tRNA biosynthesis	F14H8.t1
+Aminoacyl-tRNA biosynthesis	sup-29
+Aminoacyl-tRNA biosynthesis	sup-28
+Aminoacyl-tRNA biosynthesis	F56C11.t1
+Aminoacyl-tRNA biosynthesis	Y57G11C.t1
+Aminoacyl-tRNA biosynthesis	Y77E11A.t3
+Aminoacyl-tRNA biosynthesis	K09C8.t1
+Aminoacyl-tRNA biosynthesis	F57F5.7
+Aminoacyl-tRNA biosynthesis	F46G11.t2
+Aminoacyl-tRNA biosynthesis	F39B1.5
+Aminoacyl-tRNA biosynthesis	F39B1.4
+Aminoacyl-tRNA biosynthesis	F46G11.t1
+Aminoacyl-tRNA biosynthesis	F22B7.16
+Aminoacyl-tRNA biosynthesis	F22B7.15
+Aminoacyl-tRNA biosynthesis	F14H8.10
+Aminoacyl-tRNA biosynthesis	F46G11.14
+Aminoacyl-tRNA biosynthesis	F54D12.t1
+Aminoacyl-tRNA biosynthesis	Y75D11A.t2
+Aminoacyl-tRNA biosynthesis	tars-1
+Aminoacyl-tRNA biosynthesis	B0344.t1
+Aminoacyl-tRNA biosynthesis	B0344.t2
+Aminoacyl-tRNA biosynthesis	B0344.t3
+Aminoacyl-tRNA biosynthesis	mars-1
+Aminoacyl-tRNA biosynthesis	K03B8.18
+Aminoacyl-tRNA biosynthesis	C31E10.t1
+Aminoacyl-tRNA biosynthesis	F46G11.11
+Aminoacyl-tRNA biosynthesis	sup-21
+Aminoacyl-tRNA biosynthesis	K07C10.t1
+Aminoacyl-tRNA biosynthesis	F22B7.t5
+Aminoacyl-tRNA biosynthesis	Y59E1B.5
+Aminoacyl-tRNA biosynthesis	F22B7.t4
+Aminoacyl-tRNA biosynthesis	F22B7.t3
+Aminoacyl-tRNA biosynthesis	F22B7.t2
+Aminoacyl-tRNA biosynthesis	T14B4.t1
+Aminoacyl-tRNA biosynthesis	T21H8.t1
+Aminoacyl-tRNA biosynthesis	T03G6.t1
+Aminoacyl-tRNA biosynthesis	F22B7.t1
+Aminoacyl-tRNA biosynthesis	F46F2.t1
+Aminoacyl-tRNA biosynthesis	K11E4.7
+Aminoacyl-tRNA biosynthesis	Y54G2A.t5
+Aminoacyl-tRNA biosynthesis	Y37B11A.5
+Aminoacyl-tRNA biosynthesis	Y37B11A.4
+Aminoacyl-tRNA biosynthesis	ZK822.t1
+Aminoacyl-tRNA biosynthesis	K11E4.9
+Aminoacyl-tRNA biosynthesis	Y7A5A.t1
+Aminoacyl-tRNA biosynthesis	C14B9.13
+Aminoacyl-tRNA biosynthesis	C14B9.14
+Aminoacyl-tRNA biosynthesis	Y7A5A.t5
+Aminoacyl-tRNA biosynthesis	F57G8.12
+Aminoacyl-tRNA biosynthesis	Y7A5A.t4
+Aminoacyl-tRNA biosynthesis	Y7A5A.t3
+Aminoacyl-tRNA biosynthesis	ZC412.t2
+Aminoacyl-tRNA biosynthesis	ZC412.t1
+Aminoacyl-tRNA biosynthesis	F57G8.13
+Aminoacyl-tRNA biosynthesis	Y7A5A.t2
+Aminoacyl-tRNA biosynthesis	Y7A5A.16
+Aminoacyl-tRNA biosynthesis	Y7A5A.15
+Aminoacyl-tRNA biosynthesis	C25F6.23
+Aminoacyl-tRNA biosynthesis	Y7A5A.14
+Aminoacyl-tRNA biosynthesis	ZC412.12
+Aminoacyl-tRNA biosynthesis	rte-3
+Aminoacyl-tRNA biosynthesis	rte-4
+Aminoacyl-tRNA biosynthesis	Y7A5A.19
+Aminoacyl-tRNA biosynthesis	Y7A5A.18
+Aminoacyl-tRNA biosynthesis	F08G5.18
+Aminoacyl-tRNA biosynthesis	C03A3.8
+Aminoacyl-tRNA biosynthesis	rte-5
+Aminoacyl-tRNA biosynthesis	F12D9.18
+Aminoacyl-tRNA biosynthesis	F15B9.t1
+Aminoacyl-tRNA biosynthesis	F28H6.9
+Aminoacyl-tRNA biosynthesis	W03C9.t1
+Aminoacyl-tRNA biosynthesis	rte-1
+Aminoacyl-tRNA biosynthesis	rte-2
+Aminoacyl-tRNA biosynthesis	F08G5.15
+Aminoacyl-tRNA biosynthesis	Y54G2A.t4
+Aminoacyl-tRNA biosynthesis	C25F6.t3
+Aminoacyl-tRNA biosynthesis	Y54G2A.t3
+Aminoacyl-tRNA biosynthesis	F12D9.13
+Aminoacyl-tRNA biosynthesis	Y39G10AL.t1
+Aminoacyl-tRNA biosynthesis	C25F6.t4
+Aminoacyl-tRNA biosynthesis	C25F6.t1
+Aminoacyl-tRNA biosynthesis	Y54G2A.t2
+Aminoacyl-tRNA biosynthesis	C25F6.t2
+Aminoacyl-tRNA biosynthesis	Y54G2A.t1
+Aminoacyl-tRNA biosynthesis	F12D9.t1
+Aminoacyl-tRNA biosynthesis	F08G5.t1
+Aminoacyl-tRNA biosynthesis	F08G5.t2
+Aminoacyl-tRNA biosynthesis	F12D9.t2
+Aminoacyl-tRNA biosynthesis	F56F4.10
+Aminoacyl-tRNA biosynthesis	T23F1.8
+Aminoacyl-tRNA biosynthesis	C04E7.7
+Aminoacyl-tRNA biosynthesis	T23F1.9
+Aminoacyl-tRNA biosynthesis	F02D10.t2
+Aminoacyl-tRNA biosynthesis	F57G8.t1
+Aminoacyl-tRNA biosynthesis	F02D10.t3
+Aminoacyl-tRNA biosynthesis	F57G8.t3
+Aminoacyl-tRNA biosynthesis	F57G8.t2
+Aminoacyl-tRNA biosynthesis	F56F4.11
+Aminoacyl-tRNA biosynthesis	F57G8.t4
+Aminoacyl-tRNA biosynthesis	F11A1.t1
+Aminoacyl-tRNA biosynthesis	F11A1.t2
+Aminoacyl-tRNA biosynthesis	F21C3.t1
+Aminoacyl-tRNA biosynthesis	F12D9.t5
+Aminoacyl-tRNA biosynthesis	F12D9.t6
+Aminoacyl-tRNA biosynthesis	F08G5.t3
+Aminoacyl-tRNA biosynthesis	F12D9.t3
+Aminoacyl-tRNA biosynthesis	F08G5.21
+Aminoacyl-tRNA biosynthesis	F12D9.t4
+Aminoacyl-tRNA biosynthesis	W10G11.t1
+Aminoacyl-tRNA biosynthesis	W10G11.t2
+Aminoacyl-tRNA biosynthesis	ZK994.9
+Aminoacyl-tRNA biosynthesis	C15C6.5
+Aminoacyl-tRNA biosynthesis	K02B12.11
+Aminoacyl-tRNA biosynthesis	W03G11.t1
+Aminoacyl-tRNA biosynthesis	W02G9.7
+Aminoacyl-tRNA biosynthesis	F11A1.11
+Aminoacyl-tRNA biosynthesis	W02G9.9
+Aminoacyl-tRNA biosynthesis	Y57A10B.t1
+Aminoacyl-tRNA biosynthesis	fars-1
+Aminoacyl-tRNA biosynthesis	T25D1.t1
+Aminoacyl-tRNA biosynthesis	T25D1.t2
+Aminoacyl-tRNA biosynthesis	F47G6.6
+Aminoacyl-tRNA biosynthesis	R11.t3
+Aminoacyl-tRNA biosynthesis	R11.t4
+Aminoacyl-tRNA biosynthesis	Y60C6A.t1
+Aminoacyl-tRNA biosynthesis	R11.t1
+Aminoacyl-tRNA biosynthesis	R11.t2
+Aminoacyl-tRNA biosynthesis	F57G12.t2
+Aminoacyl-tRNA biosynthesis	F57G12.t1
+Aminoacyl-tRNA biosynthesis	F15B9.14
+Aminoacyl-tRNA biosynthesis	F18G5.t2
+Aminoacyl-tRNA biosynthesis	T06H11.18
+Aminoacyl-tRNA biosynthesis	ZK39.t1
+Aminoacyl-tRNA biosynthesis	T06H11.17
+Aminoacyl-tRNA biosynthesis	ZK1067.t1
+Aminoacyl-tRNA biosynthesis	K02A4.t2
+Aminoacyl-tRNA biosynthesis	K02A4.t1
+Aminoacyl-tRNA biosynthesis	Y51B9A.t1
+Aminoacyl-tRNA biosynthesis	K10C8.t1
+Aminoacyl-tRNA biosynthesis	F54F7.t1
+Aminoacyl-tRNA biosynthesis	F54F7.t2
+Aminoacyl-tRNA biosynthesis	F18G5.t1
+Aminoacyl-tRNA biosynthesis	F45G2.12
+Aminoacyl-tRNA biosynthesis	T06H11.t3
+Aminoacyl-tRNA biosynthesis	Y54G2A.65
+Aminoacyl-tRNA biosynthesis	T06H11.t2
+Aminoacyl-tRNA biosynthesis	T06H11.t1
+Aminoacyl-tRNA biosynthesis	C16H3.t1
+Aminoacyl-tRNA biosynthesis	C02B4.8
+Aminoacyl-tRNA biosynthesis	C16H3.t2
+Aminoacyl-tRNA biosynthesis	C52G5.t1
+Aminoacyl-tRNA biosynthesis	F09B9.7
+Aminoacyl-tRNA biosynthesis	F23A7.t1
+Aminoacyl-tRNA biosynthesis	Y37F4.t2
+Aminoacyl-tRNA biosynthesis	F54F7.12
+Aminoacyl-tRNA biosynthesis	F54F7.13
+Aminoacyl-tRNA biosynthesis	T28D6.t2
+Aminoacyl-tRNA biosynthesis	F45G2.t1
+Aminoacyl-tRNA biosynthesis	T28D6.t1
+Aminoacyl-tRNA biosynthesis	F56F4.t1
+Aminoacyl-tRNA biosynthesis	C05E7.t1
+Aminoacyl-tRNA biosynthesis	C05E7.t2
+Aminoacyl-tRNA biosynthesis	B0491.t1
+Aminoacyl-tRNA biosynthesis	C05E7.t3
+Aminoacyl-tRNA biosynthesis	B0491.t2
+Aminoacyl-tRNA biosynthesis	F56F4.t2
+Aminoacyl-tRNA biosynthesis	F55F3.6
+Aminoacyl-tRNA biosynthesis	F02D10.11
+Aminoacyl-tRNA biosynthesis	Y37F4.t1
+Aminoacyl-tRNA biosynthesis	F55F3.8
+Aminoacyl-tRNA biosynthesis	F02D10.14
+Aminoacyl-tRNA biosynthesis	F34H10.t1
+Aminoacyl-tRNA biosynthesis	T21B4.t1
+Aminoacyl-tRNA biosynthesis	C10G8.t1
+Aminoacyl-tRNA biosynthesis	T21B4.19
+Aminoacyl-tRNA biosynthesis	F23G4.t1
+Aminoacyl-tRNA biosynthesis	W09G10.t3
+Aminoacyl-tRNA biosynthesis	W09G10.t1
+Aminoacyl-tRNA biosynthesis	W09G10.t2
+Aminoacyl-tRNA biosynthesis	F40H6.7
+Aminoacyl-tRNA biosynthesis	F32B4.t1
+Aminoacyl-tRNA biosynthesis	F42G10.4
+Aminoacyl-tRNA biosynthesis	dars-1
+Aminoacyl-tRNA biosynthesis	dars-2
+Aminoacyl-tRNA biosynthesis	K09C6.t1
+Aminoacyl-tRNA biosynthesis	Y105C5B.t1
+Aminoacyl-tRNA biosynthesis	C14B9.t1
+Aminoacyl-tRNA biosynthesis	C14B9.t2
+Aminoacyl-tRNA biosynthesis	Y105C5B.t4
+Aminoacyl-tRNA biosynthesis	F28H6.t2
+Aminoacyl-tRNA biosynthesis	F28H6.t1
+Aminoacyl-tRNA biosynthesis	Y105C5B.t2
+Aminoacyl-tRNA biosynthesis	F28H6.t4
+Aminoacyl-tRNA biosynthesis	Y105C5B.t3
+Aminoacyl-tRNA biosynthesis	Y54G2A.70
+Aminoacyl-tRNA biosynthesis	F28H6.t3
+Aminoacyl-tRNA biosynthesis	F28H6.t6
+Aminoacyl-tRNA biosynthesis	F28H6.t5
+Aminoacyl-tRNA biosynthesis	W03C9.11
+Aminoacyl-tRNA biosynthesis	F28H6.t7
+Aminoacyl-tRNA biosynthesis	ZK380.t1
+Aminoacyl-tRNA biosynthesis	Y66D12A.29
+Aminoacyl-tRNA biosynthesis	Y39B6A.t9
+Aminoacyl-tRNA biosynthesis	W02G9.t2
+Aminoacyl-tRNA biosynthesis	vars-1
+Aminoacyl-tRNA biosynthesis	C28A5.10
+Aminoacyl-tRNA biosynthesis	Y66D12A.t1
+Aminoacyl-tRNA biosynthesis	C28A5.11
+Aminoacyl-tRNA biosynthesis	C28A5.12
+Aminoacyl-tRNA biosynthesis	Y37E11B.t2
+Aminoacyl-tRNA biosynthesis	Y37E11B.t1
+Aminoacyl-tRNA biosynthesis	K01A12.5
+Aminoacyl-tRNA biosynthesis	K12H4.t1
+Aminoacyl-tRNA biosynthesis	C56G3.3
+Aminoacyl-tRNA biosynthesis	sup-7
+Aminoacyl-tRNA biosynthesis	F25F6.t2
+Aminoacyl-tRNA biosynthesis	sup-5
+Aminoacyl-tRNA biosynthesis	C27A2.10
+Aminoacyl-tRNA biosynthesis	F25F6.t1
+Aminoacyl-tRNA biosynthesis	K11C4.t1
+Aminoacyl-tRNA biosynthesis	H06A10.3
+Aminoacyl-tRNA biosynthesis	Y39A1A.29
+Aminoacyl-tRNA biosynthesis	Y55F3BR.16
+Aminoacyl-tRNA biosynthesis	C16D9.t4
+Aminoacyl-tRNA biosynthesis	F23D12.t1
+Aminoacyl-tRNA biosynthesis	F23D12.t2
+Aminoacyl-tRNA biosynthesis	C16D9.t2
+Aminoacyl-tRNA biosynthesis	C16D9.t3
+Aminoacyl-tRNA biosynthesis	T22F3.t4
+Aminoacyl-tRNA biosynthesis	T22F3.t2
+Aminoacyl-tRNA biosynthesis	T22F3.t3
+Aminoacyl-tRNA biosynthesis	T22F3.t1
+Aminoacyl-tRNA biosynthesis	kars-1
+Aminoacyl-tRNA biosynthesis	K12H4.10
+Aminoacyl-tRNA biosynthesis	C03A3.t1
+Aminoacyl-tRNA biosynthesis	F27E11.t1
+Aminoacyl-tRNA biosynthesis	Y73B6BL.283
+Aminoacyl-tRNA biosynthesis	Y55F3BR.t1
+Aminoacyl-tRNA biosynthesis	ZK783.8
+Aminoacyl-tRNA biosynthesis	F14B4.t2
+Aminoacyl-tRNA biosynthesis	C16D9.13
+Aminoacyl-tRNA biosynthesis	C16D9.14
+Aminoacyl-tRNA biosynthesis	C16D9.12
+Aminoacyl-tRNA biosynthesis	C35E7.t1
+Aminoacyl-tRNA biosynthesis	F14B4.t1
+Aminoacyl-tRNA biosynthesis	C18D4.t1
+Aminoacyl-tRNA biosynthesis	Y53C12A.12
+Aminoacyl-tRNA biosynthesis	Y105C5A.t1
+Aminoacyl-tRNA biosynthesis	Y105C5A.t2
+Aminoacyl-tRNA biosynthesis	C27A12.12
+Aminoacyl-tRNA biosynthesis	K11C4.11
+Aminoacyl-tRNA biosynthesis	rars-2
+Aminoacyl-tRNA biosynthesis	R11B5.8
+Aminoacyl-tRNA biosynthesis	R11B5.3
+Aminoacyl-tRNA biosynthesis	rars-1
+Aminoacyl-tRNA biosynthesis	C33G3.t2
+Aminoacyl-tRNA biosynthesis	C33G3.t3
+Aminoacyl-tRNA biosynthesis	C28A5.t2
+Aminoacyl-tRNA biosynthesis	C28A5.t3
+Aminoacyl-tRNA biosynthesis	C28A5.t1
+Aminoacyl-tRNA biosynthesis	C33G3.t1
+Aminoacyl-tRNA biosynthesis	C13B4.5
+Aminoacyl-tRNA biosynthesis	Y53C12A.t1
+Aminoacyl-tRNA biosynthesis	R03E1.t1
+Aminoacyl-tRNA biosynthesis	C27A12.t1
+Aminoacyl-tRNA biosynthesis	R03E1.t2
+Aminoacyl-tRNA biosynthesis	C30E1.t1
+Aminoacyl-tRNA biosynthesis	F22H10.t1
+Aminoacyl-tRNA biosynthesis	Y32B12B.t2
+Aminoacyl-tRNA biosynthesis	F33D11.t2
+Aminoacyl-tRNA biosynthesis	Y32B12B.t1
+Aminoacyl-tRNA biosynthesis	F33D11.t1
+Aminoacyl-tRNA biosynthesis	M57.t1
+Aminoacyl-tRNA biosynthesis	F22G12.9
+Aminoacyl-tRNA biosynthesis	C26G2.7
+Aminoacyl-tRNA biosynthesis	F57F5.t1
+Aminoacyl-tRNA biosynthesis	F49D11.12
+Aminoacyl-tRNA biosynthesis	F49D11.13
+Aminoacyl-tRNA biosynthesis	F22H10.9
+Aminoacyl-tRNA biosynthesis	F52H2.10
+Aminoacyl-tRNA biosynthesis	B0395.t1
+Aminoacyl-tRNA biosynthesis	F49D11.t1
+Aminoacyl-tRNA biosynthesis	F49D11.t2
+Aminoacyl-tRNA biosynthesis	F52H2.t1
+Aminoacyl-tRNA biosynthesis	T25D1.4
+Aminoacyl-tRNA biosynthesis	F52H2.t2
+Aminoacyl-tRNA biosynthesis	M02F4.t2
+Aminoacyl-tRNA biosynthesis	M02F4.t1
+Aminoacyl-tRNA biosynthesis	yars-1
+Aminoacyl-tRNA biosynthesis	yars-2
+Aminoacyl-tRNA biosynthesis	ZK994.10
+Aminoacyl-tRNA biosynthesis	ZK994.11
+Aminoacyl-tRNA biosynthesis	Y47C4A.t1
+Aminoacyl-tRNA biosynthesis	Y116F11A.t1
+Aminoacyl-tRNA biosynthesis	Y47C4A.t2
+Aminoacyl-tRNA biosynthesis	sars-2
+Aminoacyl-tRNA biosynthesis	M01E10.5
+Aminoacyl-tRNA biosynthesis	sars-1
+Aminoacyl-tRNA biosynthesis	Y39A1A.t1
+Aminoacyl-tRNA biosynthesis	C05G6.t1
+Aminoacyl-tRNA biosynthesis	Y51H7BR.t1
+Aminoacyl-tRNA biosynthesis	K01A12.9
+Aminoacyl-tRNA biosynthesis	K03F8.3
+Aminoacyl-tRNA biosynthesis	R09E10.t1
+Aminoacyl-tRNA biosynthesis	F33D11.15
+Aminoacyl-tRNA biosynthesis	F22F1.5
+Aminoacyl-tRNA biosynthesis	F33D11.14
+Aminoacyl-tRNA biosynthesis	ZK994.t2
+Aminoacyl-tRNA biosynthesis	ZK994.t3
+Aminoacyl-tRNA biosynthesis	Y110A2AL.t1
+Aminoacyl-tRNA biosynthesis	Y110A2AL.t2
+Aminoacyl-tRNA biosynthesis	M02F4.12
+Aminoacyl-tRNA biosynthesis	T09F5.t1
+Aminoacyl-tRNA biosynthesis	ZK994.t1
+Aminoacyl-tRNA biosynthesis	F22F1.9
+Aminoacyl-tRNA biosynthesis	C27A2.t1
+Aminoacyl-tRNA biosynthesis	F22F1.8
+Aminoacyl-tRNA biosynthesis	F22F1.7
+Aminoacyl-tRNA biosynthesis	F22F1.6
+Aminoacyl-tRNA biosynthesis	K07A1.t1
+Aminoacyl-tRNA biosynthesis	Y53C10A.t1
+Aminoacyl-tRNA biosynthesis	R09E10.15
+Aminoacyl-tRNA biosynthesis	Y53C10A.t3
+Aminoacyl-tRNA biosynthesis	F52C9.10
+Aminoacyl-tRNA biosynthesis	R148.t1
+Aminoacyl-tRNA biosynthesis	F14B6.t2
+Aminoacyl-tRNA biosynthesis	F41A4.t1
+Aminoacyl-tRNA biosynthesis	C56G7.4
+Aminoacyl-tRNA biosynthesis	F14B6.t1
+Aminoacyl-tRNA biosynthesis	T04F8.15
+Aminoacyl-tRNA biosynthesis	Y46G5A.t1
+Aminoacyl-tRNA biosynthesis	Y92H12A.8
+Aminoacyl-tRNA biosynthesis	Y41D4A.6
+Aminoacyl-tRNA biosynthesis	C47E8.t1
+Aminoacyl-tRNA biosynthesis	T25E4.3
+Aminoacyl-tRNA biosynthesis	F52C9.t1
+Aminoacyl-tRNA biosynthesis	Y116F11A.9
+Aminoacyl-tRNA biosynthesis	Y53C10A.16
+Aminoacyl-tRNA biosynthesis	F47E1.12
+Aminoacyl-tRNA biosynthesis	Y53C10A.17
+Aminoacyl-tRNA biosynthesis	Y53C10A.18
+Aminoacyl-tRNA biosynthesis	C29F7.t2
+Aminoacyl-tRNA biosynthesis	F47E1.13
+Aminoacyl-tRNA biosynthesis	T22C8.9
+Aminoacyl-tRNA biosynthesis	C29F7.t3
+Aminoacyl-tRNA biosynthesis	ZK622.6
+Aminoacyl-tRNA biosynthesis	T14G8.t1
+Aminoacyl-tRNA biosynthesis	C29F7.t1
+Aminoacyl-tRNA biosynthesis	ZK622.8
+Aminoacyl-tRNA biosynthesis	ZK507.t1
+Aminoacyl-tRNA biosynthesis	C05C9.t2
+Aminoacyl-tRNA biosynthesis	hars-1
+Aminoacyl-tRNA biosynthesis	C05C9.t1
+Aminoacyl-tRNA biosynthesis	K07A1.19
+Aminoacyl-tRNA biosynthesis	C52E12.t3
+Aminoacyl-tRNA biosynthesis	F47E1.t1
+Aminoacyl-tRNA biosynthesis	F47E1.t2
+Aminoacyl-tRNA biosynthesis	C52E12.t1
+Aminoacyl-tRNA biosynthesis	C03B1.16
+Aminoacyl-tRNA biosynthesis	F27B10.3
+Aminoacyl-tRNA biosynthesis	W06D4.9
+Aminoacyl-tRNA biosynthesis	F38G1.t2
+Aminoacyl-tRNA biosynthesis	F38G1.t1
+Aminoacyl-tRNA biosynthesis	C18A11.13
+Aminoacyl-tRNA biosynthesis	F10C1.16
+Aminoacyl-tRNA biosynthesis	Y34B4A.t1
+Aminoacyl-tRNA biosynthesis	C56G7.t1
+Aminoacyl-tRNA biosynthesis	F52E10.t3
+Aminoacyl-tRNA biosynthesis	F52E10.t2
+Aminoacyl-tRNA biosynthesis	M03A1.12
+Aminoacyl-tRNA biosynthesis	F52E10.t1
+Aminoacyl-tRNA biosynthesis	R02E12.t1
+Aminoacyl-tRNA biosynthesis	F52E10.t5
+Aminoacyl-tRNA biosynthesis	F52E10.t4
+Aminoacyl-tRNA biosynthesis	T22A3.11
+Aminoacyl-tRNA biosynthesis	C18A11.t2
+Aminoacyl-tRNA biosynthesis	Y97E10C.t1
+Aminoacyl-tRNA biosynthesis	F28F8.11
+Aminoacyl-tRNA biosynthesis	F10C1.t1
+Aminoacyl-tRNA biosynthesis	C18A11.t1
+Aminoacyl-tRNA biosynthesis	T05H4.t1
+Aminoacyl-tRNA biosynthesis	T05H4.t2
+Aminoacyl-tRNA biosynthesis	F10C1.t2
+Aminoacyl-tRNA biosynthesis	lars-2
+Aminoacyl-tRNA biosynthesis	ZK783.t1
+Aminoacyl-tRNA biosynthesis	lars-1
+Aminoacyl-tRNA biosynthesis	T27B1.3
+Aminoacyl-tRNA biosynthesis	C36F7.t2
+Aminoacyl-tRNA biosynthesis	F10C1.18
+Aminoacyl-tRNA biosynthesis	C36F7.t3
+Aminoacyl-tRNA biosynthesis	M01E5.8
+Aminoacyl-tRNA biosynthesis	T22A3.t1
+Aminoacyl-tRNA biosynthesis	C53C7.6
+Aminoacyl-tRNA biosynthesis	T22A3.t2
+Aminoacyl-tRNA biosynthesis	F28F8.12
+Aminoacyl-tRNA biosynthesis	M03A1.t1
+Aminoacyl-tRNA biosynthesis	T22A3.t3
+Aminoacyl-tRNA biosynthesis	T04F8.t1
+Aminoacyl-tRNA biosynthesis	T22A3.t4
+Aminoacyl-tRNA biosynthesis	F28F8.t2
+Aminoacyl-tRNA biosynthesis	F28F8.t1
+Aminoacyl-tRNA biosynthesis	F28F8.t4
+Aminoacyl-tRNA biosynthesis	F28F8.t3
+Aminoacyl-tRNA biosynthesis	ears-2
+Aminoacyl-tRNA biosynthesis	ears-1
+Aminoacyl-tRNA biosynthesis	T22F7.t1
+Aminoacyl-tRNA biosynthesis	F02H6.t1
+Aminoacyl-tRNA biosynthesis	F49E2.t1
+Aminoacyl-tRNA biosynthesis	F14B4.4
+Aminoacyl-tRNA biosynthesis	ZK970.t4
+Aminoacyl-tRNA biosynthesis	C04A2.11
+Aminoacyl-tRNA biosynthesis	ZK970.t2
+Aminoacyl-tRNA biosynthesis	ZK970.t3
+Aminoacyl-tRNA biosynthesis	ZK970.t1
+Aminoacyl-tRNA biosynthesis	Y39B6A.70
+Aminoacyl-tRNA biosynthesis	K11H3.9
+Aminoacyl-tRNA biosynthesis	ZK970.11
+Aminoacyl-tRNA biosynthesis	C04A2.t1
+Aminoacyl-tRNA biosynthesis	F42G10.t1
+Aminoacyl-tRNA biosynthesis	ZK970.10
+Aminoacyl-tRNA biosynthesis	T08A9.15
+Aminoacyl-tRNA biosynthesis	F15G9.8
+Aminoacyl-tRNA biosynthesis	Y106G6D.t1
+Aminoacyl-tRNA biosynthesis	F52E10.10
+Aminoacyl-tRNA biosynthesis	F09B9.t1
+Aminoacyl-tRNA biosynthesis	F15G9.9
+Aminoacyl-tRNA biosynthesis	F09B9.t2
+Aminoacyl-tRNA biosynthesis	R11.7
+Aminoacyl-tRNA biosynthesis	K11H3.t2
+Aminoacyl-tRNA biosynthesis	K11H3.t1
+Aminoacyl-tRNA biosynthesis	M163.t2
+Aminoacyl-tRNA biosynthesis	M163.20
+Aminoacyl-tRNA biosynthesis	VW02B12L.t2
+Aminoacyl-tRNA biosynthesis	VW02B12L.t1
+Aminoacyl-tRNA biosynthesis	F14B8.t1
+Aminoacyl-tRNA biosynthesis	ZK154.t3
+Aminoacyl-tRNA biosynthesis	H08J11.t5
+Aminoacyl-tRNA biosynthesis	ZK154.t2
+Aminoacyl-tRNA biosynthesis	ZK154.t5
+Aminoacyl-tRNA biosynthesis	ZK154.t4
+Aminoacyl-tRNA biosynthesis	H08J11.t1
+Aminoacyl-tRNA biosynthesis	H08J11.t2
+Aminoacyl-tRNA biosynthesis	ZK154.t1
+Aminoacyl-tRNA biosynthesis	H08J11.t3
+Aminoacyl-tRNA biosynthesis	H08J11.t4
+Aminoacyl-tRNA biosynthesis	Y40H7A.t1
+Aminoacyl-tRNA biosynthesis	T23F1.t1
+Aminoacyl-tRNA biosynthesis	T23F1.t2
+Aminoacyl-tRNA biosynthesis	F19H6.t1
+Aminoacyl-tRNA biosynthesis	C11E4.t1
+Aminoacyl-tRNA biosynthesis	Y40H7A.t2
+Aminoacyl-tRNA biosynthesis	T28F2.t1
+Aminoacyl-tRNA biosynthesis	Y46G5A.45
+Aminoacyl-tRNA biosynthesis	K11H3.11
+Aminoacyl-tRNA biosynthesis	Y51H7BR.9
+Aminoacyl-tRNA biosynthesis	K08B5.5
+Aminoacyl-tRNA biosynthesis	K08B5.4
+Aminoacyl-tRNA biosynthesis	K04A8.t2
+Aminoacyl-tRNA biosynthesis	K04A8.t3
+Aminoacyl-tRNA biosynthesis	H08J11.13
+Aminoacyl-tRNA biosynthesis	H08J11.11
+Aminoacyl-tRNA biosynthesis	Y39B6A.81
+Apoptosis	jnk-1
+Apoptosis	ced-3
+Apoptosis	ubc-17
+Apoptosis	ced-4
+Apoptosis	ced-9
+Apoptosis	egl-1
+Apoptosis	bec-1
+Apoptosis	bir-1
+Apoptosis	bir-2
+Apoptosis	kgb-1
+Apoptosis	kgb-2
+Apoptosis	cyc-2.2
+Apoptosis	cyc-2.1
+Arachidonic acid metabolism	C03H5.4
+Arachidonic acid metabolism	ipla-3
+Arachidonic acid metabolism	ipla-2
+Arachidonic acid metabolism	gst-11
+Arachidonic acid metabolism	daf-41
+Arachidonic acid metabolism	H14N18.4
+Arachidonic acid metabolism	gst-30
+Arachidonic acid metabolism	ltah-1.2
+Arachidonic acid metabolism	T03D8.6
+Arachidonic acid metabolism	pges-2
+Arachidonic acid metabolism	gpx-1
+Arachidonic acid metabolism	gst-9
+Arachidonic acid metabolism	C07E3.9
+Arachidonic acid metabolism	gpx-2
+Arachidonic acid metabolism	gpx-3
+Arachidonic acid metabolism	gpx-5
+Arachidonic acid metabolism	C53D5.5
+Arachidonic acid metabolism	gpx-7
+Arginine and proline metabolism	daao-1
+Arginine and proline metabolism	alh-11
+Arginine and proline metabolism	smd-1
+Arginine and proline metabolism	ZC434.8
+Arginine and proline metabolism	got-2.1
+Arginine and proline metabolism	got-1.2
+Arginine and proline metabolism	F46H5.3
+Arginine and proline metabolism	alh-13
+Arginine and proline metabolism	alh-12
+Arginine and proline metabolism	got-2.2
+Arginine and proline metabolism	prdh-1
+Arginine and proline metabolism	phy-2
+Arginine and proline metabolism	dpy-18
+Arginine and proline metabolism	alh-9
+Arginine and proline metabolism	oatr-1
+Arginine and proline metabolism	argk-1
+Arginine and proline metabolism	alh-2
+Arginine and proline metabolism	alh-1
+Arginine and proline metabolism	alh-4
+Arginine and proline metabolism	F55G1.9
+Arginine and proline metabolism	alh-6
+Arginine and proline metabolism	alh-5
+Arginine and proline metabolism	W10C8.5
+Arginine and proline metabolism	M153.1
+Arginine and proline metabolism	spds-1
+Arginine and proline metabolism	odc-1
+Arginine biosynthesis	C06A6.4
+Arginine biosynthesis	gln-5
+Arginine biosynthesis	gln-6
+Arginine biosynthesis	gln-3
+Arginine biosynthesis	got-2.1
+Arginine biosynthesis	got-1.2
+Arginine biosynthesis	gln-1
+Arginine biosynthesis	glna-1
+Arginine biosynthesis	gln-2
+Arginine biosynthesis	glna-2
+Arginine biosynthesis	gdh-1
+Arginine biosynthesis	glna-3
+Arginine biosynthesis	got-2.2
+Arginine biosynthesis	C10C5.5
+Arginine biosynthesis	C10C5.3
+Arginine biosynthesis	C10C5.4
+Arginine biosynthesis	C32F10.8
+Ascorbate and aldarate metabolism	alh-9
+Ascorbate and aldarate metabolism	ugt-62
+Ascorbate and aldarate metabolism	ugt-61
+Ascorbate and aldarate metabolism	ugt-50
+Ascorbate and aldarate metabolism	alh-2
+Ascorbate and aldarate metabolism	alh-11
+Ascorbate and aldarate metabolism	ugt-48
+Ascorbate and aldarate metabolism	ugt-15
+Ascorbate and aldarate metabolism	alh-1
+Ascorbate and aldarate metabolism	ugt-58
+Ascorbate and aldarate metabolism	alh-4
+Ascorbate and aldarate metabolism	ugt-6
+Ascorbate and aldarate metabolism	ugt-46
+Ascorbate and aldarate metabolism	ugt-23
+Ascorbate and aldarate metabolism	ugt-56
+Ascorbate and aldarate metabolism	alh-5
+Ascorbate and aldarate metabolism	ugt-55
+Ascorbate and aldarate metabolism	ugt-18
+Ascorbate and aldarate metabolism	sqv-4
+Ascorbate and aldarate metabolism	alh-12
+Ascorbate and aldarate metabolism	C54E4.5
+Autophagy	pek-1
+Autophagy	atg-13
+Autophagy	cpl-1
+Autophagy	age-1
+Autophagy	kin-1
+Autophagy	atg-18
+Autophagy	cpr-8
+Autophagy	cpr-6
+Autophagy	cpr-5
+Autophagy	cpr-4
+Autophagy	gcn-2
+Autophagy	cpr-3
+Autophagy	cpr-2
+Autophagy	cpr-1
+Autophagy	atg-10
+Autophagy	ras-1
+Autophagy	aap-1
+Autophagy	atg-16.2
+Autophagy	atg-16.1
+Autophagy	unc-51
+Autophagy	ras-2
+Autophagy	daf-18
+Autophagy	F35A5.8
+Autophagy	epg-3
+Autophagy	mlst-8
+Autophagy	pdk-1
+Autophagy	jnk-1
+Autophagy	epg-9
+Autophagy	epg-8
+Autophagy	mom-4
+Autophagy	Y34B4A.2
+Autophagy	epg-7
+Autophagy	rheb-1
+Autophagy	vps-15
+Autophagy	lgg-1
+Autophagy	daf-15
+Autophagy	ist-1
+Autophagy	atg-4.2
+Autophagy	atg-4.1
+Autophagy	vamp-7
+Autophagy	lgg-3
+Autophagy	F57F5.1
+Autophagy	lmp-1
+Autophagy	let-92
+Autophagy	syx-17
+Autophagy	vamp-8
+Autophagy	ragc-1
+Autophagy	raga-1
+Autophagy	akt-1
+Autophagy	akt-2
+Autophagy	asp-4
+Autophagy	aak-1
+Autophagy	aak-2
+Autophagy	dapk-1
+Autophagy	asp-3
+Autophagy	atg-7
+Autophagy	atg-9
+Autophagy	atg-3
+Autophagy	itr-1
+Autophagy	atg-2
+Autophagy	atg-5
+Autophagy	bec-1
+Autophagy	let-60
+Autophagy	kgb-1
+Autophagy	mtm-3
+Autophagy	kgb-2
+Autophagy	mpk-1
+Autophagy	Y105C5A.24
+Autophagy	eif-2alpha
+Autophagy	hif-1
+Autophagy	ire-1
+Autophagy	rsks-1
+Autophagy	snap-29
+Autophagy	rab-7
+Autophagy	F32H5.1
+Autophagy	ppfr-4
+Autophagy	let-363
+Autophagy	vps-34
+Autophagy	R04A9.7
+Autophagy	rab-33
+Autophagy	W07B8.4
+Autophagy	dct-1
+Autophagy	mek-2
+Autophagy	par-4
+Autophagy	tpa-1
+Basal transcription factors	gtf-2H1
+Basal transcription factors	fust-1
+Basal transcription factors	taf-10
+Basal transcription factors	taf-1
+Basal transcription factors	gtf-2H5
+Basal transcription factors	taf-13
+Basal transcription factors	taf-2
+Basal transcription factors	taf-3
+Basal transcription factors	gtf-2F1
+Basal transcription factors	gtf-2H3
+Basal transcription factors	taf-4
+Basal transcription factors	gtf-2F2
+Basal transcription factors	cdk-7
+Basal transcription factors	taf-11.1
+Basal transcription factors	taf-11.2
+Basal transcription factors	tbp-1
+Basal transcription factors	taf-11.3
+Basal transcription factors	cyh-1
+Basal transcription factors	xpd-1
+Basal transcription factors	B0336.13
+Basal transcription factors	xpb-1
+Basal transcription factors	tlf-1
+Basal transcription factors	gtf-2A2
+Basal transcription factors	mnat-1
+Basal transcription factors	gtf-2E2
+Basal transcription factors	taf-7.2
+Basal transcription factors	taf-7.1
+Basal transcription factors	taf-6.1
+Basal transcription factors	gtf-2E1
+Basal transcription factors	taf-5
+Basal transcription factors	pqn-51
+Basal transcription factors	taf-8
+Basal transcription factors	taf-9
+Basal transcription factors	gtf-2H2C
+Basal transcription factors	Y73F8A.24
+Basal transcription factors	ttb-1
+Base excision repair	T26A5.8
+Base excision repair	nth-1
+Base excision repair	pcn-1
+Base excision repair	exo-3
+Base excision repair	apn-1
+Base excision repair	crn-1
+Base excision repair	F10C2.4
+Base excision repair	R04F11.3
+Base excision repair	F12F6.7
+Base excision repair	lig-1
+Base excision repair	pole-2
+Base excision repair	pole-4
+Base excision repair	ung-1
+Base excision repair	pole-1
+Base excision repair	parp-2
+Base excision repair	parp-1
+Biosynthesis of unsaturated fatty acids	maoc-1
+Biosynthesis of unsaturated fatty acids	acox-1.5
+Biosynthesis of unsaturated fatty acids	acox-1.4
+Biosynthesis of unsaturated fatty acids	acox-1.6
+Biosynthesis of unsaturated fatty acids	acox-1.1
+Biosynthesis of unsaturated fatty acids	stdh-3
+Biosynthesis of unsaturated fatty acids	stdh-4
+Biosynthesis of unsaturated fatty acids	acox-1.3
+Biosynthesis of unsaturated fatty acids	stdh-1
+Biosynthesis of unsaturated fatty acids	acox-1.2
+Biosynthesis of unsaturated fatty acids	stdh-2
+Biosynthesis of unsaturated fatty acids	daf-22
+Biosynthesis of unsaturated fatty acids	fat-7
+Biosynthesis of unsaturated fatty acids	fat-6
+Biosynthesis of unsaturated fatty acids	art-1
+Biosynthesis of unsaturated fatty acids	fat-5
+Biosynthesis of unsaturated fatty acids	elo-5
+Biosynthesis of unsaturated fatty acids	dhs-28
+Biosynthesis of unsaturated fatty acids	elo-6
+Biosynthesis of unsaturated fatty acids	let-767
+Biosynthesis of unsaturated fatty acids	acox-3
+Biosynthesis of unsaturated fatty acids	hpo-8
+Butanoate metabolism	hacd-1
+Butanoate metabolism	ech-1.2
+Butanoate metabolism	ech-1.1
+Butanoate metabolism	unc-25
+Butanoate metabolism	ech-9
+Butanoate metabolism	ech-8
+Butanoate metabolism	ech-7
+Butanoate metabolism	ech-6
+Butanoate metabolism	alh-7
+Butanoate metabolism	C05C10.3
+Butanoate metabolism	kat-1
+Butanoate metabolism	Y71G12B.10
+Butanoate metabolism	gta-1
+Butanoate metabolism	T02G5.7
+Butanoate metabolism	hmgs-1
+Butanoate metabolism	Y45G12B.3
+Butanoate metabolism	sur-5
+Butanoate metabolism	F54C8.1
+Calcium signaling pathway	unc-43
+Calcium signaling pathway	ant-1.1
+Calcium signaling pathway	kin-1
+Calcium signaling pathway	ant-1.3
+Calcium signaling pathway	ant-1.2
+Calcium signaling pathway	mcu-1
+Calcium signaling pathway	lfe-2
+Calcium signaling pathway	orai-1
+Calcium signaling pathway	T22F3.12
+Calcium signaling pathway	sca-1
+Calcium signaling pathway	stim-1
+Calcium signaling pathway	gsa-1
+Calcium signaling pathway	vdac-1
+Calcium signaling pathway	ant-1.4
+Calcium signaling pathway	acy-1
+Calcium signaling pathway	mca-1
+Calcium signaling pathway	mca-2
+Calcium signaling pathway	trhr-1
+Calcium signaling pathway	tax-6
+Calcium signaling pathway	cca-1
+Calcium signaling pathway	ser-1
+Calcium signaling pathway	egl-30
+Calcium signaling pathway	ser-7
+Calcium signaling pathway	pde-1
+Calcium signaling pathway	plc-3
+Calcium signaling pathway	cal-1
+Calcium signaling pathway	plc-4
+Calcium signaling pathway	cal-2
+Calcium signaling pathway	cal-3
+Calcium signaling pathway	C47E12.2
+Calcium signaling pathway	cal-4
+Calcium signaling pathway	plc-1
+Calcium signaling pathway	mca-3
+Calcium signaling pathway	let-23
+Calcium signaling pathway	gar-1
+Calcium signaling pathway	gar-3
+Calcium signaling pathway	gar-2
+Calcium signaling pathway	unc-68
+Calcium signaling pathway	K03A1.4
+Calcium signaling pathway	tkr-2
+Calcium signaling pathway	pkc-2
+Calcium signaling pathway	itr-1
+Calcium signaling pathway	nmr-1
+Calcium signaling pathway	Y67D8A.2
+Calcium signaling pathway	ncx-1
+Calcium signaling pathway	cmd-1
+Calcium signaling pathway	ncx-2
+Calcium signaling pathway	egl-19
+Calcium signaling pathway	C14B9.8
+Calcium signaling pathway	cmk-1
+Calcium signaling pathway	mgl-2
+Calcium signaling pathway	ckr-1
+Calcium signaling pathway	mlck-1
+Calcium signaling pathway	ckr-2
+Calcium signaling pathway	egl-8
+Calcium signaling pathway	Y50D7A.3
+Calcium signaling pathway	F25B4.7
+Calcium signaling pathway	sphk-1
+Calcium signaling pathway	cnb-1
+Calcium signaling pathway	dop-1
+Citrate cycle (TCA cycle)	idhg-2
+Citrate cycle (TCA cycle)	pck-1
+Citrate cycle (TCA cycle)	idhg-1
+Citrate cycle (TCA cycle)	pck-2
+Citrate cycle (TCA cycle)	idh-1
+Citrate cycle (TCA cycle)	idhb-1
+Citrate cycle (TCA cycle)	idh-2
+Citrate cycle (TCA cycle)	idha-1
+Citrate cycle (TCA cycle)	cts-1
+Citrate cycle (TCA cycle)	mev-1
+Citrate cycle (TCA cycle)	sucl-1
+Citrate cycle (TCA cycle)	sucl-2
+Citrate cycle (TCA cycle)	aco-2
+Citrate cycle (TCA cycle)	fum-1
+Citrate cycle (TCA cycle)	aco-1
+Citrate cycle (TCA cycle)	sucg-1
+Citrate cycle (TCA cycle)	mdh-2
+Citrate cycle (TCA cycle)	ogdh-1
+Citrate cycle (TCA cycle)	mdh-1
+Citrate cycle (TCA cycle)	acly-1
+Citrate cycle (TCA cycle)	suca-1
+Citrate cycle (TCA cycle)	acly-2
+Citrate cycle (TCA cycle)	pyc-1
+Citrate cycle (TCA cycle)	pdha-1
+Citrate cycle (TCA cycle)	dlst-1
+Citrate cycle (TCA cycle)	pdhb-1
+Citrate cycle (TCA cycle)	sdhb-1
+Citrate cycle (TCA cycle)	sdha-2
+Citrate cycle (TCA cycle)	sdha-1
+Citrate cycle (TCA cycle)	dld-1
+Citrate cycle (TCA cycle)	dlat-1
+Citrate cycle (TCA cycle)	dlat-2
+Citrate cycle (TCA cycle)	sdhd-1
+Cysteine and methionine metabolism	gcs-1
+Cysteine and methionine metabolism	ZC373.5
+Cysteine and methionine metabolism	smd-1
+Cysteine and methionine metabolism	Y44A6D.5
+Cysteine and methionine metabolism	T09B4.8
+Cysteine and methionine metabolism	ahcy-1
+Cysteine and methionine metabolism	got-2.1
+Cysteine and methionine metabolism	got-1.2
+Cysteine and methionine metabolism	F42F12.4
+Cysteine and methionine metabolism	cdo-1
+Cysteine and methionine metabolism	ldh-1
+Cysteine and methionine metabolism	tatn-1
+Cysteine and methionine metabolism	cbs-1
+Cysteine and methionine metabolism	got-2.2
+Cysteine and methionine metabolism	cbs-2
+Cysteine and methionine metabolism	mdh-2
+Cysteine and methionine metabolism	cysl-3
+Cysteine and methionine metabolism	mdh-1
+Cysteine and methionine metabolism	cysl-4
+Cysteine and methionine metabolism	metr-1
+Cysteine and methionine metabolism	cysl-1
+Cysteine and methionine metabolism	cysl-2
+Cysteine and methionine metabolism	mpst-1
+Cysteine and methionine metabolism	mpst-2
+Cysteine and methionine metabolism	mpst-4
+Cysteine and methionine metabolism	gss-1
+Cysteine and methionine metabolism	bcat-1
+Cysteine and methionine metabolism	F58H1.3
+Cysteine and methionine metabolism	B0228.7
+Cysteine and methionine metabolism	sams-1
+Cysteine and methionine metabolism	T13G4.4
+Cysteine and methionine metabolism	cth-2
+Cysteine and methionine metabolism	cth-1
+Cysteine and methionine metabolism	nkat-3
+Cysteine and methionine metabolism	nkat-1
+Cysteine and methionine metabolism	spds-1
+Cysteine and methionine metabolism	C01G10.9
+Cysteine and methionine metabolism	sams-5
+Cysteine and methionine metabolism	sams-4
+Cysteine and methionine metabolism	E01A2.1
+Cysteine and methionine metabolism	sams-3
+DNA replication	rfc-3
+DNA replication	rfc-4
+DNA replication	rfc-1
+DNA replication	rfc-2
+DNA replication	F21D5.6
+DNA replication	pcn-1
+DNA replication	ZK1127.13
+DNA replication	crn-1
+DNA replication	rnh-2
+DNA replication	F10C2.4
+DNA replication	R04F11.3
+DNA replication	F44B9.8
+DNA replication	F12F6.7
+DNA replication	mcm-7
+DNA replication	pole-2
+DNA replication	rpa-4
+DNA replication	pole-4
+DNA replication	T24C4.5
+DNA replication	pole-1
+DNA replication	pola-1
+DNA replication	rpa-1
+DNA replication	rpa-2
+DNA replication	T26A5.8
+DNA replication	div-1
+DNA replication	lig-1
+DNA replication	dna-2
+DNA replication	mcm-5
+DNA replication	mcm-6
+DNA replication	mcm-3
+DNA replication	mcm-4
+DNA replication	pri-2
+DNA replication	pri-1
+DNA replication	mcm-2
+DNA replication	rnh-1.0
+DNA replication	rnh-1.3
+Drug metabolism	rnr-2
+Drug metabolism	dhp-2
+Drug metabolism	ges-1
+Drug metabolism	rnr-1
+Drug metabolism	cdd-1
+Drug metabolism	cdd-2
+Drug metabolism	gst-23
+Drug metabolism	gst-25
+Drug metabolism	upb-1
+Drug metabolism	C02D5.4
+Drug metabolism	B0001.4
+Drug metabolism	T22D1.3
+Drug metabolism	gmps-1
+Drug metabolism	fmo-1
+Drug metabolism	fmo-2
+Drug metabolism	dhp-1
+Drug metabolism	upp-1
+Drug metabolism	dpyd-1
+Drug metabolism	fmo-3
+Drug metabolism	fmo-4
+Drug metabolism	fmo-5
+Drug metabolism	F40F8.1
+Drug metabolism	gsto-1
+Drug metabolism	gst-38
+Drug metabolism	gsto-2
+Drug metabolism	gstk-1
+Drug metabolism	gstk-2
+Drug metabolism	ugt-48
+Drug metabolism	gst-36
+Drug metabolism	gst-1
+Drug metabolism	sodh-1
+Drug metabolism	ugt-46
+Drug metabolism	sodh-2
+Drug metabolism	gst-3
+Drug metabolism	gst-30
+Drug metabolism	gst-2
+Drug metabolism	gst-5
+Drug metabolism	gst-4
+Drug metabolism	gst-7
+Drug metabolism	gst-6
+Drug metabolism	gst-9
+Drug metabolism	gst-8
+Drug metabolism	Y105E8B.9
+Drug metabolism	F13H6.3
+Drug metabolism	dut-1
+Drug metabolism	ugt-50
+Drug metabolism	umps-1
+Drug metabolism	ndk-1
+Drug metabolism	C29F7.3
+Drug metabolism	ugt-15
+Drug metabolism	gst-44
+Drug metabolism	ugt-58
+Drug metabolism	ugt-6
+Drug metabolism	ugt-56
+Drug metabolism	gst-41
+Drug metabolism	ugt-55
+Drug metabolism	gad-3
+Drug metabolism	ugt-18
+Drug metabolism	D2063.1
+Drug metabolism	F19B6.1
+Drug metabolism	hprt-1
+Drug metabolism	ugt-62
+Drug metabolism	ugt-61
+Drug metabolism	H24K24.3
+Drug metabolism	thk-1
+Drug metabolism	gst-11
+Drug metabolism	ugt-23
+Drug metabolism	gst-10
+Drug metabolism	xdh-1
+Drug metabolism	C52A10.2
+Drug metabolism	hap-1
+Drug metabolism	R05G6.5
+ECM-receptor interaction	pat-3
+ECM-receptor interaction	epi-1
+ECM-receptor interaction	lam-3
+ECM-receptor interaction	lam-2
+ECM-receptor interaction	lam-1
+ECM-receptor interaction	agr-1
+ECM-receptor interaction	let-2
+ECM-receptor interaction	dgn-1
+Endocytosis	hsp-70
+Endocytosis	ddl-2
+Endocytosis	Y92H12A.2
+Endocytosis	vps-29
+Endocytosis	vps-28
+Endocytosis	vps-22
+Endocytosis	rfip-1
+Endocytosis	vps-20
+Endocytosis	rho-1
+Endocytosis	vps-26
+Endocytosis	vps-25
+Endocytosis	vps-24
+Endocytosis	bris-1
+Endocytosis	F44E5.5
+Endocytosis	wsp-1
+Endocytosis	F44E5.4
+Endocytosis	efa-6
+Endocytosis	mvb-12
+Endocytosis	Y53F4B.21
+Endocytosis	hgrs-1
+Endocytosis	stam-1
+Endocytosis	ddl-1
+Endocytosis	F35A5.8
+Endocytosis	agef-1
+Endocytosis	arf-1.2
+Endocytosis	ppk-3
+Endocytosis	src-1
+Endocytosis	W09D10.1
+Endocytosis	ppk-1
+Endocytosis	did-2
+Endocytosis	rab-11.1
+Endocytosis	ehs-1
+Endocytosis	rab-11.2
+Endocytosis	rab-10
+Endocytosis	gbf-1
+Endocytosis	cav-1
+Endocytosis	cav-2
+Endocytosis	R12C12.5
+Endocytosis	let-23
+Endocytosis	chc-1
+Endocytosis	grk-1
+Endocytosis	grk-2
+Endocytosis	dyn-1
+Endocytosis	cnt-1
+Endocytosis	cnt-2
+Endocytosis	vps-45
+Endocytosis	arf-6
+Endocytosis	istr-1
+Endocytosis	amph-1
+Endocytosis	aps-2
+Endocytosis	unc-57
+Endocytosis	rab-7
+Endocytosis	arr-1
+Endocytosis	rab-8
+Endocytosis	vps-37
+Endocytosis	vps-36
+Endocytosis	rab-5
+Endocytosis	vps-35
+Endocytosis	par-6
+Endocytosis	sli-1
+Endocytosis	rab-35
+Endocytosis	par-3
+Endocytosis	C46H11.3
+Endocytosis	vps-32.1
+Endocytosis	grp-1
+Endocytosis	snx-1
+Endocytosis	rabs-5
+Endocytosis	snx-3
+Endocytosis	snx-6
+Endocytosis	vps-60
+Endocytosis	wwp-1
+Endocytosis	apb-1
+Endocytosis	unc-116
+Endocytosis	dab-1
+Endocytosis	hsp-1
+Endocytosis	K02B12.7
+Endocytosis	T05E7.3
+Endocytosis	rme-1
+Endocytosis	cap-1
+Endocytosis	cap-2
+Endocytosis	cdc-42
+Endocytosis	alx-1
+Endocytosis	T23G11.7
+Endocytosis	C01A2.4
+Endocytosis	dpy-23
+Endocytosis	vps-4
+Endocytosis	crp-1
+Endocytosis	vps-2
+Endocytosis	rabn-5
+Endocytosis	pkc-3
+Endocytosis	F11F1.1
+Endocytosis	tsg-101
+Endocytosis	apa-2
+Endocytosis	arx-3
+Endocytosis	arx-4
+Endocytosis	arx-5
+Endocytosis	arx-6
+Endocytosis	epn-1
+Endocytosis	F07F6.4
+Endocytosis	T24B8.2
+Endocytosis	spg-20
+Endocytosis	pld-1
+Endocytosis	usp-50
+Endocytosis	eea-1
+Endocytosis	arx-7
+ErbB signaling pathway	let-23
+ErbB signaling pathway	unc-43
+ErbB signaling pathway	akt-1
+ErbB signaling pathway	age-1
+ErbB signaling pathway	max-2
+ErbB signaling pathway	akt-2
+ErbB signaling pathway	pak-2
+ErbB signaling pathway	pak-1
+ErbB signaling pathway	kin-32
+ErbB signaling pathway	pkc-2
+ErbB signaling pathway	sos-1
+ErbB signaling pathway	aap-1
+ErbB signaling pathway	lin-45
+ErbB signaling pathway	let-60
+ErbB signaling pathway	kgb-1
+ErbB signaling pathway	kgb-2
+ErbB signaling pathway	mpk-1
+ErbB signaling pathway	mkk-4
+ErbB signaling pathway	jnk-1
+ErbB signaling pathway	rsks-1
+ErbB signaling pathway	ced-2
+ErbB signaling pathway	nck-1
+ErbB signaling pathway	gsk-3
+ErbB signaling pathway	sek-6
+ErbB signaling pathway	sem-5
+ErbB signaling pathway	sta-1
+ErbB signaling pathway	abl-1
+ErbB signaling pathway	C44H4.6
+ErbB signaling pathway	src-1
+ErbB signaling pathway	let-363
+ErbB signaling pathway	plc-3
+ErbB signaling pathway	shc-1
+ErbB signaling pathway	sli-1
+ErbB signaling pathway	R04A9.7
+ErbB signaling pathway	lin-1
+ErbB signaling pathway	mek-2
+ErbB signaling pathway	R03D7.5
+ErbB signaling pathway	mek-1
+Ether lipid metabolism	plpp-1.1
+Ether lipid metabolism	C03H5.4
+Ether lipid metabolism	F09G2.8
+Ether lipid metabolism	ipla-3
+Ether lipid metabolism	ipla-2
+Ether lipid metabolism	T03G6.3
+Ether lipid metabolism	paf-2
+Ether lipid metabolism	T05C3.6
+Ether lipid metabolism	paf-1
+Ether lipid metabolism	ept-1
+Ether lipid metabolism	C07E3.9
+Ether lipid metabolism	ads-1
+Ether lipid metabolism	pld-1
+Ether lipid metabolism	lis-1
+Fanconi anemia pathway	fcd-2
+Fanconi anemia pathway	clk-2
+Fanconi anemia pathway	slx-1
+Fanconi anemia pathway	pms-2
+Fanconi anemia pathway	dog-1
+Fanconi anemia pathway	F35H10.5
+Fanconi anemia pathway	top-3
+Fanconi anemia pathway	rev-1
+Fanconi anemia pathway	polh-1
+Fanconi anemia pathway	rpa-4
+Fanconi anemia pathway	Y48C3A.14
+Fanconi anemia pathway	rpa-1
+Fanconi anemia pathway	fan-1
+Fanconi anemia pathway	rpa-2
+Fanconi anemia pathway	mlh-1
+Fanconi anemia pathway	ercc-1
+Fanconi anemia pathway	rev-3
+Fanconi anemia pathway	rmh-2
+Fanconi anemia pathway	polk-1
+Fanconi anemia pathway	wdr-48
+Fanconi anemia pathway	fnci-1
+Fanconi anemia pathway	rad-51
+Fanconi anemia pathway	him-6
+Fanconi anemia pathway	xpf-1
+Fanconi anemia pathway	mus-81
+Fatty acid biosynthesis	C50D2.9
+Fatty acid biosynthesis	fasn-1
+Fatty acid biosynthesis	acs-18
+Fatty acid biosynthesis	acs-16
+Fatty acid biosynthesis	acs-17
+Fatty acid biosynthesis	acs-2
+Fatty acid biosynthesis	acs-15
+Fatty acid biosynthesis	acs-4
+Fatty acid biosynthesis	acs-3
+Fatty acid biosynthesis	acs-13
+Fatty acid biosynthesis	F10G8.9
+Fatty acid biosynthesis	pod-2
+Fatty acid biosynthesis	acs-5
+Fatty acid degradation	ech-1.2
+Fatty acid degradation	ech-1.1
+Fatty acid degradation	cpt-2
+Fatty acid degradation	cpt-1
+Fatty acid degradation	acs-2
+Fatty acid degradation	acs-4
+Fatty acid degradation	acs-3
+Fatty acid degradation	acdh-10
+Fatty acid degradation	acdh-12
+Fatty acid degradation	acs-5
+Fatty acid degradation	F54D5.7
+Fatty acid degradation	acaa-2
+Fatty acid degradation	hacd-1
+Fatty acid degradation	alh-9
+Fatty acid degradation	alh-2
+Fatty acid degradation	alh-1
+Fatty acid degradation	alh-4
+Fatty acid degradation	sodh-1
+Fatty acid degradation	sodh-2
+Fatty acid degradation	acs-18
+Fatty acid degradation	alh-5
+Fatty acid degradation	acs-16
+Fatty acid degradation	acs-17
+Fatty acid degradation	kat-1
+Fatty acid degradation	acox-3
+Fatty acid degradation	F54C8.1
+Fatty acid degradation	acdh-1
+Fatty acid degradation	acdh-3
+Fatty acid degradation	acdh-4
+Fatty acid degradation	B0303.3
+Fatty acid degradation	acdh-7
+Fatty acid degradation	alh-11
+Fatty acid degradation	acs-15
+Fatty acid degradation	acs-13
+Fatty acid degradation	D2063.1
+Fatty acid degradation	alh-12
+Fatty acid degradation	acdh-8
+Fatty acid degradation	T02G5.7
+Fatty acid degradation	acox-1.5
+Fatty acid degradation	acox-1.4
+Fatty acid degradation	acox-1.6
+Fatty acid degradation	acox-1.1
+Fatty acid degradation	acox-1.3
+Fatty acid degradation	acox-1.2
+Fatty acid degradation	H24K24.3
+Fatty acid degradation	ech-9
+Fatty acid degradation	ech-8
+Fatty acid degradation	ech-4
+Fatty acid degradation	ech-7
+Fatty acid degradation	ech-6
+Fatty acid elongation	acaa-2
+Fatty acid elongation	hacd-1
+Fatty acid elongation	ech-1.2
+Fatty acid elongation	ech-1.1
+Fatty acid elongation	stdh-3
+Fatty acid elongation	B0303.3
+Fatty acid elongation	stdh-4
+Fatty acid elongation	stdh-1
+Fatty acid elongation	stdh-2
+Fatty acid elongation	ech-9
+Fatty acid elongation	ech-8
+Fatty acid elongation	ppt-1
+Fatty acid elongation	art-1
+Fatty acid elongation	elo-5
+Fatty acid elongation	ech-7
+Fatty acid elongation	ech-6
+Fatty acid elongation	elo-6
+Fatty acid elongation	Y48A6B.9
+Fatty acid elongation	mecr-1
+Fatty acid elongation	let-767
+Fatty acid elongation	F54C8.1
+Fatty acid elongation	hpo-8
+Folate biosynthesis	pcbd-1
+Folate biosynthesis	F49E2.1
+Folate biosynthesis	F49H6.5
+Folate biosynthesis	pah-1
+Folate biosynthesis	nmrk-1
+Folate biosynthesis	qdpr-1
+Folate biosynthesis	F25B5.6
+Folate biosynthesis	moc-1
+Folate biosynthesis	Y39G8B.1
+Folate biosynthesis	cat-2
+Folate biosynthesis	ptps-1
+Folate biosynthesis	cat-4
+Folate biosynthesis	dhfr-1
+Folate biosynthesis	mocs-1
+FoxO signaling pathway	age-1
+FoxO signaling pathway	fkh-2
+FoxO signaling pathway	ctl-3
+FoxO signaling pathway	cyb-2.2
+FoxO signaling pathway	pmk-1
+FoxO signaling pathway	pmk-3
+FoxO signaling pathway	cyb-2.1
+FoxO signaling pathway	pmk-2
+FoxO signaling pathway	sos-1
+FoxO signaling pathway	aap-1
+FoxO signaling pathway	lin-45
+FoxO signaling pathway	sgk-1
+FoxO signaling pathway	daf-3
+FoxO signaling pathway	daf-18
+FoxO signaling pathway	daf-16
+FoxO signaling pathway	pdk-1
+FoxO signaling pathway	jnk-1
+FoxO signaling pathway	daf-2
+FoxO signaling pathway	zyg-1
+FoxO signaling pathway	plk-3
+FoxO signaling pathway	lgg-1
+FoxO signaling pathway	plk-1
+FoxO signaling pathway	plk-2
+FoxO signaling pathway	ist-1
+FoxO signaling pathway	aakg-1
+FoxO signaling pathway	lgg-3
+FoxO signaling pathway	prmt-1
+FoxO signaling pathway	ctl-2
+FoxO signaling pathway	ctl-1
+FoxO signaling pathway	lit-1
+FoxO signaling pathway	let-23
+FoxO signaling pathway	pck-1
+FoxO signaling pathway	mfb-1
+FoxO signaling pathway	cyb-1
+FoxO signaling pathway	pck-2
+FoxO signaling pathway	sod-2
+FoxO signaling pathway	akt-1
+FoxO signaling pathway	sod-3
+FoxO signaling pathway	akt-2
+FoxO signaling pathway	skpt-1
+FoxO signaling pathway	aak-1
+FoxO signaling pathway	sma-4
+FoxO signaling pathway	aak-2
+FoxO signaling pathway	atm-1
+FoxO signaling pathway	cbp-1
+FoxO signaling pathway	sir-2.1
+FoxO signaling pathway	cyb-3
+FoxO signaling pathway	cyd-1
+FoxO signaling pathway	let-60
+FoxO signaling pathway	kgb-1
+FoxO signaling pathway	kgb-2
+FoxO signaling pathway	mpk-1
+FoxO signaling pathway	sem-5
+FoxO signaling pathway	aakb-2
+FoxO signaling pathway	aakb-1
+FoxO signaling pathway	dct-1
+FoxO signaling pathway	mek-2
+FoxO signaling pathway	math-33
+FoxO signaling pathway	par-4
+Fructose and mannose metabolism	bre-1
+Fructose and mannose metabolism	F52B11.2
+Fructose and mannose metabolism	tpi-1
+Fructose and mannose metabolism	W02H5.8
+Fructose and mannose metabolism	ger-1
+Fructose and mannose metabolism	R04B5.5
+Fructose and mannose metabolism	hxk-1
+Fructose and mannose metabolism	K03H1.13
+Fructose and mannose metabolism	C05C8.7
+Fructose and mannose metabolism	Y47D9A.1
+Fructose and mannose metabolism	R04B5.6
+Fructose and mannose metabolism	ZK632.4
+Fructose and mannose metabolism	tag-335
+Fructose and mannose metabolism	Y39G8B.1
+Fructose and mannose metabolism	pfk-1.1
+Fructose and mannose metabolism	fbp-1
+Fructose and mannose metabolism	gmd-2
+Fructose and mannose metabolism	aldo-2
+Fructose and mannose metabolism	pfk-1.2
+Fructose and mannose metabolism	aldo-1
+Galactose metabolism	ZK1058.3
+Galactose metabolism	R05F9.6
+Galactose metabolism	aagr-1
+Galactose metabolism	Y43F4B.5
+Galactose metabolism	C01B4.6
+Galactose metabolism	bgal-1
+Galactose metabolism	hxk-1
+Galactose metabolism	K08E3.5
+Galactose metabolism	Y39G8B.1
+Galactose metabolism	gale-1
+Galactose metabolism	pfk-1.1
+Galactose metabolism	pfk-1.2
+Galactose metabolism	Y19D10A.16
+Glutathione metabolism	rnr-2
+Glutathione metabolism	lap-2
+Glutathione metabolism	rnr-1
+Glutathione metabolism	gst-23
+Glutathione metabolism	gst-25
+Glutathione metabolism	H14N18.4
+Glutathione metabolism	C02D5.4
+Glutathione metabolism	C53D5.5
+Glutathione metabolism	C44B7.7
+Glutathione metabolism	Y7A9A.1
+Glutathione metabolism	T25B9.9
+Glutathione metabolism	gsto-1
+Glutathione metabolism	gst-38
+Glutathione metabolism	gsto-2
+Glutathione metabolism	gsr-1
+Glutathione metabolism	gstk-1
+Glutathione metabolism	gstk-2
+Glutathione metabolism	gst-36
+Glutathione metabolism	gst-1
+Glutathione metabolism	gst-3
+Glutathione metabolism	gst-30
+Glutathione metabolism	gst-2
+Glutathione metabolism	gst-5
+Glutathione metabolism	gst-4
+Glutathione metabolism	gst-7
+Glutathione metabolism	gst-6
+Glutathione metabolism	gst-9
+Glutathione metabolism	txdc-12.1
+Glutathione metabolism	gst-8
+Glutathione metabolism	odc-1
+Glutathione metabolism	gcs-1
+Glutathione metabolism	idh-1
+Glutathione metabolism	idh-2
+Glutathione metabolism	gst-44
+Glutathione metabolism	gst-41
+Glutathione metabolism	T03D8.6
+Glutathione metabolism	gpx-1
+Glutathione metabolism	gpx-2
+Glutathione metabolism	gpx-3
+Glutathione metabolism	gpx-5
+Glutathione metabolism	gpx-7
+Glutathione metabolism	Y38F2AR.12
+Glutathione metabolism	gst-11
+Glutathione metabolism	gss-1
+Glutathione metabolism	anp-1
+Glutathione metabolism	gst-10
+Glutathione metabolism	gspd-1
+Glutathione metabolism	F22F7.7
+Glutathione metabolism	spds-1
+Glutathione metabolism	E01A2.1
+Glycerolipid metabolism	plpp-1.1
+Glycerolipid metabolism	dgtr-1
+Glycerolipid metabolism	acl-11
+Glycerolipid metabolism	alh-11
+Glycerolipid metabolism	acl-1
+Glycerolipid metabolism	lpin-1
+Glycerolipid metabolism	acl-2
+Glycerolipid metabolism	acl-9
+Glycerolipid metabolism	acl-8
+Glycerolipid metabolism	acl-5
+Glycerolipid metabolism	acl-4
+Glycerolipid metabolism	acl-6
+Glycerolipid metabolism	alh-12
+Glycerolipid metabolism	F52C9.3
+Glycerolipid metabolism	alh-9
+Glycerolipid metabolism	W02H5.8
+Glycerolipid metabolism	K07B1.4
+Glycerolipid metabolism	alh-2
+Glycerolipid metabolism	alh-1
+Glycerolipid metabolism	alh-4
+Glycerolipid metabolism	alh-5
+Glycerolipid metabolism	R11F4.1
+Glycerolipid metabolism	mboa-2
+Glycerolipid metabolism	C13B9.2
+Glycerolipid metabolism	mboa-4
+Glycerolipid metabolism	mboa-3
+Glycerolipid metabolism	Y39G8B.1
+Glycerolipid metabolism	dgk-1
+Glycerolipid metabolism	dgk-3
+Glycerolipid metabolism	dgk-2
+Glycerolipid metabolism	dgk-5
+Glycerolipid metabolism	dgk-4
+Glycerophospholipid metabolism	plpp-1.1
+Glycerophospholipid metabolism	ace-2
+Glycerophospholipid metabolism	C03H5.4
+Glycerophospholipid metabolism	ace-1
+Glycerophospholipid metabolism	pssy-1
+Glycerophospholipid metabolism	lpin-1
+Glycerophospholipid metabolism	ace-4
+Glycerophospholipid metabolism	crls-1
+Glycerophospholipid metabolism	ath-1
+Glycerophospholipid metabolism	ckb-1
+Glycerophospholipid metabolism	ckb-3
+Glycerophospholipid metabolism	ckb-2
+Glycerophospholipid metabolism	T25G3.4
+Glycerophospholipid metabolism	psd-1
+Glycerophospholipid metabolism	ipla-3
+Glycerophospholipid metabolism	ipla-2
+Glycerophospholipid metabolism	mboa-7
+Glycerophospholipid metabolism	gpdh-1
+Glycerophospholipid metabolism	gpdh-2
+Glycerophospholipid metabolism	cdgs-1
+Glycerophospholipid metabolism	mboa-4
+Glycerophospholipid metabolism	mboa-3
+Glycerophospholipid metabolism	mboa-6
+Glycerophospholipid metabolism	dgk-1
+Glycerophospholipid metabolism	dgk-3
+Glycerophospholipid metabolism	dgk-2
+Glycerophospholipid metabolism	pisy-1
+Glycerophospholipid metabolism	dgk-5
+Glycerophospholipid metabolism	dgk-4
+Glycerophospholipid metabolism	pgs-1
+Glycerophospholipid metabolism	gpcp-2
+Glycerophospholipid metabolism	acl-11
+Glycerophospholipid metabolism	acl-1
+Glycerophospholipid metabolism	acl-3
+Glycerophospholipid metabolism	acl-2
+Glycerophospholipid metabolism	acl-14
+Glycerophospholipid metabolism	acl-9
+Glycerophospholipid metabolism	acl-8
+Glycerophospholipid metabolism	eppl-1
+Glycerophospholipid metabolism	C07E3.9
+Glycerophospholipid metabolism	acl-5
+Glycerophospholipid metabolism	acl-4
+Glycerophospholipid metabolism	acl-7
+Glycerophospholipid metabolism	acl-6
+Glycerophospholipid metabolism	M05B5.4
+Glycerophospholipid metabolism	cka-2
+Glycerophospholipid metabolism	pcyt-1
+Glycerophospholipid metabolism	ckc-1
+Glycerophospholipid metabolism	F09G2.8
+Glycerophospholipid metabolism	pcyt-2.2
+Glycerophospholipid metabolism	pcyt-2.1
+Glycerophospholipid metabolism	T05C3.6
+Glycerophospholipid metabolism	ept-1
+Glycerophospholipid metabolism	ZK370.4
+Glycerophospholipid metabolism	pld-1
+Glycerophospholipid metabolism	cha-1
+Glycine, serine and threonine metabolism	F26H9.5
+Glycine, serine and threonine metabolism	C31C9.2
+Glycine, serine and threonine metabolism	gldc-1
+Glycine, serine and threonine metabolism	daao-1
+Glycine, serine and threonine metabolism	agxt-1
+Glycine, serine and threonine metabolism	T09B4.8
+Glycine, serine and threonine metabolism	C15B12.1
+Glycine, serine and threonine metabolism	mel-32
+Glycine, serine and threonine metabolism	cbs-1
+Glycine, serine and threonine metabolism	ipgm-1
+Glycine, serine and threonine metabolism	T25B9.1
+Glycine, serine and threonine metabolism	C34C6.4
+Glycine, serine and threonine metabolism	gcsh-1
+Glycine, serine and threonine metabolism	cbs-2
+Glycine, serine and threonine metabolism	gcsh-2
+Glycine, serine and threonine metabolism	Y62E10A.13
+Glycine, serine and threonine metabolism	alh-9
+Glycine, serine and threonine metabolism	Y51H7C.9
+Glycine, serine and threonine metabolism	gcst-1
+Glycine, serine and threonine metabolism	dld-1
+Glycine, serine and threonine metabolism	Y37E3.17
+Glycine, serine and threonine metabolism	K01C8.1
+Glycine, serine and threonine metabolism	R102.4
+Glycine, serine and threonine metabolism	cth-2
+Glycine, serine and threonine metabolism	F08F3.4
+Glycine, serine and threonine metabolism	cth-1
+Glycine, serine and threonine metabolism	C13B9.2
+Glycolysis / Gluconeogenesis	gpd-2
+Glycolysis / Gluconeogenesis	gpd-1
+Glycolysis / Gluconeogenesis	R05F9.6
+Glycolysis / Gluconeogenesis	C50D2.7
+Glycolysis / Gluconeogenesis	pck-1
+Glycolysis / Gluconeogenesis	pck-2
+Glycolysis / Gluconeogenesis	alh-11
+Glycolysis / Gluconeogenesis	pgk-1
+Glycolysis / Gluconeogenesis	enol-1
+Glycolysis / Gluconeogenesis	ldh-1
+Glycolysis / Gluconeogenesis	D2063.1
+Glycolysis / Gluconeogenesis	ipgm-1
+Glycolysis / Gluconeogenesis	alh-12
+Glycolysis / Gluconeogenesis	aldo-2
+Glycolysis / Gluconeogenesis	aldo-1
+Glycolysis / Gluconeogenesis	Y19D10A.16
+Glycolysis / Gluconeogenesis	pdha-1
+Glycolysis / Gluconeogenesis	pdhb-1
+Glycolysis / Gluconeogenesis	alh-9
+Glycolysis / Gluconeogenesis	pyk-2
+Glycolysis / Gluconeogenesis	Y43F4B.5
+Glycolysis / Gluconeogenesis	C01B4.6
+Glycolysis / Gluconeogenesis	tpi-1
+Glycolysis / Gluconeogenesis	pyk-1
+Glycolysis / Gluconeogenesis	H24K24.3
+Glycolysis / Gluconeogenesis	alh-2
+Glycolysis / Gluconeogenesis	alh-1
+Glycolysis / Gluconeogenesis	alh-4
+Glycolysis / Gluconeogenesis	sodh-1
+Glycolysis / Gluconeogenesis	sodh-2
+Glycolysis / Gluconeogenesis	dld-1
+Glycolysis / Gluconeogenesis	alh-5
+Glycolysis / Gluconeogenesis	acs-19
+Glycolysis / Gluconeogenesis	hxk-1
+Glycolysis / Gluconeogenesis	dlat-1
+Glycolysis / Gluconeogenesis	pfk-1.1
+Glycolysis / Gluconeogenesis	dlat-2
+Glycolysis / Gluconeogenesis	gpi-1
+Glycolysis / Gluconeogenesis	fbp-1
+Glycolysis / Gluconeogenesis	pfk-1.2
+Glycolysis / Gluconeogenesis	gpd-4
+Glycolysis / Gluconeogenesis	gpd-3
+Glycosaminoglycan biosynthesis	bre-4
+Glycosaminoglycan biosynthesis	hst-2
+Glycosaminoglycan biosynthesis	hst-1
+Glycosaminoglycan biosynthesis	sqv-6
+Glycosaminoglycan biosynthesis	sqv-8
+Glycosaminoglycan biosynthesis	hse-5
+Glycosaminoglycan biosynthesis	hst-3.2
+Glycosaminoglycan biosynthesis	sqv-3
+Glycosaminoglycan biosynthesis	sqv-2
+Glycosaminoglycan biosynthesis	sqv-5
+Glycosaminoglycan biosynthesis	mig-22
+Glycosaminoglycan biosynthesis	rib-2
+Glycosaminoglycan biosynthesis	rib-1
+Glycosaminoglycan biosynthesis	fut-8
+Glycosaminoglycan degradation	chhy-1
+Glycosaminoglycan degradation	bgal-1
+Glycosaminoglycan degradation	hex-1
+Glycosaminoglycan degradation	K09E4.4
+Glycosaminoglycan degradation	Y105E8B.9
+Glycosphingolipid biosynthesis	bre-4
+Glycosphingolipid biosynthesis	bgal-1
+Glycosphingolipid biosynthesis	hex-1
+Glycosphingolipid biosynthesis	B0024.15
+Glycosphingolipid biosynthesis	T26C5.3
+Glycosphingolipid biosynthesis	gana-1
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	piga-1
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	hpo-5
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	hpo-3
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	hpo-4
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	F01G4.5
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	T27F7.4
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	T20D3.8
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	C27A12.9
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	Y52B11C.1
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	pign-1
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	hpo-20
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	F17C11.7
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	T22C1.3
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	B0491.1
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	pigv-1
+Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	F28C6.4
+Glyoxylate and dicarboxylate metabolism	gldc-1
+Glyoxylate and dicarboxylate metabolism	ctl-3
+Glyoxylate and dicarboxylate metabolism	pgph-3
+Glyoxylate and dicarboxylate metabolism	cts-1
+Glyoxylate and dicarboxylate metabolism	agxt-1
+Glyoxylate and dicarboxylate metabolism	pgph-1
+Glyoxylate and dicarboxylate metabolism	pgph-2
+Glyoxylate and dicarboxylate metabolism	aco-2
+Glyoxylate and dicarboxylate metabolism	pcca-1
+Glyoxylate and dicarboxylate metabolism	aco-1
+Glyoxylate and dicarboxylate metabolism	pccb-1
+Glyoxylate and dicarboxylate metabolism	mel-32
+Glyoxylate and dicarboxylate metabolism	gcsh-1
+Glyoxylate and dicarboxylate metabolism	T02G5.7
+Glyoxylate and dicarboxylate metabolism	gcsh-2
+Glyoxylate and dicarboxylate metabolism	mdh-2
+Glyoxylate and dicarboxylate metabolism	mdh-1
+Glyoxylate and dicarboxylate metabolism	C05D11.5
+Glyoxylate and dicarboxylate metabolism	mmcm-1
+Glyoxylate and dicarboxylate metabolism	icl-1
+Glyoxylate and dicarboxylate metabolism	afmd-1
+Glyoxylate and dicarboxylate metabolism	gcst-1
+Glyoxylate and dicarboxylate metabolism	dld-1
+Glyoxylate and dicarboxylate metabolism	acs-19
+Glyoxylate and dicarboxylate metabolism	gln-5
+Glyoxylate and dicarboxylate metabolism	gln-6
+Glyoxylate and dicarboxylate metabolism	kat-1
+Glyoxylate and dicarboxylate metabolism	gln-3
+Glyoxylate and dicarboxylate metabolism	gln-1
+Glyoxylate and dicarboxylate metabolism	C13B9.2
+Glyoxylate and dicarboxylate metabolism	gln-2
+Glyoxylate and dicarboxylate metabolism	ctl-2
+Glyoxylate and dicarboxylate metabolism	ctl-1
+Glyoxylate and dicarboxylate metabolism	F41E6.5
+Glyoxylate and dicarboxylate metabolism	mce-1
+Glyoxylate and dicarboxylate metabolism	C45E5.1
+Hippo signaling pathway	cst-2
+Hippo signaling pathway	max-2
+Hippo signaling pathway	cdh-1
+Hippo signaling pathway	sav-1
+Hippo signaling pathway	pak-1
+Hippo signaling pathway	cst-1
+Hippo signaling pathway	mob-1
+Hippo signaling pathway	egl-44
+Hippo signaling pathway	mob-3
+Hippo signaling pathway	mob-2
+Hippo signaling pathway	frm-7
+Hippo signaling pathway	wts-1
+Hippo signaling pathway	yap-1
+Histidine metabolism	alh-9
+Histidine metabolism	Y48E1C.2
+Histidine metabolism	alh-12
+Histidine metabolism	Y51H4A.7
+Histidine metabolism	alh-2
+Histidine metabolism	alh-11
+Histidine metabolism	haly-1
+Histidine metabolism	alh-1
+Histidine metabolism	alh-4
+Histidine metabolism	alh-5
+Histidine metabolism	T12A2.1
+Homologous recombination	dog-1
+Homologous recombination	Y116A8C.13
+Homologous recombination	top-3
+Homologous recombination	F10C2.4
+Homologous recombination	R04F11.3
+Homologous recombination	brd-1
+Homologous recombination	F12F6.7
+Homologous recombination	dss-1
+Homologous recombination	atm-1
+Homologous recombination	rpa-4
+Homologous recombination	mus-101
+Homologous recombination	mre-11
+Homologous recombination	Y48C3A.14
+Homologous recombination	rad-54
+Homologous recombination	rpa-1
+Homologous recombination	rpa-2
+Homologous recombination	rad-51
+Homologous recombination	him-6
+Homologous recombination	mus-81
+Homologous recombination	rad-50
+Inositol phosphate metabolism	gpap-1
+Inositol phosphate metabolism	piki-1
+Inositol phosphate metabolism	ipmk-1
+Inositol phosphate metabolism	ocrl-1
+Inositol phosphate metabolism	unc-26
+Inositol phosphate metabolism	age-1
+Inositol phosphate metabolism	ZC8.6
+Inositol phosphate metabolism	inpp-1
+Inositol phosphate metabolism	ipp-5
+Inositol phosphate metabolism	lfe-2
+Inositol phosphate metabolism	C56A3.8
+Inositol phosphate metabolism	pifk-1
+Inositol phosphate metabolism	mtm-6
+Inositol phosphate metabolism	ttx-7
+Inositol phosphate metabolism	sac-1
+Inositol phosphate metabolism	mtm-3
+Inositol phosphate metabolism	mtm-1
+Inositol phosphate metabolism	daf-18
+Inositol phosphate metabolism	inos-1
+Inositol phosphate metabolism	tpi-1
+Inositol phosphate metabolism	egl-8
+Inositol phosphate metabolism	ppk-3
+Inositol phosphate metabolism	alh-8
+Inositol phosphate metabolism	vps-34
+Inositol phosphate metabolism	ppk-1
+Inositol phosphate metabolism	plc-3
+Inositol phosphate metabolism	plc-4
+Inositol phosphate metabolism	ppk-2
+Inositol phosphate metabolism	W09C5.7
+Inositol phosphate metabolism	Y75B8A.24
+Inositol phosphate metabolism	plc-1
+Inositol phosphate metabolism	C34B7.2
+Inositol phosphate metabolism	C54E4.5
+Inositol phosphate metabolism	pisy-1
+Longevity regulating pathway	hsp-70
+Longevity regulating pathway	hda-1
+Longevity regulating pathway	ddl-2
+Longevity regulating pathway	F49C12.12
+Longevity regulating pathway	hda-2
+Longevity regulating pathway	hda-3
+Longevity regulating pathway	age-1
+Longevity regulating pathway	kin-1
+Longevity regulating pathway	ctl-3
+Longevity regulating pathway	jkk-1
+Longevity regulating pathway	tcer-1
+Longevity regulating pathway	pmk-1
+Longevity regulating pathway	pmk-3
+Longevity regulating pathway	pmk-2
+Longevity regulating pathway	F44E5.5
+Longevity regulating pathway	vhl-1
+Longevity regulating pathway	F44E5.4
+Longevity regulating pathway	atf-5
+Longevity regulating pathway	aap-1
+Longevity regulating pathway	ubl-5
+Longevity regulating pathway	sip-1
+Longevity regulating pathway	unc-51
+Longevity regulating pathway	mtl-1
+Longevity regulating pathway	ddl-1
+Longevity regulating pathway	acy-1
+Longevity regulating pathway	daf-18
+Longevity regulating pathway	C46G7.1
+Longevity regulating pathway	hsp-6
+Longevity regulating pathway	daf-16
+Longevity regulating pathway	jnk-1
+Longevity regulating pathway	daf-2
+Longevity regulating pathway	hcf-1
+Longevity regulating pathway	hsp-1
+Longevity regulating pathway	fard-1
+Longevity regulating pathway	lgg-1
+Longevity regulating pathway	daf-15
+Longevity regulating pathway	daf-12
+Longevity regulating pathway	dve-1
+Longevity regulating pathway	nhr-80
+Longevity regulating pathway	gst-4
+Longevity regulating pathway	ist-1
+Longevity regulating pathway	aakg-1
+Longevity regulating pathway	pha-4
+Longevity regulating pathway	ctl-2
+Longevity regulating pathway	ctl-1
+Longevity regulating pathway	daf-9
+Longevity regulating pathway	clpp-1
+Longevity regulating pathway	kri-1
+Longevity regulating pathway	gcs-1
+Longevity regulating pathway	hsp-16.48
+Longevity regulating pathway	hsp-16.49
+Longevity regulating pathway	sod-1
+Longevity regulating pathway	sod-2
+Longevity regulating pathway	akt-1
+Longevity regulating pathway	sod-3
+Longevity regulating pathway	sod-4
+Longevity regulating pathway	hsp-12.6
+Longevity regulating pathway	akt-2
+Longevity regulating pathway	sod-5
+Longevity regulating pathway	aak-1
+Longevity regulating pathway	aak-2
+Longevity regulating pathway	ins-7
+Longevity regulating pathway	hsf-1
+Longevity regulating pathway	smk-1
+Longevity regulating pathway	hsb-1
+Longevity regulating pathway	atg-5
+Longevity regulating pathway	sir-2.1
+Longevity regulating pathway	F11F1.1
+Longevity regulating pathway	parp-2
+Longevity regulating pathway	sek-1
+Longevity regulating pathway	parp-1
+Longevity regulating pathway	hsp-16.1
+Longevity regulating pathway	let-60
+Longevity regulating pathway	kgb-1
+Longevity regulating pathway	kgb-2
+Longevity regulating pathway	skn-1
+Longevity regulating pathway	lips-17
+Longevity regulating pathway	hsp-60
+Longevity regulating pathway	hif-1
+Longevity regulating pathway	rsks-1
+Longevity regulating pathway	hsp-16.11
+Longevity regulating pathway	timm-23
+Longevity regulating pathway	fat-7
+Longevity regulating pathway	fat-6
+Longevity regulating pathway	fat-5
+Longevity regulating pathway	daf-36
+Longevity regulating pathway	let-363
+Longevity regulating pathway	aakb-2
+Longevity regulating pathway	R04A9.7
+Longevity regulating pathway	aakb-1
+Longevity regulating pathway	haf-1
+Longevity regulating pathway	lipl-4
+Longevity regulating pathway	ftt-2
+Lysine degradation	dot-1.2
+Lysine degradation	dot-1.3
+Lysine degradation	ech-1.2
+Lysine degradation	dot-1.4
+Lysine degradation	ech-1.1
+Lysine degradation	alh-11
+Lysine degradation	set-16
+Lysine degradation	met-2
+Lysine degradation	aass-1
+Lysine degradation	let-268
+Lysine degradation	C15B12.1
+Lysine degradation	alh-12
+Lysine degradation	T02G5.7
+Lysine degradation	D2045.9
+Lysine degradation	F54D5.7
+Lysine degradation	dot-1.1
+Lysine degradation	hacd-1
+Lysine degradation	dlst-1
+Lysine degradation	set-1
+Lysine degradation	alh-9
+Lysine degradation	set-2
+Lysine degradation	ogdh-2
+Lysine degradation	gbh-2
+Lysine degradation	ech-9
+Lysine degradation	alh-2
+Lysine degradation	ech-8
+Lysine degradation	gbh-1
+Lysine degradation	alh-1
+Lysine degradation	alh-4
+Lysine degradation	set-23
+Lysine degradation	set-4
+Lysine degradation	dld-1
+Lysine degradation	alh-5
+Lysine degradation	ech-7
+Lysine degradation	ech-6
+Lysine degradation	kat-1
+Lysine degradation	mes-2
+Lysine degradation	lin-59
+Lysine degradation	F54C8.1
+Lysosome	Y53G8AR.7
+Lysosome	spp-10
+Lysosome	cpl-1
+Lysosome	R04B3.2
+Lysosome	ctsa-2
+Lysosome	asm-3
+Lysosome	apd-3
+Lysosome	C27A2.12
+Lysosome	pho-1
+Lysosome	pho-4
+Lysosome	C33G3.4
+Lysosome	lmp-1
+Lysosome	Y105E8B.9
+Lysosome	apt-9
+Lysosome	crn-7
+Lysosome	chc-1
+Lysosome	T28H10.3
+Lysosome	asp-4
+Lysosome	F36G3.3
+Lysosome	asp-3
+Lysosome	crn-6
+Lysosome	apg-1
+Lysosome	pho-14
+Lysosome	asah-1
+Lysosome	asah-2
+Lysosome	vha-7
+Lysosome	M05B5.4
+Lysosome	vha-6
+Lysosome	vha-5
+Lysosome	vha-4
+Lysosome	vha-3
+Lysosome	vha-2
+Lysosome	pho-13
+Lysosome	vha-1
+Lysosome	pho-12
+Lysosome	pho-11
+Lysosome	pho-10
+Lysosome	aps-3
+Lysosome	ppt-1
+Lysosome	aps-1
+Lysosome	aman-1
+Lysosome	W07B8.4
+Lysosome	F41C3.5
+Lysosome	nuc-1
+Lysosome	C29E4.10
+Lysosome	lipl-5
+Lysosome	cpr-8
+Lysosome	smf-1
+Lysosome	cpr-6
+Lysosome	cpr-5
+Lysosome	cpr-4
+Lysosome	cpr-3
+Lysosome	F14D7.6
+Lysosome	F26C11.1
+Lysosome	cpr-2
+Lysosome	cpr-1
+Lysosome	apb-3
+Lysosome	cpz-2
+Lysosome	smf-3
+Lysosome	cpz-1
+Lysosome	smf-2
+Lysosome	vha-16
+Lysosome	unc-32
+Lysosome	vha-15
+Lysosome	F13D12.6
+Lysosome	vha-18
+Lysosome	vha-19
+Lysosome	F57F5.1
+Lysosome	ctns-1
+Lysosome	tsp-7
+Lysosome	Y16B4A.2
+Lysosome	scav-3
+Lysosome	mig-23
+Lysosome	K09E4.4
+Lysosome	unc-101
+Lysosome	cln-3.3
+Lysosome	cln-3.2
+Lysosome	cln-3.1
+Lysosome	ncr-1
+Lysosome	gana-1
+Lysosome	tag-196
+Lysosome	bgal-1
+Lysosome	heh-1
+Lysosome	apm-3
+Lysosome	F32H5.1
+Lysosome	apm-1
+Lysosome	gba-1
+Lysosome	haf-7
+Lysosome	asm-1
+Lysosome	gba-3
+Lysosome	asm-2
+Lysosome	gba-2
+Lysosome	haf-4
+Lysosome	gba-4
+Lysosome	hex-1
+Lysosome	F02E9.7
+Lysosome	lipl-1
+Lysosome	Y87G2A.19
+Lysosome	haf-9
+MAPK signaling pathway	hsp-70
+MAPK signaling pathway	Y17G9B.5
+MAPK signaling pathway	zak-1
+MAPK signaling pathway	ced-10
+MAPK signaling pathway	max-2
+MAPK signaling pathway	ver-3
+MAPK signaling pathway	kin-1
+MAPK signaling pathway	ver-1
+MAPK signaling pathway	pak-1
+MAPK signaling pathway	pmk-1
+MAPK signaling pathway	pmk-3
+MAPK signaling pathway	pik-1
+MAPK signaling pathway	gpa-12
+MAPK signaling pathway	pmk-2
+MAPK signaling pathway	F44E5.5
+MAPK signaling pathway	sos-1
+MAPK signaling pathway	ras-1
+MAPK signaling pathway	F44E5.4
+MAPK signaling pathway	atf-5
+MAPK signaling pathway	lin-45
+MAPK signaling pathway	mxl-1
+MAPK signaling pathway	ras-2
+MAPK signaling pathway	mnk-1
+MAPK signaling pathway	mxl-3
+MAPK signaling pathway	mkk-4
+MAPK signaling pathway	tax-6
+MAPK signaling pathway	jnk-1
+MAPK signaling pathway	daf-2
+MAPK signaling pathway	ced-2
+MAPK signaling pathway	cca-1
+MAPK signaling pathway	mom-4
+MAPK signaling pathway	hsp-1
+MAPK signaling pathway	rskn-2
+MAPK signaling pathway	rskn-1
+MAPK signaling pathway	rac-2
+MAPK signaling pathway	lip-1
+MAPK signaling pathway	cdc-42
+MAPK signaling pathway	tap-1
+MAPK signaling pathway	lin-1
+MAPK signaling pathway	lit-1
+MAPK signaling pathway	let-23
+MAPK signaling pathway	pxf-1
+MAPK signaling pathway	akt-1
+MAPK signaling pathway	lmtr-3
+MAPK signaling pathway	akt-2
+MAPK signaling pathway	crp-1
+MAPK signaling pathway	pkc-2
+MAPK signaling pathway	rap-1
+MAPK signaling pathway	mtk-1
+MAPK signaling pathway	nsy-1
+MAPK signaling pathway	dlk-1
+MAPK signaling pathway	F11F1.1
+MAPK signaling pathway	mpk-2
+MAPK signaling pathway	sek-1
+MAPK signaling pathway	let-60
+MAPK signaling pathway	egl-19
+MAPK signaling pathway	kgb-1
+MAPK signaling pathway	kgb-2
+MAPK signaling pathway	mpk-1
+MAPK signaling pathway	Y105C5A.24
+MAPK signaling pathway	cst-2
+MAPK signaling pathway	ccb-1
+MAPK signaling pathway	sek-6
+MAPK signaling pathway	sem-5
+MAPK signaling pathway	arr-1
+MAPK signaling pathway	vhp-1
+MAPK signaling pathway	cst-1
+MAPK signaling pathway	ppm-1.A
+MAPK signaling pathway	pph-5
+MAPK signaling pathway	kin-18
+MAPK signaling pathway	let-756
+MAPK signaling pathway	mek-2
+MAPK signaling pathway	mek-1
+MAPK signaling pathway	fln-1
+MAPK signaling pathway	cnb-1
+MAPK signaling pathway	fln-2
+MAPK signaling pathway	mig-2
+Mannose type O-glycan biosynthesis	bre-4
+Mannose type O-glycan biosynthesis	bgnt-1.5
+Mannose type O-glycan biosynthesis	T07D3.4
+Mannose type O-glycan biosynthesis	bgnt-1.4
+Mannose type O-glycan biosynthesis	T07A5.1
+Mannose type O-glycan biosynthesis	W02B3.4
+Mannose type O-glycan biosynthesis	M70.4
+Mannose type O-glycan biosynthesis	lge-1
+Metabolism of xenobiotics by cytochrome P450	ugt-50
+Metabolism of xenobiotics by cytochrome P450	gst-23
+Metabolism of xenobiotics by cytochrome P450	ugt-15
+Metabolism of xenobiotics by cytochrome P450	gst-44
+Metabolism of xenobiotics by cytochrome P450	ugt-58
+Metabolism of xenobiotics by cytochrome P450	gst-25
+Metabolism of xenobiotics by cytochrome P450	ugt-6
+Metabolism of xenobiotics by cytochrome P450	ugt-56
+Metabolism of xenobiotics by cytochrome P450	gst-41
+Metabolism of xenobiotics by cytochrome P450	ugt-55
+Metabolism of xenobiotics by cytochrome P450	C02D5.4
+Metabolism of xenobiotics by cytochrome P450	W01A11.1
+Metabolism of xenobiotics by cytochrome P450	ugt-18
+Metabolism of xenobiotics by cytochrome P450	D2063.1
+Metabolism of xenobiotics by cytochrome P450	ugt-62
+Metabolism of xenobiotics by cytochrome P450	ugt-61
+Metabolism of xenobiotics by cytochrome P450	gsto-1
+Metabolism of xenobiotics by cytochrome P450	gst-38
+Metabolism of xenobiotics by cytochrome P450	gsto-2
+Metabolism of xenobiotics by cytochrome P450	H24K24.3
+Metabolism of xenobiotics by cytochrome P450	gstk-1
+Metabolism of xenobiotics by cytochrome P450	gstk-2
+Metabolism of xenobiotics by cytochrome P450	ugt-48
+Metabolism of xenobiotics by cytochrome P450	gst-11
+Metabolism of xenobiotics by cytochrome P450	gst-36
+Metabolism of xenobiotics by cytochrome P450	gst-1
+Metabolism of xenobiotics by cytochrome P450	sodh-1
+Metabolism of xenobiotics by cytochrome P450	ugt-46
+Metabolism of xenobiotics by cytochrome P450	ugt-23
+Metabolism of xenobiotics by cytochrome P450	sodh-2
+Metabolism of xenobiotics by cytochrome P450	gst-3
+Metabolism of xenobiotics by cytochrome P450	gst-30
+Metabolism of xenobiotics by cytochrome P450	gst-2
+Metabolism of xenobiotics by cytochrome P450	gst-10
+Metabolism of xenobiotics by cytochrome P450	gst-5
+Metabolism of xenobiotics by cytochrome P450	gst-4
+Metabolism of xenobiotics by cytochrome P450	gst-7
+Metabolism of xenobiotics by cytochrome P450	gst-6
+Metabolism of xenobiotics by cytochrome P450	gst-9
+Metabolism of xenobiotics by cytochrome P450	gst-8
+Mismatch repair	rfc-3
+Mismatch repair	rfc-4
+Mismatch repair	rfc-1
+Mismatch repair	rfc-2
+Mismatch repair	pcn-1
+Mismatch repair	pms-2
+Mismatch repair	F10C2.4
+Mismatch repair	R04F11.3
+Mismatch repair	F44B9.8
+Mismatch repair	F12F6.7
+Mismatch repair	lig-1
+Mismatch repair	msh-2
+Mismatch repair	rpa-4
+Mismatch repair	exo-1
+Mismatch repair	rpa-1
+Mismatch repair	rpa-2
+Mismatch repair	mlh-1
+Mismatch repair	msh-6
+Mitophagy	kin-3
+Mitophagy	pek-1
+Mitophagy	fzo-1
+Mitophagy	kin-10
+Mitophagy	atg-9
+Mitophagy	ras-1
+Mitophagy	atg-5
+Mitophagy	atf-5
+Mitophagy	bec-1
+Mitophagy	pdr-1
+Mitophagy	fis-2
+Mitophagy	let-60
+Mitophagy	ras-2
+Mitophagy	kgb-1
+Mitophagy	pgam-5
+Mitophagy	kgb-2
+Mitophagy	tbc-14
+Mitophagy	miro-1
+Mitophagy	hif-1
+Mitophagy	daf-16
+Mitophagy	pink-1
+Mitophagy	jnk-1
+Mitophagy	tomm-7
+Mitophagy	rab-7
+Mitophagy	lgg-1
+Mitophagy	src-1
+Mitophagy	dct-1
+Mitophagy	usp-50
+Mitophagy	Y67D2.2
+Mucin type O-glycan biosynthesis	gly-15
+Mucin type O-glycan biosynthesis	gly-9
+Mucin type O-glycan biosynthesis	gly-16
+Mucin type O-glycan biosynthesis	gly-6
+Mucin type O-glycan biosynthesis	gly-7
+Mucin type O-glycan biosynthesis	gly-11
+Mucin type O-glycan biosynthesis	gly-4
+Mucin type O-glycan biosynthesis	gly-5
+Mucin type O-glycan biosynthesis	gly-3
+Mucin type O-glycan biosynthesis	C38H2.2
+Mucin type O-glycan biosynthesis	gly-10
+N-Glycan biosynthesis	bre-4
+N-Glycan biosynthesis	dpm-1
+N-Glycan biosynthesis	B0024.13
+N-Glycan biosynthesis	dpm-3
+N-Glycan biosynthesis	mans-3
+N-Glycan biosynthesis	gly-12
+N-Glycan biosynthesis	mans-4
+N-Glycan biosynthesis	mans-1
+N-Glycan biosynthesis	gly-13
+N-Glycan biosynthesis	mans-2
+N-Glycan biosynthesis	gly-14
+N-Glycan biosynthesis	fut-8
+N-Glycan biosynthesis	aagr-4
+N-Glycan biosynthesis	aagr-3
+N-Glycan biosynthesis	mogs-1
+N-Glycan biosynthesis	ostb-1
+N-Glycan biosynthesis	ostd-1
+N-Glycan biosynthesis	dad-1
+N-Glycan biosynthesis	gly-2
+N-Glycan biosynthesis	aman-2
+N-Glycan biosynthesis	algn-5
+N-Glycan biosynthesis	algn-6
+N-Glycan biosynthesis	algn-7
+N-Glycan biosynthesis	stt-3
+N-Glycan biosynthesis	algn-8
+N-Glycan biosynthesis	algn-9
+N-Glycan biosynthesis	ZK686.3
+N-Glycan biosynthesis	algn-14
+N-Glycan biosynthesis	ribo-1
+N-Glycan biosynthesis	algn-13
+N-Glycan biosynthesis	gly-20
+N-Glycan biosynthesis	algn-10
+N-Glycan biosynthesis	algn-1
+N-Glycan biosynthesis	algn-2
+N-Glycan biosynthesis	dolk-1
+N-Glycan biosynthesis	algn-12
+N-Glycan biosynthesis	algn-11
+N-Glycan biosynthesis	algn-3
+Neuroactive ligand-receptor interaction	gar-1
+Neuroactive ligand-receptor interaction	lgc-36
+Neuroactive ligand-receptor interaction	gar-3
+Neuroactive ligand-receptor interaction	gar-2
+Neuroactive ligand-receptor interaction	unc-49
+Neuroactive ligand-receptor interaction	nmur-2
+Neuroactive ligand-receptor interaction	tkr-2
+Neuroactive ligand-receptor interaction	lgc-37
+Neuroactive ligand-receptor interaction	lgc-38
+Neuroactive ligand-receptor interaction	gab-1
+Neuroactive ligand-receptor interaction	seb-3
+Neuroactive ligand-receptor interaction	nmr-2
+Neuroactive ligand-receptor interaction	nmr-1
+Neuroactive ligand-receptor interaction	ser-4
+Neuroactive ligand-receptor interaction	trhr-1
+Neuroactive ligand-receptor interaction	mgl-1
+Neuroactive ligand-receptor interaction	mgl-2
+Neuroactive ligand-receptor interaction	mgl-3
+Neuroactive ligand-receptor interaction	ser-1
+Neuroactive ligand-receptor interaction	ckr-1
+Neuroactive ligand-receptor interaction	ckr-2
+Neuroactive ligand-receptor interaction	C41G7.9
+Neuroactive ligand-receptor interaction	gnrr-1
+Neuroactive ligand-receptor interaction	ser-7
+Neuroactive ligand-receptor interaction	gbb-2
+Neuroactive ligand-receptor interaction	gbb-1
+Neuroactive ligand-receptor interaction	dop-2
+Neuroactive ligand-receptor interaction	dop-1
+Neuroactive ligand-receptor interaction	dop-4
+Neuroactive ligand-receptor interaction	par-3
+Neuroactive ligand-receptor interaction	dop-3
+Nicotinate and nicotinamide metabolism	ndx-9
+Nicotinate and nicotinamide metabolism	anmt-1
+Nicotinate and nicotinamide metabolism	Y17G7B.10
+Nicotinate and nicotinamide metabolism	Y71H10B.1
+Nicotinate and nicotinamide metabolism	nprt-1
+Nicotinate and nicotinamide metabolism	F17C8.9
+Nicotinate and nicotinamide metabolism	nmat-2
+Nicotinate and nicotinamide metabolism	qns-1
+Nicotinate and nicotinamide metabolism	Y10G11A.1
+Nicotinate and nicotinamide metabolism	nnt-1
+Nicotinate and nicotinamide metabolism	gad-3
+Nicotinate and nicotinamide metabolism	nmat-1
+Nicotinate and nicotinamide metabolism	K02D7.1
+Nitrogen metabolism	bca-1
+Nitrogen metabolism	gln-3
+Nitrogen metabolism	cah-5
+Nitrogen metabolism	cah-6
+Nitrogen metabolism	gln-1
+Nitrogen metabolism	gln-2
+Nitrogen metabolism	nit-1
+Nitrogen metabolism	gdh-1
+Nitrogen metabolism	W07E11.1
+Nitrogen metabolism	gln-5
+Nitrogen metabolism	cah-3
+Nitrogen metabolism	gln-6
+Non-homologous end-joining	cku-70
+Non-homologous end-joining	lig-4
+Non-homologous end-joining	mre-11
+Non-homologous end-joining	crn-1
+Non-homologous end-joining	cku-80
+Non-homologous end-joining	rad-50
+Notch signaling pathway	hda-1
+Notch signaling pathway	hop-1
+Notch signaling pathway	hda-2
+Notch signaling pathway	hda-3
+Notch signaling pathway	ctbp-1
+Notch signaling pathway	pen-2
+Notch signaling pathway	pcaf-1
+Notch signaling pathway	spe-4
+Notch signaling pathway	lag-1
+Notch signaling pathway	dsh-2
+Notch signaling pathway	cir-1
+Notch signaling pathway	dsh-1
+Notch signaling pathway	num-1
+Notch signaling pathway	sel-12
+Notch signaling pathway	cbp-1
+Notch signaling pathway	adm-4
+Notch signaling pathway	aph-2
+Notch signaling pathway	aph-1
+Notch signaling pathway	skp-1
+Nucleotide excision repair	gtf-2H1
+Nucleotide excision repair	rfc-3
+Nucleotide excision repair	rfc-4
+Nucleotide excision repair	rfc-1
+Nucleotide excision repair	rfc-2
+Nucleotide excision repair	pcn-1
+Nucleotide excision repair	F10C2.4
+Nucleotide excision repair	R04F11.3
+Nucleotide excision repair	gtf-2H5
+Nucleotide excision repair	F44B9.8
+Nucleotide excision repair	F12F6.7
+Nucleotide excision repair	gtf-2H3
+Nucleotide excision repair	cdk-7
+Nucleotide excision repair	pole-2
+Nucleotide excision repair	rpa-4
+Nucleotide excision repair	pole-4
+Nucleotide excision repair	rad-23
+Nucleotide excision repair	ddb-1
+Nucleotide excision repair	pole-1
+Nucleotide excision repair	rpa-1
+Nucleotide excision repair	rpa-2
+Nucleotide excision repair	csb-1
+Nucleotide excision repair	cyh-1
+Nucleotide excision repair	ercc-1
+Nucleotide excision repair	xpd-1
+Nucleotide excision repair	T26A5.8
+Nucleotide excision repair	xpc-1
+Nucleotide excision repair	xpb-1
+Nucleotide excision repair	xpa-1
+Nucleotide excision repair	cul-4
+Nucleotide excision repair	mnat-1
+Nucleotide excision repair	lig-1
+Nucleotide excision repair	gtf-2H2C
+Nucleotide excision repair	Y73F8A.24
+Nucleotide excision repair	xpg-1
+Nucleotide excision repair	xpf-1
+Nucleotide excision repair	rbx-1
+One carbon pool by folate	tyms-1
+One carbon pool by folate	mel-32
+One carbon pool by folate	K07E3.4
+One carbon pool by folate	dao-3
+One carbon pool by folate	atic-1
+One carbon pool by folate	Y106G6E.4
+One carbon pool by folate	mthf-1
+One carbon pool by folate	alh-3
+One carbon pool by folate	F38B6.4
+One carbon pool by folate	gcst-1
+One carbon pool by folate	metr-1
+One carbon pool by folate	dhfr-1
+Other glycan degradation	eng-1
+Other glycan degradation	bgal-1
+Other glycan degradation	hex-4
+Other glycan degradation	hex-3
+Other glycan degradation	R04B3.2
+Other glycan degradation	W03G11.3
+Other glycan degradation	hex-5
+Other glycan degradation	C33G3.4
+Other glycan degradation	aman-1
+Other glycan degradation	gba-1
+Other glycan degradation	hpo-13
+Other glycan degradation	gba-3
+Other glycan degradation	gba-2
+Other glycan degradation	gba-4
+Other glycan degradation	hex-2
+Other glycan degradation	hex-1
+Other types of O-glycan biosynthesis	pad-2
+Other types of O-glycan biosynthesis	bre-4
+Other types of O-glycan biosynthesis	ogt-1
+Other types of O-glycan biosynthesis	H12D21.10
+Other types of O-glycan biosynthesis	ZC250.2
+Other types of O-glycan biosynthesis	C15C7.7
+Other types of O-glycan biosynthesis	D2045.9
+Oxidative phosphorylation	lpd-5
+Oxidative phosphorylation	nuo-2
+Oxidative phosphorylation	nuo-3
+Oxidative phosphorylation	nuo-4
+Oxidative phosphorylation	nuo-5
+Oxidative phosphorylation	mev-1
+Oxidative phosphorylation	nuo-1
+Oxidative phosphorylation	nuo-6
+Oxidative phosphorylation	C14B9.10
+Oxidative phosphorylation	F44G4.2
+Oxidative phosphorylation	F42G8.10
+Oxidative phosphorylation	isp-1
+Oxidative phosphorylation	C18E9.4
+Oxidative phosphorylation	F59C6.5
+Oxidative phosphorylation	ucr-11
+Oxidative phosphorylation	ZK809.3
+Oxidative phosphorylation	ZC262.5
+Oxidative phosphorylation	vha-9
+Oxidative phosphorylation	vha-8
+Oxidative phosphorylation	Y71H2AM.4
+Oxidative phosphorylation	vha-7
+Oxidative phosphorylation	vha-6
+Oxidative phosphorylation	vha-5
+Oxidative phosphorylation	Y51H1A.3
+Oxidative phosphorylation	vha-4
+Oxidative phosphorylation	vha-3
+Oxidative phosphorylation	vha-2
+Oxidative phosphorylation	cox-10
+Oxidative phosphorylation	vha-1
+Oxidative phosphorylation	R05D3.6
+Oxidative phosphorylation	cox-11
+Oxidative phosphorylation	cox-17
+Oxidative phosphorylation	cox-15
+Oxidative phosphorylation	ucr-2.2
+Oxidative phosphorylation	ucr-2.3
+Oxidative phosphorylation	ucr-2.1
+Oxidative phosphorylation	F45H10.3
+Oxidative phosphorylation	asg-1
+Oxidative phosphorylation	asg-2
+Oxidative phosphorylation	F45H10.2
+Oxidative phosphorylation	Y54F10AM.5
+Oxidative phosphorylation	C25H3.9
+Oxidative phosphorylation	sdhd-1
+Oxidative phosphorylation	gas-1
+Oxidative phosphorylation	nduf-2.2
+Oxidative phosphorylation	cox-6A
+Oxidative phosphorylation	cox-6C
+Oxidative phosphorylation	F37C12.3
+Oxidative phosphorylation	cox-6B
+Oxidative phosphorylation	T27E9.2
+Oxidative phosphorylation	cyc-1
+Oxidative phosphorylation	vha-12
+Oxidative phosphorylation	vha-13
+Oxidative phosphorylation	vha-10
+Oxidative phosphorylation	vha-11
+Oxidative phosphorylation	Y82E9BR.3
+Oxidative phosphorylation	vha-16
+Oxidative phosphorylation	vha-17
+Oxidative phosphorylation	sdha-2
+Oxidative phosphorylation	sdha-1
+Oxidative phosphorylation	nduf-5
+Oxidative phosphorylation	vha-14
+Oxidative phosphorylation	unc-32
+Oxidative phosphorylation	nduf-6
+Oxidative phosphorylation	vha-15
+Oxidative phosphorylation	vha-18
+Oxidative phosphorylation	vha-19
+Oxidative phosphorylation	atp-5
+Oxidative phosphorylation	atp-2
+Oxidative phosphorylation	F53F4.10
+Oxidative phosphorylation	atp-1
+Oxidative phosphorylation	cox-7C
+Oxidative phosphorylation	atp-3
+Oxidative phosphorylation	Y56A3A.19
+Oxidative phosphorylation	D2030.4
+Oxidative phosphorylation	Y63D3A.7
+Oxidative phosphorylation	F31D4.9
+Oxidative phosphorylation	Y53G8AL.2
+Oxidative phosphorylation	asb-2
+Oxidative phosphorylation	C34B2.8
+Oxidative phosphorylation	hpo-18
+Oxidative phosphorylation	nduf-7
+Oxidative phosphorylation	asb-1
+Oxidative phosphorylation	R07E4.3
+Oxidative phosphorylation	T02H6.11
+Oxidative phosphorylation	T20H4.5
+Oxidative phosphorylation	R53.4
+Oxidative phosphorylation	Y69A2AR.18
+Oxidative phosphorylation	R04F11.2
+Oxidative phosphorylation	C16A3.5
+Oxidative phosphorylation	C13C4.4
+Oxidative phosphorylation	sdhb-1
+Oxidative phosphorylation	spe-5
+Oxidative phosphorylation	pyp-1
+Oxidative phosphorylation	cox-5B
+Oxidative phosphorylation	cox-5A
+Oxidative phosphorylation	cox-4
+Oxidative phosphorylation	F58F12.1
+Oxidative phosphorylation	C33A12.1
+Pantothenate and CoA biosynthesis	dhp-2
+Pantothenate and CoA biosynthesis	Y65B4A.8
+Pantothenate and CoA biosynthesis	Y71H2AM.6
+Pantothenate and CoA biosynthesis	Y44A6D.5
+Pantothenate and CoA biosynthesis	bcat-1
+Pantothenate and CoA biosynthesis	T05G5.5
+Pantothenate and CoA biosynthesis	pnk-4
+Pantothenate and CoA biosynthesis	upb-1
+Pantothenate and CoA biosynthesis	F25H9.6
+Pantothenate and CoA biosynthesis	T28H10.1
+Pantothenate and CoA biosynthesis	dhp-1
+Pantothenate and CoA biosynthesis	dpyd-1
+Pantothenate and CoA biosynthesis	T04G9.4
+Pentose and glucuronate interconversions	ugt-62
+Pentose and glucuronate interconversions	ugt-61
+Pentose and glucuronate interconversions	ugt-50
+Pentose and glucuronate interconversions	ugt-48
+Pentose and glucuronate interconversions	ugt-15
+Pentose and glucuronate interconversions	R08D7.7
+Pentose and glucuronate interconversions	ugt-58
+Pentose and glucuronate interconversions	ugt-6
+Pentose and glucuronate interconversions	ugt-46
+Pentose and glucuronate interconversions	ugt-23
+Pentose and glucuronate interconversions	ugt-56
+Pentose and glucuronate interconversions	R04B5.5
+Pentose and glucuronate interconversions	ugt-55
+Pentose and glucuronate interconversions	dhs-21
+Pentose and glucuronate interconversions	R04B5.6
+Pentose and glucuronate interconversions	Y71F9B.9
+Pentose and glucuronate interconversions	ugt-18
+Pentose and glucuronate interconversions	K08E3.5
+Pentose and glucuronate interconversions	sqv-4
+Pentose and glucuronate interconversions	Y39G8B.1
+Pentose and glucuronate interconversions	F08F8.7
+Pentose and glucuronate interconversions	Y105E8B.9
+Pentose phosphate pathway	R05F9.6
+Pentose phosphate pathway	F09E5.3
+Pentose phosphate pathway	Y43F4B.5
+Pentose phosphate pathway	R151.2
+Pentose phosphate pathway	Y57G11C.3
+Pentose phosphate pathway	gspd-1
+Pentose phosphate pathway	C13B9.2
+Pentose phosphate pathway	tald-1
+Pentose phosphate pathway	tkt-1
+Pentose phosphate pathway	F07A11.5
+Pentose phosphate pathway	F26D11.1
+Pentose phosphate pathway	rpia-1
+Pentose phosphate pathway	F08F8.7
+Pentose phosphate pathway	pfk-1.1
+Pentose phosphate pathway	gpi-1
+Pentose phosphate pathway	fbp-1
+Pentose phosphate pathway	aldo-2
+Pentose phosphate pathway	pfk-1.2
+Pentose phosphate pathway	aldo-1
+Pentose phosphate pathway	T25B9.9
+Peroxisome	daf-22
+Peroxisome	ctl-3
+Peroxisome	ZK550.6
+Peroxisome	ZK550.5
+Peroxisome	agxt-1
+Peroxisome	acs-2
+Peroxisome	dhs-28
+Peroxisome	acs-4
+Peroxisome	mvk-1
+Peroxisome	Y71G12B.10
+Peroxisome	acs-3
+Peroxisome	C15B12.1
+Peroxisome	acs-5
+Peroxisome	maoc-1
+Peroxisome	prx-5
+Peroxisome	prx-19
+Peroxisome	mlcd-1
+Peroxisome	prx-13
+Peroxisome	prx-3
+Peroxisome	prx-14
+Peroxisome	prx-2
+Peroxisome	gstk-1
+Peroxisome	gstk-2
+Peroxisome	prx-10
+Peroxisome	fard-1
+Peroxisome	prx-11
+Peroxisome	prx-12
+Peroxisome	acs-18
+Peroxisome	Y25C1A.13
+Peroxisome	acs-16
+Peroxisome	acs-17
+Peroxisome	C24A3.4
+Peroxisome	ctl-2
+Peroxisome	ctl-1
+Peroxisome	F58A6.1
+Peroxisome	acox-3
+Peroxisome	F41E7.6
+Peroxisome	ddo-1
+Peroxisome	sod-1
+Peroxisome	ddo-2
+Peroxisome	sod-2
+Peroxisome	ddo-3
+Peroxisome	pmp-4
+Peroxisome	sod-3
+Peroxisome	pmp-3
+Peroxisome	T20B3.1
+Peroxisome	sod-4
+Peroxisome	idh-1
+Peroxisome	sod-5
+Peroxisome	idh-2
+Peroxisome	daao-1
+Peroxisome	T18D3.9
+Peroxisome	pmp-2
+Peroxisome	pmp-1
+Peroxisome	dhs-13
+Peroxisome	acs-15
+Peroxisome	acs-13
+Peroxisome	acl-7
+Peroxisome	dhrs-4
+Peroxisome	F18F11.1
+Peroxisome	acox-1.5
+Peroxisome	B0334.3
+Peroxisome	acox-1.4
+Peroxisome	acox-1.6
+Peroxisome	acox-1.1
+Peroxisome	acox-1.3
+Peroxisome	acox-1.2
+Peroxisome	B0395.3
+Peroxisome	F25E2.3
+Peroxisome	F32D8.13
+Peroxisome	ech-4
+Peroxisome	ndx-9
+Peroxisome	ads-1
+Peroxisome	xdh-1
+Peroxisome	F41E6.5
+Peroxisome	ZK892.4
+Phagosome	ced-10
+Phagosome	cpl-1
+Phagosome	emo-1
+Phagosome	ben-1
+Phagosome	hgrs-1
+Phagosome	vha-12
+Phagosome	vha-13
+Phagosome	vha-10
+Phagosome	vha-11
+Phagosome	vha-16
+Phagosome	sec-22
+Phagosome	vha-17
+Phagosome	vha-14
+Phagosome	unc-32
+Phagosome	vha-15
+Phagosome	tba-1
+Phagosome	vha-18
+Phagosome	tba-2
+Phagosome	vha-19
+Phagosome	tba-4
+Phagosome	tba-5
+Phagosome	tba-6
+Phagosome	rac-2
+Phagosome	tba-7
+Phagosome	sec-61
+Phagosome	tba-8
+Phagosome	tba-9
+Phagosome	lmp-1
+Phagosome	syx-18
+Phagosome	mec-12
+Phagosome	crt-1
+Phagosome	dyci-1
+Phagosome	che-3
+Phagosome	act-1
+Phagosome	act-3
+Phagosome	dhc-1
+Phagosome	act-2
+Phagosome	Y38F2AR.9
+Phagosome	vha-9
+Phagosome	cnx-1
+Phagosome	vha-8
+Phagosome	vha-7
+Phagosome	dli-1
+Phagosome	vha-6
+Phagosome	vha-5
+Phagosome	vha-4
+Phagosome	vha-3
+Phagosome	vha-2
+Phagosome	act-5
+Phagosome	vha-1
+Phagosome	act-4
+Phagosome	tbb-1
+Phagosome	spe-5
+Phagosome	rab-7
+Phagosome	tbb-2
+Phagosome	tbb-4
+Phagosome	tbb-6
+Phagosome	rab-5
+Phagosome	vps-34
+Phagosome	pat-3
+Phagosome	eea-1
+Phagosome	mec-7
+Phagosome	mig-2
+Phenylalanine metabolism	got-2.1
+Phenylalanine metabolism	got-1.2
+Phenylalanine metabolism	hpd-1
+Phenylalanine metabolism	tatn-1
+Phenylalanine metabolism	got-2.2
+Phenylalanine metabolism	hdl-1
+Phenylalanine metabolism	C31H2.4
+Phenylalanine metabolism	basl-1
+Phenylalanine metabolism	acs-6
+Phenylalanine metabolism	mif-1
+Phenylalanine metabolism	pah-1
+Phenylalanine, tyrosine and tryptophan biosynthesis	got-2.1
+Phenylalanine, tyrosine and tryptophan biosynthesis	got-1.2
+Phenylalanine, tyrosine and tryptophan biosynthesis	tatn-1
+Phenylalanine, tyrosine and tryptophan biosynthesis	got-2.2
+Phenylalanine, tyrosine and tryptophan biosynthesis	pah-1
+Phosphatidylinositol signaling system	gpap-1
+Phosphatidylinositol signaling system	F30A10.3
+Phosphatidylinositol signaling system	piki-1
+Phosphatidylinositol signaling system	ipmk-1
+Phosphatidylinositol signaling system	ocrl-1
+Phosphatidylinositol signaling system	unc-26
+Phosphatidylinositol signaling system	age-1
+Phosphatidylinositol signaling system	ZC8.6
+Phosphatidylinositol signaling system	inpp-1
+Phosphatidylinositol signaling system	K03A1.4
+Phosphatidylinositol signaling system	ipp-5
+Phosphatidylinositol signaling system	lfe-2
+Phosphatidylinositol signaling system	pkc-2
+Phosphatidylinositol signaling system	itr-1
+Phosphatidylinositol signaling system	Y71H2AM.2
+Phosphatidylinositol signaling system	C56A3.8
+Phosphatidylinositol signaling system	pifk-1
+Phosphatidylinositol signaling system	aap-1
+Phosphatidylinositol signaling system	mtm-6
+Phosphatidylinositol signaling system	ttx-7
+Phosphatidylinositol signaling system	sac-1
+Phosphatidylinositol signaling system	cmd-1
+Phosphatidylinositol signaling system	mtm-3
+Phosphatidylinositol signaling system	mtm-1
+Phosphatidylinositol signaling system	daf-18
+Phosphatidylinositol signaling system	egl-8
+Phosphatidylinositol signaling system	F46F11.1
+Phosphatidylinositol signaling system	ppk-3
+Phosphatidylinositol signaling system	vps-34
+Phosphatidylinositol signaling system	ppk-1
+Phosphatidylinositol signaling system	plc-3
+Phosphatidylinositol signaling system	cal-1
+Phosphatidylinositol signaling system	cdgs-1
+Phosphatidylinositol signaling system	plc-4
+Phosphatidylinositol signaling system	ppk-2
+Phosphatidylinositol signaling system	cal-2
+Phosphatidylinositol signaling system	W09C5.7
+Phosphatidylinositol signaling system	cal-3
+Phosphatidylinositol signaling system	Y75B8A.24
+Phosphatidylinositol signaling system	cal-4
+Phosphatidylinositol signaling system	plc-1
+Phosphatidylinositol signaling system	dgk-1
+Phosphatidylinositol signaling system	dgk-3
+Phosphatidylinositol signaling system	dgk-2
+Phosphatidylinositol signaling system	pisy-1
+Phosphatidylinositol signaling system	dgk-5
+Phosphatidylinositol signaling system	dgk-4
+Porphyrin and chlorophyll metabolism	ugt-62
+Porphyrin and chlorophyll metabolism	ugt-61
+Porphyrin and chlorophyll metabolism	ugt-50
+Porphyrin and chlorophyll metabolism	ears-2
+Porphyrin and chlorophyll metabolism	ears-1
+Porphyrin and chlorophyll metabolism	cox-15
+Porphyrin and chlorophyll metabolism	fecl-1
+Porphyrin and chlorophyll metabolism	ugt-48
+Porphyrin and chlorophyll metabolism	ugt-15
+Porphyrin and chlorophyll metabolism	mmab-1
+Porphyrin and chlorophyll metabolism	ugt-58
+Porphyrin and chlorophyll metabolism	ugt-6
+Porphyrin and chlorophyll metabolism	ugt-46
+Porphyrin and chlorophyll metabolism	ugt-23
+Porphyrin and chlorophyll metabolism	ugt-56
+Porphyrin and chlorophyll metabolism	frh-1
+Porphyrin and chlorophyll metabolism	ugt-55
+Porphyrin and chlorophyll metabolism	cchl-1
+Porphyrin and chlorophyll metabolism	ugt-18
+Porphyrin and chlorophyll metabolism	Y105E8B.9
+Porphyrin and chlorophyll metabolism	cox-10
+Propanoate metabolism	ech-1.2
+Propanoate metabolism	ech-1.1
+Propanoate metabolism	bckd-1A
+Propanoate metabolism	acdh-7
+Propanoate metabolism	bckd-1B
+Propanoate metabolism	sucl-1
+Propanoate metabolism	sucl-2
+Propanoate metabolism	ldh-1
+Propanoate metabolism	pcca-1
+Propanoate metabolism	pccb-1
+Propanoate metabolism	sucg-1
+Propanoate metabolism	dbt-1
+Propanoate metabolism	pod-2
+Propanoate metabolism	acdh-10
+Propanoate metabolism	acdh-8
+Propanoate metabolism	T02G5.7
+Propanoate metabolism	hach-1
+Propanoate metabolism	suca-1
+Propanoate metabolism	mmcm-1
+Propanoate metabolism	mlcd-1
+Propanoate metabolism	dld-1
+Propanoate metabolism	acs-19
+Propanoate metabolism	ech-7
+Propanoate metabolism	alh-8
+Propanoate metabolism	ech-6
+Propanoate metabolism	kat-1
+Propanoate metabolism	C32E8.9
+Propanoate metabolism	gta-1
+Propanoate metabolism	mce-1
+Proteasome	rpt-3
+Proteasome	rpn-9
+Proteasome	rpt-2
+Proteasome	rpn-8
+Proteasome	rpt-1
+Proteasome	rpn-7
+Proteasome	F37A4.5
+Proteasome	rpt-6
+Proteasome	C10G11.8
+Proteasome	rpt-5
+Proteasome	rpt-4
+Proteasome	rpn-1
+Proteasome	rpn-5
+Proteasome	rpn-3
+Proteasome	rpn-2
+Proteasome	pbs-5
+Proteasome	pbs-6
+Proteasome	Y66D12A.9
+Proteasome	pbs-7
+Proteasome	F56F11.4
+Proteasome	rpn-12
+Proteasome	rpn-11
+Proteasome	rpn-13
+Proteasome	pbs-1
+Proteasome	pbs-2
+Proteasome	rpn-10
+Proteasome	pbs-3
+Proteasome	pbs-4
+Proteasome	C14C10.5
+Proteasome	T28B8.4
+Proteasome	T28B8.3
+Proteasome	dss-1
+Proteasome	pas-4
+Proteasome	pas-5
+Proteasome	pas-6
+Proteasome	pas-7
+Proteasome	rpn-6.1
+Proteasome	rpn-6.2
+Proteasome	pas-1
+Proteasome	pas-2
+Proteasome	pas-3
+Protein export	sec-11
+Protein export	hsp-4
+Protein export	ZK512.4
+Protein export	spcs-3
+Protein export	hsp-3
+Protein export	F21D5.7
+Protein export	spcs-1
+Protein export	spcs-2
+Protein export	emo-1
+Protein export	immp-1
+Protein export	F38A1.8
+Protein export	immp-2
+Protein export	sec-61
+Protein export	oxa-1
+Protein export	dnj-29
+Protein export	srpa-68
+Protein export	F25G6.8
+Protein export	Y38F2AR.9
+Protein export	C18E9.2
+Protein export	F37F2.2
+Protein export	srpa-72
+Protein export	R186.3
+Protein processing in endoplasmic reticulum	hsp-70
+Protein processing in endoplasmic reticulum	pek-1
+Protein processing in endoplasmic reticulum	ubxn-2
+Protein processing in endoplasmic reticulum	emo-1
+Protein processing in endoplasmic reticulum	tram-1
+Protein processing in endoplasmic reticulum	ubxn-6
+Protein processing in endoplasmic reticulum	F44E5.5
+Protein processing in endoplasmic reticulum	rad-23
+Protein processing in endoplasmic reticulum	atf-6
+Protein processing in endoplasmic reticulum	F44E5.4
+Protein processing in endoplasmic reticulum	atf-5
+Protein processing in endoplasmic reticulum	pdr-1
+Protein processing in endoplasmic reticulum	sel-1
+Protein processing in endoplasmic reticulum	F54F2.9
+Protein processing in endoplasmic reticulum	ile-2
+Protein processing in endoplasmic reticulum	aagr-4
+Protein processing in endoplasmic reticulum	aagr-3
+Protein processing in endoplasmic reticulum	mogs-1
+Protein processing in endoplasmic reticulum	ile-1
+Protein processing in endoplasmic reticulum	Y49E10.4
+Protein processing in endoplasmic reticulum	pdi-2
+Protein processing in endoplasmic reticulum	ubc-6
+Protein processing in endoplasmic reticulum	pdi-1
+Protein processing in endoplasmic reticulum	ubc-7
+Protein processing in endoplasmic reticulum	hsp-110
+Protein processing in endoplasmic reticulum	ubc-26
+Protein processing in endoplasmic reticulum	pdi-3
+Protein processing in endoplasmic reticulum	dad-1
+Protein processing in endoplasmic reticulum	pdi-6
+Protein processing in endoplasmic reticulum	sar-1
+Protein processing in endoplasmic reticulum	Y54G2A.18
+Protein processing in endoplasmic reticulum	cup-2
+Protein processing in endoplasmic reticulum	cul-6
+Protein processing in endoplasmic reticulum	sec-61
+Protein processing in endoplasmic reticulum	C47E12.3
+Protein processing in endoplasmic reticulum	C18E9.2
+Protein processing in endoplasmic reticulum	hsp-90
+Protein processing in endoplasmic reticulum	T14G8.3
+Protein processing in endoplasmic reticulum	nsy-1
+Protein processing in endoplasmic reticulum	mans-3
+Protein processing in endoplasmic reticulum	mans-4
+Protein processing in endoplasmic reticulum	ufd-1
+Protein processing in endoplasmic reticulum	cnx-1
+Protein processing in endoplasmic reticulum	mans-1
+Protein processing in endoplasmic reticulum	mans-2
+Protein processing in endoplasmic reticulum	ufd-2
+Protein processing in endoplasmic reticulum	dnj-1
+Protein processing in endoplasmic reticulum	ufd-3
+Protein processing in endoplasmic reticulum	bag-1
+Protein processing in endoplasmic reticulum	dnj-7
+Protein processing in endoplasmic reticulum	ero-1
+Protein processing in endoplasmic reticulum	eif-2alpha
+Protein processing in endoplasmic reticulum	ostb-1
+Protein processing in endoplasmic reticulum	ubql-1
+Protein processing in endoplasmic reticulum	sel-11
+Protein processing in endoplasmic reticulum	T24H7.2
+Protein processing in endoplasmic reticulum	enpl-1
+Protein processing in endoplasmic reticulum	rbx-1
+Protein processing in endoplasmic reticulum	skr-14
+Protein processing in endoplasmic reticulum	uggt-1
+Protein processing in endoplasmic reticulum	skr-13
+Protein processing in endoplasmic reticulum	skr-16
+Protein processing in endoplasmic reticulum	skr-15
+Protein processing in endoplasmic reticulum	skr-10
+Protein processing in endoplasmic reticulum	skr-12
+Protein processing in endoplasmic reticulum	rnf-5
+Protein processing in endoplasmic reticulum	chn-1
+Protein processing in endoplasmic reticulum	gcn-2
+Protein processing in endoplasmic reticulum	skr-18
+Protein processing in endoplasmic reticulum	skr-17
+Protein processing in endoplasmic reticulum	npp-20
+Protein processing in endoplasmic reticulum	F10C2.5
+Protein processing in endoplasmic reticulum	skr-19
+Protein processing in endoplasmic reticulum	R151.6
+Protein processing in endoplasmic reticulum	npl-4.1
+Protein processing in endoplasmic reticulum	jnk-1
+Protein processing in endoplasmic reticulum	hsp-4
+Protein processing in endoplasmic reticulum	skr-21
+Protein processing in endoplasmic reticulum	hsp-3
+Protein processing in endoplasmic reticulum	skr-20
+Protein processing in endoplasmic reticulum	sec-23
+Protein processing in endoplasmic reticulum	hsp-1
+Protein processing in endoplasmic reticulum	atx-3
+Protein processing in endoplasmic reticulum	npl-4.2
+Protein processing in endoplasmic reticulum	stt-3
+Protein processing in endoplasmic reticulum	cdc-48.1
+Protein processing in endoplasmic reticulum	cdc-48.3
+Protein processing in endoplasmic reticulum	cdc-48.2
+Protein processing in endoplasmic reticulum	hrdl-1
+Protein processing in endoplasmic reticulum	xbp-1
+Protein processing in endoplasmic reticulum	ubc-14
+Protein processing in endoplasmic reticulum	crt-1
+Protein processing in endoplasmic reticulum	marc-6
+Protein processing in endoplasmic reticulum	unc-23
+Protein processing in endoplasmic reticulum	ubc-15
+Protein processing in endoplasmic reticulum	sec-12
+Protein processing in endoplasmic reticulum	dnj-20
+Protein processing in endoplasmic reticulum	dnj-29
+Protein processing in endoplasmic reticulum	dnj-28
+Protein processing in endoplasmic reticulum	dnj-27
+Protein processing in endoplasmic reticulum	Y38F2AR.9
+Protein processing in endoplasmic reticulum	ZC506.1
+Protein processing in endoplasmic reticulum	cul-1
+Protein processing in endoplasmic reticulum	trap-3
+Protein processing in endoplasmic reticulum	trap-4
+Protein processing in endoplasmic reticulum	trap-1
+Protein processing in endoplasmic reticulum	F11F1.1
+Protein processing in endoplasmic reticulum	trap-2
+Protein processing in endoplasmic reticulum	skr-2
+Protein processing in endoplasmic reticulum	skr-3
+Protein processing in endoplasmic reticulum	C14B9.2
+Protein processing in endoplasmic reticulum	skr-1
+Protein processing in endoplasmic reticulum	ZK1307.8
+Protein processing in endoplasmic reticulum	Y56A3A.2
+Protein processing in endoplasmic reticulum	sec-24.2
+Protein processing in endoplasmic reticulum	kgb-1
+Protein processing in endoplasmic reticulum	sec-24.1
+Protein processing in endoplasmic reticulum	kgb-2
+Protein processing in endoplasmic reticulum	skn-1
+Protein processing in endoplasmic reticulum	skr-8
+Protein processing in endoplasmic reticulum	ire-1
+Protein processing in endoplasmic reticulum	ostd-1
+Protein processing in endoplasmic reticulum	skr-9
+Protein processing in endoplasmic reticulum	skr-6
+Protein processing in endoplasmic reticulum	skr-7
+Protein processing in endoplasmic reticulum	skr-4
+Protein processing in endoplasmic reticulum	skr-5
+Protein processing in endoplasmic reticulum	dnj-14
+Protein processing in endoplasmic reticulum	dnj-12
+Protein processing in endoplasmic reticulum	png-1
+Protein processing in endoplasmic reticulum	Y105E8A.2
+Protein processing in endoplasmic reticulum	dnj-19
+Protein processing in endoplasmic reticulum	ZK686.3
+Protein processing in endoplasmic reticulum	ribo-1
+Protein processing in endoplasmic reticulum	mek-1
+Protein processing in endoplasmic reticulum	let-70
+Purine metabolism	pacs-1
+Purine metabolism	rnr-2
+Purine metabolism	R05F9.6
+Purine metabolism	pfas-1
+Purine metabolism	rnr-1
+Purine metabolism	atic-1
+Purine metabolism	R09H10.3
+Purine metabolism	Y10G11A.1
+Purine metabolism	gcy-17
+Purine metabolism	T22D1.3
+Purine metabolism	gmps-1
+Purine metabolism	gcy-18
+Purine metabolism	ZK673.2
+Purine metabolism	gcy-12
+Purine metabolism	gcy-15
+Purine metabolism	K02D7.1
+Purine metabolism	gcy-14
+Purine metabolism	acy-1
+Purine metabolism	pde-6
+Purine metabolism	pde-5
+Purine metabolism	guk-1
+Purine metabolism	pyk-2
+Purine metabolism	Y43F4B.5
+Purine metabolism	R151.2
+Purine metabolism	pyk-1
+Purine metabolism	pps-1
+Purine metabolism	pde-2
+Purine metabolism	pde-1
+Purine metabolism	pde-4
+Purine metabolism	pde-3
+Purine metabolism	R07H5.8
+Purine metabolism	ppat-1
+Purine metabolism	gcy-31
+Purine metabolism	gcy-33
+Purine metabolism	adsl-1
+Purine metabolism	gcy-32
+Purine metabolism	ndk-1
+Purine metabolism	E02H1.6
+Purine metabolism	ZK697.8
+Purine metabolism	mig-23
+Purine metabolism	ampd-1
+Purine metabolism	hprt-1
+Purine metabolism	gcy-35
+Purine metabolism	gcy-34
+Purine metabolism	gcy-36
+Purine metabolism	gcy-20
+Purine metabolism	pdl-1
+Purine metabolism	gcy-21
+Purine metabolism	F32D1.5
+Purine metabolism	apy-1
+Purine metabolism	uda-1
+Purine metabolism	F38B6.4
+Purine metabolism	F38B2.4
+Purine metabolism	let-754
+Purine metabolism	Y71H10B.1
+Purine metabolism	ZK909.3
+Purine metabolism	ndx-4
+Purine metabolism	xdh-1
+Purine metabolism	ndx-6
+Purine metabolism	T19B4.3
+Purine metabolism	gcy-3
+Purine metabolism	gcy-28
+Purine metabolism	ZK563.7
+Purine metabolism	gcy-1
+Purine metabolism	adss-1
+Purine metabolism	gcy-2
+Purine metabolism	gcy-8
+Purine metabolism	hap-1
+Purine metabolism	gcy-23
+Purine metabolism	gcy-5
+Purine metabolism	R05G6.5
+Purine metabolism	C06G3.5
+Pyrimidine metabolism	rnr-2
+Pyrimidine metabolism	dhp-2
+Pyrimidine metabolism	rnr-1
+Pyrimidine metabolism	cdd-1
+Pyrimidine metabolism	cdd-2
+Pyrimidine metabolism	umps-1
+Pyrimidine metabolism	ndk-1
+Pyrimidine metabolism	C29F7.3
+Pyrimidine metabolism	dtmk-1
+Pyrimidine metabolism	dhod-1
+Pyrimidine metabolism	upb-1
+Pyrimidine metabolism	mig-23
+Pyrimidine metabolism	Y10G11A.1
+Pyrimidine metabolism	B0001.4
+Pyrimidine metabolism	F19B6.1
+Pyrimidine metabolism	dhp-1
+Pyrimidine metabolism	upp-1
+Pyrimidine metabolism	dpyd-1
+Pyrimidine metabolism	K02D7.1
+Pyrimidine metabolism	tyms-1
+Pyrimidine metabolism	F40F8.1
+Pyrimidine metabolism	apy-1
+Pyrimidine metabolism	thk-1
+Pyrimidine metabolism	uda-1
+Pyrimidine metabolism	pyr-1
+Pyrimidine metabolism	T24C12.3
+Pyrimidine metabolism	ctps-1
+Pyrimidine metabolism	Y71H10B.1
+Pyrimidine metabolism	ndx-4
+Pyrimidine metabolism	ZK563.7
+Pyrimidine metabolism	C47B2.2
+Pyrimidine metabolism	ZK643.2
+Pyrimidine metabolism	dut-1
+Pyrimidine metabolism	R05G6.5
+Pyruvate metabolism	Y17G7B.3
+Pyruvate metabolism	pck-1
+Pyruvate metabolism	pck-2
+Pyruvate metabolism	alh-11
+Pyruvate metabolism	ldh-1
+Pyruvate metabolism	fum-1
+Pyruvate metabolism	alh-12
+Pyruvate metabolism	pod-2
+Pyruvate metabolism	T02G5.7
+Pyruvate metabolism	mdh-2
+Pyruvate metabolism	mdh-1
+Pyruvate metabolism	pyc-1
+Pyruvate metabolism	pdha-1
+Pyruvate metabolism	pdhb-1
+Pyruvate metabolism	alh-9
+Pyruvate metabolism	icl-1
+Pyruvate metabolism	pyk-2
+Pyruvate metabolism	pyk-1
+Pyruvate metabolism	alh-2
+Pyruvate metabolism	alh-1
+Pyruvate metabolism	alh-4
+Pyruvate metabolism	dld-1
+Pyruvate metabolism	alh-5
+Pyruvate metabolism	acs-19
+Pyruvate metabolism	F32D8.12
+Pyruvate metabolism	kat-1
+Pyruvate metabolism	men-1
+Pyruvate metabolism	dlat-1
+Pyruvate metabolism	dlat-2
+RNA degradation	F29A7.6
+RNA degradation	mtr-4
+RNA degradation	enol-1
+RNA degradation	patr-1
+RNA degradation	hsp-6
+RNA degradation	xrn-1
+RNA degradation	Y51H7C.7
+RNA degradation	xrn-2
+RNA degradation	lsm-7
+RNA degradation	lsm-6
+RNA degradation	skih-2
+RNA degradation	lsm-5
+RNA degradation	lsm-4
+RNA degradation	lsm-3
+RNA degradation	lsm-1
+RNA degradation	exos-4.1
+RNA degradation	lsm-8
+RNA degradation	exos-4.2
+RNA degradation	dcs-1
+RNA degradation	pab-2
+RNA degradation	pab-1
+RNA degradation	exos-7
+RNA degradation	exos-9
+RNA degradation	crn-3
+RNA degradation	crn-5
+RNA degradation	fog-3
+RNA degradation	panl-2
+RNA degradation	parn-1
+RNA degradation	panl-3
+RNA degradation	hsp-60
+RNA degradation	dis-3
+RNA degradation	cgh-1
+RNA degradation	gut-2
+RNA degradation	ccf-1
+RNA degradation	ntl-4
+RNA degradation	BE0003N10.1
+RNA degradation	ntl-2
+RNA degradation	ntl-3
+RNA degradation	exos-1
+RNA degradation	exos-2
+RNA degradation	exos-3
+RNA degradation	dcap-1
+RNA degradation	ntl-9
+RNA degradation	let-711
+RNA degradation	dcap-2
+RNA degradation	ccr-4
+RNA degradation	pfk-1.1
+RNA degradation	gld-4
+RNA degradation	pfk-1.2
+RNA polymerase	rpac-40
+RNA polymerase	rpc-11
+RNA polymerase	Y47G6A.9
+RNA polymerase	rpb-4
+RNA polymerase	rpb-5
+RNA polymerase	rpb-2
+RNA polymerase	rpc-1
+RNA polymerase	rpb-3
+RNA polymerase	rpc-2
+RNA polymerase	rpb-8
+RNA polymerase	rpb-9
+RNA polymerase	rpb-6
+RNA polymerase	rpb-12
+RNA polymerase	rpb-11
+RNA polymerase	rpb-7
+RNA polymerase	rpb-10
+RNA polymerase	rpc-25
+RNA polymerase	W06E11.1
+RNA polymerase	let-611
+RNA polymerase	ama-1
+RNA polymerase	rpoa-2
+RNA polymerase	rpoa-12
+RNA polymerase	rpoa-1
+RNA polymerase	W09C3.4
+RNA polymerase	rpac-19
+RNA transport	rnp-4
+RNA transport	rnp-5
+RNA transport	Y71H2B.2
+RNA transport	C02B10.4
+RNA transport	C24H11.5
+RNA transport	icln-1
+RNA transport	eif-2Bbeta
+RNA transport	prmt-5
+RNA transport	C05C10.2
+RNA transport	rae-1
+RNA transport	pqn-27
+RNA transport	T25G3.3
+RNA transport	eif-2beta
+RNA transport	pab-2
+RNA transport	pab-1
+RNA transport	gex-2
+RNA transport	eif-1
+RNA transport	F57B9.3
+RNA transport	W08E3.2
+RNA transport	smg-4
+RNA transport	smg-3
+RNA transport	smg-2
+RNA transport	ran-1
+RNA transport	ran-2
+RNA transport	ife-5
+RNA transport	ife-4
+RNA transport	ife-3
+RNA transport	ife-2
+RNA transport	ife-1
+RNA transport	smo-1
+RNA transport	ubc-9
+RNA transport	eif-2alpha
+RNA transport	T20G5.9
+RNA transport	nxt-1
+RNA transport	T08G11.4
+RNA transport	hoe-1
+RNA transport	npp-11
+RNA transport	eif-1.A
+RNA transport	F23F1.5
+RNA transport	npp-12
+RNA transport	npp-10
+RNA transport	npp-2
+RNA transport	npp-3
+RNA transport	npp-1
+RNA transport	npp-6
+RNA transport	egl-45
+RNA transport	C15C6.4
+RNA transport	hpo-31
+RNA transport	npp-5
+RNA transport	aly-1
+RNA transport	Y66A7A.2
+RNA transport	npp-8
+RNA transport	aly-3
+RNA transport	npp-9
+RNA transport	mag-1
+RNA transport	aly-2
+RNA transport	ZK632.14
+RNA transport	F10E9.5
+RNA transport	uev-2
+RNA transport	npp-22
+RNA transport	npp-23
+RNA transport	npp-20
+RNA transport	npp-21
+RNA transport	D1007.4
+RNA transport	npp-15
+RNA transport	smn-1
+RNA transport	ncbp-1
+RNA transport	npp-16
+RNA transport	ncbp-2
+RNA transport	npp-13
+RNA transport	npp-14
+RNA transport	npp-19
+RNA transport	npp-18
+RNA transport	C05D11.9
+RNA transport	Y65B4A.6
+RNA transport	Y62E10A.2
+RNA transport	inf-1
+RNA transport	H35B03.2
+RNA transport	rsr-1
+RNA transport	pnn-1
+RNA transport	xpo-3
+RNA transport	C16C10.4
+RNA transport	xpo-1
+RNA transport	thoc-7
+RNA transport	thoc-5
+RNA transport	thoc-3
+RNA transport	thoc-2
+RNA transport	thoc-1
+RNA transport	eif-3.G
+RNA transport	smi-1
+RNA transport	eif-3.H
+RNA transport	eif-3.I
+RNA transport	eif-3.J
+RNA transport	nxf-1
+RNA transport	eif-2gamma
+RNA transport	ifg-1
+RNA transport	acin-1
+RNA transport	C44H9.4
+RNA transport	nxf-2
+RNA transport	iffb-1
+RNA transport	eif-3.C
+RNA transport	eif-3.D
+RNA transport	eif-3.E
+RNA transport	eif-3.F
+RNA transport	F33D11.10
+RNA transport	eif-3.B
+RNA transport	eef-1A.2
+RNA transport	eef-1A.1
+RNA transport	C37C3.2
+RNA transport	imb-1
+RNA transport	hel-1
+RNA transport	mel-46
+Retinol metabolism	ugt-62
+Retinol metabolism	ugt-61
+Retinol metabolism	ugt-50
+Retinol metabolism	dhs-3
+Retinol metabolism	H24K24.3
+Retinol metabolism	ugt-48
+Retinol metabolism	ugt-15
+Retinol metabolism	ugt-58
+Retinol metabolism	sodh-1
+Retinol metabolism	ugt-6
+Retinol metabolism	ugt-46
+Retinol metabolism	ugt-23
+Retinol metabolism	sodh-2
+Retinol metabolism	ugt-56
+Retinol metabolism	dhs-13
+Retinol metabolism	ugt-55
+Retinol metabolism	mboa-2
+Retinol metabolism	dhs-19
+Retinol metabolism	gad-3
+Retinol metabolism	ugt-18
+Retinol metabolism	D2063.1
+Retinol metabolism	dhrs-4
+Riboflavin metabolism	pho-1
+Riboflavin metabolism	flad-1
+Riboflavin metabolism	pho-4
+Riboflavin metabolism	F26C11.1
+Riboflavin metabolism	Y94H6A.7
+Riboflavin metabolism	pho-14
+Riboflavin metabolism	F02E9.7
+Riboflavin metabolism	C27A2.12
+Riboflavin metabolism	R10H10.6
+Riboflavin metabolism	pho-13
+Riboflavin metabolism	pho-12
+Riboflavin metabolism	pho-11
+Riboflavin metabolism	pho-10
+Ribosome	rps-4
+Ribosome	rps-3
+Ribosome	rps-2
+Ribosome	rps-1
+Ribosome	rps-8
+Ribosome	rrn-3.1
+Ribosome	rps-7
+Ribosome	rps-6
+Ribosome	rps-5
+Ribosome	rps-0
+Ribosome	mrps-21
+Ribosome	rla-0
+Ribosome	rla-2
+Ribosome	rla-1
+Ribosome	ubl-1
+Ribosome	rpl-39
+Ribosome	mrps-17
+Ribosome	rpl-35
+Ribosome	rpl-36
+Ribosome	mrps-15
+Ribosome	rpl-37
+Ribosome	rpl-38
+Ribosome	mrps-16
+Ribosome	mrps-14
+Ribosome	mrps-11
+Ribosome	mrps-12
+Ribosome	mrps-10
+Ribosome	rpl-25.1
+Ribosome	Y54G11A.17
+Ribosome	rpl-25.2
+Ribosome	rpl-43
+Ribosome	rpl-28
+Ribosome	rpl-29
+Ribosome	K08C9.7
+Ribosome	rpl-41.2
+Ribosome	rpl-9
+Ribosome	rpl-41.1
+Ribosome	rpl-26
+Ribosome	rpl-27
+Ribosome	rrn-2.1
+Ribosome	rpl-2
+Ribosome	mrps-9
+Ribosome	rpl-3
+Ribosome	mrps-7
+Ribosome	mrps-6
+Ribosome	rpl-1
+Ribosome	rpl-6
+Ribosome	rpl-7
+Ribosome	C37A2.7
+Ribosome	rpl-4
+Ribosome	rpl-5
+Ribosome	mrps-18.C
+Ribosome	mrps-5
+Ribosome	mrps-2
+Ribosome	rpl-31
+Ribosome	rpl-32
+Ribosome	rpl-33
+Ribosome	rpl-34
+Ribosome	rpl-11.1
+Ribosome	rpl-11.2
+Ribosome	rpl-30
+Ribosome	rpl-17
+Ribosome	rpl-18
+Ribosome	rpl-19
+Ribosome	rpl-13
+Ribosome	rrn-4.10
+Ribosome	rpl-14
+Ribosome	rpl-15
+Ribosome	rpl-16
+Ribosome	rrn-4.14
+Ribosome	rrn-4.13
+Ribosome	rrn-4.12
+Ribosome	rrn-4.11
+Ribosome	Y73B3A.18
+Ribosome	rrn-4.16
+Ribosome	rrn-4.15
+Ribosome	rpl-20
+Ribosome	rpl-21
+Ribosome	rpl-22
+Ribosome	rpl-23
+Ribosome	mrpl-32
+Ribosome	mrpl-30
+Ribosome	mrpl-36
+Ribosome	mrpl-35
+Ribosome	rrn-1.1
+Ribosome	rrn-1.2
+Ribosome	W01D2.1
+Ribosome	mrpl-9
+Ribosome	rpl-10
+Ribosome	rpl-12
+Ribosome	mrpl-4
+Ribosome	mrpl-2
+Ribosome	mrpl-1
+Ribosome	mrpl-22
+Ribosome	mrpl-21
+Ribosome	mrpl-20
+Ribosome	mrpl-24
+Ribosome	mrpl-23
+Ribosome	rpl-7A
+Ribosome	rps-30
+Ribosome	mrpl-28
+Ribosome	mrpl-11
+Ribosome	mrpl-10
+Ribosome	mrpl-15
+Ribosome	mrpl-14
+Ribosome	rrn-4.1
+Ribosome	mrpl-13
+Ribosome	mrpl-12
+Ribosome	rrn-4.4
+Ribosome	rpl-36.A
+Ribosome	rrn-4.5
+Ribosome	rrn-4.2
+Ribosome	rrn-4.3
+Ribosome	Y37E3.8
+Ribosome	rrn-4.8
+Ribosome	rrn-4.9
+Ribosome	rrn-4.6
+Ribosome	rrn-4.7
+Ribosome	rps-22
+Ribosome	rps-21
+Ribosome	rps-20
+Ribosome	ubq-2
+Ribosome	mrpl-19
+Ribosome	rps-29
+Ribosome	mrpl-18
+Ribosome	mrps-18C
+Ribosome	rps-28
+Ribosome	mrpl-17
+Ribosome	mrpl-16
+Ribosome	rps-27
+Ribosome	mrps-18A
+Ribosome	rps-26
+Ribosome	rps-25
+Ribosome	rps-24
+Ribosome	rps-23
+Ribosome	rps-11
+Ribosome	rps-10
+Ribosome	rps-19
+Ribosome	rpl-24.2
+Ribosome	rps-18
+Ribosome	rps-17
+Ribosome	rps-9
+Ribosome	rps-16
+Ribosome	F34H10.1
+Ribosome	rps-15
+Ribosome	rps-14
+Ribosome	rps-13
+Ribosome	rps-12
+Ribosome	rpl-24.1
+Ribosome biogenesis in eukaryotes	kin-3
+Ribosome biogenesis in eukaryotes	nol-56
+Ribosome biogenesis in eukaryotes	ZK632.14
+Ribosome biogenesis in eukaryotes	rrn-3.1
+Ribosome biogenesis in eukaryotes	rrn-1.1
+Ribosome biogenesis in eukaryotes	nol-58
+Ribosome biogenesis in eukaryotes	rrn-1.2
+Ribosome biogenesis in eukaryotes	ZC434.4
+Ribosome biogenesis in eukaryotes	F55F8.3
+Ribosome biogenesis in eukaryotes	nol-6
+Ribosome biogenesis in eukaryotes	Y53C12B.1
+Ribosome biogenesis in eukaryotes	nst-1
+Ribosome biogenesis in eukaryotes	C53H9.2
+Ribosome biogenesis in eukaryotes	pqe-1
+Ribosome biogenesis in eukaryotes	C05D11.9
+Ribosome biogenesis in eukaryotes	toe-1
+Ribosome biogenesis in eukaryotes	Y62E10A.2
+Ribosome biogenesis in eukaryotes	H35B03.2
+Ribosome biogenesis in eukaryotes	xrn-1
+Ribosome biogenesis in eukaryotes	xrn-2
+Ribosome biogenesis in eukaryotes	ZK795.3
+Ribosome biogenesis in eukaryotes	Y66H1A.4
+Ribosome biogenesis in eukaryotes	F27C1.6
+Ribosome biogenesis in eukaryotes	M28.5
+Ribosome biogenesis in eukaryotes	T25G3.3
+Ribosome biogenesis in eukaryotes	C48B6.2
+Ribosome biogenesis in eukaryotes	Y45F10D.7
+Ribosome biogenesis in eukaryotes	Y75B8A.7
+Ribosome biogenesis in eukaryotes	sbds-1
+Ribosome biogenesis in eukaryotes	K10C3.5
+Ribosome biogenesis in eukaryotes	xpo-1
+Ribosome biogenesis in eukaryotes	C05C8.5
+Ribosome biogenesis in eukaryotes	nola-3
+Ribosome biogenesis in eukaryotes	B0280.9
+Ribosome biogenesis in eukaryotes	F13H8.2
+Ribosome biogenesis in eukaryotes	Y48A6B.3
+Ribosome biogenesis in eukaryotes	F30A10.9
+Ribosome biogenesis in eukaryotes	rrn-4.1
+Ribosome biogenesis in eukaryotes	drsh-1
+Ribosome biogenesis in eukaryotes	rrn-2.1
+Ribosome biogenesis in eukaryotes	rrn-4.4
+Ribosome biogenesis in eukaryotes	Y56A3A.33
+Ribosome biogenesis in eukaryotes	rrn-4.5
+Ribosome biogenesis in eukaryotes	eif-6
+Ribosome biogenesis in eukaryotes	rrn-4.2
+Ribosome biogenesis in eukaryotes	nog-1
+Ribosome biogenesis in eukaryotes	kin-10
+Ribosome biogenesis in eukaryotes	rrn-4.3
+Ribosome biogenesis in eukaryotes	fib-1
+Ribosome biogenesis in eukaryotes	rrn-4.8
+Ribosome biogenesis in eukaryotes	rrn-4.9
+Ribosome biogenesis in eukaryotes	rrn-4.6
+Ribosome biogenesis in eukaryotes	E02H1.6
+Ribosome biogenesis in eukaryotes	rrn-4.7
+Ribosome biogenesis in eukaryotes	riok-1
+Ribosome biogenesis in eukaryotes	riok-2
+Ribosome biogenesis in eukaryotes	Y23H5B.5
+Ribosome biogenesis in eukaryotes	ran-1
+Ribosome biogenesis in eukaryotes	nxf-1
+Ribosome biogenesis in eukaryotes	nath-10
+Ribosome biogenesis in eukaryotes	ngp-1
+Ribosome biogenesis in eukaryotes	rrn-4.10
+Ribosome biogenesis in eukaryotes	nxf-2
+Ribosome biogenesis in eukaryotes	rrn-4.14
+Ribosome biogenesis in eukaryotes	rrn-4.13
+Ribosome biogenesis in eukaryotes	rbm-28
+Ribosome biogenesis in eukaryotes	rrn-4.12
+Ribosome biogenesis in eukaryotes	nxt-1
+Ribosome biogenesis in eukaryotes	rrn-4.11
+Ribosome biogenesis in eukaryotes	rrn-4.16
+Ribosome biogenesis in eukaryotes	K01G5.5
+Ribosome biogenesis in eukaryotes	rrn-4.15
+Ribosome biogenesis in eukaryotes	C15C6.4
+Ribosome biogenesis in eukaryotes	C08B6.8
+Ribosome biogenesis in eukaryotes	ZK1127.5
+Ribosome biogenesis in eukaryotes	Y66A7A.2
+Ribosome biogenesis in eukaryotes	Y39A1A.14
+Ribosome biogenesis in eukaryotes	Y61A9LA.10
+Ribosome biogenesis in eukaryotes	Y54E10BR.4
+Ribosome biogenesis in eukaryotes	mac-1
+Ribosome biogenesis in eukaryotes	F55F10.1
+SNARE interactions in vesicular transport	unc-64
+SNARE interactions in vesicular transport	syx-16
+SNARE interactions in vesicular transport	syx-5
+SNARE interactions in vesicular transport	syx-4
+SNARE interactions in vesicular transport	syx-6
+SNARE interactions in vesicular transport	syx-3
+SNARE interactions in vesicular transport	vti-1
+SNARE interactions in vesicular transport	syx-2
+SNARE interactions in vesicular transport	sec-22
+SNARE interactions in vesicular transport	snb-1
+SNARE interactions in vesicular transport	sec-20
+SNARE interactions in vesicular transport	snap-29
+SNARE interactions in vesicular transport	snb-5
+SNARE interactions in vesicular transport	snb-6
+SNARE interactions in vesicular transport	use-1
+SNARE interactions in vesicular transport	nbet-1
+SNARE interactions in vesicular transport	ykt-6
+SNARE interactions in vesicular transport	memb-1
+SNARE interactions in vesicular transport	vamp-7
+SNARE interactions in vesicular transport	memb-2
+SNARE interactions in vesicular transport	gos-28
+SNARE interactions in vesicular transport	snb-7
+SNARE interactions in vesicular transport	syx-18
+SNARE interactions in vesicular transport	syx-17
+SNARE interactions in vesicular transport	vamp-8
+Selenocompound metabolism	F13H8.9
+Selenocompound metabolism	pps-1
+Selenocompound metabolism	trxr-1
+Selenocompound metabolism	trxr-2
+Selenocompound metabolism	Y105E8A.20
+Selenocompound metabolism	seld-1
+Selenocompound metabolism	cth-2
+Selenocompound metabolism	cth-1
+Selenocompound metabolism	nkat-3
+Selenocompound metabolism	mars-1
+Selenocompound metabolism	pstk-1
+Selenocompound metabolism	nkat-1
+Selenocompound metabolism	metr-1
+Selenocompound metabolism	secs-1
+Sphingolipid metabolism	plpp-1.1
+Sphingolipid metabolism	sptl-2
+Sphingolipid metabolism	sptl-1
+Sphingolipid metabolism	R05D11.9
+Sphingolipid metabolism	sptl-3
+Sphingolipid metabolism	hyl-1
+Sphingolipid metabolism	asm-3
+Sphingolipid metabolism	hyl-2
+Sphingolipid metabolism	F33D4.4
+Sphingolipid metabolism	asah-1
+Sphingolipid metabolism	asah-2
+Sphingolipid metabolism	sms-3
+Sphingolipid metabolism	sms-2
+Sphingolipid metabolism	sms-1
+Sphingolipid metabolism	Y37E11AM.3
+Sphingolipid metabolism	W02F12.2
+Sphingolipid metabolism	bgal-1
+Sphingolipid metabolism	cerk-1
+Sphingolipid metabolism	ttm-5
+Sphingolipid metabolism	gba-1
+Sphingolipid metabolism	cgt-1
+Sphingolipid metabolism	lagr-1
+Sphingolipid metabolism	asm-1
+Sphingolipid metabolism	hpo-13
+Sphingolipid metabolism	gba-3
+Sphingolipid metabolism	asm-2
+Sphingolipid metabolism	gba-2
+Sphingolipid metabolism	T27F6.6
+Sphingolipid metabolism	gba-4
+Sphingolipid metabolism	cgt-3
+Sphingolipid metabolism	cgt-2
+Sphingolipid metabolism	spl-2
+Sphingolipid metabolism	sphk-1
+Sphingolipid metabolism	spl-1
+Sphingolipid metabolism	C29E4.10
+Spliceosome	hsp-70
+Spliceosome	uaf-2
+Spliceosome	rnp-4
+Spliceosome	snrp-200
+Spliceosome	uaf-1
+Spliceosome	C02B10.4
+Spliceosome	hrp-1
+Spliceosome	rnp-6
+Spliceosome	rnp-7
+Spliceosome	snr-7
+Spliceosome	ddx-23
+Spliceosome	syf-2
+Spliceosome	eftu-2
+Spliceosome	syf-1
+Spliceosome	T13H5.4
+Spliceosome	F44E5.5
+Spliceosome	snu-23
+Spliceosome	F44E5.4
+Spliceosome	M01E11.2
+Spliceosome	rsp-8
+Spliceosome	lsm-7
+Spliceosome	rsp-3
+Spliceosome	lsm-6
+Spliceosome	rsp-4
+Spliceosome	lsm-5
+Spliceosome	lsm-4
+Spliceosome	rsp-6
+Spliceosome	lsm-3
+Spliceosome	M28.5
+Spliceosome	rsp-1
+Spliceosome	rsp-2
+Spliceosome	M03F8.3
+Spliceosome	lsm-8
+Spliceosome	snrp-27
+Spliceosome	prp-21
+Spliceosome	Y108G3AL.2
+Spliceosome	F33H1.3
+Spliceosome	prp-17
+Spliceosome	skp-1
+Spliceosome	prp-19
+Spliceosome	prp-31
+Spliceosome	snrp-40.1
+Spliceosome	ddx-15
+Spliceosome	snrp-40.2
+Spliceosome	ddx-17
+Spliceosome	F32B6.3
+Spliceosome	gut-2
+Spliceosome	isy-1
+Spliceosome	F08B4.7
+Spliceosome	aly-1
+Spliceosome	aly-3
+Spliceosome	mag-1
+Spliceosome	aly-2
+Spliceosome	bud-31
+Spliceosome	C50D2.5
+Spliceosome	tag-65
+Spliceosome	tcer-1
+Spliceosome	pqbp-1.1
+Spliceosome	C07H6.4
+Spliceosome	usp-39
+Spliceosome	ncbp-1
+Spliceosome	ncbp-2
+Spliceosome	sftb-1
+Spliceosome	sftb-2
+Spliceosome	Y65B4A.6
+Spliceosome	prp-38
+Spliceosome	smr-1
+Spliceosome	prp-8
+Spliceosome	hsp-1
+Spliceosome	sap-49
+Spliceosome	prp-6
+Spliceosome	prp-4
+Spliceosome	prp-3
+Spliceosome	C46F11.4
+Spliceosome	mog-4
+Spliceosome	F19F10.9
+Spliceosome	mog-2
+Spliceosome	F53H1.1
+Spliceosome	mog-1
+Spliceosome	cyn-13
+Spliceosome	cyn-12
+Spliceosome	cyn-11
+Spliceosome	mog-5
+Spliceosome	emb-4
+Spliceosome	K07C5.6
+Spliceosome	rbm-17
+Spliceosome	cwc-15
+Spliceosome	teg-4
+Spliceosome	thoc-3
+Spliceosome	thoc-2
+Spliceosome	thoc-1
+Spliceosome	F11F1.1
+Spliceosome	acin-1
+Spliceosome	bcas-2
+Spliceosome	F33D11.10
+Spliceosome	rbm-25
+Spliceosome	phf-5
+Spliceosome	rbm-22
+Spliceosome	snr-1
+Spliceosome	plrg-1
+Spliceosome	Y69A2AR.21
+Spliceosome	snr-2
+Spliceosome	snr-3
+Spliceosome	snr-4
+Spliceosome	snr-5
+Spliceosome	snr-6
+Spliceosome	repo-1
+Spliceosome	hrpk-1
+Spliceosome	hel-1
+Spliceosome	Y54G2A.75
+Spliceosome	cdc-5L
+Starch and sucrose metabolism	R05F9.6
+Starch and sucrose metabolism	aagr-1
+Starch and sucrose metabolism	Y43F4B.5
+Starch and sucrose metabolism	klo-1
+Starch and sucrose metabolism	pygl-1
+Starch and sucrose metabolism	agl-1
+Starch and sucrose metabolism	hxk-1
+Starch and sucrose metabolism	gsy-1
+Starch and sucrose metabolism	K08E3.5
+Starch and sucrose metabolism	T04A8.7
+Starch and sucrose metabolism	tre-5
+Starch and sucrose metabolism	gyg-2
+Starch and sucrose metabolism	tre-3
+Starch and sucrose metabolism	gyg-1
+Starch and sucrose metabolism	gpi-1
+Starch and sucrose metabolism	tre-2
+Starch and sucrose metabolism	tre-1
+Sulfur metabolism	gpap-1
+Sulfur metabolism	ethe-1
+Sulfur metabolism	Y9C9A.16
+Sulfur metabolism	mpst-1
+Sulfur metabolism	pps-1
+Sulfur metabolism	mpst-2
+Sulfur metabolism	mpst-4
+Sulfur metabolism	suox-1
+Sulfur metabolism	bpnt-1
+Sulfur metabolism	sqrd-1
+Sulfur metabolism	cysl-3
+Sulfur metabolism	cysl-4
+Sulfur metabolism	cysl-1
+Sulfur metabolism	cysl-2
+Sulfur relay system	nmrk-1
+Sulfur relay system	K10D2.7
+Sulfur relay system	moc-3
+Sulfur relay system	urm-1
+Sulfur relay system	mpst-1
+Sulfur relay system	mpst-2
+Sulfur relay system	mpst-4
+Sulfur relay system	B0205.6
+Sulfur relay system	tut-2
+Sulfur relay system	tut-1
+Synthesis and degradation of ketone bodies	kat-1
+Synthesis and degradation of ketone bodies	Y71G12B.10
+Synthesis and degradation of ketone bodies	T02G5.7
+Synthesis and degradation of ketone bodies	hmgs-1
+Synthesis and degradation of ketone bodies	C05C10.3
+TGF-beta signaling pathway	skr-14
+TGF-beta signaling pathway	skr-13
+TGF-beta signaling pathway	skr-16
+TGF-beta signaling pathway	skr-15
+TGF-beta signaling pathway	skr-10
+TGF-beta signaling pathway	paa-1
+TGF-beta signaling pathway	skr-12
+TGF-beta signaling pathway	sma-6
+TGF-beta signaling pathway	sma-4
+TGF-beta signaling pathway	rho-1
+TGF-beta signaling pathway	sma-3
+TGF-beta signaling pathway	sma-2
+TGF-beta signaling pathway	skr-18
+TGF-beta signaling pathway	skr-17
+TGF-beta signaling pathway	skr-19
+TGF-beta signaling pathway	efl-1
+TGF-beta signaling pathway	cul-1
+TGF-beta signaling pathway	cbp-1
+TGF-beta signaling pathway	let-502
+TGF-beta signaling pathway	skr-2
+TGF-beta signaling pathway	skr-3
+TGF-beta signaling pathway	skr-1
+TGF-beta signaling pathway	dbl-1
+TGF-beta signaling pathway	mpk-1
+TGF-beta signaling pathway	daf-3
+TGF-beta signaling pathway	daf-4
+TGF-beta signaling pathway	skr-8
+TGF-beta signaling pathway	rsks-1
+TGF-beta signaling pathway	skr-9
+TGF-beta signaling pathway	skr-6
+TGF-beta signaling pathway	skr-21
+TGF-beta signaling pathway	skr-7
+TGF-beta signaling pathway	skr-20
+TGF-beta signaling pathway	skr-4
+TGF-beta signaling pathway	skr-5
+TGF-beta signaling pathway	cul-6
+TGF-beta signaling pathway	drag-1
+TGF-beta signaling pathway	R04A9.7
+TGF-beta signaling pathway	lin-35
+TGF-beta signaling pathway	let-92
+TGF-beta signaling pathway	rbx-1
+Taurine and hypotaurine metabolism	T03D8.6
+Taurine and hypotaurine metabolism	cdo-1
+Taurine and hypotaurine metabolism	unc-25
+Taurine and hypotaurine metabolism	C53D5.5
+Taurine and hypotaurine metabolism	H14N18.4
+Taurine and hypotaurine metabolism	Y7A9A.1
+Terpenoid backbone biosynthesis	fce-1
+Terpenoid backbone biosynthesis	fdps-1
+Terpenoid backbone biosynthesis	T01G1.4
+Terpenoid backbone biosynthesis	Y48B6A.13
+Terpenoid backbone biosynthesis	fce-2
+Terpenoid backbone biosynthesis	idi-1
+Terpenoid backbone biosynthesis	fnta-1
+Terpenoid backbone biosynthesis	fntb-1
+Terpenoid backbone biosynthesis	F32D8.13
+Terpenoid backbone biosynthesis	coq-1
+Terpenoid backbone biosynthesis	kat-1
+Terpenoid backbone biosynthesis	mvk-1
+Terpenoid backbone biosynthesis	icmt-1
+Terpenoid backbone biosynthesis	T02G5.7
+Terpenoid backbone biosynthesis	hmgr-1
+Terpenoid backbone biosynthesis	hmgs-1
+Terpenoid backbone biosynthesis	M01E11.1
+Thiamine metabolism	Y94H6A.7
+Thiamine metabolism	let-754
+Thiamine metabolism	tpk-1
+Thiamine metabolism	B0205.6
+Thiamine metabolism	ZK673.2
+Thiamine metabolism	F38B2.4
+Tryptophan metabolism	ech-1.2
+Tryptophan metabolism	ech-1.1
+Tryptophan metabolism	kmo-1
+Tryptophan metabolism	alh-11
+Tryptophan metabolism	ctl-3
+Tryptophan metabolism	alh-10
+Tryptophan metabolism	kynu-1
+Tryptophan metabolism	tdo-2
+Tryptophan metabolism	gad-3
+Tryptophan metabolism	haao-1
+Tryptophan metabolism	alh-12
+Tryptophan metabolism	acsd-1
+Tryptophan metabolism	T02G5.7
+Tryptophan metabolism	hdl-1
+Tryptophan metabolism	basl-1
+Tryptophan metabolism	F54D5.7
+Tryptophan metabolism	hacd-1
+Tryptophan metabolism	dlst-1
+Tryptophan metabolism	alh-9
+Tryptophan metabolism	nit-1
+Tryptophan metabolism	ogdh-2
+Tryptophan metabolism	ech-9
+Tryptophan metabolism	alh-2
+Tryptophan metabolism	ech-8
+Tryptophan metabolism	afmd-1
+Tryptophan metabolism	alh-1
+Tryptophan metabolism	alh-4
+Tryptophan metabolism	dld-1
+Tryptophan metabolism	alh-5
+Tryptophan metabolism	ech-7
+Tryptophan metabolism	ech-6
+Tryptophan metabolism	kat-1
+Tryptophan metabolism	nkat-3
+Tryptophan metabolism	nkat-1
+Tryptophan metabolism	ctl-2
+Tryptophan metabolism	ctl-1
+Tryptophan metabolism	F54C8.1
+Tyrosine metabolism	Y53G8B.1
+Tyrosine metabolism	tdc-1
+Tyrosine metabolism	H24K24.3
+Tyrosine metabolism	tyr-4
+Tyrosine metabolism	sodh-1
+Tyrosine metabolism	sodh-2
+Tyrosine metabolism	C31H2.4
+Tyrosine metabolism	tbh-1
+Tyrosine metabolism	gst-43
+Tyrosine metabolism	gst-42
+Tyrosine metabolism	fahd-1
+Tyrosine metabolism	got-2.1
+Tyrosine metabolism	got-1.2
+Tyrosine metabolism	hpd-1
+Tyrosine metabolism	tatn-1
+Tyrosine metabolism	gad-3
+Tyrosine metabolism	D2063.1
+Tyrosine metabolism	got-2.2
+Tyrosine metabolism	hgo-1
+Tyrosine metabolism	cat-2
+Tyrosine metabolism	fah-1
+Tyrosine metabolism	hdl-1
+Tyrosine metabolism	basl-1
+Tyrosine metabolism	mif-1
+Ubiquinone and other terpenoid-quinone biosynthesis	clk-1
+Ubiquinone and other terpenoid-quinone biosynthesis	hpd-1
+Ubiquinone and other terpenoid-quinone biosynthesis	tatn-1
+Ubiquinone and other terpenoid-quinone biosynthesis	coq-6
+Ubiquinone and other terpenoid-quinone biosynthesis	coq-5
+Ubiquinone and other terpenoid-quinone biosynthesis	C31H2.4
+Ubiquinone and other terpenoid-quinone biosynthesis	acs-6
+Ubiquinone and other terpenoid-quinone biosynthesis	coq-3
+Ubiquinone and other terpenoid-quinone biosynthesis	coq-2
+Ubiquitin mediated proteolysis	skr-14
+Ubiquitin mediated proteolysis	Y92H12A.2
+Ubiquitin mediated proteolysis	skr-13
+Ubiquitin mediated proteolysis	skr-16
+Ubiquitin mediated proteolysis	aos-1
+Ubiquitin mediated proteolysis	skr-15
+Ubiquitin mediated proteolysis	skr-10
+Ubiquitin mediated proteolysis	gei-17
+Ubiquitin mediated proteolysis	skr-12
+Ubiquitin mediated proteolysis	chn-1
+Ubiquitin mediated proteolysis	mat-3
+Ubiquitin mediated proteolysis	mat-2
+Ubiquitin mediated proteolysis	uev-2
+Ubiquitin mediated proteolysis	skr-18
+Ubiquitin mediated proteolysis	rfl-1
+Ubiquitin mediated proteolysis	skr-17
+Ubiquitin mediated proteolysis	mat-1
+Ubiquitin mediated proteolysis	skr-19
+Ubiquitin mediated proteolysis	ubr-5
+Ubiquitin mediated proteolysis	vhl-1
+Ubiquitin mediated proteolysis	etc-1
+Ubiquitin mediated proteolysis	ddb-1
+Ubiquitin mediated proteolysis	such-1
+Ubiquitin mediated proteolysis	wwp-1
+Ubiquitin mediated proteolysis	pdr-1
+Ubiquitin mediated proteolysis	elc-1
+Ubiquitin mediated proteolysis	ubc-25
+Ubiquitin mediated proteolysis	ubc-6
+Ubiquitin mediated proteolysis	elc-2
+Ubiquitin mediated proteolysis	ubc-7
+Ubiquitin mediated proteolysis	ubc-24
+Ubiquitin mediated proteolysis	ubc-26
+Ubiquitin mediated proteolysis	skr-21
+Ubiquitin mediated proteolysis	ubc-3
+Ubiquitin mediated proteolysis	skr-20
+Ubiquitin mediated proteolysis	uba-2
+Ubiquitin mediated proteolysis	ubc-1
+Ubiquitin mediated proteolysis	cul-5
+Ubiquitin mediated proteolysis	uba-1
+Ubiquitin mediated proteolysis	cul-4
+Ubiquitin mediated proteolysis	cul-6
+Ubiquitin mediated proteolysis	ubc-21
+Ubiquitin mediated proteolysis	Y48G1C.12
+Ubiquitin mediated proteolysis	ubc-20
+Ubiquitin mediated proteolysis	ubc-22
+Ubiquitin mediated proteolysis	eel-1
+Ubiquitin mediated proteolysis	siah-1
+Ubiquitin mediated proteolysis	fzr-1
+Ubiquitin mediated proteolysis	oxi-1
+Ubiquitin mediated proteolysis	mel-26
+Ubiquitin mediated proteolysis	ubc-14
+Ubiquitin mediated proteolysis	ubc-13
+Ubiquitin mediated proteolysis	ubc-16
+Ubiquitin mediated proteolysis	ubc-15
+Ubiquitin mediated proteolysis	ubc-18
+Ubiquitin mediated proteolysis	ubc-17
+Ubiquitin mediated proteolysis	apc-11
+Ubiquitin mediated proteolysis	apc-10
+Ubiquitin mediated proteolysis	skpt-1
+Ubiquitin mediated proteolysis	ubc-12
+Ubiquitin mediated proteolysis	emb-27
+Ubiquitin mediated proteolysis	apc-2
+Ubiquitin mediated proteolysis	cul-1
+Ubiquitin mediated proteolysis	cyn-4
+Ubiquitin mediated proteolysis	cul-3
+Ubiquitin mediated proteolysis	cul-2
+Ubiquitin mediated proteolysis	ufd-2
+Ubiquitin mediated proteolysis	skr-2
+Ubiquitin mediated proteolysis	lin-23
+Ubiquitin mediated proteolysis	skr-3
+Ubiquitin mediated proteolysis	skr-1
+Ubiquitin mediated proteolysis	prp-19
+Ubiquitin mediated proteolysis	ubc-8
+Ubiquitin mediated proteolysis	elb-1
+Ubiquitin mediated proteolysis	ubc-9
+Ubiquitin mediated proteolysis	skr-8
+Ubiquitin mediated proteolysis	skr-9
+Ubiquitin mediated proteolysis	skr-6
+Ubiquitin mediated proteolysis	skr-7
+Ubiquitin mediated proteolysis	skr-4
+Ubiquitin mediated proteolysis	skr-5
+Ubiquitin mediated proteolysis	sel-11
+Ubiquitin mediated proteolysis	sel-10
+Ubiquitin mediated proteolysis	sli-1
+Ubiquitin mediated proteolysis	rbx-2
+Ubiquitin mediated proteolysis	let-70
+Ubiquitin mediated proteolysis	rbx-1
+Valine, leucine and isoleucine degradation	ech-1.2
+Valine, leucine and isoleucine degradation	ech-1.1
+Valine, leucine and isoleucine degradation	bckd-1A
+Valine, leucine and isoleucine degradation	bckd-1B
+Valine, leucine and isoleucine degradation	Y44A6D.5
+Valine, leucine and isoleucine degradation	Y71G12B.10
+Valine, leucine and isoleucine degradation	pccb-1
+Valine, leucine and isoleucine degradation	acdh-10
+Valine, leucine and isoleucine degradation	B0250.5
+Valine, leucine and isoleucine degradation	mccc-1
+Valine, leucine and isoleucine degradation	hach-1
+Valine, leucine and isoleucine degradation	hmgs-1
+Valine, leucine and isoleucine degradation	sur-5
+Valine, leucine and isoleucine degradation	acaa-2
+Valine, leucine and isoleucine degradation	hacd-1
+Valine, leucine and isoleucine degradation	alh-9
+Valine, leucine and isoleucine degradation	ivd-1
+Valine, leucine and isoleucine degradation	alh-2
+Valine, leucine and isoleucine degradation	alh-1
+Valine, leucine and isoleucine degradation	alh-4
+Valine, leucine and isoleucine degradation	bcat-1
+Valine, leucine and isoleucine degradation	dld-1
+Valine, leucine and isoleucine degradation	alh-5
+Valine, leucine and isoleucine degradation	alh-8
+Valine, leucine and isoleucine degradation	C05C10.3
+Valine, leucine and isoleucine degradation	kat-1
+Valine, leucine and isoleucine degradation	gta-1
+Valine, leucine and isoleucine degradation	mce-1
+Valine, leucine and isoleucine degradation	F54C8.1
+Valine, leucine and isoleucine degradation	acdh-1
+Valine, leucine and isoleucine degradation	acdh-3
+Valine, leucine and isoleucine degradation	acdh-4
+Valine, leucine and isoleucine degradation	B0303.3
+Valine, leucine and isoleucine degradation	acdh-7
+Valine, leucine and isoleucine degradation	alh-11
+Valine, leucine and isoleucine degradation	T09B4.8
+Valine, leucine and isoleucine degradation	pcca-1
+Valine, leucine and isoleucine degradation	dbt-1
+Valine, leucine and isoleucine degradation	gad-3
+Valine, leucine and isoleucine degradation	alh-12
+Valine, leucine and isoleucine degradation	acdh-8
+Valine, leucine and isoleucine degradation	T02G5.7
+Valine, leucine and isoleucine degradation	acdh-9
+Valine, leucine and isoleucine degradation	ard-1
+Valine, leucine and isoleucine degradation	mmcm-1
+Valine, leucine and isoleucine degradation	ech-9
+Valine, leucine and isoleucine degradation	ech-8
+Valine, leucine and isoleucine degradation	ech-5
+Valine, leucine and isoleucine degradation	ech-7
+Valine, leucine and isoleucine degradation	ech-6
+Wnt signaling pathway	kin-3
+Wnt signaling pathway	skr-14
+Wnt signaling pathway	vang-1
+Wnt signaling pathway	skr-13
+Wnt signaling pathway	ctbp-1
+Wnt signaling pathway	ruvb-1
+Wnt signaling pathway	skr-16
+Wnt signaling pathway	unc-43
+Wnt signaling pathway	skr-15
+Wnt signaling pathway	skr-10
+Wnt signaling pathway	bar-1
+Wnt signaling pathway	ced-10
+Wnt signaling pathway	kin-1
+Wnt signaling pathway	skr-12
+Wnt signaling pathway	dsh-2
+Wnt signaling pathway	pop-1
+Wnt signaling pathway	rho-1
+Wnt signaling pathway	dsh-1
+Wnt signaling pathway	skr-18
+Wnt signaling pathway	skr-17
+Wnt signaling pathway	skr-19
+Wnt signaling pathway	cwn-1
+Wnt signaling pathway	daf-3
+Wnt signaling pathway	hop-1
+Wnt signaling pathway	tax-6
+Wnt signaling pathway	jnk-1
+Wnt signaling pathway	skr-21
+Wnt signaling pathway	mom-4
+Wnt signaling pathway	skr-20
+Wnt signaling pathway	mom-5
+Wnt signaling pathway	cul-6
+Wnt signaling pathway	rac-2
+Wnt signaling pathway	C44H4.6
+Wnt signaling pathway	siah-1
+Wnt signaling pathway	egl-20
+Wnt signaling pathway	lit-1
+Wnt signaling pathway	mom-1
+Wnt signaling pathway	mom-2
+Wnt signaling pathway	sfrp-1
+Wnt signaling pathway	lin-17
+Wnt signaling pathway	daam-1
+Wnt signaling pathway	lin-18
+Wnt signaling pathway	sma-4
+Wnt signaling pathway	kin-10
+Wnt signaling pathway	pkc-2
+Wnt signaling pathway	cul-1
+Wnt signaling pathway	cbp-1
+Wnt signaling pathway	skr-2
+Wnt signaling pathway	cfz-2
+Wnt signaling pathway	lin-23
+Wnt signaling pathway	skr-3
+Wnt signaling pathway	cyd-1
+Wnt signaling pathway	skr-1
+Wnt signaling pathway	kgb-1
+Wnt signaling pathway	kgb-2
+Wnt signaling pathway	Y105C5A.24
+Wnt signaling pathway	skr-8
+Wnt signaling pathway	hmp-2
+Wnt signaling pathway	skr-9
+Wnt signaling pathway	skr-6
+Wnt signaling pathway	pry-1
+Wnt signaling pathway	gsk-3
+Wnt signaling pathway	skr-7
+Wnt signaling pathway	spe-4
+Wnt signaling pathway	skr-4
+Wnt signaling pathway	skr-5
+Wnt signaling pathway	egl-8
+Wnt signaling pathway	sel-12
+Wnt signaling pathway	prkl-1
+Wnt signaling pathway	kin-19
+Wnt signaling pathway	wrm-1
+Wnt signaling pathway	R03D7.5
+Wnt signaling pathway	cnb-1
+Wnt signaling pathway	mig-2
+Wnt signaling pathway	rbx-1
+Wnt signaling pathway	mig-1
+alpha-Linolenic acid metabolism	acox-1.5
+alpha-Linolenic acid metabolism	acox-1.4
+alpha-Linolenic acid metabolism	C03H5.4
+alpha-Linolenic acid metabolism	acox-1.6
+alpha-Linolenic acid metabolism	C07E3.9
+alpha-Linolenic acid metabolism	acox-1.1
+alpha-Linolenic acid metabolism	acox-1.3
+alpha-Linolenic acid metabolism	acox-1.2
+alpha-Linolenic acid metabolism	ipla-3
+alpha-Linolenic acid metabolism	ipla-2
+alpha-Linolenic acid metabolism	acox-3
+beta-Alanine metabolism	alh-9
+beta-Alanine metabolism	dhp-2
+beta-Alanine metabolism	ech-1.2
+beta-Alanine metabolism	mlcd-1
+beta-Alanine metabolism	ech-1.1
+beta-Alanine metabolism	unc-25
+beta-Alanine metabolism	acdh-7
+beta-Alanine metabolism	alh-2
+beta-Alanine metabolism	alh-11
+beta-Alanine metabolism	alh-1
+beta-Alanine metabolism	alh-4
+beta-Alanine metabolism	alh-5
+beta-Alanine metabolism	ech-7
+beta-Alanine metabolism	alh-8
+beta-Alanine metabolism	ech-6
+beta-Alanine metabolism	upb-1
+beta-Alanine metabolism	gta-1
+beta-Alanine metabolism	alh-12
+beta-Alanine metabolism	acdh-10
+beta-Alanine metabolism	acdh-8
+beta-Alanine metabolism	spds-1
+beta-Alanine metabolism	hach-1
+beta-Alanine metabolism	dhp-1
+beta-Alanine metabolism	dpyd-1
+mRNA surveillance pathway	rnp-4
+mRNA surveillance pathway	rnp-5
+mRNA surveillance pathway	paa-1
+mRNA surveillance pathway	C02B10.4
+mRNA surveillance pathway	cpsf-4
+mRNA surveillance pathway	cpsf-3
+mRNA surveillance pathway	cpsf-2
+mRNA surveillance pathway	fipp-1
+mRNA surveillance pathway	cpsf-1
+mRNA surveillance pathway	suf-1
+mRNA surveillance pathway	ncbp-1
+mRNA surveillance pathway	ncbp-2
+mRNA surveillance pathway	sur-6
+mRNA surveillance pathway	Y65B4A.6
+mRNA surveillance pathway	pfs-2
+mRNA surveillance pathway	pelo-1
+mRNA surveillance pathway	K07A12.4
+mRNA surveillance pathway	pabp-2
+mRNA surveillance pathway	EEED8.12
+mRNA surveillance pathway	erfa-3
+mRNA surveillance pathway	erfa-1
+mRNA surveillance pathway	F43G6.5
+mRNA surveillance pathway	T15H9.6
+mRNA surveillance pathway	gsp-1
+mRNA surveillance pathway	rsr-1
+mRNA surveillance pathway	gsp-2
+mRNA surveillance pathway	C05C10.2
+mRNA surveillance pathway	pnn-1
+mRNA surveillance pathway	cel-1
+mRNA surveillance pathway	msi-1
+mRNA surveillance pathway	C16C10.4
+mRNA surveillance pathway	clpf-1
+mRNA surveillance pathway	pcf-11
+mRNA surveillance pathway	cpf-2
+mRNA surveillance pathway	let-92
+mRNA surveillance pathway	cpf-1
+mRNA surveillance pathway	pptr-2
+mRNA surveillance pathway	pptr-1
+mRNA surveillance pathway	ssup-72
+mRNA surveillance pathway	pab-2
+mRNA surveillance pathway	pab-1
+mRNA surveillance pathway	EEED8.4
+mRNA surveillance pathway	W08E3.2
+mRNA surveillance pathway	sgnh-1
+mRNA surveillance pathway	smg-7
+mRNA surveillance pathway	smg-6
+mRNA surveillance pathway	smg-4
+mRNA surveillance pathway	smg-3
+mRNA surveillance pathway	smg-2
+mRNA surveillance pathway	smg-1
+mRNA surveillance pathway	nxf-1
+mRNA surveillance pathway	swd-2.2
+mRNA surveillance pathway	symk-1
+mRNA surveillance pathway	acin-1
+mRNA surveillance pathway	C44H9.4
+mRNA surveillance pathway	nxf-2
+mRNA surveillance pathway	T20G5.9
+mRNA surveillance pathway	nxt-1
+mRNA surveillance pathway	F33D11.10
+mRNA surveillance pathway	cfim-1
+mRNA surveillance pathway	tag-72
+mRNA surveillance pathway	cfim-2
+mRNA surveillance pathway	aly-1
+mRNA surveillance pathway	pap-1
+mRNA surveillance pathway	aly-3
+mRNA surveillance pathway	hel-1
+mRNA surveillance pathway	mag-1
+mRNA surveillance pathway	aly-2
+mRNA surveillance pathway	rsa-1
+mTOR signaling pathway	strd-1
+mTOR signaling pathway	age-1
+mTOR signaling pathway	rps-6
+mTOR signaling pathway	dsh-2
+mTOR signaling pathway	rho-1
+mTOR signaling pathway	dsh-1
+mTOR signaling pathway	npp-20
+mTOR signaling pathway	sos-1
+mTOR signaling pathway	cwn-1
+mTOR signaling pathway	aap-1
+mTOR signaling pathway	npp-18
+mTOR signaling pathway	lin-45
+mTOR signaling pathway	R10H10.7
+mTOR signaling pathway	flcn-1
+mTOR signaling pathway	F13H10.3
+mTOR signaling pathway	vha-12
+mTOR signaling pathway	unc-51
+mTOR signaling pathway	Y32H12A.8
+mTOR signaling pathway	vha-13
+mTOR signaling pathway	sgk-1
+mTOR signaling pathway	vha-10
+mTOR signaling pathway	vha-11
+mTOR signaling pathway	daf-18
+mTOR signaling pathway	mop-25.1
+mTOR signaling pathway	mop-25.2
+mTOR signaling pathway	vha-14
+mTOR signaling pathway	mlst-8
+mTOR signaling pathway	pdk-1
+mTOR signaling pathway	daf-2
+mTOR signaling pathway	vha-15
+mTOR signaling pathway	mom-5
+mTOR signaling pathway	vha-18
+mTOR signaling pathway	rheb-1
+mTOR signaling pathway	rskn-1
+mTOR signaling pathway	daf-15
+mTOR signaling pathway	C44H4.6
+mTOR signaling pathway	T08A11.1
+mTOR signaling pathway	ist-1
+mTOR signaling pathway	egl-20
+mTOR signaling pathway	mom-2
+mTOR signaling pathway	T04C4.1
+mTOR signaling pathway	ragc-1
+mTOR signaling pathway	lmtr-2
+mTOR signaling pathway	raga-1
+mTOR signaling pathway	clk-2
+mTOR signaling pathway	akt-1
+mTOR signaling pathway	lin-17
+mTOR signaling pathway	lmtr-3
+mTOR signaling pathway	akt-2
+mTOR signaling pathway	lmtr-5
+mTOR signaling pathway	skpt-1
+mTOR signaling pathway	aak-1
+mTOR signaling pathway	aak-2
+mTOR signaling pathway	pkc-2
+mTOR signaling pathway	nprl-2
+mTOR signaling pathway	nprl-3
+mTOR signaling pathway	vha-9
+mTOR signaling pathway	rict-1
+mTOR signaling pathway	vha-8
+mTOR signaling pathway	cfz-2
+mTOR signaling pathway	ife-5
+mTOR signaling pathway	ife-4
+mTOR signaling pathway	ife-3
+mTOR signaling pathway	ife-2
+mTOR signaling pathway	let-60
+mTOR signaling pathway	ife-1
+mTOR signaling pathway	mpk-1
+mTOR signaling pathway	rsks-1
+mTOR signaling pathway	gsk-3
+mTOR signaling pathway	sem-5
+mTOR signaling pathway	spe-5
+mTOR signaling pathway	sinh-1
+mTOR signaling pathway	let-363
+mTOR signaling pathway	R04A9.7
+mTOR signaling pathway	mek-2
+mTOR signaling pathway	R03D7.5
+mTOR signaling pathway	par-4
+mTOR signaling pathway	mig-1

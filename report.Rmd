@@ -1,0 +1,1763 @@
+---
+title: "Multi-Omic Report"
+subtitle: "Knight Cancer Research Institute"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+    toc_collapsed: TRUE
+    toc_depth: 3
+    number_sections: FALSE
+    theme: united
+    keep_md: TRUE
+params:
+  eset: NA
+  annot: NA
+  type: NA
+  log_transform: NA
+  data_format: NA
+  norm: NA
+  eset_prenorm: NA
+  MD_contrasts: NA
+  contrasts: NA
+  model_equation: NA
+  include_batch_pca: NA
+  batch_pca_data: NA
+  linear_model: NA
+  rendered_by_shiny: FALSE
+  include_enrichment: NA
+  species: NA
+  enrichment_database: NA
+  enrichment: NA
+  enrichplots: NA
+  enriched: NA
+  geneList: NA
+  group_column: NA
+  zero_cutoff: NA
+  missing_value_imputation: NA
+  uniprot_annotation: NA
+  render_glimma: NA
+  glimma: NA
+  include_sscore: NA
+  sscore: NA
+  sscore_plots: NA
+  sscore_enriched: NA
+  sscore_geneList: NA
+  include_pcsf: NA
+  pcsf_input: NA
+  pcsf_net: NA
+  pcsf_plots: NA
+  pcsf_nodes_net: NA
+  pcsf_influential_net: NA
+  pcsf_enriched: NA
+  pcsf_enriched_network: NA
+---
+
+<style type="text/css">
+    div.visNetwork { height: auto !important;}
+</style>
+
+```{r setup, include = FALSE, echo = FALSE}
+knitr::opts_chunk$set(warning = FALSE, error = TRUE, echo = FALSE)
+```
+
+```{css}
+.scroll-400 {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-y: scroll;
+  background-color: inherit;
+}
+```
+
+## Image Folder
+
+```{r Create Directory for Downloads}
+save_dir <- paste0("~/Downloads/OmicsNotebookReport_", format(Sys.time(), "%d-%b-%Y_%H.%M"), sep = "")
+print(save_dir)
+tryCatch({
+  dir.create(file.path(save_dir), showWarnings = FALSE)
+  for (i in 1:length(params$type)){
+    dir.create(file.path(paste0(save_dir, "/", params$type[i], sep = "")), showWarnings = FALSE)
+  }
+  
+}, error = function(cond) {
+  message("COULD NOT CREATE FOLDERS FOR VISUALIZATIONS")
+})
+
+```
+
+```{r Download Data Summaries}
+for (i in 1:length(params$type)){
+  normed_exprs_eset <- data.frame(Biobase::exprs(params$eset[[i]]))
+  write.csv(normed_exprs_eset, 
+            paste0(save_dir, "/", params$type[i], "/NormedExpressionSet_", params$type[i], ".csv"))
+  prenorm_stat_summary <- psych::describe(data.frame(Biobase::exprs(params$eset_prenorm[[i]])), na.rm = FALSE)
+  write.csv(prenorm_stat_summary, 
+            paste0(save_dir, "/", params$type[i], "/PrenormStatSummary_", params$type[i], ".csv"))
+}
+
+wbOut <- openxlsx::createWorkbook()
+      
+for (i in 1:length(params$type)){
+  if(params$type[i] != "met_combined"){
+    eSet = params$eset[[i]][,order(pData(params$eset[[i]])$Group)]
+    writeDataToSheets(wb = wbOut, 
+                      eset = eSet,
+                      limmaFit = params$linear_model[[i]],
+                      type = params$type[i], 
+                      data_format = params$data_format[i]);
+  }
+}
+
+openxlsx::saveWorkbook(wbOut, file = paste0(save_dir, "/DataSummary_", Sys.Date(), ".xlsx"))
+```
+
+
+> Right-click on any images to open them in a new tab, save them to your computer, or copy them.
+
+# Dataset Information
+
+An overview of the dataset uploaded and groups, contrasts, and expression set used in generating the analyses in the report.
+
+## Annotation File
+
+```{r Annotation File, class.output = "scroll-400"}
+suppressPackageStartupMessages(library(kableExtra))
+knitr::kable(params$annot) %>%
+  kableExtra::kable_styling() %>%
+  scroll_box(width = "100%", height = "500px")
+```
+
+## Name
+
+The name(s) of the datasets that were provided in the annotation file under "Analysis Name". 
+
+```{r File Names}
+print(params$type)
+```
+
+## Format
+
+The format of the data file(s) uploaded.
+
+```{r File Formats}
+print(params$data_format)
+```
+
+## Contrasts
+
+Contrasts chosen under the model design. Contrasts are formatted "Group1-Group2" where any features up-regulated with regards to that contrast are up-regulated in Group1 as compared to Group2.
+
+```{r Contrasts}
+print(params$contrasts)
+```
+
+## Model Equation
+
+The format of the equation used to design the `limma` linear model which is used for differential analysis.
+
+```{r Model Equation}
+print(params$model_equation)
+```
+
+## Data Overview
+
+An overview of the structure of the expression set(s) used for the majority of analyses output.
+
+```{r Expression Sets, class.output = "scroll-400"}
+for (i in 1:length(params$eset)){
+  exprs_eset <- Biobase::exprs(params$eset[[i]])
+  exprs_eset_prenorm <- Biobase::exprs(params$eset_prenorm[[i]])
+
+  exprs_eset[exprs_eset == 0] <- NA
+  exprs_eset_prenorm[exprs_eset_prenorm == 0] <- NA
+
+  cat(params$type[i], ": \n",
+      "\t Number of Samples:", ncol(exprs_eset), "\n",
+      "\t Sample Names:", colnames(exprs_eset), "\n",
+      "\t Number of Features in Raw Data:", nrow(exprs_eset_prenorm), "\n",
+      "\t Number of Features in Processed Data:", nrow(exprs_eset), "\n",
+      "\t Number of Missing Values in Raw Data:", sum(is.na(exprs_eset_prenorm)), "\n",
+      "\t Number of Features in Processed Data:", sum(is.na(exprs_eset)), "\n")
+  cat("\n\n")
+}
+```
+
+```{r, include = FALSE}
+# Required to make it so that DT::datatables can be rendered in a loop
+DT::datatable(matrix())
+```
+
+The below statistical overview(s) provide information on mean, range, and variance measures.
+
+```{r Statistical Summary, results = 'asis'}
+for (i in 1:length(params$eset)){
+  data <- data.frame(Biobase::exprs(params$eset_prenorm[[i]]))
+  table <- psych::describe(data, na.rm = FALSE)
+  
+  cat("\n\n")
+  cat("### Stats:", params$type[i])
+  cat(knitr::knit_print(DT::datatable(table, rownames = TRUE, options = list(scrollX = TRUE)) %>%
+        DT::formatRound(columns = c(3:ncol(table)), digits = 3))) 
+    # DT::formatRound(columns = c(3:ncol(table)), digits = 3)
+  cat("\n\n")
+}
+```
+
+## Missingness
+
+The below plot(s) are generated using the VIM package to look at the spread of missing values across the samples in each dataset. This is generated using pre-normalized/filtered data. The right half of the plot shows the different combinations of groups that contain missing values in the same features, with the bottom row showing how many features are not missing in *any* sample.
+
+```{r Missing Values, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$eset_prenorm)){
+  data <- data.frame(Biobase::exprs(params$eset_prenorm[[i]]))
+  data[data == 0] <- NA
+  cat(params$type[i], "missing value overview:")
+  VIM::aggr(data, cex.axis = 0.7, numbers = TRUE, prop = FALSE)
+}
+```
+
+```{r Missing Values Download, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$eset_prenorm)){
+  data <- data.frame(Biobase::exprs(params$eset_prenorm[[i]]))
+  data[data == 0] <- NA
+  
+  if (dir.exists(save_dir)){
+      grDevices::pdf(paste0(save_dir, "/", params$type[i], "/MissingValues_", params$type[i], ".pdf", sep = ""), 
+                     width = 10, height = 6)
+      VIM::aggr(data, cex.axis = 0.7, numbers = TRUE, prop = FALSE)
+      dev.off()
+  }
+}
+```
+
+# Normalization 
+
+Normalization plots show how the data changes pre and post normalization. If no normalization method was chosen, only one plot will be generated. Additional normalization visualizations - MA plots, Relative Log Expression plots, and QQ plots - can be found in the associated image download folder.
+
+```{r Normalization Plots, fig.height = 7, fig.width = 10}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.1)
+  shiny::incProgress(detail = paste("Generating normalization plots..."))} 
+
+for (i in 1:length(params$eset)){
+  intensityNormPlots(eset_prenorm = params$eset_prenorm[[i]],
+                     eset_postnorm = params$eset[[i]],
+                     norm = params$norm, 
+                     type = params$type[i], 
+                     plottype = "Density",
+                     zero_cutoff = 0.3,
+                     norm_by_batches = F,
+                     ma_array = NA,
+                     qq_column = NA)
+  
+  intensityNormPlots(eset_prenorm = params$eset_prenorm[[i]],
+                     eset_postnorm = params$eset[[i]],
+                     norm = params$norm, 
+                     type = params$type[i], 
+                     plottype = "Boxplot",
+                     zero_cutoff = 0.3,
+                     norm_by_batches = F,
+                     ma_array = NA,
+                     qq_column = NA)
+}
+```
+
+```{r Normalization Plots Download, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$eset)){
+  if (dir.exists(save_dir)){
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/Norm_Density_", params$type[i], ".pdf", sep = ""),
+                   width = 10, height = 6)
+    intensityNormPlots(eset_prenorm = params$eset_prenorm[[i]],
+                                      eset_postnorm = params$eset[[i]],
+                                      norm = params$norm,
+                                      type = params$type[i],
+                                      plottype = "Density",
+                                      zero_cutoff = 0.3,
+                                      norm_by_batches = F,
+                                      ma_array = NA,
+                                      qq_column = NA)
+    dev.off()
+    
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/Norm_Violin_", params$type[i], ".pdf", sep = ""),
+                   width = 10, height = 6)
+    intensityNormPlots(eset_prenorm = params$eset_prenorm[[i]],
+                                      eset_postnorm = params$eset[[i]],
+                                      norm = params$norm,
+                                      type = params$type[i],
+                                      plottype = "Boxplot",
+                                      zero_cutoff = 0.3,
+                                      norm_by_batches = F,
+                                      ma_array = NA,
+                                      qq_column = NA)
+    dev.off()
+    
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/Norm_RLE_", params$type[i], ".pdf", sep = ""),
+                   width = 10, height = 6)
+    intensityNormPlots(eset_prenorm = params$eset_prenorm[[i]],
+                       eset_postnorm = params$eset[[i]],
+                       norm = params$norm,
+                       type = params$type[i],
+                       plottype = "RLE",
+                       zero_cutoff = 0.3,
+                       norm_by_batches = F,
+                       ma_array = NA,
+                       qq_column = NA)
+    dev.off()
+
+    list <- 1:ncol(params$eset[[i]])
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/Norm_MAs_", params$type[i], ".pdf", sep = ""),
+                   width = 10, height = 6)
+    for (num in list){
+      intensityNormPlots(eset_prenorm = params$eset_prenorm[[i]],
+                         eset_postnorm = params$eset[[i]],
+                         norm = params$norm,
+                         type = params$type[i],
+                         plottype = "MA",
+                         zero_cutoff = 0.3,
+                         norm_by_batches = F,
+                         ma_array = num)
+    }
+    dev.off()
+    
+    list <- colnames(Biobase::exprs(params$eset[[i]]))
+
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/Norm_QQs_", params$type[i], ".pdf", sep = ""),
+                   width = 10, height = 6)
+    for (name in list){
+      intensityNormPlots(eset_prenorm = params$eset_prenorm[[i]],
+                         eset_postnorm = params$eset[[i]],
+                         norm = params$norm,
+                         type = params$type[i],
+                         plottype = "QQ",
+                         zero_cutoff = 0.3,
+                         norm_by_batches = F,
+                         ma_array = NA,
+                         qq_column = name)
+    }
+    dev.off()
+  }
+}
+```
+
+# PCA Plot
+
+Principal Component Analysis is a useful tool for assessing similarity among factors of a high dimensional data set.
+
+```{r PCA Plot, fig.height = 7, fig.width = 10}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.2)
+  shiny::incProgress(detail = paste("Generating PCA plot..."))} 
+
+for (i in 1:length(params$eset)){
+  prenorm <- drawPCA(eset = params$eset_prenorm[[i]], 
+                     x_axis = "PC1", 
+                     y_axis = "PC2", 
+                     type = params$type[i], 
+                     color = "Paired",
+                     include_densities = FALSE,
+                     shapes = FALSE,
+                     title_add = "PRE-NORMALIZATION",
+                     add_labels = TRUE,
+                     add_ellipse = FALSE)
+  
+  postnorm <- drawPCA(eset = params$eset[[i]], 
+                      x_axis = "PC1", 
+                      y_axis = "PC2", 
+                      type = params$type[i], 
+                      color = "Paired",
+                      include_densities = FALSE,
+                      shapes = FALSE,
+                      title_add = "POST-NORMALIZATION",
+                      add_labels = TRUE,
+                      add_ellipse = FALSE)
+  
+  gridExtra::grid.arrange(prenorm + theme(legend.position = "bottom"), 
+                          postnorm + theme(legend.position = "bottom"),
+                          top = paste0("PCA", params$type[i]), 
+                          ncol = 2);
+  
+  PCA_percent <- drawPCApercentages(eset = params$eset[[i]],
+                                    type = params$type[i])
+  plot(PCA_percent)
+}
+
+```
+
+```{r PCA Plot Download, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$eset)){
+  prenorm <- drawPCA(eset = params$eset_prenorm[[i]], 
+                     x_axis = "PC1", 
+                     y_axis = "PC2", 
+                     type = params$type[i], 
+                     color = "Paired",
+                     include_densities = FALSE,
+                     shapes = FALSE,
+                     title_add = "PRE-NORMALIZATION",
+                     add_labels = TRUE,
+                     add_ellipse = FALSE)
+  
+  postnorm <- drawPCA(eset = params$eset[[i]], 
+                      x_axis = "PC1", 
+                      y_axis = "PC2", 
+                      type = params$type[i], 
+                      color = "Paired",
+                      include_densities = FALSE,
+                      shapes = FALSE,
+                      title_add = "POST-NORMALIZATION",
+                      add_labels = TRUE,
+                      add_ellipse = FALSE)
+  
+  if (dir.exists(save_dir)){
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/PCA_", params$type[i], ".pdf", sep = ""), 
+                   width = 10, height = 6)
+    gridExtra::grid.arrange(prenorm + theme(legend.position = "bottom"), 
+                            postnorm + theme(legend.position = "bottom"),
+                            top = paste0("PCA", params$type[i]), 
+                            ncol = 2);
+    dev.off()
+  }
+  
+  PCA_percent <- drawPCApercentages(eset = params$eset[[i]],
+                                    type = params$type[i])
+  
+  if (dir.exists(save_dir)){
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/PCAPercentages_", params$type[i], ".pdf", sep = ""), 
+                   width = 10, height = 6)
+    plot(PCA_percent)
+    dev.off()
+  }
+}
+```
+
+# UMAP
+
+UMAP, or Uniform Manifold Approximation and Projection, is used for dimensionality reduction and data visualization. It is commonly compared to its predecessor, t-SNE or t-distributed Stochastic Neighbor Embedding, but is generally much faster.
+
+```{r UMAP, fig.height = 7, fig.width = 10}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.3)
+  shiny::incProgress(detail = paste("Generating UMAP..."))} 
+
+for (i in 1:length(params$eset)){
+  UMAP <- drawUMAP(eset = params$eset[[i]], 
+                    type = params$type[i], 
+                    color = "Paired", 
+                    title_add = "",
+                    add_labels = TRUE,
+                    shapes = FALSE)
+  plot(UMAP)
+}
+```
+
+```{r UMAP Download, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$eset)){
+  UMAP <- drawUMAP(eset = params$eset[[i]], 
+                    type = params$type[i], 
+                    color = "Paired", 
+                    title_add = "",
+                    add_labels = TRUE,
+                    shapes = FALSE)
+  
+  if (dir.exists(save_dir)){
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/UMAP_", params$type[i], ".pdf", sep = ""), 
+                   width = 10, height = 6)
+    plot(UMAP)
+    dev.off()
+  }
+}
+```
+
+# MD Plots
+
+Mean-Difference plots are used to visualize log-intensity ratios, or 'differences', versus log-intensity averages, or 'means'.
+
+```{r MD Plots, fig.height = 7, fig.width = 10}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.4)
+  shiny::incProgress(detail = paste("Generating MD plots..."))} 
+
+MD_contrasts <- params$MD_contrasts
+
+MD_contrasts_new <- gsub("-", "_", params$contrasts)
+MD_contrasts_new <- paste("logfc_", MD_contrasts_new, sep = "")
+
+for (i in 1:length(params$eset)){
+  for (contrast in MD_contrasts_new){
+    if (contrast %in% MD_contrasts){
+      MD <- drawMD(annot = params$annot,
+                   eset = params$eset[[i]],
+                   type = params$type[i],
+                   fc_cutoff = 1,
+                   up_color = 'red',
+                   down_color = 'royalblue',
+                   title_add = "",
+                   label_number = 20,
+                   add_labels = TRUE,
+                   label_specific = FALSE,
+                   label_specific_gene = NULL,
+                   return_logfc_index = FALSE,
+                   logfc_index_choice = contrast)
+      plot(MD)
+    }
+  }
+}
+```
+
+```{r MD Plots Download, fig.height = 7, fig.width = 10}
+MD_contrasts <- params$MD_contrasts
+
+MD_contrasts_new <- gsub("-", "_", params$contrasts)
+MD_contrasts_new <- paste("logfc_", MD_contrasts_new, sep = "")
+
+for (i in 1:length(params$eset)){
+  for (contrast in MD_contrasts_new){
+    if (contrast %in% MD_contrasts){
+      MD <- drawMD(annot = params$annot,
+                   eset = params$eset[[i]],
+                   type = params$type[i],
+                   fc_cutoff = 1,
+                   up_color = 'red',
+                   down_color = 'royalblue',
+                   title_add = "",
+                   label_number = 20,
+                   add_labels = TRUE,
+                   label_specific = FALSE,
+                   label_specific_gene = NULL,
+                   return_logfc_index = FALSE,
+                   logfc_index_choice = contrast)
+      
+      if (dir.exists(save_dir)){
+        grDevices::pdf(paste0(save_dir, "/", params$type[i], "/MD_", contrast, "_", params$type[i], ".pdf", sep = ""), 
+                       width = 10, height = 6)
+        plot(MD)
+        dev.off()
+      }
+    }
+  }
+}
+
+```
+
+# Correlation Plots
+
+The correlation plots show correlation values among the groups of the data set. The legend on the right shows the color scale over the range of correlation values. Please note that the correlation plots are assessing similarity over overall sample intensities.
+
+```{r Correlation Plot, fig.height = 10, fig.width = 10}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.5)
+  shiny::incProgress(detail = paste("Generating correlation plot..."))}
+
+  grDevices::graphics.off()
+
+suppressMessages({
+  for (i in 1:length(params$eset)){
+    variationPlot(eset = params$eset[[i]],
+                  high_variance = FALSE,
+                  plot = TRUE,
+                  numbers = TRUE,
+                  neg_color = 'royalblue',
+                  pos_color = 'red',
+                  title = paste(params$type[i]))
+    variationPlot(eset = params$eset[[i]],
+                  high_variance = TRUE,
+                  plot = TRUE,
+                  numbers = TRUE,
+                  neg_color = 'royalblue',
+                  pos_color = 'red',
+                  percent_var = 0.2,
+                  title = paste(params$type[i]))
+  }
+})
+```
+
+```{r Correlation Plot Download, fig.height = 10, fig.width = 10}
+suppressMessages({
+  for (i in 1:length(params$eset)){
+    corr <- variationPlot(eset = params$eset[[i]],
+                          high_variance = FALSE,
+                          plot = TRUE,
+                          numbers = TRUE,
+                          neg_color = 'royalblue',
+                          pos_color = 'red',
+                          title = paste(params$type[i]))
+    
+    corr_var <- variationPlot(eset = params$eset[[i]],
+                              high_variance = TRUE,
+                              plot = TRUE,
+                              numbers = TRUE,
+                              neg_color = 'royalblue',
+                              pos_color = 'red',
+                              percent_var = 0.2,
+                              title = paste(params$type[i]))
+    
+    if (dir.exists(save_dir)){
+      ggsave(paste0(save_dir, "/", params$type[i], "/Correlation_", params$type[i], ".pdf", sep = ""), corr, 
+             height = 8, width = 8)
+      ggsave(paste0(save_dir, "/", params$type[i], "/CorrelationHighVar_", params$type[i], ".pdf", sep = ""), corr_var, 
+             height = 8, width = 8)
+    }
+  }
+})
+```
+
+# Heatmap
+
+This heatmap shows an overview of the relative feature intensity across the dataset(s) before linear modeling.
+
+```{r Heatmap, fig.height = 10, fig.width = 10}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.6)
+  shiny::incProgress(detail = paste("Generating heatmap..."))}
+
+for (i in 1:length(params$eset)){
+  heatmap <- drawHeatmaps(eset = params$eset[[i]], 
+                          type = params$type[i], 
+                          title_add = '', 
+                          mapcolor = "Spectral",
+                          group_color = "Emrld",
+                          annot = params$annot, 
+                          subset = 'none',
+                          show_row_names = NULL, 
+                          cluster_samples = TRUE, 
+                          kclustering = TRUE,
+                          log2 = params$log_transform,
+                          zscore = TRUE,
+                          differential_heatmap = FALSE)
+  
+  ComplexHeatmap::draw(heatmap)
+}
+```
+
+```{r Heatmap Download, fig.height = 10, fig.width = 10}
+for (i in 1:length(params$eset)){
+    heatmap <- drawHeatmaps(eset = params$eset[[i]], 
+                          type = params$type[i], 
+                          title_add = '', 
+                          mapcolor = "Spectral",
+                          group_color = "Emrld",
+                          annot = params$annot, 
+                          subset = 'none',
+                          show_row_names = NULL, 
+                          cluster_samples = TRUE, 
+                          kclustering = TRUE,
+                          log2 = params$log_transform,
+                          zscore = TRUE,
+                          differential_heatmap = FALSE)
+    
+  if (dir.exists(save_dir)){
+    grDevices::pdf(paste0(save_dir, "/", params$type[i], "/Heatmap_", params$type[i], ".pdf", sep = ""), 
+                   width = 8, height = 8)
+    ComplexHeatmap::draw(heatmap)
+    dev.off()
+  }
+}
+```
+
+```{r Batch PCA Header, results = 'asis', eval = params$include_batch_pca}
+cat("# Batch Correction PCA")
+```
+
+```{r Batch PCA Description, results = 'asis', eval = params$include_batch_pca}
+cat("These PCA plots are generated for each covariate included in the model design. The batch corrected PCA is generated using an approximated version of the dataset adjusted based on each covariate individually, using the `removeBatchEffect()` function in the `limma` package.")
+```
+
+```{r PCA Batch, eval = params$include_batch_pca, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$batch_pca_data)){
+  for (j in 1:length(params$batch_pca_data[[i]])){
+    post_correction <- drawPCA(eset = params$batch_pca_data[[i]][[j]],
+                              x_axis = "PC1",
+                              y_axis = "PC2",
+                              type = params$type[[i]],
+                              color = "Paired",
+                              include_densities = FALSE,
+                              shapes = FALSE,
+                              title_add = paste0("After Batch Correction on Column/Factor '",
+                                                 names(params$batch_pca_data[[i]])[j], "'"),
+                              add_labels = TRUE,
+                              add_ellipse = FALSE)
+    
+    pre_correction <- drawPCA(eset = params$eset[[i]],
+                              x_axis = "PC1",
+                              y_axis = "PC2",
+                              type = params$type[[i]],
+                              color = "Paired",
+                              include_densities = FALSE,
+                              shapes = FALSE,
+                              title_add = paste0("Before Batch Correction"),
+                              add_labels = TRUE,
+                              add_ellipse = FALSE)
+    
+    gridExtra::grid.arrange(pre_correction+ theme(legend.position = "bottom"), 
+                        post_correction + theme(legend.position = "bottom"),
+                        top = paste0("Batch Corrected PCA", params$type[i], "\n", "Covariate: ", names(params$batch_pca_data[[i]])[j]), 
+                        ncol = 2);
+          
+    if (dir.exists(save_dir)){
+      grDevices::pdf(paste0(save_dir, "/", params$type[i], "/PCABatchCorrection_", params$type[i], "_", 
+                            names(params$batch_pca_data[[i]])[j], ".pdf", sep = ""), width = 10, height = 6)
+      
+      gridExtra::grid.arrange(pre_correction+ theme(legend.position = "bottom"), 
+                              post_correction + theme(legend.position = "bottom"),
+                              top = paste0("Batch Corrected PCA", params$type[i], "\n", "Covariate: ", names(params$batch_pca_data[[i]])[j]), 
+                              ncol = 2);
+      dev.off()
+    }
+  }
+}
+```
+
+# Volcano Plots
+
+The volcano plots are generated based on the options selected for the linear model. Each contrast (or if contrasts are not selected each group) has its own correlating volcano plot. The volcano plots show log fold change values on the x-axis and log p-values or adjusted p-values on the y-axis.
+
+```{r Volcano Plot Progress, fig.height = 7, fig.width = 10}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.7)
+  shiny::incProgress(detail = paste("Generating volcano plots..."))} 
+```
+
+### Adjusted P-Value
+
+```{r Volcano Plot Adj P-Val, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$eset)){
+  for (item in params$contrasts){
+    table <- makeTopTable(fit = params$linear_model[[i]],
+                          coef = item,
+                          coef_options = params$contrasts,
+                          logfc_th = NULL)
+    
+    volcano_adjpval <- drawVolcano(dat = table, 
+                                   type = params$type[i],
+                                   add_labels = TRUE,
+                                   v = "adj.P.Val",
+                                   up_color = 'red',
+                                   down_color = 'royalblue',
+                                   title_add = '',
+                                   title_type = item,
+                                   top_values = 0.05,
+                                   top_fc = 1,
+                                   label_specific = FALSE,
+                                   label_specific_gene = NULL,
+                                   label_number = 18)
+    plot(volcano_adjpval)
+  }
+}
+```
+
+### P-Value
+
+```{r Volcano Plot P-Val, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$eset)){
+  for (item in params$contrasts){
+    table <- makeTopTable(fit = params$linear_model[[i]],
+                          coef = item,
+                          coef_options = params$contrasts,
+                          logfc_th = NULL)
+    
+    volcano_pval <- drawVolcano(dat = table, 
+                                type = params$type[i],
+                                add_labels = TRUE,
+                                v = "P.Value",
+                                up_color = 'red',
+                                down_color = 'royalblue',
+                                title_add = '',
+                                title_type = item,
+                                top_values = 0.05,
+                                top_fc = 1,
+                                label_specific = FALSE,
+                                label_specific_gene = NULL,
+                                label_number = 18)
+    plot(volcano_pval)
+  }
+}
+```
+
+```{r Volcano Download, include = FALSE, fig.height = 7, fig.width = 10}
+for (i in 1:length(params$eset)){
+  for (item in params$contrasts){
+    table <- makeTopTable(fit = params$linear_model[[i]],
+                          coef = item,
+                          coef_options = params$contrasts,
+                          logfc_th = NULL)
+    
+    volcano_adjpval <- drawVolcano(dat = table, 
+                                   type = params$type[i],
+                                   add_labels = TRUE,
+                                   v = "adj.P.Val",
+                                   up_color = 'red',
+                                   down_color = 'royalblue',
+                                   title_add = '',
+                                   title_type = item,
+                                   top_values = 0.05,
+                                   top_fc = 1,
+                                   label_specific = FALSE,
+                                   label_specific_gene = NULL,
+                                   label_number = 18)
+    
+    volcano_pval <- drawVolcano(dat = table, 
+                                type = params$type[i],
+                                add_labels = TRUE,
+                                v = "P.Value",
+                                up_color = 'red',
+                                down_color = 'royalblue',
+                                title_add = '',
+                                title_type = item,
+                                top_values = 0.05,
+                                top_fc = 1,
+                                label_specific = FALSE,
+                                label_specific_gene = NULL,
+                                label_number = 18)
+    
+    if (dir.exists(save_dir)){
+      # ggsave(paste0(save_dir, "/", params$type[i], "/Volcano_", item, "_", params$type[i], ".pdf", sep = ""),
+      #        plot(volcano_adjpval),
+      #        width = 8, height = 8)
+      
+      grDevices::pdf(paste0(save_dir, "/", params$type[i], "/Volcano_", item, "_", params$type[i], ".pdf", sep = ""),
+                     width = 10, height = 6)
+      plot(volcano_adjpval)
+      plot(volcano_pval)
+      dev.off()
+    }
+  }
+}
+
+```
+
+# Differential Heatmaps
+
+The differential heatmaps are based on the output of the limma linear model. Each contrast or group has a corresponding heatmap, which is subset by the top 50  most variable rows/genes.
+
+```{r Differential Heatmaps, fig.height = 10, fig.width = 10}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.8)
+  shiny::incProgress(detail = paste("Generating differential heatmaps..."))} 
+
+for (i in 1:length(params$eset)){
+  for (item in params$contrasts){
+    table <- makeTopTable(fit = params$linear_model[[i]],
+                          coef = item,
+                          coef_options = params$contrasts,
+                          logfc_th = NULL)
+    
+    heatmap <- drawHeatmaps(eset = params$eset[[i]], 
+                            type = params$type[i], 
+                            title_add = '', 
+                            mapcolor = "Spectral",
+                            group_color = "Emrld",
+                            annot = params$annot, 
+                            subset = "top_table_rows",
+                            show_row_names = NULL, 
+                            cluster_samples = TRUE, 
+                            kclustering = TRUE,
+                            log2 = params$log_transform,
+                            zscore = TRUE,
+                            differential_heatmap = TRUE,
+                            top_table = table,
+                            dif_title = item,
+                            dif_number_rows = 50)
+    
+    ComplexHeatmap::draw(heatmap)
+    
+    if (dir.exists(save_dir)){
+      grDevices::pdf(paste0(save_dir, "/", params$type[i], "/DifferentialHeatmap_", item, "_", params$type[i], ".pdf", sep = ""),
+                     width = 8, height = 8)
+      ComplexHeatmap::draw(heatmap)
+      dev.off()
+    }
+  }
+}
+```
+
+```{r Enrichment Header, results = 'asis', eval = params$include_enrichment}
+cat("# Enrichment", "\n")
+
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.8)
+  shiny::incProgress(detail = paste("Visualizing enrichment..."))} 
+
+cat("## Parameters", "\n")
+cat("### Species", "\n", "\n")
+cat("The selected species that correlated with the data input.", "\n")
+```
+
+```{r Species, eval = params$include_enrichment}
+cat(params$species)
+```
+
+```{r Database Header, results = 'asis', eval = params$include_enrichment}
+cat("### Database", "\n")
+cat("Which gene set/pathway database was used for enrichment analysis.", "\n")
+```
+
+```{r Database, eval = params$include_enrichment}
+cat(params$enrichment_database)
+```
+
+```{r Enrichment Type Header, results = 'asis', eval = params$include_enrichment}
+cat("### Enrichment Type", "\n")
+cat("Either ranked or unranked enrichment analysis.", "\n")
+```
+
+```{r Enrichment Type, eval = params$include_enrichment}
+if (params$enrichment == "ranked"){
+  cat("Ranked Enrichment Analysis", "\n")
+} else {
+  cat("Unranked Enrichment Analysis aka. Over Representation Analysis (ORA)", "\n")
+}
+```
+
+```{r Gene Lists, eval = params$include_enrichment}
+cat("Gene Lists:")
+print(str(params$geneList))
+```
+
+```{r Enrichment Lists, eval = params$include_enrichment}
+cat("Enrichmed Pathways Present?")
+if (params$enrichment == "ranked"){
+  for (i in 1:length(params$enriched)){
+    for (j in 1:length(params$enriched[[i]])){
+      cat(names(params$enriched)[i], names(enriched[[i]])[j], ":", (dim(params$enriched[[i]][[j]])[1] != 0), "\n")
+    }
+  }
+}
+```
+
+```{r Make Enrichment Directories, eval = params$include_enrichment}
+if (dir.exists(save_dir)){
+  for (i in 1:length(params$type)){
+    dir.create(file.path(paste0(save_dir, "/", params$type[i], "/Enrichment", sep = "")), showWarnings = FALSE)
+  }
+}
+```
+
+```{r Dot Plot Header, results = 'asis', eval = ("dot" %in% params$enrichplots & params$include_enrichment)}
+cat("## Dot Plot")
+```
+
+```{r Dot Plot Description, results = 'asis', eval = ("dot" %in% params$enrichplots & params$include_enrichment)}
+cat("The dot plot depicts the enrichment scores (p-values) via color-coded points, and gene ratio as position relative to the x-axis. Gene count is represented by the size of the point.")
+```
+
+```{r Make Enrichment Dot Plot Directories, eval = ("dot" %in% params$enrichplots & params$include_enrichment)}
+if (dir.exists(save_dir)){
+  for (i in 1:length(params$type)){
+    dir.create(file.path(paste0(save_dir, "/", params$type[i], "/Enrichment/DotPlots", sep = "")), showWarnings = FALSE)
+  }
+}
+```
+
+```{r Dot Plot, fig.height = 10, fig.width = 10, message = FALSE, eval = ("dot" %in% params$enrichplots & params$include_enrichment)}
+
+if (params$enrichment == "ranked"){
+  for (i in 1:length(params$enriched)){
+    for (j in 1:length(params$enriched[[i]])){
+      if (dim(params$enriched[[i]][[j]])[1] != 0){
+        dot <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                             gmt = params$enrichment_database,
+                             geneList = params$geneList[[i]][[j]],
+                             contrast = sub(".*_", "", names(params$enriched)[i]),
+                             plottype = "dot",
+                             dotplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Dot Plot"),
+                             dotplot_categories = 20)
+      
+        try(plot(dot))
+        
+        if (dir.exists(save_dir)){
+          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+          db <- names(params$enriched[[i]])[j]
+          contrast <- sub(".*_", "", names(params$enriched)[i])
+          grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/DotPlots/DotPlot_", db, "_", contrast, "_", dataset, ".pdf", sep = ""),
+                         width = 8, height = 10)
+          plot(dot)
+          dev.off()
+        }
+      }
+    }
+  }
+} else {
+  for (i in 1:length(params$enriched)){
+    if (dim(params$enriched[[i]][[1]])[1] != 0){
+      dot <- enrichedPlots(enriched = params$enriched[[i]][[1]],
+                           gmt = params$enrichment_database,
+                           geneList = params$geneList[[i]][[1]],
+                           contrast = '',
+                           plottype = "dot",
+                           dotplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Dot Plot"),
+                           dotplot_categories = 20)
+      
+      try(plot(dot))
+          
+      if (dir.exists(save_dir)){
+        dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+        db <- names(params$enriched[[i]])[j]
+        grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/DotPlots/DotPlot_", db, "_", dataset, ".pdf", sep = ""),
+                       width = 8, height = 10)
+        plot(dot)
+        dev.off()
+      }
+    }
+  }
+}
+
+```
+
+```{r CNET Header, results = 'asis', eval = ("cnet" %in% params$enrichplots & params$include_enrichment)}
+cat("## CNET Plot")
+```
+
+```{r CNET Plot Description, results = 'asis', eval = ("cnet" %in% params$enrichplots & params$include_enrichment)}
+cat("The circular network plot is constructed based on hierarchical clustering of enriched terms, and connections represent similarities between terms. Nodes in the plot represent individual terms or gene sets, and the connections between nodes indicate relationships or similarities between them. The color of nodes can be customized based on adjusted p-values or combined scores. The size of nodes is proportional to the number of genes in each category.")
+```
+
+```{r Make Enrichment CNET Directories, eval = ("cnet" %in% params$enrichplots & params$include_enrichment)}
+if (dir.exists(save_dir)){
+  for (i in 1:length(params$type)){
+    dir.create(file.path(paste0(save_dir, "/", params$type[i], "/Enrichment/CNETs", sep = "")), showWarnings = FALSE)
+  }
+}
+```
+
+```{r CNET Plot, results = 'asis', eval = ("cnet" %in% params$enrichplots & params$include_enrichment), fig.height = 10, fig.width = 10, message = FALSE}
+suppressWarnings({
+  if (params$enrichment == "ranked"){
+    for (i in 1:length(params$enriched)){
+      for (j in 1:length(params$enriched[[i]])){
+        if (dim(params$enriched[[i]][[j]])[1] != 0){
+          cnet <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                           gmt = params$enrichment_database,
+                           geneList = params$geneList[[i]][[j]],
+                           contrast = sub(".*_", "", names(params$enriched)[i]),
+                           plottype = "cnet",
+                           cnetplot_categories = 5,
+                           cnetplot_layout = "kk",
+                           cnetplot_label = "category",
+                           cnet_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Ranked Analysis Network Plot"))
+          
+          try(plot(cnet))
+          
+          if (dir.exists(save_dir)){
+            dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+            db <- names(params$enriched[[i]])[j]
+            contrast <- sub(".*_", "", names(params$enriched)[i])
+            grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/CNETs/CNET_", db, "_", contrast, "_", dataset, ".pdf", sep = ""), 
+                           width = 8, height = 8)
+            plot(cnet)
+            dev.off()
+          }
+        }
+      }
+    }
+  } else {
+    for (i in 1:length(params$enriched)){
+      if (dim(params$enriched[[i]][[j]])[1] != 0){
+        cnet <- enrichedPlots(enriched = params$enriched[[i]][[1]],
+                           gmt = params$enrichment_database,
+                           geneList = params$geneList[[i]][[1]],
+                           contrast = '',
+                           plottype = "cnet",
+                           cnetplot_categories = 5,
+                           cnetplot_layout = "kk",
+                           cnetplot_label = "category",
+                           cnet_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Network Plot"))
+        
+        try(plot(cnet))
+          
+        if (dir.exists(save_dir)){
+          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+          db <- names(params$enriched[[i]])[j]
+          grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/CNETs/CNET_", db, "_", dataset, ".pdf", sep = ""),
+                         width = 8, height = 8)
+          plot(cnet)
+          dev.off()
+        }
+      }
+    }
+  }
+})
+```
+
+```{r EMAP Header, results = 'asis', eval = ("emap" %in% params$enrichplots & params$include_enrichment)}
+cat("## EMAP Plot")
+```
+
+```{r EMAP Plot Description, results = 'asis', eval = ("emap" %in% params$enrichplots & params$include_enrichment)}
+cat("According to the Yu lab, \"the enrichment map organizes enriched terms into a network with edges connecting overlapping gene sets. In this way, mutually overlapping gene sets are tend to cluster together, making it easy to identify functional modules.\"")
+```
+
+```{r Make Enrichment EMAP Directories, eval = ("emap" %in% params$enrichplots & params$include_enrichment)}
+if (dir.exists(save_dir)){
+  for (i in 1:length(params$type)){
+    dir.create(file.path(paste0(save_dir, "/", params$type[i], "/Enrichment/EMAPs", sep = "")), showWarnings = FALSE)
+  }
+}
+```
+
+```{r EMAP Plot, results = 'asis', eval = ("emap" %in% params$enrichplots & params$include_enrichment), fig.height = 10, fig.width = 10, message = FALSE}
+suppressWarnings({
+  if (params$enrichment == "ranked") {
+    for (i in 1:length(params$enriched)){
+      for (j in 1:length(params$enriched[[i]])){
+        if (dim(params$enriched[[i]][[j]])[1] != 0){
+          emap <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                             gmt = params$enrichment_database,
+                             geneList = params$geneList[[i]][[j]],
+                             contrast = sub(".*_", "", names(params$enriched)[i]),
+                             plottype = "emap",
+                             emap_categories = 45,
+                             emap_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Enrichment Map"),
+                             emap_category_label = 0.7)
+          
+          try(plot(emap))
+          
+          if (dir.exists(save_dir)){
+            dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+            db <- names(params$enriched[[i]])[j]
+            contrast <- sub(".*_", "", names(params$enriched)[i])
+            grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/EMAPs/EMAP_", db, "_", contrast, "_", dataset, ".pdf", sep = ""), 
+                           width = 8, height = 8)
+            plot(emap)
+            dev.off()
+          }
+        }
+      }
+    }
+  } else {
+    for (i in 1:length(params$enriched)){
+      if (dim(params$enriched[[i]][[j]])[1] != 0){
+        emap <- enrichedPlots(enriched = params$enriched[[i]][[1]],
+                           gmt = params$enrichment_database,
+                           geneList = params$geneList[[i]][[1]],
+                           contrast = '',
+                           plottype = "emap",
+                           emap_categories = 45,
+                           emap_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Enrichment Map"),
+                           emap_category_label = 0.7)
+        
+        try(plot(emap))
+          
+        if (dir.exists(save_dir)){
+          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+          db <- names(params$enriched[[i]])[j]
+          grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/EMAPs/EMAP_", db, "_", dataset, ".pdf", sep = ""), 
+                         width = 8, height = 8)
+          plot(emap)
+          dev.off()
+        }
+      }
+    }
+  }
+})
+```
+
+```{r UpSet Header, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment)}
+cat("## UpSet Plot")
+```
+
+```{r UpSet Plot Description, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment)}
+cat("An UpSet plot is a visual representation that displays the intersections and overlaps between multiple sets in a dataset. It uses bars or boxes to represent individual sets and vertical lines to indicate the presence or absence of elements in specific intersections. UpSet plots are particularly useful for understanding the combinations of sets and visualizing the relationships between them.")
+```
+
+```{r Make Enrichment UpSet Plot Directories, eval = ("upset" %in% params$enrichplots & params$include_enrichment)}
+if (dir.exists(save_dir)){
+  for (i in 1:length(params$type)){
+    dir.create(file.path(paste0(save_dir, "/", params$type[i], "/Enrichment/UpSetPlots", sep = "")), showWarnings = FALSE)
+  }
+}
+```
+
+```{r UpSet, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment), fig.height = 10, fig.width = 10, message = FALSE}
+
+if (params$enrichment == "ranked") {
+  for (i in 1:length(params$enriched)){
+    for (j in 1:length(params$enriched[[i]])){
+      if (dim(params$enriched[[i]][[j]])[1] != 0){
+        upset <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                      gmt = params$enrichment_database,
+                      geneList = params$geneList[[i]][[j]],
+                      contrast = sub(".*_", "", names(params$enriched)[i]),
+                      plottype = "upset",
+                      upset_categories = 15,
+                      upsetplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "UpSet Plot"))
+        
+        try(plot(upset))
+          
+        if (dir.exists(save_dir)){
+          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+          db <- names(params$enriched[[i]])[j]
+          contrast <- sub(".*_", "", names(params$enriched)[i])
+          grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/UpSetPlots/UpSet_", db, "_", contrast, "_", dataset, ".pdf", sep = ""), 
+                         width = 8, height = 8)
+          plot(upset)
+          dev.off()
+        }
+      }
+    }
+  }
+} else {
+  for (i in 1:length(params$enriched)){
+    if (dim(params$enriched[[i]][[j]])[1] != 0){
+      upset <- enrichedPlots(enriched = params$enriched[[i]][[1]],
+                    gmt = params$enrichment_database,
+                    geneList = params$geneList[[i]][[1]],
+                    contrast = '',
+                    plottype = "upset",
+                    upset_categories = 15,
+                    upsetplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA UpSet Plot"))
+      
+      try(plot(upset))
+          
+      if (dir.exists(save_dir)){
+        dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+        db <- names(params$enriched[[i]])[j]
+        grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/UpSetPlots/UpSet_", db, "_", dataset, ".pdf", sep = ""), 
+                       width = 8, height = 8)
+        plot(upset)
+        dev.off()
+      }
+    }
+  }
+}
+```
+
+```{r Tree Header, results = 'asis', eval = ("tree" %in% params$enrichplots & params$include_enrichment)}
+cat("## Tree Diagram")
+```
+
+```{r Tree Description, results = 'asis', eval = ("tree" %in% params$enrichplots & params$include_enrichment)}
+cat("The tree plot is a funnctional grouping tree diagram for enrichment result of over-representation test or gene set enrichment analysis.")
+```
+
+```{r Make Enrichment Tree Plot Directories, eval = ("tree" %in% params$enrichplots & params$include_enrichment)}
+if (dir.exists(save_dir)){
+  for (i in 1:length(params$type)){
+    dir.create(file.path(paste0(save_dir, "/", params$type[i], "/Enrichment/TreeDiagrams", sep = "")), showWarnings = FALSE)
+  }
+}
+```
+
+```{r Tree, results = 'asis', eval = ("tree" %in% params$enrichplots & params$include_enrichment), fig.height = 10, fig.width = 10, message = FALSE}
+suppressWarnings({
+  if (params$enrichment == "ranked") {
+    for (i in 1:length(params$enriched)){
+      for (j in 1:length(params$enriched[[i]])){
+        if (dim(params$enriched[[i]][[j]])[1] != 0){
+          tree <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                        gmt = params$enrichment_database,
+                        geneList = params$geneList[[i]][[j]],
+                        contrast = sub(".*_", "", names(params$enriched)[i]),
+                        plottype = "tree",
+                        tree_categories = 30,
+                        tree_clusters = 5,
+                        treeplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Tree Diagram"))
+          
+          try(plot(tree))
+          
+          if (dir.exists(save_dir)){
+            dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+            db <- names(params$enriched[[i]])[j]
+            contrast <- sub(".*_", "", names(params$enriched)[i])
+            grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/TreeDiagrams/TreePlot_", db, "_", contrast, "_", dataset, ".pdf", sep = ""),
+                           width = 8, height = 8)
+            plot(tree)
+            dev.off()
+          }
+        }
+      }
+    }
+  } else {
+    for (i in 1:length(params$enriched)){
+      if (dim(params$enriched[[i]][[j]])[1] != 0){
+        tree <- enrichedPlots(enriched = params$enriched[[i]][[1]],
+                        gmt = params$enrichment_database,
+                        geneList = params$geneList[[i]][[1]],
+                        contrast = '',
+                        plottype = "tree",
+                        tree_categories = 30,
+                        tree_clusters = 5,
+                        treeplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Tree Diagram"))
+        
+        try(plot(tree))
+          
+        if (dir.exists(save_dir)){
+          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+          db <- names(params$enriched[[i]])[j]
+          grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/TreeDiagrams/TreePlot_", db, "_", dataset, ".pdf", sep = ""),
+                         width = 8, height = 8)
+          plot(tree)
+          dev.off()
+        }
+      }
+    }
+  }
+})
+```
+
+```{r Excel Enrichment Summaries, eval = (params$include_enrichment)}
+for (i in 1:length(params$enriched)){
+  dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+  file <- paste0(save_dir, "/", dataset, "/Enrichment/EnrichedPathwaySummary_", names(params$enriched)[i], ".xlsx")
+  for (j in 1:length(params$enriched[[i]])){
+    if (dim(params$enriched[[i]][[j]])[1] != 0){
+      if (!file.exists(file)){
+        xlsx::write.xlsx(params$enriched[[i]][[j]]@result, file, append = FALSE,
+                       sheetName = paste0(names(params$enriched[[i]])[j]), row.names = FALSE)
+      } else {
+        xlsx::write.xlsx(params$enriched[[i]][[j]]@result, file, append = TRUE,
+                       sheetName = paste0(names(params$enriched[[i]])[j]), row.names = FALSE)
+      }
+    } 
+  }
+}
+```
+
+
+```{r Cytoscape Inputs, eval = (params$include_enrichment), message = FALSE}
+if (dir.exists(save_dir)){
+  datasets <- unique(sub("_[^_]+$", "", names(enrich_geneList)))
+  for (i in datasets){
+    dir.create(file.path(paste0(save_dir, "/", i, "/Enrichment/CytoScapeInputs/", sep = "")), showWarnings = FALSE)
+  }
+}
+
+if (params$enrichment == "ranked") {
+  for (i in 1:length(params$enriched)){
+    for (j in 1:length(params$enriched[[i]])){
+      if (!is.character(params$enriched[[i]][[j]])){
+        df <- makeCytoscapeInput(enrichmentResult = params$enriched[[i]][[j]])
+        
+        print(str(df))
+        
+        if (dir.exists(save_dir)){
+          dataset <- sub("_[^_]+$", "", names(params$geneList)[i])
+          algo <- sub(paste0(dataset, "_"), "", names(params$geneList)[i])
+          
+          if (algo == "GSEA"){
+            write_delim(df, paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/", params$contrasts[j], "_", params$enrichment_database[1], "_enrichment.gmt.txt"), delim = "\t")
+          } else if (algo == "PKSEA"){
+            write_delim(df, paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/", params$contrasts[j], "_", params$enrichment_database[2], "_enrichment.gmt.txt"), delim = "\t")
+          }
+          
+          write_delim(data.frame(names(params$geneList[[i]][[j]]), params$geneList[[i]][[j]]), paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/ranked_", params$contrasts[j], ".rnk"), delim = "\t")
+        }
+      }
+    }
+  }
+} else {
+  for (i in 1:length(params$enriched)){
+    if (!is.character(params$enriched[[i]][[1]])){
+      df <- makeCytoscapeInput(enrichmentResult = params$enriched[[i]][[1]])
+        
+      if (dir.exists(save_dir)){
+        dataset <- sub("_[^_]+$", "", names(params$geneList)[i])
+        write_delim(df, paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/", "ORA_", params$enrichment_database, "_enrichment.gmt.txt"), delim = "\t")
+        write_delim(data.frame(params$geneList), paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/UNranked_", params$contrasts[j], ".rnk"), delim = "\t")
+      }
+    }
+  }
+}
+
+```
+
+```{r S-Score Header, results = 'asis', eval = params$include_sscore}
+cat("# S-Score Integration", "\n")
+
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.8)
+  shiny::incProgress(detail = paste("Visualizing s-score integration..."))} 
+```
+
+```{r S-Score Tables, results = 'asis', eval = params$include_sscore}
+for (i in 1:length(params$sscore)){
+  end_column <- which(colnames(params$sscore[[i]]) == "sscore_adj_pval")
+  table <- params$sscore[[i]][,1:end_column]
+  table <- table[table$sscore_adj_pval <= 0.05, ]
+  
+  cat("\n\n")
+  cat("### S-Score Integration:", names(params$sscore)[i])
+  cat(knitr::knit_print(DT::datatable(table, options = list(order = list((end_column - 1), 'asc'), pageLength = 15, scrollX = TRUE), rownames = FALSE) %>%
+                          DT::formatSignif(columns = (end_column - 2):end_column, digits = 3) %>%
+                          DT::formatStyle('sscore', fontWeight = 'bold', background = GeneTonic::styleColorBar_divergent(table$sscore, 'lightskyblue', 'lightcoral')))) 
+  cat("\n\n")
+}
+  
+```
+
+```{r, eval = params$include_sscore}
+if (dir.exists(save_dir)){
+  dir.create(file.path(paste0(save_dir, "/MultiOmicIntegration", sep = "")), showWarnings = FALSE)
+}
+```
+
+```{r S-Score Volcano Plot, results = 'asis', eval = ("volcano" %in% params$sscore_plots & params$include_sscore), message = FALSE, fig.height = 9, fig.width = 10}
+suppressWarnings({
+  for (i in 1:length(params$sscore)){
+    plot(sscoreVolcanoPlot(params$sscore[[i]], 
+                           adj_pval_cutoff = 0.05,
+                           label_size = 0.3,
+                           label_num = 5)) 
+  }
+})
+```
+
+```{r S-Score Volcano Plot Download, results = 'asis', eval = ("volcano" %in% params$sscore_plots & params$include_sscore), message = FALSE, fig.height = 9, fig.width = 10}
+for (i in 1:length(params$sscore)){
+  if (dir.exists(save_dir)){
+    grDevices::pdf(paste0(save_dir, "/MultiOmicIntegration/Sscore_VolcanoPlot_", names(params$sscore)[i], ".pdf", sep = ""),
+                   width = 10, height = 8)
+    plot(sscoreVolcanoPlot(params$sscore[[i]], 
+                           adj_pval_cutoff = 0.05,
+                           label_size = 0.3,
+                           label_num = 5)) 
+    dev.off()
+  }
+}
+```
+
+
+```{r S-Score Venn Diagram, results = 'asis', eval = ("venn" %in% params$sscore_plots & params$include_sscore), message = FALSE, fig.width = 10}
+for (i in 1:length(params$sscore)){
+  sscoreVennDiagram(params$sscore[[i]])
+}
+```
+
+```{r S-Score Venn Diagram Download, results = 'asis', eval = ("venn" %in% params$sscore_plots & params$include_sscore), message = FALSE, fig.width = 10}
+for (i in 1:length(params$sscore)){
+  if (dir.exists(save_dir)){
+    grDevices::pdf(paste0(save_dir, "/MultiOmicIntegration/Sscore_VennDiagram_", names(params$sscore)[i], ".pdf", sep = ""),
+                   width = 12, height = 8)
+    sscoreVennDiagram(params$sscore[[i]])
+    dev.off()
+  }
+}
+```
+
+```{r S-Score Enrichment Header, results = 'asis', eval = (params$include_sscore & params$include_enrichment)}
+cat("## S-Score Enrichment", "\n")
+```
+
+```{r S-Score Enrichment Folder, results = 'asis', eval = (params$include_sscore & params$include_enrichment)}
+if (dir.exists(save_dir)){
+  dir.create(file.path(paste0(save_dir, "/MultiOmicIntegration/Enrichment", sep = "")), showWarnings = FALSE)
+}
+```
+
+```{r S-Score Dot Plot Header, results = 'asis', eval = ("dot" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+cat("### Dot Plot")
+```
+
+```{r S-Score Dot Plot Description, results = 'asis', eval = ("dot" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+cat("The dot plot depicts the enrichment scores (p-values) via color-coded points, and gene ratio as position relative to the x-axis. Gene count is represented by the size of the point.")
+```
+
+```{r S-Score Dot Plot, fig.height = 10, fig.width = 10, message = FALSE, eval = ("dot" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+for (i in 1:length(params$sscore_enriched)){
+  dot <- enrichedPlots(enriched = params$sscore_enriched[[i]],
+                       gmt = params$enrichment_database,
+                       geneList = params$sscore_geneList[[i]],
+                       contrast = params$contrasts[i],
+                       plottype = "dot",
+                       dotplot_title = paste(names(params$sscore_geneList)[i], "Dot Plot"),
+                       dotplot_categories = 20)
+
+  try(plot(dot))
+}
+```
+
+```{r, fig.height = 10, fig.width = 10, message = FALSE, eval = ("dot" %in% params$enrichplots & params$include_enrichment & params$include_sscore), include = FALSE}
+if (dir.exists(save_dir)){
+  grDevices::pdf(paste0(save_dir, "/MultiOmicIntegration/Enrichment/", names(params$sscore_geneList)[i], "_DotPlot.pdf", 
+                        sep = ""), width = 8, height = 10)
+  plot(dot)
+  dev.off()
+}
+
+```
+
+```{r S-Score CNET Header, results = 'asis', eval = ("cnet" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+cat("### CNET Plot")
+```
+
+```{r S-Score CNET Plot Description, results = 'asis', eval = ("cnet" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+cat("The circular network plot is constructed based on hierarchical clustering of enriched terms, and connections represent similarities between terms. Nodes in the plot represent individual terms or gene sets, and the connections between nodes indicate relationships or similarities between them. The color of nodes can be customized based on adjusted p-values or combined scores. The size of nodes is proportional to the number of genes in each category.")
+```
+
+```{r S-Score CNET Plot, results = 'asis', eval = ("cnet" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE}
+suppressWarnings({
+  for (i in 1:length(params$sscore_enriched)){
+    cnet <- enrichedPlots(enriched = params$sscore_enriched[[i]],
+                     gmt = params$enrichment_database,
+                     geneList = params$sscore_geneList[[i]],
+                     contrast = params$contrasts[i],
+                     plottype = "cnet",
+                     cnetplot_categories = 5,
+                     cnetplot_layout = "kk",
+                     cnetplot_label = "category",
+                     cnet_title = paste(names(params$sscore_geneList)[i], "Ranked Analysis Network Plot"))
+    
+    try(plot(cnet))
+  }
+})
+```
+
+```{r, results = 'asis', eval = ("cnet" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE, include = FALSE}
+if (dir.exists(save_dir)){
+  grDevices::pdf(paste0(save_dir, "/MultiOmicIntegration/Enrichment/", names(params$sscore_geneList)[i], "_CNET.pdf",
+                        sep = ""), width = 8, height = 8)
+  plot(cnet)
+  dev.off()
+}
+```
+
+```{r S-Score EMAP Header, results = 'asis', eval = ("emap" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+cat("### EMAP Plot")
+```
+
+```{r S-Score EMAP Plot Description, results = 'asis', eval = ("emap" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+cat("According to the Yu lab, \"the enrichment map organizes enriched terms into a network with edges connecting overlapping gene sets. In this way, mutually overlapping gene sets are tend to cluster together, making it easy to identify functional modules.\"")
+```
+
+```{r S-Score EMAP Plot, results = 'asis', eval = ("emap" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE}
+suppressWarnings({
+  for (i in 1:length(params$sscore_enriched)){
+    emap <- enrichedPlots(enriched = params$sscore_enriched[[i]],
+                         gmt = params$enrichment_database,
+                         geneList = params$sscore_geneList[[i]],
+                         contrast = params$contrasts[i],
+                         plottype = "emap",
+                         emap_categories = 45,
+                         emap_title = paste(names(params$sscore_geneList)[i], "Enrichment Map"),
+                         emap_category_label = 0.7)
+    
+    try(plot(emap))
+  }
+})
+```
+
+```{r, results = 'asis', eval = ("emap" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE, include = FALSE}
+if (dir.exists(save_dir)){
+  grDevices::pdf(paste0(save_dir, "/MultiOmicIntegration/Enrichment/", names(params$sscore_geneList)[i], "_EMAP.pdf", 
+                        sep = ""), width = 8, height = 8)
+  plot(emap)
+  dev.off()
+}
+```
+
+```{r S-Score UpSet Header, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment  & params$include_sscore)}
+cat("### UpSet Plot")
+```
+
+```{r S-Score UpSet Plot Description, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment  & params$include_sscore)}
+cat("An UpSet plot is a visual representation that displays the intersections and overlaps between multiple sets in a dataset. It uses bars or boxes to represent individual sets and vertical lines to indicate the presence or absence of elements in specific intersections. UpSet plots are particularly useful for understanding the combinations of sets and visualizing the relationships between them.")
+```
+
+```{r S-Score UpSet, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE}
+for (i in 1:length(params$sscore_enriched)){
+  upset <- enrichedPlots(enriched = params$sscore_enriched[[i]],
+                          gmt = params$enrichment_database,
+                          geneList = params$sscore_geneList[[i]],
+                          contrast = params$contrasts[i],
+                          plottype = "upset",
+                          upset_categories = 15,
+                          upsetplot_title = paste(names(params$sscore_geneList)[i], "UpSet Plot"))
+  
+  try(plot(upset))
+}
+```
+
+```{r, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE, include = FALSE}
+if (dir.exists(save_dir)){
+  grDevices::pdf(paste0(save_dir, "/MultiOmicIntegration/Enrichment/", names(params$sscore_geneList)[i], "_UpSet.pdf",
+                        sep = ""), width = 8, height = 8)
+  plot(upset)
+  dev.off()
+}
+```
+
+```{r S-Score Tree Header, results = 'asis', eval = ("tree" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+cat("### Tree Diagram")
+```
+
+```{r S-Score Tree Description, results = 'asis', eval = ("tree" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
+cat("The tree plot is a funnctional grouping tree diagram for enrichment result of over-representation test or gene set enrichment analysis.")
+```
+
+```{r S-Score Tree, results = 'asis', eval = ("tree" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE}
+suppressWarnings({
+  for (i in 1:length(params$sscore_enriched)){
+    tree <- enrichedPlots(enriched = params$sscore_enriched[[i]],
+                          gmt = params$enrichment_database,
+                          geneList = params$sscore_geneList[[i]],
+                          contrast = params$contrasts[i],
+                          plottype = "tree",
+                          tree_categories = 30,
+                          tree_clusters = 5,
+                          treeplot_title = paste(names(params$sscore_geneList)[i], "Tree Diagram"))
+    
+    try(plot(tree))
+  }
+})
+```
+
+```{r, results = 'asis', eval = ("tree" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE, include = FALSE}
+if (dir.exists(save_dir)){
+  grDevices::pdf(paste0(save_dir, "/MultiOmicIntegration/Enrichment/", names(params$sscore_geneList)[i], "_TreePlot.pdf",
+                        sep = ""), width = 8, height = 8)
+  plot(tree)
+  dev.off()
+}
+```
+
+```{r PCSF Header, results = 'asis', eval = params$include_pcsf}
+cat("# PCSF", "\n")
+
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.8)
+  shiny::incProgress(detail = paste("Visualizing PCSF..."))} 
+```
+
+```{r Make Network Analysis Folder, eval = params$include_pcsf}
+if (dir.exists(save_dir)){
+  dir.create(file.path(paste0(save_dir, "/NetworkAnalysis", sep = "")), showWarnings = FALSE)
+}
+```
+
+```{r PCSF Data, eval = params$include_pcsf}
+cat("PCSF Datasets/Contrasts Generated:", paste0(names(params$pcsf_input), collapse = "; "))
+```
+
+```{r Create PCSF Node Networks, eval = ("node" %in% params$pcsf_plots & params$include_pcsf)}
+if (dir.exists(save_dir)){
+  for (i in 1:length(params$pcsf_nodes_net)){
+    visNetwork::visSave(params$pcsf_nodes_net[[i]], file = paste0(save_dir, "/NetworkAnalysis/PCSF_Nodes_", names(params$pcsf_nodes_net)[i] ,".html"))
+  }
+}
+```
+
+```{r Render PCSF Node Networks, eval = ("node" %in% params$pcsf_plots & params$include_pcsf), results = 'asis', fig.height = 9}
+for (i in 1:length(params$pcsf_nodes_net)){
+  suppressWarnings({
+    cat("\n\n")
+    cat("### Node Network:", names(params$pcsf_nodes_net)[i])
+    cat (as.character(htmltools::includeHTML(paste0(save_dir, "/NetworkAnalysis/PCSF_Nodes_", names(params$pcsf_nodes_net)[i] ,".html"))) %>%
+           {gsub("<!DOCTYPE html>","",.,fixed = TRUE)})
+    # cat(htmltools::includeHTML(paste0(save_dir, "/NetworkAnalysis/PCSF_Nodes_", names(params$pcsf_nodes_net)[i] ,".html")))
+    cat("\n\n")
+  })
+}
+```
+
+```{r Create PCSF Influential Networks, eval = ("influential" %in% params$pcsf_plots & params$include_pcsf)}
+if (dir.exists(save_dir)){
+  for (i in 1:length(params$pcsf_influential_net)){
+    visNetwork::visSave(params$pcsf_influential_net[[i]], file = paste0(save_dir, "/NetworkAnalysis/PCSF_Influential_", names(params$pcsf_influential_net)[i] ,".html"))
+  }
+}
+```
+
+```{r Render PCSF Influential Networks, eval = ("influential" %in% params$pcsf_plots & params$include_pcsf), results = 'asis', fig.height = 9}
+for (i in 1:length(params$pcsf_influential_net)){
+  suppressWarnings({
+    cat("\n\n")
+    cat("### Influential Network:", names(params$pcsf_influential_net)[i])
+    cat (as.character(htmltools::includeHTML(paste0(save_dir, "/NetworkAnalysis/PCSF_Influential_", names(params$pcsf_influential_net)[i] ,".html"))) %>%
+           {gsub("<!DOCTYPE html>","",.,fixed = TRUE)})
+    cat("\n\n")
+  })
+}
+```
+
+```{r PCSF Enrichment Header, results = 'asis', eval = params$include_pcsf}
+if (params$include_enrichment == TRUE){
+  cat("## PCSF Enrichment")
+}
+```
+
+```{r PCSF Enriched Table, results = 'asis', eval = params$include_pcsf}
+if (params$include_enrichment == TRUE){
+  for (i in 1:length(params$pcsf_enriched)){
+    table <- pcsfEnrichedTable(params$pcsf_enriched[[i]])
+    
+    cat("\n\n")
+    cat("### PCSF Enriched:", names(params$pcsf_enriched)[i])
+    cat(knitr::knit_print(DT::datatable(table, rownames = FALSE, options = list(order = list(3, 'asc'))) %>% 
+                            DT::formatSignif(columns = 4, digits = 3) %>%
+                            DT::formatStyle('Adj_PVal', backgroundColor = DT::styleInterval(0.05, c('darkseagreen', 'darksalmon'))))) 
+    cat("\n\n")
+  }
+}
+```
+
+```{r Create PCSF Enriched Networks, eval = params$include_pcsf}
+if (params$include_enrichment == TRUE){
+  if (dir.exists(save_dir)){
+    for (i in 1:length(params$pcsf_enriched_network)){
+      visNetwork::visSave(params$pcsf_enriched_network[[i]], file = paste0(save_dir, "/NetworkAnalysis/PCSF_Enriched_", names(params$pcsf_enriched_network)[i] ,".html"))
+    }
+  }
+}
+```
+
+```{r Render PCSF Enriched Networks, eval = params$include_pcsf, results = 'asis', fig.height = 9}
+if (params$include_enrichment == TRUE){
+  for (i in 1:length(params$pcsf_enriched_network)){
+    suppressWarnings({
+      cat("\n\n")
+      cat("### Enriched Network:", names(params$pcsf_enriched_network)[i])
+      cat (as.character(htmltools::includeHTML(paste0(save_dir, "/NetworkAnalysis/PCSF_Enriched_", names(params$pcsf_enriched_network)[i] ,".html"))) %>%
+             {gsub("<!DOCTYPE html>","",.,fixed = TRUE)})
+      cat("\n\n")
+    })
+  }
+}
+```
+
+```{r Final Progress Update}
+if (params$rendered_by_shiny) {
+  shiny::setProgress(0.9)
+  shiny::incProgress(detail = paste("Finishing up..."))} 
+```
+
+# Parameters
+
+```{r Parameters}
+cat("File Name(s): ", paste0(params$type, collapse = "; "), "\n",
+    "File Format(s): ", paste0(params$data_format, collapse = "; "), "\n",
+    "Species: ", params$species, "\n",
+    "Data Cleaning, Filtering, & Transformation: \n",
+    "\t Normalization: ", params$norm, "\n",
+    "\t Log Transformation: ", params$log_transform, "\n",
+    "\t Percent Zeros Filter: ", (params$zero_cutoff * 100),  "%", "\n",
+    "\t Missing Value Imputation: ", params$missing_value_imputation, "\n",
+    "\t Uniprot Annotation: ", params$uniprot_annotation, "\n",
+    "\t Group By: ", params$group_column, "\n",
+    "Data Modeling: \n",
+    "\t Contrasts: ", params$contrasts, "\n",
+    "\t Linear Model: ", params$model_equation, "\n",
+    "Enrichment Performed on Linear Model: ", params$include_enrichment, "\n",
+    "\t Enrichment Algorithm: ", params$enrichment, "\n",
+    "\t Enrichment Database: ", params$enrichment_database, "\n")
+```
+
+# Session Info
+
+See information about the system that generated this report below.
+
+```{r Session Info}
+utils::sessionInfo()
+```
+
+```{r Glimma}
+# generate Glimma plots windows
+for (i in 1:length(params$type)){
+  for (j in 1:length(params$contrasts)) {
+    do.call(Glimma::glXYPlot, c(params$glimma[[i]][[j]], 
+                                path = paste0(save_dir, "/", params$type[i]), 
+                                folder = paste0("GlimmaVolcano_", params$type[i]))
+            )
+  }
+}
+```

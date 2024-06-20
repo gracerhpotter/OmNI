@@ -1,0 +1,1 @@
+"C:\Program Files\R\R-4.3.1\bin\R.exe" CMD BATCH --no-save run.r ROUT_%USERNAME%.txt

@@ -1,0 +1,168 @@
+# APPLICATION CONTENTS OVERVIEW
+
+Below is a brief index of the files and folders in this application and their 
+functions.
+
+Update Log:
+- Jan-22-2024: Created
+- Apr-2-2024: Added `S-score.R`, `PCSF.R`, `glossary.md`, & `methodsReference.md`
+- May-16-2024: Added `limmaStats.md`, HUMAN Reactome Genes-Metabols GMT, plotPvalHistogram(),
+  & `PCSF_files` folder.
+- Jun-18-2024: Added MOMENTA GMT files
+
+#-------------------------------------------------------------------------------
+
+## FILES
+
+### Shiny App Files: These files are needed to run the shiny application via the 
+    shiny R package. More information on shiny can be found at https://shiny.posit.co/.
+    
+- `server.R`: Contains the functions, objects, and backend processing of the application.
+- `ui.R`: Contains the user interface formatting and inputs.
+- `app.R`: Sources the UI and server functions to run the application.
+
+### Function Files: These files contain the functions that perform calculations
+and generate plots from the dataset. 
+
+  File Name:                Function(s):
+
+- `drawCorrelation.R`       variationPlot [returns ggcorrplot object]
+- `drawHeatmaps.R`          drawHeatmaps [returns ComplexHeatmap object]
+- `drawNormalization.R`     intensityNormPlots [returns ggplot/ggqqplot/limma::plotMA/graphics::boxplot object]
+- `drawPCA.R`               drawPCA [returns ggplot from stats::prcomp object]
+                            drawPCApercentages [returns ggplot object]
+                            drawPCAloadings [returns ggplot object]
+- `drawRange.R`             drawRange [NOT CURRENTLY IN USE]
+- `drawUMAP.R`              drawUMAP [returns ggplot from uwot::umap object]
+- `drawVolcano.R`           getLabelVars [returns list of datapoint labels]
+                            drawVPlots [returns labeled ggplot object]
+                            drawVolcano [returns ggplot object using drawVPlots]
+                            drawMD [returns ggplot object using drawVPlots]
+                            interactiveVolcano [returns list of arguments for Glimma::glXYPlot]
+- `enrichment.R`            safe_scale [returns z-scaled object]
+                            calculateGeneList [returns named list object]
+                            clusterProfilerEnrichment [returns clusterProfiler enriched object]
+                            enrichedTable [returns table]
+                            getKEGGID [returns KEGGID string]
+                            enrichedPlots [returns clusterProfiler plot/heatmaply object]
+- `formatAnnotation.R`      formatAnnotation [returns annotation data.frame]
+- `getUniprotAnnotation.R`  getUniprotAnnotation [returns Uniprot annotation data.frame]
+- `limmaLinearModel.R`      limmaLM [returns limma::lmFit object]
+                            makeTopTable [returns limma::topTable object]
+                            limmaEquation [returns model equation string]
+                            plotPvalHistogram [returns ggplot2 histogram]
+- `makeEset.R`              makeEset [returns eset object]
+- `PCSF.R`                  makePCSFNetwork [returns list of S3 igraph.vs objects]
+                            PCSFVisNodes [returns visNetwork::visIgraph object renderable network visualization]
+                            PCSFVisInfluential [returns visNetwork::visIgraph object renderable network visualization]
+                            runClusterProfiler [returns dataframe of clusterProfiler enricher object]
+                            PCSFModuleEnrichments [returns a list with a list of igraph objects and an enrichment dataframe]
+                            pcsfRunEnrichment [returns output from PCSFModuleEnrichments]
+                            pcsfEnrichedTable [returns table with enriched cluster information]
+                            pcsfEnrichedContracted [returns visNetwork::visIgraph object with interactions between clusters]
+                            pcsfEnrichedSubnet [returns visNetwork::visIgraph object with interactions between all nodes in clusters]
+- `performNormalization.R`  intensityNorm [returns normalized eset object]
+- `saveXLSX.R`              generateXLSX [saves XLSX workbook]
+                            writeDataToSheets [returns workbook customized]
+- `Sscore.R`                makeDataList [returns named list]
+                            convertUniprotSymbol [returns dataframe with a gene symbol column]
+                            computeWeightedZI [returns dataframe with weighted z-score column]
+                            computeWeightedZIList [returns list containing dataframe with z-score calculations]
+                            computeSscore [returns dataframe with s-score calculations column]
+                            sscoreIntegration [returns dataframe with summary s-score and z-score calculations for all rows/dataframes]
+                            PSCFFormatting [returns s-score dataframe formatted with columns relevant to running PCSF] ** NOT IN USE
+                            GSVAFormatting [returns s-score dataframe formatted with columns relevant to running GSVA] ** NOT IN USE
+                            sscoreVolcanoPlot [returns ggplot volcano plot object]
+                            sscoreVennDiagram [returns ggvenn objects grid.arranged]
+
+### Markdown Files: These files are input as formatted explanatory tabs for the 
+    application. They include, in order, an explanation of the Enrichment section,
+    an explanation of the input files (dataset and annotation), an explanation of the 
+    linear modeling section, and an explanation of how to get started in the app.
+    
+- `enrichmentOverview.md`
+- `fileInputs.md`
+- `linearModeling.md`
+- `gettingStarted.md`
+- `glossary.md`
+- `methodsReference.md`
+- `limmaStats.md`
+
+### HTML Files: This HTML file is used as the footer for each tab and contains the
+    logos with links to associated web pages, images pulled from the `www` folder.
+    
+- `footer.Rhtml`
+
+### RMD Report Files: This R markdown file is used to generate the overall data 
+    report in the `Generate Report` tab of the app.
+    
+- `report.Rmd`
+
+### Run Application Files: These are the files that are specifically used to make 
+    the app run via a shortcut.
+    
+- `run.R`: This R file open the app via the shiny run command.
+- `runOmicsNotebook.bat`: This file contains the command line prompt that calls 
+    the `run.R` file and is used for the shortcut.
+- `loads.R`: This file is called by `run.R` to install and load all necessary
+    packages for the application.
+
+#-------------------------------------------------------------------------------
+
+## FOLDERS
+
+### `example_data`: Most of this data comes from the original Omics Notebook at
+    https://github.com/cnsb-boston/Omics_Notebook_Docs/tree/master/example, though
+    the annotation file has been converted to the new format.
+    
+    ** Example Files Updated: 
+      - Jan 2024
+      
+    ** Preprocessed Examples Added: June 2024
+
+### `GMTs`: These are all of the gene set files for the enrichment step. These files
+    should be checked/updated annually to ensure they are up to date.
+    
+Sources:
+1.  http://download.baderlab.org/EM_Genesets/current_release/Human/symbol/
+    - HUMAN: GOALL, GOBP, GOCC, GOMF, HallmarkMSigDB, KEGG, Reactome, MSigDB, WikiPathways
+    - MOUSE: GOALL, GOBP, GOCC, GOMF, Reactome, WikiPathways
+    - RAT: GOALL, GOBP, GOCC, GOMF, Reactome, WikiPathways
+
+2.  https://maayanlab.cloud/Enrichr/
+    - C ELEGANS: GOBP, GOCC, GOMF, KEGG, WikiPathways
+    - FRUITFLY: GOBP, GOCC, GOMF, KEGG, WikiPathways
+    - YEAST: GOBP, GOCC, GOMF, KEGG, WikiPathways
+    - ZEBRAFISH: GOBP, GOCC, GOMF, KEGG, WikiPathways
+
+3.  https://proteomics.broadapps.org/ptmsigdb/
+    - HUMAN: PHOSPHO
+    - MOUSE: PHOSPHO
+    - RAT: PHOSPHO
+    
+    ** GMT Files Updated: 
+      - Jan 2024
+
+4.  https://github.com/cnsb-boston/MOMENTA/tree/main/genesets
+    - HUMAN: MOMENTA BioCyc/MFN Targeted/Expanded
+    - MOUSE: MOMENTA BioCyc Targeted/Expanded
+    - FRUITFLY: MOMENTA BioCyc Targeted/Expanded
+    - YEAST: MOMENTA BioCyc Targeted/Expanded
+
+5.  Indranil Paul
+    - HUMAN Reactome Gene Symbol + Metabolite CHEBI ID
+
+  HOW TO READ/WRITE GMT FILES:
+  gmt <- clusterProfiler::read.gmt("*.gmt")
+  colnames(gmt) <- c("pathway", "feature_ids")
+  readr::write_delim(gmt, "*.tsv")
+  
+### `images`: Images used in markdown documents.
+
+### `www`: PNG logo images used in footer HTML - CANNOT change folder name
+
+### `glimma-plots`: DO NOT REMOVE - this is where Glimma plot objects will save 
+    during the app instance when the user generates them. The folder will automatically 
+    empty when the app is closed.
+    
+### `PCSF_files`: Files used for PCSF integration and associated rds objects. Provided by Indranil Paul.

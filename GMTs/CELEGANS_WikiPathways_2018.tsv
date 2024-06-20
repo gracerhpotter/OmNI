@@ -1,0 +1,1381 @@
+pathway	feature_ids
+Cell engulfment_WP2226	egl-1
+Cell engulfment_WP2226	psr-1
+Cell engulfment_WP2226	ced-10
+Cell engulfment_WP2226	ced-2
+Cell engulfment_WP2226	ced-3
+Cell engulfment_WP2226	ced-1
+Cell engulfment_WP2226	ced-6
+Cell engulfment_WP2226	ced-7
+Cell engulfment_WP2226	ced-4
+Cell engulfment_WP2226	ced-5
+Cell engulfment_WP2226	ced-9
+Proteasome Degradation_WP470	rpt-3
+Proteasome Degradation_WP470	rpn-9
+Proteasome Degradation_WP470	rpt-2
+Proteasome Degradation_WP470	htz-1
+Proteasome Degradation_WP470	rpn-8
+Proteasome Degradation_WP470	rpt-1
+Proteasome Degradation_WP470	rpn-7
+Proteasome Degradation_WP470	rpt-6
+Proteasome Degradation_WP470	rpt-5
+Proteasome Degradation_WP470	rpt-4
+Proteasome Degradation_WP470	rpn-1
+Proteasome Degradation_WP470	rpn-5
+Proteasome Degradation_WP470	rpn-3
+Proteasome Degradation_WP470	pbs-5
+Proteasome Degradation_WP470	pbs-6
+Proteasome Degradation_WP470	Y66D12A.9
+Proteasome Degradation_WP470	rpn-12
+Proteasome Degradation_WP470	ubq-1
+Proteasome Degradation_WP470	pbs-1
+Proteasome Degradation_WP470	rpn-10
+Proteasome Degradation_WP470	pbs-3
+Proteasome Degradation_WP470	pbs-4
+Proteasome Degradation_WP470	ostd-1
+Proteasome Degradation_WP470	sec-20
+Proteasome Degradation_WP470	his-35
+Proteasome Degradation_WP470	uba-1
+Proteasome Degradation_WP470	pas-4
+Proteasome Degradation_WP470	pas-5
+Proteasome Degradation_WP470	pas-6
+Proteasome Degradation_WP470	pas-7
+Proteasome Degradation_WP470	rpn-6.1
+Proteasome Degradation_WP470	ribo-1
+Proteasome Degradation_WP470	let-70
+Proteasome Degradation_WP470	pas-1
+Proteasome Degradation_WP470	pas-2
+Proteasome Degradation_WP470	pas-3
+Valine, leucine and isoleucine degradation_WP1451	ech-1.2
+Valine, leucine and isoleucine degradation_WP1451	acdh-3
+Valine, leucine and isoleucine degradation_WP1451	ech-1.1
+Valine, leucine and isoleucine degradation_WP1451	B0303.3
+Valine, leucine and isoleucine degradation_WP1451	bckd-1A
+Valine, leucine and isoleucine degradation_WP1451	acdh-7
+Valine, leucine and isoleucine degradation_WP1451	bckd-1B
+Valine, leucine and isoleucine degradation_WP1451	Y44A6D.5
+Valine, leucine and isoleucine degradation_WP1451	Y71G12B.10
+Valine, leucine and isoleucine degradation_WP1451	pcca-1
+Valine, leucine and isoleucine degradation_WP1451	pccb-1
+Valine, leucine and isoleucine degradation_WP1451	dbt-1
+Valine, leucine and isoleucine degradation_WP1451	acdh-10
+Valine, leucine and isoleucine degradation_WP1451	acdh-8
+Valine, leucine and isoleucine degradation_WP1451	T02G5.7
+Valine, leucine and isoleucine degradation_WP1451	ard-1
+Valine, leucine and isoleucine degradation_WP1451	B0272.3
+Valine, leucine and isoleucine degradation_WP1451	acaa-2
+Valine, leucine and isoleucine degradation_WP1451	hacd-1
+Valine, leucine and isoleucine degradation_WP1451	ivd-1
+Valine, leucine and isoleucine degradation_WP1451	ech-9
+Valine, leucine and isoleucine degradation_WP1451	ech-8
+Valine, leucine and isoleucine degradation_WP1451	ech-5
+Valine, leucine and isoleucine degradation_WP1451	bcat-1
+Valine, leucine and isoleucine degradation_WP1451	ech-7
+Valine, leucine and isoleucine degradation_WP1451	ech-6
+Valine, leucine and isoleucine degradation_WP1451	C05C10.3
+Valine, leucine and isoleucine degradation_WP1451	kat-1
+Valine, leucine and isoleucine degradation_WP1451	ech-3
+Valine, leucine and isoleucine degradation_WP1451	ech-2
+Valine, leucine and isoleucine degradation_WP1451	acds-10
+Valine, leucine and isoleucine degradation_WP1451	F54C8.1
+Triacylglyceride Synthesis_WP212	plpp-1.1
+Triacylglyceride Synthesis_WP212	Y53G8B.2
+Triacylglyceride Synthesis_WP212	atgl-1
+Triacylglyceride Synthesis_WP212	acl-11
+Triacylglyceride Synthesis_WP212	hosl-1
+Triacylglyceride Synthesis_WP212	acl-2
+Triacylglyceride Synthesis_WP212	gpdh-2
+Triacylglyceride Synthesis_WP212	R11F4.1
+Triacylglyceride Synthesis_WP212	ads-1
+Triacylglyceride Synthesis_WP212	acl-7
+Triacylglyceride Synthesis_WP212	gly-14
+Triacylglyceride Synthesis_WP212	acl-6
+Triacylglyceride Synthesis_WP212	gly-20
+Triacylglyceride Synthesis_WP212	lipl-1
+Fatty Acid Biosynthesis_WP38	acaa-2
+Fatty Acid Biosynthesis_WP38	fasn-1
+Fatty Acid Biosynthesis_WP38	F53C11.3
+Fatty Acid Biosynthesis_WP38	fat-5
+Fatty Acid Biosynthesis_WP38	Y25C1A.13
+Fatty Acid Biosynthesis_WP38	acs-19
+Fatty Acid Biosynthesis_WP38	ech-6
+Fatty Acid Biosynthesis_WP38	acs-17
+Fatty Acid Biosynthesis_WP38	acs-4
+Fatty Acid Biosynthesis_WP38	ech-2
+Fatty Acid Biosynthesis_WP38	acs-13
+Fatty Acid Biosynthesis_WP38	mecr-1
+Fatty Acid Biosynthesis_WP38	C32E8.9
+Fatty Acid Biosynthesis_WP38	F54C8.1
+Fatty Acid Biosynthesis_WP38	acly-1
+Fatty Acid Biosynthesis_WP38	pyc-1
+Wnt Signaling - Q neuroblast migration_WP2888	mig-14
+Wnt Signaling - Q neuroblast migration_WP2888	bar-1
+Wnt Signaling - Q neuroblast migration_WP2888	lin-17
+Wnt Signaling - Q neuroblast migration_WP2888	pry-1
+Wnt Signaling - Q neuroblast migration_WP2888	egl-20
+Wnt Signaling - Q neuroblast migration_WP2888	mab-5
+Wnt Signaling - Q neuroblast migration_WP2888	mig-1
+Metapathway Signal Transduction_WP1546	rps-6
+Metapathway Signal Transduction_WP1546	pmk-1
+Metapathway Signal Transduction_WP1546	pmk-3
+Metapathway Signal Transduction_WP1546	pmk-2
+Metapathway Signal Transduction_WP1546	sos-1
+Metapathway Signal Transduction_WP1546	cwn-2
+Metapathway Signal Transduction_WP1546	aph-2
+Metapathway Signal Transduction_WP1546	aph-1
+Metapathway Signal Transduction_WP1546	cwn-1
+Metapathway Signal Transduction_WP1546	lin-45
+Metapathway Signal Transduction_WP1546	sgk-1
+Metapathway Signal Transduction_WP1546	lin-44
+Metapathway Signal Transduction_WP1546	sel-8
+Metapathway Signal Transduction_WP1546	daf-18
+Metapathway Signal Transduction_WP1546	hop-1
+Metapathway Signal Transduction_WP1546	mkk-4
+Metapathway Signal Transduction_WP1546	daf-16
+Metapathway Signal Transduction_WP1546	mlst-8
+Metapathway Signal Transduction_WP1546	mom-4
+Metapathway Signal Transduction_WP1546	mom-5
+Metapathway Signal Transduction_WP1546	rheb-1
+Metapathway Signal Transduction_WP1546	apx-1
+Metapathway Signal Transduction_WP1546	daf-14
+Metapathway Signal Transduction_WP1546	daf-15
+Metapathway Signal Transduction_WP1546	daf-12
+Metapathway Signal Transduction_WP1546	lin-3
+Metapathway Signal Transduction_WP1546	egl-20
+Metapathway Signal Transduction_WP1546	tap-1
+Metapathway Signal Transduction_WP1546	mom-1
+Metapathway Signal Transduction_WP1546	mom-2
+Metapathway Signal Transduction_WP1546	let-23
+Metapathway Signal Transduction_WP1546	sfrp-1
+Metapathway Signal Transduction_WP1546	akt-1
+Metapathway Signal Transduction_WP1546	tig-3
+Metapathway Signal Transduction_WP1546	lin-17
+Metapathway Signal Transduction_WP1546	tig-2
+Metapathway Signal Transduction_WP1546	akt-2
+nsy-1	ksr-1
+nsy-1	dlk-1
+nsy-1	ksr-2
+nsy-1	sek-1
+nsy-1	lin-23
+nsy-1	dbl-1
+nsy-1	mig-5
+nsy-1	sinh-1
+nsy-1	sel-12
+nsy-1	let-363
+nsy-1	adm-4
+nsy-1	let-756
+nsy-1	lin-31
+nsy-1	par-1
+nsy-1	mig-1
+nsy-1	unc-129
+nsy-1	unc-43
+nsy-1	bar-1
+nsy-1	age-1
+nsy-1	dsh-2
+nsy-1	jkk-1
+nsy-1	pop-1
+nsy-1	dsh-1
+nsy-1	tag-68
+nsy-1	unc-51
+nsy-1	daf-3
+nsy-1	daf-4
+nsy-1	daf-1
+nsy-1	pdk-1
+nsy-1	jnk-1
+nsy-1	daf-2
+nsy-1	unc-37
+nsy-1	apr-1
+nsy-1	tir-1
+nsy-1	lit-1
+nsy-1	lin-12
+nsy-1	daf-7
+nsy-1	daf-8
+nsy-1	daf-5
+gcs-1	pen-2
+gcs-1	sup-17
+gcs-1	sma-6
+gcs-1	lag-2
+gcs-1	lag-1
+gcs-1	lrp-1
+gcs-1	sma-4
+gcs-1	sma-3
+gcs-1	sma-2
+gcs-1	egl-15
+gcs-1	sma-9
+gcs-1	rict-1
+gcs-1	mpk-2
+gcs-1	cfz-2
+gcs-1	let-60
+gcs-1	egl-17
+gcs-1	mpk-1
+gcs-1	skn-1
+gcs-1	hif-1
+gcs-1	hmp-2
+gcs-1	rsks-1
+gcs-1	pry-1
+gcs-1	sem-5
+gcs-1	glp-1
+gcs-1	kin-19
+gcs-1	dsl-1
+gcs-1	wrm-1
+gcs-1	mek-2
+gcs-1	mek-1
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	acs-4
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	ech-1.2
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	acs-13
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	dif-1
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	daf-22
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	acdh-12
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	cpt-2
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	cpt-1
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	F54C8.1
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP448	acs-17
+Sulfide oxidation pathway_WP2235	hif-1
+Sulfide oxidation pathway_WP2235	ethe-1
+Sulfide oxidation pathway_WP2235	sqrd-1
+Sulfide oxidation pathway_WP2235	cysl-1
+Sulfide oxidation pathway_WP2235	cysl-2
+Left/Right Asymmetry in the Nervous System_WP2229	srsx-3
+Left/Right Asymmetry in the Nervous System_WP2229	inx-19
+Left/Right Asymmetry in the Nervous System_WP2229	nsy-7
+Left/Right Asymmetry in the Nervous System_WP2229	nsy-4
+Left/Right Asymmetry in the Nervous System_WP2229	str-2
+Aging_WP2313	daf-18
+Aging_WP2313	daf-16
+Aging_WP2313	pdk-1
+Aging_WP2313	jnk-1
+Aging_WP2313	daf-2
+Aging_WP2313	akt-1
+Aging_WP2313	age-1
+Aging_WP2313	akt-2
+Aging_WP2313	jkk-1
+Aging_WP2313	daf-15
+Aging_WP2313	smk-1
+Aging_WP2313	prmt-1
+Aging_WP2313	rle-1
+Aging_WP2313	ftt-2
+Aging_WP2313	sgk-1
+Fatty Acid Beta Oxidation 1_WP126	T25G3.4
+Fatty Acid Beta Oxidation 1_WP126	atgl-1
+Fatty Acid Beta Oxidation 1_WP126	ech-1.2
+Fatty Acid Beta Oxidation 1_WP126	B0303.3
+Fatty Acid Beta Oxidation 1_WP126	tpi-1
+Fatty Acid Beta Oxidation 1_WP126	B0395.3
+Fatty Acid Beta Oxidation 1_WP126	hosl-1
+Fatty Acid Beta Oxidation 1_WP126	cpt-2
+Fatty Acid Beta Oxidation 1_WP126	cpt-1
+Fatty Acid Beta Oxidation 1_WP126	R11F4.1
+Fatty Acid Beta Oxidation 1_WP126	acs-19
+Fatty Acid Beta Oxidation 1_WP126	ech-6
+Fatty Acid Beta Oxidation 1_WP126	acs-17
+Fatty Acid Beta Oxidation 1_WP126	acs-4
+Fatty Acid Beta Oxidation 1_WP126	acs-13
+Fatty Acid Beta Oxidation 1_WP126	dif-1
+Fatty Acid Beta Oxidation 1_WP126	cka-1
+Fatty Acid Beta Oxidation 1_WP126	acdh-12
+Fatty Acid Beta Oxidation 1_WP126	lipl-1
+Fatty Acid Beta Oxidation 1_WP126	F54C8.1
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-30
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-38
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-37
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-36
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-35
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-34
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-33
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-32
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-31
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-39
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-41
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-40
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-49
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-48
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-47
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-46
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-45
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-44
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-43
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-42
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-52
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-51
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-50
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-1
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-3
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-2
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-16
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-5
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-4
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-59
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-15
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-7
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-58
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-14
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-57
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-6
+Metapathway UDP-glucuronosyltransferases_WP1431	ugt-13
+ugt-12	ugt-9
+ugt-12	ugt-56
+ugt-12	ugt-8
+ugt-12	ugt-55
+ugt-12	ugt-11
+ugt-12	ugt-54
+ugt-12	ugt-10
+ugt-12	ugt-53
+ugt-12	ugt-19
+ugt-12	ugt-18
+ugt-12	ugt-17
+ugt-12	ugtp-1
+ugt-12	ugt-63
+ugt-12	ugt-62
+ugt-12	ugt-61
+ugt-12	ugt-60
+ugt-12	ugt-27
+ugt-12	ugt-26
+ugt-12	ugt-25
+ugt-12	ugt-24
+ugt-12	ugt-23
+ugt-12	ugt-22
+ugt-12	ugt-65
+ugt-12	ugt-21
+ugt-12	ugt-20
+ugt-12	ugt-64
+ugt-12	ugt-29
+ugt-12	ugt-28
+Neurotransm. release in cholinergic motor neurons_WP1401	kin-2
+Neurotransm. release in cholinergic motor neurons_WP1401	ser-4
+Neurotransm. release in cholinergic motor neurons_WP1401	goa-1
+Neurotransm. release in cholinergic motor neurons_WP1401	unc-13
+Neurotransm. release in cholinergic motor neurons_WP1401	egl-30
+Neurotransm. release in cholinergic motor neurons_WP1401	egl-8
+Neurotransm. release in cholinergic motor neurons_WP1401	gbb-1
+Neurotransm. release in cholinergic motor neurons_WP1401	pkc-1
+Neurotransm. release in cholinergic motor neurons_WP1401	gsa-1
+Neurotransm. release in cholinergic motor neurons_WP1401	dgk-1
+Neurotransm. release in cholinergic motor neurons_WP1401	dop-1
+Neurotransm. release in cholinergic motor neurons_WP1401	acy-1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-4
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-3
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-2
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-8
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-7
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-6
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-5
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	vars-1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rps-0
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	atfs-1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-39
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-35
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-36
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-37
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	gsp-1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-38
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	eef-1B.2
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	eef-1B.1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	kars-1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-25.1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	ZK1128.4
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	eif-2beta
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-25.2
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-43
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-28
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-29
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-9
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-26
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-27
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-2
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	mrps-9
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	mfn-1
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	rpl-3
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	mrps-7
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	eif-6
+Mitochondrial Unfolded-Protein Response (UPRmt)_WP525	mrps-6
+rpl-1	rpl-6
+rpl-1	rpl-4
+rpl-1	rpl-5
+rpl-1	misc-1
+rpl-1	C33F10.12
+rpl-1	mrps-5
+rpl-1	mrps-2
+rpl-1	rpl-31
+rpl-1	rpl-32
+rpl-1	rpl-33
+rpl-1	rpl-34
+rpl-1	tufm-2
+rpl-1	coa-1
+rpl-1	rpl-30
+rpl-1	mrrf-1
+rpl-1	rpl-17
+rpl-1	elpc-3
+rpl-1	rars-2
+rpl-1	K02F3.2
+rpl-1	rpl-18
+rpl-1	eif-2alpha
+rpl-1	rpl-19
+rpl-1	elpc-1
+rpl-1	rpl-13
+rpl-1	rpl-14
+rpl-1	iars-1
+rpl-1	rpl-15
+rpl-1	rpl-16
+rpl-1	rars-1
+rpl-1	gfm-1
+rpl-1	eif-1.A
+rpl-1	T10F2.2
+rpl-1	ucp-4
+rpl-1	rpl-20
+rpl-1	rpl-21
+rpl-1	spg-7
+rpl-1	rpl-22
+rpl-1	rpl-23
+rpl-1	secs-1
+R07E3.4	ZK1236.1
+R07E3.4	T20D3.5
+R07E3.4	slc-25A29
+R07E3.4	K07A3.3
+R07E3.4	T26G10.3
+R07E3.4	slc-25A32
+R07E3.4	rpl-10
+R07E3.4	T09F3.2
+R07E3.4	rpl-12
+R07E3.4	fars-3
+R07E3.4	inf-1
+R07E3.4	Y43C5B.3
+R07E3.4	hsp-6
+R07E3.4	W03F8.3
+R07E3.4	dve-1
+R07E3.4	slc-25A21
+R07E3.4	D2030.2
+R07E3.4	nars-1
+R07E3.4	slc-25A26
+R07E3.4	nars-2
+R07E3.4	clpp-1
+R07E3.4	R07B7.10
+R07E3.4	yars-1
+R07E3.4	yars-2
+R07E3.4	Y37E3.8
+R07E3.4	tars-1
+R07E3.4	fog-1
+R07E3.4	slc-25A10
+R07E3.4	eif-3.K
+R07E3.4	gars-1
+R07E3.4	eif-3.L
+R07E3.4	T05F1.8
+R07E3.4	Y66D12A.7
+R07E3.4	mars-1
+R07E3.4	eif-3.G
+R07E3.4	eif-3.H
+R07E3.4	ubq-2
+R07E3.4	eif-3.I
+R07E3.4	mrps-18C
+mrps-18B	mrps-18A
+mrps-18B	sars-1
+mrps-18B	hsp-60
+mrps-18B	iffb-1
+mrps-18B	F17E5.2
+mrps-18B	dnj-10
+mrps-18B	eif-3.C
+mrps-18B	eif-3.D
+mrps-18B	eif-3.E
+mrps-18B	eif-3.F
+mrps-18B	glp-4
+mrps-18B	eif-3.B
+mrps-18B	mrps-30
+mrps-18B	eef-1A.2
+mrps-18B	eef-1A.1
+mrps-18B	C37C3.2
+mrps-18B	phb-2
+mrps-18B	aars-1
+mrps-18B	aars-2
+mrps-18B	haf-1
+mrps-18B	rps-9
+mrps-18B	Y37B11A.3
+mrps-18B	mrps-24
+mrps-18B	mrps-23
+mrps-18B	F01G4.6
+mrps-18B	mrps-21
+mrps-18B	rla-1
+mrps-18B	ubl-5
+mrps-18B	ubl-1
+mrps-18B	F13G3.7
+mrps-18B	Y41D4A.6
+mrps-18B	erfa-1
+mrps-18B	mrps-15
+mrps-18B	mrps-16
+mrps-18B	cif-1
+mrps-18B	mrps-14
+mrps-18B	prx-10
+mrps-18B	mrps-11
+mrps-18B	mrps-12
+C47E12.2	Y54G11A.17
+C47E12.2	hars-1
+C47E12.2	eif-2Bgamma
+C47E12.2	mrpl-51
+C47E12.2	ife-5
+C47E12.2	ife-4
+C47E12.2	ife-3
+C47E12.2	ife-2
+C47E12.2	ife-1
+C47E12.2	rpl-11.1
+C47E12.2	rpl-11.2
+C47E12.2	mrpl-41
+C47E12.2	mrpl-47
+C47E12.2	T23F2.2
+C47E12.2	lars-2
+C47E12.2	lars-1
+C47E12.2	slc-25A42
+C47E12.2	F25B4.7
+C47E12.2	egl-45
+C47E12.2	F55A11.4
+C47E12.2	mrpl-49
+C47E12.2	mrpl-32
+C47E12.2	ears-2
+C47E12.2	ant-1.1
+C47E12.2	ears-1
+C47E12.2	mrpl-36
+C47E12.2	ant-1.3
+C47E12.2	mrpl-35
+C47E12.2	eif-2Bdelta
+C47E12.2	ant-1.2
+C47E12.2	eif-2A
+C47E12.2	gcn-2
+C47E12.2	tut-1
+C47E12.2	W01D2.1
+C47E12.2	lonp-1
+C47E12.2	T04H1.2
+C47E12.2	mrpl-9
+C47E12.2	ant-1.4
+C47E12.2	iff-2
+iff-1	mrpl-4
+iff-1	C14C10.1
+iff-1	mrpl-2
+iff-1	mrpl-22
+iff-1	tomm-40
+iff-1	mrpl-20
+iff-1	mrpl-24
+iff-1	mrpl-23
+iff-1	T14B4.2
+iff-1	eef-1G
+iff-1	C16C10.1
+iff-1	C16C10.2
+iff-1	rps-30
+iff-1	qars-1
+iff-1	eef-2
+iff-1	dif-1
+iff-1	cpb-3
+iff-1	cpb-2
+iff-1	cpb-1
+iff-1	tsfm-1
+iff-1	mrpl-11
+iff-1	mrpl-15
+iff-1	mrpl-14
+iff-1	mrpl-13
+iff-1	mrpl-12
+iff-1	rpl-36.A
+iff-1	T07A9.14
+iff-1	rps-22
+iff-1	rps-21
+iff-1	rps-20
+iff-1	slc-25A18.2
+iff-1	slc-25A18.1
+iff-1	mrpl-19
+iff-1	rps-29
+iff-1	rps-28
+iff-1	mrpl-17
+iff-1	mrpl-16
+iff-1	rps-27
+iff-1	rps-26
+K11H3.3	rps-24
+K11H3.3	rps-23
+K11H3.3	timm-23
+K11H3.3	rps-11
+K11H3.3	dars-1
+K11H3.3	dars-2
+K11H3.3	eif-2Balpha
+K11H3.3	rps-19
+K11H3.3	rpl-24.2
+K11H3.3	rps-18
+K11H3.3	F32A7.4
+K11H3.3	rps-17
+K11H3.3	rps-16
+K11H3.3	rps-15
+K11H3.3	rps-14
+K11H3.3	rps-13
+K11H3.3	rps-12
+K11H3.3	rpl-24.1
+mRNA processing_WP123	rnp-2
+mRNA processing_WP123	rnp-3
+mRNA processing_WP123	uaf-1
+mRNA processing_WP123	bath-43
+mRNA processing_WP123	hrp-2
+mRNA processing_WP123	fust-1
+mRNA processing_WP123	rnp-7
+mRNA processing_WP123	snr-7
+mRNA processing_WP123	cpsf-4
+mRNA processing_WP123	cpsf-3
+mRNA processing_WP123	rbm-39
+mRNA processing_WP123	cpsf-2
+mRNA processing_WP123	eftu-2
+mRNA processing_WP123	cpsf-1
+mRNA processing_WP123	suf-1
+mRNA processing_WP123	ncbp-1
+mRNA processing_WP123	T13H5.4
+mRNA processing_WP123	sftb-1
+mRNA processing_WP123	sftb-2
+mRNA processing_WP123	rha-1
+mRNA processing_WP123	pabp-2
+mRNA processing_WP123	unc-75
+mRNA processing_WP123	rsp-7
+mRNA processing_WP123	him-1
+mRNA processing_WP123	F43G6.5
+mRNA processing_WP123	F47G9.1
+mRNA processing_WP123	prp-8
+mRNA processing_WP123	prpf-4
+mRNA processing_WP123	xrn-2
+mRNA processing_WP123	lsm-7
+mRNA processing_WP123	rsp-3
+mRNA processing_WP123	rsr-1
+mRNA processing_WP123	prp-6
+mRNA processing_WP123	rsp-4
+mRNA processing_WP123	dnj-30
+mRNA processing_WP123	rsp-6
+mRNA processing_WP123	prp-4
+prp-3	Y55F3BR.1
+prp-3	rsp-1
+prp-3	rsp-2
+prp-3	cel-1
+prp-3	rbm-5
+prp-3	ama-1
+prp-3	clpf-1
+prp-3	prmt-1
+prp-3	hrpf-2
+prp-3	spt-5
+prp-3	mog-4
+prp-3	cpf-2
+prp-3	mog-2
+prp-3	mog-1
+prp-3	cpf-1
+prp-3	hrpl-1
+prp-3	mog-5
+prp-3	ptb-1
+prp-3	prp-21
+prp-3	F28C1.1
+prp-3	rbm-17
+prp-3	teg-1
+prp-3	teg-4
+prp-3	nxf-1
+prp-3	prp-17
+prp-3	madd-3
+prp-3	sup-46
+prp-3	etr-1
+prp-3	snrp-40.1
+prp-3	ddx-15
+prp-3	gut-2
+prp-3	phf-5
+prp-3	snr-1
+prp-3	snr-3
+prp-3	cfim-1
+prp-3	snr-4
+prp-3	tag-72
+prp-3	snr-5
+prp-3	snr-6
+dcr-1	repo-1
+RNA interference and miRNA_WP394	rde-2
+RNA interference and miRNA_WP394	pash-1
+RNA interference and miRNA_WP394	mut-16
+RNA interference and miRNA_WP394	rde-1
+RNA interference and miRNA_WP394	mut-7
+RNA interference and miRNA_WP394	lin-28
+RNA interference and miRNA_WP394	ppw-1
+RNA interference and miRNA_WP394	drsh-1
+RNA interference and miRNA_WP394	mut-2
+RNA interference and miRNA_WP394	vig-1
+RNA interference and miRNA_WP394	alg-2
+RNA interference and miRNA_WP394	tsn-1
+RNA interference and miRNA_WP394	rde-4
+RNA interference and miRNA_WP394	ego-1
+RNA interference and miRNA_WP394	rrf-3
+RNA interference and miRNA_WP394	rrf-2
+RNA interference and miRNA_WP394	rrf-1
+RNA interference and miRNA_WP394	alg-1
+RNA interference and miRNA_WP394	dcr-1
+RNA interference and miRNA_WP394	lin-14
+RNA interference and miRNA_WP394	lin-41
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	xbp-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	pek-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	crt-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	uggt-2
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	eif-2alpha
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	uggt-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	ire-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	hsp-4
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	hsp-3
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	apy-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	abu-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	cht-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	atf-6
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	hut-1
+ER Stress-Unfolded Protein Response (UPRer)_WP2578	Y56A3A.2
+Immune responses in the epidermis_WP2233	daf-4
+Immune responses in the epidermis_WP2233	nipi-3
+Immune responses in the epidermis_WP2233	sma-6
+Immune responses in the epidermis_WP2233	sma-3
+Immune responses in the epidermis_WP2233	nipi-4
+Immune responses in the epidermis_WP2233	egl-8
+Immune responses in the epidermis_WP2233	pmk-1
+Immune responses in the epidermis_WP2233	sta-2
+Immune responses in the epidermis_WP2233	gpa-12
+Immune responses in the epidermis_WP2233	elt-3
+Immune responses in the epidermis_WP2233	plc-3
+Immune responses in the epidermis_WP2233	pkc-3
+Immune responses in the epidermis_WP2233	nsy-1
+Immune responses in the epidermis_WP2233	tir-1
+Immune responses in the epidermis_WP2233	dcar-1
+Immune responses in the epidermis_WP2233	rack-1
+Immune responses in the epidermis_WP2233	sek-1
+Immune responses in the epidermis_WP2233	cnc-2
+Immune responses in the epidermis_WP2233	nlp-29
+Immune responses in the epidermis_WP2233	dbl-1
+Immune responses in the epidermis_WP2233	tpa-1
+DNA Replication_WP192	rfc-3
+DNA Replication_WP192	rfc-1
+DNA Replication_WP192	rfc-2
+DNA Replication_WP192	cdc-6
+DNA Replication_WP192	F10C2.4
+DNA Replication_WP192	F44B9.8
+DNA Replication_WP192	mcm-7
+DNA Replication_WP192	pole-2
+DNA Replication_WP192	mcm-10
+DNA Replication_WP192	ubq-2
+DNA Replication_WP192	pole-1
+DNA Replication_WP192	ubq-1
+DNA Replication_WP192	pola-1
+DNA Replication_WP192	div-1
+DNA Replication_WP192	mcm-5
+DNA Replication_WP192	mcm-6
+DNA Replication_WP192	orc-1
+DNA Replication_WP192	mcm-3
+DNA Replication_WP192	evl-18
+DNA Replication_WP192	mcm-4
+DNA Replication_WP192	pri-2
+DNA Replication_WP192	pri-1
+DNA Replication_WP192	mcm-2
+DNA Replication_WP192	orc-2
+Heterochronic gene regulation of development_WP2227	hbl-1
+Heterochronic gene regulation of development_WP2227	lin-28
+Heterochronic gene regulation of development_WP2227	lin-29
+Heterochronic gene regulation of development_WP2227	lin-46
+Heterochronic gene regulation of development_WP2227	lin-14
+Heterochronic gene regulation of development_WP2227	lin-41
+Heterochronic gene regulation of development_WP2227	daf-12
+Heterochronic gene regulation of development_WP2227	lin-66
+Pentose Phosphate Pathway_WP312	tald-1
+Pentose Phosphate Pathway_WP312	rpia-1
+Pentose Phosphate Pathway_WP312	F08F8.7
+Pentose Phosphate Pathway_WP312	gspd-1
+Pentose Phosphate Pathway_WP312	T25B9.9
+TOR signaling_WP1489	hif-1
+TOR signaling_WP1489	mlst-8
+TOR signaling_WP1489	rsks-1
+TOR signaling_WP1489	akt-1
+TOR signaling_WP1489	rps-6
+TOR signaling_WP1489	akt-2
+TOR signaling_WP1489	rheb-1
+TOR signaling_WP1489	aak-2
+TOR signaling_WP1489	sinh-1
+TOR signaling_WP1489	daf-15
+TOR signaling_WP1489	let-363
+TOR signaling_WP1489	rict-1
+TOR signaling_WP1489	unc-51
+TOR signaling_WP1489	sgk-1
+TOR signaling_WP1489	par-4
+Glycogen Metabolism_WP436	Y71H2AM.20
+Glycogen Metabolism_WP436	R05F9.6
+Glycogen Metabolism_WP436	paa-1
+Glycogen Metabolism_WP436	gsk-3
+Glycogen Metabolism_WP436	F43B10.1
+Glycogen Metabolism_WP436	pygl-1
+Glycogen Metabolism_WP436	Y50D7A.3
+Glycogen Metabolism_WP436	agl-1
+Glycogen Metabolism_WP436	gsy-1
+Glycogen Metabolism_WP436	sur-6
+Glycogen Metabolism_WP436	K08E3.5
+Glycogen Metabolism_WP436	T04A8.7
+Glycogen Metabolism_WP436	let-92
+Glycogen Metabolism_WP436	gyg-2
+Glycogen Metabolism_WP436	cmd-1
+Glycogen Metabolism_WP436	gyg-1
+Glycogen Metabolism_WP436	C14B9.8
+Glycogen Metabolism_WP436	pptr-2
+Glycogen Metabolism_WP436	pptr-1
+Fatty Acid Beta Oxidation Meta_WP209	T25G3.4
+Fatty Acid Beta Oxidation Meta_WP209	atgl-1
+Fatty Acid Beta Oxidation Meta_WP209	ech-1.2
+Fatty Acid Beta Oxidation Meta_WP209	B0303.3
+Fatty Acid Beta Oxidation Meta_WP209	tpi-1
+Fatty Acid Beta Oxidation Meta_WP209	B0395.3
+Fatty Acid Beta Oxidation Meta_WP209	hosl-1
+Fatty Acid Beta Oxidation Meta_WP209	cpt-2
+Fatty Acid Beta Oxidation Meta_WP209	dld-1
+Fatty Acid Beta Oxidation Meta_WP209	cpt-1
+Fatty Acid Beta Oxidation Meta_WP209	acs-19
+Fatty Acid Beta Oxidation Meta_WP209	ech-6
+Fatty Acid Beta Oxidation Meta_WP209	acs-17
+Fatty Acid Beta Oxidation Meta_WP209	kat-1
+Fatty Acid Beta Oxidation Meta_WP209	acs-4
+Fatty Acid Beta Oxidation Meta_WP209	acs-13
+Fatty Acid Beta Oxidation Meta_WP209	dif-1
+Fatty Acid Beta Oxidation Meta_WP209	cka-1
+Fatty Acid Beta Oxidation Meta_WP209	acdh-12
+Fatty Acid Beta Oxidation Meta_WP209	lipl-1
+Fatty Acid Beta Oxidation Meta_WP209	F54C8.1
+Fatty Acid Beta Oxidation Meta_WP209	F54D5.7
+Programmed Cell Death_WP367	ced-13
+Programmed Cell Death_WP367	clk-2
+Programmed Cell Death_WP367	akt-1
+Programmed Cell Death_WP367	ced-3
+Programmed Cell Death_WP367	mrt-2
+Programmed Cell Death_WP367	ced-4
+Programmed Cell Death_WP367	abl-1
+Programmed Cell Death_WP367	ced-9
+Programmed Cell Death_WP367	egl-38
+Programmed Cell Death_WP367	egl-1
+Programmed Cell Death_WP367	ape-1
+Programmed Cell Death_WP367	cep-1
+Programmed Cell Death_WP367	pax-2
+Programmed Cell Death_WP367	fsn-1
+Programmed Cell Death_WP367	hus-1
+Programmed Cell Death_WP367	gld-3
+Programmed Cell Death_WP367	hpr-9
+Programmed Cell Death_WP367	gld-1
+Notch signaling in Vulval Development_WP2220	ark-1
+Notch signaling in Vulval Development_WP2220	lst-4
+Notch signaling in Vulval Development_WP2220	ccar-1
+Notch signaling in Vulval Development_WP2220	lip-1
+Notch signaling in Vulval Development_WP2220	lst-2
+Notch signaling in Vulval Development_WP2220	dsl-1
+Notch signaling in Vulval Development_WP2220	apx-1
+Notch signaling in Vulval Development_WP2220	lst-1
+Notch signaling in Vulval Development_WP2220	lag-2
+Notch signaling in Vulval Development_WP2220	lin-12
+Notch signaling in Vulval Development_WP2220	lag-1
+Glycolysis_WP96	F47B8.10
+Glycolysis_WP96	pck-1
+Glycolysis_WP96	pck-2
+Glycolysis_WP96	pyk-2
+Glycolysis_WP96	pck-3
+Glycolysis_WP96	tpi-1
+Glycolysis_WP96	pyk-1
+Glycolysis_WP96	pgk-1
+Glycolysis_WP96	hxk-2
+Glycolysis_WP96	hxk-1
+Glycolysis_WP96	hxk-3
+Glycolysis_WP96	enol-1
+Glycolysis_WP96	ipgm-1
+Glycolysis_WP96	gpi-1
+Glycolysis_WP96	fbp-1
+Glycolysis_WP96	pfkb-1.1
+Glycolysis_WP96	aldo-2
+Glycolysis_WP96	pfk-1.2
+Glycolysis_WP96	aldo-1
+Glycolysis_WP96	pyc-1
+Role of lipid metabolism in C. elegans_WP2915	lpd-5
+Role of lipid metabolism in C. elegans_WP2915	ctbp-1
+Role of lipid metabolism in C. elegans_WP2915	daf-16
+Role of lipid metabolism in C. elegans_WP2915	fil-1
+Role of lipid metabolism in C. elegans_WP2915	ire-1
+Role of lipid metabolism in C. elegans_WP2915	daf-2
+Role of lipid metabolism in C. elegans_WP2915	lpd-3
+Role of lipid metabolism in C. elegans_WP2915	hsp-4
+Role of lipid metabolism in C. elegans_WP2915	sbp-1
+Role of lipid metabolism in C. elegans_WP2915	aak-2
+Role of lipid metabolism in C. elegans_WP2915	lpd-8
+Role of lipid metabolism in C. elegans_WP2915	lpd-9
+Role of lipid metabolism in C. elegans_WP2915	cox-5B
+Role of lipid metabolism in C. elegans_WP2915	lpd-6
+Role of lipid metabolism in C. elegans_WP2915	lips-7
+Role of lipid metabolism in C. elegans_WP2915	lpd-7
+Role of lipid metabolism in C. elegans_WP2915	cbp-1
+Role of lipid metabolism in C. elegans_WP2915	sir-2.1
+Role of lipid metabolism in C. elegans_WP2915	lipl-4
+Role of lipid metabolism in C. elegans_WP2915	kri-1
+Role of lipid metabolism in C. elegans_WP2915	par-4
+Role of lipid metabolism in C. elegans_WP2915	mac-1
+Translation Factors_WP110	pek-1
+Translation Factors_WP110	pab-1
+Translation Factors_WP110	eif-2Bdelta
+Translation Factors_WP110	eif-2Bgamma
+Translation Factors_WP110	eif-6
+Translation Factors_WP110	efk-1
+Translation Factors_WP110	eif-3.G
+Translation Factors_WP110	eif-3.H
+Translation Factors_WP110	eif-3.I
+Translation Factors_WP110	ife-3
+Translation Factors_WP110	iff-1
+Translation Factors_WP110	inf-1
+Translation Factors_WP110	eif-2alpha
+Translation Factors_WP110	erfa-1
+Translation Factors_WP110	iffb-1
+Translation Factors_WP110	eif-3.D
+Translation Factors_WP110	eif-3.E
+Translation Factors_WP110	eef-1G
+Translation Factors_WP110	eif-3.F
+Translation Factors_WP110	eif-1.A
+Translation Factors_WP110	eif-3.B
+Translation Factors_WP110	eef-1B.2
+Translation Factors_WP110	eef-1B.1
+Translation Factors_WP110	eef-1A.2
+Translation Factors_WP110	eef-1A.1
+Translation Factors_WP110	eef-2
+Translation Factors_WP110	C37C3.2
+Translation Factors_WP110	egl-45
+Translation Factors_WP110	eif-2Balpha
+Translation Factors_WP110	eif-2beta
+Vulval development_WP1453	pat-3
+Vulval development_WP1453	vab-19
+Vulval development_WP1453	lin-39
+Vulval development_WP1453	ina-1
+Vulval development_WP1453	eff-1
+Vulval development_WP1453	mab-5
+EGF Signaling in Vulval Development_WP2221	let-23
+EGF Signaling in Vulval Development_WP2221	lin-39
+EGF Signaling in Vulval Development_WP2221	sem-5
+EGF Signaling in Vulval Development_WP2221	sos-1
+EGF Signaling in Vulval Development_WP2221	lin-3
+EGF Signaling in Vulval Development_WP2221	lin-1
+EGF Signaling in Vulval Development_WP2221	mek-2
+EGF Signaling in Vulval Development_WP2221	lin-45
+EGF Signaling in Vulval Development_WP2221	let-60
+EGF Signaling in Vulval Development_WP2221	lin-31
+EGF Signaling in Vulval Development_WP2221	egl-17
+EGF Signaling in Vulval Development_WP2221	mpk-1
+Crystal Toxin Triggered Necrosis Pathway_WP3648	itr-1
+Crystal Toxin Triggered Necrosis Pathway_WP3648	asp-4
+Crystal Toxin Triggered Necrosis Pathway_WP3648	vha-12
+Crystal Toxin Triggered Necrosis Pathway_WP3648	cpr-3
+Crystal Toxin Triggered Necrosis Pathway_WP3648	asp-1
+Crystal Toxin Triggered Necrosis Pathway_WP3648	clp-2
+Crystal Toxin Triggered Necrosis Pathway_WP3648	asp-3
+Crystal Toxin Triggered Necrosis Pathway_WP3648	tra-3
+Eukaryotic Transcription Initiation_WP518	rpc-11
+Eukaryotic Transcription Initiation_WP518	ZK550.4
+Eukaryotic Transcription Initiation_WP518	taf-13
+Eukaryotic Transcription Initiation_WP518	cdk-7
+Eukaryotic Transcription Initiation_WP518	rpb-5
+Eukaryotic Transcription Initiation_WP518	rpb-2
+Eukaryotic Transcription Initiation_WP518	rpb-3
+Eukaryotic Transcription Initiation_WP518	rpc-2
+Eukaryotic Transcription Initiation_WP518	rpb-8
+Eukaryotic Transcription Initiation_WP518	rpb-9
+Eukaryotic Transcription Initiation_WP518	tbp-1
+Eukaryotic Transcription Initiation_WP518	rpb-6
+Eukaryotic Transcription Initiation_WP518	rpb-11
+Eukaryotic Transcription Initiation_WP518	rpb-7
+Eukaryotic Transcription Initiation_WP518	F54D5.11
+Eukaryotic Transcription Initiation_WP518	Y111B2A.13
+Eukaryotic Transcription Initiation_WP518	cyh-1
+Eukaryotic Transcription Initiation_WP518	xpd-1
+Eukaryotic Transcription Initiation_WP518	R02D3.3
+Eukaryotic Transcription Initiation_WP518	xpb-1
+Eukaryotic Transcription Initiation_WP518	Y39B6A.36
+Eukaryotic Transcription Initiation_WP518	rpc-25
+Eukaryotic Transcription Initiation_WP518	mnat-1
+Eukaryotic Transcription Initiation_WP518	taf-7.2
+Eukaryotic Transcription Initiation_WP518	taf-6.1
+Eukaryotic Transcription Initiation_WP518	pat-4
+Eukaryotic Transcription Initiation_WP518	ama-1
+Eukaryotic Transcription Initiation_WP518	rpoa-2
+Eukaryotic Transcription Initiation_WP518	rpoa-1
+Eukaryotic Transcription Initiation_WP518	ttb-1
+daf-2 or insulin signaling pathway_WP17	daf-18
+daf-2 or insulin signaling pathway_WP17	daf-16
+daf-2 or insulin signaling pathway_WP17	pdk-1
+daf-2 or insulin signaling pathway_WP17	daf-2
+daf-2 or insulin signaling pathway_WP17	akt-1
+daf-2 or insulin signaling pathway_WP17	age-1
+daf-2 or insulin signaling pathway_WP17	akt-2
+daf-2 or insulin signaling pathway_WP17	sgk-1
+Regulation of immune response in the intestine_WP2234	akt-1
+Regulation of immune response in the intestine_WP2234	akt-2
+Regulation of immune response in the intestine_WP2234	fshr-1
+Regulation of immune response in the intestine_WP2234	pmk-1
+Regulation of immune response in the intestine_WP2234	ins-7
+Regulation of immune response in the intestine_WP2234	zip-2
+Regulation of immune response in the intestine_WP2234	atf-7
+Regulation of immune response in the intestine_WP2234	nsy-1
+Regulation of immune response in the intestine_WP2234	sek-1
+Regulation of immune response in the intestine_WP2234	irg-1
+Regulation of immune response in the intestine_WP2234	sgk-1
+Regulation of immune response in the intestine_WP2234	lys-2
+Regulation of immune response in the intestine_WP2234	daf-16
+Regulation of immune response in the intestine_WP2234	goa-1
+Regulation of immune response in the intestine_WP2234	daf-2
+Regulation of immune response in the intestine_WP2234	lys-7
+Regulation of immune response in the intestine_WP2234	egl-30
+Regulation of immune response in the intestine_WP2234	egl-8
+Regulation of immune response in the intestine_WP2234	T24B8.5
+Regulation of immune response in the intestine_WP2234	ets-4
+Regulation of immune response in the intestine_WP2234	elt-2
+Regulation of immune response in the intestine_WP2234	tir-1
+Regulation of immune response in the intestine_WP2234	dgk-1
+Regulation of immune response in the intestine_WP2234	spp-1
+Regulation of immune response in the intestine_WP2234	tpa-1
+Hedgehog-related genes_WP1497	grd-5
+Hedgehog-related genes_WP1497	grd-14
+Hedgehog-related genes_WP1497	grd-7
+Hedgehog-related genes_WP1497	grd-13
+Hedgehog-related genes_WP1497	grd-12
+Hedgehog-related genes_WP1497	grd-10
+Hedgehog-related genes_WP1497	wrt-9
+Hedgehog-related genes_WP1497	grl-4
+Hedgehog-related genes_WP1497	grl-5
+Hedgehog-related genes_WP1497	grl-29
+Hedgehog-related genes_WP1497	grl-7
+Hedgehog-related genes_WP1497	grl-17
+Hedgehog-related genes_WP1497	grl-8
+Hedgehog-related genes_WP1497	hog-1
+Hedgehog-related genes_WP1497	grd-16
+Hedgehog-related genes_WP1497	grl-10
+Hedgehog-related genes_WP1497	grl-21
+Hedgehog-related genes_WP1497	grl-15
+Hedgehog-related genes_WP1497	wrt-10
+Male mating_WP2287	kin-3
+Male mating_WP2287	osm-5
+Male mating_WP2287	osm-6
+Male mating_WP2287	tax-6
+Male mating_WP2287	daf-10
+Male mating_WP2287	cwp-5
+Male mating_WP2287	kin-10
+Male mating_WP2287	atp-2
+Male mating_WP2287	kap-1
+Male mating_WP2287	cil-1
+Male mating_WP2287	rab-5
+Male mating_WP2287	lov-1
+Male mating_WP2287	pkd-2
+Male mating_WP2287	asg-1
+Male mating_WP2287	unc-101
+Male mating_WP2287	hgrs-1
+Male mating_WP2287	che-11
+Male mating_WP2287	stam-1
+Male mating_WP2287	osm-1
+Male mating_WP2287	asb-1
+Vulval Development and SynMuv_WP680	gap-1
+Vulval Development and SynMuv_WP680	let-23
+Vulval Development and SynMuv_WP680	lin-39
+Vulval Development and SynMuv_WP680	sem-5
+Vulval Development and SynMuv_WP680	sos-1
+Vulval Development and SynMuv_WP680	sur-6
+Vulval Development and SynMuv_WP680	ksr-1
+Vulval Development and SynMuv_WP680	lip-1
+Vulval Development and SynMuv_WP680	lin-3
+Vulval Development and SynMuv_WP680	lin-1
+Vulval Development and SynMuv_WP680	mek-2
+Vulval Development and SynMuv_WP680	lin-12
+Vulval Development and SynMuv_WP680	lin-45
+Vulval Development and SynMuv_WP680	lin-25
+Vulval Development and SynMuv_WP680	let-60
+Vulval Development and SynMuv_WP680	lin-31
+Vulval Development and SynMuv_WP680	mpk-1
+Vulval Development and SynMuv_WP680	sur-2
+Dauer formation_WP580	daf-3
+Dauer formation_WP580	daf-18
+Dauer formation_WP580	tax-4
+Dauer formation_WP580	daf-4
+Dauer formation_WP580	daf-1
+Dauer formation_WP580	daf-16
+Dauer formation_WP580	pdk-1
+Dauer formation_WP580	daf-2
+Dauer formation_WP580	daf-28
+Dauer formation_WP580	akt-1
+Dauer formation_WP580	age-1
+Dauer formation_WP580	akt-2
+Dauer formation_WP580	daf-11
+Dauer formation_WP580	daf-14
+Dauer formation_WP580	daf-12
+Dauer formation_WP580	rle-1
+Dauer formation_WP580	ftt-2
+Dauer formation_WP580	daf-9
+Dauer formation_WP580	daf-7
+Dauer formation_WP580	daf-8
+Dauer formation_WP580	daf-5
+Dauer formation_WP580	hsp-90
+Dauer formation_WP580	tax-2
+Programmed Cell Death and Cell Engulfment_WP2829	ced-10
+Programmed Cell Death and Cell Engulfment_WP2829	hlh-2
+Programmed Cell Death and Cell Engulfment_WP2829	hlh-3
+Programmed Cell Death and Cell Engulfment_WP2829	ced-12
+Programmed Cell Death and Cell Engulfment_WP2829	eor-1
+Programmed Cell Death and Cell Engulfment_WP2829	cps-6
+Programmed Cell Death and Cell Engulfment_WP2829	crn-1
+Programmed Cell Death and Cell Engulfment_WP2829	crn-2
+Programmed Cell Death and Cell Engulfment_WP2829	crn-3
+Programmed Cell Death and Cell Engulfment_WP2829	crn-4
+Programmed Cell Death and Cell Engulfment_WP2829	crn-5
+Programmed Cell Death and Cell Engulfment_WP2829	eor-2
+Programmed Cell Death and Cell Engulfment_WP2829	crn-6
+Programmed Cell Death and Cell Engulfment_WP2829	cyp-13A1
+Programmed Cell Death and Cell Engulfment_WP2829	wah-1
+Programmed Cell Death and Cell Engulfment_WP2829	ced-2
+Programmed Cell Death and Cell Engulfment_WP2829	ced-3
+Programmed Cell Death and Cell Engulfment_WP2829	ced-1
+Programmed Cell Death and Cell Engulfment_WP2829	ced-6
+Programmed Cell Death and Cell Engulfment_WP2829	ced-7
+Programmed Cell Death and Cell Engulfment_WP2829	ced-4
+Programmed Cell Death and Cell Engulfment_WP2829	ced-5
+Programmed Cell Death and Cell Engulfment_WP2829	ced-9
+Programmed Cell Death and Cell Engulfment_WP2829	tra-1
+Programmed Cell Death and Cell Engulfment_WP2829	egl-1
+Programmed Cell Death and Cell Engulfment_WP2829	psr-1
+Programmed Cell Death and Cell Engulfment_WP2829	ces-1
+Programmed Cell Death and Cell Engulfment_WP2829	ces-2
+Programmed Cell Death and Cell Engulfment_WP2829	nuc-1
+Cell Division: First embryonic mitosis_WP1411	gpc-2
+Cell Division: First embryonic mitosis_WP1411	air-1
+Cell Division: First embryonic mitosis_WP1411	air-2
+Cell Division: First embryonic mitosis_WP1411	rho-1
+Cell Division: First embryonic mitosis_WP1411	czw-1
+Cell Division: First embryonic mitosis_WP1411	dnc-5
+Cell Division: First embryonic mitosis_WP1411	ndc-80
+Cell Division: First embryonic mitosis_WP1411	ani-1
+Cell Division: First embryonic mitosis_WP1411	klp-19
+Cell Division: First embryonic mitosis_WP1411	mel-11
+Cell Division: First embryonic mitosis_WP1411	ben-1
+Cell Division: First embryonic mitosis_WP1411	pola-1
+Cell Division: First embryonic mitosis_WP1411	san-1
+Cell Division: First embryonic mitosis_WP1411	let-99
+Cell Division: First embryonic mitosis_WP1411	zyg-12
+Cell Division: First embryonic mitosis_WP1411	spd-1
+Cell Division: First embryonic mitosis_WP1411	capg-2
+Cell Division: First embryonic mitosis_WP1411	spd-2
+Cell Division: First embryonic mitosis_WP1411	zyg-1
+Cell Division: First embryonic mitosis_WP1411	tba-1
+Cell Division: First embryonic mitosis_WP1411	spd-5
+Cell Division: First embryonic mitosis_WP1411	tba-2
+Cell Division: First embryonic mitosis_WP1411	dnc-1
+Cell Division: First embryonic mitosis_WP1411	pfd-2
+Cell Division: First embryonic mitosis_WP1411	tba-4
+Cell Division: First embryonic mitosis_WP1411	dnc-2
+Cell Division: First embryonic mitosis_WP1411	pfd-3
+Cell Division: First embryonic mitosis_WP1411	dnc-4
+Cell Division: First embryonic mitosis_WP1411	klp-7
+Cell Division: First embryonic mitosis_WP1411	mix-1
+Cell Division: First embryonic mitosis_WP1411	icp-1
+Cell Division: First embryonic mitosis_WP1411	pfd-5
+Cell Division: First embryonic mitosis_WP1411	let-92
+Cell Division: First embryonic mitosis_WP1411	zyg-9
+Cell Division: First embryonic mitosis_WP1411	unc-84
+Cell Division: First embryonic mitosis_WP1411	mel-28
+Cell Division: First embryonic mitosis_WP1411	unc-83
+nud-1	smc-4
+nud-1	smc-3
+nud-1	tac-1
+nud-1	zen-4
+nud-1	mlc-4
+nud-1	csc-1
+nud-1	T26A5.8
+nud-1	unc-59
+nud-1	ect-2
+nud-1	kbp-3
+nud-1	kbp-4
+nud-1	dlc-1
+nud-1	kbp-1
+nud-1	him-10
+nud-1	kbp-2
+nud-1	par-5
+nud-1	let-754
+nud-1	unc-60
+nud-1	rbx-1
+nud-1	unc-61
+nud-1	sun-1
+nud-1	mis-12
+nud-1	dyrb-1
+nud-1	cyk-4
+nud-1	kbp-5
+nud-1	anc-1
+nud-1	cyk-1
+nud-1	mbk-2
+nud-1	scc-1
+nud-1	let-502
+nud-1	bir-1
+nud-1	baf-1
+nud-1	scc-3
+nud-1	mdf-1
+nud-1	mdf-2
+nud-1	nmy-2
+nud-1	pfn-1
+nud-1	Y19D2B.1
+nud-1	unc-37
+him-1	T16G12.1
+him-1	tbg-1
+him-1	plk-1
+him-1	hcp-1
+him-1	rod-1
+him-1	hcp-2
+him-1	hcp-3
+him-1	txdc-9
+him-1	hcp-4
+him-1	hcp-6
+him-1	lmn-1
+him-1	cap-2
+him-1	ima-2
+him-1	C45G3.3
+him-1	dyci-1
+him-1	gpb-1
+him-1	cls-2
+him-1	gip-1
+him-1	atad-3
+him-1	tim-1
+him-1	emr-1
+him-1	dhc-1
+him-1	cul-3
+him-1	dli-1
+him-1	puf-3
+him-1	tbb-1
+him-1	tbb-2
+him-1	bub-1
+him-1	sas-4
+him-1	sas-5
+him-1	arp-1
+him-1	sas-6
+him-1	bub-3
+him-1	pll-1
+him-1	knl-3
+him-1	lem-2
+him-1	lis-1
+him-1	knl-2
+him-1	knl-1
+Fatty Acid Beta Oxidation 3_WP499	kat-1
+Fatty Acid Beta Oxidation 3_WP499	ech-1.2
+Fatty Acid Beta Oxidation 3_WP499	B0303.3
+Fatty Acid Beta Oxidation 3_WP499	dld-1
+Fatty Acid Beta Oxidation 3_WP499	F54C8.1
+Fatty Acid Beta Oxidation 3_WP499	ech-6
+Fatty Acid Beta Oxidation 3_WP499	F54D5.7
+Wnt Signaling in Cell Polarity_WP2222	lin-17
+Wnt Signaling in Cell Polarity_WP2222	lin-18
+Wnt Signaling in Cell Polarity_WP2222	cwn-1
+Wnt Signaling in Cell Polarity_WP2222	pop-1
+Wnt Signaling in Cell Polarity_WP2222	mom-2
+Wnt Signaling in Cell Polarity_WP2222	lin-44
+Wnt Signaling in Cell Polarity_WP2222	lin-11
+Wnt Signaling_WP235	mig-5
+Wnt Signaling_WP235	unc-37
+Wnt Signaling_WP235	bar-1
+Wnt Signaling_WP235	lin-17
+Wnt Signaling_WP235	pry-1
+Wnt Signaling_WP235	mom-4
+Wnt Signaling_WP235	gsk-3
+Wnt Signaling_WP235	mom-5
+Wnt Signaling_WP235	pop-1
+Wnt Signaling_WP235	apr-1
+Wnt Signaling_WP235	mig-14
+Wnt Signaling_WP235	egl-20
+Wnt Signaling_WP235	wrm-1
+Wnt Signaling_WP235	mab-5
+Wnt Signaling_WP235	lit-1
+Wnt Signaling_WP235	mom-1
+Wnt Signaling_WP235	mom-2
+Wnt Signaling_WP235	end-1
+Cytoplasmic Ribosomal Proteins_WP540	rps-4
+Cytoplasmic Ribosomal Proteins_WP540	rps-3
+Cytoplasmic Ribosomal Proteins_WP540	rps-2
+Cytoplasmic Ribosomal Proteins_WP540	rps-1
+Cytoplasmic Ribosomal Proteins_WP540	rps-8
+Cytoplasmic Ribosomal Proteins_WP540	rps-6
+Cytoplasmic Ribosomal Proteins_WP540	rps-5
+Cytoplasmic Ribosomal Proteins_WP540	rps-0
+Cytoplasmic Ribosomal Proteins_WP540	rla-0
+Cytoplasmic Ribosomal Proteins_WP540	rla-1
+Cytoplasmic Ribosomal Proteins_WP540	rpl-10
+Cytoplasmic Ribosomal Proteins_WP540	rpl-35
+Cytoplasmic Ribosomal Proteins_WP540	rpl-38
+Cytoplasmic Ribosomal Proteins_WP540	rskn-1
+Cytoplasmic Ribosomal Proteins_WP540	rpl-7A
+Cytoplasmic Ribosomal Proteins_WP540	rps-30
+Cytoplasmic Ribosomal Proteins_WP540	rpl-25.1
+Cytoplasmic Ribosomal Proteins_WP540	rpl-43
+Cytoplasmic Ribosomal Proteins_WP540	rpl-9
+Cytoplasmic Ribosomal Proteins_WP540	rpl-26
+Cytoplasmic Ribosomal Proteins_WP540	rpl-27
+Cytoplasmic Ribosomal Proteins_WP540	rpl-2
+Cytoplasmic Ribosomal Proteins_WP540	rpl-3
+Cytoplasmic Ribosomal Proteins_WP540	rpl-1
+Cytoplasmic Ribosomal Proteins_WP540	rpl-6
+Cytoplasmic Ribosomal Proteins_WP540	C37A2.7
+Cytoplasmic Ribosomal Proteins_WP540	rpl-4
+Cytoplasmic Ribosomal Proteins_WP540	rpl-5
+Cytoplasmic Ribosomal Proteins_WP540	rps-21
+Cytoplasmic Ribosomal Proteins_WP540	rps-20
+Cytoplasmic Ribosomal Proteins_WP540	ubq-2
+Cytoplasmic Ribosomal Proteins_WP540	rpl-31
+Cytoplasmic Ribosomal Proteins_WP540	mrpl-19
+Cytoplasmic Ribosomal Proteins_WP540	rps-29
+Cytoplasmic Ribosomal Proteins_WP540	rpl-32
+Cytoplasmic Ribosomal Proteins_WP540	rpl-33
+Cytoplasmic Ribosomal Proteins_WP540	rpl-34
+rpl-11.1	rps-24
+rpl-11.1	rpl-30
+rpl-11.1	rps-23
+rpl-11.1	rpl-17
+rpl-11.1	rpl-18
+rpl-11.1	rsks-1
+rpl-11.1	rpl-13
+rpl-11.1	rpl-14
+rpl-11.1	rpl-15
+rpl-11.1	rpl-16
+rpl-11.1	rps-11
+rpl-11.1	rps-10
+rpl-11.1	rps-18
+rpl-11.1	rpl-22
+rpl-11.1	rps-17
+rpl-11.1	rps-9
+rpl-11.1	rps-16
+rpl-11.1	rpl-23
+rpl-11.1	rps-15
+rpl-11.1	rps-14
+rpl-11.1	rps-13
+rpl-11.1	rps-12
+rpl-11.1	rpl-24.1
+Sex determination_WP291	fox-1
+Sex determination_WP291	sex-1
+Sex determination_WP291	sel-10
+Sex determination_WP291	tra-2
+Sex determination_WP291	sea-2
+Sex determination_WP291	tra-1
+Sex determination_WP291	sea-1
+Sex determination_WP291	her-1
+Sex determination_WP291	sdc-3
+Sex determination_WP291	sdc-2
+Sex determination_WP291	sdc-1
+Sex determination_WP291	xol-1
+Sex determination_WP291	fem-1
+Sex determination_WP291	fem-2
+Sex determination_WP291	tra-3
+Sex determination_WP291	fem-3
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	eat-2
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	goa-1
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	eat-4
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	unc-25
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	unc-7
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	egl-30
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	avr-15
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	avr-14
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	lev-10
+Mechanosensory inputs influence pharyngeal activity via ivermectin sensitivity genes._WP1765	eat-18
+Programmed Cell Death and Cell Engulfment_WP2231	ced-10
+Programmed Cell Death and Cell Engulfment_WP2231	hlh-2
+Programmed Cell Death and Cell Engulfment_WP2231	ced-2
+Programmed Cell Death and Cell Engulfment_WP2231	hlh-3
+Programmed Cell Death and Cell Engulfment_WP2231	ced-3
+Programmed Cell Death and Cell Engulfment_WP2231	ced-1
+Programmed Cell Death and Cell Engulfment_WP2231	eor-1
+Programmed Cell Death and Cell Engulfment_WP2231	ced-6
+Programmed Cell Death and Cell Engulfment_WP2231	ced-7
+Programmed Cell Death and Cell Engulfment_WP2231	ced-4
+Programmed Cell Death and Cell Engulfment_WP2231	ced-5
+Programmed Cell Death and Cell Engulfment_WP2231	ced-9
+Programmed Cell Death and Cell Engulfment_WP2231	eor-2
+Programmed Cell Death and Cell Engulfment_WP2231	tra-1
+Programmed Cell Death and Cell Engulfment_WP2231	egl-1
+Programmed Cell Death and Cell Engulfment_WP2231	psr-1
+Programmed Cell Death and Cell Engulfment_WP2231	ces-1
+Programmed Cell Death and Cell Engulfment_WP2231	ces-2

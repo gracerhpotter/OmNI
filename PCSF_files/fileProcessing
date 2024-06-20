@@ -1,0 +1,21 @@
+
+Process the interactome database file using the following script to convert it into a format that PCSF will use.
+
+```r
+my_interactome <- readr::read_delim("my_integrative_interactome_genes_metabols_full.txt",                                    
+                                    delim = "\t",                                    
+                                    show_col_types = F) %>%   
+  dplyr::filter(SCORE >= 0.7) %>% # keep high-quality interactions only   
+  dplyr::mutate(COST = 1 - SCORE) %>%
+  as.data.frame() # PCSF specific format 
+
+saveRDS(my_interactome, file = "pcsf_interactome.rds")
+
+pcsf_ppi <- PCSF::construct_interactome(my_interactome[,c("PARTICIPANT_A", "PARTICIPANT_B", "COST")])
+
+saveRDS(pcsf_ppi, file = "pcsf_ppi.rds")
+
+metabolite_map <- readr::read_delim("master_metabolite_mapping_table.tsv", delim = "\t")
+
+saveRDS(metabolite_map, file = "metaboliteMap.rds")
+```

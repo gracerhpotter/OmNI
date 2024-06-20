@@ -1,0 +1,610 @@
+pathway	feature_ids
+Glycolysis and Gluconeogenesis_WP144	CG11876
+Glycolysis and Gluconeogenesis_WP144	Got2
+Glycolysis and Gluconeogenesis_WP144	Mdh2
+Glycolysis and Gluconeogenesis_WP144	CG10924
+Glycolysis and Gluconeogenesis_WP144	ImpL3
+Glycolysis and Gluconeogenesis_WP144	Got1
+Glycolysis and Gluconeogenesis_WP144	Pglym87
+Glycolysis and Gluconeogenesis_WP144	Hex-t2
+Glycolysis and Gluconeogenesis_WP144	PCB
+Glycolysis and Gluconeogenesis_WP144	Pgi
+Glycolysis and Gluconeogenesis_WP144	Pgk
+Glycolysis and Gluconeogenesis_WP144	fbp
+Glycolysis and Gluconeogenesis_WP144	Ald
+Glycolysis and Gluconeogenesis_WP144	muc
+Glycolysis and Gluconeogenesis_WP144	PyK
+Glycolysis and Gluconeogenesis_WP144	l(1)G0334
+Glycolysis and Gluconeogenesis_WP144	Eno
+Glycolysis and Gluconeogenesis_WP144	Hex-A
+Glycolysis and Gluconeogenesis_WP144	Pglym78
+Glycolysis and Gluconeogenesis_WP144	CG7430
+Glycolysis and Gluconeogenesis_WP144	Tpi
+Glycolysis and Gluconeogenesis_WP144	Pfk
+Glycolysis and Gluconeogenesis_WP144	Hex-C
+Glycolysis and Gluconeogenesis_WP144	Mdh1
+Homologous Recombination_WP1205	CG12018
+Homologous Recombination_WP1205	okr
+Homologous Recombination_WP1205	tefu
+Homologous Recombination_WP1205	mre11
+Homologous Recombination_WP1205	rad50
+Homologous Recombination_WP1205	spn-A
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	ScpX
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	CG3961
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	Mtpalpha
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	whd
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	CPT2
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	Acsl
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	CG4598
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	Arc42
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	CG12262
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	CG7461
+Mitochondrial LC-Fatty Acid Beta-Oxidation_WP406	colt
+Heme Biosynthesis_WP269	FeCH
+Heme Biosynthesis_WP269	CG1885
+Heme Biosynthesis_WP269	Coprox
+Heme Biosynthesis_WP269	Alas
+Heme Biosynthesis_WP269	l(3)02640
+Heme Biosynthesis_WP269	Pbgs
+Heme Biosynthesis_WP269	Updo
+Heme Biosynthesis_WP269	Ppox
+Hedgehog Signaling Pathway_WP492	Rab23
+Hedgehog Signaling Pathway_WP492	CycB
+Hedgehog Signaling Pathway_WP492	ci
+Hedgehog Signaling Pathway_WP492	smo
+Hedgehog Signaling Pathway_WP492	Su(fu)
+Hedgehog Signaling Pathway_WP492	Bin1
+Hedgehog Signaling Pathway_WP492	Sin3A
+Hedgehog Signaling Pathway_WP492	Cdk1
+Hedgehog Signaling Pathway_WP492	hh
+Hedgehog Signaling Pathway_WP492	ptc
+One Carbon Metabolism_WP1203	CG34424
+One Carbon Metabolism_WP1203	pug
+One Carbon Metabolism_WP1203	Ahcy
+One Carbon Metabolism_WP1203	Nmdmc
+One Carbon Metabolism_WP1203	Dhfr
+One Carbon Metabolism_WP1203	CG1750
+One Carbon Metabolism_WP1203	AhcyL1
+One Carbon Metabolism_WP1203	CG6415
+One Carbon Metabolism_WP1203	Shmt
+One Carbon Metabolism_WP1203	ade3
+One Carbon Metabolism_WP1203	Ts
+One Carbon Metabolism_WP1203	CG11089
+TCA Cycle_WP551	l(1)G0156
+TCA Cycle_WP551	l(1)G0255
+TCA Cycle_WP551	CG11876
+TCA Cycle_WP551	l(1)G0334
+TCA Cycle_WP551	Mdh2
+TCA Cycle_WP551	Sucb
+TCA Cycle_WP551	Idh3b
+TCA Cycle_WP551	CG7430
+TCA Cycle_WP551	Scsalpha
+TCA Cycle_WP551	SdhC
+TCA Cycle_WP551	SdhB
+TCA Cycle_WP551	SdhA
+TCA Cycle_WP551	PCB
+TCA Cycle_WP551	CG5028
+TCA Cycle_WP551	skap
+TCA Cycle_WP551	CG5214
+TCA Cycle_WP551	kdn
+TCA Cycle_WP551	Nc73EF
+TCA Cycle_WP551	Pdk
+TCA Cycle_WP551	Pdp
+TCA Cycle_WP551	Mdh1
+TCA Cycle_WP551	muc
+TCA Cycle_WP551	Acon
+Equilibrium Signalling Pathway of Differentiated Cells_WP3653	Nup98-96
+Equilibrium Signalling Pathway of Differentiated Cells_WP3653	Stat92E
+Equilibrium Signalling Pathway of Differentiated Cells_WP3653	RpS8
+Equilibrium Signalling Pathway of Differentiated Cells_WP3653	bip1
+Equilibrium Signalling Pathway of Differentiated Cells_WP3653	Adgf-A
+Equilibrium Signalling Pathway of Differentiated Cells_WP3653	Pvr
+Equilibrium Signalling Pathway of Differentiated Cells_WP3653	hh
+Fatty Acid Beta Oxidation 1_WP39	CG31871
+Fatty Acid Beta Oxidation 1_WP39	bmm
+Fatty Acid Beta Oxidation 1_WP39	Mtpalpha
+Fatty Acid Beta Oxidation 1_WP39	Hsl
+Fatty Acid Beta Oxidation 1_WP39	AcCoAS
+Fatty Acid Beta Oxidation 1_WP39	Acsl
+Fatty Acid Beta Oxidation 1_WP39	Thiolase
+Fatty Acid Beta Oxidation 1_WP39	CG7461
+Fatty Acid Beta Oxidation 1_WP39	Gk2
+Fatty Acid Beta Oxidation 1_WP39	Tpi
+Fatty Acid Beta Oxidation 1_WP39	Gk1
+Fatty Acid Beta Oxidation 1_WP39	CG3961
+Fatty Acid Beta Oxidation 1_WP39	whd
+Fatty Acid Beta Oxidation 1_WP39	Gpo-1
+Fatty Acid Beta Oxidation 1_WP39	CPT2
+Fatty Acid Beta Oxidation 1_WP39	CG6543
+Fatty Acid Beta Oxidation 1_WP39	colt
+Fatty Acid Beta Oxidation 1_WP39	CRAT
+Triacylglyceride Synthesis_WP279	CG31871
+Triacylglyceride Synthesis_WP279	mdy
+Triacylglyceride Synthesis_WP279	bmm
+Triacylglyceride Synthesis_WP279	Hsl
+Triacylglyceride Synthesis_WP279	Dhap-at
+Triacylglyceride Synthesis_WP279	Mgat2
+Triacylglyceride Synthesis_WP279	Gk2
+Triacylglyceride Synthesis_WP279	Gpdh
+Triacylglyceride Synthesis_WP279	Gk1
+Triacylglyceride Synthesis_WP279	wun
+Triacylglyceride Synthesis_WP279	Mgat1
+Triacylglyceride Synthesis_WP279	mino
+Triacylglyceride Synthesis_WP279	CG4753
+Triacylglyceride Synthesis_WP279	CG4729
+Triacylglyceride Synthesis_WP279	ADPS
+Triacylglyceride Synthesis_WP279	CG3812
+Beta Oxidation Meta MAPP_WP443	CG31871
+Beta Oxidation Meta MAPP_WP443	bmm
+Beta Oxidation Meta MAPP_WP443	Mtpalpha
+Beta Oxidation Meta MAPP_WP443	Hsl
+Beta Oxidation Meta MAPP_WP443	AcCoAS
+Beta Oxidation Meta MAPP_WP443	Acsl
+Beta Oxidation Meta MAPP_WP443	CG10932
+Beta Oxidation Meta MAPP_WP443	Thiolase
+Beta Oxidation Meta MAPP_WP443	Arc42
+Beta Oxidation Meta MAPP_WP443	CG7430
+Beta Oxidation Meta MAPP_WP443	CG7461
+Beta Oxidation Meta MAPP_WP443	Gk2
+Beta Oxidation Meta MAPP_WP443	Tpi
+Beta Oxidation Meta MAPP_WP443	Gk1
+Beta Oxidation Meta MAPP_WP443	CG3961
+Beta Oxidation Meta MAPP_WP443	whd
+Beta Oxidation Meta MAPP_WP443	Gpo-1
+Beta Oxidation Meta MAPP_WP443	CG9547
+Beta Oxidation Meta MAPP_WP443	CPT2
+Beta Oxidation Meta MAPP_WP443	CG6543
+Beta Oxidation Meta MAPP_WP443	CG12262
+Beta Oxidation Meta MAPP_WP443	colt
+Beta Oxidation Meta MAPP_WP443	CRAT
+Fatty Acid Beta Oxidation 3_WP25	Mtpalpha
+Fatty Acid Beta Oxidation 3_WP25	CG9547
+Fatty Acid Beta Oxidation 3_WP25	CG10932
+Fatty Acid Beta Oxidation 3_WP25	Thiolase
+Fatty Acid Beta Oxidation 3_WP25	Arc42
+Fatty Acid Beta Oxidation 3_WP25	CG6543
+Fatty Acid Beta Oxidation 3_WP25	CG7430
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	cact
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Dif
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Myd88
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	eff
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Socs16D
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	PGRP-SA
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Uev1A
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	spirit
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	IKKbeta
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	NT1
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	PGRP-SD
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	pll
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	spheroide
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Su(var)2-10
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Stat92E
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	bsk
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Rel
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Fadd
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	Tab2
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	spz
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	imd
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	sphinx1
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	sphinx2
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	PGRP-SC1b
+Toll, IMD, JAK/STAT Pathways for Immune Response to Pathogens_WP3830	tub
+psh	Dredd
+psh	SPE
+psh	dl
+psh	Traf6
+psh	hop
+psh	nec
+psh	ben
+psh	PGRP-LC
+psh	dome
+psh	Pli
+psh	PGRP-LB
+psh	PGRP-SC1a
+psh	GNBP2
+psh	GNBP3
+psh	PGRP-LE
+psh	Tak1
+psh	grass
+psh	GNBP1
+psh	Tl
+psh	upd2
+DNA Replication_WP565	RfC38
+DNA Replication_WP565	RPA2
+DNA Replication_WP565	Cdc7
+DNA Replication_WP565	Cdc6
+DNA Replication_WP565	DNApol-alpha60
+DNA Replication_WP565	Gnf1
+DNA Replication_WP565	RpA-70
+DNA Replication_WP565	Mcm5
+DNA Replication_WP565	Mcm6
+DNA Replication_WP565	Mcm7
+DNA Replication_WP565	DNApol-alpha180
+DNA Replication_WP565	Mcm10
+DNA Replication_WP565	Mcm2
+DNA Replication_WP565	dup
+DNA Replication_WP565	Mcm3
+DNA Replication_WP565	PCNA
+DNA Replication_WP565	CG12018
+DNA Replication_WP565	RfC4
+DNA Replication_WP565	DNApol-epsilon255
+DNA Replication_WP565	RfC3
+DNA Replication_WP565	Ubi-p63E
+DNA Replication_WP565	DNApol-alpha50
+DNA Replication_WP565	CG8142
+DNA Replication_WP565	DNApol-alpha73
+DNA Replication_WP565	Orc6
+Orc5	DNApol-delta
+Orc5	Orc2
+Orc5	Orc1
+Orc5	dpa
+Orc5	Orc4
+Orc5	Orc3
+Orc5	CDC45L
+Orc5	RpL40
+Orc5	DNApol-epsilon58
+mRNA processing_WP142	U2A
+mRNA processing_WP142	cbc
+mRNA processing_WP142	Pabp2
+mRNA processing_WP142	Srp54
+mRNA processing_WP142	CG6695
+mRNA processing_WP142	snf
+mRNA processing_WP142	l(1)G0007
+mRNA processing_WP142	Sf3b1
+mRNA processing_WP142	Sf3b2
+mRNA processing_WP142	Sf3b3
+mRNA processing_WP142	Sf3b5
+mRNA processing_WP142	Cpsf100
+mRNA processing_WP142	CG6841
+mRNA processing_WP142	Rbp1
+mRNA processing_WP142	SNRPG
+mRNA processing_WP142	Hrb87F
+mRNA processing_WP142	SmD2
+mRNA processing_WP142	Phf5a
+mRNA processing_WP142	SmD1
+mRNA processing_WP142	su(f)
+mRNA processing_WP142	Prp3
+mRNA processing_WP142	sbr
+mRNA processing_WP142	Caper
+mRNA processing_WP142	rdx
+mRNA processing_WP142	CG10418
+SmB	Clp
+SmB	bai
+SmB	SmF
+SmB	pea
+SmB	SmE
+SmB	Spf45
+SmB	Prp8
+SmB	SmD3
+SmB	Cpsf73
+SmB	RpII215
+SmB	CG7028
+SmB	Doa
+SmB	CG6015
+SmB	U4-U6-60K
+SmB	Spt5
+SmB	Spx
+SmB	hrg
+SmB	x16
+SmB	CG10375
+SmB	CstF50
+SmB	mle
+SmB	SRm160
+SmB	Syp
+SmB	snRNP-U1-70K
+SmB	Dim1
+SmB	Cpsf160
+SmB	holn1
+Rat1	l(2)37Cb
+Rat1	CG3436
+Rat1	Ddx1
+Rat1	CG4849
+Rat1	Dcr-1
+Rat1	yps
+Rat1	SF2
+Rat1	CstF64
+Rat1	SMC1
+Rat1	bru2
+Rat1	bru3
+Rat1	heph
+Rat1	bru1
+Rat1	U2af50
+Rat1	noi
+Rat1	Art8
+Rat1	Sf3a1
+Rat1	Sf3a2
+Rat1	rump
+Rat1	CG4896
+Rat1	CG3689
+Rat1	l(2)35Bd
+Rat1	LSm7
+Rat1	Cbp80
+Rat1	SC35
+Rat1	Dhx15
+Rat1	sm
+caz	B52
+caz	mRNA-cap
+Fatty Acid Beta Oxidation 2_WP187	Mtpalpha
+Fatty Acid Beta Oxidation 2_WP187	Thiolase
+Fatty Acid Beta Oxidation 2_WP187	Arc42
+Fatty Acid Beta Oxidation 2_WP187	CG6543
+Fatty Acid Beta Oxidation 2_WP187	CG12262
+Electron Transport Chain_WP542	ND-B14
+Electron Transport Chain_WP542	SdhBL
+Electron Transport Chain_WP542	COX6B
+Electron Transport Chain_WP542	ND-49L
+Electron Transport Chain_WP542	ND-13B
+Electron Transport Chain_WP542	ND-B12
+Electron Transport Chain_WP542	ox
+Electron Transport Chain_WP542	ND-13A
+Electron Transport Chain_WP542	SdhD
+Electron Transport Chain_WP542	blw
+Electron Transport Chain_WP542	SdhA
+Electron Transport Chain_WP542	UQCR-Q
+Electron Transport Chain_WP542	Surf1
+Electron Transport Chain_WP542	CG40472
+Electron Transport Chain_WP542	ND-AGGG
+Electron Transport Chain_WP542	ND-39
+Electron Transport Chain_WP542	ND-30
+Electron Transport Chain_WP542	ND-51L2
+Electron Transport Chain_WP542	ND-ACP
+Electron Transport Chain_WP542	ND-B18
+Electron Transport Chain_WP542	CYTB
+Electron Transport Chain_WP542	ND-75
+Electron Transport Chain_WP542	ATPsynbeta
+Electron Transport Chain_WP542	CG10731
+Electron Transport Chain_WP542	cype
+ND-B8	Bmcp
+ND-B8	ND-24
+ND-B8	ND-B17.2
+ND-B8	ND-MLRQ
+ND-B8	ND-20L
+ND-B8	ND-23
+ND-B8	ND-ASHI
+ND-B8	UQCR-11
+ND-B8	RFeSP
+ND-B8	ATPsynO
+ND-B8	CG9065
+ND-B8	ATPsynCF6L
+ND-B8	ND-19
+ND-B8	ND-18
+ND-B8	ND2
+ND-B8	ND1
+ND-B8	CG6629
+ND-B8	ND4
+ND-B8	ND3
+ND-B8	Scox
+ND-B8	ND5
+ND-B8	ATPsyndelta
+ND-B8	ND-PDSW
+ND-B8	COX5A
+ND-B8	ATP6
+ND-B8	ND-B22
+ND-B8	ND-B14.5A
+UQCR-14L	COX5B
+UQCR-14L	UQCR-C1
+UQCR-14L	ATPsyngamma
+UQCR-14L	UQCR-C2
+UQCR-14L	ATPsynD
+UQCR-14L	Ucp4A
+UQCR-14L	ATPsynG
+UQCR-14L	ATPsynF
+UQCR-14L	Ant2
+UQCR-14L	COX4
+UQCR-14L	COX3
+UQCR-14L	COX2
+UQCR-14L	COX1
+UQCR-14L	CG14077
+UQCR-14L	ND-SGDH
+UQCR-14L	CG3803
+UQCR-14L	ND-42
+UQCR-14L	ATPsynC
+UQCR-14L	ATPsynB
+Biogenic Amine Synthesis_WP125	Ddc
+Biogenic Amine Synthesis_WP125	Hn
+Biogenic Amine Synthesis_WP125	Gad1
+Biogenic Amine Synthesis_WP125	Hdc
+Biogenic Amine Synthesis_WP125	ChAT
+Biogenic Amine Synthesis_WP125	Trh
+Biogenic Amine Synthesis_WP125	Tbh
+Biogenic Amine Synthesis_WP125	ple
+Biogenic Amine Synthesis_WP125	comt
+Fatty Acid Biosynthesis_WP568	ACC
+Fatty Acid Biosynthesis_WP568	AcCoAS
+Fatty Acid Biosynthesis_WP568	FASN1
+Fatty Acid Biosynthesis_WP568	CG16935
+Fatty Acid Biosynthesis_WP568	Acsl
+Fatty Acid Biosynthesis_WP568	CG9577
+Fatty Acid Biosynthesis_WP568	yip2
+Fatty Acid Biosynthesis_WP568	PCB
+Fatty Acid Biosynthesis_WP568	CG3961
+Fatty Acid Biosynthesis_WP568	CG6984
+Fatty Acid Biosynthesis_WP568	CG6543
+Fatty Acid Biosynthesis_WP568	ATPCL
+Translation Factors_WP537	eIF3b
+Translation Factors_WP537	eIF3e
+Translation Factors_WP537	eEF1beta
+Translation Factors_WP537	eIF2gamma
+Translation Factors_WP537	eIF4H1
+Translation Factors_WP537	eIF3g2
+Translation Factors_WP537	eIF3i
+Translation Factors_WP537	eIF3h
+Translation Factors_WP537	eIF2alpha
+Translation Factors_WP537	eIF3j
+Translation Factors_WP537	pAbp
+Translation Factors_WP537	eIF2Bdelta
+Translation Factors_WP537	PEK
+Translation Factors_WP537	CG8963
+Translation Factors_WP537	eIF2Balpha
+Translation Factors_WP537	eIF3a
+Translation Factors_WP537	eIF4B
+Translation Factors_WP537	eIF4A
+Translation Factors_WP537	eIF1A
+Translation Factors_WP537	eEF1gamma
+Translation Factors_WP537	eIF2beta
+Translation Factors_WP537	eEF5
+Translation Factors_WP537	eIF1
+Translation Factors_WP537	eIF4E1
+Translation Factors_WP537	eIF3d1
+eEF1alpha2	eIF4G1
+eEF1alpha2	eEF2
+eEF1alpha2	eIF3f1
+eEF1alpha2	eEF1alpha1
+eEF1alpha2	eIF2Bbeta
+eEF1alpha2	eIF2Bepsilon
+eEF1alpha2	eIF2Bgamma
+eEF1alpha2	eRF1
+eEF1alpha2	eIF6
+eEF1alpha2	eIF5
+eEF1alpha2	eIF5B
+eEF1alpha2	eEF1delta
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	cact
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Dif
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Myd88
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	PGRP-SA
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	IKKbeta
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	PGRP-SD
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	pll
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Diap2
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Stat92E
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Rel
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Fadd
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Tab2
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	spz
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	imd
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	tub
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Drs
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	psh
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Dredd
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	SPE
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	dl
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	hop
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	PGRP-LC
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	dome
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	GNBP3
+Humoral Immune Response to Fungal and Bacterial Pathogens_WP3660	Tak1
+GNBP1	Tl
+GNBP1	DptA
+GNBP1	upd3
+GNBP1	key
+Wnt Signaling Pathway_WP97	Pka-C1
+Wnt Signaling Pathway_WP97	Apc2
+Wnt Signaling Pathway_WP97	Pp2C1
+Wnt Signaling Pathway_WP97	ci
+Wnt Signaling Pathway_WP97	wrd
+Wnt Signaling Pathway_WP97	Prp19
+Wnt Signaling Pathway_WP97	cer
+Wnt Signaling Pathway_WP97	fu
+Wnt Signaling Pathway_WP97	wg
+Wnt Signaling Pathway_WP97	CBP
+Wnt Signaling Pathway_WP97	sgg
+Wnt Signaling Pathway_WP97	dally
+Wnt Signaling Pathway_WP97	smo
+Wnt Signaling Pathway_WP97	Su(fu)
+Wnt Signaling Pathway_WP97	Axn
+Wnt Signaling Pathway_WP97	slmb
+Wnt Signaling Pathway_WP97	dsh
+Wnt Signaling Pathway_WP97	arm
+Wnt Signaling Pathway_WP97	pan
+Wnt Signaling Pathway_WP97	hh
+Wnt Signaling Pathway_WP97	ptc
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	RIOK1
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	Akt1
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	Pten
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	RpL11
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	RIOK2
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	Pi3K92E
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	p53
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	Egfr
+RIOK1 and RIOK2 in EGFR- and PI3K-mediated tumorigenesis_WP3873	foxo
+Notch Signaling Pathway_WP208	vg
+Notch Signaling Pathway_WP208	ac
+Notch Signaling Pathway_WP208	gro
+Notch Signaling Pathway_WP208	dx
+Notch Signaling Pathway_WP208	H
+Notch Signaling Pathway_WP208	numb
+Notch Signaling Pathway_WP208	dsh
+Notch Signaling Pathway_WP208	Psn
+Notch Signaling Pathway_WP208	Ser
+Notch Signaling Pathway_WP208	fng
+Notch Signaling Pathway_WP208	sc
+Eukaryotic Transcription Initiation_WP177	Tbp
+Eukaryotic Transcription Initiation_WP177	RpII33
+Eukaryotic Transcription Initiation_WP177	TfIIEalpha
+Eukaryotic Transcription Initiation_WP177	mrn
+Eukaryotic Transcription Initiation_WP177	RpII140
+Eukaryotic Transcription Initiation_WP177	TfIIFbeta
+Eukaryotic Transcription Initiation_WP177	CG7339
+Eukaryotic Transcription Initiation_WP177	Cdk7
+Eukaryotic Transcription Initiation_WP177	Sin
+Eukaryotic Transcription Initiation_WP177	Taf7
+Eukaryotic Transcription Initiation_WP177	CycH
+Eukaryotic Transcription Initiation_WP177	Taf6
+Eukaryotic Transcription Initiation_WP177	Taf5
+Eukaryotic Transcription Initiation_WP177	RpI135
+Eukaryotic Transcription Initiation_WP177	CG33785
+Eukaryotic Transcription Initiation_WP177	TfIIB
+Eukaryotic Transcription Initiation_WP177	RpI1
+Eukaryotic Transcription Initiation_WP177	Tfb4
+Eukaryotic Transcription Initiation_WP177	Ilk
+Eukaryotic Transcription Initiation_WP177	Tfb1
+Eukaryotic Transcription Initiation_WP177	Xpd
+Eukaryotic Transcription Initiation_WP177	RpII215
+Eukaryotic Transcription Initiation_WP177	Rpb7
+Eukaryotic Transcription Initiation_WP177	TfIIA-S
+Eukaryotic Transcription Initiation_WP177	Mat1
+Rpb11	Taf12
+Rpb11	Rpb8
+Rpb11	Rpb5
+Rpb11	Taf13
+Rpb11	RpII15
+Rpb11	RpIII128
+Rpb11	TfIIEbeta
+Rpb11	RpII18
+Rpb11	hay
+Pentose Phosphate Pathway_WP421	Taldo
+Pentose Phosphate Pathway_WP421	Rpi
+Pentose Phosphate Pathway_WP421	CG30499
+Pentose Phosphate Pathway_WP421	Zw
+Pentose Phosphate Pathway_WP421	CG17333
+Pentose Phosphate Pathway_WP421	Pgd
+Proteasome Degradation_WP281	CG33303
+Proteasome Degradation_WP281	eff
+Proteasome Degradation_WP281	CG9588
+Proteasome Degradation_WP281	OstDelta
+Proteasome Degradation_WP281	Prosbeta5
+Proteasome Degradation_WP281	Prosbeta6
+Proteasome Degradation_WP281	Prosalpha2
+Proteasome Degradation_WP281	REG
+Proteasome Degradation_WP281	Prosbeta3
+Proteasome Degradation_WP281	Prosalpha3
+Proteasome Degradation_WP281	Prosbeta4
+Proteasome Degradation_WP281	Uba1
+Proteasome Degradation_WP281	Prosalpha5
+Proteasome Degradation_WP281	Prosbeta1
+Proteasome Degradation_WP281	Prosbeta2
+Proteasome Degradation_WP281	Prosalpha6
+Proteasome Degradation_WP281	Prosalpha7
+Proteasome Degradation_WP281	Rpt5
+Proteasome Degradation_WP281	Rpt6
+Proteasome Degradation_WP281	Rpt3
+Proteasome Degradation_WP281	Rpt4
+Proteasome Degradation_WP281	Rpt1
+Proteasome Degradation_WP281	Rpt2
+Proteasome Degradation_WP281	Rpn7
+Proteasome Degradation_WP281	Rpn8
+Rpn5	Rpn6
+Rpn5	Rpn3
+Rpn5	Rpn1
+Rpn5	Rpn2
+Rpn5	Rpn12
+Rpn5	Ubi-p63E
+Rpn5	Rpn9
+Rpn5	Prosbeta7
+Rpn5	CG12096
+Rpn5	Rpn10
+Mismatch Repair_WP1204	Gnf1
+Mismatch Repair_WP1204	Mlh1
+Mismatch Repair_WP1204	spel1
+Mismatch Repair_WP1204	tos
+Mismatch Repair_WP1204	Msh6

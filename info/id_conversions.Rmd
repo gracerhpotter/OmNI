@@ -1,0 +1,219 @@
+Clean
+```{r}
+knitr::opts_knit$set(progress = TRUE, verbose = TRUE)
+
+# Start fresh
+rm(list = ls(all.names = TRUE))
+gc()
+```
+
+LOAD REQUIRED LIBRARIES
+```{r}
+knitr::opts_chunk$set(echo = FALSE)
+# Global packages
+library("pacman")
+pacman::p_load(knitr,
+               tidyverse,
+               janitor,
+               BridgeDbR,
+               clusterProfiler,
+               metaboliteIDmapping,
+               org.Hs.eg.db,
+               AnnotationHub )
+```
+
+Gene ID conversions
+```{r}
+gene_id_converted = clusterProfiler::bitr(epic_genes$entry_name, fromType = "SYMBOL",
+                                          toType = c("ENSEMBL", "ENTREZID"),
+                                          OrgDb = org.Hs.eg.db )
+
+```
+
+Function
+```{r}
+# see the options
+# Cs (Chemspider)
+# Kd (KEGG Drug)
+# Ck (KEGG Compound)
+# Ch (HMDB)
+# Ce (ChEBI)
+# Wd (Wikidata)
+# Ik (InChIKey)
+# Cks (KNApSAcK)
+# Cpc (PubChem-compound)
+# Dr (DrugBank)
+
+
+bridgedbr_metabolite_location = "metabolites_20220707.bridge"
+bridgedbr_metabolite_checkfile = paste0(getwd(), "/", bridgedbr_metabolite_location)
+
+## Download the Metabolite mapping file (if it doesn't exist locally yet):
+if (!file.exists(bridgedbr_metabolite_checkfile)) {
+    download.file("https://figshare.com/ndownloader/files/26001794",
+                  bridgedbr_metabolite_location    ) 
+  }
+
+# Load
+bridgedbr_metabolite_mapper = BridgeDbR::loadDatabase(bridgedbr_metabolite_checkfile)
+
+# HMDB database
+# Map the entire column of identifiers using lapply and BridgeDbR::map
+all_hmdb_ids = readr::read_delim("all_hmdb_ids.tsv", delim = "\t", show_col_types = FALSE)
+identifiers_to_map = all_hmdb_ids
+identifiers_to_map = unique(identifiers_to_map$hmdb_id)
+
+# HMDB to KEGG ---------------------------------------------------------
+mapped_results = lapply(identifiers_to_map, function(id) {
+    BridgeDbR::map(mapper = bridgedbr_metabolite_mapper,
+                   identifier = id,
+                   source = "Ch", # source id of metabolites
+                   target = "Ck") # target id of metabolites
+  
+  })
+mapped_hmdb_to_kegg_df = do.call(rbind, mapped_results) %>% as.data.frame() %>% dplyr::select(hmdb_id = identifier, kegg_id = mapping)
+
+# HMDB to CHEBI ---------------------------------------------------------
+mapped_results = lapply(identifiers_to_map, function(id) {
+    BridgeDbR::map(mapper = bridgedbr_metabolite_mapper,
+                   identifier = id,
+                   source = "Ch", # source id of metabolites
+                   target = "Ce") # target id of metabolites
+  
+  })
+mapped_hmdb_to_chebi_df = do.call(rbind, mapped_results) %>% as.data.frame() %>% dplyr::select(hmdb_id = identifier, chebi_id = mapping)
+
+# HMDB to PubChem ---------------------------------------------------------
+mapped_results = lapply(identifiers_to_map, function(id) {
+    BridgeDbR::map(mapper = bridgedbr_metabolite_mapper,
+                   identifier = id,
+                   source = "Ch", # source id of metabolites
+                   target = "Cpc") # target id of metabolites
+  
+  })
+mapped_hmdb_to_pubchem_df = do.call(rbind, mapped_results) %>% as.data.frame() %>% dplyr::select(hmdb_id = identifier, pubchem_id = mapping)
+
+
+# HMDB to Chemspider ---------------------------------------------------------
+mapped_results = lapply(identifiers_to_map, function(id) {
+    BridgeDbR::map(mapper = bridgedbr_metabolite_mapper,
+                   identifier = id,
+                   source = "Ch", # source id of metabolites
+                   target = "Cs") # target id of metabolites
+  
+  })
+mapped_hmdb_to_chemspider_df = do.call(rbind, mapped_results) %>% as.data.frame() %>% dplyr::select(hmdb_id = identifier, chemspider_id = mapping)
+
+
+# HMDB to InChIKey ---------------------------------------------------------
+mapped_results = lapply(identifiers_to_map, function(id) {
+    BridgeDbR::map(mapper = bridgedbr_metabolite_mapper,
+                   identifier = id,
+                   source = "Ch", # source id of metabolites
+                   target = "Ik") # target id of metabolites
+  
+  })
+mapped_hmdb_to_inchikey_df = do.call(rbind, mapped_results) %>% as.data.frame() %>% dplyr::select(hmdb_id = identifier, inchikey_id = mapping)
+
+
+## Read
+## MERGE to get a master database/resource
+metabolite_mapping_table = list(mapped_hmdb_to_chebi_df, 
+                                mapped_hmdb_to_chemspider_df,
+                                mapped_hmdb_to_inchikey_df,
+                                mapped_hmdb_to_kegg_df,
+                                mapped_hmdb_to_pubchem_df) %>%
+  purrr::reduce(left_join, by = "hmdb_id") %>% 
+  dplyr::distinct(.) %>%
+  dplyr::left_join(., all_hmdb_ids, by = "hmdb_id") %>%
+  dplyr::select(metabolite_name, hmdb_id, everything()) %>%
+  
+  # add identifiers
+  dplyr::mutate(chebi_id = ifelse(is.na(chebi_id), NA_character_, ifelse(grepl("^CHEBI:", chebi_id, ignore.case = T), chebi_id, paste0("CHEBI:", chebi_id)))) %>%
+  dplyr::mutate(kegg_id = ifelse(is.na(kegg_id), NA_character_, ifelse(grepl("^KEGG:", kegg_id, ignore.case = T), kegg_id, paste0("KEGG:", kegg_id)))) %>%
+  dplyr::mutate(pubchem_id = ifelse(is.na(pubchem_id), NA_character_, ifelse(grepl("^PUBCHEM:", pubchem_id, ignore.case = T), pubchem_id, paste0("PUBCHEM:", pubchem_id)))) %>%
+  dplyr::mutate(chemspider_id = ifelse(is.na(chemspider_id), NA_character_, ifelse(grepl("^CHEMSPIDER:", chemspider_id, ignore.case = T), chemspider_id, paste0("CHEMSPIDER:", chemspider_id)))) %>%
+  dplyr::mutate(bigg_id = ifelse(is.na(bigg_id), NA_character_, ifelse(grepl("^BIGG:", bigg_id, ignore.case = T), bigg_id, paste0("BIGG:", bigg_id)))) %>%
+  
+  dplyr::group_by(chebi_id) %>%
+  tidyr::fill(metabolite_name, .direction = "downup") %>%
+   
+  dplyr::distinct(.) %>%
+
+  # write
+  readr::write_delim(., "my_master_metabolite_mapping_table.tsv", delim = "\t" )
+```
+
+Read some other external conversion databases to get the widest coverage if something left out by bridgedb
+```{r}
+# metaboluteIDmapping R package
+metabolite_mapping_r = data.frame(metabolitesMapping) %>%
+  dplyr::select(pubchem_id = CID,
+                kegg_id = KEGG,
+                chebi_id = ChEBI,
+                hmdb_id = HMDB,
+                metabolite_name = Name)
+
+# Most KEGG ids converted to CHEBI using MBROLE database
+mbrole_chebi_kegg_conversions = readr::read_delim("mbrole_chebi_kegg_conversions.tsv", delim = "\t", show_col_types = FALSE) %>%
+  dplyr::select(kegg_id = Input, chebi_id = Output)
+
+# Entire CHEBI database
+chebi_metabolitenames = readr::read_delim("chebi_metabolitenames.txt", delim = "\t", show_col_types = FALSE) %>%
+  dplyr::mutate(chebi_id = as.character(chebi_id)) %>%
+  dplyr::mutate(metabolite_name = paste(toupper(substr(metabolite_name, 1, 1)), substr(metabolite_name, 2, nchar(metabolite_name)), sep = ""))
+clipr::write_clip(chebi_metabolitenames$chebi_id)
+
+
+# Merge
+metabolite_mapping_table = readr::read_delim("my_master_metabolite_mapping_table.tsv", delim = "\t", show_col_types = FALSE) 
+
+metabolite_mapping_table_modified = metabolite_mapping_table %>%
+  dplyr::bind_rows(., mbrole_chebi_kegg_conversions) %>%
+  dplyr::bind_rows(., metabolite_mapping_r) %>%
+  
+  dplyr::select(metabolite_name, hmdb_id, everything()) %>%
+  
+  # add identifiers
+  dplyr::mutate(chebi_id = ifelse(is.na(chebi_id), NA_character_, ifelse(grepl("^CHEBI:", chebi_id, ignore.case = T), chebi_id, paste0("CHEBI:", chebi_id)))) %>%
+  dplyr::mutate(kegg_id = ifelse(is.na(kegg_id), NA_character_, ifelse(grepl("^KEGG:", kegg_id, ignore.case = T), kegg_id, paste0("KEGG:", kegg_id)))) %>%
+  dplyr::mutate(pubchem_id = ifelse(is.na(pubchem_id), NA_character_, ifelse(grepl("^PUBCHEM:", pubchem_id, ignore.case = T), pubchem_id, paste0("PUBCHEM:", pubchem_id)))) %>%
+  dplyr::mutate(chemspider_id = ifelse(is.na(chemspider_id), NA_character_, ifelse(grepl("^CHEMSPIDER:", chemspider_id, ignore.case = T), chemspider_id, paste0("CHEMSPIDER:", chemspider_id)))) %>%
+  dplyr::mutate(bigg_id = ifelse(is.na(bigg_id), NA_character_, ifelse(grepl("^BIGG:", bigg_id, ignore.case = T), bigg_id, paste0("BIGG:", bigg_id)))) %>%
+  dplyr::group_by(chebi_id) %>%
+  tidyr::fill(metabolite_name, .direction = "downup") %>%
+   
+  dplyr::distinct(.) %>%
+  readr::write_delim(., "my_master_metabolite_mapping_table_modified.tsv", delim = "\t" )
+
+```
+
+READ THE MASTER TABLES
+```{r}
+metabolite_mapping_table = readr::read_delim("my_master_metabolite_mapping_table.tsv", delim = "\t", show_col_types = FALSE) 
+metabolite_mapping_table_modified = readr::read_delim("my_master_metabolite_mapping_table_modified.tsv", delim = "\t", show_col_types = FALSE) 
+uniprot_aliases = readr::read_delim("./../id_conversions/uniprot_gene_aliases.tsv")
+
+
+```
+
+To replace/map metabolite ids to other dataframes from "my_master_metabolite_mapping_table.tsv"
+```{r}
+# Select needed columns only
+metabolite_mapping_table_modified = readr::read_delim("my_master_metabolite_mapping_table_modified.tsv", delim = "\t", show_col_types = FALSE) 
+metabolite_mapping_table_modified_1 = metabolite_mapping_table_modified %>% dplyr::select(kegg_id, pubchem_id, chebi_id)
+
+# use this template for the replacement
+result = original_data %>%
+  dplyr::mutate(PARTICIPANT_A = ifelse(grepl("^KEGG:", PARTICIPANT_A), 
+                                       coalesce(metabolite_mapping_table_modified_1$chebi_id[match(PARTICIPANT_A, metabolite_mapping_table_modified_1$kegg_id)], PARTICIPANT_A), PARTICIPANT_A),
+                PARTICIPANT_B = ifelse(grepl("^KEGG:", PARTICIPANT_B), 
+                                       coalesce(metabolite_mapping_table_modified_1$chebi_id[match(PARTICIPANT_B, metabolite_mapping_table_modified_1$kegg_id)], PARTICIPANT_B), PARTICIPANT_B)   ) 
+
+```
+
+Run
+```{r}
+
+```
+

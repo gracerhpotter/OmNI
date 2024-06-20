@@ -1,0 +1,153 @@
+Clean
+```{r}
+knitr::opts_knit$set(progress = TRUE, verbose = TRUE)
+
+# Start fresh
+rm(list = ls(all.names = TRUE))
+gc()
+```
+
+Load libraries
+```{r}
+knitr::opts_chunk$set(echo = FALSE)
+# Global packages
+library("pacman")
+pacman::p_load(knitr,
+               tidyverse,
+               AnnotationHub,
+               org.Hs.eg.db,
+               clusterProfiler )
+```
+
+ConsensusPathDB
+```{r}
+# Read files
+consensuspathdb_genes = readr::read_delim('./consensuspathdb/CPDB_pathways_genes.tab', delim = "\t", show_col_types = FALSE) %>% dplyr::rename(feature = hgnc_symbol_ids)
+consensuspathdb_metabolites = readr::read_delim('./consensuspathdb/CPDB_pathways_metabolites.tab', delim = "\t", show_col_types = FALSE) %>% dplyr::rename(feature = metabolites)
+
+# Gene only pathways
+consensuspathdb_genes_1 = consensuspathdb_genes %>%
+  
+  # unnest component genes/features and convert to long form
+  dplyr::group_by(pathway) %>%
+  dplyr::summarize(feature = paste(feature, collapse = ',')) %>%
+  tidyr::separate_rows(feature, sep = ",") %>%
+  
+  # clean the pathway names
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, c("&alpha;" = "α", "&nbsp;" = " ")) ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, c("&beta;" = "β", "&nbsp;" = " ")) ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, c("&gamma;" = "γ", "&nbsp;" = " ")) ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, c("-arrestins" = "β-arrestins", "&nbsp;" = " ")) ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, "<i>" , "") ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, "</i> ", " ") ) %>%
+  dplyr::arrange(pathway) %>%
+
+  # Write
+  readr::write_delim(., "./consensuspathdb/consensuspathdb_human_gene.tsv")
+length(unique(consensuspathdb_genes_1$pathway))
+
+
+# Combined Gene-Metabolite pathways
+consensuspathdb_merged = dplyr::bind_rows(consensuspathdb_genes, consensuspathdb_metabolites) %>%
+  
+  # unnest component genes/features and convert to long form
+  dplyr::group_by(pathway) %>%
+  dplyr::summarize(feature = paste(feature, collapse = ',')) %>%
+  tidyr::separate_rows(feature, sep = ",") %>%
+
+  # rename 
+  dplyr::mutate(feature = stringr::str_replace_all(feature, "kegg:", "KEGG:")) %>%
+  dplyr::mutate(feature = stringr::str_replace_all(feature, "pubchem-compound:", "PUBCHEM:")) %>%
+  dplyr::mutate(feature = stringr::str_replace_all(feature, "chebi:", "CHEBI:")) %>%
+
+  # clean the pathway names
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, c("&alpha;" = "α", "&nbsp;" = " ")) ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, c("&beta;" = "β", "&nbsp;" = " ")) ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, c("&gamma;" = "γ", "&nbsp;" = " ")) ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, c("-arrestins" = "β-arrestins", "&nbsp;" = " ")) ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, "<i>" , "") ) %>%
+  dplyr::mutate(pathway = stringr::str_replace_all(pathway, "</i> ", " ") ) %>%
+  
+  # replace KEGG and PUBCHEM ids with CHEBI (because my PCSF Interactome is CHEBI)
+  dplyr::mutate(feature = ifelse(grepl("^KEGG:", feature), 
+                                     coalesce(metabolite_mapping_table_modified$chebi_id[match(feature, metabolite_mapping_table_modified$kegg_id)], feature), feature),
+                feature = ifelse(grepl("^PUBCHEM:", feature), 
+                                       coalesce(metabolite_mapping_table_modified$chebi_id[match(feature, metabolite_mapping_table_modified$pubchem_id)], feature), feature) ) %>%
+  dplyr::filter(!grepl("PUBCHEM|KEGG", feature)) %>%
+  dplyr::arrange(pathway) %>%
+
+
+  # Write
+  readr::write_delim(., "./consensuspathdb/consensuspathdb_human_gene_and_metabol.tsv")
+length(unique(consensuspathdb_merged$pathway))
+
+```
+
+Wikipathways
+```{r}
+### Get metabolite annotations for wikipathways 
+annotationhub_obj = AnnotationHub()
+wikipathways_human_metabol_obj = AnnotationHub::query(annotationhub_obj, c("wikipathways", "Homo sapiens"));
+wikipathways_human_metabol = wikipathways_human_metabol_obj[[1]]
+wikipathways_human_metabol_df = wikipathways_human_metabol %>% 
+  dplyr::select(pathway = pathway_name, feature = ChEBI_ID) %>%
+  dplyr::mutate(feature = ifelse(!str_starts(feature, "CHEBI:"), paste0("CHEBI:", feature), feature)) %>% #fix the chebi ids
+  dplyr::arrange(pathway) %>%
+  readr::write_delim(., "./wikipathways/wikipathways_human_metabol.tsv")
+
+### Get gene annotations for wikipathways
+wikipathways_human_gene = rWikiPathways::readPathwayGMT("./wikipathways/wikipathways-20231110-gmt-Homo_sapiens.gmt") # download from wikipathways website
+
+# convert entrez to symbol
+entrez_to_symbol = data.frame(clusterProfiler::bitr(wikipathways_human_gene$gene, fromType = "ENTREZID", toType = "SYMBOL", OrgDb = org.Hs.eg.db))
+
+# make the df
+wikipathways_human_gene_df = wikipathways_human_gene %>% 
+  dplyr::rename(ENTREZID = gene) %>%
+  dplyr::left_join(., entrez_to_symbol, by = "ENTREZID") %>%
+  dplyr::select(pathway = name, feature = SYMBOL) %>%
+  dplyr::arrange(pathway) %>%
+  readr::write_delim(., "./wikipathways/wikipathways_human_gene.tsv")
+
+## Combine both dataframs to get a master geneset
+wikipathways_human_gene_metabol_df = dplyr::bind_rows(wikipathways_human_metabol_df, wikipathways_human_gene_df) %>% 
+  dplyr::arrange(pathway) %>%
+  readr::write_delim(., "./wikipathways/wikipathways_human_gene_and_metabol.tsv")
+
+```
+
+Reactome
+```{r}
+# Read Reactome pathways
+chebi2pathways = readr::read_delim("./reactome/ChEBI2Reactome.txt", delim = "\t", show_col_types = FALSE, col_names = NULL) %>% 
+  dplyr::filter(X6 == "Homo sapiens") %>%
+  dplyr::select(pathway = X4, feature = X1) %>%
+  dplyr::mutate(feature = ifelse(!str_starts(feature, "CHEBI:"), paste0("CHEBI:", feature), feature)) %>%
+  dplyr::filter(!is.na(feature)) %>%
+  readr::write_delim(., "./reactome/reactome_human_metabol.tsv")
+
+uniprot2pathways = readr::read_delim("./reactome/UniProt2Reactome.txt", delim = "\t", show_col_types = FALSE, col_names = NULL) %>% 
+  dplyr::filter(X6 == "Homo sapiens") %>%
+  dplyr::left_join(., uniprot_aliases, by = c("X1" = "Entry")) %>%
+  dplyr::select(pathway = X4, feature = `Gene Names (primary)`) %>%
+  dplyr::filter(!is.na(feature)) %>%
+  readr::write_delim(., "./reactome/reactome_human_gene.tsv") 
+#colnames(uniprot_aliases)
+
+# Merge
+reactome_merged = dplyr::bind_rows(chebi2pathways, uniprot2pathways)  %>%
+  dplyr::arrange(pathway) %>%
+  readr::write_delim(., "./reactome/my_human_reactome_genesets_gene_and_metabol.tsv") 
+
+```
+
+Compare the genesets
+```{r}
+
+```
+
+Run
+```{r}
+
+```
+
