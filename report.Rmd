@@ -28,7 +28,6 @@ params:
   rendered_by_shiny: FALSE
   include_enrichment: NA
   species: NA
-  enrichment_database: NA
   enrichment: NA
   enrichplots: NA
   enriched: NA
@@ -888,15 +887,6 @@ cat("The selected species that correlated with the data input.", "\n")
 cat(params$species)
 ```
 
-```{r Database Header, results = 'asis', eval = params$include_enrichment}
-cat("### Database", "\n")
-cat("Which gene set/pathway database was used for enrichment analysis.", "\n")
-```
-
-```{r Database, eval = params$include_enrichment}
-cat(params$enrichment_database)
-```
-
 ```{r Enrichment Type Header, results = 'asis', eval = params$include_enrichment}
 cat("### Enrichment Type", "\n")
 cat("Either ranked or unranked enrichment analysis.", "\n")
@@ -951,14 +941,11 @@ if (dir.exists(save_dir)){
 ```
 
 ```{r Dot Plot, fig.height = 10, fig.width = 10, message = FALSE, eval = ("dot" %in% params$enrichplots & params$include_enrichment)}
-
 if (params$enrichment == "ranked"){
   for (i in 1:length(params$enriched)){
     for (j in 1:length(params$enriched[[i]])){
       if (dim(params$enriched[[i]][[j]])[1] != 0){
         dot <- enrichedPlots(enriched = params$enriched[[i]][[j]],
-                             gmt = params$enrichment_database,
-                             geneList = params$geneList[[i]][[j]],
                              contrast = sub(".*_", "", names(params$enriched)[i]),
                              plottype = "dot",
                              dotplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Dot Plot"),
@@ -979,26 +966,30 @@ if (params$enrichment == "ranked"){
     }
   }
 } else {
+  names <- c()
   for (i in 1:length(params$enriched)){
-    if (dim(params$enriched[[i]][[1]])[1] != 0){
-      dot <- enrichedPlots(enriched = params$enriched[[i]][[1]],
-                           gmt = params$enrichment_database,
-                           geneList = params$geneList[[i]][[1]],
-                           contrast = '',
-                           plottype = "dot",
-                           dotplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Dot Plot"),
-                           dotplot_categories = 20)
-      
-      try(plot(dot))
+    if (!(sub("_[^_]+$", "", names(params$enriched)[i]) %in% names)){
+      for (j in 1:length(params$enriched[[i]])){
+        if (dim(params$enriched[[i]][[j]])[1] != 0){
+          dot <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                               contrast = '',
+                               plottype = "dot",
+                               dotplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Dot Plot"),
+                               dotplot_categories = 20)
           
-      if (dir.exists(save_dir)){
-        dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
-        db <- names(params$enriched[[i]])[j]
-        grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/DotPlots/DotPlot_", db, "_", dataset, ".pdf", sep = ""),
-                       width = 8, height = 10)
-        plot(dot)
-        dev.off()
+          try(plot(dot))
+              
+          if (dir.exists(save_dir)){
+            dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+            db <- names(params$enriched[[i]])[j]
+            grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/DotPlots/DotPlot_", db, "_", dataset, ".pdf", sep = ""),
+                           width = 8, height = 10)
+            plot(dot)
+            dev.off()
+          }
+        }
       }
+      names <- c(names, dataset)
     }
   }
 }
@@ -1027,15 +1018,18 @@ suppressWarnings({
     for (i in 1:length(params$enriched)){
       for (j in 1:length(params$enriched[[i]])){
         if (dim(params$enriched[[i]][[j]])[1] != 0){
+          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+          db <- "_GSEA"
+          if (grepl("PHOSPHO", names(params$enriched[[i]])[j])) {db <- "_PKSEA"}
+          contrast <- sub(".*_", "", names(params$enriched)[i])
           cnet <- enrichedPlots(enriched = params$enriched[[i]][[j]],
-                           gmt = params$enrichment_database,
-                           geneList = params$geneList[[i]][[j]],
-                           contrast = sub(".*_", "", names(params$enriched)[i]),
-                           plottype = "cnet",
-                           cnetplot_categories = 5,
-                           cnetplot_layout = "kk",
-                           cnetplot_label = "category",
-                           cnet_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Ranked Analysis Network Plot"))
+                                geneList = params$geneList[[paste0(dataset, db)]][[contrast]],
+                                contrast = sub(".*_", "", names(params$enriched)[i]),
+                                plottype = "cnet",
+                                cnetplot_categories = 5,
+                                cnetplot_layout = "kk",
+                                cnetplot_label = "category",
+                                cnet_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Ranked Analysis Network Plot"))
           
           try(plot(cnet))
           
@@ -1052,28 +1046,37 @@ suppressWarnings({
       }
     }
   } else {
+    names <- c()
     for (i in 1:length(params$enriched)){
-      if (dim(params$enriched[[i]][[j]])[1] != 0){
-        cnet <- enrichedPlots(enriched = params$enriched[[i]][[1]],
-                           gmt = params$enrichment_database,
-                           geneList = params$geneList[[i]][[1]],
-                           contrast = '',
-                           plottype = "cnet",
-                           cnetplot_categories = 5,
-                           cnetplot_layout = "kk",
-                           cnetplot_label = "category",
-                           cnet_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Network Plot"))
-        
-        try(plot(cnet))
-          
-        if (dir.exists(save_dir)){
-          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
-          db <- names(params$enriched[[i]])[j]
-          grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/CNETs/CNET_", db, "_", dataset, ".pdf", sep = ""),
-                         width = 8, height = 8)
-          plot(cnet)
-          dev.off()
+      if (!(sub("_[^_]+$", "", names(params$enriched)[i]) %in% names)){
+        for (j in 1:length(params$enriched[[i]])){
+          if (dim(params$enriched[[i]][[j]])[1] != 0){
+            dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+            db <- "_GSEA"
+            if (grepl("PHOSPHO", names(params$enriched[[i]])[j])) {db <- "_PKSEA"}
+            contrast <- sub(".*_", "", names(params$enriched)[i])
+            cnet <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                                  geneList = params$geneList[[paste0(dataset, db)]][[contrast]],
+                                  contrast = '',
+                                  plottype = "cnet",
+                                  cnetplot_categories = 5,
+                                  cnetplot_layout = "kk",
+                                  cnetplot_label = "category",
+                                  cnet_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Network Plot"))
+            
+            try(plot(cnet))
+              
+            if (dir.exists(save_dir)){
+              dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+              db <- names(params$enriched[[i]])[j]
+              grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/CNETs/CNET_", db, "_", dataset, ".pdf", sep = ""),
+                             width = 8, height = 8)
+              plot(cnet)
+              dev.off()
+            }
+          }
         }
+        names <- c(names, dataset)
       }
     }
   }
@@ -1103,13 +1106,11 @@ suppressWarnings({
       for (j in 1:length(params$enriched[[i]])){
         if (dim(params$enriched[[i]][[j]])[1] != 0){
           emap <- enrichedPlots(enriched = params$enriched[[i]][[j]],
-                             gmt = params$enrichment_database,
-                             geneList = params$geneList[[i]][[j]],
-                             contrast = sub(".*_", "", names(params$enriched)[i]),
-                             plottype = "emap",
-                             emap_categories = 45,
-                             emap_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Enrichment Map"),
-                             emap_category_label = 0.7)
+                                contrast = sub(".*_", "", names(params$enriched)[i]),
+                                plottype = "emap",
+                                emap_categories = 45,
+                                emap_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Enrichment Map"),
+                                emap_category_label = 0.7)
           
           try(plot(emap))
           
@@ -1126,27 +1127,31 @@ suppressWarnings({
       }
     }
   } else {
+    names <- c()
     for (i in 1:length(params$enriched)){
-      if (dim(params$enriched[[i]][[j]])[1] != 0){
-        emap <- enrichedPlots(enriched = params$enriched[[i]][[1]],
-                           gmt = params$enrichment_database,
-                           geneList = params$geneList[[i]][[1]],
-                           contrast = '',
-                           plottype = "emap",
-                           emap_categories = 45,
-                           emap_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Enrichment Map"),
-                           emap_category_label = 0.7)
-        
-        try(plot(emap))
-          
-        if (dir.exists(save_dir)){
-          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
-          db <- names(params$enriched[[i]])[j]
-          grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/EMAPs/EMAP_", db, "_", dataset, ".pdf", sep = ""), 
-                         width = 8, height = 8)
-          plot(emap)
-          dev.off()
+      if (!(sub("_[^_]+$", "", names(params$enriched)[i]) %in% names)){
+        for (j in 1:length(params$enriched[[i]])){
+          if (dim(params$enriched[[i]][[j]])[1] != 0){
+            emap <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                                  contrast = '',
+                                  plottype = "emap",
+                                  emap_categories = 45,
+                                  emap_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Enrichment Map"),
+                                  emap_category_label = 0.7)
+            
+            try(plot(emap))
+              
+            if (dir.exists(save_dir)){
+              dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+              db <- names(params$enriched[[i]])[j]
+              grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/EMAPs/EMAP_", db, "_", dataset, ".pdf", sep = ""), 
+                             width = 8, height = 8)
+              plot(emap)
+              dev.off()
+            }
+          }
         }
+        names <- c(names, dataset)
       }
     }
   }
@@ -1170,18 +1175,15 @@ if (dir.exists(save_dir)){
 ```
 
 ```{r UpSet, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment), fig.height = 10, fig.width = 10, message = FALSE}
-
 if (params$enrichment == "ranked") {
   for (i in 1:length(params$enriched)){
     for (j in 1:length(params$enriched[[i]])){
       if (dim(params$enriched[[i]][[j]])[1] != 0){
         upset <- enrichedPlots(enriched = params$enriched[[i]][[j]],
-                      gmt = params$enrichment_database,
-                      geneList = params$geneList[[i]][[j]],
-                      contrast = sub(".*_", "", names(params$enriched)[i]),
-                      plottype = "upset",
-                      upset_categories = 15,
-                      upsetplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "UpSet Plot"))
+                               contrast = sub(".*_", "", names(params$enriched)[i]),
+                               plottype = "upset",
+                               upset_categories = 15,
+                               upsetplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "UpSet Plot"))
         
         try(plot(upset))
           
@@ -1198,26 +1200,30 @@ if (params$enrichment == "ranked") {
     }
   }
 } else {
+  names <- c()
   for (i in 1:length(params$enriched)){
-    if (dim(params$enriched[[i]][[j]])[1] != 0){
-      upset <- enrichedPlots(enriched = params$enriched[[i]][[1]],
-                    gmt = params$enrichment_database,
-                    geneList = params$geneList[[i]][[1]],
-                    contrast = '',
-                    plottype = "upset",
-                    upset_categories = 15,
-                    upsetplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA UpSet Plot"))
-      
-      try(plot(upset))
+    if (!(sub("_[^_]+$", "", names(params$enriched)[i]) %in% names)){
+      for (j in 1:length(params$enriched[[i]])){
+        if (dim(params$enriched[[i]][[j]])[1] != 0){
+          upset <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                                 contrast = '',
+                                 plottype = "upset",
+                                 upset_categories = 15,
+                                 upsetplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA UpSet Plot"))
           
-      if (dir.exists(save_dir)){
-        dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
-        db <- names(params$enriched[[i]])[j]
-        grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/UpSetPlots/UpSet_", db, "_", dataset, ".pdf", sep = ""), 
-                       width = 8, height = 8)
-        plot(upset)
-        dev.off()
+          try(plot(upset))
+              
+          if (dir.exists(save_dir)){
+            dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+            db <- names(params$enriched[[i]])[j]
+            grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/UpSetPlots/UpSet_", db, "_", dataset, ".pdf", sep = ""), 
+                           width = 8, height = 8)
+            plot(upset)
+            dev.off()
+          }
+        }
       }
+      names <- c(names, dataset)
     }
   }
 }
@@ -1244,15 +1250,13 @@ suppressWarnings({
   if (params$enrichment == "ranked") {
     for (i in 1:length(params$enriched)){
       for (j in 1:length(params$enriched[[i]])){
-        if (dim(params$enriched[[i]][[j]])[1] != 0){
+        if (dim(params$enriched[[i]][[j]])[1] > 5){
           tree <- enrichedPlots(enriched = params$enriched[[i]][[j]],
-                        gmt = params$enrichment_database,
-                        geneList = params$geneList[[i]][[j]],
-                        contrast = sub(".*_", "", names(params$enriched)[i]),
-                        plottype = "tree",
-                        tree_categories = 30,
-                        tree_clusters = 5,
-                        treeplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Tree Diagram"))
+                                contrast = sub(".*_", "", names(params$enriched)[i]),
+                                plottype = "tree",
+                                tree_categories = 30,
+                                tree_clusters = 5,
+                                treeplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "Tree Diagram"))
           
           try(plot(tree))
           
@@ -1269,27 +1273,31 @@ suppressWarnings({
       }
     }
   } else {
+    names <- c()
     for (i in 1:length(params$enriched)){
-      if (dim(params$enriched[[i]][[j]])[1] != 0){
-        tree <- enrichedPlots(enriched = params$enriched[[i]][[1]],
-                        gmt = params$enrichment_database,
-                        geneList = params$geneList[[i]][[1]],
-                        contrast = '',
-                        plottype = "tree",
-                        tree_categories = 30,
-                        tree_clusters = 5,
-                        treeplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Tree Diagram"))
+      if (!(sub("_[^_]+$", "", names(params$enriched)[i]) %in% names)){
+        for (j in 1:length(params$enriched[[i]])){
+          if (dim(params$enriched[[i]][[j]])[1] > 5){
+            tree <- enrichedPlots(enriched = params$enriched[[i]][[j]],
+                                  contrast = '',
+                                  plottype = "tree",
+                                  tree_categories = 30,
+                                  tree_clusters = 5,
+                                  treeplot_title = paste(sub("_[^_]+$", "", names(params$enriched)[i]), names(params$enriched[[i]])[j], "ORA Tree Diagram"))
         
-        try(plot(tree))
+            try(plot(tree))
           
-        if (dir.exists(save_dir)){
-          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
-          db <- names(params$enriched[[i]])[j]
-          grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/TreeDiagrams/TreePlot_", db, "_", dataset, ".pdf", sep = ""),
-                         width = 8, height = 8)
-          plot(tree)
-          dev.off()
+            if (dir.exists(save_dir)){
+              dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+              db <- names(params$enriched[[i]])[j]
+              grDevices::pdf(paste0(save_dir, "/", dataset, "/Enrichment/TreeDiagrams/TreePlot_", db, "_", dataset, ".pdf", sep = ""),
+                             width = 8, height = 8)
+              plot(tree)
+              dev.off()
+            }
+          }
         }
+        names <- c(names, dataset)
       }
     }
   }
@@ -1316,50 +1324,39 @@ for (i in 1:length(params$enriched)){
 
 
 ```{r Cytoscape Inputs, eval = (params$include_enrichment), message = FALSE}
-if (dir.exists(save_dir)){
-  datasets <- unique(sub("_[^_]+$", "", names(enrich_geneList)))
-  for (i in datasets){
-    dir.create(file.path(paste0(save_dir, "/", i, "/Enrichment/CytoScapeInputs/", sep = "")), showWarnings = FALSE)
-  }
-}
-
 if (params$enrichment == "ranked") {
+  if (dir.exists(save_dir)){
+    datasets <- unique(sub("_[^_]+$", "", names(enrich_geneList)))
+    for (i in datasets){
+      dir.create(file.path(paste0(save_dir, "/", i, "/Enrichment/CytoScapeInputs/", sep = "")), showWarnings = FALSE)
+    }
+  }
+  
   for (i in 1:length(params$enriched)){
     for (j in 1:length(params$enriched[[i]])){
-      if (!is.character(params$enriched[[i]][[j]])){
+      if (dim(params$enriched[[i]][[j]])[1] != 0){
         df <- makeCytoscapeInput(enrichmentResult = params$enriched[[i]][[j]])
         
-        print(str(df))
-        
         if (dir.exists(save_dir)){
-          dataset <- sub("_[^_]+$", "", names(params$geneList)[i])
-          algo <- sub(paste0(dataset, "_"), "", names(params$geneList)[i])
+          dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
+          contrast <- sub(".*_", "", names(params$enriched)[i])
           
-          if (algo == "GSEA"){
-            write_delim(df, paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/", params$contrasts[j], "_", params$enrichment_database[1], "_enrichment.gmt.txt"), delim = "\t")
-          } else if (algo == "PKSEA"){
-            write_delim(df, paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/", params$contrasts[j], "_", params$enrichment_database[2], "_enrichment.gmt.txt"), delim = "\t")
-          }
-          
-          write_delim(data.frame(names(params$geneList[[i]][[j]]), params$geneList[[i]][[j]]), paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/ranked_", params$contrasts[j], ".rnk"), delim = "\t")
+          write_delim(df, paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/", contrast, "_", names(params$enriched[[i]])[j], "_enrichment.gmt.txt"), delim = "\t")
         }
       }
     }
   }
-} else {
-  for (i in 1:length(params$enriched)){
-    if (!is.character(params$enriched[[i]][[1]])){
-      df <- makeCytoscapeInput(enrichmentResult = params$enriched[[i]][[1]])
-        
-      if (dir.exists(save_dir)){
-        dataset <- sub("_[^_]+$", "", names(params$geneList)[i])
-        write_delim(df, paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/", "ORA_", params$enrichment_database, "_enrichment.gmt.txt"), delim = "\t")
-        write_delim(data.frame(params$geneList), paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/UNranked_", params$contrasts[j], ".rnk"), delim = "\t")
-      }
+  
+  for (i in 1:length(params$geneList)){
+    for (j in 1:length(params$geneList[[i]])){
+      dataset <- sub("_[^_]+$", "", names(params$geneList)[i])
+      contrast <- names(params$geneList[[i]])[j]
+      
+      write_delim(data.frame(names(params$geneList[[i]][[j]]), params$geneList[[i]][[j]]), paste0(save_dir, "/", dataset, "/Enrichment/CytoScapeInputs/ranked_", contrast, ".rnk"), delim = "\t")
     }
   }
+  
 }
-
 ```
 
 ```{r S-Score Header, results = 'asis', eval = params$include_sscore}
@@ -1456,7 +1453,6 @@ cat("The dot plot depicts the enrichment scores (p-values) via color-coded point
 ```{r S-Score Dot Plot, fig.height = 10, fig.width = 10, message = FALSE, eval = ("dot" %in% params$enrichplots & params$include_enrichment & params$include_sscore)}
 for (i in 1:length(params$sscore_enriched)){
   dot <- enrichedPlots(enriched = params$sscore_enriched[[i]],
-                       gmt = params$enrichment_database,
                        geneList = params$sscore_geneList[[i]],
                        contrast = params$contrasts[i],
                        plottype = "dot",
@@ -1489,14 +1485,13 @@ cat("The circular network plot is constructed based on hierarchical clustering o
 suppressWarnings({
   for (i in 1:length(params$sscore_enriched)){
     cnet <- enrichedPlots(enriched = params$sscore_enriched[[i]],
-                     gmt = params$enrichment_database,
-                     geneList = params$sscore_geneList[[i]],
-                     contrast = params$contrasts[i],
-                     plottype = "cnet",
-                     cnetplot_categories = 5,
-                     cnetplot_layout = "kk",
-                     cnetplot_label = "category",
-                     cnet_title = paste(names(params$sscore_geneList)[i], "Ranked Analysis Network Plot"))
+                          geneList = params$sscore_geneList[[i]],
+                          contrast = params$contrasts[i],
+                          plottype = "cnet",
+                          cnetplot_categories = 5,
+                          cnetplot_layout = "kk",
+                          cnetplot_label = "category",
+                          cnet_title = paste(names(params$sscore_geneList)[i], "Ranked Analysis Network Plot"))
     
     try(plot(cnet))
   }
@@ -1524,13 +1519,12 @@ cat("According to the Yu lab, \"the enrichment map organizes enriched terms into
 suppressWarnings({
   for (i in 1:length(params$sscore_enriched)){
     emap <- enrichedPlots(enriched = params$sscore_enriched[[i]],
-                         gmt = params$enrichment_database,
-                         geneList = params$sscore_geneList[[i]],
-                         contrast = params$contrasts[i],
-                         plottype = "emap",
-                         emap_categories = 45,
-                         emap_title = paste(names(params$sscore_geneList)[i], "Enrichment Map"),
-                         emap_category_label = 0.7)
+                          geneList = params$sscore_geneList[[i]],
+                          contrast = params$contrasts[i],
+                          plottype = "emap",
+                          emap_categories = 45,
+                          emap_title = paste(names(params$sscore_geneList)[i], "Enrichment Map"),
+                          emap_category_label = 0.7)
     
     try(plot(emap))
   }
@@ -1557,12 +1551,11 @@ cat("An UpSet plot is a visual representation that displays the intersections an
 ```{r S-Score UpSet, results = 'asis', eval = ("upset" %in% params$enrichplots & params$include_enrichment & params$include_sscore), fig.height = 10, fig.width = 10, message = FALSE}
 for (i in 1:length(params$sscore_enriched)){
   upset <- enrichedPlots(enriched = params$sscore_enriched[[i]],
-                          gmt = params$enrichment_database,
-                          geneList = params$sscore_geneList[[i]],
-                          contrast = params$contrasts[i],
-                          plottype = "upset",
-                          upset_categories = 15,
-                          upsetplot_title = paste(names(params$sscore_geneList)[i], "UpSet Plot"))
+                         geneList = params$sscore_geneList[[i]],
+                         contrast = params$contrasts[i],
+                         plottype = "upset",
+                         upset_categories = 15,
+                         upsetplot_title = paste(names(params$sscore_geneList)[i], "UpSet Plot"))
   
   try(plot(upset))
 }
@@ -1589,7 +1582,6 @@ cat("The tree plot is a funnctional grouping tree diagram for enrichment result 
 suppressWarnings({
   for (i in 1:length(params$sscore_enriched)){
     tree <- enrichedPlots(enriched = params$sscore_enriched[[i]],
-                          gmt = params$enrichment_database,
                           geneList = params$sscore_geneList[[i]],
                           contrast = params$contrasts[i],
                           plottype = "tree",
@@ -1738,8 +1730,7 @@ cat("File Name(s): ", paste0(params$type, collapse = "; "), "\n",
     "\t Contrasts: ", params$contrasts, "\n",
     "\t Linear Model: ", params$model_equation, "\n",
     "Enrichment Performed on Linear Model: ", params$include_enrichment, "\n",
-    "\t Enrichment Algorithm: ", params$enrichment, "\n",
-    "\t Enrichment Database: ", params$enrichment_database, "\n")
+    "\t Enrichment Algorithm: ", params$enrichment, "\n")
 ```
 
 # Session Info

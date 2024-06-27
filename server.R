@@ -2028,7 +2028,6 @@ server <- function(input, output, session) {
                                 "MSigdb" = "HUMAN_MSigDB",
                                 "MOMENTA BioCyc" = "HUMAN_MOMENTABiocycEXP",
                                 "MOMENTA MFN" = "HUMAN_MOMENTAMFNEXP",
-                                "All Available Gene Set Databases" = "HUMAN_AllPathways",
                                 "PTM-SEA All" = "HUMAN_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "HUMAN_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "HUMAN_PHOSPHO_KINASE",
@@ -2046,7 +2045,6 @@ server <- function(input, output, session) {
                                 "GO Molecular Functions" = "MOUSE_GOMF",
                                 "WikiPathways" = "MOUSE_WikiPathways",
                                 "MOMENTA BioCyc" = "MOUSE_MOMENTABiocycEXP",
-                                "All Available Gene Set Databases" = "MOUSE_AllPathways",
                                 "PTM-SEA All" = "MOUSE_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "MOUSE_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "MOUSE_PHOSPHO_KINASE",
@@ -2063,7 +2061,6 @@ server <- function(input, output, session) {
                                 "GO Cellular Components" = "RAT_GOCC",
                                 "GO Molecular Functions" = "RAT_GOMF",
                                 "WikiPathways" = "RAT_WikiPathways",
-                                "All Available Gene Set Databases" = "RAT_AllPathways",
                                 "PTM-SEA All" = "RAT_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "RAT_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "RAT_PHOSPHO_KINASE",
@@ -2078,8 +2075,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "CELEGANS_WikiPathways",
                                 "GO Biological Processes" = "CELEGANS_GOBP",
                                 "GO Cellular Components" = "CELEGANS_GOCC",
-                                "GO Molecular Functions" = "CELEGANS_GOMF",
-                                "All Available Databases" = "CELEGANS_AllPathways"),
+                                "GO Molecular Functions" = "CELEGANS_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "fruitfly"){
@@ -2090,8 +2086,7 @@ server <- function(input, output, session) {
                                 "GO Biological Processes" = "FRUITFLY_GOBP",
                                 "GO Cellular Components" = "FRUITFLY_GOCC",
                                 "GO Molecular Functions" = "FRUITFLY_GOMF",
-                                "MOMENTA BioCyc" = "FRUITFLY_MOMENTABiocycEXP",
-                                "All Available Databases" = "FRUITFLY_AllPathways"),
+                                "MOMENTA BioCyc" = "FRUITFLY_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       } else if (input$species == "zebrafish"){
@@ -2101,8 +2096,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "ZEBRAFISH_WikiPathways",
                                 "GO Biological Processes" = "ZEBRAFISH_GOBP",
                                 "GO Cellular Components" = "ZEBRAFISH_GOCC",
-                                "GO Molecular Functions" = "ZEBRAFISH_GOMF",
-                                "All Available Databases" = "ZEBRAFISH_AllPathways"),
+                                "GO Molecular Functions" = "ZEBRAFISH_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "yeast"){
@@ -2113,8 +2107,7 @@ server <- function(input, output, session) {
                                 "GO Biological Processes" = "YEAST_GOBP",
                                 "GO Cellular Components" = "YEAST_GOCC",
                                 "GO Molecular Functions" = "YEAST_GOMF",
-                                "MOMENTA BioCyc" = "YEAST_MOMENTABiocycEXP",
-                                "All Available Databases" = "YEAST_AllPathways"),
+                                "MOMENTA BioCyc" = "YEAST_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       }
@@ -2132,8 +2125,7 @@ server <- function(input, output, session) {
                                 "Hallmark MSigdb" = "HUMAN_Hallmark",
                                 "MSigdb" = "HUMAN_MSigDB",
                                 "MOMENTA BioCyc" = "HUMAN_MOMENTABiocycEXP",
-                                "MOMENTA MFN" = "HUMAN_MOMENTAMFNEXP",
-                                "All Available Databases" = "HUMAN_AllPathways"),
+                                "MOMENTA MFN" = "HUMAN_MOMENTAMFNEXP"),
                     multiple = FALSE)
         
       } else if (input$species == "mouse"){
@@ -2145,8 +2137,7 @@ server <- function(input, output, session) {
                                 "GO Cellular Components" = "MOUSE_GOCC",
                                 "GO Molecular Functions" = "MOUSE_GOMF",
                                 "WikiPathways" = "MOUSE_WikiPathways",
-                                "MOMENTA BioCyc" = "MOUSE_MOMENTABiocycEXP",
-                                "All Available Databases" = "MOUSE_AllPathways"),
+                                "MOMENTA BioCyc" = "MOUSE_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       } else if (input$species == "rat"){
@@ -2157,8 +2148,7 @@ server <- function(input, output, session) {
                                 "GO Biological Processes" = "RAT_GOBP",
                                 "GO Cellular Components" = "RAT_GOCC",
                                 "GO Molecular Functions" = "RAT_GOMF",
-                                "WikiPathways" = "RAT_WikiPathways",
-                                "All Available Databases" = "RAT_AllPathways"),
+                                "WikiPathways" = "RAT_WikiPathways"),
                     multiple = FALSE)
         
       } else if (input$species == "celegans"){
@@ -2168,8 +2158,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "CELEGANS_WikiPathways",
                                 "GO Biological Processes" = "CELEGANS_GOBP",
                                 "GO Cellular Components" = "CELEGANS_GOCC",
-                                "GO Molecular Functions" = "CELEGANS_GOMF",
-                                "All Available Databases" = "CELEGANS_AllPathways"),
+                                "GO Molecular Functions" = "CELEGANS_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "fruitfly"){
@@ -2180,8 +2169,7 @@ server <- function(input, output, session) {
                                 "GO Biological Processes" = "FRUITFLY_GOBP",
                                 "GO Cellular Components" = "FRUITFLY_GOCC",
                                 "GO Molecular Functions" = "FRUITFLY_GOMF",
-                                "MOMENTA BioCyc" = "FRUITFLY_MOMENTABiocycEXP",
-                                "All Available Databases" = "FRUITFLY_AllPathways"),
+                                "MOMENTA BioCyc" = "FRUITFLY_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       } else if (input$species == "zebrafish"){
@@ -2191,8 +2179,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "ZEBRAFISH_WikiPathways",
                                 "GO Biological Processes" = "ZEBRAFISH_GOBP",
                                 "GO Cellular Components" = "ZEBRAFISH_GOCC",
-                                "GO Molecular Functions" = "ZEBRAFISH_GOMF",
-                                "All Available Databases" = "ZEBRAFISH_AllPathways"),
+                                "GO Molecular Functions" = "ZEBRAFISH_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "yeast"){
@@ -2203,8 +2190,7 @@ server <- function(input, output, session) {
                                 "GO Biological Processes" = "YEAST_GOBP",
                                 "GO Cellular Components" = "YEAST_GOCC",
                                 "GO Molecular Functions" = "YEAST_GOMF",
-                                "MOMENTA BioCyc" = "YEAST_MOMENTABiocycEXP",
-                                "All Available Databases" = "YEAST_AllPathways"),
+                                "MOMENTA BioCyc" = "YEAST_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       }
@@ -2901,7 +2887,6 @@ server <- function(input, output, session) {
                                 "GO All" = "HUMAN_GOALL",
                                 "Hallmark MSigdb" = "HUMAN_Hallmark",
                                 "MSigdb" = "HUMAN_MSigDB",
-                                "All Available Databases" = "HUMAN_AllPathways",
                                 "PTM-SEA All" = "HUMAN_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "HUMAN_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "HUMAN_PHOSPHO_KINASE",
@@ -2918,7 +2903,6 @@ server <- function(input, output, session) {
                                 "GO Cellular Components" = "MOUSE_GOCC",
                                 "GO Molecular Functions" = "MOUSE_GOMF",
                                 "WikiPathways" = "MOUSE_WikiPathways",
-                                "All Available Databases" = "MOUSE_AllPathways",
                                 "PTM-SEA All" = "MOUSE_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "MOUSE_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "MOUSE_PHOSPHO_KINASE",
@@ -2935,7 +2919,6 @@ server <- function(input, output, session) {
                                 "GO Cellular Components" = "RAT_GOCC",
                                 "GO Molecular Functions" = "RAT_GOMF",
                                 "WikiPathways" = "RAT_WikiPathways",
-                                "All Available Databases" = "RAT_AllPathways",
                                 "PTM-SEA All" = "RAT_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "RAT_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "RAT_PHOSPHO_KINASE",
@@ -2950,8 +2933,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "CELEGANS_WikiPathways",
                                 "GO Biological Processes" = "CELEGANS_GOBP",
                                 "GO Cellular Components" = "CELEGANS_GOCC",
-                                "GO Molecular Functions" = "CELEGANS_GOMF",
-                                "All Available Databases" = "CELEGANS_AllPathways"),
+                                "GO Molecular Functions" = "CELEGANS_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "fruitfly"){
@@ -2961,8 +2943,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "FRUITFLY_WikiPathways",
                                 "GO Biological Processes" = "FRUITFLY_GOBP",
                                 "GO Cellular Components" = "FRUITFLY_GOCC",
-                                "GO Molecular Functions" = "FRUITFLY_GOMF",
-                                "All Available Databases" = "FRUITFLY_AllPathways"),
+                                "GO Molecular Functions" = "FRUITFLY_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "zebrafish"){
@@ -2972,8 +2953,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "ZEBRAFISH_WikiPathways",
                                 "GO Biological Processes" = "ZEBRAFISH_GOBP",
                                 "GO Cellular Components" = "ZEBRAFISH_GOCC",
-                                "GO Molecular Functions" = "ZEBRAFISH_GOMF",
-                                "All Available Databases" = "ZEBRAFISH_AllPathways"),
+                                "GO Molecular Functions" = "ZEBRAFISH_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "yeast"){
@@ -2983,8 +2963,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "YEAST_WikiPathways",
                                 "GO Biological Processes" = "YEAST_GOBP",
                                 "GO Cellular Components" = "YEAST_GOCC",
-                                "GO Molecular Functions" = "YEAST_GOMF",
-                                "All Available Databases" = "YEAST_AllPathways"),
+                                "GO Molecular Functions" = "YEAST_GOMF"),
                     multiple = FALSE)
         
       }
@@ -3461,7 +3440,6 @@ server <- function(input, output, session) {
                                 "GO All" = "HUMAN_GOALL",
                                 "Hallmark MSigdb" = "HUMAN_Hallmark",
                                 "MSigdb" = "HUMAN_MSigDB",
-                                "All Available Databases" = "HUMAN_AllPathways",
                                 "PTM-SEA All" = "HUMAN_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "HUMAN_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "HUMAN_PHOSPHO_KINASE",
@@ -3478,7 +3456,6 @@ server <- function(input, output, session) {
                                 "GO Cellular Components" = "MOUSE_GOCC",
                                 "GO Molecular Functions" = "MOUSE_GOMF",
                                 "WikiPathways" = "MOUSE_WikiPathways",
-                                "All Available Databases" = "MOUSE_AllPathways",
                                 "PTM-SEA All" = "MOUSE_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "MOUSE_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "MOUSE_PHOSPHO_KINASE",
@@ -3495,7 +3472,6 @@ server <- function(input, output, session) {
                                 "GO Cellular Components" = "RAT_GOCC",
                                 "GO Molecular Functions" = "RAT_GOMF",
                                 "WikiPathways" = "RAT_WikiPathways",
-                                "All Available Databases" = "RAT_AllPathways",
                                 "PTM-SEA All" = "RAT_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "RAT_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "RAT_PHOSPHO_KINASE",
@@ -3510,8 +3486,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "CELEGANS_WikiPathways",
                                 "GO Biological Processes" = "CELEGANS_GOBP",
                                 "GO Cellular Components" = "CELEGANS_GOCC",
-                                "GO Molecular Functions" = "CELEGANS_GOMF",
-                                "All Available Databases" = "CELEGANS_AllPathways"),
+                                "GO Molecular Functions" = "CELEGANS_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "fruitfly"){
@@ -3521,8 +3496,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "FRUITFLY_WikiPathways",
                                 "GO Biological Processes" = "FRUITFLY_GOBP",
                                 "GO Cellular Components" = "FRUITFLY_GOCC",
-                                "GO Molecular Functions" = "FRUITFLY_GOMF",
-                                "All Available Databases" = "FRUITFLY_AllPathways"),
+                                "GO Molecular Functions" = "FRUITFLY_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "zebrafish"){
@@ -3532,8 +3506,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "ZEBRAFISH_WikiPathways",
                                 "GO Biological Processes" = "ZEBRAFISH_GOBP",
                                 "GO Cellular Components" = "ZEBRAFISH_GOCC",
-                                "GO Molecular Functions" = "ZEBRAFISH_GOMF",
-                                "All Available Databases" = "ZEBRAFISH_AllPathways"),
+                                "GO Molecular Functions" = "ZEBRAFISH_GOMF"),
                     multiple = FALSE)
         
       } else if (input$species == "yeast"){
@@ -3543,8 +3516,7 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "YEAST_WikiPathways",
                                 "GO Biological Processes" = "YEAST_GOBP",
                                 "GO Cellular Components" = "YEAST_GOCC",
-                                "GO Molecular Functions" = "YEAST_GOMF",
-                                "All Available Databases" = "YEAST_AllPathways"),
+                                "GO Molecular Functions" = "YEAST_GOMF"),
                     multiple = FALSE)
         
       }
@@ -3688,7 +3660,6 @@ server <- function(input, output, session) {
                      rendered_by_shiny = TRUE,
                      include_enrichment = input$report_include_enrichment,
                      species = input$species,
-                     enrichment_database = c(input$report_GSEA_gmt, input$report_PKSEA_gmt),
                      enrichment = input$report_enrichment_calculation,
                      enrichplots = input$report_enrichplots,
                      enriched = report_enricheds(),
@@ -3957,132 +3928,6 @@ server <- function(input, output, session) {
   output$report_database_header <- renderUI({
     req(input$report_include_enrichment)
     h6("Database(s)")
-  })
-  
-  output$report_PKSEA_gmts <- renderUI({
-    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$report_include_enrichment))
-
-    if ("PhosphoSites" %in% data_format()){
-      if (input$species == "human"){
-        selectInput("report_PKSEA_gmt",
-                    label = "Choose database to use for phosphosite/kinase enrichment",
-                    choices = c("PTM-SEA All" = "HUMAN_PHOSPHO_UNIPROT",
-                                "PTM-SEA Diseases" = "HUMAN_PHOSPHO_DISEASE",
-                                "PTM-SEA Kinases" = "HUMAN_PHOSPHO_KINASE",
-                                "PTM-SEA Pathways" = "HUMAN_PHOSPHO_PATHWAY",
-                                "PTM-SEA Perturbation Sites" = "HUMAN_PHOSPHO_PERT"),
-                    multiple = FALSE)
-      } else if (input$species == "mouse"){
-        selectInput("report_PKSEA_gmt",
-                    label = "Choose database to use for phosphosite/kinase enrichment",
-                    choices = c("PTM-SEA All" = "MOUSE_PHOSPHO_UNIPROT",
-                                "PTM-SEA Diseases" = "MOUSE_PHOSPHO_DISEASE",
-                                "PTM-SEA Kinases" = "MOUSE_PHOSPHO_KINASE",
-                                "PTM-SEA Pathways" = "MOUSE_PHOSPHO_PATHWAY",
-                                "PTM-SEA Perturbation Sites" = "MOUSE_PHOSPHO_PERT"),
-                    multiple = FALSE)
-      } else if (input$species == "rat"){
-        selectInput("report_PKSEA_gmt",
-                    label = "Choose database to use for phosphosite/kinase enrichment",
-                    choices = c("PTM-SEA All" = "RAT_PHOSPHO_UNIPROT",
-                                "PTM-SEA Diseases" = "RAT_PHOSPHO_DISEASE",
-                                "PTM-SEA Kinases" = "RAT_PHOSPHO_KINASE",
-                                "PTM-SEA Pathways" = "RAT_PHOSPHO_PATHWAY",
-                                "PTM-SEA Perturbation Sites" = "RAT_PHOSPHO_PERT"),
-                    multiple = FALSE)
-      }
-    }
-  })
-  
-  output$report_GSEA_gmts <- renderUI({
-    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$report_include_enrichment))
-    
-    if ("PhosphoSites" %in% data_format() | "ProteinGroups" %in% data_format()){
-      if (input$species == "human"){
-        selectInput("report_GSEA_gmt",
-                    label = "Choose database to use for gene set enrichment",
-                    choices = c("KEGG" = "HUMAN_KEGG",
-                                "Reactome" = "HUMAN_MOUSE_Reactome",
-                                "WikiPathways" = "HUMAN_WikiPathways",
-                                "GO Biological Processes" = "HUMAN_GOBP",
-                                "GO Cellular Components" = "HUMAN_GOCC",
-                                "GO Molecular Functions" = "HUMAN_GOMF",
-                                "GO All" = "HUMAN_GOALL",
-                                "Hallmark MSigdb" = "HUMAN_Hallmark",
-                                "MSigdb" = "HUMAN_MSigDB",
-                                "All Available Databases" = "HUMAN_AllPathways"),
-                    multiple = FALSE)
-      
-      } else if (input$species == "mouse"){
-        selectInput("report_GSEA_gmt",
-                    label = "Choose database to use for gene set enrichment",
-                    choices = c("Reactome" = "HUMAN_MOUSE_Reactome",
-                                "GO All" = "MOUSE_GOALL",
-                                "GO Biological Processes" = "MOUSE_GOBP",
-                                "GO Cellular Components" = "MOUSE_GOCC",
-                                "GO Molecular Functions" = "MOUSE_GOMF",
-                                "WikiPathways" = "MOUSE_WikiPathways",
-                                "All Available Databases" = "MOUSE_AllPathways"),
-                    multiple = FALSE)
-        
-      } else if (input$species == "rat"){
-        selectInput("report_GSEA_gmt",
-                    label = "Choose database to use for gene set enrichment",
-                    choices = c("Reactome" = "RAT_Reactome",
-                                "GO All" = "RAT_GOALL",
-                                "GO Biological Processes" = "RAT_GOBP",
-                                "GO Cellular Components" = "RAT_GOCC",
-                                "GO Molecular Functions" = "RAT_GOMF",
-                                "WikiPathways" = "RAT_WikiPathways",
-                                "All Available Databases" = "RAT_AllPathways"),
-                    multiple = FALSE)
-        
-      } else if (input$species == "celegans"){
-        selectInput("report_GSEA_gmt",
-                    label = "Choose database to use for gene set enrichment",
-                    choices = c("KEGG" = "CELEGANS_KEGG",
-                                "WikiPathways" = "CELEGANS_WikiPathways",
-                                "GO Biological Processes" = "CELEGANS_GOBP",
-                                "GO Cellular Components" = "CELEGANS_GOCC",
-                                "GO Molecular Functions" = "CELEGANS_GOMF",
-                                "All Available Databases" = "CELEGANS_AllPathways"),
-                    multiple = FALSE)
-        
-      } else if (input$species == "fruitfly"){
-        selectInput("report_GSEA_gmt",
-                    label = "Choose database to use for gene set enrichment",
-                    choices = c("KEGG" = "FRUITFLY_KEGG",
-                                "WikiPathways" = "FRUITFLY_WikiPathways",
-                                "GO Biological Processes" = "FRUITFLY_GOBP",
-                                "GO Cellular Components" = "FRUITFLY_GOCC",
-                                "GO Molecular Functions" = "FRUITFLY_GOMF",
-                                "All Available Databases" = "FRUITFLY_AllPathways"),
-                    multiple = FALSE)
-        
-      } else if (input$species == "zebrafish"){
-        selectInput("report_GSEA_gmt",
-                    label = "Choose database to use for gene set enrichment",
-                    choices = c("KEGG" = "ZEBRAFISH_KEGG",
-                                "WikiPathways" = "ZEBRAFISH_WikiPathways",
-                                "GO Biological Processes" = "ZEBRAFISH_GOBP",
-                                "GO Cellular Components" = "ZEBRAFISH_GOCC",
-                                "GO Molecular Functions" = "ZEBRAFISH_GOMF",
-                                "All Available Databases" = "ZEBRAFISH_AllPathways"),
-                    multiple = FALSE)
-        
-      } else if (input$species == "yeast"){
-        selectInput("report_GSEA_gmt",
-                    label = "Choose database to use for gene set enrichment",
-                    choices = c("KEGG" = "YEAST_KEGG",
-                                "WikiPathways" = "YEAST_WikiPathways",
-                                "GO Biological Processes" = "YEAST_GOBP",
-                                "GO Cellular Components" = "YEAST_GOCC",
-                                "GO Molecular Functions" = "YEAST_GOMF",
-                                "All Available Databases" = "YEAST_AllPathways"),
-                    multiple = FALSE)
-        
-      }
-    }
   })
   
   output$report_enrichment_calculation <- renderUI({

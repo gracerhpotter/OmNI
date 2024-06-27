@@ -71,7 +71,7 @@ ui <- fluidPage(
   ),
   
   
-  navbarPage("Omics Notebook",
+  navbarPage("Interactive Omics Notebook",
     theme = bslib::bs_theme(bootswatch = "lux"),
 
     ## ABOUT ###################################################################

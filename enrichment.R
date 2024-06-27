@@ -261,7 +261,7 @@ getKEGGID <- function(gmt,
 
 enrichedPlots <- function(enriched,
                           enrichment = "",
-                          gmt,
+                          gmt = "",
                           geneList,
                           contrast = "",
                           plottype = "dot",
