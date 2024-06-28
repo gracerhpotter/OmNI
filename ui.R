@@ -71,7 +71,7 @@ ui <- fluidPage(
   ),
   
   
-  navbarPage("Interactive Omics Notebook",
+  navbarPage("OmNI",
     theme = bslib::bs_theme(bootswatch = "lux"),
 
     ## ABOUT ###################################################################
@@ -3318,7 +3318,7 @@ ui <- fluidPage(
                br(),
                br(),
                
-               column(6,
+               column(8,
                       p("The following allows for the generation of an RMarkdown report based on customized inputs."),
                       
                       br(),
@@ -3339,27 +3339,19 @@ ui <- fluidPage(
                       p("Please allow a few minutes for download. Load time will increase when more contrasts are selected.")
                       
                ),
-               column(3,
+               column(4,
                       bslib::card(bslib::card_title("Download Rmarkdown HTML Report"),
                                   bslib::card_body("Once the model design has been completed and all desired output options have been adjusted, click the
-                                          Download Report button to generate the HTML report. A loading bar will appear showing progression of
-                                          the download."),
+                                                   Download Report button to generate the HTML report. A loading bar will appear showing progression of
+                                                   the download.",
+                                                   textInput("report_name",
+                                                             label = "Add a project name to customize outputs",
+                                                             width = "100%",
+                                                             placeholder = "Proteomics Project A1")),
                                   bslib::card_footer(downloadButton("report",
                                                                     label = "Download Report",
                                                                     style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
                                                                    #D8EAFF; border-radius: 10px; border-width: 2px")))
-               ),
-               column(3,
-                      bslib::card(bslib::card_title("Download Excel Data Summary"),
-                                  bslib::card_body("An Excel data summary can be generated separately from the HTML report which contains a summary of information and calculations
-                                                 for each feature, such as: intensity values for each group, uniprot links, log fold change values for each contrast, and 
-                                                 heatmap values."),
-                                  bslib::card_footer(downloadButton("excel_summary_download_button",
-                                                                    label = "Download Excel Summary",
-                                                                    style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
-                                                                          #D8EAFF; border-radius: 10px; border-width: 2px"))),
-                      
-                      
                ),
                
                hr(),

@@ -3589,33 +3589,6 @@ server <- function(input, output, session) {
   ### DOWNLOADS ----------------------------------------------------------------
   
   ## REPORT GENERATION #########################################################
-  
-  ### EXCEL REPORT -------------------------------------------------------------
-  output$excel_summary_download_button <- downloadHandler(
-    filename = function() {
-      paste(paste(type(), collapse = "_"), "_Summary_", Sys.Date(), ".xlsx", sep = "")
-    },
-    content = function(file){
-      withProgress(message = 'Rendering the Excel report:', detail = "Please allow a few moments...", value = 0,
-      {wbOut <- openxlsx::createWorkbook()
-      
-      for (i in 1:length(type())){
-        incProgress(1/length(type()))
-        if(type()[i] != "met_combined"){
-          eSet = eset()[[i]][,order(pData(eset()[[i]])$Group)]
-          writeDataToSheets(wb = wbOut, 
-                            eset = eSet,
-                            limmaFit = report_linear_model()[[i]],
-                            type = type()[i], 
-                            data_format = data_format()[i]);
-        }
-      }
-      
-      openxlsx::saveWorkbook(wbOut, file = file, overwrite = TRUE)
-      })
-    }
-  )
-  
   output$checkrender <- renderText({
     if (identical(rmarkdown::metadata$runtime, "shiny")) {
       TRUE
@@ -3630,7 +3603,7 @@ server <- function(input, output, session) {
   })
   
   output$report <- downloadHandler(
-    filename = function() {paste("OmicsNotebookReport_", format(Sys.time(), "%d-%b-%Y_%H.%M"), ".html", sep = "")},
+    filename = function() {paste0(report_file_name(), ".html")},
     content = function(file) {
       withProgress(message = 'Rendering the HTML report:', detail = "Preparing Data...",
                    
@@ -3644,7 +3617,9 @@ server <- function(input, output, session) {
       message("STARTING HTML REPORT GENERATION")
       
       # Set up parameters to pass to Rmd document
-      params <- list(eset = eset(),
+      params <- list(file_name = report_file_name(),
+                     project_name = input$report_name,
+                     eset = eset(),
                      eset_prenorm = eset_prenorm(),
                      annot = annotation(),
                      type = type(),
@@ -3694,6 +3669,17 @@ server <- function(input, output, session) {
       )
     }
   )
+  
+  ### REPORT NAME --------------------------------------------------------------
+  report_file_name <- reactive({
+    name <- paste0("OmNI_Report_", format(Sys.time(), "%y%m%d%H%M"))
+    
+    if (input$report_name != ""){
+      name <- paste0(make.names(input$report_name), "_OmNI_Report_", format(Sys.time(), "%y%m%d%H%M"))
+    } 
+    
+    return(name)
+  })
   
   #### REPORT MD PLOT -----------------------------------------------------------
   report_md_contrasts <- reactive({

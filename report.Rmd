@@ -1,6 +1,6 @@
 ---
-title: "Multi-Omic Report"
-subtitle: "Knight Cancer Research Institute"
+title: "OmNI Report"
+subtitle: 
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
   html_document:
@@ -12,6 +12,8 @@ output:
     theme: united
     keep_md: TRUE
 params:
+  file_name: NA
+  project_name: NA
   eset: NA
   annot: NA
   type: NA
@@ -73,18 +75,19 @@ knitr::opts_chunk$set(warning = FALSE, error = TRUE, echo = FALSE)
 ## Image Folder
 
 ```{r Create Directory for Downloads}
-save_dir <- paste0("~/Downloads/OmicsNotebookReport_", format(Sys.time(), "%d-%b-%Y_%H.%M"), sep = "")
-print(save_dir)
-tryCatch({
-  dir.create(file.path(save_dir), showWarnings = FALSE)
-  for (i in 1:length(params$type)){
-    dir.create(file.path(paste0(save_dir, "/", params$type[i], sep = "")), showWarnings = FALSE)
-  }
-  
-}, error = function(cond) {
-  message("COULD NOT CREATE FOLDERS FOR VISUALIZATIONS")
-})
+# mac downloads directory
+if (.Platform$OS.type == "unix"){
+  save_dir <- paste0("~/Downloads/", params$file_name)
+} else if (.Platform$OS.type == "windows"){
+  save_dir <- paste0("C:/Users/", Sys.getenv("USERNAME"), "/Downloads/", params$file_name)
+}
+dir.create(file.path(save_dir), showWarnings = FALSE)
 
+print(file.path(save_dir))
+
+for (i in 1:length(params$type)){
+  dir.create(file.path(paste0(save_dir, "/", params$type[i], sep = "")), showWarnings = FALSE)
+}
 ```
 
 ```{r Download Data Summaries}
@@ -110,7 +113,8 @@ for (i in 1:length(params$type)){
   }
 }
 
-openxlsx::saveWorkbook(wbOut, file = paste0(save_dir, "/DataSummary_", Sys.Date(), ".xlsx"))
+proj_name <- ifelse((params$project_name != ""), paste0(params$project_name, "_"), params$project_name)
+openxlsx::saveWorkbook(wbOut, file = paste0(save_dir, "/", proj_name, "OmNI_DataSummary.xlsx"))
 ```
 
 
@@ -1304,24 +1308,22 @@ suppressWarnings({
 })
 ```
 
-```{r Excel Enrichment Summaries, eval = (params$include_enrichment)}
+```{r Excel Enrichment Summaries openxlsx, eval = (params$include_enrichment)}
 for (i in 1:length(params$enriched)){
+  wb <- openxlsx::createWorkbook()
   dataset <- sub("_[^_]+$", "", names(params$enriched)[i])
   file <- paste0(save_dir, "/", dataset, "/Enrichment/EnrichedPathwaySummary_", names(params$enriched)[i], ".xlsx")
+  
   for (j in 1:length(params$enriched[[i]])){
+    sheet <- paste0(names(params$enriched[[i]])[j])
     if (dim(params$enriched[[i]][[j]])[1] != 0){
-      if (!file.exists(file)){
-        xlsx::write.xlsx(params$enriched[[i]][[j]]@result, file, append = FALSE,
-                       sheetName = paste0(names(params$enriched[[i]])[j]), row.names = FALSE)
-      } else {
-        xlsx::write.xlsx(params$enriched[[i]][[j]]@result, file, append = TRUE,
-                       sheetName = paste0(names(params$enriched[[i]])[j]), row.names = FALSE)
-      }
+      openxlsx::addWorksheet(wb = wb, sheetName = sheet)
+      openxlsx::writeDataTable(wb = wb, sheet = sheet, x = params$enriched[[i]][[j]]@result, keepNA = FALSE, tableStyle = "none")
     } 
   }
+  openxlsx::saveWorkbook(wb, file = file, overwrite = TRUE)
 }
 ```
-
 
 ```{r Cytoscape Inputs, eval = (params$include_enrichment), message = FALSE}
 if (params$enrichment == "ranked") {
