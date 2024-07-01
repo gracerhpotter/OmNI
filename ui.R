@@ -3347,7 +3347,7 @@ ui <- fluidPage(
                                                    textInput("report_name",
                                                              label = "Add a project name to customize outputs",
                                                              width = "100%",
-                                                             placeholder = "Proteomics Project A1")),
+                                                             placeholder = "Proteomics_Project_A1")),
                                   bslib::card_footer(downloadButton("report",
                                                                     label = "Download Report",
                                                                     style = "color: #61A6F9; background-color: #D8EAFF; border-color: 

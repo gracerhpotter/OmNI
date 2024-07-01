@@ -49,7 +49,6 @@ server <- function(input, output, session) {
   options(shiny.maxRequestSize = 30 * 1024 ^ 2)
   
   ## SESSION INFO ##############################################################
-  
   output$session_info <- renderPrint({
     sessionInfo()
   })
@@ -2887,6 +2886,8 @@ server <- function(input, output, session) {
                                 "GO All" = "HUMAN_GOALL",
                                 "Hallmark MSigdb" = "HUMAN_Hallmark",
                                 "MSigdb" = "HUMAN_MSigDB",
+                                "MOMENTA BioCyc" = "HUMAN_MOMENTABiocycEXP",
+                                "MOMENTA MFN" = "HUMAN_MOMENTAMFNEXP",
                                 "PTM-SEA All" = "HUMAN_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "HUMAN_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "HUMAN_PHOSPHO_KINASE",
@@ -2903,6 +2904,7 @@ server <- function(input, output, session) {
                                 "GO Cellular Components" = "MOUSE_GOCC",
                                 "GO Molecular Functions" = "MOUSE_GOMF",
                                 "WikiPathways" = "MOUSE_WikiPathways",
+                                "MOMENTA BioCyc" = "MOUSE_MOMENTABiocycEXP",
                                 "PTM-SEA All" = "MOUSE_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "MOUSE_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "MOUSE_PHOSPHO_KINASE",
@@ -2943,7 +2945,8 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "FRUITFLY_WikiPathways",
                                 "GO Biological Processes" = "FRUITFLY_GOBP",
                                 "GO Cellular Components" = "FRUITFLY_GOCC",
-                                "GO Molecular Functions" = "FRUITFLY_GOMF"),
+                                "GO Molecular Functions" = "FRUITFLY_GOMF",
+                                "MOMENTA BioCyc" = "FRUITFLY_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       } else if (input$species == "zebrafish"){
@@ -2963,7 +2966,8 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "YEAST_WikiPathways",
                                 "GO Biological Processes" = "YEAST_GOBP",
                                 "GO Cellular Components" = "YEAST_GOCC",
-                                "GO Molecular Functions" = "YEAST_GOMF"),
+                                "GO Molecular Functions" = "YEAST_GOMF",
+                                "MOMENTA BioCyc" = "YEAST_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       }
@@ -3440,6 +3444,8 @@ server <- function(input, output, session) {
                                 "GO All" = "HUMAN_GOALL",
                                 "Hallmark MSigdb" = "HUMAN_Hallmark",
                                 "MSigdb" = "HUMAN_MSigDB",
+                                "MOMENTA MFN" = "HUMAN_MOMENTAMFNEXP",
+                                "MOMENTA BioCyc" = "HUMAN_MOMENTABiocycEXP",
                                 "PTM-SEA All" = "HUMAN_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "HUMAN_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "HUMAN_PHOSPHO_KINASE",
@@ -3456,6 +3462,7 @@ server <- function(input, output, session) {
                                 "GO Cellular Components" = "MOUSE_GOCC",
                                 "GO Molecular Functions" = "MOUSE_GOMF",
                                 "WikiPathways" = "MOUSE_WikiPathways",
+                                "MOMENTA BioCyc" = "MOUSE_MOMENTABiocycEXP",
                                 "PTM-SEA All" = "MOUSE_PHOSPHO_UNIPROT",
                                 "PTM-SEA Diseases" = "MOUSE_PHOSPHO_DISEASE",
                                 "PTM-SEA Kinases" = "MOUSE_PHOSPHO_KINASE",
@@ -3496,7 +3503,8 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "FRUITFLY_WikiPathways",
                                 "GO Biological Processes" = "FRUITFLY_GOBP",
                                 "GO Cellular Components" = "FRUITFLY_GOCC",
-                                "GO Molecular Functions" = "FRUITFLY_GOMF"),
+                                "GO Molecular Functions" = "FRUITFLY_GOMF",
+                                "MOMENTA BioCyc" = "FRUITFLY_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       } else if (input$species == "zebrafish"){
@@ -3516,7 +3524,8 @@ server <- function(input, output, session) {
                                 "WikiPathways" = "YEAST_WikiPathways",
                                 "GO Biological Processes" = "YEAST_GOBP",
                                 "GO Cellular Components" = "YEAST_GOCC",
-                                "GO Molecular Functions" = "YEAST_GOMF"),
+                                "GO Molecular Functions" = "YEAST_GOMF",
+                                "MOMENTA BioCyc" = "YEAST_MOMENTABiocycEXP"),
                     multiple = FALSE)
         
       }
@@ -3920,7 +3929,6 @@ server <- function(input, output, session) {
     req(input$report_include_enrichment)
     
     tagList(
-      hr(),
       h6("Algorithm"),
       radioButtons("report_enrichment_calculation",
                    label = "Enrichment algorithm to perform",
@@ -4225,8 +4233,8 @@ server <- function(input, output, session) {
   report_sscore_enriched <- reactive({
     if ((input$report_include_sscore == TRUE) & (input$report_include_enrichment == TRUE)){
       message("INITIALIZING S-SCORE ENRICHMENT")
-      GMTs <- c("HUMAN_AllPathways", "MOUSE_AllPathways", "RAT_AllPathways", "YEAST_AllPathways", "FRUITFLY_AllPathways",
-                "CELEGANS_AllPathways", "ZEBRAFISH_AllPathways")
+      GMTs <- c("HUMAN_GOBP", "MOUSE_GOBP", "RAT_GOBP", "YEAST_GOBP", "FRUITFLY_GOBP",
+                "CELEGANS_GOBP", "ZEBRAFISH_GOBP")
       
       GMT <- GMTs[grep(toupper(input$species), GMTs)]
       
@@ -4431,8 +4439,8 @@ server <- function(input, output, session) {
       if (input$report_include_enrichment == TRUE){
         message("INITIALIZING PCSF ENRICHMENT")
         
-        GMTs <- c("HUMAN_AllPathways", "MOUSE_AllPathways", "RAT_AllPathways", "YEAST_AllPathways", "FRUITFLY_AllPathways",
-                  "CELEGANS_AllPathways", "ZEBRAFISH_AllPathways")
+        GMTs <- c("HUMAN_GOBP", "MOUSE_GOBP", "RAT_GOBP", "YEAST_GOBP", "FRUITFLY_GOBP",
+                  "CELEGANS_GOBP", "ZEBRAFISH_GOBP")
         
         GMT <- GMTs[grep(toupper(input$species), GMTs)]
         
