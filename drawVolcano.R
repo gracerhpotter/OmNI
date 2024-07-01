@@ -149,7 +149,7 @@ drawVolcano <- function(dat,
     label_names = c()
     
     for(gene in label_specific_gene){
-      label_names <- c(label_names, rownames(subset(dat, grepl(gene, dat$feature_identifier))))
+      label_names <- c(label_names, rownames(subset(dat, gene == gsub("_.*", "", dat$feature_identifier))))
     }
     
   } else if (label_specific == FALSE && add_labels == TRUE) { # if not labeling specific gene but yes labeling top/bottom logFC genes/rows
@@ -164,7 +164,7 @@ drawVolcano <- function(dat,
     label_names = c()
     
     for(gene in label_specific_gene){
-      label_names <- c(label_names, rownames(subset(dat, grepl(gene, dat$feature_identifier))))
+      label_names <- c(label_names, rownames(subset(dat, gene == gsub("_.*", "", dat$feature_identifier))))
     }
     
     label_names <- c(label_names, rownames(dat[dat$logFC > 0,][order(dat$P.Value, decreasing = FALSE),])[1:(label_number / 4 + label_number %% 4)],
