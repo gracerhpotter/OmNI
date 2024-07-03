@@ -5,5 +5,5 @@ pacman::p_load(shiny)
 
 Sys.setenv(RSTUDIO_PANDOC="C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools")
 
-folder_address = '~/Documents/Interactive_Omics_Notebook'
+folder_address = '~/Interactive_Omics_Notebook'
 runApp(folder_address, launch.browser = TRUE)
