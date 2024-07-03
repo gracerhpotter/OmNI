@@ -470,48 +470,6 @@ eset <- intensityNorm(eset = eset,
 ```
 
 ```{r}
-  
-  setwd("/Users/pottegra/Documents/Data_Processing/Metabolomics_Nazmin_20230807/Output")
-
-  raw_data <- OptiLCMS::PerformROIExtraction(datapath = "/Users/pottegra/Documents/Data_Processing/Metabolomics_Nazmin_20230807/mzML_Files/POS",
-                                   rt.idx = 0.2, # increase if too few peaks produced, max = 1 & default = 1/15
-                                   rmConts = FALSE, # remove potential contaminants? TRUE ADDS SIGNIFICANT TIME TO PROCESS
-                                   plot = TRUE) 
-
-  param_initial <- OptiLCMS::SetPeakParam(platform = "general") # instrument-specific initial parameters
-  
-  ## PARAMETER OPTIMIZATION: using “DoE” strategy TOOK 64.4MIN ON THIELSEN
-  param_optimized <- OptiLCMS::PerformParamsOptimization(raw_data, 
-                                               param = param_initial, 
-                                               ncore = 8) 
-  
-  ## PEAK PROFILING
-  rawData <- ImportRawMSData(NULL, # import raw MS data
-                             "/Users/pottegra/Documents/Data_Processing/Metabolomics_Nazmin_20230807/mzML_Files/POS", 
-                             plotSettings = SetPlotParam(Plot = TRUE))
-  
-  mSet <- PerformPeakProfiling(rawData, # peak profiling w/ optimized parameters
-                               param_optimized$best_parameters,
-                               plotSettings = SetPlotParam(Plot = TRUE))
-  
-  ## PEAK ANNOTATION
-  annParams <- SetAnnotationParam(polarity = "positive", # set annotation parameters
-                                  mz_abs_add = 0.005) # set allowed variance for the search (for adduct annotation)
-  
-  annotPeaks <- PerformPeakAnnotation(mSet, # perform peak annotation on isotope and adduct peaks
-                                      annParams)
-  
-  maPeaks <- FormatPeakList(annotPeaks, # format/filter peak list
-                            annParams, 
-                            filtIso = FALSE, # filter out all isotopes except for [M]+ for positive ion mode and [M]- for negative ion mode
-                            filtAdducts = FALSE, # filter out all adducts except [M+H]+ for positive ion more and [M-H]- for negative ion mode
-                            missPercent = 1) # threshold to remove features missing in X\ that are missing from 50\ when there are two groups
-  
-  ## GENERATE PEAKS TABLE FOR INPUT TO ANALYSIS
-  write.csv(maPeaks@dataSet, "metaboanalyst_input.csv", row.names=FALSE)
-```
-
-```{r}
 library(Biobase)
 annot <- data.frame(openxlsx::read.xlsx("/Users/pottegra/Documents/Data_Processing/2023_09_11_Omics_Indranil/Annotation_MouseBrain.xlsx",
                                         2,
