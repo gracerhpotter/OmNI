@@ -443,25 +443,6 @@ enrichedPlots <- function(enriched,
 }
 
 makeCytoscapeInput <- function(enrichmentResult){
-  # df <- data.frame(NAME = enrichmentResult@result$ID,
-  #                  "GS <br> follow link to MSigDB" = enrichmentResult@result$ID,
-  #                  "GS DETAILS"=rep("Details...", nrow(enrichmentResult@result)),
-  #                  SIZE=enrichmentResult@result$setSize,
-  #                  ES=enrichmentResult@result$enrichmentScore,
-  #                  NES=enrichmentResult@result$NES,
-  #                  "NOM p-val"=enrichmentResult@result$pvalue,
-  #                  "FDR q-val"=enrichmentResult@result$qvalue,
-  #                  "FWER p-val"=enrichmentResult@result$p.adjust,
-  #                  "RANK AT MAX"=enrichmentResult@result$rank,
-  #                  "LEADING EDGE"=enrichmentResult@result$leading_edge,
-  #                  check.names=FALSE)
-  # 
-  # neg<-subset(df, NES < 0)
-  # pos<-subset(df, NES > 0)
-  # 
-  # # install.packages("xlsx")
-  # xlsx::write.xlsx(neg, "KDEL-CRE_Reactom_GSEA_neg_report.xls", sheetName = "Sheet1", col.names = TRUE, row.names = FALSE, append = FALSE)
-  # xlsx::write.xlsx(pos, "KDEL-CRE_Reactom_GSEA_pos_report.xls", sheetName = "Sheet1", col.names = TRUE, row.names = FALSE, append = FALSE)
   
   df <- data.frame(Term = enrichmentResult@result$ID,
                    Description = enrichmentResult@result$Description,
