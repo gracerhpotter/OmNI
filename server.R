@@ -269,6 +269,34 @@ server <- function(input, output, session) {
     req((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data))
     for (i in 1:length(type())){
       cat(type()[i], "; ", data_format()[i], "\n", sep = "")
+      
+      annot_columns <- annotation_initial()[,type()[i]]
+      
+      missing <- c()
+      for (j in 1:length(annot_columns)){
+        if (!(make.names(annot_columns[j]) %in% colnames(data()[[i]]))){
+          missing <- c(missing, annot_columns[j])
+        }
+      }
+      
+      if (data_format()[i] == "PhosphoSites" && length(missing) > 0){
+        remove <- c()
+        for (k in 1:length(missing)){
+          if (grepl(make.names(missing[k]), paste0(colnames(data()[[i]]), collapse = "; "))){
+            remove <- c(remove, missing[k])
+          }
+        }
+        missing <- missing[!(missing %in% unique(remove))]
+      }
+      
+      missing <- na.omit(missing)
+      
+      if (length(missing) > 0){
+        cat("\t Columns from annotation file not found in data file: \n\t -", paste0(missing, collapse = "\n\t - "), "\n")
+      } else {
+        cat("\t All columns from annotation file matched to data file.\n")
+      }
+      cat("\n")
     }
 
   })
@@ -300,6 +328,7 @@ server <- function(input, output, session) {
                                 uniprot_annotation = input$uniprot_annotation)
     }
     
+    assign("eset_prenorm", eset_obj, envir = .GlobalEnv)
     return(eset_obj)
   })
   

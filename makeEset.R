@@ -130,28 +130,32 @@ makeEset <- function(data,
     
   }
   
-  if(data_format == "PhosphoSites") { # Get data for MaxQuant Sites format
+  if(data_format == "PhosphoSites") {
     
-    if("+" %in%  data[,"Diagnostic.peak"]){ 
-      data <- data[data[,"Diagnostic.peak"] != '+',]; # remove diagnostic features
-    } 
+    if ("Diagnostic.peak" %in% colnames(data)) { # For MaxQuant PhosphoSites format only
+      if("+" %in%  data[,"Diagnostic.peak"]){ 
+        data <- data[data[,"Diagnostic.peak"] != '+',]; # remove diagnostic features
+      } 
+      
+      data <- data[data[,"Localization.prob"] >= 0.70 ,]; #filter low probability features
+      
+      # pull out sample intensity values based on annotation and collapse multiple sites
+      data1 <- data[, !(colnames(data) %in% samp_cols)];
+      data1 <- data1[rep(rownames(data1), 3),];
+      
+      data2 = do.call("cbind",lapply(1:length(samp_cols), FUN = function(i){
+        cols.keep <- grep(samp_cols[i], colnames(data), value = T);  
+        reshape2::melt(data[, cols.keep], measure.vars = cols.keep,
+                       variable.name = paste("Phospho.Site.", i - 1, sep = ''),
+                       value.name = samp_cols[i]);
+      }))
+      
+      data <- cbind(data1, data2)
+    }
     
-    data <- data[data[,"Localization.prob"] >= 0.70 ,]; #filter low probability features
-    
-    # pull out sample intensity values based on annotation and collapse multiple sites
-    data1 <- data[, !(colnames(data) %in% samp_cols)];
-    data1 <- data1[rep(rownames(data1), 3),];
-    
-    data2 = do.call("cbind",lapply(1:length(samp_cols), FUN = function(i){
-      cols.keep <- grep(samp_cols[i], colnames(data), value = T);  
-      reshape2::melt(data[, cols.keep], measure.vars = cols.keep,
-                     variable.name = paste("Phospho.Site.", i - 1, sep = ''),
-                     value.name = samp_cols[i]);
-    }))
-    
-    data <- cbind(data1, data2)
     data.matrix <- as.matrix(data[, samp_cols]);
-    data = split_semi(data, "Protein", "Protein") # parse out protein names
+    try({data = split_semi(data, "Protein", "Protein")}) # parse out protein names in MQ
+    try({data = split_semi(data, "Protein", "ProteinID")}) # parse out protein names in FP
     
   }
   
@@ -275,6 +279,8 @@ makeEset <- function(data,
       if(("Amino.acid" %in% colnames(data))&("Position"%in%colnames(data))){
         data[,"feature_identifier"] <- make.unique( paste(data[,"Gene"],"_", data[,"Protein"],"_",
                                                           data[,"Amino.acid"],"", data[,"Position"], sep="" ) );
+      } else if ("Index" %in% colnames(data)){
+        data[,"feature_identifier"] <- make.unique( paste(data[,"Gene"],"_", data[,"Index"], sep="" ) );
       } else {
         data[,"feature_identifier"] <- make.unique( paste(data[,"Gene"], data[,"Protein"], sep="_" ) );
         
