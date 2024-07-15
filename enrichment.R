@@ -50,7 +50,11 @@ calculateGeneList <- function(fit,
     top_sum$logP = -log10(top_sum$P.Value)
     top_sum$metric = top_sum$logP / top_sum$fcSign
     
-    ranked <- cbind(paste0(top_sum[,"Protein"], ";S", top_sum[,"Position"]), top_sum[,"metric"])
+    if ("Position" %in% colnames(top_sum)){ # MaxQuant
+      ranked <- cbind(paste0(top_sum[,"Protein"], ";", top_sum[,"Amino.acid"], top_sum[,"Position"]), top_sum[,"metric"])
+    } else if ("Index" %in% colnames(top_sum)){ # FragPipe
+      ranked <- cbind(paste0(top_sum[,"Protein"], ";", gsub(".*_", "", top_sum[,"Index"])), top_sum[,"metric"])
+    }
     colnames(ranked) <- c("ID", "rank")
     
   }
