@@ -1284,8 +1284,10 @@ ui <- fluidPage(
               
               hr(),
               h6("Axes"),
-              uiOutput("PC_xaxis"),
-              uiOutput("PC_yaxis"),
+              fluidRow(
+                column(6, uiOutput("PC_xaxis")),
+                column(6, uiOutput("PC_yaxis"))
+              ),
                
               hr(),
               h6("Other Visualization Options"),
