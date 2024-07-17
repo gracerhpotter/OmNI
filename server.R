@@ -3888,26 +3888,26 @@ server <- function(input, output, session) {
     if (include_batch_pca() == TRUE) {
       message("INITIALIZED BATCH CORRECTED DATA GENERATION")
       
-      i <- which(type() == input$limma_dataset)
-      data <- list(list())
-      
+      data <- list()
       for (i in 1:length(type())){
+        type <- list()
         for (j in 1:length(input$report_covariate_col)){
-          data[[i]][[j]] <- limmaLM(annot = annotation(),
-                                    eset = eset()[[i]],
-                                    samples = input$report_linear_factors,
-                                    time_series = input$report_include_timeseries,
-                                    time_col = input$report_time_col,
-                                    time_points_cont = input$report_time_points_cont,
-                                    time_points_disc = input$report_time_points_disc,
-                                    time = input$report_time_type,
-                                    contrast_fit = input$report_contrast_fit,
-                                    contrasts_subset = input$report_limma_contrasts,
-                                    covariate = input$report_add_covariate,
-                                    covariate_col = input$report_covariate_col[[j]],
-                                    remove_batch_PCA = TRUE,
-                                    batch_column = input$report_covariate_col[[j]])
+          type[[j]] <- limmaLM(annot = annotation(),
+                               eset = eset()[[i]],
+                               samples = input$report_linear_factors,
+                               time_series = input$report_include_timeseries,
+                               time_col = input$report_time_col,
+                               time_points_cont = input$report_time_points_cont,
+                               time_points_disc = input$report_time_points_disc,
+                               time = input$report_time_type,
+                               contrast_fit = input$report_contrast_fit,
+                               contrasts_subset = input$report_limma_contrasts,
+                               covariate = input$report_add_covariate,
+                               covariate_col = input$report_covariate_col[j],
+                               remove_batch_PCA = TRUE,
+                               batch_column = input$report_covariate_col[j])
         }
+        data[[i]] <- type
         names(data[[i]]) <- make.names(input$report_covariate_col)
       }
       names(data) <- type()
