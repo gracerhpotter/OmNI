@@ -107,7 +107,9 @@ convertUniprotSymbol <- function(input_df,
   keys <- input_df[[key_column]]
   
   # Perform mapping using AnnotationDbi::mapIds
-  mapped_symbols <- AnnotationDbi::mapIds(org.Hs.eg.db::org.Hs.eg.db, keys, keytype, column = "SYMBOL" ) # EDIT SO MORE THAN HUMAN ACCEPTED
+  # TODO: EDIT SO MORE THAN HUMAN ACCEPTED 
+  try({mapped_symbols <- AnnotationDbi::mapIds(org.Hs.eg.db::org.Hs.eg.db, keys, keytype, column = "SYMBOL")}) # human
+  try({mapped_symbols <- AnnotationDbi::mapIds(org.Mm.eg.db::org.Mm.eg.db, keys, keytype, column = "SYMBOL")}) # mouse
   
   # Rename the "SYMBOL" column to "gene_symbol" in the original dataframe
   input_df_1 <- input_df %>% tibble::add_column(gene_symbol = mapped_symbols)
