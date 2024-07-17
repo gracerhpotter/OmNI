@@ -271,7 +271,9 @@ makeEset <- function(data,
     }
   }
   
-  data[,"Gene"] <- toupper(data[,"Gene"])
+  if ("Gene" %in% colnames(data)){
+    data[,"Gene"] <- toupper(data[,"Gene"])
+  }
   
   #-----------------------------------------------------------------------------
   
