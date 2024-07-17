@@ -116,7 +116,7 @@ makeEset <- function(data,
       data[,"Gene"] <- gsub(".*[|]([^.]+)[_].*", "\\1", data[,"Protein"])
       
     } else {
-      try({data = split_semi(data, "Protein", "Protein.ID")}) # parse out protein names in FP
+      try({data = split_semi(data, "Protein", "Index")}) # parse out protein names in FP
       try({data = split_semi(data, "Protein", "Protein.Group")}) # parse out protein names in DIA-NN
       try({data = split_semi(data, "Protein", "Accession")}) # parse out protein names in PD
     }
@@ -270,6 +270,8 @@ makeEset <- function(data,
       data[uni,"Gene"] = sub("^..\\|.*\\|([^_]*).*","\\1",data[uni,"Fasta.headers"])
     }
   }
+  
+  data[,"Gene"] <- toupper(data[,"Gene"])
   
   #-----------------------------------------------------------------------------
   
