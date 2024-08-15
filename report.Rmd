@@ -1391,6 +1391,12 @@ if (dir.exists(save_dir)){
 }
 ```
 
+```{r S-Score Table Download, results = 'asis', eval = params$include_sscore}
+for (i in 1:length(params$sscore)){
+  readr::write_csv(params$sscore[[i]], paste0(save_dir, "/MultiOmicIntegration/", names(params$sscore)[i], ".csv"))
+}
+```
+
 ```{r S-Score Volcano Plot, results = 'asis', eval = ("volcano" %in% params$sscore_plots & params$include_sscore), message = FALSE, fig.height = 9, fig.width = 10}
 suppressWarnings({
   for (i in 1:length(params$sscore)){
