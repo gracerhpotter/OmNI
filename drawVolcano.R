@@ -75,7 +75,7 @@ drawVPlots <- function(dat,
   suppressWarnings({
     
     plot1 <- ggplot(data = data.frame(dat), aes(text = paste("Name: ", feature_identifier))) + 
-      geom_point(aes_string(x = xvar, y = yvar, colour = colorby),size = 2, pch = 16) +
+      geom_point(aes_string(x = xvar, y = yvar, colour = colorby), size = 2, pch = 16, alpha = 0.8) +
       scale_colour_manual(values = c(NS = "grey", Up = up_color, Down = down_color)) +
       labs(title = title,
            caption = caption) + 
