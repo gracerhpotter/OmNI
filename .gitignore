@@ -1,3 +1,7 @@
+# Testing & user_log files
+Testing.Rmd
+user_logTable.csv
+
 # History files
 .Rhistory
 .Rapp.history
