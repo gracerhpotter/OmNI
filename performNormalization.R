@@ -133,17 +133,12 @@ intensityNorm <- function(eset,
       message("---- NAs BEFORE IMPUTATION:", sum(is.na(eset_matrix_norm[,grep(index,pData(eset)$Batch2)])))
       
       tryCatch({
-        # for (i in 1:ncol(eset_matrix_norm)){
-        #   eset_matrix_norm[,i] <- complete(mice::mice(eset_matrix_norm, method = "lasso.norm", printFlag = FALSE))[,i]
-        # }
-        
         if (type == "Proteomics"){
-          assign("matrix", eset_matrix_norm[,grep(index,pData(eset)$Batch2)], envir = .GlobalEnv)
+          # assign("matrix", eset_matrix_norm[,grep(index,pData(eset)$Batch2)], envir = .GlobalEnv)
         }
         
         eset_imputed <- pcaMethods::nni(t(eset_matrix_norm[,grep(index,pData(eset)$Batch2)]), method = c("llsImpute"), correlation = "pearson", verbose = TRUE)
         eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- as.matrix(t(pcaMethods::completeObs(eset_imputed)))
-        # eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- as.matrix(complete(mice::mice(eset_matrix_norm[,grep(index,pData(eset)$Batch2)], method = "lasso.norm", printFlag = FALSE)))
         
         message("---- NAs AFTER IMPUTATION:", sum(is.na(eset_matrix_norm[,grep(index,pData(eset)$Batch2)])))
       },

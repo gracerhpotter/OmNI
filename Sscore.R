@@ -74,7 +74,7 @@ makeDataList <- function(top_table_list,
       rownames(dataframe) <- 1:nrow(dataframe)
       dataframe <- dataframe[, c("chebi_id", "feature_id", "logfc")]
       
-      assign("metabolite_sscoreInput", dataframe, envir = .GlobalEnv)
+      # assign("metabolite_sscoreInput", dataframe, envir = .GlobalEnv)
       
       data_list[[i]] <- dataframe
     }
@@ -420,7 +420,7 @@ sscoreIntegration <- function(data_list){
     dplyr::relocate("gene_symbol", .after = "uniprot_id") %>%
     as.data.frame()
   
-  assign("sscore_dataframe", sscore_combined, envir = .GlobalEnv)
+  # assign("sscore_dataframe", sscore_combined, envir = .GlobalEnv)
   message("--- finished s-score integration")
   return(sscore_combined);
 }
@@ -714,7 +714,7 @@ sscoreVennDiagram <- function(sscore_dataframe){
 #' 
 
 formatSscoreGeneList <- function(sscore_output){
-  assign("sscore_enrichment_input", sscore_output, envir = .GlobalEnv)
+  # assign("sscore_enrichment_input", sscore_output, envir = .GlobalEnv)
   sscore_output[is.na(sscore_output)] <- ""
   
   enrich_input <- data.frame(matrix(ncol = 0, nrow = nrow(sscore_output)))

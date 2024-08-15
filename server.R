@@ -328,7 +328,7 @@ server <- function(input, output, session) {
                                 uniprot_annotation = input$uniprot_annotation)
     }
     
-    assign("eset_prenorm", eset_obj, envir = .GlobalEnv)
+    # assign("eset_prenorm", eset_obj, envir = .GlobalEnv)
     return(eset_obj)
   })
   
@@ -1915,7 +1915,7 @@ server <- function(input, output, session) {
     geneList <- calculateGeneList(fit = linear_model()[[i]],
                                   coef = input$enrichment_coef,
                                   gmt = input$gmt)
-    assign("geneList", geneList, envir = .GlobalEnv)
+    # assign("geneList", geneList, envir = .GlobalEnv)
     return(geneList)
   })
   
@@ -1925,7 +1925,7 @@ server <- function(input, output, session) {
                                           gmt = input$gmt,
                                           enrichment = input$enrichment_calculation,
                                           pval_cutoff = input$enrichment_pval)
-    assign("enrichmentResult", enriched, envir = .GlobalEnv)
+    # assign("enrichmentResult", enriched, envir = .GlobalEnv)
     return(enriched)
   })
 
@@ -3360,7 +3360,7 @@ server <- function(input, output, session) {
   }) 
   
   PCSF_enriched_table <- reactive({
-    assign("enrichment_output", PCSF_enriched(), envir = .GlobalEnv)
+    # assign("enrichment_output", PCSF_enriched(), envir = .GlobalEnv)
     if (!is.null(PCSF_enriched())){
       table <- pcsfEnrichedTable(PCSF_enriched())
     } else {
@@ -4017,8 +4017,8 @@ server <- function(input, output, session) {
       geneList <- c(GSEA_geneList, PKSEA_geneList)
       geneList <- geneList[!sapply(geneList, is.null)]
       
-      assign("enrich_geneList", geneList, envir = .GlobalEnv)
-      assign("report_coef_options", report_coef_options(), envir = .GlobalEnv)
+      # assign("enrich_geneList", geneList, envir = .GlobalEnv)
+      # assign("report_coef_options", report_coef_options(), envir = .GlobalEnv)
       
       message("---- GENE LIST GENERATED")
       return(geneList)
@@ -4101,7 +4101,7 @@ server <- function(input, output, session) {
       }
       })
       
-      assign("enriched", enriched, envir = .GlobalEnv)
+      # assign("enriched", enriched, envir = .GlobalEnv)
       message("---- ENRICHMENT COMPLETE")
       return(enriched)
     } else {
@@ -4234,7 +4234,7 @@ server <- function(input, output, session) {
       names(sscore) <- paste0(paste0(input$report_sscore_datasets, collapse = "_"), "_", input$report_limma_contrasts)
     })
     
-    assign("report_sscore_dataframe", sscore, envir = .GlobalEnv)
+    # assign("report_sscore_dataframe", sscore, envir = .GlobalEnv)
     message("---- SSCORE INTEGRATION COMPLETE")
     return(sscore);
     } else {
@@ -4251,7 +4251,7 @@ server <- function(input, output, session) {
         geneLists[[paste0(names(report_sscore_dataframe())[j])]] <- formatSscoreGeneList(sscore_output = report_sscore_dataframe()[[j]])
       }
       
-      assign("report_sscore_geneLists", geneLists, envir = .GlobalEnv)
+      # assign("report_sscore_geneLists", geneLists, envir = .GlobalEnv)
     } else {
       geneLists <- NULL
     }
@@ -4285,7 +4285,7 @@ server <- function(input, output, session) {
         }
       }
       
-      assign("SSCORE_enriched", enriched, envir = .GlobalEnv)
+      # assign("SSCORE_enriched", enriched, envir = .GlobalEnv)
       message("---- SSCORE ENRICHMENT COMPLETE")
     } else {
       enriched <- NULL
@@ -4403,7 +4403,7 @@ server <- function(input, output, session) {
         pcsf_input <- pcsf_input_1
       }
       
-      assign("PCSF_report_input", pcsf_input, envir = .GlobalEnv)
+      # assign("PCSF_report_input", pcsf_input, envir = .GlobalEnv)
       message("---- PCSF INPUT FINALIZED")
       return(pcsf_input)
     } else {
@@ -4426,7 +4426,7 @@ server <- function(input, output, session) {
         names(pcsf_net) <- names(report_PCSF_input())
       })
       
-      assign("PCSF_report_network", pcsf_net, envir = .GlobalEnv)
+      # assign("PCSF_report_network", pcsf_net, envir = .GlobalEnv)
       message("---- PCSF NETWORK(S) GENERATED")
       return(pcsf_net)
     } else {
@@ -4489,7 +4489,7 @@ server <- function(input, output, session) {
           }
         }
         
-        assign("PCSF_enriched", enriched, envir = .GlobalEnv)
+        # assign("PCSF_enriched", enriched, envir = .GlobalEnv)
         message("---- PCSF ENRICHMENT COMPLETE")
         return(enriched)
       }
