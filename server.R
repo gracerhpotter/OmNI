@@ -39,7 +39,7 @@ server <- function(input, output, session) {
     users$logTable = rbind(
       users$logTable,
       list(id = session$token, 
-           user = Sys.getenv("USERNAME"),
+           user = Sys.getenv("RSTUDIO_USER_IDENTITY"),
            login = as.character(Sys.time()),
            logout = NA)
     )
