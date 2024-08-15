@@ -1,4 +1,4 @@
-# Interactive Omics Notebook
+# Omics Notebook Interactive [OmNI]
 
 An interactive shiny application version of the original Omics Notebook, with increased functionalities.
 
@@ -17,7 +17,7 @@ Shiny applications can be opened via the R function `shiny::runApp(appDir = getw
 Alternatively, shiny apps can be opening without downloading from GitHub using the `shiny::runGitHub()` function.
 
 ```
-shiny::runGitHub("Interactive_Omics_Notebook", "gracerhpotter")
+shiny::runGitHub("OmNI", "gracerhpotter")
 ```
 
 ## Development & Data Information
