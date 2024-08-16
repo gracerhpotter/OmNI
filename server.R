@@ -2316,8 +2316,7 @@ server <- function(input, output, session) {
     
     list(src = paste0(KEGG_pathway_ID(), ".pathview.png", sep = ""),
          contentType = 'image/png',
-         width = "100%",
-         alt = "This is alternate text")
+         width = "100%")
     
   }, deleteFile = TRUE) %>% bindEvent(input$enriched_KEGG_button)
   

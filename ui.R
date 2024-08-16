@@ -2377,7 +2377,7 @@ ui <- fluidPage(
                                                           fluidRow(
                                                             column(9,
                                                                    verbatimTextOutput("notKEGG_message"),
-                                                                   shinycssloaders::withSpinner(plotOutput("enriched_KEGGplot", height = 2000), type = 8)
+                                                                   shinycssloaders::withSpinner(plotOutput("enriched_KEGGplot", height = "auto"), type = 8)
                                                             ),
                                                             column(3,
                                                                    uiOutput("KEGG_pathway_options")
