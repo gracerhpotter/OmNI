@@ -23,3 +23,7 @@ shiny::runGitHub("OmNI", "gracerhpotter")
 ## Development & Data Information
 
 Additional information on the contents of each file, and the source of referenced databases for enrichment, PCSF, and S-Score is in the `info` folder in `devInfo.txt`. Additional reference scripts for the creation of some the files are also in that folder.
+
+## Example Data & Annotation Files
+
+Example data and annotation files are present in the `example` folder, but can also be found in a [public Google Drive folder](https://drive.google.com/drive/folders/1lyzmIhorrZy_CKuxabi1Bv1cLHIblJhk?usp=drive_link).
