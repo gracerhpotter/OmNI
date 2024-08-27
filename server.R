@@ -322,7 +322,8 @@ server <- function(input, output, session) {
     for (i in 1:length(type())){
       eset_obj[[i]] <- makeEset(data()[[i]], 
                                 annotation(), 
-                                type = type()[i], 
+                                type = type()[i],
+                                species = input$species,
                                 data_format = data_format()[i],
                                 log_transform = input$log_transform,
                                 uniprot_annotation = input$uniprot_annotation)
