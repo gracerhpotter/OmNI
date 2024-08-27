@@ -14,7 +14,8 @@ for (package in cran_packages){
 }
 
 # INSTALL BIOCONDUCTOR PACKAGES
-bioconductor_packages <- c('clusterProfiler', 'ComplexHeatmap', 'enrichplot', 
+bioconductor_packages <- c('clusterProfiler', 'ComplexHeatmap', 'enrichplot',
+                           'EnsDb.Hsapiens.v86', 'EnsDb.Mmusculus.v79',
                            'GeneTonic', "Glimma", "NormalyzerDE", 'org.Ce.eg.db', 
                            'org.Dm.eg.db', 'org.Dr.eg.db', "org.Hs.eg.db", 'org.Mm.eg.db', 
                            'org.Rn.eg.db', 'org.Sc.sgd.db', "pathview", 'topGO')
