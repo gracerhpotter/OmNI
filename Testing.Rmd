@@ -7,7 +7,7 @@ date: "2023-08-03"
 ```{r}
 # Load in example annotation & proteinGroups.txt dataset and generate expression
 # set and limma fit. Use fit to run enrichment.
-setwd("~/Documents/EmiliLab/Interactive_Omics_Notebook")
+setwd("~/Documents/EmiliLab/OmNI")
 
 library(Biobase)
 annot <- data.frame(openxlsx::read.xlsx("example_data/example_annotation.xlsx",
@@ -21,16 +21,27 @@ annot_files <- data.frame(openxlsx::read.xlsx("example_data/example_annotation.x
 source("formatAnnotation.R")
 annot <- formatAnnotation(annot, group = "Treatment")
 
-data_input <- read.table("example_data/example_proteingroups.txt", 
+# data_input <- read.table("example_data/example_proteingroups.txt", 
+#                          header = TRUE, 
+#                          sep = "\t")
+
+data_input <- read.table("example_data/example_phosphosites.txt", 
                          header = TRUE, 
                          sep = "\t")
 
 source("makeEset.R")
+# eset <- makeEset(data = data_input, 
+#                  annotate = annot, 
+#                  type = "Proteomics", 
+#                  log_transform = TRUE,
+#                  data_format = "ProteinGroups", 
+#                  uniprot_annotation = FALSE)
+
 eset <- makeEset(data = data_input, 
                  annotate = annot, 
-                 type = "Proteomics", 
+                 type = "Phosphoproteomics", 
                  log_transform = TRUE,
-                 data_format = "ProteinGroups", 
+                 data_format = "PhosphoSites", 
                  uniprot_annotation = FALSE)
 
 source("performNormalization.R")
