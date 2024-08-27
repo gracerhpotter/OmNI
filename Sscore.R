@@ -108,38 +108,14 @@ convertUniprotSymbol <- function(input_df,
   
   # Perform mapping using AnnotationDbi::mapIds
   # TODO: EDIT SO MORE THAN HUMAN ACCEPTED 
-  try({mapped_symbols <- AnnotationDbi::mapIds(org.Hs.eg.db::org.Hs.eg.db, keys, keytype, column = "SYMBOL")}) # human
-  try({mapped_symbols <- AnnotationDbi::mapIds(org.Mm.eg.db::org.Mm.eg.db, keys, keytype, column = "SYMBOL")}) # mouse
+  try({input_df$gene_symbol <- AnnotationDbi::mapIds(org.Hs.eg.db::org.Hs.eg.db, keys, keytype, column = "SYMBOL")}) # human
+  try({input_df$gene_symbol <- AnnotationDbi::mapIds(org.Mm.eg.db::org.Mm.eg.db, keys, keytype, column = "SYMBOL")}) # mouse
   
   # Rename the "SYMBOL" column to "gene_symbol" in the original dataframe
-  input_df_1 <- input_df %>% tibble::add_column(gene_symbol = mapped_symbols)
-  input_df_2 <- input_df_1 %>% dplyr::mutate(gene_symbol = stringr::str_squish(gene_symbol))
+  input_df$gene_symbol <- stringr::str_squish(input_df$gene_symbol)
   
   # Return the modified dataframe
-  return(input_df_2)
-}
-
-# COMPUTE WEIGHTED Z-SCORES ####################################################
-#' @title Compute Weighted Z-Scores
-#'
-#' @description
-#' Compute the weighted Z-score for each row using the logFC.
-#' 
-#' @param x dataframe from `data_list` described in `computeWeightedZIList` function
-#' 
-#' @return dataframe with additional columns
-#'
-
-# function for computing weighed z-scores
-computeWeightedZI <- function(x) {
-  x1 <- x %>%
-    dplyr::rename_with(~ gsub(".*logfc", "logfc", .), contains("logfc")) %>%
-    dplyr::mutate(wk = 1/sqrt(nrow(.)),
-                  zi = scale(logfc, center = TRUE, scale = TRUE)[,1],
-                  weighted_zi = wk * zi) %>%
-    dplyr::select(logfc, wk, weighted_zi, everything())
-  
-  return(x1)
+  return(input_df)
 }
 
 # COMPUTE WEIGHTED Z-SCORE LIST ################################################
@@ -173,16 +149,68 @@ computeWeightedZIList <- function(data_list = data_list) {
   message("*** Citation ***")
   message("Citation for original publication: Nat Commun. 2013:4:2617. doi: 10.1038/ncomms3617" )
   
+  # Define the biological importance weights
+  bio_importance_weights <- list(ProteinGroups = 0.5, 
+                                 PhosphoSites = 0.5, 
+                                 RNA = 0.3,
+                                 MetaboliteNeg = 0.5,
+                                 MetabolitePos = 0.5,
+                                 Peptides = 0.5,
+                                 Generic = 0.5)
+  
+  # Calculate weights based on the number of features and biological importance
+  try({
+    ProteinGroups_weight <- bio_importance_weights$ProteinGroups / sqrt(nrow(data_list$ProteinGroups))
+    PhosphoSites_weight <- bio_importance_weights$PhosphoSites / sqrt(nrow(data_list$PhosphoSites))
+    RNA_weight <- bio_importance_weights$RNA / sqrt(nrow(data_list$RNA))
+    MetaboliteNeg_weight <- bio_importance_weights$MetaboliteNeg / sqrt(nrow(data_list$MetaboliteNeg))
+    MetabolitePos_weight <- bio_importance_weights$MetabolitePos / sqrt(nrow(data_list$MetabolitePos))
+    Peptides_weight <- bio_importance_weights$Peptides / sqrt(nrow(data_list$Peptides))
+    Generic_weight <- bio_importance_weights$Generic / sqrt(nrow(data_list$Generic))
+  })
+  
+  
+  # COMPUTE WEIGHTED Z-SCORES ####################################################
+  #' @title Compute Weighted Z-Scores
+  #'
+  #' @description
+  #' Compute the weighted Z-score for each row using the logFC.
+  #' 
+  #' @param x dataframe from `data_list` described in `computeWeightedZIList` function
+  #' 
+  #' @return dataframe with additional columns
+  #'
+  
+  # function for computing weighed z-scores
+  computeWeightedZI <- function(x, dataset_type) {
+    wk <- switch(dataset_type,
+                 "ProteinGroups" = ProteinGroups_weight, 
+                 "PhosphoSites" = PhosphoSites_weight, 
+                 "RNA" = RNA_weight,
+                 "MetaboliteNeg" = MetaboliteNeg_weight,
+                 "MetabolitePos" = MetabolitePos_weight,
+                 "Peptides" = Peptides_weight,
+                 "Generic" = Generic_weight)
+    
+    x %>%
+      dplyr::mutate(wk = wk,
+                    zi = scale(logfc, center = TRUE, scale = TRUE)[,1],
+                    weighted_zi = wk * zi) %>%
+      dplyr::select(logfc, wk, weighted_zi, everything()) %>%
+      dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
+      as.data.frame()
+  }
+  
   for (i in 1:length(data_list)) {
     
+    # Extract data frame from the list
     data_s <- data_list[[i]]
     
     # Extract element name from the list
     element_name <- names(data_list)[i]
     
-    # Rename columns
-    data_s1 <- data_s %>%
-      computeWeightedZI() %>%
+    # Compute weighted Z-scores using the new approach
+    data_s1 <- computeWeightedZI(data_s, element_name) %>%
       dplyr::rename_with(~ ifelse(.x %in% c("uniprot_id", "chebi_id"), .x, paste0(.x, "_", element_name)))
     
     # Save the computed data frame back into the list
@@ -192,7 +220,6 @@ computeWeightedZIList <- function(data_list = data_list) {
   
   # Return the modified list (optional)
   return(data_list)
-  
 }
 
 # COMPUTE S-SCORES #############################################################
@@ -211,90 +238,67 @@ computeWeightedZIList <- function(data_list = data_list) {
 
 # function for computing S-scores
 computeSscore <- function(x, ID_column) {
-  
-  x1 <- x %>% dplyr::mutate(ID_column = stringr::str_squish(ID_column)) 
-  
-  x1_weighted_zi <- x1 %>% 
-    dplyr::rowwise() %>%
-    dplyr::mutate(comb_weighted_zi = sum(dplyr::c_across(dplyr::starts_with("weighted_zi_")), 
-                                         na.rm = TRUE)) %>%
-    dplyr::select(comb_weighted_zi) %>%
-    dplyr::ungroup()
-  
-  x1_wk <- x1 %>% 
-    dplyr::select(., dplyr::starts_with("wk_")) %>%
-    dplyr::rowwise() %>%
-    dplyr::mutate_all(~ .^2, na.rm = TRUE) %>%
-    dplyr::mutate(comb_wk = base::sqrt(base::sum(dplyr::c_across(dplyr::starts_with("wk_")), 
-                                                 na.rm = TRUE))) %>%
-    dplyr::select(comb_wk) %>%
-    dplyr::ungroup()
-  
-  # CHECK ROW ORDER ------------------------------------------------------------
-  # Check if the order of rows is the same
-  order_same_x1_weighted_zi <- base::all.equal(base::row.names(x1), 
-                                               base::row.names(x1_weighted_zi))
-  order_same_x1_wk <- base::all.equal(base::row.names(x1), 
-                                      base::row.names(x1_wk))
-  
-  # If both checks return TRUE, the order is the same
-  if (order_same_x1_weighted_zi & order_same_x1_wk) {
-    message("")
-  } else {
-    warning("The order of rows may not be the same in x1, x1_weighted_zi, and x1_wk.")
-  }
-  
-  x2 <- dplyr::bind_cols(x1,
-                         x1_weighted_zi,
-                         x1_wk )
-  
-  # FORMAT DATAFRAME OUTPUT ----------------------------------------------------
   if (ID_column == "uniprot_id"){
+    print("UniProt ID Column")
     
-    x3 <- x2 %>%
-      dplyr::rowwise() %>%
-      dplyr::mutate(sscore = comb_weighted_zi / comb_wk) %>%
-      dplyr::ungroup() %>%
-      dplyr::mutate(sscore_pval = pnorm(abs(sscore), lower.tail = FALSE) * 2,
-                    sscore_adj_pval = p.adjust(sscore_pval, method = 'BH')) %>%
-      dplyr::select(uniprot_id, 
-                    dplyr::starts_with("feature_id"), 
-                    sscore, 
-                    sscore_pval, 
-                    sscore_adj_pval, 
-                    dplyr::starts_with("comb_"), 
-                    dplyr::starts_with("logfc"), 
-                    dplyr::starts_with("weighted"), 
-                    dplyr::starts_with("wk"))
+    x_sscore <- x %>%
+      dplyr::mutate(
+        uniprot_id = stringr::str_squish(uniprot_id),
+        comb_weighted_zi = rowSums(dplyr::select(., dplyr::starts_with("weighted_zi_")), na.rm = TRUE),
+        comb_wk = sqrt(rowSums(dplyr::select(., dplyr::starts_with("wk_"))^2, na.rm = TRUE))
+      ) %>%
+      dplyr::mutate(
+        sscore = comb_weighted_zi / comb_wk,
+        sscore_pval = stats::pnorm(abs(sscore), lower.tail = FALSE) * 2,
+        sscore_adj_pval = stats::p.adjust(sscore_pval, method = 'BH')
+      ) %>%
+      dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
+      as.data.frame() %>%
+      dplyr::select(
+        uniprot_id,
+        dplyr::starts_with("feature_id"),
+        dplyr::starts_with("gene_symbol"),
+        sscore,
+        sscore_pval,
+        sscore_adj_pval,
+        dplyr::starts_with("comb_"),
+        dplyr::starts_with("logfc"),
+        dplyr::starts_with("weighted"),
+        dplyr::starts_with("wk")
+      )
     
-    # assign("sscore_pval", x3$sscore_pval, envir = .GlobalEnv)
-    # assign("sscore_adj_pval", x3$sscore_adj_pval, envir = .GlobalEnv)
-    
-    message("INITIAL S-SCORE DATAFRAME")
-    print(str(x3))
-    
-  } else if (ID_column == "chebi_id"){
-    x3 <- x2 %>%
-      dplyr::rowwise() %>%
-      dplyr::mutate(sscore = comb_weighted_zi / comb_wk,
-                    sscore_pval = pnorm(abs(sscore), lower.tail = FALSE) * 2,
-                    sscore_adj_pval = p.adjust(sscore_pval, method = 'BH')) %>%
-      dplyr::ungroup() %>%
-      dplyr::mutate(feature_id_metabolome = chebi_id) %>%
-      dplyr::mutate(uniprot_id = "NA") %>%
-      dplyr::select(uniprot_id,
-                    chebi_id, 
-                    dplyr::starts_with("feature_id"), 
-                    sscore, 
-                    sscore_pval, 
-                    sscore_adj_pval, 
-                    dplyr::starts_with("comb_"), 
-                    dplyr::starts_with("logfc"), 
-                    dplyr::starts_with("weighted"), 
-                    dplyr::starts_with("wk") )
+  } else if (ID_column == "chebi_id") {
+    x_sscore <- x %>%
+      dplyr::mutate(
+        chebi_id = stringr::str_squish(chebi_id),
+        comb_weighted_zi = rowSums(dplyr::select(., dplyr::starts_with("weighted_zi_")), na.rm = TRUE),
+        comb_wk = sqrt(rowSums(dplyr::select(., dplyr::starts_with("wk_"))^2, na.rm = TRUE)),
+        sscore = comb_weighted_zi / comb_wk,
+        sscore_pval = stats::pnorm(abs(sscore), lower.tail = FALSE) * 2,
+        sscore_adj_pval = stats::p.adjust(sscore_pval, method = 'BH'),
+        feature_id_metabolome = chebi_id,
+        uniprot_id = "NA",
+        gene_symbol = "NA",
+      ) %>%
+      dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
+      as.data.frame() %>%
+      dplyr::select(
+        uniprot_id,
+        chebi_id,
+        dplyr::starts_with("feature_id"),
+        dplyr::starts_with("gene_symbol"),
+        sscore,
+        sscore_pval,
+        sscore_adj_pval,
+        dplyr::starts_with("comb_"),
+        dplyr::starts_with("logfc"),
+        dplyr::starts_with("weighted"),
+        dplyr::starts_with("wk")
+      )
   }
   
-  return(x3)
+  message("S-SCORE CALCULATION COMPLETE")
+  return(x_sscore)
 }
 
 # S-SCORE INTEGRATION ##########################################################
@@ -396,14 +400,40 @@ sscoreIntegration <- function(data_list){
   message("--- cleaning & formatting")
   ## CLEAN & FORMAT DATAFRAME --------------------------------------------------
   columns_to_process <- sscore_combined %>% dplyr::select(starts_with("feature_id_")) %>% names()
+
+  # sscore_combined_genes_metabols <- sscore_combined_genes_metabols %>%
+  #   my_convert_uniprot_to_symbol() %>%
+  #   dplyr::mutate(dplyr::across(dplyr::all_of(columns_to_process), ~stringr::str_replace(., ".*_", ""))) %>%
+  #   dplyr::mutate(dplyr::across(dplyr::contains("feature_id_"), 
+  #                               ~{
+  #                                 column_name <- as.character(cur_column())
+  #                                 matching_string <- str_extract(column_name, "_(.*)")
+  #                                 
+  #                                 if (!is.na(matching_string)) {
+  #                                   prefix_variable <- paste0("prefix_", tolower(gsub("\\d", "", matching_string)))
+  #                                   paste(get(prefix_variable), ., sep = "")
+  #                                 } else {
+  #                                   .  # For columns without matching conditions, keep the original value
+  #                                 }
+  #                               }
+  #   )) %>%
+  #   as.data.frame() %>%
+  #   dplyr::rowwise() %>%
+  #   dplyr::mutate(sscore_label = paste(c(uniprot_id, dplyr::across(dplyr::all_of(columns_to_process), as.character)), collapse = "_")) %>%
+  #   dplyr::ungroup() %>%
+  #   as.data.frame()
   
   sscore_combined <- sscore_combined %>%
     convertUniprotSymbol() %>%
+    as.data.frame() %>%
+    dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
+    dplyr::mutate(across(where(is.character), ~ na_if(., "NULL"))) %>%
+    as.data.frame() %>%
     dplyr::mutate(dplyr::across(dplyr::all_of(columns_to_process), ~stringr::str_replace(., ".*_", ""))) %>%
     dplyr::mutate(dplyr::across(dplyr::contains("feature_id_"), 
                                 ~{
-                                  column_name <- as.character(cur_column()) # column_name <- "feature_id_ProteinGroups"
-                                  matching_string <- str_extract(column_name, "_(.*)") # matching_string <- "_id_ProteinGroups"
+                                  column_name <- as.character(cur_column())
+                                  matching_string <- str_extract(column_name, "_(.*)")
                                   
                                   if (!is.na(matching_string)) {
                                     prefix_variable <- paste0("prefix_", tolower(gsub("\\d", "", matching_string)))
@@ -413,12 +443,15 @@ sscoreIntegration <- function(data_list){
                                   }
                                 }
     )) %>%
+    dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
+    dplyr::mutate(across(where(is.character), ~ na_if(., "NULL"))) %>%
     as.data.frame() %>%
     dplyr::rowwise() %>%
-    dplyr::mutate(sscore_label = paste(c(uniprot_id, gene_symbol, dplyr::across(dplyr::all_of(columns_to_process), as.character)), collapse = "_")) %>%
+    dplyr::mutate(sscore_label = paste(c(uniprot_id, dplyr::across(dplyr::all_of(columns_to_process), as.character)), collapse = "_"),
+                  feature_id = ifelse(length(sscore_combined_list) == 2, coalesce(uniprot_id, chebi_id), uniprot_id)) %>%
     dplyr::ungroup() %>%
-    dplyr::relocate("gene_symbol", .after = "uniprot_id") %>%
-    as.data.frame()
+    as.data.frame() %>%
+    dplyr::select(sscore_label, feature_id, gene_symbol, sscore, sscore_pval, sscore_adj_pval, everything())
   
   # assign("sscore_dataframe", sscore_combined, envir = .GlobalEnv)
   message("--- finished s-score integration")
