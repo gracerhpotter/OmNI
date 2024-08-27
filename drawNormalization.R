@@ -36,7 +36,7 @@ intensityNormPlots <- function(eset_prenorm,
   
   df <- data.frame(reshape2::melt(eset_matrix, id.vars = NULL));
   colnames(df) <- c("Feature","Sample", "Intensity");
-  
+  df[,"Sample"] <- as.character(df[,"Sample"])
   
   # GENERATE UN-NORMALIZED PLOTS WITH PRE-NORM DATA ----------------------------
   
