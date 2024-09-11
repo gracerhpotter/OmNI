@@ -400,28 +400,6 @@ sscoreIntegration <- function(data_list){
   message("--- cleaning & formatting")
   ## CLEAN & FORMAT DATAFRAME --------------------------------------------------
   columns_to_process <- sscore_combined %>% dplyr::select(starts_with("feature_id_")) %>% names()
-
-  # sscore_combined_genes_metabols <- sscore_combined_genes_metabols %>%
-  #   my_convert_uniprot_to_symbol() %>%
-  #   dplyr::mutate(dplyr::across(dplyr::all_of(columns_to_process), ~stringr::str_replace(., ".*_", ""))) %>%
-  #   dplyr::mutate(dplyr::across(dplyr::contains("feature_id_"), 
-  #                               ~{
-  #                                 column_name <- as.character(cur_column())
-  #                                 matching_string <- str_extract(column_name, "_(.*)")
-  #                                 
-  #                                 if (!is.na(matching_string)) {
-  #                                   prefix_variable <- paste0("prefix_", tolower(gsub("\\d", "", matching_string)))
-  #                                   paste(get(prefix_variable), ., sep = "")
-  #                                 } else {
-  #                                   .  # For columns without matching conditions, keep the original value
-  #                                 }
-  #                               }
-  #   )) %>%
-  #   as.data.frame() %>%
-  #   dplyr::rowwise() %>%
-  #   dplyr::mutate(sscore_label = paste(c(uniprot_id, dplyr::across(dplyr::all_of(columns_to_process), as.character)), collapse = "_")) %>%
-  #   dplyr::ungroup() %>%
-  #   as.data.frame()
   
   sscore_combined <- sscore_combined %>%
     convertUniprotSymbol() %>%
