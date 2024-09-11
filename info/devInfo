@@ -3,13 +3,6 @@
 Below is a brief index of the files and folders in this application and their 
 functions.
 
-Update Log:
-- Jan-22-2024: Created
-- Apr-2-2024: Added `S-score.R`, `PCSF.R`, `glossary.md`, & `methodsReference.md`
-- May-16-2024: Added `limmaStats.md`, HUMAN Reactome Genes-Metabols GMT, plotPvalHistogram(),
-  & `PCSF_files` folder.
-- Jun-18-2024: Added MOMENTA GMT files
-
 #-------------------------------------------------------------------------------
 
 ## FILES
@@ -148,6 +141,9 @@ Sources:
     - MOUSE: MOMENTA BioCyc Targeted/Expanded
     - FRUITFLY: MOMENTA BioCyc Targeted/Expanded
     - YEAST: MOMENTA BioCyc Targeted/Expanded
+    
+    ** MOMENTA GMT Files Added:
+    - June 2024
 
 5.  Indranil Paul
     - HUMAN Reactome Gene Symbol + Metabolite CHEBI ID
