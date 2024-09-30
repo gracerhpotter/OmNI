@@ -114,6 +114,24 @@ server <- function(input, output, session) {
   ## ANNOTATION ################################################################
   
   ### REACTIVE OBJECTS ---------------------------------------------------------
+  annotation_files <- reactive({
+    if (input$use_example_data == FALSE){
+      annot <- data.frame(openxlsx::read.xlsx(input$annotation_file$datapath, 1, colNames = FALSE))
+      
+    } else if (input$use_example_data == TRUE){
+      annot <- data.frame(openxlsx::read.xlsx("example_data/example_annotation.xlsx", 1, colNames = FALSE))
+      
+    }
+    
+    annot <- annot[-(1:10),]
+    annot <- annot[,-c(4)]
+    colnames(annot) <- c("File", "Name", "Format")
+    annot <- na.omit(annot)
+    
+    assign("annotation_files", annot, envir = .GlobalEnv)
+    return(annot)
+  })
+  
   annotation_initial <- reactive({
     if (input$use_example_data == FALSE){
       req(input$annotation_file)
@@ -135,18 +153,9 @@ server <- function(input, output, session) {
   annot_columns_pre_group <- reactive ({
     annot_columns <- make.names(colnames(annotation_initial()))
     
-    if (input$use_example_data == FALSE){
-      annot_names <- data.frame(openxlsx::read.xlsx(input$annotation_file$datapath, 1, colNames = FALSE))
-      
-    } else if (input$use_example_data == TRUE){
-      annot_names <- data.frame(openxlsx::read.xlsx("example_data/example_annotation.xlsx", 1, colNames = FALSE))
-      
-    }
+    annot_names <- annotation_files()
     
-    annot_names <- annot_names[-(1:10),]
     annot_names <- annot_names[,-(3:4)]
-    colnames(annot_names) <- c("File", "Name")
-    annot_names <- na.omit(annot_names)
     annot_names <- as.list(make.names(annot_names$Name))
     
     annot_columns <- annot_columns[!annot_columns == "SampleName"]
@@ -166,14 +175,11 @@ server <- function(input, output, session) {
     files <- list()
     
     if (input$use_example_data == FALSE){
-      annot <- data.frame(openxlsx::read.xlsx(input$annotation_file$datapath, 1, colNames = FALSE))
-      
       for (i in 1:length(input$data_file[, 1])){
-      files[[i]] <- input$data_file[[i, 'name']]
+        files[[i]] <- input$data_file[[i, 'name']]
       }
       
     } else if (input$use_example_data == TRUE){
-      annot <- data.frame(openxlsx::read.xlsx("example_data/example_annotation.xlsx", 1, colNames = FALSE))
       files[[1]] <- "example_proteingroups"
       files[[2]] <- "example_phosphosites"
       files[[3]] <- "example_openms_annotated_output_pos"
@@ -181,10 +187,8 @@ server <- function(input, output, session) {
       
     }
     
-    annot <- annot[-(1:10),]
-    annot <- annot[,-c(3,4)]
-    colnames(annot) <- c("File", "Name")
-    annot <- na.omit(annot)
+    annot <- annotation_files()
+    annot <- annot[,-c(3:4)]
     
     type <- c()
     for (i in 1:length(files)){
@@ -239,7 +243,8 @@ server <- function(input, output, session) {
       selectInput("group",
                   label = "Select column(s) to form groups by",
                   choices = annot_columns_pre_group(),
-                  multiple = TRUE),
+                  multiple = TRUE,
+                  selected = annot_columns_pre_group()[1]),
       helpText("Multiple options can be selected to group by a combination of factors."),
       br()
     )
@@ -267,36 +272,44 @@ server <- function(input, output, session) {
   
   output$type <- renderPrint({
     req((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data))
-    for (i in 1:length(type())){
-      cat(type()[i], "; ", data_format()[i], "\n", sep = "")
-      
-      annot_columns <- annotation_initial()[,type()[i]]
-      
-      missing <- c()
-      for (j in 1:length(annot_columns)){
-        if (!(make.names(annot_columns[j]) %in% colnames(data()[[i]]))){
-          missing <- c(missing, annot_columns[j])
-        }
-      }
-      
-      if (data_format()[i] == "PhosphoSites" && length(missing) > 0){
-        remove <- c()
-        for (k in 1:length(missing)){
-          if (grepl(make.names(missing[k]), paste0(colnames(data()[[i]]), collapse = "; "))){
-            remove <- c(remove, missing[k])
+    
+    if (!all(input$data_file$name %in% annotation_files()$File)) {
+      cat("A file name provided does not match any uploaded file names. Please check the provided file names against the uploaded file names. \n")
+      cat("\t Annotation File Names: ", annotation_files()$File, "\n",
+          "\t Uploaded File Names: ", input$data_file$name)
+    } else {
+      for (i in 1:length(type())){
+        
+        cat(type()[i], "; ", data_format()[i], "\n", sep = "")
+        
+        annot_columns <- annotation_initial()[,type()[i]]
+        
+        missing <- c()
+        for (j in 1:length(annot_columns)){
+          if (!(make.names(annot_columns[j]) %in% colnames(data()[[i]]))){
+            missing <- c(missing, annot_columns[j])
           }
         }
-        missing <- missing[!(missing %in% unique(remove))]
+        
+        if (data_format()[i] == "PhosphoSites" && length(missing) > 0){
+          remove <- c()
+          for (k in 1:length(missing)){
+            if (grepl(make.names(missing[k]), paste0(colnames(data()[[i]]), collapse = "; "))){
+              remove <- c(remove, missing[k])
+            }
+          }
+          missing <- missing[!(missing %in% unique(remove))]
+        }
+        
+        missing <- na.omit(missing)
+        
+        if (length(missing) > 0){
+          cat("\t Columns from annotation file not found in data file: \n\t -", paste0(missing, collapse = "\n\t - "), "\n")
+        } else {
+          cat("\t All columns from annotation file matched to data file.\n")
+        }
+        cat("\n")
       }
-      
-      missing <- na.omit(missing)
-      
-      if (length(missing) > 0){
-        cat("\t Columns from annotation file not found in data file: \n\t -", paste0(missing, collapse = "\n\t - "), "\n")
-      } else {
-        cat("\t All columns from annotation file matched to data file.\n")
-      }
-      cat("\n")
     }
 
   })
@@ -340,7 +353,7 @@ server <- function(input, output, session) {
     
     withProgress(message = "Starting data cleaning...", value = 0, {
       for (i in 1:length(type())){
-        incProgress(amount = (1/(length(type()))), detail = paste("Filtering, normalizing, and imputing dataset", i , "of", length(type())))
+        incProgress(amount = (1/(length(type()))), detail = paste("Filtering, normalizing, and annotating dataset", i , "of", length(type())))
         
         eset[[i]] <- intensityNorm(eset = eset_prenorm()[[i]],
                                    norm = input$norm_eset,
@@ -3458,7 +3471,7 @@ server <- function(input, output, session) {
   })
   
   output$PCSF_gmts <- renderUI({
-    req(input$species)
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$species))
     
     if (!grepl("CHEBI:", paste0(PCSF_input()$gene_symbol, collapse = "; "))){
       if (input$species == "human"){
