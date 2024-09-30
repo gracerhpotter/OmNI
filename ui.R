@@ -323,11 +323,11 @@ ui <- fluidPage(
               
               selectInput("norm_eset",
                           label = "Normalization method",
-                          choices = c("Quantile" = "quantile",
+                          choices = c("Median Absolute Deviation (MAD)" = "MAD",
+                                      "Quantile" = "quantile",
                                       "Median" = "median",
                                       "Loess" = "loess",
                                       "Z-Transform" = "z transform",
-                                      "Median Absolute Deviation (MAD)" = "MAD",
                                       "Internal Reference Scaling" = "IRS",
                                       "None" = "none")),
               
@@ -378,7 +378,7 @@ ui <- fluidPage(
               
               checkboxInput("uniprot_annotation",
                             label = "Uniprot annotation",
-                            value = FALSE),
+                            value = TRUE),
               
               hr(),
               
