@@ -306,7 +306,7 @@ makeEset <- function(data,
       if(("Amino.acid" %in% colnames(data)) & ("Position"%in%colnames(data))){
         data[,"feature_identifier"] <- make.unique(paste0(data[,"Gene"],"_", data[,"Protein"],"_",
                                                           data[,"Amino.acid"],"", data[,"Position"], 
-                                                          "_", data[, "Multiplicate"]))
+                                                          ".", data[, "Multiplicate"]))
       } else if ("Index" %in% colnames(data)){
         data[,"feature_identifier"] <- make.unique(paste0(data[,"Gene"], "_", data[,"Index"]))
       } else if ("Ensembl" %in% colnames(data)){
