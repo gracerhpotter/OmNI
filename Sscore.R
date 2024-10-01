@@ -20,7 +20,7 @@
 #'
 
 makeDataList <- function(top_table_list,
-                           data_format){
+                         data_format) {
   
   data_list <- list()
   
@@ -106,13 +106,15 @@ convertUniprotSymbol <- function(input_df,
   # Extract keys from the specified column
   keys <- input_df[[key_column]]
   
+  input_df$gene_symbol <- rep("NA", nrow(input_df))
+  
   # Perform mapping using AnnotationDbi::mapIds
   # TODO: EDIT SO MORE THAN HUMAN ACCEPTED 
   try({input_df$gene_symbol <- AnnotationDbi::mapIds(org.Hs.eg.db::org.Hs.eg.db, keys, keytype, column = "SYMBOL")}) # human
   try({input_df$gene_symbol <- AnnotationDbi::mapIds(org.Mm.eg.db::org.Mm.eg.db, keys, keytype, column = "SYMBOL")}) # mouse
   
   # Rename the "SYMBOL" column to "gene_symbol" in the original dataframe
-  input_df$gene_symbol <- stringr::str_squish(input_df$gene_symbol)
+  try({input_df$gene_symbol <- stringr::str_squish(input_df$gene_symbol)})
   
   # Return the modified dataframe
   return(input_df)
@@ -158,17 +160,37 @@ computeWeightedZIList <- function(data_list = data_list) {
                                  Peptides = 0.5,
                                  Generic = 0.5)
   
-  # Calculate weights based on the number of features and biological importance
-  try({
-    ProteinGroups_weight <- bio_importance_weights$ProteinGroups / sqrt(nrow(data_list$ProteinGroups))
-    PhosphoSites_weight <- bio_importance_weights$PhosphoSites / sqrt(nrow(data_list$PhosphoSites))
-    RNA_weight <- bio_importance_weights$RNA / sqrt(nrow(data_list$RNA))
-    MetaboliteNeg_weight <- bio_importance_weights$MetaboliteNeg / sqrt(nrow(data_list$MetaboliteNeg))
-    MetabolitePos_weight <- bio_importance_weights$MetabolitePos / sqrt(nrow(data_list$MetabolitePos))
-    Peptides_weight <- bio_importance_weights$Peptides / sqrt(nrow(data_list$Peptides))
-    Generic_weight <- bio_importance_weights$Generic / sqrt(nrow(data_list$Generic))
-  })
+  assign("data_list", data_list, envir = .GlobalEnv)
   
+  # Calculate weights based on the number of features and biological importance
+  if ("ProteinGroups" %in% names(data_list)){
+    ProteinGroups_weight <- bio_importance_weights$ProteinGroups / sqrt(nrow(data_list$ProteinGroups))
+    
+  }
+  if ("PhosphoSites" %in% names(data_list)){
+    PhosphoSites_weight <- bio_importance_weights$PhosphoSites / sqrt(nrow(data_list$PhosphoSites))
+    
+  }
+  if ("RNA" %in% names(data_list)){
+    RNA_weight <- bio_importance_weights$RNA / sqrt(nrow(data_list$RNA))
+    
+  }
+  if ("MetaboliteNeg" %in% names(data_list)){
+    MetaboliteNeg_weight <- bio_importance_weights$MetaboliteNeg / sqrt(nrow(data_list$MetaboliteNeg))
+    
+  }
+  if ("MetabolitePos" %in% names(data_list)){
+    MetabolitePos_weight <- bio_importance_weights$MetabolitePos / sqrt(nrow(data_list$MetabolitePos))
+    
+  }
+  if ("Peptides" %in% names(data_list)){
+    Peptides_weight <- bio_importance_weights$Peptides / sqrt(nrow(data_list$Peptides))
+    
+  }
+  if ("Generic" %in% names(data_list)){
+    Generic_weight <- bio_importance_weights$Generic / sqrt(nrow(data_list$Generic))
+    
+  }
   
   # COMPUTE WEIGHTED Z-SCORES ####################################################
   #' @title Compute Weighted Z-Scores
@@ -370,23 +392,10 @@ sscoreIntegration <- function(data_list){
   
   message("--- binding dataframes")
   ## BIND S-SCORE DF ROWS ------------------------------------------------------
-  sscore_combined <- sscore_combined_list[[1]] %>%
-    dplyr::select(uniprot_id,
-                  dplyr::starts_with("feature_id"), 
-                  sscore, 
-                  sscore_pval, 
-                  sscore_adj_pval, 
-                  dplyr::starts_with("comb_"), 
-                  dplyr::starts_with("logfc"), 
-                  dplyr::starts_with("weighted"), 
-                  dplyr::starts_with("wk"))
   
-  # if metabolomics included this step combines the non-metabolomics and metabolomics
-  # s-score dataframes
-  if (length(sscore_combined_list) == 2){
-    sscore_combined <- dplyr::bind_rows(sscore_combined, sscore_combined_list[[2]]) %>%
+  if (!is.null(sscore_combined_list[[1]])){
+    sscore_combined <- sscore_combined_list[[1]] %>%
       dplyr::select(uniprot_id,
-                    chebi_id, 
                     dplyr::starts_with("feature_id"), 
                     sscore, 
                     sscore_pval, 
@@ -395,7 +404,39 @@ sscoreIntegration <- function(data_list){
                     dplyr::starts_with("logfc"), 
                     dplyr::starts_with("weighted"), 
                     dplyr::starts_with("wk"))
+    
+    # if metabolomics included this step combines the non-metabolomics and metabolomics
+    # s-score dataframes
+    if (length(sscore_combined_list) == 2){
+      sscore_combined <- dplyr::bind_rows(sscore_combined, sscore_combined_list[[2]]) %>%
+        dplyr::select(uniprot_id,
+                      chebi_id, 
+                      dplyr::starts_with("feature_id"), 
+                      sscore, 
+                      sscore_pval, 
+                      sscore_adj_pval, 
+                      dplyr::starts_with("comb_"), 
+                      dplyr::starts_with("logfc"), 
+                      dplyr::starts_with("weighted"), 
+                      dplyr::starts_with("wk"))
+    }
+  } else {
+    sscore_combined <- sscore_combined_list[[2]] %>%
+      dplyr::select(uniprot_id,
+                    chebi_id,
+                    dplyr::starts_with("feature_id"), 
+                    sscore, 
+                    sscore_pval, 
+                    sscore_adj_pval, 
+                    dplyr::starts_with("comb_"), 
+                    dplyr::starts_with("logfc"), 
+                    dplyr::starts_with("weighted"), 
+                    dplyr::starts_with("wk")) %>%
+      dplyr::mutate(gene_symbol = "NA")
   }
+  
+  message("COMBINED S_SCORE DATAFRAME")
+  message(str(sscore_combined))
   
   message("--- cleaning & formatting")
   ## CLEAN & FORMAT DATAFRAME --------------------------------------------------
