@@ -3149,6 +3149,19 @@ ui <- fluidPage(
                  ),
                  
                  hr(),
+                 h6("Mu",
+                    bslib::tooltip(bsicons::bs_icon("info-circle"),
+                                   "A higher mu correlates to a smaller the number of Steiners, which correlates to higher stringency.",
+                                   placement = "right")),
+                 
+                 numericInput("pcsf_mu",
+                              label = "Mu Value",
+                              value = 0.005,
+                              step = 0.05,
+                              min = 0,
+                              max = 1),
+                 
+                 hr(),
                  h6("Input Overview"),
                  shinycssloaders::withSpinner(DT::dataTableOutput("PCSF_input_table"), type = 8)
                ),
