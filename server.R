@@ -128,7 +128,6 @@ server <- function(input, output, session) {
     colnames(annot) <- c("File", "Name", "Format")
     annot <- na.omit(annot)
     
-    assign("annotation_files", annot, envir = .GlobalEnv)
     return(annot)
   })
   
@@ -2578,6 +2577,7 @@ server <- function(input, output, session) {
     }
     names(data_list) <- input$sscore_limma_contrasts
     
+    # assign("Sscore_DataList", data_list, envir = .GlobalEnv)
     message("--- COMPLETED SSCORE DATA LIST")
     
     return(data_list);
@@ -2595,7 +2595,7 @@ server <- function(input, output, session) {
       }
       names(sscore) <- input$sscore_limma_contrasts
     })
-
+    
     message("--- COMPLETED SSCORE INTEGRATION")
     
     return(sscore);
@@ -3357,13 +3357,14 @@ server <- function(input, output, session) {
   PCSF_network <- reactive({
     pcsf_input <- PCSF_input()
     pcsf_net <- makePCSFNetwork(pcsf_input_data = pcsf_input,
-                    pcsf_nval = 10)
+                                pcsf_nval = 10,
+                                mu = input$pcsf_mu)
     
     # assign("pcsf_net", pcsf_net, envir = .GlobalEnv)
     return(pcsf_net)
   }) %>% bindEvent(c(input$network_input_type, input$network_SOLM_dataset, input$network_SOLM_coef,
                      input$network_SOLM_pval_cutoff, input$network_SOLM_logfc_cutoff, input$network_MOLM_coef,
-                     input$network_MOLM_pval_cutoff, input$network_MOLM_logfc_cutoff))
+                     input$network_MOLM_pval_cutoff, input$network_MOLM_logfc_cutoff, input$pcsf_mu))
   
   PCSF_enriched <- reactive({
     PCSF_enriched <- pcsfRunEnrichment(pcsf_net = PCSF_network(),
@@ -3749,20 +3750,22 @@ server <- function(input, output, session) {
     linear_models <- list()
     
     message("INITIALIZED LINEAR MODEL(S) GENERATION")
-    for (i in 1:length(type())){
-      linear_models[[i]] <- limmaLM(annot = annotation(),
-                                    eset = eset()[[i]],
-                                    samples = input$report_linear_factors,
-                                    time_series = input$report_include_timeseries,
-                                    time_col = input$report_time_col,
-                                    time_points_cont = input$report_time_points_cont,
-                                    time_points_disc = input$report_time_points_disc,
-                                    time = input$report_time_type,
-                                    contrast_fit = input$report_contrast_fit,
-                                    contrasts_subset = input$report_limma_contrasts,
-                                    covariate = input$report_add_covariate,
-                                    covariate_col = input$report_covariate_col)
-    }
+    try({
+      for (i in 1:length(type())){
+        linear_models[[i]] <- limmaLM(annot = annotation(),
+                                      eset = eset()[[i]],
+                                      samples = input$report_linear_factors,
+                                      time_series = input$report_include_timeseries,
+                                      time_col = input$report_time_col,
+                                      time_points_cont = input$report_time_points_cont,
+                                      time_points_disc = input$report_time_points_disc,
+                                      time = input$report_time_type,
+                                      contrast_fit = input$report_contrast_fit,
+                                      contrasts_subset = input$report_limma_contrasts,
+                                      covariate = input$report_add_covariate,
+                                      covariate_col = input$report_covariate_col)
+      }
+    })
     
     message("---- LINEAR MODEL(S) GENERATED")
     return(linear_models)
@@ -3938,25 +3941,28 @@ server <- function(input, output, session) {
     message("INITIALIZED GLIMMA ARG GENERATION")
     
     args <- list()
-    for (i in 1:length(type())){
-      
-      arg <- list()
-      for (j in 1:length(report_coef_options())){
-
-        table <- makeTopTable(report_linear_model()[[i]],
-                              coef = report_coef_options()[[j]],
-                              coef_options = report_coef_options())
+    
+    try({
+      for (i in 1:length(type())){
         
-        arg[[j]] <- interactiveVolcano(eset = eset()[[i]],
-                                       fit = report_linear_model()[[i]], 
-                                       top_table = table, 
-                                       type = type()[i], 
-                                       coef = report_coef_options()[[j]])
+        arg <- list()
+        for (j in 1:length(report_coef_options())){
+          
+          table <- makeTopTable(report_linear_model()[[i]],
+                                coef = report_coef_options()[[j]],
+                                coef_options = report_coef_options())
+          
+          arg[[j]] <- interactiveVolcano(eset = eset()[[i]],
+                                         fit = report_linear_model()[[i]], 
+                                         top_table = table, 
+                                         type = type()[i], 
+                                         coef = report_coef_options()[[j]])
+          
+        }
         
+        args[[i]] <- arg
       }
-      
-      args[[i]] <- arg
-    }
+    })
     message("---- GLIMMA ARGS GENERATED")
     return(args)
   })
