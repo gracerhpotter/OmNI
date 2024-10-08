@@ -3679,6 +3679,7 @@ server <- function(input, output, session) {
                      data_format = data_format(),
                      norm = input$norm_eset,
                      MD_contrasts = report_md_contrasts(),
+                     has_linear_model = report_has_linear_model(),
                      linear_model = report_linear_model(),
                      contrasts = report_coef_options(),
                      model_equation = report_model_equation(),
@@ -3747,7 +3748,7 @@ server <- function(input, output, session) {
   #### REPORT LIMMA LINEAR MODEL -----------------------------------------------
   report_linear_model <- reactive({
     req((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data))
-    linear_models <- list()
+    linear_models <- list("NONE")
     
     message("INITIALIZED LINEAR MODEL(S) GENERATION")
     try({
@@ -3769,6 +3770,16 @@ server <- function(input, output, session) {
     
     message("---- LINEAR MODEL(S) GENERATED")
     return(linear_models)
+  })
+  
+  report_has_linear_model <- reactive({
+    assign("report_linear_model", report_linear_model(), envir = .GlobalEnv)
+    if (!(length(report_linear_model()[[1]]) == 1)){
+      has_linear_model <- TRUE
+    } else {
+      has_linear_model <- FALSE
+    }
+    return(has_linear_model)
   })
   
   report_coef_options <- reactive({
