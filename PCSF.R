@@ -18,7 +18,8 @@
 #'
 
 makePCSFNetwork <- function(pcsf_input_data = pcsf_input_data,
-                            pcsf_nval = 10){
+                            pcsf_nval = 10,
+                            mu = 0.005){
   
   # pcsf_input_data <- PCSF_input
   pcsf_ppi <- readr::read_rds("PCSF_files/pcsf_ppi.rds")
@@ -38,7 +39,7 @@ makePCSFNetwork <- function(pcsf_input_data = pcsf_input_data,
   pcsf_net = PCSF::PCSF_rand(ppi = pcsf_ppi, 
                              terminal = pcsf_input_prizes, 
                              n = pcsf_nval,
-                             mu = 0.005 ) # higher mu = smaller the number of Steiners
+                             mu = mu) # higher mu = smaller the number of Steiners
   
   # assign("pcsf_net", pcsf_net, envir = .GlobalEnv)
   return(pcsf_net)
