@@ -90,6 +90,7 @@ for (i in 1:length(params$type)){
 }
 ```
 
+
 ```{r Download Data Summaries}
 for (i in 1:length(params$type)){
   normed_exprs_eset <- data.frame(Biobase::exprs(params$eset[[i]]))
@@ -99,7 +100,9 @@ for (i in 1:length(params$type)){
   write.csv(prenorm_stat_summary, 
             paste0(save_dir, "/", params$type[i], "/PrenormStatSummary_", params$type[i], ".csv"))
 }
+```
 
+```{r Download Excel Summary, eval = (!is.null(str(params$linear_model)))}
 wbOut <- openxlsx::createWorkbook()
       
 for (i in 1:length(params$type)){
@@ -130,7 +133,7 @@ An overview of the dataset uploaded and groups, contrasts, and expression set us
 suppressPackageStartupMessages(library(kableExtra))
 knitr::kable(params$annot) %>%
   kableExtra::kable_styling() %>%
-  scroll_box(width = "100%", height = "500px")
+  scroll_box(width = "100%", height = "auto")
 ```
 
 ## Name
@@ -162,7 +165,11 @@ print(params$contrasts)
 The format of the equation used to design the `limma` linear model which is used for differential analysis.
 
 ```{r Model Equation}
-print(params$model_equation)
+if (!is.null(str(params$linear_model))) {
+  print(params$model_equation)
+} else {
+  print("No linear model generated.")
+}
 ```
 
 ## Data Overview
@@ -712,9 +719,13 @@ for (i in 1:length(params$batch_pca_data)){
 }
 ```
 
-# Volcano Plots
+```{r Volcano Header, results = 'asis', eval = (!is.null(str(params$linear_model)))}
+cat("# Volcano Plots")
+```
 
-The volcano plots are generated based on the options selected for the linear model. Each contrast (or if contrasts are not selected each group) has its own correlating volcano plot. The volcano plots show log fold change values on the x-axis and log p-values or adjusted p-values on the y-axis.
+```{r Volcano Description, results = 'asis', eval = (!is.null(str(params$linear_model)))}
+cat("The volcano plots are generated based on the options selected for the linear model. Each contrast (or if contrasts are not selected each group) has its own correlating volcano plot. The volcano plots show log fold change values on the x-axis and log p-values or adjusted p-values on the y-axis.")
+```
 
 ```{r Volcano Plot Progress, fig.height = 7, fig.width = 10}
 if (params$rendered_by_shiny) {
@@ -722,9 +733,11 @@ if (params$rendered_by_shiny) {
   shiny::incProgress(detail = paste("Generating volcano plots..."))} 
 ```
 
-### Adjusted P-Value
+```{r Volcano Adj P-Val SubHeader, results = 'asis', eval = (!is.null(str(params$linear_model)))}
+cat("### Adjusted P-Value")
+```
 
-```{r Volcano Plot Adj P-Val, fig.height = 7, fig.width = 10}
+```{r Volcano Plot Adj P-Val, fig.height = 7, fig.width = 10, eval = (!is.null(str(params$linear_model)))}
 for (i in 1:length(params$eset)){
   for (item in params$contrasts){
     table <- makeTopTable(fit = params$linear_model[[i]],
@@ -750,9 +763,11 @@ for (i in 1:length(params$eset)){
 }
 ```
 
-### P-Value
+```{r Volcano P-Val SubHeader, results = 'asis', eval = (!is.null(str(params$linear_model)))}
+cat("### P-Value")
+```
 
-```{r Volcano Plot P-Val, fig.height = 7, fig.width = 10}
+```{r Volcano Plot P-Val, fig.height = 7, fig.width = 10, eval = (!is.null(str(params$linear_model)))}
 for (i in 1:length(params$eset)){
   for (item in params$contrasts){
     table <- makeTopTable(fit = params$linear_model[[i]],
@@ -778,7 +793,7 @@ for (i in 1:length(params$eset)){
 }
 ```
 
-```{r Volcano Download, include = FALSE, fig.height = 7, fig.width = 10}
+```{r Volcano Download, include = FALSE, fig.height = 7, fig.width = 10, eval = (!is.null(str(params$linear_model)))}
 for (i in 1:length(params$eset)){
   for (item in params$contrasts){
     table <- makeTopTable(fit = params$linear_model[[i]],
@@ -827,14 +842,17 @@ for (i in 1:length(params$eset)){
     }
   }
 }
-
 ```
 
-# Differential Heatmaps
+```{r Diff Heatmaps Header, results = 'asis', eval = (!is.null(str(params$linear_model)))}
+cat("# Differential Heatmaps")
+```
 
-The differential heatmaps are based on the output of the limma linear model. Each contrast or group has a corresponding heatmap, which is subset by the top 50  most variable rows/genes.
+```{r Diff Heatmaps Description, results = 'asis', eval = (!is.null(str(params$linear_model)))}
+cat("The differential heatmaps are based on the output of the limma linear model. Each contrast or group has a corresponding heatmap, which is subset by the top 50  most variable rows/genes.")
+```
 
-```{r Differential Heatmaps, fig.height = 10, fig.width = 10}
+```{r Differential Heatmaps, fig.height = 10, fig.width = 10, eval = (!is.null(str(params$linear_model)))}
 if (params$rendered_by_shiny) {
   shiny::setProgress(0.8)
   shiny::incProgress(detail = paste("Generating differential heatmaps..."))} 
@@ -1763,7 +1781,7 @@ See information about the system that generated this report below.
 utils::sessionInfo()
 ```
 
-```{r Glimma}
+```{r Glimma, eval = (!is.null(str(params$linear_model)))}
 # generate Glimma plots windows
 for (i in 1:length(params$type)){
   for (j in 1:length(params$contrasts)) {
