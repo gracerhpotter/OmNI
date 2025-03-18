@@ -453,13 +453,8 @@ server <- function(input, output, session) {
     
     assign("table_eset_table", exprs_eset, envir = .GlobalEnv)
     
-    if (isTruthy(input$interactors)){
-      DT::datatable(exprs_eset[gsub("_.*", "", row.names(exprs_eset)) %in% unlist(interactors()),], rownames = TRUE, options = list(pageLength = 15, scrollX = TRUE))  %>% 
-        DT::formatRound(columns = c(1:ncol(exprs_eset)), digits = 3)
-    } else {
-      DT::datatable(exprs_eset, rownames = TRUE, options = list(pageLength = 15, scrollX = TRUE))  %>% 
-        DT::formatRound(columns = c(1:ncol(exprs_eset)), digits = 3)
-    }
+    DT::datatable(exprs_eset, rownames = TRUE, options = list(pageLength = 15, scrollX = TRUE))  %>% 
+      DT::formatRound(columns = c(1:ncol(exprs_eset)), digits = 3)
     
   })
   
@@ -488,40 +483,6 @@ server <- function(input, output, session) {
       write.table(exprs_eset, file, row.names = TRUE, sep = "\t", col.names = NA)
     }
   )
-  
-  ## INTERACTOR LISTS ##########################################################
-  
-  interactors <- reactive({
-    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$interactors) && isTruthy(input$interactor_targets))
-    
-    interactors <- expectedInteractors(genes = input$interactor_targets,
-                                       species = input$species)
-    
-    assign("interactors", interactors, envir = .GlobalEnv)
-    return(interactors)
-  })
-  
-  output$input_interactor_targets <- renderUI({
-    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$interactors))
-    
-    tagList(
-      textInput("interactor_targets",
-                label = "Input gene symbols",
-                placeholder = "GENE1;GENE2"),
-      
-      helpText("If there are multiple genes/proteins of interest separate them with a semicolon,
-               i.e. 'GENE1;GENE2;GENE3'.")
-    )
-  })
-  
-  output$interactorsHeader <- renderUI({
-    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$interactors))
-    h5("Interactor List(s)")
-  })
-  
-  output$view_interactors <- renderPrint({
-    print(interactors())
-  })
   
   ## PRE-NORM DATA SUMMARY #####################################################
   

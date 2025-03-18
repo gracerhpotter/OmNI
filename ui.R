@@ -18,6 +18,7 @@ source("drawCorrelation.R")
 source("drawNormalization.R")
 source("Sscore.R")
 source("PCSF.R")
+source("pullExpected.R")
 
 # inactivity <- "function idleTimer() {
 #   var t = setTimeout(logout, 3600000);
@@ -323,10 +324,12 @@ ui <- fluidPage(
               
               selectInput("norm_eset",
                           label = "Normalization method",
-                          choices = c("Median Absolute Deviation (MAD)" = "MAD",
+                          choices = c("Median" = "median",
+                                      "Median Absolute Deviation (MAD)" = "MAD",
                                       "Quantile" = "quantile",
-                                      "Median" = "median",
+                                      "VSN" = "vsn",
                                       "Loess" = "loess",
+                                      "Median MAD" = "medianMAD",
                                       "Z-Transform" = "z transform",
                                       "Internal Reference Scaling" = "IRS",
                                       "None" = "none")),
@@ -550,6 +553,9 @@ ui <- fluidPage(
                          br(),
                          
                          shinycssloaders::withSpinner(DT::dataTableOutput("prenorm_describe"), type = 8),
+                         
+                         br(),
+                         verbatimTextOutput("fdr"),
                          
                          br()
                 ),
