@@ -45,6 +45,10 @@ variationPlot <- function(eset,
   } else if (ncol(emat) > 16) {number_size = 8
   } else if (ncol(emat) > 30) {number_size = 4}
   
+  paletteLength <- 100
+  breaks <- c(seq(min(correlation_matrix), 0, length.out=ceiling(paletteLength/2) + 1), 
+                seq(max(correlation_matrix)/paletteLength, max(correlation_matrix), length.out=floor(paletteLength/2)))
+  
   if (high_variance == FALSE) {
     # GENERATE CORRELATION HEATMAP PLOT
     correlation_plot <- pheatmap::pheatmap(correlation_matrix,
@@ -58,7 +62,8 @@ variationPlot <- function(eset,
                                            display_numbers = numbers,
                                            number_color = "black",
                                            border_color = "white",
-                                           fontsize_number = number_size)
+                                           fontsize_number = number_size,
+                                           breaks = breaks)
     
     message("** GENERATED BASIC CORRELATION PLOT **")
   
@@ -81,7 +86,8 @@ variationPlot <- function(eset,
                                            display_numbers = numbers,
                                            number_color = "black",
                                            border_color = "white",
-                                           fontsize_number = number_size) 
+                                           fontsize_number = number_size,
+                                           breaks = breaks) 
     
     message("** GENERATED HIGH VARIANCE CORRELATION PLOT **")
   }
