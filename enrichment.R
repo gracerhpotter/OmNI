@@ -88,7 +88,7 @@ calculateGeneList <- function(fit,
 clusterProfilerEnrichment <- function(geneList,
                                       gmt = "",
                                       enrichment = "",
-                                      pval_cutoff = 0.05){
+                                      pval_cutoff = 1){
   
   # GENERATE GMT REFERENCES
   GMT_file <- list.files("./GMTs", pattern = gmt)
