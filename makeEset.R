@@ -33,7 +33,7 @@ makeEset <- function(data,
   # annotate <- openxlsx::read.xlsx("~/Documents/EmiliLab/OmNI/example_data/example_preprocessed_annotation.xlsx", 2, colNames = TRUE)
   # type <- "PreProcessedData"
   # data_format <- "Generic"
-  
+  assign("data", data, envir = .GlobalEnv)
   if (data_format == "RNA" & !("Ensembl" %in% colnames(data))) {
     stop(paste0("The RNA data format REQUIRES an 'Ensembl' column."))
   }
@@ -78,17 +78,14 @@ makeEset <- function(data,
     data <- data1
     data[data == ""] <- NA
   }
-  
-  # For MaxQuant formats, remove potential contaminants and reverse hits
-  if (("Protein.IDs" %in% colnames(data))){
-    data <- data[!grepl("CON_", data$Protein.IDs),] # remove contaminants from MQ
-    data <- data[!grepl("REV_", data$Protein.IDs),] # remove reverse from MQ
-  }
 
-  if (("Protein" %in% colnames(data))){
-    data <- data[!grepl("contam_", data$Protein),] # remove contaminants from FragPipe
-    data <- data[!grepl("CON_", data$Protein),] # remove contaminants from MQ Phospho
-    data <- data[!grepl("REV_", data$Protein),] # remove reverse from MQ Phospho
+  protein_columns <- c("Protein.IDs", "Protein", "Index")
+  j <- which(protein_columns %in% colnames(data))
+  if (length(j) != 0) {
+    data <- data[!grepl("contam_", data[,j]),] # remove contaminants from FragPipe
+    data <- data[!grepl("rev_", data[,j]),] # remove reverse hits from FragPipe
+    data <- data[!grepl("CON_", data[,j]),] # remove contaminants from MQ Phospho
+    data <- data[!grepl("REV_", data[,j]),] # remove reverse hits from MQ Phospho
   }
   
   # Get and format Sample Names from annotation
@@ -294,9 +291,9 @@ makeEset <- function(data,
     }
   }
   
-  if ("Gene" %in% colnames(data)){
-    data[,"Gene"] <- toupper(data[,"Gene"])
-  }
+  # if ("Gene" %in% colnames(data)){
+  #   data[,"Gene"] <- toupper(data[,"Gene"])
+  # }
   
   #-----------------------------------------------------------------------------
   
@@ -308,7 +305,11 @@ makeEset <- function(data,
                                                           data[,"Amino.acid"],"", data[,"Position"], 
                                                           ".", data[, "Multiplicate"]))
       } else if ("Index" %in% colnames(data)){
-        data[,"feature_identifier"] <- make.unique(paste0(data[,"Gene"], "_", data[,"Index"]))
+        if (data_format == "ProteinGroups"){
+          data[,"feature_identifier"] <- make.unique(paste0(data[,"Gene"], "_", data[,"Index"]))
+        } else if (data_format == "PhosphoSites"){
+          data[,"feature_identifier"] <- make.unique(paste0(data[,"Gene"], "_", data[,"Protein"], "_", gsub(".*_", "", data[,"Index"])))
+        }
       } else if ("Ensembl" %in% colnames(data)){
         data[,"feature_identifier"] <- make.unique(paste0(data[,"Gene"], "_", data[,"Protein"], "_", data[,"Ensembl"]))
       } else {
@@ -335,8 +336,9 @@ makeEset <- function(data,
   # } 
   
   #-----------------------------------------------------------------------------
-  
+  assign("data.matrix", data.matrix, envir = .GlobalEnv)
   data.matrix[is.na(data.matrix)] <- 0 # NA values become zeros
+  data.matrix[is.nan(data.matrix)] <- 0 # NA values become zeros
   
   # Make column and row names for data matrix
   colnames(data.matrix) <- annotate[which(annotate[,type] %in% sample_column_names), "SampleName"]
