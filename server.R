@@ -46,7 +46,7 @@ server <- function(input, output, session) {
   })
   
   # INCREASE MAX FILE SIZE TO 30KB
-  options(shiny.maxRequestSize = 30 * 1024 ^ 2)
+  options(shiny.maxRequestSize = 60 * 1024 ^ 2)
   
   ## SESSION INFO ##############################################################
   output$session_info <- renderPrint({
@@ -135,8 +135,7 @@ server <- function(input, output, session) {
     if (input$use_example_data == FALSE){
       req(input$annotation_file)
       ext <- tools::file_ext(input$annotation_file$datapath)
-      validate(need(ext == "xlsx", "Please upload a .xlsx for the annotation file."))
-      
+      shiny::validate(need(ext == "xlsx", "Please upload a .xlsx for the annotation file."))
       annot <- data.frame(openxlsx::read.xlsx(input$annotation_file$datapath, 2, colNames = TRUE))
     } else if (input$use_example_data == TRUE){
       annot <- data.frame(openxlsx::read.xlsx("example_data/example_annotation.xlsx", 2, colNames = TRUE))
@@ -318,7 +317,7 @@ server <- function(input, output, session) {
   })
   
   output$view_annotation <- DT::renderDataTable({
-    validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header on the left."))
+    shiny::validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header on the left."))
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group))
     
     DT::datatable(annotation(), rownames = FALSE, options = list(scrollX = TRUE))
@@ -341,7 +340,7 @@ server <- function(input, output, session) {
                                 uniprot_annotation = input$uniprot_annotation)
     }
     
-    # assign("eset_prenorm", eset_obj, envir = .GlobalEnv)
+    assign("eset_prenorm", eset_obj, envir = .GlobalEnv)
     return(eset_obj)
   })
   
@@ -382,7 +381,7 @@ server <- function(input, output, session) {
   
   output$IRS_column <- renderUI({
     if (input$norm_eset == "IRS"){
-      validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header, then you will be able to select the TMT grouping column for IRS normalization."))
+      shiny::validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header, then you will be able to select the TMT grouping column for IRS normalization."))
       
       selectInput("TMT_group_column",
                   label = "Select which column contains TMT groups",
@@ -405,7 +404,7 @@ server <- function(input, output, session) {
   
   output$batch_column <- renderUI({
     req(input$batch_norm)
-    validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header, then you will be able to select the TMT grouping column for IRS normalization."))
+    shiny::validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header, then you will be able to select the TMT grouping column for IRS normalization."))
     
     selectInput("batch_column",
                 label = "Select which column contains batch information",
@@ -434,7 +433,7 @@ server <- function(input, output, session) {
   
   ### PRINT/TABLE/PLOTS --------------------------------------------------------
   output$view_raw_eset <- DT::renderDataTable({
-    validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header on the left."))
+    shiny::validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header on the left."))
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$eset_dataset))
     
     i <- which(type() == input$eset_dataset)
@@ -446,16 +445,21 @@ server <- function(input, output, session) {
   })
   
   output$view_cleaned_eset <- DT::renderDataTable({
-    validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header on the left."))
+    shiny::validate(need(input$group, message = "No group column selected. Please select a column under the 'group' header on the left."))
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$normplot_dataset))
     
     i <- which(type() == input$normplot_dataset)
     exprs_eset = Biobase::exprs(eset()[[i]])
     
-    # assign("table_eset_table", exprs_eset, envir = .GlobalEnv)
+    assign("table_eset_table", exprs_eset, envir = .GlobalEnv)
     
-    DT::datatable(exprs_eset, rownames = TRUE, options = list(pageLength = 15, scrollX = TRUE))  %>% 
-      DT::formatRound(columns = c(1:ncol(exprs_eset)), digits = 3)
+    if (isTruthy(input$interactors)){
+      DT::datatable(exprs_eset[gsub("_.*", "", row.names(exprs_eset)) %in% unlist(interactors()),], rownames = TRUE, options = list(pageLength = 15, scrollX = TRUE))  %>% 
+        DT::formatRound(columns = c(1:ncol(exprs_eset)), digits = 3)
+    } else {
+      DT::datatable(exprs_eset, rownames = TRUE, options = list(pageLength = 15, scrollX = TRUE))  %>% 
+        DT::formatRound(columns = c(1:ncol(exprs_eset)), digits = 3)
+    }
     
   })
   
@@ -484,6 +488,40 @@ server <- function(input, output, session) {
       write.table(exprs_eset, file, row.names = TRUE, sep = "\t", col.names = NA)
     }
   )
+  
+  ## INTERACTOR LISTS ##########################################################
+  
+  interactors <- reactive({
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$interactors) && isTruthy(input$interactor_targets))
+    
+    interactors <- expectedInteractors(genes = input$interactor_targets,
+                                       species = input$species)
+    
+    assign("interactors", interactors, envir = .GlobalEnv)
+    return(interactors)
+  })
+  
+  output$input_interactor_targets <- renderUI({
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$interactors))
+    
+    tagList(
+      textInput("interactor_targets",
+                label = "Input gene symbols",
+                placeholder = "GENE1;GENE2"),
+      
+      helpText("If there are multiple genes/proteins of interest separate them with a semicolon,
+               i.e. 'GENE1;GENE2;GENE3'.")
+    )
+  })
+  
+  output$interactorsHeader <- renderUI({
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$interactors))
+    h5("Interactor List(s)")
+  })
+  
+  output$view_interactors <- renderPrint({
+    print(interactors())
+  })
   
   ## PRE-NORM DATA SUMMARY #####################################################
   
@@ -525,6 +563,37 @@ server <- function(input, output, session) {
     return(table)
   })
   
+  fdr_calculation <- reactive({
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$statsummary_dataset))
+    
+    i <- which(type() == input$statsummary_dataset)
+    data <- data()[[i]]
+    assign("data", data, envir = .GlobalEnv)
+    
+    FDR <- "Insufficient information provided."
+    
+    if ("Reverse" %in% colnames(data)){
+      decoy <- nrow(data[(data$Reverse == "+" & data$Potential.contaminant == ""),])
+      non_decoy <- nrow(data[(data$Reverse == "" & data$Potential.contaminant == ""),])
+      FDR <- decoy / non_decoy
+      FDR <- paste0("FDR: ", round(FDR * 100, digits = 2), "%; Decoys: ", decoy, " & Non-Decoy Targets: ", non_decoy)
+    } else {
+      col_names <- c("Index", "Protein", "Accession", "Protein.IDs")
+      column <- intersect(colnames(data), col_names)
+      column <- ifelse(length(column) > 1, column[1], column)
+      try({
+        decoy <- nrow(data[grepl("REV_|reverse_", data[, column]) & !grepl("CON_|contam_", data[, column]),])
+        non_decoy <- nrow(data[!grepl("REV_|reverse_", data[, column]) & !grepl("CON_|contam_", data[, column]),])
+      })
+      if(length(column) != 0){
+        FDR <- decoy / non_decoy
+        FDR <- paste0("FDR: ", round(FDR * 100, digits = 2), "%; Decoys: ", decoy, " & Non-Decoy Targets: ", non_decoy)
+      }  
+    }
+    
+    return(FDR)
+  })
+  
   ### RENDER UI ----------------------------------------------------------------
   output$statsummary_choose_dataset <- renderUI({
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)))
@@ -558,6 +627,10 @@ server <- function(input, output, session) {
     DT::datatable(table, rownames = TRUE, options = list(scrollX = TRUE)) %>%
       DT::formatRound(columns = c(3:ncol(table)), digits = 3)
     
+  })
+  
+  output$fdr <- renderPrint({
+    fdr_calculation()
   })
   
   output$title_missing_value <- renderPrint({
@@ -600,17 +673,17 @@ server <- function(input, output, session) {
     content = function(file) {
       i <- which(type() == input$missingvalue_dataset)
       if (input$prenorm_missingvalue_ext == ".png"){
-        grDevices::png(file, width = 1200, height = 700, units = "px", res = 150)
+        grDevices::png(file, width = 1200, height = 1000, units = "px", res = 150)
         plot(visualizing_missing_values_plot(), cex.axis = 0.7, numbers = TRUE, prop = FALSE)
         dev.off()
         
       } else if (input$prenorm_missingvalue_ext == ".pdf"){
-        grDevices::pdf(file, width = 12, height = 7)
+        grDevices::pdf(file, width = 12, height = 10)
         plot(visualizing_missing_values_plot(), cex.axis = 0.7, numbers = TRUE, prop = FALSE)
         dev.off()
         
       } else if (input$prenorm_missingvalue_ext == ".svg"){
-        svglite::svglite(file, width = 12, height = 7)
+        svglite::svglite(file, width = 12, height = 10)
         plot(visualizing_missing_values_plot(), cex.axis = 0.7, numbers = TRUE, prop = FALSE)
         dev.off()
       }
@@ -1031,7 +1104,7 @@ server <- function(input, output, session) {
       paste(type()[i], "_UMAP_", Sys.Date(), input$UMAP_extension, sep = "")
     },
     content = function(file){
-      ggplot2::ggsave(file, UMAP_plot(), width = 9, height = 5)
+      ggplot2::ggsave(file, UMAP_plot(), width = 7, height = 7)
     }
   )
   
@@ -1100,7 +1173,7 @@ server <- function(input, output, session) {
     eset_genes <- sub("_.*", "", row.names(Biobase::exprs(eset()[[i]])))
     br()
     
-    validate(need(try(eset_genes), "No gene names available."))
+    shiny::validate(need(try(eset_genes), "No gene names available."))
     
     selectizeInput("gene_list", 
                    label = "Select genes by typing their names into the text box or
@@ -1640,7 +1713,7 @@ server <- function(input, output, session) {
   ### PRINT/TABLE/PLOTS ---------------------------------------------------------
   
   output$PCA_batch <- renderPlot({
-    validate(need(input$batch_column != "", "Invalid batch column selected. Please select a different column from the drop down or add a batch column in your annotation file."))
+    shiny::validate(need(input$batch_column != "", "Invalid batch column selected. Please select a different column from the drop down or add a batch column in your annotation file."))
     i <- which(type() == input$limma_dataset)
     gridExtra::grid.arrange(pre_batch_PCA_plot() + theme(legend.position = "bottom"), 
                             batch_PCA_plot() + theme(legend.position = "bottom"),
@@ -1944,7 +2017,7 @@ server <- function(input, output, session) {
 
   enriched_table <- reactive({
     req(input$gmt)
-    validate(need((dim(enriched()@result)[1] != 0), "There are no enriched pathways found with the selected conditions."))
+    shiny::validate(need((dim(enriched()@result)[1] != 0), "There are no enriched pathways found with the selected conditions."))
     enrichedTable(enriched = enriched(),
                   enrichment = input$enrichment_calculation)
   })
@@ -2040,7 +2113,7 @@ server <- function(input, output, session) {
   ### RENDER UI ----------------------------------------------------------------
   
   output$enrichment_coef_options <- renderUI({
-    validate(need(input$limma_button, "Please generate a model in the linear modeling tab."))
+    shiny::validate(need(input$limma_button, "Please generate a model in the linear modeling tab."))
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$limma_button))
     
     selectInput("enrichment_coef",
@@ -2059,7 +2132,7 @@ server <- function(input, output, session) {
         selectInput("gmt",
                     label = "Choose database to use for enrichment",
                     choices = c("KEGG" = "HUMAN_KEGG",
-                                "Reactome" = "HUMAN_MOUSE_Reactome",
+                                "Reactome" = "HUMAN_Reactome",
                                 "WikiPathways" = "HUMAN_WikiPathways",
                                 "GO Biological Processes" = "HUMAN_GOBP",
                                 "GO Cellular Components" = "HUMAN_GOCC",
@@ -2079,7 +2152,7 @@ server <- function(input, output, session) {
       } else if (input$species == "mouse"){
         selectInput("gmt",
                     label = "Choose database to use for enrichment",
-                    choices = c("Reactome" = "HUMAN_MOUSE_Reactome",
+                    choices = c("Reactome" = "MOUSE_Reactome",
                                 "GO All" = "MOUSE_GOALL",
                                 "GO Biological Processes" = "MOUSE_GOBP",
                                 "GO Cellular Components" = "MOUSE_GOCC",
@@ -2157,7 +2230,7 @@ server <- function(input, output, session) {
         selectInput("gmt",
                     label = "Choose database to use for enrichment",
                     choices = c("KEGG" = "HUMAN_KEGG",
-                                "Reactome" = "HUMAN_MOUSE_Reactome",
+                                "Reactome" = "HUMAN_Reactome",
                                 "WikiPathways" = "HUMAN_WikiPathways",
                                 "GO Biological Processes" = "HUMAN_GOBP",
                                 "GO Cellular Components" = "HUMAN_GOCC",
@@ -2172,7 +2245,7 @@ server <- function(input, output, session) {
       } else if (input$species == "mouse"){
         selectInput("gmt",
                     label = "Choose database to use for enrichment",
-                    choices = c("Reactome" = "HUMAN_MOUSE_Reactome",
+                    choices = c("Reactome" = "MOUSE_Reactome",
                                 "GO All" = "MOUSE_GOALL",
                                 "GO Biological Processes" = "MOUSE_GOBP",
                                 "GO Cellular Components" = "MOUSE_GOCC",
@@ -2277,7 +2350,7 @@ server <- function(input, output, session) {
   output$enriched_table <- DT::renderDataTable({
     req(input$enrichment_button, (!is.null(enriched_table())))
     
-    validate(need(input$gmt, "Enrichment analysis is not available for this data type."))
+    shiny::validate(need(input$gmt, "Enrichment analysis is not available for this data type."))
     if(input$enrichment_calculation == "ranked"){
       DT::datatable(enriched_table(), rownames = FALSE, options = list(order = list(1, 'asc'), pageLength = 10)) %>% 
         DT::formatRound(columns = c(6), digits = 3) %>%
@@ -2767,11 +2840,12 @@ server <- function(input, output, session) {
   
   output$sscore_table_download <- downloadHandler(
     filename = function() {
-      paste(input$sscore_datasets, "_SscoreTable_", Sys.Date(), ".txt", sep = "")
+      paste(input$sscore_coef_options, "_SscoreTable_", Sys.Date(), ".txt", sep = "")
     },
     
     content = function(file){
-      write.table(sscore_dataframe(), file, row.names = FALSE, sep = "\t")
+      i <- which(names(sscore_dataframe()) == input$sscore_coef_options)
+      write.table(sscore_dataframe()[[i]], file, row.names = FALSE, sep = "\t")
     }
   )
   
@@ -2799,7 +2873,7 @@ server <- function(input, output, session) {
   })
   
   sscore_enriched_table <- reactive({
-    validate(need((dim(sscore_enriched()@result)[1] != 0), "There are no enriched pathways found with the selected conditions."))
+    shiny::validate(need((dim(sscore_enriched()@result)[1] != 0), "There are no enriched pathways found with the selected conditions."))
     enrichedTable(enriched = sscore_enriched(),
                   enrichment = "ranked")
   })
@@ -2920,7 +2994,7 @@ server <- function(input, output, session) {
         selectInput("sscore_gmt",
                     label = "Choose database to use for enrichment",
                     choices = c("KEGG" = "HUMAN_KEGG",
-                                "Reactome" = "HUMAN_MOUSE_Reactome",
+                                "Reactome" = "HUMAN_Reactome",
                                 "WikiPathways" = "HUMAN_WikiPathways",
                                 "GO Biological Processes" = "HUMAN_GOBP",
                                 "GO Cellular Components" = "HUMAN_GOCC",
@@ -2940,7 +3014,7 @@ server <- function(input, output, session) {
       } else if (input$species == "mouse"){
         selectInput("sscore_gmt",
                     label = "Choose database to use for enrichment",
-                    choices = c("Reactome" = "HUMAN_MOUSE_Reactome",
+                    choices = c("Reactome" = "MOUSE_Reactome",
                                 "GO All" = "MOUSE_GOALL",
                                 "GO Biological Processes" = "MOUSE_GOBP",
                                 "GO Cellular Components" = "MOUSE_GOCC",
@@ -3317,7 +3391,7 @@ server <- function(input, output, session) {
       # dataframe$ID <- gsub("^$|^ $", NA, dataframe$ID)
       # dataframe <- na.omit(dataframe)
       
-      validate(need(grepl("^Gene$", colnames(top_table)), "There needs to be a gene names column ('Gene') in the dataset."))
+      shiny::validate(need(grepl("^Gene$", colnames(top_table)), "There needs to be a gene names column ('Gene') in the dataset."))
       
       start_col <- which((colnames(top_table)) == "Gene")
       dataframe <- top_table[,seq(start_col, end_col)]
@@ -3385,14 +3459,14 @@ server <- function(input, output, session) {
   ### RENDER UI ----------------------------------------------------------------
   
   output$network_input_options <- renderUI({
-    validate(need((((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group)), 
+    shiny::validate(need((((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group)), 
                   "Select valid inputs in the Data tab to perform analyses."))
     
     options <- c()
     if (isTruthy(input$limma_button)) {options[1] <- "Single-omic linear model output"}
     if (isTruthy(input$sscore_button)) {options <- c(options, "Multi-omic S-score output")}
     
-    validate(need((length(options) > 0), "Please run at least one analysis in the Single Omic Analysis or Multi-Omic Integration tab to begin Network Analysis."))
+    shiny::validate(need((length(options) > 0), "Please run at least one analysis in the Single Omic Analysis or Multi-Omic Integration tab to begin Network Analysis."))
     
     radioButtons("network_input_type",
                  label = "Choose the data to use as input for network analysis",
@@ -3479,7 +3553,7 @@ server <- function(input, output, session) {
         selectInput("PCSF_gmt",
                     label = "Choose database to use for enrichment",
                     choices = c("KEGG" = "HUMAN_KEGG",
-                                "Reactome" = "HUMAN_MOUSE_Reactome",
+                                "Reactome" = "HUMAN_Reactome",
                                 "WikiPathways" = "HUMAN_WikiPathways",
                                 "GO Biological Processes" = "HUMAN_GOBP",
                                 "GO Cellular Components" = "HUMAN_GOCC",
@@ -3499,7 +3573,7 @@ server <- function(input, output, session) {
       } else if (input$species == "mouse"){
         selectInput("PCSF_gmt",
                     label = "Choose database to use for enrichment",
-                    choices = c("Reactome" = "HUMAN_MOUSE_Reactome",
+                    choices = c("Reactome" = "MOUSE_Reactome",
                                 "GO All" = "MOUSE_GOALL",
                                 "GO Biological Processes" = "MOUSE_GOBP",
                                 "GO Cellular Components" = "MOUSE_GOCC",
@@ -3592,7 +3666,7 @@ server <- function(input, output, session) {
   
   output$PCSF_Nodes_Network <- visNetwork::renderVisNetwork({
     req(input$network_input_type, input$PCSF_Nodes_Network_button)
-    validate(need(nrow(PCSF_input()) > 0, "There are no significant variables based on the applied cutoffs."))
+    shiny::validate(need(nrow(PCSF_input()) > 0, "There are no significant variables based on the applied cutoffs."))
     
     PCSFVisNodes(pcsf_net = PCSF_network(),
                  pcsf_input_data = PCSF_input()) 
@@ -3600,7 +3674,7 @@ server <- function(input, output, session) {
   
   output$PCSF_Influential_Network <- visNetwork::renderVisNetwork({
     req(input$network_input_type, input$PCSF_Influential_Network_button)
-    validate(need(nrow(PCSF_input()) > 0, "There are no significant variables based on the applied cutoffs."))
+    shiny::validate(need(nrow(PCSF_input()) > 0, "There are no significant variables based on the applied cutoffs."))
     
     PCSFVisInfluential(pcsf_net = PCSF_network()) 
   }) %>% bindEvent(input$PCSF_Influential_Network_button)
@@ -3615,7 +3689,7 @@ server <- function(input, output, session) {
   output$PCSF_enriched_table <- DT::renderDataTable({
     req(input$network_input_type, input$PCSF_enrichment_button)
     
-    validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
+    shiny::validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
     
     DT::datatable(PCSF_enriched_table(), rownames = FALSE, options = list(order = list(3, 'asc'))) %>% 
       DT::formatSignif(columns = 4, digits = 3) %>%
@@ -3625,7 +3699,7 @@ server <- function(input, output, session) {
   output$PCSF_Enrichment_Network <- visNetwork::renderVisNetwork({
     req(input$network_input_type, input$PCSF_enrichment_button)
     
-    validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
+    shiny::validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
     
     pcsfEnrichedSubnet(pcsf_enrich_pathway = PCSF_enriched())
   }) %>% bindEvent(input$PCSF_enrichment_button)
@@ -3633,7 +3707,7 @@ server <- function(input, output, session) {
   output$PCSF_Enrichment_Clusters_Network <- visNetwork::renderVisNetwork({
     req(input$network_input_type, input$PCSF_enrichment_button)
     
-    validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
+    shiny::validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
     
     pcsfEnrichedContracted(pcsf_enrich_pathway = PCSF_enriched())
   }) %>% bindEvent(input$PCSF_enrichment_button)
@@ -4065,13 +4139,13 @@ server <- function(input, output, session) {
       enriched <- list()
       
       if (input$species == "human"){
-        Gene_GMTs <- c("HUMAN_KEGG", "HUMAN_MOUSE_Reactome", "HUMAN_WikiPathways", "HUMAN_GOBP",
+        Gene_GMTs <- c("HUMAN_KEGG", "HUMAN_Reactome", "HUMAN_WikiPathways", "HUMAN_GOBP",
                        "HUMAN_GOCC", "HUMAN_GOMF", "HUMAN_Hallmark", "HUMAN_MSigDB", "HUMAN_MOMENTABiocycEXP",
                        "HUMAN_MOMENTAMFNEXP")
         Phospho_GMT <- c("HUMAN_PHOSPHO_UNIPROT")
         
       } else if (input$species == "mouse"){
-        Gene_GMTs <- c("HUMAN_MOUSE_Reactome", "MOUSE_GOBP", "MOUSE_GOCC", "MOUSE_GOMF", "MOUSE_WikiPathways",
+        Gene_GMTs <- c("MOUSE_Reactome", "MOUSE_GOBP", "MOUSE_GOCC", "MOUSE_GOMF", "MOUSE_WikiPathways",
                        "MOUSE_MOMENTABiocycEXP")
         Phospho_GMT <- c("MOUSE_PHOSPHO_UNIPROT")
         
@@ -4111,8 +4185,10 @@ server <- function(input, output, session) {
               enrich <- clusterProfilerEnrichment(geneList = report_geneLists()[[j]][[i]],
                                                   gmt = Gene_GMTs[k],
                                                   enrichment = input$report_enrichment_calculation,
-                                                  pval_cutoff = 0.05)
+                                                  pval_cutoff = 1)
+              
               if (!is.atomic(enrich)){
+                enrich@result <- enrich[enrich@result$pvalue <= 0.05]
                 contrast_enriched[[paste0(Gene_GMTs[k])]] <- enrich
               }
             }
@@ -4122,8 +4198,10 @@ server <- function(input, output, session) {
             enrich <- clusterProfilerEnrichment(geneList = report_geneLists()[[j]][[i]],
                                                 gmt = Phospho_GMT,
                                                 enrichment = input$report_enrichment_calculation,
-                                                pval_cutoff = 0.05)
+                                                pval_cutoff = 1)
+            
             if (!is.atomic(enrich)){
+              enrich@result <- enrich[enrich@result$pvalue <= 0.05]
               enriched[[paste0(sub("_PKSEA", "", names(report_geneLists())[j]), "_", names(report_geneLists()[[j]])[i])]][paste0("HUMAN_PHOSPHO_UNIPROT")] <- enrich
             }
           }
@@ -4131,7 +4209,7 @@ server <- function(input, output, session) {
       }
       })
       
-      # assign("enriched", enriched, envir = .GlobalEnv)
+      assign("enriched", enriched, envir = .GlobalEnv)
       message("---- ENRICHMENT COMPLETE")
       return(enriched)
     } else {
