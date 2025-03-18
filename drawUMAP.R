@@ -65,7 +65,7 @@ drawUMAP <- function(eset,
       else {scale_color_brewer(palette = color)}} +
     
     # APPLY AXIS LABELS
-    labs(title = paste("UMAP: ", title_add, "\n", type, sep = "")) + xlab("UMAP1") + ylab("UMPA2") ;
+    labs(title = paste("UMAP: ", title_add, "\n", type, sep = "")) + xlab("UMAP1") + ylab("UMAP2") ;
   
   return(umap_graph);
 }
