@@ -40,9 +40,21 @@ intensityNorm <- function(eset,
   message(paste("-- DATA:", type))
   message(paste("-- TYPE:", norm))
   
+  assign("prenorm_eset", eset, envir = .GlobalEnv)
   # CLEAN ESET DATA AND CREATE ESET MATRIX
   eset <- eset[apply(eset, 1, FUN = function(x){sum(x == 0)}) < (ncol(eset) * zero_cutoff),] # Filter out rows with >30% NAs
   eset <- eset[,colSums(exprs(eset) > 0) >= min_feature * nrow(exprs(eset))];
+  
+  # eset_matrix <- Biobase::exprs(prenorm_eset)
+  # eset_matrix_norm <- eset_matrix
+  # 
+  # if (group_filter == TRUE){
+  #   groups <- unique(pData(eset)$Group)
+  #   for (group in groups){
+  #     eset_subset <- eset_matrix[, group == pData(eset)$Group]
+  #     eset_matrix_norm[, group == pData(eset)$Group] <- eset_subset[apply(eset_subset, 1, FUN = function(x){sum(x == 0)}) < (ncol(eset_subset) * 0.1),]
+  #   }
+  # }
   
   for (i in outlier_cols){
     if(grepl(type, i)){
@@ -54,11 +66,9 @@ intensityNorm <- function(eset,
   }
   
   eset_matrix <- Biobase::exprs(eset)
-  
   eset_matrix_norm <- eset_matrix
   
-  #-----------------------------------------------------------------------------
-  # ACCOUNT FOR BATCHES IF APPLICABLE
+  # ACCOUNT FOR BATCHES IF APPLICABLE ------------------------------------------
   if (!norm_by_batches) {
     pData(eset)$Batch2 <- 1
     message("-- BATCH: FALSE")
@@ -70,11 +80,39 @@ intensityNorm <- function(eset,
     
   }
   
-  #-----------------------------------------------------------------------------
-  # PERFORM NORMALIZATION BASED ON INPUT OF TYPE
+  # PERFORM NORMALIZATION BASED ON INPUT OF TYPE--------------------------------
   for (i in 1:length(unique(pData(eset)$Batch2))) {
     index <- unique(pData(eset)$Batch2)[i]
     message("-- NORMALIZING")
+    
+    # IMPUTE ---------------------------------------------------------------------
+    
+    if (impute_missing == TRUE){
+      message("-- IMPUTING MISSING VALUES")
+      
+      eset_matrix_norm[eset_matrix_norm == 0] <- NA
+      message("---- NAs BEFORE IMPUTATION:", sum(is.na(eset_matrix_norm[,grep(index,pData(eset)$Batch2)])))
+      
+      tryCatch({
+        if (type == "Proteomics"){
+          # assign("matrix", eset_matrix_norm[,grep(index,pData(eset)$Batch2)], envir = .GlobalEnv)
+        }
+        
+        eset_imputed <- pcaMethods::nni(t(eset_matrix_norm[,grep(index,pData(eset)$Batch2)]), method = c("llsImpute"), correlation = "pearson", verbose = TRUE)
+        eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- as.matrix(t(pcaMethods::completeObs(eset_imputed)))
+        
+        message("---- NAs AFTER IMPUTATION:", sum(is.na(eset_matrix_norm[,grep(index,pData(eset)$Batch2)])))
+      },
+      error = function(cond) {
+        message("---- COULD NOT COMPLETE MISSING VALUE IMPUTATION")
+        message(paste("*** ERROR MESSAGE:", conditionMessage(cond), "***"))
+        # Choose a return value in case of error
+        eset_matrix_norm
+      })
+      
+      eset_matrix_norm[is.na(eset_matrix_norm)] <- 0 # NA values become zeros
+      eset_matrix_norm[!is.finite(eset_matrix_norm)] <- 0
+    }
     
     if (norm == 'quantile') {
       eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- as.matrix(preprocessCore::normalize.quantiles(eset_matrix[,grep(index,pData(eset)$Batch2)]))
@@ -109,50 +147,27 @@ intensityNorm <- function(eset,
       
     } else if (norm == "MAD") {
       eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- as.matrix(NormalyzerDE::performSMADNormalization(eset_matrix[,grep(index,pData(eset)$Batch2)], noLogTransform = TRUE))
+      
+    } else if (norm == "medianMAD") {
+      eset_matrix[eset_matrix == 0] <- NA
+      # Calculate the median and MAD for each column
+      medians = apply(eset_matrix[,grep(index,pData(eset)$Batch2)], 2, median, na.rm = TRUE)
+      mad_values = apply(eset_matrix[,grep(index,pData(eset)$Batch2)], 2, mad, na.rm = TRUE)
 
-      # eset_matrix[eset_matrix == 0] <- NA
-      # # Calculate the median and MAD for each column
-      # medians = apply(eset_matrix[,grep(index,pData(eset)$Batch2)], 2, median, na.rm = TRUE)
-      # mad_values = apply(eset_matrix[,grep(index,pData(eset)$Batch2)], 2, mad, na.rm = TRUE)
-      # 
-      # # Perform medianMAD normalization
-      # normalized_data = sweep(eset_matrix[,grep(index,pData(eset)$Batch2)], 2, medians, "-")
-      # eset_matrix_norm[,grep(index,pData(eset)$Batch2)] = sweep(normalized_data, 2, mad_values, "/")
+      # Perform medianMAD normalization
+      normalized_data = sweep(eset_matrix[,grep(index,pData(eset)$Batch2)], 2, medians, "-")
+      eset_matrix_norm[,grep(index,pData(eset)$Batch2)] = sweep(normalized_data, 2, mad_values, "/")
+      
+    } else if (norm == "vsn") {
+      eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- as.matrix(vsn::justvsn(eset_matrix[,grep(index,pData(eset)$Batch2)]))
       
     } else if (norm == "IRS") {
       eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- IRS_normalize(eset_matrix[,grep(index,pData(eset)$Batch2)], pData(eset), IRS_column)
     }
     
-    # MISSING VALUE IMPUTATION
-    # library(mice)
-    
-    if (impute_missing == TRUE){
-      message("-- IMPUTING MISSING VALUES")
-      
-      eset_matrix_norm[eset_matrix_norm == 0] <- NA
-      message("---- NAs BEFORE IMPUTATION:", sum(is.na(eset_matrix_norm[,grep(index,pData(eset)$Batch2)])))
-      
-      tryCatch({
-        if (type == "Proteomics"){
-          # assign("matrix", eset_matrix_norm[,grep(index,pData(eset)$Batch2)], envir = .GlobalEnv)
-        }
-        
-        eset_imputed <- pcaMethods::nni(t(eset_matrix_norm[,grep(index,pData(eset)$Batch2)]), method = c("llsImpute"), correlation = "pearson", verbose = TRUE)
-        eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- as.matrix(t(pcaMethods::completeObs(eset_imputed)))
-        
-        message("---- NAs AFTER IMPUTATION:", sum(is.na(eset_matrix_norm[,grep(index,pData(eset)$Batch2)])))
-      },
-      error = function(cond) {
-        message("---- COULD NOT COMPLETE MISSING VALUE IMPUTATION")
-        message(paste("*** ERROR MESSAGE:", conditionMessage(cond), "***"))
-        # Choose a return value in case of error
-        eset_matrix_norm
-      })
-      
-      eset_matrix_norm[is.na(eset_matrix_norm)] <- 0
-    }
-    
     #---------------------------------------------------------------------------
+    eset_matrix_norm[is.na(eset_matrix_norm)] <- 0 # NA values become zeros
+    eset_matrix_norm[!is.finite(eset_matrix_norm)] <- 0
     
     # RECREATE ESET OBJECT
     eset_norm <- ExpressionSet(assayData = eset_matrix_norm);
@@ -172,9 +187,7 @@ intensityNorm <- function(eset,
   }
 }
 
-#
-#
-#
+
 
 IRS_normalize <- function(eset_matrix,
                           eset_pdata,
