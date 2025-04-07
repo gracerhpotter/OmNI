@@ -174,7 +174,9 @@ writeDataToSheets <- function(wb,
     for (i in 1:length(DiffList)) {
       DiffList[[i]] <- DiffList[[i]][match(rownames(DiffList[[1]]),rownames(DiffList[[i]])),];
       d$formatted_table <- data.frame(d$formatted_table, DiffList[[i]][,c("P.Value","adj.P.Val","logFC")] );
-      d$names <- c(d$names, "P.Value","adj.P.Val","logFC");
+      # d$names <- c(d$names, "P.Value","adj.P.Val","logFC");
+      contrast <- colnames(limmaFit$coefficients)[i]
+      d$names <- c(d$names, paste0(contrast, "_Pval"),paste0(contrast, "_adjPval"),paste0(contrast, "_logFC"));
       d$col_widths <- c(d$col_widths, 8,8,8);
     } 
     
@@ -246,10 +248,9 @@ writeDataToSheets <- function(wb,
   
   # Add color bars for fold change
   if (length(DiffList) > 0) { 
-    i <- 1
+    i = 1
     openxlsx::conditionalFormatting(wb = wb, sheet = stName, cols = (3 + col_index + (3 * (i - 1))), rows = 3:(3 + nrow(limmaFit)), 
-                                    type = "databar", style = c("blue", "red"), showvalue = FALSE)
-    
+                                    type = "databar", style = c("royalblue", "red"), gradient = FALSE, showvalue = FALSE)
   }
   
   # Rotate text for sample names
