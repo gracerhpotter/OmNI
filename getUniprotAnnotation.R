@@ -5,39 +5,63 @@
 #'
 #'
 
-get_res = function(u, 
-                   cols){
-  
-  for(i in 1:10){
+get_res = function(u, cols) {
+  for(i in 1:10) {
     res = httr::GET(u, httr::accept_json())
-    js = httr::content(res)$jobStatus
+    assign("res", res, envir = .GlobalEnv)
     
-    if(length(js) > 0 && js == "RUNNING"){
+    js <- try(httr::content(res)$jobStatus, silent = TRUE)
+    
+    if(length(js) > 0 && js == "RUNNING") {
       Sys.sleep(2)
     } else {
       break
     }
   }
-
-  pagesize = 500
-  #total = httr::headers(res)$`x-total-results`
-  next_u = paste0(sub("status", "uniprotkb/results", u),"?size=500&format=tsv&fields=", cols)
+  
+  # Construct first results URL
+  next_u = paste0(sub("status", "uniprotkb/results", u), "?size=500&format=tsv&fields=", cols)
   ret = NULL
   
-  while(TRUE){
-    res = httr::GET(next_u, httr::accept_json())
-    #print(next_u)
-    hdr = httr::headers(res)
-    map <- try(data.frame(read.delim(textConnection(httr::content(res)),
-                                     header = TRUE, stringsAsFactors = FALSE, quote = "")))
-    ret <- rbind(ret, map)
-    next_u = sub(".*<(.*)>.*", "\\1", hdr$link)
+  while(TRUE) {
+    res <- httr::GET(next_u, httr::add_headers("Accept-Encoding" = "gzip"))
+    hdrs <- httr::headers(res)
+    raw_txt <- httr::content(res, as = "raw")
     
-    if(length(next_u) == 0) {break}
+    encoding <- hdrs[["content-encoding"]]
+    
+    if (!is.null(encoding) && encoding == "gzip") {
+      content_txt <- memDecompress(raw_txt, type = "gzip", asChar = TRUE)
+    }
+    
+    map <- try(read.delim(textConnection(content_txt),
+                          header = TRUE, stringsAsFactors = FALSE, quote = ""), silent = TRUE)
+    
+    if (inherits(map, "try-error")) {
+      stop("Failed to parse response as TSV.")
+    }
+    
+    ret <- rbind(ret, map)
+    
+    # Handle pagination if present
+    hdr = httr::headers(res)
+    if(!is.null(hdr$link) && grepl("<.*>; rel=\"next\"", hdr$link)) {
+      next_u = sub(".*<([^>]*)>.*", "\\1", hdr$link)
+    } else {
+      break
+    }
   }
-
-  do.call("rbind", lapply(split(ret, as.factor(ret$From)), function(f) f[1,]))
+  
+  
+  # Deduplicate by 'From' column, keeping only first result
+  if (!is.null(ret) && "From" %in% colnames(ret)) {
+    return(do.call("rbind", lapply(split(ret, as.factor(ret$From)), function(f) f[1,])))
+  } else {
+    warning("No usable results returned.")
+    return(NULL)
+  }
 }
+
 
 #' @title Batch Uniprot ID Map
 #'
@@ -46,6 +70,7 @@ get_res = function(u,
 #'
 
 batchUniprotIDmap = function(IDs, 
+                             species,
                              from = "UniProtKB_AC-ID", 
                              cols){
   
@@ -67,7 +92,7 @@ batchUniprotIDmap = function(IDs,
     
     if(is.null(res_id)) {return(NULL)}
     
-    get_res(paste0("https://rest.uniprot.org/idmapping/status/", res_id), paste0(cols, collapse = ","))
+    get_res(u = paste0("https://rest.uniprot.org/idmapping/status/", res_id), cols = paste0(cols, collapse = ","))
   })}))
 
   annotUniprot
@@ -103,7 +128,8 @@ blank_results <- function(IDs,
 #' @return a data frame with annotation inforamtion
 
 getUniprotAnnotation <- function(IDs, 
-                                 genes = F){
+                                 genes = F,
+                                 species = ""){
   
   # Uniprot entries to fetch (and col names)
   uniprot_columns <- c("accession","cc_function", "cc_subcellular_location", "cc_disease",
@@ -143,8 +169,10 @@ getUniprotAnnotation <- function(IDs,
 
   idgroups = split(IDs_unique, as.factor(idtype))
 
+  assign("idgroups", idgroups, envir = .GlobalEnv)
   annotUniprot = do.call("rbind", lapply(1:length(idgroups), FUN = function(gi){
     batchUniprotIDmap(idgroups[[gi]],
+                      species,
                       from = names(idgroups[gi]),
                       cols = uniprot_columns)
   }))

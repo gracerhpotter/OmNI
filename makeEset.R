@@ -244,10 +244,12 @@ makeEset <- function(data,
   if("Protein" %in% colnames(data)){
     uprot = data$Protein
     
+    assign("data", data, envir = .GlobalEnv)
     if(uniprot_annotation == TRUE) { try({ # Add uniprot annotation
       
       udata <- getUniprotAnnotation(IDs = data[,"Protein"], 
-                                    genes =! ("Gene.names" %in% colnames(data))) 
+                                    genes =! ("Gene.names" %in% colnames(data)),
+                                    species = species) 
       missing <- udata$ENTRY == ""
       
       if(any(missing)){
@@ -256,7 +258,9 @@ makeEset <- function(data,
                          emptysub(".*(gene|GN)=([^ ]*).*", "\\2", data[missing, "Fasta.headers"])))
         
         gn = paste0("gene=", gn)
-        g_udata <- getUniprotAnnotation(IDs = gn, genes =! ("Gene.names" %in% colnames(data)))
+        g_udata <- getUniprotAnnotation(IDs = gn, 
+                                        genes =! ("Gene.names" %in% colnames(data)),
+                                        species = species)
         udata[missing,] <- merge_str_nonempty(udata[missing,],g_udata)
       }
       
