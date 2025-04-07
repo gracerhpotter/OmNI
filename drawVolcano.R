@@ -75,16 +75,16 @@ drawVPlots <- function(dat,
   suppressWarnings({
     
     plot1 <- ggplot(data = data.frame(dat), aes(text = paste("Name: ", feature_identifier))) + 
-      geom_point(aes_string(x = xvar, y = yvar, colour = colorby), size = 2, pch = 16, alpha = 0.8) +
+      geom_point(aes_string(x = xvar, y = yvar, colour = colorby), size = 3, pch = 16, alpha = 0.6) +
       scale_colour_manual(values = c(NS = "grey", Up = up_color, Down = down_color)) +
       labs(title = title,
            caption = caption) + 
       theme_bw() + 
       theme(legend.title = element_blank(), plot.title = element_text(size = 10)) +
     
-    {if (xvar == "Mean") {geom_hline(yintercept = c(-cutoff, cutoff), linetype = "dashed")}} +
-    {if (xvar == "logFC") {geom_hline(yintercept = -log10(top_values), linetype = "dashed")}} +
-    {if (xvar == "logFC") {geom_vline(xintercept = c(-top_fc, top_fc), linetype = "dashed")}}
+    {if (xvar == "Mean") {geom_hline(yintercept = c(-cutoff, cutoff), color="gray60", linetype = "dashed")}} +
+    {if (xvar == "logFC") {geom_hline(yintercept = -log10(top_values), color="gray60", linetype = "dashed")}} +
+    {if (xvar == "logFC") {geom_vline(xintercept = c(-top_fc, top_fc), color="gray60", linetype = "dashed")}}
       
     #---------------------------------------------------------------------------
     
@@ -97,7 +97,7 @@ drawVPlots <- function(dat,
                                  size = 4,
                                  max.overlaps = 100,
                                  aes_string(x = xvar, y = yvar, label = lv$labname[1])) +
-        geom_point(data = data.frame(dat[label_names,]), size = 2, pch = 21,
+        geom_point(data = data.frame(dat[label_names,]), size = 3, pch = 21,
                    aes_string(x = xvar, y = yvar))
       
       plot <- plot1
