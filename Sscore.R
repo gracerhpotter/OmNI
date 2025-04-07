@@ -81,7 +81,7 @@ makeDataList <- function(top_table_list,
   }
   
   names(data_list) <- data_format
-  # assign("data_list", data_list, envir = .GlobalEnv)
+  assign("data_list", data_list, envir = .GlobalEnv)
   return(data_list)
 }
 
@@ -466,7 +466,7 @@ sscoreIntegration <- function(data_list){
     dplyr::mutate(across(where(is.character), ~ na_if(., "NULL"))) %>%
     as.data.frame() %>%
     dplyr::rowwise() %>%
-    dplyr::mutate(sscore_label = paste(c(uniprot_id, dplyr::across(dplyr::all_of(columns_to_process), as.character)), collapse = "_"),
+    dplyr::mutate(sscore_label = paste(c(gene_symbol, dplyr::across(dplyr::all_of(columns_to_process), as.character)), collapse = "_"),
                   feature_id = ifelse(length(sscore_combined_list) == 2, coalesce(uniprot_id, chebi_id), uniprot_id)) %>%
     dplyr::ungroup() %>%
     as.data.frame() %>%
