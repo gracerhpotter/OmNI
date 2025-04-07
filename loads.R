@@ -4,8 +4,8 @@ cran_packages <- c("Biobase", "BiocManager", "bsicons", "bslib", "colourpicker",
                    "colourvalues", "cowplot", "devtools", "DT", "ggcorrplot", 
                    "ggfortify", "ggpubr", "ggrepel", "ggridges", "ggupset", 
                    "ggvenn", "heatmaply", "htmltools", "igraph",
-                   "influential", "kableExtra", "KEGGREST", "markdown", "mice", 
-                   "openxlsx", "pacman", "pathview", "pheatmap", 
+                   "influential", "kableExtra", "KEGGREST", "markdown", 
+                   "openxlsx", "pacman", "pcaMethods", "pheatmap", 
                    "plotly", "psych", "readr", "rmarkdown", "shiny", 
                    "shinycssloaders", "tidyverse", "uwot", "VIM", "visNetwork")
 
@@ -18,7 +18,8 @@ bioconductor_packages <- c('clusterProfiler', 'ComplexHeatmap', 'enrichplot',
                            'EnsDb.Hsapiens.v86', 'EnsDb.Mmusculus.v79',
                            'GeneTonic', "Glimma", "NormalyzerDE", 'org.Ce.eg.db', 
                            'org.Dm.eg.db', 'org.Dr.eg.db', "org.Hs.eg.db", 'org.Mm.eg.db', 
-                           'org.Rn.eg.db', 'org.Sc.sgd.db', "pathview", 'topGO')
+                           'org.Rn.eg.db', 'org.Sc.sgd.db', "pathview", "pcaMethods", 
+                           'topGO', "vsn")
 for (package in bioconductor_packages){
   if (!(package %in% installed.packages()[,"Package"])){BiocManager::install(package, update = TRUE, ask = FALSE)}
 }
