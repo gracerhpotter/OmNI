@@ -108,9 +108,9 @@ PCSFVisNodes = function(pcsf_net = pcsf_net,
   my_pcsf_net_vis = igraph::graph_from_data_frame(d = my_pcsf_net_edges, 
                                                   vertices = my_pcsf_net_nodes, 
                                                   directed = FALSE)
-  igraph::write_graph(graph = my_pcsf_net_vis,
-                      file = paste0("~/Downloads/pcsf_network_", Sys.Date(), ".graphml"),
-                      format = "graphml")
+  # igraph::write_graph(graph = my_pcsf_net_vis,
+  #                     file = paste0("~/Downloads/pcsf_network_", Sys.Date(), ".graphml"),
+  #                     format = "graphml")
   # plot
   set.seed(123)
   visIgraph_obj = visNetwork::visIgraph(igraph = my_pcsf_net_vis,
@@ -167,6 +167,7 @@ PCSFVisInfluential = function(pcsf_net = pcsf_net) {
     dplyr::select(genes, influence_score) %>%
     dplyr::arrange(desc(influence_score))
   
+  write.csv(my_graph_ivi_df, paste0("~/Downloads/PCSF_influential_summary_", Sys.Date(), ".csv"))
   # assign("PCSF_influential", my_graph_ivi_df, envir = .GlobalEnv)
   
   my_graph_ivi_edges = as.data.frame(igraph::get.edgelist(my_graph))
@@ -186,9 +187,9 @@ PCSFVisInfluential = function(pcsf_net = pcsf_net) {
   igraph::V(my_igraph_ivi_vis)$size <- igraph::V(my_igraph_ivi_vis)$influence_score
   igraph::V(my_igraph_ivi_vis)$size <- scales::rescale(igraph::V(my_igraph_ivi_vis)$size, c(8, 24))
   
-  igraph::write_graph(graph = my_igraph_ivi_vis,
-                      file = paste0("~/Downloads/pcsf_influential_", Sys.Date(), ".graphml"),
-                      format = "graphml")
+  # igraph::write_graph(graph = my_igraph_ivi_vis,
+  #                     file = paste0("~/Downloads/pcsf_influential_", Sys.Date(), ".graphml"),
+  #                     format = "graphml")
   
   # plot
   visIgraph_obj = visNetwork::visIgraph(igraph = my_igraph_ivi_vis,
@@ -235,6 +236,8 @@ runClusterProfiler <- function(clusters,
   # GENERATE GMT REFERENCES
   GMT_file <- list.files("./GMTs", pattern = gmt)
   my_geneset = readr::read_delim(paste0("./GMTs/", GMT_file))
+  colnames(my_geneset) <- c("pathway", "feature_ids")
+  try({my_geneset$feature_ids <- toupper(my_geneset$feature_ids)})
   
   my_geneset = dplyr::mutate(my_geneset, term = pathway) %>% dplyr::mutate(feature = stringr::str_squish(feature_ids))
   term2features = my_geneset %>% dplyr::select(term, feature) #TERM2GENE
@@ -242,6 +245,7 @@ runClusterProfiler <- function(clusters,
   length(unique(my_geneset$feature))
   
   set.seed(123)
+  enriched_dataList <- list()
   for (a in 1:length(clusters)) {
     
     # INDICATE CLUSTER NUMBER
@@ -263,6 +267,7 @@ runClusterProfiler <- function(clusters,
                                                      pvalueCutoff = 0.05,
                                                      TERM2GENE = term2features,
                                                      TERM2NAME = term2pathway)
+      enriched_dataList[[a]] <- enriched_pathways
       
       # EMPTY DATAFRAME TO STORE OUTPUT
       enriched_pathways_df_a = data.frame(cluster = "NULL", 
@@ -312,8 +317,21 @@ runClusterProfiler <- function(clusters,
     })
   }
   
-  # assign("enrich_output", list(enrichment_result, enrichment_result_complete), envir = .GlobalEnv)
-  return(list(enrichment_result, enrichment_result_complete, enrichment_table))
+  df <- NULL
+  enrichment_summary <- data.frame()
+  for (i in 1:length(enriched_dataList)){
+    try(df <- enriched_dataList[[i]]@result)
+    if (!is.null(df)){
+      df[,1] <- rep(i, nrow(df))
+      enrichment_summary <- rbind(enrichment_summary, df)
+    }
+    
+    df <- NULL
+  }
+  
+  output <- list(enrichment_result, enrichment_result_complete, enrichment_table, enrichment_summary)
+  assign("pcsf_enrich_output", output, envir = .GlobalEnv)
+  return(output)
 }
 
 ## ENRICHMENT ------------------------------------------------------------------
@@ -347,6 +365,7 @@ PCSFModuleEnrichments <- function(subnet,
   
   enrichment = enrich[[1]]
   enrichment_complete = enrich[[2]]
+  enrichment_summary <- enrich[[4]]
   
   novals = which(unlist(sapply(enrich[[2]], function(x) is.null(dim(x)))))
   
@@ -368,8 +387,8 @@ PCSFModuleEnrichments <- function(subnet,
   }
   
   class(subnet) = c("PCSFe", "igraph")
-  output = list(subnet, enrichment_tab)
-  names(output) = c("subnet", "enrichment")
+  output = list(subnet, enrichment_tab, enrichment_summary)
+  names(output) = c("subnet", "enrichment", "summary")
   # assign("ModuleEnrichmentOutput", output, envir = .GlobalEnv)
   return(output)
   
@@ -415,12 +434,13 @@ pcsfRunEnrichment <- function(pcsf_net,
 
 pcsfEnrichedTable <- function(pcsf_enrich_pathway){
   # Write enrichment results as a text file
-  pcsf_enrich_pathway_df = data.frame(pcsf_enrich_pathway$enrichment)
-  pcsf_enrich_pathway_df[pcsf_enrich_pathway_df == "NULL"] <- NA
-  pcsf_enrich_pathway_df <- na.omit(pcsf_enrich_pathway_df)
-  pcsf_enrich_pathway_df$cluster <- sub("Cluster_", "", pcsf_enrich_pathway_df$cluster)
-  colnames(pcsf_enrich_pathway_df) <- c("Cluster_1", "Cluster_2", "Pathway", "Adj_PVal", "Intersection")
-  
+  pcsf_enrich_pathway_df = data.frame(pcsf_enrich_pathway$summary)
+  # pcsf_enrich_pathway_df = data.frame(pcsf_enrich_pathway$enrichment)
+  # pcsf_enrich_pathway_df[pcsf_enrich_pathway_df == "NULL"] <- NA
+  # pcsf_enrich_pathway_df <- na.omit(pcsf_enrich_pathway_df)
+  # pcsf_enrich_pathway_df$cluster <- sub("Cluster_", "", pcsf_enrich_pathway_df$cluster)
+  # colnames(pcsf_enrich_pathway_df) <- c("Cluster_1", "Cluster_2", "Pathway", "Adj_PVal", "Intersection")
+  # 
   return(pcsf_enrich_pathway_df)
 }
 
@@ -452,9 +472,9 @@ pcsfEnrichedContracted <- function(pcsf_enrich_pathway){
   igraph::V(contracted_graph)$size = cluster_gene_counts
   igraph::V(contracted_graph)$color = colourvalues::colour_values(igraph::V(contracted_graph)$name, palette = "spectral", include_alpha = FALSE)
 
-  igraph::write_graph(graph = contracted_graph,
-                      file = paste0("~/Downloads/pcsf_enriched_contracted_", Sys.Date(), ".graphml"),
-                      format = "graphml")
+  # igraph::write_graph(graph = contracted_graph,
+  #                     file = paste0("~/Downloads/pcsf_enriched_contracted_", Sys.Date(), ".graphml"),
+  #                     format = "graphml")
   
   visIgraph_obj = visNetwork::visIgraph(igraph = contracted_graph,
                                         layout = "layout_nicely", #layout_nicely
@@ -495,16 +515,16 @@ pcsfEnrichedSubnet <- function(pcsf_enrich_pathway){
   
   igraph::V(visIgraph_obj)$cluster = gsub(":.*", "", igraph::V(visIgraph_obj)$title)
   igraph::V(visIgraph_obj)$color <- colourvalues::colour_values(igraph::V(visIgraph_obj)$cluster, palette = "spectral", include_alpha = FALSE)
-  igraph::write_graph(graph = visIgraph_obj,
-                      file = paste0("~/Downloads/pcsf_enriched_subnet", Sys.Date(), ".graphml"),
-                      format = "graphml")
+  # igraph::write_graph(graph = visIgraph_obj,
+  #                     file = paste0("~/Downloads/pcsf_enriched_subnet", Sys.Date(), ".graphml"),
+  #                     format = "graphml")
   
   visIgraph_obj = visNetwork::visIgraph(igraph = visIgraph_obj,
                                         layout = "layout_nicely", #layout_nicely
                                         physics = TRUE,
                                         smooth = TRUE, 
                                         idToLabel = FALSE) %>%
-    visNetwork::visNodes(font = list(size = 30)) %>%
+    visNetwork::visNodes(font = list(size = 40)) %>%
     visNetwork::visEdges(smooth = TRUE,
                          value = 3) %>%
     visNetwork::visOptions(height = "1000px",
