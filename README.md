@@ -2,6 +2,10 @@
 
 An interactive shiny application version of the original Omics Notebook, with increased functionalities.
 
+## Dependencies
+
+Dependencies for the application are installed and loaded via the `loads.R` file. The first time opening the application may take 10-15+ minutes if your system does not have many of the packages installed. 
+
 ## Downloading the ZIP File
 
 All necessary packages should load on opening the app via the `loads.R` other than `shiny`, which needs to be installed before opening the application.
