@@ -69,7 +69,7 @@ intensityNormPlots <- function(eset_prenorm,
   eset_matrix_norm <- Biobase::exprs(eset_postnorm)
   
   # GENERATE NORMALIZED PLOTS WITH POST-NORM DATA ------------------------------
-  if (!grepl("none", norm)) {
+  # if (!grepl("none", norm)) {
     df <- data.frame(reshape2::melt(eset_matrix_norm, id.vars = NULL));
     colnames(df) <- c("Feature","Sample", "Intensity");
     df[,"Sample"] <- as.character(df[,"Sample"])
@@ -97,11 +97,11 @@ intensityNormPlots <- function(eset_prenorm,
       theme(plot.title = element_text(size = 18),
             legend.position = "none") +
       labs(title = paste(type, " ", qq_column, " QQ Plot ", toupper(norm)," Post-Normalization", sep = ''));
-  }
+  # }
   
   # ARRANGE PRE- AND POST- NORM PLOTS SIDE BY SIDE FOR COMPARISON
   # OR GENERATE MA/RLE PLOT
-  if (norm != "none") { 
+  # if (norm != "none") { 
     if (plottype == "Boxplot"){
       plot <- gridExtra::grid.arrange(plot1 + labs(title = "Raw Data"), 
                                       plot3 + labs(title = "Normalized"),
@@ -138,23 +138,23 @@ intensityNormPlots <- function(eset_prenorm,
     }
     return(plot);
     
-  } else {
-    
-    # IF NO NORMALIZATION SELECTED, RETURN ONLY PRE-NORM PLOTS
-    if (plottype == "Boxplot") {
-      plot <- plot1 + labs(title = paste(type, ": No Normalization", sep = ""))
-      
-    } else if (plottype == "Density") {
-      plot <- plot2 + labs(title = paste(type, ": No Normalization", sep = ""))
-      
-    } else if (plottype == "MA") {
-      for (i in 1:ncol(eset_postnorm)) {
-        plot <- limma::plotMA(eset_matrix, array = i, main = paste(type, "MA Plot", i, sep = " "))
-      }
-    }
-    
-    return(plot); 
-  }
+  # } else {
+  #   
+  #   # IF NO NORMALIZATION SELECTED, RETURN ONLY PRE-NORM PLOTS
+  #   if (plottype == "Boxplot") {
+  #     plot <- plot1 + labs(title = paste(type, ": No Normalization", sep = ""))
+  #     
+  #   } else if (plottype == "Density") {
+  #     plot <- plot2 + labs(title = paste(type, ": No Normalization", sep = ""))
+  #     
+  #   } else if (plottype == "MA") {
+  #     for (i in 1:ncol(eset_postnorm)) {
+  #       plot <- limma::plotMA(eset_matrix, array = i, main = paste(type, "MA Plot", i, sep = " "))
+  #     }
+  #   }
+  #   
+  #   return(plot); 
+  # }
   
 }
 
