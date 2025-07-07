@@ -26,6 +26,7 @@ makeEset <- function(data,
                      type, 
                      species,
                      log_transform = TRUE,
+                     zero_cutoff = 0.3,
                      data_format, 
                      uniprot_annotation = FALSE) {
   
@@ -357,6 +358,10 @@ makeEset <- function(data,
                                 colnames(exprs(eset)))
 
   rownames(Biobase::pData(eset)) <- colnames(data.matrix)
+  
+  eset <- eset[apply(eset, 1, FUN = function(x){sum(x == 0)}) < (ncol(eset) * zero_cutoff),] # Filter out rows with >30% NAs
+  eset <- eset[,colSums(exprs(eset) > 0) >= 0.01 * nrow(exprs(eset))];
+  
   
   return(eset);
 }
