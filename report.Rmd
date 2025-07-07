@@ -73,10 +73,6 @@ knitr::opts_chunk$set(warning = FALSE, error = TRUE, echo = FALSE)
 }
 ```
 
-```{r}
-cat("Has Linear Model Param: ", params$has_linear_model)
-```
-
 ## Image Folder
 
 ```{r Create Directory for Downloads}
@@ -195,7 +191,7 @@ for (i in 1:length(params$eset)){
       "\t Number of Features in Raw Data:", nrow(exprs_eset_prenorm), "\n",
       "\t Number of Features in Processed Data:", nrow(exprs_eset), "\n",
       "\t Number of Missing Values in Raw Data:", sum(is.na(exprs_eset_prenorm)), "\n",
-      "\t Number of Features in Processed Data:", sum(is.na(exprs_eset)), "\n")
+      "\t Number of Missing Features in Processed Data:", sum(is.na(exprs_eset)), "\n")
   cat("\n\n")
 }
 ```
@@ -478,7 +474,7 @@ for (i in 1:length(params$eset)){
   
   if (dir.exists(save_dir)){
     grDevices::pdf(paste0(save_dir, "/", params$type[i], "/UMAP_", params$type[i], ".pdf", sep = ""), 
-                   width = 10, height = 6)
+                   width = 7, height = 7)
     plot(UMAP)
     dev.off()
   }
@@ -546,7 +542,7 @@ for (i in 1:length(params$eset)){
       
       if (dir.exists(save_dir)){
         grDevices::pdf(paste0(save_dir, "/", params$type[i], "/MD_", contrast, "_", params$type[i], ".pdf", sep = ""), 
-                       width = 10, height = 6)
+                       width = 8, height = 6)
         plot(MD)
         dev.off()
       }
@@ -694,7 +690,9 @@ for (i in 1:length(params$batch_pca_data)){
                               add_labels = TRUE,
                               add_ellipse = FALSE)
     
-    pre_correction <- drawPCA(eset = params$eset[[i]],
+    eset = params$eset[[i]]
+    try({pData(eset)$Group <- pData(params$batch_pca_data[[i]][[j]])$Group})
+    pre_correction <- drawPCA(eset = eset,
                               x_axis = "PC1",
                               y_axis = "PC2",
                               type = params$type[[i]],
@@ -759,7 +757,7 @@ for (i in 1:length(params$eset)){
                                    title_add = '',
                                    title_type = item,
                                    top_values = 0.05,
-                                   top_fc = 0,
+                                   top_fc = 1,
                                    label_specific = FALSE,
                                    label_specific_gene = NULL,
                                    label_number = 18)
@@ -789,7 +787,7 @@ for (i in 1:length(params$eset)){
                                 title_add = '',
                                 title_type = item,
                                 top_values = 0.05,
-                                top_fc = 0,
+                                top_fc = 1,
                                 label_specific = FALSE,
                                 label_specific_gene = NULL,
                                 label_number = 18)
@@ -815,7 +813,7 @@ for (i in 1:length(params$eset)){
                                    title_add = '',
                                    title_type = item,
                                    top_values = 0.05,
-                                   top_fc = 0,
+                                   top_fc = 1,
                                    label_specific = FALSE,
                                    label_specific_gene = NULL,
                                    label_number = 18)
@@ -829,7 +827,7 @@ for (i in 1:length(params$eset)){
                                 title_add = '',
                                 title_type = item,
                                 top_values = 0.05,
-                                top_fc = 0,
+                                top_fc = 1,
                                 label_specific = FALSE,
                                 label_specific_gene = NULL,
                                 label_number = 18)
@@ -840,7 +838,7 @@ for (i in 1:length(params$eset)){
       #        width = 8, height = 8)
       
       grDevices::pdf(paste0(save_dir, "/", params$type[i], "/Volcano_", item, "_", params$type[i], ".pdf", sep = ""),
-                     width = 10, height = 6)
+                     width = 8, height = 7)
       plot(volcano_adjpval)
       plot(volcano_pval)
       dev.off()
@@ -1163,7 +1161,7 @@ suppressWarnings({
                                   contrast = '',
                                   plottype = "emap",
                                   emap_categories = 45,
-                                  emap_title = paste(params$enriched)[i], names(params$enriched[[i]])[j], "ORA Enrichment Map"),
+                                  emap_title = paste(params$enriched[i], names(params$enriched[[i]])[j], "ORA Enrichment Map"),
                                   emap_category_label = 0.7)
             
             try(plot(emap))
