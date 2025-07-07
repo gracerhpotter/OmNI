@@ -38,6 +38,7 @@ calculateGeneList <- function(fit,
   
   # RANKED LIST IF PROTEINGROUP DATA
   if (!grepl("PHOSPHO", gmt)){
+    # https://www.pathwaycommons.org/guide/primers/data_analysis/gsea/
     top_sum$fcSign = sign(top_sum$logFC)
     top_sum$logP = -log10(top_sum$P.Value)
     top_sum$metric = top_sum$logP / top_sum$fcSign
@@ -93,10 +94,11 @@ clusterProfilerEnrichment <- function(geneList,
   # GENERATE GMT REFERENCES
   GMT_file <- list.files("./GMTs", pattern = gmt)
   my_geneset = readr::read_delim(paste0("./GMTs/", GMT_file))
-
+  colnames(my_geneset) <- c("pathway", "feature_ids")
+  my_geneset$feature_ids <- gsub("\\-.*","",my_geneset$feature_ids)
+  my_geneset$pathway <- gsub("%.*","",my_geneset$pathway)
   
   my_geneset = dplyr::mutate(my_geneset, term = pathway)
-  my_geneset$feature_ids <- gsub("\\-.*","",my_geneset$feature_ids)
   term2features = my_geneset %>% dplyr::select(term, feature_ids)
   term2pathway = my_geneset %>% dplyr::select(term, pathway)
   rm(my_geneset)
