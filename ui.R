@@ -3295,8 +3295,13 @@ ui <- fluidPage(
                                          ### ENRICHMENT TABLE ------------------
                                          tabPanel("Table Overview",
                                                   br(),
-                                                  shinycssloaders::withSpinner(DT::dataTableOutput("PCSF_enriched_table"), type = 8)
-                                                  ),
+                                                  shinycssloaders::withSpinner(DT::dataTableOutput("PCSF_enriched_table"), type = 8),
+                                                  br(),
+                                                  downloadButton("pcsf_enriched_table_download", 
+                                                                 label = "Download Table",
+                                                                 style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
+                                                                   #D8EAFF; border-radius: 10px; border-width: 2px")
+                                         ),
                                          
                                          ### ENRICHMENT SUBNETWORK ----------------
                                          tabPanel("Enrichment SubNetwork",
