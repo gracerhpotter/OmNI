@@ -4,7 +4,7 @@ cran_packages <- c("Biobase", "BiocManager", "bsicons", "bslib", "colourpicker",
                    "colourvalues", "cowplot", "devtools", "DT", "ggcorrplot", 
                    "ggfortify", "ggpubr", "ggrepel", "ggridges", "ggupset", 
                    "ggvenn", "heatmaply", "htmltools", "igraph",
-                   "influential", "kableExtra", "KEGGREST", "markdown", 
+                   "influential", "kableExtra", "KEGGREST", "limma", "markdown", 
                    "openxlsx", "pacman", "pcaMethods", "pheatmap", 
                    "plotly", "psych", "readr", "rmarkdown", "shiny", 
                    "shinycssloaders", "tidyverse", "uwot", "VIM", "visNetwork")
