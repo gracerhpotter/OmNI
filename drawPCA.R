@@ -30,6 +30,8 @@ drawPCA <- function(eset,
                     add_labels = FALSE,
                     add_ellipse = FALSE) {
   
+  assign("eset", eset, envir = .GlobalEnv)
+  
   # PREP DATA W/ PCA ANALYSIS
   data = t(Biobase::exprs(eset))
   
@@ -112,6 +114,17 @@ drawPCA <- function(eset,
   }
   
   return(pca_graph)
+  
+  # 3D PCA? --------------------------------------------------------------------
+  # plotly::plot_ly(as.data.frame(PC_data$x), x = ~PC1, y = ~PC2, z = ~PC3,
+  #                 color = pData(eset)$Group,
+  #                 colors = c('#636EFA','#EF553B', 'green'),
+  #                 marker = list(size = 7)) %>%
+  #   plotly::add_markers() %>%
+  #   plotly::layout(
+  #     title = "PCA"
+  #     # scene = list(bgcolor = "#e5ecf6")
+  #   )
 }
 
 #-------------------------------------------------------------------------------
