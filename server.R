@@ -336,6 +336,7 @@ server <- function(input, output, session) {
                                 type = type()[i],
                                 species = input$species,
                                 data_format = data_format()[i],
+                                zero_cutoff = input$zero_cutoff,
                                 log_transform = input$log_transform,
                                 uniprot_annotation = input$uniprot_annotation)
     }
@@ -868,7 +869,8 @@ server <- function(input, output, session) {
   ## PCA #######################################################################
   
   ### REACTIVE OBJECTS ---------------------------------------------------------
-  raw_PC_plot <- reactive({
+ 
+   raw_PC_plot <- reactive({
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$PC_dataset))
     i <- which(type() == input$PC_dataset)
     drawPCA(eset_prenorm()[[i]], 
@@ -881,7 +883,7 @@ server <- function(input, output, session) {
             title_add = paste("Pre-Normalization", input$PCA_title),
             add_labels = input$PCA_labels,
             add_ellipse = input$PCA_ellipse)
-  }) %>% bindEvent(c(input$PCA_button))
+  }) # %>% bindEvent(c(input$PCA_button))
   
   PC_plot <- reactive({
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$PC_dataset))
@@ -897,7 +899,7 @@ server <- function(input, output, session) {
             add_labels = input$PCA_labels,
             add_ellipse = input$PCA_ellipse)
     
-  }) %>% bindEvent(c(input$PCA_button))
+  }) # %>% bindEvent(c(input$PCA_button))
   
   PC_variance_plot <- reactive({
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group) && isTruthy(input$PC_dataset))
@@ -990,9 +992,9 @@ server <- function(input, output, session) {
   
   output$PC_plot <- renderPlot({
     i <- which(type() == input$PC_dataset)
-    gridExtra::grid.arrange(raw_PC_plot() + theme(legend.position = "bottom"), 
+    gridExtra::grid.arrange(raw_PC_plot() + theme(legend.position = "bottom"),
                             PC_plot() + theme(legend.position = "bottom"),
-                            top = paste0("PCA Plots ", type()[i]), 
+                            top = paste0("PCA Plots ", type()[i]),
                             ncol = 2);
   })
   
@@ -1021,10 +1023,11 @@ server <- function(input, output, session) {
   
   output$PC_loadings_download <- downloadHandler(
     filename = function() {
-      paste("PCloadings_", type(), "_", Sys.Date(), ".txt", sep = "")
+      i <- which(type() == input$PC_dataset)
+      paste("PCloadings_", type()[i], "_", Sys.Date(), ".pdf", sep = "")
     },
     content = function(file){
-      write.table(PC_loadings(), file, sep = "\t", col.names = NA)
+      ggplot2::ggsave(file, PC_loadings_plot())
     }
   )
   
@@ -1629,7 +1632,8 @@ server <- function(input, output, session) {
                     covariate_col = input$covariate_col,
                     remove_batch_PCA = TRUE,
                     batch_column = input$batch_column)
-
+    
+    try({pData(data)$Group <- annotation()[, input$batch_column]})
     message("---- BATCH CORRECTED DATA GENERATED")
     return(data)
   })
@@ -1649,8 +1653,11 @@ server <- function(input, output, session) {
   })
   
   pre_batch_PCA_plot <- reactive({
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)))
     i <- which(type() == input$limma_dataset)
-    drawPCA(eset = eset()[[i]],
+    eset <- eset()[[i]]
+    try({pData(eset)$Group <- annotation()[, input$batch_column]})
+    drawPCA(eset = eset,
             x_axis = "PC1",
             y_axis = "PC2",
             type = type()[[i]],
@@ -1690,7 +1697,12 @@ server <- function(input, output, session) {
       paste(type()[i], "_BatchCorrectedPCA_", Sys.Date(), input$batch_PCA_extension , sep = "")
     },
     content = function(file){
-      ggplot2::ggsave(file, batch_PCA_plot(), width = 9, height = 9)
+      i <- which(type() == input$limma_dataset)
+      plot <- gridExtra::grid.arrange(pre_batch_PCA_plot() + theme(legend.position = "bottom"), 
+                                      batch_PCA_plot() + theme(legend.position = "bottom"),
+                                      top = paste0("Pre/Post Batch Correction PCA Plots ", type()[i]), 
+                                      ncol = 2);
+      ggplot2::ggsave(file, plot, width = 11, height = 6)
     }
   )
   
@@ -3383,6 +3395,7 @@ server <- function(input, output, session) {
       
     }
     
+    try({PCSF_input$gene_symbol <- toupper(PCSF_input$gene_symbol)})
     message("COMPLETED PCSF INPUT GENERATION **")
     # assign("PCSF_input", PCSF_input, envir = .GlobalEnv)
     
@@ -3652,9 +3665,10 @@ server <- function(input, output, session) {
     
     shiny::validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
     
-    DT::datatable(PCSF_enriched_table(), rownames = FALSE, options = list(order = list(3, 'asc'))) %>% 
-      DT::formatSignif(columns = 4, digits = 3) %>%
-      DT::formatStyle('Adj_PVal', backgroundColor = DT::styleInterval(0.05, c('darkseagreen', 'darksalmon')))
+    DT::datatable(PCSF_enriched_table(), rownames = FALSE, 
+                  options = list(order = list(10, 'asc'))) %>% 
+      DT::formatSignif(columns = c(5, 6, 7, 8, 9, 10), digits = 3) %>%
+      DT::formatStyle('p.adjust', backgroundColor = DT::styleInterval(0.05, c('darkseagreen', 'darksalmon')))
   }) %>% bindEvent(input$PCSF_enrichment_button)
   
   output$PCSF_Enrichment_Network <- visNetwork::renderVisNetwork({
@@ -3674,6 +3688,16 @@ server <- function(input, output, session) {
   }) %>% bindEvent(input$PCSF_enrichment_button)
   
   ### DOWNLOADS ----------------------------------------------------------------
+  
+  output$pcsf_enriched_table_download <- downloadHandler(
+    filename = function() {
+      paste("PCSF_", input$network_input_type,"_EnrichmentTable_", Sys.Date(), ".csv", sep = "")
+    },
+    
+    content = function(file){
+      write.csv(PCSF_enriched_table(), file, row.names = FALSE)
+    }
+  )
   
   ## REPORT GENERATION #########################################################
   output$checkrender <- renderText({
@@ -3968,12 +3992,14 @@ server <- function(input, output, session) {
                                covariate_col = input$report_covariate_col[j],
                                remove_batch_PCA = TRUE,
                                batch_column = input$report_covariate_col[j])
+          try({pData(type[[j]])$Group <- annotation()[, input$report_covariate_col]})
         }
         data[[i]] <- type
         names(data[[i]]) <- make.names(input$report_covariate_col)
       }
       names(data) <- type()
       
+      assign("batch_corrected_data", data, envir = .GlobalEnv)
       message("---- BATCH CORRECTED DATA GENERATED")
       return(data)
       
@@ -4389,6 +4415,7 @@ server <- function(input, output, session) {
           # NOTE: Would need to be converted to CHEBI for enrichment with metabolite
           # enrichment file.
         top_tables_subset[[i]] <- limma::topTable(fit, adjust = "BH", number = nrow(fit$coefficients), coef = coefs[j])
+        try({top_tables_subset[[i]][,c("Gene")] <- toupper(top_tables_subset[[i]][,c("Gene")])})
         print("Gene" %in% colnames(top_tables_subset[[i]]))
         if (!("Gene" %in% colnames(top_tables_subset[[i]]))) {top_tables_subset[[i]] <- matrix(nrow = 0, ncol = 3)}
         try({
@@ -4403,6 +4430,7 @@ server <- function(input, output, session) {
             top_tables_subset[[i]] <- top_tables_subset[[i]][1:100,]
           }
           colnames(top_tables_subset[[i]]) <- c("gene_symbol", "logfc", "adj_pval")
+          top_tables_subset[[i]][,c("gene_symbol")] <- toupper(top_tables_subset[[i]][,c("gene_symbol")])
         })
       }
       names(top_tables_subset) <- type()
@@ -4430,6 +4458,8 @@ server <- function(input, output, session) {
       PCSF_input[[i]]$gene_symbol <- paste0(dataframe$gene_symbol, dataframe$chebi_id)
       PCSF_input[[i]] <- PCSF_input[[i]][, c("gene_symbol", "sscore", "sscore_adj_pval")]
       colnames(PCSF_input[[i]]) <- c("gene_symbol", "sscore", "adj_pval")
+      try({PCSF_input[[i]][,c("gene_symbol")] <- toupper(PCSF_input[[i]][,c("gene_symbol")])})
+      
     }
     names(PCSF_input) <- paste0("Sscore_", paste0(input$report_sscore_datasets, collapse = "_"), "_", coefs)
     
@@ -4458,7 +4488,7 @@ server <- function(input, output, session) {
       
       if (sscore == TRUE){
         pcsf_input_2 <- list()
-        for (i in 1:length(report_PCSF_input_sscore)){
+        for (i in 1:length(report_PCSF_input_sscore())){
           if (dim(report_PCSF_input_sscore()[[i]])[1] > 0){
             input <- report_PCSF_input_sscore()[[i]]
             print(str(input))
@@ -4472,7 +4502,7 @@ server <- function(input, output, session) {
         pcsf_input <- pcsf_input_1
       }
       
-      # assign("PCSF_report_input", pcsf_input, envir = .GlobalEnv)
+      assign("report_PCSF_input", pcsf_input, envir = .GlobalEnv)
       message("---- PCSF INPUT FINALIZED")
       return(pcsf_input)
     } else {
@@ -4487,15 +4517,18 @@ server <- function(input, output, session) {
       withProgress(message = 'Generating PCSF:', detail = "This may take a while...", value = 0, {
         pcsf_net <- list()
         for (i in 1:length(report_PCSF_input())){
+          try({
           setProgress(value = (i / length(report_PCSF_input()) - ((1 / length(report_PCSF_input())) / 2)), 
                       detail = paste("Making PCSF Network ", i, " of ", length(report_PCSF_input())))
           pcsf_net[[i]] <- makePCSFNetwork(pcsf_input_data = report_PCSF_input()[[i]],
                                            pcsf_nval = 10)
+          names(pcsf_net)[i] <- names(report_PCSF_input())[i]
+          })
         }
-        names(pcsf_net) <- names(report_PCSF_input())
       })
       
-      # assign("PCSF_report_network", pcsf_net, envir = .GlobalEnv)
+      pcsf_net <- pcsf_net[lengths(pcsf_net) != 0]
+      assign("PCSF_report_network", pcsf_net, envir = .GlobalEnv)
       message("---- PCSF NETWORK(S) GENERATED")
       return(pcsf_net)
     } else {
@@ -4507,12 +4540,14 @@ server <- function(input, output, session) {
     if (input$report_include_PCSF == TRUE){
       network <- list()
       for (i in 1:length(report_PCSF_network())){
-        network[[i]] <- PCSFVisNodes(pcsf_net = report_PCSF_network()[[i]],
-                                     pcsf_input_data = report_PCSF_input()[[i]]) 
+        try({
+          network[[i]] <- PCSFVisNodes(pcsf_net = report_PCSF_network()[[i]],
+                                       pcsf_input_data = report_PCSF_input()[[names(report_PCSF_network())[i]]]) 
+          names(network)[i] <- names(report_PCSF_network())[i]
+        })
       }
-      names(network) <- names(report_PCSF_input())
       
-      # assign("PCSF_nodes_network", network, envir = .GlobalEnv)
+      assign("PCSF_nodes_network", network, envir = .GlobalEnv)
       message("---- PCSF NODE NETWORK VISGRAPH(S) GENERATED")
       return(network)
     }
@@ -4521,10 +4556,12 @@ server <- function(input, output, session) {
   report_PCSF_influential_network <- reactive({
     if (input$report_include_PCSF == TRUE){
       network <- list()
-      for (i in 1:length(report_PCSF_network())){
-        network[[i]] <- PCSFVisInfluential(pcsf_net = report_PCSF_network()[[i]])
-      }
-      names(network) <- names(report_PCSF_input())
+      try({
+        for (i in 1:length(report_PCSF_network())){
+          network[[i]] <- PCSFVisInfluential(pcsf_net = report_PCSF_network()[[i]])
+          names(network)[i] <- names(report_PCSF_network())[i]
+        }
+      })
       
       # assign("PCSF_influential_network", network, envir = .GlobalEnv)
       message("---- PCSF INFLUENTIAL NETWORK VISGRAPH(S) GENERATED")
@@ -4537,27 +4574,34 @@ server <- function(input, output, session) {
       if (input$report_include_enrichment == TRUE){
         message("INITIALIZING PCSF ENRICHMENT")
         
-        GMTs <- c("HUMAN_GOBP", "MOUSE_GOBP", "RAT_GOBP", "YEAST_GOBP", "FRUITFLY_GOBP",
-                  "CELEGANS_GOBP", "ZEBRAFISH_GOBP")
+        # GMTs <- c("HUMAN_GOBP", "MOUSE_GOBP", "RAT_GOBP", "YEAST_GOBP", "FRUITFLY_GOBP",
+        #           "CELEGANS_GOBP", "ZEBRAFISH_GOBP")
+        # 
+        # GMT <- GMTs[grep(toupper(input$species), GMTs)]
         
-        GMT <- GMTs[grep(toupper(input$species), GMTs)]
+        GMT <- "HUMAN_GOBP"
         
         enriched <- list()
-        for (i in 1:length(report_PCSF_network())){
-          if (!grepl("CHEBI:", paste0(report_PCSF_input()[[i]]$gene_symbol, collapse = "; "))){
-            enriched[[paste0(names(report_PCSF_input())[i])]] <- pcsfRunEnrichment(pcsf_net = report_PCSF_network()[[i]],
-                                                                                   gmt = GMT)
-            message("NON-METABOLITE ENRICHMENT PERFORMED: ", names(report_PCSF_input())[i])
-          } else if (grepl("CHEBI:", paste0(report_PCSF_input()[[i]]$gene_symbol, collapse = "; ")) && input$species == "human") {
-            enriched[[paste0(names(report_PCSF_input())[i])]] <- pcsfRunEnrichment(pcsf_net = report_PCSF_network()[[i]],
-                                                                                   gmt = "HUMAN_METABOLGENE")
-            message("METABOLITE ENRICHMENT PERFORMED: ", names(report_PCSF_input())[i])
-          } else {
-            enriched[[paste0(names(report_PCSF_input())[i])]] <- NULL
-            message("NO ENRICHED PATHWAYS: ", names(report_PCSF_input())[i])
+        try({
+          for (i in 1:length(report_PCSF_network())){
+            if (!grepl("CHEBI:", paste0(report_PCSF_network()[[i]]$gene_symbol, collapse = "; "))){
+              enriched[[paste0(names(report_PCSF_network())[i])]] <- pcsfRunEnrichment(pcsf_net = report_PCSF_network()[[i]],
+                                                                                     gmt = GMT)
+              message("NON-METABOLITE ENRICHMENT PERFORMED: ", names(report_PCSF_network())[i])
+            } else if (grepl("CHEBI:", paste0(report_PCSF_network()[[i]]$gene_symbol, collapse = "; ")) && input$species == "human") {
+              enriched[[paste0(names(report_PCSF_network())[i])]] <- pcsfRunEnrichment(pcsf_net = report_PCSF_network()[[i]],
+                                                                                     gmt = "HUMAN_METABOLGENE")
+              message("METABOLITE ENRICHMENT PERFORMED: ", names(report_PCSF_network())[i])
+            } else {
+              enriched[[paste0(names(report_PCSF_network())[i])]] <- NULL
+            }
+            
+            if (length(enriched) == 0) {
+              message("NO ENRICHED PATHWAYS: ", names(report_PCSF_network()))
+            }
           }
-        }
-        
+        })
+        # assign("report_PCSF_network", report_PCSF_network(), envir = .GlobalEnv)
         # assign("PCSF_enriched", enriched, envir = .GlobalEnv)
         message("---- PCSF ENRICHMENT COMPLETE")
         return(enriched)
@@ -4569,11 +4613,17 @@ server <- function(input, output, session) {
     if (input$report_include_PCSF == TRUE){
       if (input$report_include_enrichment == TRUE){
         enriched_network <- list()
-        for (i in 1:length(report_PCSF_enriched())){
-          enriched_network[[i]] <- pcsfEnrichedSubnet(pcsf_enrich_pathway = report_PCSF_enriched()[[i]])
-        }
-        names(enriched_network) <- names(report_PCSF_enriched())
-        # assign("PCSF_enriched_network", enriched_network, envir = .GlobalEnv)
+        try({
+          if (length(report_PCSF_enriched()) != 0) {
+            for (i in 1:length(report_PCSF_enriched())){
+              enriched_network[[i]] <- pcsfEnrichedSubnet(pcsf_enrich_pathway = report_PCSF_enriched()[[i]])
+            }
+            names(enriched_network) <- names(report_PCSF_enriched())
+            # assign("PCSF_enriched_network", enriched_network, envir = .GlobalEnv)
+          } else {
+            enriched_network <- NULL
+          }
+        })
         message("---- PCSF ENRICHED NETWORK GENERATED")
         return(enriched_network)
       }
