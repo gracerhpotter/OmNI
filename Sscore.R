@@ -699,7 +699,7 @@ sscoreVennDiagram <- function(sscore_dataframe){
   datasets_dataframes <- list()
   for(i in 1:length(sscore_datasets)){
     col <- which(colnames(sscore_dataframe) == paste("logfc_", sscore_datasets[i], sep = ""))
-    dataframe <- sscore_dataframe$uniprot_id[!is.na(sscore_dataframe[, col]) & sscore_dataframe$sscore_adj_pval <= 0.05]
+    dataframe <- sscore_dataframe$sscore_label[!is.na(sscore_dataframe[, col]) & sscore_dataframe$sscore_adj_pval <= 0.05]
     dataframe <- c(dataframe, sscore_dataframe$chebi_id[!is.na(sscore_dataframe[, col]) & sscore_dataframe$sscore_adj_pval <= 0.05])
     dataframe <- dataframe[!is.na(dataframe)]
     dataframe <- dataframe[dataframe != ""]
@@ -722,7 +722,7 @@ sscoreVennDiagram <- function(sscore_dataframe){
   datasets_dataframes <- list()
   for(i in 1:length(sscore_datasets)){
     col <- which(colnames(sscore_dataframe) == paste("logfc_", sscore_datasets[i], sep = ""))
-    dataframe <- sscore_dataframe$uniprot_id[!is.na(sscore_dataframe[, col])]
+    dataframe <- sscore_dataframe$sscore_label[!is.na(sscore_dataframe[, col])]
     dataframe <- c(dataframe, sscore_dataframe$chebi_id[!is.na(sscore_dataframe[, col])])
     dataframe <- dataframe[!is.na(dataframe)]
     dataframe <- dataframe[dataframe != ""]
@@ -805,6 +805,7 @@ runSscoreEnrichment <- function(geneList,
   # GENERATE GMT REFERENCES
   GMT_file <- list.files("./GMTs", pattern = gmt)
   my_geneset = readr::read_delim(paste0("./GMTs/", GMT_file))
+  colnames(my_geneset) <- c("pathway", "feature_ids")
   
   my_geneset = dplyr::mutate(my_geneset, term = pathway)
   my_geneset$feature_ids <- gsub("\\-.*","",my_geneset$feature_ids)
