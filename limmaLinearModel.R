@@ -180,6 +180,8 @@ limmaLM = function(annot,
   colnames(design) <- gsub(":", "_", colnames(design))
   colnames(design) <- make.names(colnames(design));
   
+  assign("design", design, envir = .GlobalEnv)
+  
   if (time_series == TRUE) {
     if(time == "discrete"){
       colnames = contrastgroups
