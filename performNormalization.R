@@ -90,28 +90,28 @@ intensityNorm <- function(eset,
     if (impute_missing == TRUE){
       message("-- IMPUTING MISSING VALUES")
       
-      eset_matrix_norm[eset_matrix_norm == 0] <- NA
-      message("---- NAs BEFORE IMPUTATION:", sum(is.na(eset_matrix_norm[,grep(index,pData(eset)$Batch2)])))
+      eset_matrix[eset_matrix == 0] <- NA
+      message("---- NAs BEFORE IMPUTATION:", sum(is.na(eset_matrix[,grep(index,pData(eset)$Batch2)])))
       
       tryCatch({
         if (type == "Proteomics"){
           # assign("matrix", eset_matrix_norm[,grep(index,pData(eset)$Batch2)], envir = .GlobalEnv)
         }
         
-        eset_imputed <- pcaMethods::nni(t(eset_matrix_norm[,grep(index,pData(eset)$Batch2)]), method = c("llsImpute"), correlation = "pearson", verbose = TRUE)
-        eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- as.matrix(t(pcaMethods::completeObs(eset_imputed)))
+        eset_imputed <- pcaMethods::nni(t(eset_matrix[,grep(index,pData(eset)$Batch2)]), method = c("llsImpute"), correlation = "pearson", verbose = TRUE)
+        eset_matrix[,grep(index,pData(eset)$Batch2)] <- as.matrix(t(pcaMethods::completeObs(eset_imputed)))
         
-        message("---- NAs AFTER IMPUTATION:", sum(is.na(eset_matrix_norm[,grep(index,pData(eset)$Batch2)])))
+        message("---- NAs AFTER IMPUTATION:", sum(is.na(eset_matrix[,grep(index,pData(eset)$Batch2)])))
       },
       error = function(cond) {
         message("---- COULD NOT COMPLETE MISSING VALUE IMPUTATION")
         message(paste("*** ERROR MESSAGE:", conditionMessage(cond), "***"))
         # Choose a return value in case of error
-        eset_matrix_norm
+        eset_matrix
       })
       
-      eset_matrix_norm[is.na(eset_matrix_norm)] <- 0 # NA values become zeros
-      eset_matrix_norm[!is.finite(eset_matrix_norm)] <- 0
+      eset_matrix[is.na(eset_matrix)] <- 0 # NA values become zeros
+      eset_matrix[!is.finite(eset_matrix)] <- 0
     }
     
     if (norm == 'quantile') {
@@ -163,6 +163,8 @@ intensityNorm <- function(eset,
       
     } else if (norm == "IRS") {
       eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- IRS_normalize(eset_matrix[,grep(index,pData(eset)$Batch2)], pData(eset), IRS_column)
+    } else if (norm == "none") {
+      eset_matrix_norm[,grep(index,pData(eset)$Batch2)] <- eset_matrix[,grep(index,pData(eset)$Batch2)]
     }
     
     #---------------------------------------------------------------------------
@@ -177,13 +179,14 @@ intensityNorm <- function(eset,
     
     message("COMPLETED NORMALIZATION **")
     
-    if (!grepl("none", norm)) { 
+    # if (!grepl("none", norm)) { 
+    assign("eset_norm", eset_norm, envir = .GlobalEnv)
       return (eset_norm);
       
-    } else {
-      return(eset);
-      
-    }
+    # } else {
+    #   return(eset);
+    #   
+    # }
   }
 }
 
