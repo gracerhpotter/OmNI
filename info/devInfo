@@ -117,33 +117,27 @@ and generate plots from the dataset.
     should be checked/updated annually to ensure they are up to date.
     
 Sources:
-1.  http://download.baderlab.org/EM_Genesets/current_release/Human/symbol/
+1.  http://download.baderlab.org/EM_Genesets/current_release/Human/symbol/ ** UPDATED Mar 2025
     - HUMAN: GOALL, GOBP, GOCC, GOMF, HallmarkMSigDB, KEGG, Reactome, MSigDB, WikiPathways
     - MOUSE: GOALL, GOBP, GOCC, GOMF, Reactome, WikiPathways
     - RAT: GOALL, GOBP, GOCC, GOMF, Reactome, WikiPathways
 
-2.  https://maayanlab.cloud/Enrichr/
+2.  https://maayanlab.cloud/Enrichr/ ** UPDATED Jan 2024
     - C ELEGANS: GOBP, GOCC, GOMF, KEGG, WikiPathways
     - FRUITFLY: GOBP, GOCC, GOMF, KEGG, WikiPathways
     - YEAST: GOBP, GOCC, GOMF, KEGG, WikiPathways
     - ZEBRAFISH: GOBP, GOCC, GOMF, KEGG, WikiPathways
 
-3.  https://proteomics.broadapps.org/ptmsigdb/
+3.  https://proteomics.broadapps.org/ptmsigdb/ ** UPDATED Jan 2024
     - HUMAN: PHOSPHO
     - MOUSE: PHOSPHO
     - RAT: PHOSPHO
-    
-    ** GMT Files Updated: 
-      - Jan 2024
 
-4.  https://github.com/cnsb-boston/MOMENTA/tree/main/genesets
+4.  https://github.com/cnsb-boston/MOMENTA/tree/main/genesets ** ADDED June 2024
     - HUMAN: MOMENTA BioCyc/MFN Targeted/Expanded
     - MOUSE: MOMENTA BioCyc Targeted/Expanded
     - FRUITFLY: MOMENTA BioCyc Targeted/Expanded
     - YEAST: MOMENTA BioCyc Targeted/Expanded
-    
-    ** MOMENTA GMT Files Added:
-    - June 2024
 
 5.  Indranil Paul
     - HUMAN Reactome Gene Symbol + Metabolite CHEBI ID
