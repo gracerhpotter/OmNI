@@ -31,3 +31,44 @@ Additional information on the contents of each file, and the source of reference
 ## Example Data & Annotation Files
 
 Example data and annotation files are present in the `example` folder, but can also be found in a [public Google Drive folder](https://drive.google.com/drive/folders/1lyzmIhorrZy_CKuxabi1Bv1cLHIblJhk?usp=drive_link).
+
+## Preload Packages
+
+To pre-install/pre-load necessary packages the script below can be run in R.
+
+```
+# INSTALL CRAN/BIOCONDUCTOR PACKAGES
+cran_packages <- c("Biobase", "BiocManager", "bsicons", "bslib", "colourpicker",
+                   "colourvalues", "cowplot", "devtools", "DT", "ggcorrplot", 
+                   "ggfortify", "ggpubr", "ggrepel", "ggridges", "ggupset", 
+                   "ggvenn", "heatmaply", "htmltools", "igraph",
+                   "influential", "kableExtra", "KEGGREST", "limma", "markdown", 
+                   "openxlsx", "pacman", "pcaMethods", "pheatmap", 
+                   "plotly", "psych", "readr", "rmarkdown", "shiny", 
+                   "shinycssloaders", "tidyverse", "uwot", "VIM", "visNetwork")
+
+for (package in cran_packages){
+  if (!(package %in% installed.packages()[,"Package"])){install.packages(package, update = TRUE, ask = FALSE)}
+}
+
+# INSTALL BIOCONDUCTOR PACKAGES
+bioconductor_packages <- c('clusterProfiler', 'ComplexHeatmap', 'enrichplot',
+                           'EnsDb.Hsapiens.v86', 'EnsDb.Mmusculus.v79',
+                           'GeneTonic', "Glimma", "NormalyzerDE", 'org.Ce.eg.db', 
+                           'org.Dm.eg.db', 'org.Dr.eg.db', "org.Hs.eg.db", 'org.Mm.eg.db', 
+                           'org.Rn.eg.db', 'org.Sc.sgd.db', "pathview", "pcaMethods", 
+                           'topGO', "vsn")
+for (package in bioconductor_packages){
+  if (!(package %in% installed.packages()[,"Package"])){BiocManager::install(package, update = TRUE, ask = FALSE)}
+}
+
+# INSTALL GITHUB PACKAGES
+github_packages <- c('IOR-Bioinformatics/PCSF')
+
+for (package in github_packages){
+  if (!(sub(".*/", "", package) %in% installed.packages()[,"Package"])){devtools::install_github(package)}
+}
+
+# note that MAC needs quartz to be able to run cairo package which is needed for heatmaps. 
+# XQuartz: https://www.xquartz.org/
+```
