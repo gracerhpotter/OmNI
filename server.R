@@ -2634,18 +2634,43 @@ server <- function(input, output, session) {
     
     withProgress(message = 'Performing Integration:', detail = "This may take a while...", value = 0, {
       sscore <- list()
-      for (i in 1:length(sscore_data_list())){
-        setProgress(value = (i / length(sscore_data_list()) - ((1 / length(sscore_data_list())) / 2)), 
-                    detail = paste("Integrating contrast ", i, " of ", length(sscore_data_list())))
-        sscore[[i]] <- sscoreIntegration(data_list = sscore_data_list()[[i]])
+      
+      for (i in seq_along(sscore_data_list())) {
+        setProgress(
+          value = (i / length(sscore_data_list()) - ((1 / length(sscore_data_list())) / 2)), 
+          detail = paste("Integrating contrast", i, "of", length(sscore_data_list()))
+        )
+        
+        # Define the expected dataset names and corresponding parameter names
+        weight_map <- c(
+          ProteinGroups = "pr_w",
+          PhosphoSites = "ph_w",
+          RNA = "rna_w",
+          MetaboliteNeg = "metneg_w",
+          MetabolitePos = "metpos_w",
+          Peptides = "pep_w",
+          Generic = "gen_w"
+        )
+        
+        # Extract weights from UI inputs
+        weights <- lapply(names(weight_map), function(opt) {
+          weight_value <- input[[paste0("sscore_dataset_weight_", opt)]]
+          if (is.null(weight_value)) 1 else weight_value
+        })
+        names(weights) <- unname(weight_map)
+        
+        # Call sscoreIntegration with dynamic weights
+        sscore[[i]] <- do.call(sscoreIntegration, c(list(data_list = sscore_data_list()[[i]]), weights))
       }
+      
       names(sscore) <- input$sscore_limma_contrasts
     })
     
     message("--- COMPLETED SSCORE INTEGRATION")
     
-    return(sscore);
+    return(sscore)
   })
+  
   
   sscore_volcano <- reactive({
     i <- which(names(sscore_dataframe()) == input$sscore_coef_options)
@@ -2672,6 +2697,38 @@ server <- function(input, output, session) {
                 choices = options,
                 multiple = TRUE)
   })
+  
+  output$sscore_dataset_weights <- renderUI({
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$sscore_datasets))
+    
+    i <- which(type() == input$sscore_datasets)
+    options <- data_format()[i]
+    
+    # Group into rows of 2 columns
+    rows <- lapply(seq(1, length(options), by = 2), function(j) {
+      cols <- list(
+        column(6, numericInput(
+          inputId = paste0("sscore_dataset_weight_", options[j]),
+          label = paste0(options[j], " weight:"),
+          value = 1, min = 0, max = 1, step = 0.1
+        ))
+      )
+      
+      # Add second column if available
+      if ((j + 1) <= length(options)) {
+        cols[[2]] <- column(6, numericInput(
+          inputId = paste0("sscore_dataset_weight_", options[j + 1]),
+          label = paste0(options[j + 1], " weight:"),
+          value = 1, min = 0, max = 1, step = 0.1
+        ))
+      }
+      
+      fluidRow(cols)
+    })
+    
+    tagList(rows)
+  })
+  
   
   output$sscore_coef_options <- renderUI({
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$sscore_limma_contrasts))
@@ -4226,6 +4283,37 @@ server <- function(input, output, session) {
                 multiple = TRUE)
   })
   
+  output$report_sscore_dataset_weights <- renderUI({
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$report_sscore_datasets))
+    
+    i <- which(type() == input$report_sscore_datasets)
+    options <- data_format()[i]
+    
+    # Group into rows of 2 columns
+    rows <- lapply(seq(1, length(options), by = 2), function(j) {
+      cols <- list(
+        column(6, numericInput(
+          inputId = paste0("report_sscore_dataset_weight_", options[j]),
+          label = paste0(options[j], " weight:"),
+          value = 1, min = 0, max = 1, step = 0.1
+        ))
+      )
+      
+      # Add second column if available
+      if ((j + 1) <= length(options)) {
+        cols[[2]] <- column(6, numericInput(
+          inputId = paste0("report_sscore_dataset_weight_", options[j + 1]),
+          label = paste0(options[j + 1], " weight:"),
+          value = 1, min = 0, max = 1, step = 0.1
+        ))
+      }
+      
+      fluidRow(cols)
+    })
+    
+    tagList(rows)
+  })
+  
   report_sscore_contrasts <- reactive({
     req(input$report_include_sscore)
     contrasts <- limmaLM(annot = annotation(),
@@ -4316,26 +4404,50 @@ server <- function(input, output, session) {
   })
   
   report_sscore_dataframe <- reactive({
-    if (input$report_include_sscore == TRUE){
-    message("INITIALIZED SSCORE INTEGRATION")
-    
-    withProgress(message = 'Integrating via S-Score:', detail = "This may take a while...", value = 0, {
-      sscore <- list()
-      for (i in 1:length(report_sscore_data_list())){
-        setProgress(value = (i / length(report_sscore_data_list()) - ((1 / length(report_sscore_data_list())) / 2)), 
-                    detail = paste("Integrating contrast ", i, " of ", length(report_sscore_data_list())))
-        sscore[[i]] <- sscoreIntegration(data_list = report_sscore_data_list()[[i]])
-      }
-      names(sscore) <- paste0(paste0(input$report_sscore_datasets, collapse = "_"), "_", input$report_limma_contrasts)
-    })
-    
-    # assign("report_sscore_dataframe", sscore, envir = .GlobalEnv)
-    message("---- SSCORE INTEGRATION COMPLETE")
-    return(sscore);
+    if (input$report_include_sscore == TRUE) {
+      message("INITIALIZED SSCORE INTEGRATION")
+      
+      withProgress(message = 'Integrating via S-Score:', detail = "This may take a while...", value = 0, {
+        sscore <- list()
+        
+        for (i in seq_along(report_sscore_data_list())) {
+          setProgress(
+            value = (i / length(report_sscore_data_list()) - ((1 / length(report_sscore_data_list())) / 2)),
+            detail = paste("Integrating contrast", i, "of", length(report_sscore_data_list()))
+          )
+          
+          # Dataset label -> argument name mapping
+          weight_map <- c(
+            ProteinGroups = "pr_w",
+            PhosphoSites = "ph_w",
+            RNA = "rna_w",
+            MetaboliteNeg = "metneg_w",
+            MetabolitePos = "metpos_w",
+            Peptides = "pep_w",
+            Genetics = "gen_w"
+          )
+          
+          # Get weights from UI input, default to 1 if NULL
+          weights <- lapply(names(weight_map), function(opt) {
+            weight_value <- input[[paste0("report_sscore_dataset_weight_", opt)]]
+            if (is.null(weight_value)) 1 else weight_value
+          })
+          names(weights) <- unname(weight_map)
+          
+          # Call sscoreIntegration with weights and data
+          sscore[[i]] <- do.call(sscoreIntegration, c(list(data_list = report_sscore_data_list()[[i]]), weights))
+        }
+        
+        names(sscore) <- paste0(paste0(input$report_sscore_datasets, collapse = "_"), "_", input$report_limma_contrasts)
+      })
+      
+      message("---- SSCORE INTEGRATION COMPLETE")
+      return(sscore)
     } else {
       return(NULL)
     }
   })
+  
   
   ##### ENRICHMENT -------------------------------------------------------------
   report_sscore_geneLists <- reactive({

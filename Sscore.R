@@ -135,7 +135,14 @@ convertUniprotSymbol <- function(input_df,
 #'
 
 # computation of weighted zi and save as a list
-computeWeightedZIList <- function(data_list = data_list) {
+computeWeightedZIList <- function(data_list = data_list,
+                                  pr_w = pr_w,
+                                  ph_w = ph_w,
+                                  rna_w = rna_w,
+                                  metneg_w = metneg_w,
+                                  metpos_w = metpos_w,
+                                  pep_w = pep_w,
+                                  gen_w = gen_w) {
   
   message(paste("There are", length(data_list), "elements in data_list") )
   message(" ")
@@ -152,13 +159,15 @@ computeWeightedZIList <- function(data_list = data_list) {
   message("Citation for original publication: Nat Commun. 2013:4:2617. doi: 10.1038/ncomms3617" )
   
   # Define the biological importance weights
-  bio_importance_weights <- list(ProteinGroups = 0.5, 
-                                 PhosphoSites = 0.5, 
-                                 RNA = 0.3,
-                                 MetaboliteNeg = 0.5,
-                                 MetabolitePos = 0.5,
-                                 Peptides = 0.5,
-                                 Generic = 0.5)
+  bio_importance_weights <- list(ProteinGroups = pr_w, 
+                                 PhosphoSites = ph_w, 
+                                 RNA = rna_w,
+                                 MetaboliteNeg = metneg_w,
+                                 MetabolitePos = metpos_w,
+                                 Peptides = pep_w,
+                                 Generic = gen_w)
+  
+  print(bio_importance_weights)
   
   assign("data_list", data_list, envir = .GlobalEnv)
   
@@ -337,7 +346,14 @@ computeSscore <- function(x, ID_column) {
 #' @return A s-score integrated dataframe for all datasets
 #'
 
-sscoreIntegration <- function(data_list){
+sscoreIntegration <- function(data_list,
+                              pr_w = 1,
+                              ph_w = 1,
+                              rna_w = 1,
+                              metneg_w = 1,
+                              metpos_w = 1,
+                              pep_w = 1,
+                              gen_w = 1){
   
   message("--- BEGINNING S-SCORE INTEGRATION")
   ## LOADS ----------------------------------------------------------------------
@@ -354,7 +370,14 @@ sscoreIntegration <- function(data_list){
   
   message("--- computing weighted z-score list")
   ## COMPUTE WEIGHTED ZI LIST --------------------------------------------------
-  data_list_mod <- computeWeightedZIList(data_list)
+  data_list_mod <- computeWeightedZIList(data_list,
+                                         pr_w = pr_w,
+                                         ph_w = ph_w,
+                                         rna_w = rna_w,
+                                         metneg_w = metneg_w,
+                                         metpos_w = metpos_w,
+                                         pep_w = pep_w,
+                                         gen_w = gen_w)
   
   message(colnames(data_list_mod))
   

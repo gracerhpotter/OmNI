@@ -2435,6 +2435,8 @@ ui <- fluidPage(
                                   Please note that the more datasets you select the more
                                   processing time as every potential row overlap is calculated
                                   between each dataset."),
+                            br(),
+                            uiOutput("sscore_dataset_weights"),
                             
                             hr(),
                             
@@ -3442,6 +3444,7 @@ ui <- fluidPage(
                                                                      value = FALSE)),
                                     bslib::card_body(fillable = FALSE,
                                                      uiOutput("report_sscore_dataset"),
+                                                     uiOutput("report_sscore_dataset_weights"),
                                                      uiOutput("report_sscore_plots")))
                         
                         
