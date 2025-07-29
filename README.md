@@ -2,6 +2,8 @@
 
 An interactive shiny application version of the original Omics Notebook, with increased functionalities.
 
+Omics Notebook Interactive (OmNI) is an R-based, open-source, and modular framework engineered for streamlined multi-omics data integration and analysis across diverse data types, incorporating interactive visualizations at each processing step. OmNI performs differential expression analysis utilizing customizable linear models, accommodating various covariates and complex experimental designs. For cross-omic layer integration, OmNI employs a modified S-score statistic, ensuring sensitive detection of differential features. The framework also integrates network and metabolomics data, offering detailed insights into regulatory mechanisms through comprehensive enrichment analysis using multiple pathway databases. Outputs include interactive HTML reports, CSV/TSV files, and Cytoscape-compatible objects. OmNI is readily deployable in both local and high-performance computing environments, enabling scalable data processing.
+
 ## Dependencies
 
 Dependencies for the application are installed and loaded via the `loads.R` file. The first time opening the application may take 10-15+ minutes if your system does not have many of the packages installed. 
