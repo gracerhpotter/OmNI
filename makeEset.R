@@ -35,10 +35,7 @@ makeEset <- function(data,
   # type <- "PreProcessedData"
   # data_format <- "Generic"
   assign("data", data, envir = .GlobalEnv)
-  if (data_format == "RNA" & !("Ensembl" %in% colnames(data))) {
-    stop(paste0("The RNA data format REQUIRES an 'Ensembl' column."))
-  }
-  
+
   if ("Ensembl" %in% colnames(data)){
     
     data1 <- data
@@ -59,21 +56,25 @@ makeEset <- function(data,
     }
     
     if (!("Gene" %in% colnames(data))){
-      data1$Gene_ORG <- AnnotationDbi::mapIds(org_db, keys = ensembl.genes, keytype = "ENSEMBL", column = "SYMBOL")
-      ensembl.genes.missed <- data[, "Ensembl"][is.na(data1[, "Gene_ORG"])]
-      Gene_ENSDB <- AnnotationDbi::mapIds(ens_db, keys = ensembl.genes.missed, keytype = "GENEID", column = "SYMBOL")
-      Gene_ENSDB <- data.frame("Ensembl" = names(Gene_ENSDB), "Gene_ENSDB" = Gene_ENSDB)
-      data1 <- merge(data1, Gene_ENSDB, by = "Ensembl", all = TRUE)
-      data1 <- tidyr::unite(data1, Gene, c(Gene_ORG, Gene_ENSDB), na.rm = TRUE)
+      try({
+        data1$Gene_ORG <- AnnotationDbi::mapIds(org_db, keys = ensembl.genes, keytype = "ENSEMBL", column = "SYMBOL")
+        ensembl.genes.missed <- data[, "Ensembl"][is.na(data1[, "Gene_ORG"])]
+        Gene_ENSDB <- AnnotationDbi::mapIds(ens_db, keys = ensembl.genes.missed, keytype = "GENEID", column = "SYMBOL")
+        Gene_ENSDB <- data.frame("Ensembl" = names(Gene_ENSDB), "Gene_ENSDB" = Gene_ENSDB)
+        data1 <- merge(data1, Gene_ENSDB, by = "Ensembl", all = TRUE)
+        data1 <- tidyr::unite(data1, Gene, c(Gene_ORG, Gene_ENSDB), na.rm = TRUE)
+      })
     }
     
     if (!("Protein" %in% colnames(data))){
-      data1$Protein_ORG <- AnnotationDbi::mapIds(org_db, keys = ensembl.genes, keytype = "ENSEMBL", column = "UNIPROT")
-      ensembl.genes.missed <- data[, "Ensembl"][is.na(data1[, "Protein_ORG"])]
-      Protein_ENSDB <- AnnotationDbi::mapIds(ens_db, keys = ensembl.genes.missed, keytype = "GENEID", column = "UNIPROTID")
-      Protein_ENSDB <- data.frame("Ensembl" = names(Protein_ENSDB), "Protein_ENSDB" = Protein_ENSDB)
-      data1 <- merge(data1, Protein_ENSDB, by = "Ensembl", all = TRUE)
-      data1 <- tidyr::unite(data1, Protein, c(Protein_ORG, Protein_ENSDB), na.rm = TRUE)
+      try({
+        data1$Protein_ORG <- AnnotationDbi::mapIds(org_db, keys = ensembl.genes, keytype = "ENSEMBL", column = "UNIPROT")
+        ensembl.genes.missed <- data[, "Ensembl"][is.na(data1[, "Protein_ORG"])]
+        Protein_ENSDB <- AnnotationDbi::mapIds(ens_db, keys = ensembl.genes.missed, keytype = "GENEID", column = "UNIPROTID")
+        Protein_ENSDB <- data.frame("Ensembl" = names(Protein_ENSDB), "Protein_ENSDB" = Protein_ENSDB)
+        data1 <- merge(data1, Protein_ENSDB, by = "Ensembl", all = TRUE)
+        data1 <- tidyr::unite(data1, Protein, c(Protein_ORG, Protein_ENSDB), na.rm = TRUE)
+      })
     }
     
     data <- data1
@@ -124,7 +125,7 @@ makeEset <- function(data,
 
   #-----------------------------------------------------------------------------
   
-  if (data_format == "ProteinGroups") {
+  if (data_format == "ProteinGroups" | data_format == "RNA") {
     data.matrix <- as.matrix(data[, samp_cols]) # pull out sample intensity values based on annotation
     
     if ("Majority.protein.IDs" %in% colnames(data)){
@@ -205,7 +206,7 @@ makeEset <- function(data,
     }
   } 
   
-  possible_formats <- c("MetabolitePos", "MetaboliteNeg", "Generic", "PhosphoSites", 'Peptides', "ProteinGroups")
+  possible_formats <- c("MetabolitePos", "MetaboliteNeg", "Generic", "PhosphoSites", 'Peptides', "ProteinGroups", "RNA")
   if (!(data_format %in% possible_formats)) {
     stop(paste0("The provided data format is invalid. Please make sure that a valid data format was
                 selected in the annotation file on the `Inputs` sheet. \n", "DATA FORMAT PROVIDED: '",
@@ -351,17 +352,18 @@ makeEset <- function(data,
   
   # make expression set object
   eset <- Biobase::ExpressionSet(assayData = data.matrix)
-
+  
   Biobase::fData(eset) <- data[, which(!(colnames(data) %in% sample_column_names))]
 
   Biobase::pData(eset) <- cbind(annotate[ which(annotate[,type] %in% sample_column_names),],
-                                colnames(exprs(eset)))
+                                colnames(Biobase::exprs(eset)))
 
   rownames(Biobase::pData(eset)) <- colnames(data.matrix)
   
   eset <- eset[apply(eset, 1, FUN = function(x){sum(x == 0)}) < (ncol(eset) * zero_cutoff),] # Filter out rows with >30% NAs
   eset <- eset[,colSums(exprs(eset) > 0) >= 0.01 * nrow(exprs(eset))];
   
-  
   return(eset);
+  
+  print("COMPLETED MAKE ESET")
 }
