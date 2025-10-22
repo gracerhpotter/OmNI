@@ -1,7 +1,7 @@
 
 # NCmisc::list.functions.in.file("ui.R", alphabetic = TRUE)
 
-source("loads.R")
+# source("loads.R")
 source("makeEset.R")
 source("formatAnnotation.R")
 source("drawRange.R")
@@ -817,7 +817,14 @@ ui <- fluidPage(
                  sidebarLayout(
                    sidebarPanel(
                      
-                     h4("Options"),
+                     h4("Correlation Analysis Options"),
+                     
+                     helpText("The sample-level correlation heatmap displays pairwise 
+                              correlations between samples, allowing quick assessment 
+                              of data quality, sample similarity, and potential outliers."),
+                     
+                     br(),
+                     br(),
                      
                      h6("Dataset"),
                      
@@ -936,7 +943,12 @@ ui <- fluidPage(
         tabPanel("MD Plot",
                  sidebarLayout(
                    sidebarPanel(
-                     h4("Analysis Options"),
+                     h4("MD Analysis Options"),
+                     
+                     helpText("An MD plot (Mean–Difference plot) visualizes the relationship 
+                              between average expression and log fold change."),
+                     br(),
+                     br(),
                      
                      h6("Dataset"),
                      
@@ -1033,9 +1045,32 @@ ui <- fluidPage(
                    sidebarPanel(
                      h4("UMAP Analysis Options"),
                      
+                     helpText("UMAP performs dimensionality reduction to project high-dimensional data into 2D or 3D space, 
+                              preserving local structure and revealing clusters or patterns for easy visualization."),
+                     
+                     br(),
+                     br(),
+                     
                      h6("Dataset"),
                      
                      uiOutput("UMAPplot_choose_dataset"),
+                     
+                     hr(),
+                     
+                     fluidRow(
+                       column(6, 
+                              h6("Minimum Distance",
+                                 bslib::tooltip(bsicons::bs_icon("info-circle"),
+                                                "Smaller values generate more highly clustered outputs, while larger values generate more highly dispersed outputs.",
+                                                placement = "right")),
+                              sliderInput("UMAP_min_dist", "", min = 0, max = 1, value = 0.01, step = 0.01)),
+                       column(6, 
+                              h6("Num Neighbors",
+                                 bslib::tooltip(bsicons::bs_icon("info-circle"),
+                                                "Larger values generate global views, while smaller values preserve more local data.",
+                                                placement = "right")),
+                              uiOutput("UMAP_n_neighbors"))
+                     ),
                      
                      hr(),
                      
@@ -1430,7 +1465,16 @@ ui <- fluidPage(
                                        
                                        hr(),
                                        
-                                       h6("Covariates"),
+                                       h6("Covariates",
+                                          bslib::popover(
+                                            bsicons::bs_icon("info-circle"),
+                                            "Adding covariates to your limma model controls for additional 
+                                            sources of variation (such as age, sex, or batch effects), 
+                                            helping isolate the true effect of your primary variable and 
+                                            improving the accuracy and interpretability of differential 
+                                            expression results."
+                                          )),
+                                       
                                        
                                        checkboxInput("add_covariate",
                                                      label = "Add covariate(s) to the model"),
@@ -3229,7 +3273,14 @@ ui <- fluidPage(
                                                 actionButton("PCSF_Nodes_Network_button",
                                                              label = "Generate Network",
                                                              style = "color: #fff; background-color: #9BD79A; 
-                                                                      border-color: #9BD79A; border-radius: 10px; border-width: 2px")
+                                                                      border-color: #9BD79A; border-radius: 10px; border-width: 2px"),
+                                                br(),
+                                                br(),
+                                                
+                                                downloadButton("pcsf_graphml_ppi_download", 
+                                                               label = "Download Network GraphML",
+                                                               style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
+                                                                        #D8EAFF; border-radius: 10px; border-width: 2px")
                                                 )
                                        )
                                        ),
@@ -3261,7 +3312,14 @@ ui <- fluidPage(
                                                 actionButton("PCSF_Influential_Network_button",
                                                              label = "Generate Network",
                                                              style = "color: #fff; background-color: #9BD79A; 
-                                                                      border-color: #9BD79A; border-radius: 10px; border-width: 2px")
+                                                                      border-color: #9BD79A; border-radius: 10px; border-width: 2px"),
+                                                br(),
+                                                br(),
+                                                
+                                                downloadButton("pcsf_graphml_influence_download", 
+                                                               label = "Download Network GraphML",
+                                                               style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
+                                                                        #D8EAFF; border-radius: 10px; border-width: 2px")
                                                 )
                                        )
                                        ),
@@ -3307,13 +3365,25 @@ ui <- fluidPage(
                                          ### ENRICHMENT SUBNETWORK ----------------
                                          tabPanel("Enrichment SubNetwork",
                                                   br(),
-                                                  shinycssloaders::withSpinner(visNetwork::visNetworkOutput("PCSF_Enrichment_Network", height = "100%"), type = 8)
+                                                  shinycssloaders::withSpinner(visNetwork::visNetworkOutput("PCSF_Enrichment_Network", height = "100%"), type = 8),
+                                                  br(),
+                                                  br(),
+                                                  downloadButton("pcsf_graphml_enrichedSubnet_download", 
+                                                                 label = "Download Network GraphML",
+                                                                 style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
+                                                                        #D8EAFF; border-radius: 10px; border-width: 2px")
                                                   ),
                                          
                                          ### ENRICHMENT NETWORK ----------------
                                          tabPanel("Enrichment Cluster Network",
                                                   br(),
-                                                  shinycssloaders::withSpinner(visNetwork::visNetworkOutput("PCSF_Enrichment_Clusters_Network", height = "auto"), type = 8)
+                                                  shinycssloaders::withSpinner(visNetwork::visNetworkOutput("PCSF_Enrichment_Clusters_Network", height = "auto"), type = 8),
+                                                  br(),
+                                                  br(),
+                                                  downloadButton("pcsf_graphml_enrichedContracted_download", 
+                                                                 label = "Download Network GraphML",
+                                                                 style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
+                                                                        #D8EAFF; border-radius: 10px; border-width: 2px")
                                          )
                                        )
                                        )
@@ -3375,10 +3445,13 @@ ui <- fluidPage(
                                                              label = "Add a project name to customize outputs",
                                                              width = "100%",
                                                              placeholder = "Proteomics_Project_A1")),
-                                  bslib::card_footer(downloadButton("report",
-                                                                    label = "Download Report",
-                                                                    style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
-                                                                   #D8EAFF; border-radius: 10px; border-width: 2px")))
+                                  bslib::card_footer(
+                                    downloadButton("report",
+                                                   label = "Download Report",
+                                                   style = "color: #61A6F9; background-color: #D8EAFF; border-color: 
+                                                         #D8EAFF; border-radius: 10px; border-width: 2px")
+                                    )
+                                  )
                ),
                
                hr(),
