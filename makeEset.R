@@ -34,7 +34,7 @@ makeEset <- function(data,
   # annotate <- openxlsx::read.xlsx("~/Documents/EmiliLab/OmNI/example_data/example_preprocessed_annotation.xlsx", 2, colNames = TRUE)
   # type <- "PreProcessedData"
   # data_format <- "Generic"
-  assign("data", data, envir = .GlobalEnv)
+  # assign("data", data, envir = .GlobalEnv)
 
   if ("Ensembl" %in% colnames(data)){
     
@@ -135,6 +135,7 @@ makeEset <- function(data,
       
     } else {
       try({data = split_semi(data, "Protein", "Index")}) # parse out protein names in FP
+      try({data = split_semi(data, "Protein", "Protein.ID")}) # parse out protein names in FP
       try({data = split_semi(data, "Protein", "Protein.Group")}) # parse out protein names in DIA-NN
       try({data = split_semi(data, "Protein", "Accession")}) # parse out protein names in PD
     }
@@ -360,8 +361,8 @@ makeEset <- function(data,
 
   rownames(Biobase::pData(eset)) <- colnames(data.matrix)
   
-  eset <- eset[apply(eset, 1, FUN = function(x){sum(x == 0)}) < (ncol(eset) * zero_cutoff),] # Filter out rows with >30% NAs
-  eset <- eset[,colSums(exprs(eset) > 0) >= 0.01 * nrow(exprs(eset))];
+  # eset <- eset[apply(eset, 1, FUN = function(x){sum(x == 0)}) < (ncol(eset) * zero_cutoff),] # Filter out rows with >30% NAs
+  # eset <- eset[,colSums(Biobase::exprs(eset) > 0) >= 0.01 * nrow(Biobase::exprs(eset))];
   
   return(eset);
   
