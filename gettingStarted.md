@@ -6,7 +6,7 @@
 
 Start by uploading data in the `Data` tab under the `Data Upload` header. Multiple datasets are allowed, but all must be included in the annotation file uploaded. More information on accepted file types and formatting the annotation file can be found in the `File Inputs` section of the `About` tab.
 
-> It may be helpful to start by generating a report that gives a summary of plots and analysis to get a big picture overview of the data set. To do this go to the `Generate Report` tab after completing the inputs in the `Data Upload` tab as described below. Choose which groups and contrasts you want to include and adjust the presets as desired. Then click *Download Report*. The Excel Data summary provides an overview of the calculations made for each row, click *Download Excel Summary* to view.
+> It may be helpful to start by generating a report that gives a summary of plots and analysis to get a big picture overview of the data set. To do this go to the `Generate Report` tab after completing the inputs in the `Data Upload` tab as described below. Choose which groups and contrasts you want to include and adjust the presets as desired. Then click *Download Report*. The Excel Data summary provides an overview of the calculations made for each row, click *Download Report Folder* to view.
 
 Once the data and annotation files are uploaded there are additional selections that define annotation information and metadata relevant to the generation of analysis plots and data processing:
 
