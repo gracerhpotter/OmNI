@@ -58,7 +58,8 @@ makePCSFNetwork <- function(pcsf_input_data = pcsf_input_data,
 
 ### PERFORM PCSF NETWORK ANALYSIS
 PCSFVisNodes = function(pcsf_net = pcsf_net,
-                        pcsf_input_data = pcsf_input) {
+                        pcsf_input_data = pcsf_input,
+                        graphml = FALSE) {
   
   my_interactome <- readr::read_rds("PCSF_files/pcsf_interactome.rds")
   names(pcsf_input_data)[2] <- 'value'
@@ -108,9 +109,11 @@ PCSFVisNodes = function(pcsf_net = pcsf_net,
   my_pcsf_net_vis = igraph::graph_from_data_frame(d = my_pcsf_net_edges, 
                                                   vertices = my_pcsf_net_nodes, 
                                                   directed = FALSE)
-  # igraph::write_graph(graph = my_pcsf_net_vis,
-  #                     file = paste0("~/Downloads/pcsf_network_", Sys.Date(), ".graphml"),
-  #                     format = "graphml")
+  
+  if (graphml == TRUE) {
+    return(my_pcsf_net_vis)
+  }
+  
   # plot
   set.seed(123)
   visIgraph_obj = visNetwork::visIgraph(igraph = my_pcsf_net_vis,
@@ -129,7 +132,6 @@ PCSFVisNodes = function(pcsf_net = pcsf_net,
                                dragNodes = TRUE,
                                dragView = TRUE, 
                                zoomView = TRUE) 
-  
   return(visIgraph_obj)
 }
   
@@ -145,7 +147,8 @@ PCSFVisNodes = function(pcsf_net = pcsf_net,
 #' @return visNetwork::visIgraph object
 #'
 
-PCSFVisInfluential = function(pcsf_net = pcsf_net) {
+PCSFVisInfluential = function(pcsf_net = pcsf_net,
+                              graphml = FALSE) {
   ### PERFORM INFLUENTIAL ANALYSIS ON PCSF NETWORK
   my_graph = pcsf_net
   my_graph_vertices = igraph::V(pcsf_net) 
@@ -159,7 +162,7 @@ PCSFVisInfluential = function(pcsf_net = pcsf_net) {
                                   mode = "all",
                                   loops = TRUE, 
                                   d = 3, 
-                                  scale = "range" )
+                                  scale = "range")
   
   my_graph_ivi_df = data.frame(my_graph_ivi) %>% 
     dplyr::mutate(genes = rownames(.)) %>%
@@ -167,7 +170,7 @@ PCSFVisInfluential = function(pcsf_net = pcsf_net) {
     dplyr::select(genes, influence_score) %>%
     dplyr::arrange(desc(influence_score))
   
-  write.csv(my_graph_ivi_df, paste0("~/Downloads/PCSF_influential_summary_", Sys.Date(), ".csv"))
+  # write.csv(my_graph_ivi_df, paste0("~/Downloads/PCSF_influential_summary_", Sys.Date(), ".csv"))
   # assign("PCSF_influential", my_graph_ivi_df, envir = .GlobalEnv)
   
   my_graph_ivi_edges = as.data.frame(igraph::get.edgelist(my_graph))
@@ -187,9 +190,9 @@ PCSFVisInfluential = function(pcsf_net = pcsf_net) {
   igraph::V(my_igraph_ivi_vis)$size <- igraph::V(my_igraph_ivi_vis)$influence_score
   igraph::V(my_igraph_ivi_vis)$size <- scales::rescale(igraph::V(my_igraph_ivi_vis)$size, c(8, 24))
   
-  # igraph::write_graph(graph = my_igraph_ivi_vis,
-  #                     file = paste0("~/Downloads/pcsf_influential_", Sys.Date(), ".graphml"),
-  #                     format = "graphml")
+  if (graphml == TRUE) {
+    return(my_pcsf_net_vis)
+  }
   
   # plot
   visIgraph_obj = visNetwork::visIgraph(igraph = my_igraph_ivi_vis,
@@ -455,7 +458,8 @@ pcsfEnrichedTable <- function(pcsf_enrich_pathway){
 #' @return visNetwork::visIgraph object
 #' 
 
-pcsfEnrichedContracted <- function(pcsf_enrich_pathway){
+pcsfEnrichedContracted <- function(pcsf_enrich_pathway,
+                                   graphml = FALSE){
   
   # Contract the modules
   my_g = pcsf_enrich_pathway$subnet
@@ -472,9 +476,9 @@ pcsfEnrichedContracted <- function(pcsf_enrich_pathway){
   igraph::V(contracted_graph)$size = cluster_gene_counts
   igraph::V(contracted_graph)$color = colourvalues::colour_values(igraph::V(contracted_graph)$name, palette = "spectral", include_alpha = FALSE)
 
-  # igraph::write_graph(graph = contracted_graph,
-  #                     file = paste0("~/Downloads/pcsf_enriched_contracted_", Sys.Date(), ".graphml"),
-  #                     format = "graphml")
+  if (graphml == TRUE) {
+    return(my_pcsf_net_vis)
+  }
   
   visIgraph_obj = visNetwork::visIgraph(igraph = contracted_graph,
                                         layout = "layout_nicely", #layout_nicely
@@ -509,15 +513,16 @@ pcsfEnrichedContracted <- function(pcsf_enrich_pathway){
 #' @return visNetwork::visIgraph object
 #'
 
-pcsfEnrichedSubnet <- function(pcsf_enrich_pathway){
+pcsfEnrichedSubnet <- function(pcsf_enrich_pathway,
+                               graphml = FALSE){
   # Create visNetwork object for nice visualization
   visIgraph_obj = pcsf_enrich_pathway$subnet
   
   igraph::V(visIgraph_obj)$cluster = gsub(":.*", "", igraph::V(visIgraph_obj)$title)
   igraph::V(visIgraph_obj)$color <- colourvalues::colour_values(igraph::V(visIgraph_obj)$cluster, palette = "spectral", include_alpha = FALSE)
-  # igraph::write_graph(graph = visIgraph_obj,
-  #                     file = paste0("~/Downloads/pcsf_enriched_subnet", Sys.Date(), ".graphml"),
-  #                     format = "graphml")
+  if (graphml == TRUE) {
+    return(my_pcsf_net_vis)
+  }
   
   visIgraph_obj = visNetwork::visIgraph(igraph = visIgraph_obj,
                                         layout = "layout_nicely", #layout_nicely
