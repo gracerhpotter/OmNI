@@ -42,8 +42,14 @@ intensityNorm <- function(eset,
   
   assign("prenorm_eset", eset, envir = .GlobalEnv)
   # CLEAN ESET DATA AND CREATE ESET MATRIX
-  eset <- eset[apply(eset, 1, FUN = function(x){sum(x == 0)}) < (ncol(eset) * zero_cutoff),] # Filter out rows with >30% NAs
-  eset <- eset[,colSums(exprs(eset) > 0) >= min_feature * nrow(exprs(eset))];
+  # Filter out rows with too many zeros
+  keep_rows <- apply(Biobase::exprs(eset), 1, function(x) sum(x == 0)) < (ncol(eset) * zero_cutoff)
+  eset <- eset[keep_rows, ]
+  
+  # Filter out columns with too few features
+  keep_cols <- colSums(Biobase::exprs(eset) > 0) >= (min_feature * nrow(Biobase::exprs(eset)))
+  eset <- eset[, keep_cols]
+  
   
   # eset_matrix <- Biobase::exprs(prenorm_eset)
   # eset_matrix_norm <- eset_matrix
@@ -60,7 +66,7 @@ intensityNorm <- function(eset,
     if(grepl(type, i)){
       column <- gsub(paste0(type, "_"), "", i)
       message(paste("-- REMOVED OUTLIER COLUMN:", column))
-      column <- which(colnames(exprs(eset)) == column)
+      column <- which(colnames(Biobase::exprs(eset)) == column)
       eset <- eset[, -c(column)]
     }
   }
