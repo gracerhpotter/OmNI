@@ -1,6 +1,4 @@
 
-# RUN APP
-
 source("ui.R")
 source("server.R")
 
