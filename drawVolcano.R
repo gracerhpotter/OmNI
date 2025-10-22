@@ -246,6 +246,8 @@ drawMD = function(annot,
   contrastgroups = unique(annot$Group)
   logfc_index <- c();
   
+  message("STARTING MD")
+  
   # CALCULATE MEAN VALUE PER GROUP
   for(j in 1:length(contrastgroups)){
     if(sum(pData(eset)$Group == contrastgroups[j]) > 1){
@@ -258,6 +260,8 @@ drawMD = function(annot,
       
     }
   }
+  
+  message("CALCULATING LOGFC")
   
   # CREATE LOG FOLD CHANGE B/W EACH PAIRING OF GROUPS
   for(j in 1:(length(contrastgroups) - 1)){
@@ -273,6 +277,7 @@ drawMD = function(annot,
     }
   }
   
+  message("CALCULATING LOGFC OVERALL")
   # We calculate a maximum fold change value across all groups as a way to see which features are changing most across all groups.
   # This is analogous to the F-statistic from the differential analysis.
   fData(eset)[, "logfc_Overall"] <- apply(fData(eset)[, grep("mean", colnames(fData(eset)))], 1, function(x) max(x) - min(x))
