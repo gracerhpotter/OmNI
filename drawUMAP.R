@@ -22,18 +22,15 @@ drawUMAP <- function(eset,
                      color, 
                      title_add = "",
                      add_labels = FALSE,
-                     shapes = FALSE) {
+                     shapes = FALSE,
+                     min_dist = 0.01,
+                     use_size = 15) {
   
   # PREP DATA ------------------------------------------------------------------
   data <- t(Biobase::exprs(eset))
   data.labels <- Biobase::pData(eset)$Group
   
-  use_size <- 15
-  if (length(data.labels) < 15){
-    use_size <- (length(data.labels) / 2)
-  }
-  
-  data.umap <- uwot::umap(data, n_neighbors = use_size) 
+  data.umap <- uwot::umap(data, n_neighbors = use_size, min_dist = min_dist) 
   
   pdata <- Biobase::pData(eset)
   groups <- unique(pdata$Group)
