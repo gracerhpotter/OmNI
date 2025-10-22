@@ -89,6 +89,17 @@ print(file.path(save_dir))
 for (i in 1:length(params$type)){
   dir.create(file.path(paste0(save_dir, "/", params$type[i], sep = "")), showWarnings = FALSE)
 }
+
+# # Temporary folder for saving outputs on the server
+# save_dir <- file.path(tempdir(), params$file_name)
+# dir.create(save_dir, showWarnings = FALSE)
+# 
+# print(save_dir)  # this is now a server path
+# 
+# # Create subfolders
+# for (i in seq_along(params$type)) {
+#   dir.create(file.path(save_dir, params$type[i]), showWarnings = FALSE)
+# }
 ```
 
 
@@ -458,7 +469,8 @@ for (i in 1:length(params$eset)){
                     color = "Paired", 
                     title_add = "",
                     add_labels = TRUE,
-                    shapes = FALSE)
+                    shapes = FALSE,
+                    use_size = length(Biobase::pData(params$eset[[i]])$Group))
   plot(UMAP)
 }
 ```
@@ -470,7 +482,8 @@ for (i in 1:length(params$eset)){
                     color = "Paired", 
                     title_add = "",
                     add_labels = TRUE,
-                    shapes = FALSE)
+                    shapes = FALSE,
+                    use_size = length(Biobase::pData(params$eset[[i]])$Group))
   
   if (dir.exists(save_dir)){
     grDevices::pdf(paste0(save_dir, "/", params$type[i], "/UMAP_", params$type[i], ".pdf", sep = ""), 
@@ -1795,3 +1808,4 @@ for (i in 1:length(params$type)){
   }
 }
 ```
+
