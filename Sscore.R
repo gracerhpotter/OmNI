@@ -44,6 +44,8 @@ makeDataList <- function(top_table_list,
         dataframe[,1] <- sub(';.*', '', top_table_list[[i]]$HMDBID) # assuming HMDB column called "HMDBID" as in MetaboAnalyst annotated_peaklist output
       } else if ("InChIKey" %in% colnames(top_table_list[[i]])){
         dataframe[,1] <- top_table_list[[i]]$InChIKey # assuming InChIKey column called "InChIKey" as in MS-DIAL output
+      } else {
+        dataframe[,1] <- top_table_list[[i]][,1]
       }
       
       dataframe[,2] <- rownames(top_table_list[[i]])
@@ -61,8 +63,8 @@ makeDataList <- function(top_table_list,
         dataframe <- merge(dataframe, metabolite_mapping[, c("inchikey_id", "chebi_id")], by.x = "ID", by.y = "inchikey_id")
       } else if (grepl("C[0-9]{5}", dataframe$ID[1])){
         dataframe <- merge(dataframe, metabolite_mapping[, c("kegg_id", "chebi_id")], by.x = "ID", by.y = "kegg_id")
-      } else{
-        dataframe$other_id <- dataframe$ID
+      } else {
+        dataframe$chebi_id <- dataframe$ID
       }
       
       # Other IDs are mostly numeric of different lengths. Would need to tell users to add identifier
@@ -98,27 +100,60 @@ makeDataList <- function(top_table_list,
 #' @return A dataframe with a `gene_symbol` column.
 #'
 
-# function to get gene_symbol from uniprot_ids
-convertUniprotSymbol <- function(input_df, 
-                                 key_column = "uniprot_id", 
-                                 keytype = "UNIPROT") {
+convertUniprotSymbol <- function(input_df, key_column = "uniprot_id", orgdb = org.Hs.eg.db::org.Hs.eg.db) {
   
-  # Extract keys from the specified column
-  keys <- input_df[[key_column]]
+  clean_keys <- sub("_.*", "", input_df[[key_column]])
+  valid_keys <- clean_keys[clean_keys %in% AnnotationDbi::keys(orgdb, keytype = "UNIPROT")]
   
-  input_df$gene_symbol <- rep("NA", nrow(input_df))
+  if (length(valid_keys) == 0) {
+    warning("No valid UniProt IDs found in input. Returning original dataframe.")
+    return(input_df)
+  }
   
-  # Perform mapping using AnnotationDbi::mapIds
-  # TODO: EDIT SO MORE THAN HUMAN ACCEPTED 
-  try({input_df$gene_symbol <- AnnotationDbi::mapIds(org.Hs.eg.db::org.Hs.eg.db, keys, keytype, column = "SYMBOL")}) # human
-  try({input_df$gene_symbol <- AnnotationDbi::mapIds(org.Mm.eg.db::org.Mm.eg.db, keys, keytype, column = "SYMBOL")}) # mouse
+  mapped_symbols <- AnnotationDbi::mapIds(
+    orgdb,
+    keys = valid_keys,
+    column = "SYMBOL",
+    keytype = "UNIPROT",
+    multiVals = "first"
+  )
   
-  # Rename the "SYMBOL" column to "gene_symbol" in the original dataframe
-  try({input_df$gene_symbol <- stringr::str_squish(input_df$gene_symbol)})
+  input_df[["gene_symbol"]] <- clean_keys  # default: keep original cleaned IDs
+  input_df[clean_keys %in% names(mapped_symbols), "gene_symbol"] <- mapped_symbols[clean_keys[clean_keys %in% names(mapped_symbols)]]
   
-  # Return the modified dataframe
+  input_df <- dplyr::mutate(
+    input_df,
+    dplyr::across(
+      where(is.character),
+      ~dplyr::na_if(., "NA")
+    )
+  )
+  
   return(input_df)
 }
+
+
+# function to get gene_symbol from uniprot_ids
+# convertUniprotSymbol <- function(input_df, 
+#                                  key_column = "uniprot_id", 
+#                                  keytype = "UNIPROT") {
+#   
+#   # Extract keys from the specified column
+#   keys <- input_df[[key_column]]
+#   
+#   input_df$gene_symbol <- rep("NA", nrow(input_df))
+#   
+#   # Perform mapping using AnnotationDbi::mapIds
+#   # TODO: EDIT SO MORE THAN HUMAN ACCEPTED 
+#   try({input_df$gene_symbol <- AnnotationDbi::mapIds(org.Hs.eg.db::org.Hs.eg.db, keys, keytype, column = "SYMBOL")}) # human
+#   try({input_df$gene_symbol <- AnnotationDbi::mapIds(org.Mm.eg.db::org.Mm.eg.db, keys, keytype, column = "SYMBOL")}) # mouse
+#   
+#   # Rename the "SYMBOL" column to "gene_symbol" in the original dataframe
+#   try({input_df$gene_symbol <- stringr::str_squish(input_df$gene_symbol)})
+#   
+#   # Return the modified dataframe
+#   return(input_df)
+# }
 
 # COMPUTE WEIGHTED Z-SCORE LIST ################################################
 #' @title Compute Weighted ZI List
@@ -134,7 +169,6 @@ convertUniprotSymbol <- function(input_df,
 #' weighted zi, & zi
 #'
 
-# computation of weighted zi and save as a list
 computeWeightedZIList <- function(data_list = data_list,
                                   pr_w = pr_w,
                                   ph_w = ph_w,
@@ -144,7 +178,7 @@ computeWeightedZIList <- function(data_list = data_list,
                                   pep_w = pep_w,
                                   gen_w = gen_w) {
   
-  message(paste("There are", length(data_list), "elements in data_list") )
+  message(paste("There are", length(data_list), "elements in data_list"))
   message(" ")
   message("*** Input data format ***")
   message(" -- The input 'data_list' is a list of 'dataframes' with 3 columns: uniprot_id, feature_id and logfc")
@@ -152,106 +186,76 @@ computeWeightedZIList <- function(data_list = data_list,
   message(" -- If present, S-score for metabolite dataset will be computed separately and then combined with genes")
   message(" -- Use 'my_combine_genes_and_metabols_using_sscore' function if metabolomics data is present.")
   message(" -- Use 'my_combine_genes_using_sscore' function if metabolomics data is NOT present.")
-  message(" -- Example 'feature_id' for proteomics: Q8BH50_ARK2N")
-  message(" -- Example 'feature_id' for phosphoproteomics & other PTMs: Q8BH50_ARK2N_T74")
   message(" ")
   message("*** Citation ***")
-  message("Citation for original publication: Nat Commun. 2013:4:2617. doi: 10.1038/ncomms3617" )
+  message("Citation for original publication: Nat Commun. 2013:4:2617. doi: 10.1038/ncomms3617")
   
   # Define the biological importance weights
-  bio_importance_weights <- list(ProteinGroups = pr_w, 
-                                 PhosphoSites = ph_w, 
-                                 RNA = rna_w,
-                                 MetaboliteNeg = metneg_w,
-                                 MetabolitePos = metpos_w,
-                                 Peptides = pep_w,
-                                 Generic = gen_w)
+  bio_importance_weights <- list(
+    ProteinGroups = pr_w,
+    PhosphoSites = ph_w,
+    RNA = rna_w,
+    MetaboliteNeg = metneg_w,
+    MetabolitePos = metpos_w,
+    Peptides = pep_w,
+    Generic = gen_w
+  )
   
   print(bio_importance_weights)
   
   assign("data_list", data_list, envir = .GlobalEnv)
   
-  # Calculate weights based on the number of features and biological importance
-  if ("ProteinGroups" %in% names(data_list)){
-    ProteinGroups_weight <- bio_importance_weights$ProteinGroups / sqrt(nrow(data_list$ProteinGroups))
-    
-  }
-  if ("PhosphoSites" %in% names(data_list)){
-    PhosphoSites_weight <- bio_importance_weights$PhosphoSites / sqrt(nrow(data_list$PhosphoSites))
-    
-  }
-  if ("RNA" %in% names(data_list)){
-    RNA_weight <- bio_importance_weights$RNA / sqrt(nrow(data_list$RNA))
-    
-  }
-  if ("MetaboliteNeg" %in% names(data_list)){
-    MetaboliteNeg_weight <- bio_importance_weights$MetaboliteNeg / sqrt(nrow(data_list$MetaboliteNeg))
-    
-  }
-  if ("MetabolitePos" %in% names(data_list)){
-    MetabolitePos_weight <- bio_importance_weights$MetabolitePos / sqrt(nrow(data_list$MetabolitePos))
-    
-  }
-  if ("Peptides" %in% names(data_list)){
-    Peptides_weight <- bio_importance_weights$Peptides / sqrt(nrow(data_list$Peptides))
-    
-  }
-  if ("Generic" %in% names(data_list)){
-    Generic_weight <- bio_importance_weights$Generic / sqrt(nrow(data_list$Generic))
-    
+  # Compute adjusted dataset-specific weights
+  adjusted_weights <- list()
+  for (nm in names(bio_importance_weights)) {
+    if (nm %in% names(data_list)) {
+      adjusted_weights[[nm]] <- bio_importance_weights[[nm]] / sqrt(nrow(data_list[[nm]]))
+    }
   }
   
-  # COMPUTE WEIGHTED Z-SCORES ####################################################
-  #' @title Compute Weighted Z-Scores
-  #'
-  #' @description
-  #' Compute the weighted Z-score for each row using the logFC.
-  #' 
-  #' @param x dataframe from `data_list` described in `computeWeightedZIList` function
-  #' 
-  #' @return dataframe with additional columns
-  #'
+  print(adjusted_weights)
   
-  # function for computing weighed z-scores
+  # --- Function for computing weighted z-scores ---
   computeWeightedZI <- function(x, dataset_type) {
-    wk <- switch(dataset_type,
-                 "ProteinGroups" = ProteinGroups_weight, 
-                 "PhosphoSites" = PhosphoSites_weight, 
-                 "RNA" = RNA_weight,
-                 "MetaboliteNeg" = MetaboliteNeg_weight,
-                 "MetabolitePos" = MetabolitePos_weight,
-                 "Peptides" = Peptides_weight,
-                 "Generic" = Generic_weight)
     
-    x %>%
-      dplyr::mutate(wk = wk,
-                    zi = scale(logfc, center = TRUE, scale = TRUE)[,1],
-                    weighted_zi = wk * zi) %>%
-      dplyr::select(logfc, wk, weighted_zi, everything()) %>%
+    print(dataset_type)
+    
+    wk <- adjusted_weights[[dataset_type]]
+    bio_w <- bio_importance_weights[[dataset_type]]
+    
+    print(wk)
+    print(bio_w)
+    
+    x <- x %>%
+      dplyr::mutate(
+        wk = wk,
+        bioimportance_w = bio_w,
+        zi = scale(logfc, center = TRUE, scale = TRUE)[, 1],
+        weighted_zi = wk * zi
+      ) %>%
+      dplyr::select(logfc, wk, bioimportance_w, weighted_zi, everything()) %>%
       dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
       as.data.frame()
+    
+    print(head(x))
+    
+    return(x)
   }
   
-  for (i in 1:length(data_list)) {
-    
-    # Extract data frame from the list
+  # Loop through data_list and apply computeWeightedZI
+  for (i in seq_along(data_list)) {
+    element_name <- names(data_list)[i]
     data_s <- data_list[[i]]
     
-    # Extract element name from the list
-    element_name <- names(data_list)[i]
-    
-    # Compute weighted Z-scores using the new approach
     data_s1 <- computeWeightedZI(data_s, element_name) %>%
       dplyr::rename_with(~ ifelse(.x %in% c("uniprot_id", "chebi_id"), .x, paste0(.x, "_", element_name)))
     
-    # Save the computed data frame back into the list
     data_list[[i]] <- data_s1
-    
   }
   
-  # Return the modified list (optional)
   return(data_list)
 }
+
 
 # COMPUTE S-SCORES #############################################################
 #' @title Compute S-Scores
@@ -295,7 +299,8 @@ computeSscore <- function(x, ID_column) {
         dplyr::starts_with("comb_"),
         dplyr::starts_with("logfc"),
         dplyr::starts_with("weighted"),
-        dplyr::starts_with("wk")
+        dplyr::starts_with("wk"),
+        dplyr::starts_with("bioimportance")
       )
     
   } else if (ID_column == "chebi_id") {
@@ -324,7 +329,8 @@ computeSscore <- function(x, ID_column) {
         dplyr::starts_with("comb_"),
         dplyr::starts_with("logfc"),
         dplyr::starts_with("weighted"),
-        dplyr::starts_with("wk")
+        dplyr::starts_with("wk"),
+        dplyr::starts_with("bioimportance")
       )
   }
   
@@ -347,158 +353,370 @@ computeSscore <- function(x, ID_column) {
 #'
 
 sscoreIntegration <- function(data_list,
-                              pr_w = 1,
-                              ph_w = 1,
-                              rna_w = 1,
-                              metneg_w = 1,
-                              metpos_w = 1,
-                              pep_w = 1,
-                              gen_w = 1){
+                                     pr_w = 1,
+                                     ph_w = 1,
+                                     rna_w = 1,
+                                     metneg_w = 1,
+                                     metpos_w = 1,
+                                     pep_w = 1,
+                                     gen_w = 1) {
   
-  message("--- BEGINNING S-SCORE INTEGRATION")
-  ## LOADS ----------------------------------------------------------------------
-  prefix__id_proteingroups <- "pr."
-  prefix__id_rna <- "rna."
-  prefix__id_rna_deseq <- "rna_deseq."
-  prefix__id_rna_quant <- "rna_quant."
-  prefix__id_phosphosites <- "ph."
-  prefix__id_acetylome <- "ac."
-  prefix__id_ubiquitylome <- "ub."
-  prefix__id_metabolome <- "met."
-  prefix__id_metabolitepos <- "metpos."
-  prefix__id_metaboliteneg <- "metneg."
+  message("--- BEGINNING S-SCORE INTEGRATION (DuckDB)")
+  data_list_mod <- computeWeightedZIList(
+    data_list = data_list,
+    pr_w = pr_w,
+    ph_w = ph_w,
+    rna_w = rna_w,
+    metneg_w = metneg_w,
+    metpos_w = metpos_w,
+    pep_w = pep_w,
+    gen_w = gen_w
+  )
   
-  message("--- computing weighted z-score list")
-  ## COMPUTE WEIGHTED ZI LIST --------------------------------------------------
-  data_list_mod <- computeWeightedZIList(data_list,
-                                         pr_w = pr_w,
-                                         ph_w = ph_w,
-                                         rna_w = rna_w,
-                                         metneg_w = metneg_w,
-                                         metpos_w = metpos_w,
-                                         pep_w = pep_w,
-                                         gen_w = gen_w)
-  
-  message(colnames(data_list_mod))
-  
-  message("--- separating my metabolite vs. non-metabolite")
-  # separate by non-metabolomics versus metabolomics
+  # separate metabolomics vs non-metabolomics
   elements_to_use <- list()
-  
-  # non-metabolomics dataset names
-  elements_to_use[[1]] <- names(data_list_mod)[names(data_list_mod) != "MetaboliteNeg" & 
-                                                 names(data_list_mod) != "MetabolitePos"]
-  # metabolomics dataset names
-  elements_to_use[[2]] <- names(data_list_mod)[names(data_list_mod) == "MetaboliteNeg" | 
-                                                 names(data_list_mod) == "MetabolitePos"]
-  message(str(elements_to_use))
+  elements_to_use[[1]] <- setdiff(names(data_list_mod), c("MetaboliteNeg", "MetabolitePos"))
+  elements_to_use[[2]] <- intersect(names(data_list_mod), c("MetaboliteNeg", "MetabolitePos"))
   
   sscore_combined_list <- list()
   
-  message("--- computing s-score")
-  ## COMPUTE S-SCORE -----------------------------------------------------------
-  # separately for metabolomics combined dataframe and non-metabolomics combined 
-  # dataframes
-  for (i in 1:length(elements_to_use)){
-    ifelse(i == 1, ID_column <- "uniprot_id", ID_column <- "chebi_id")
+  # open DuckDB connection (in-memory)
+  con <- DBI::dbConnect(duckdb::duckdb(), dbdir = ":memory:")
+  
+  for (i in seq_along(elements_to_use)) {
+    ID_column <- ifelse(i == 1, "uniprot_id", "chebi_id")
+    tables <- elements_to_use[[i]]
     
-    if(length(elements_to_use[[i]]) != 0){
-      sscore_combined_list[[i]] <- data_list_mod[elements_to_use[[i]]] %>% 
-        purrr::reduce(full_join, by = ID_column) %>% 
-        computeSscore(ID_column = ID_column) %>%
-        dplyr::arrange(sscore_adj_pval)
+    if (length(tables) == 0) next
+    
+    # Write each table to DuckDB
+    for (t in tables) {
+      DBI::dbWriteTable(con, t, data_list_mod[[t]], overwrite = TRUE)
     }
+    
+    # Construct sequential FULL OUTER JOIN SQL
+    if (length(tables) == 1) {
+      join_sql <- paste0("SELECT * FROM ", tables)
+    } else {
+      join_sql <- tables[1]
+      for (t in tables[-1]) {
+        join_sql <- paste0("(", join_sql, " FULL OUTER JOIN ", t, " USING (", ID_column, "))")
+      }
+      join_sql <- paste0("SELECT * FROM ", join_sql)
+    }
+    
+    # Execute the join
+    combined_df <- DBI::dbGetQuery(con, join_sql)
+    
+    # Compute S-score
+    sscore_combined_list[[i]] <- computeSscore(combined_df, ID_column = ID_column) %>%
+      stats::setNames(colnames(.))
   }
   
-  message("SORTED S_SCORE DATAFRAME")
-  message(str(sscore_combined_list))
+  # combine metabolite + non-metabolite results
+  # Keep only non-null elements
+  non_null_sscores <- sscore_combined_list[!sapply(sscore_combined_list, is.null)]
   
-  message("--- binding dataframes")
-  ## BIND S-SCORE DF ROWS ------------------------------------------------------
-  
-  if (!is.null(sscore_combined_list[[1]])){
-    sscore_combined <- sscore_combined_list[[1]] %>%
-      dplyr::select(uniprot_id,
-                    dplyr::starts_with("feature_id"), 
-                    sscore, 
-                    sscore_pval, 
-                    sscore_adj_pval, 
-                    dplyr::starts_with("comb_"), 
-                    dplyr::starts_with("logfc"), 
-                    dplyr::starts_with("weighted"), 
-                    dplyr::starts_with("wk"))
-    
-    # if metabolomics included this step combines the non-metabolomics and metabolomics
-    # s-score dataframes
-    if (length(sscore_combined_list) == 2){
-      sscore_combined <- dplyr::bind_rows(sscore_combined, sscore_combined_list[[2]]) %>%
-        dplyr::select(uniprot_id,
-                      chebi_id, 
-                      dplyr::starts_with("feature_id"), 
-                      sscore, 
-                      sscore_pval, 
-                      sscore_adj_pval, 
-                      dplyr::starts_with("comb_"), 
-                      dplyr::starts_with("logfc"), 
-                      dplyr::starts_with("weighted"), 
-                      dplyr::starts_with("wk"))
-    }
+  if (length(non_null_sscores) == 0) {
+    stop("No S-score data to combine")
+  } else if (length(non_null_sscores) == 1) {
+    sscore_combined <- non_null_sscores[[1]]
   } else {
-    sscore_combined <- sscore_combined_list[[2]] %>%
-      dplyr::select(uniprot_id,
-                    chebi_id,
-                    dplyr::starts_with("feature_id"), 
-                    sscore, 
-                    sscore_pval, 
-                    sscore_adj_pval, 
-                    dplyr::starts_with("comb_"), 
-                    dplyr::starts_with("logfc"), 
-                    dplyr::starts_with("weighted"), 
-                    dplyr::starts_with("wk")) %>%
-      dplyr::mutate(gene_symbol = "NA")
+    sscore_combined <- dplyr::bind_rows(non_null_sscores)
   }
   
-  message("COMBINED S_SCORE DATAFRAME")
-  message(str(sscore_combined))
+  # clean & format sscore_combined
+  columns_to_process <- grep("^feature_id_", colnames(sscore_combined), value = TRUE)
   
-  message("--- cleaning & formatting")
-  ## CLEAN & FORMAT DATAFRAME --------------------------------------------------
-  columns_to_process <- sscore_combined %>% dplyr::select(starts_with("feature_id_")) %>% names()
+  combine_sscore_lists <- function(sscore_combined_list) {
+    # Validate input
+    if (!is.list(sscore_combined_list) || length(sscore_combined_list) == 0) {
+      stop("Input must be a non-empty list of data.frames")
+    }
+    
+    assign("sscore_combined_list", sscore_combined_list, envir = .GlobalEnv)
+    
+    # Keep only non-NULL elements
+    sscore_combined_list <- sscore_combined_list[!vapply(sscore_combined_list, is.null, logical(1))]
+    if (length(sscore_combined_list) == 0) return(NULL)
+    
+    combined <- dplyr::bind_rows(sscore_combined_list)
+    
+    # If uniprot_id exists, create gene_symbol
+    if ("uniprot_id" %in% colnames(combined)) {
+      # convertUniprotSymbol()
+      combined <- convertUniprotSymbol(combined, key_column = "uniprot_id")
+    } else {
+      # ensure gene_symbol exists
+      if (!"gene_symbol" %in% colnames(combined)) combined$gene_symbol <- NA_character_
+    }
+    
+    # normalize character "NA"/"NULL" to real NA
+    combined <- combined %>%
+      as.data.frame() %>%
+      dplyr::mutate(dplyr::across(dplyr::where(is.character), ~ dplyr::na_if(., "NA"))) %>%
+      dplyr::mutate(dplyr::across(dplyr::where(is.character), ~ dplyr::na_if(., "NULL"))) %>%
+      as.data.frame()
+    
+    # identify feature_id columns
+    columns_to_process <- combined %>% dplyr::select(dplyr::starts_with("feature_id_")) %>% names()
+    
+    # if there are no feature_id_* columns, produce simple sscore_label = gene_symbol and return
+    if (length(columns_to_process) == 0) {
+      combined <- combined %>%
+        dplyr::mutate(sscore_label = ifelse(is.na(gene_symbol), NA_character_, as.character(gene_symbol))) %>%
+        dplyr::relocate(sscore_label)
+      return(as.data.frame(combined))
+    }
+    
+    # clean the feature columns: remove any ".*_" prefix
+    combined <- combined %>%
+      dplyr::mutate(dplyr::across(dplyr::all_of(columns_to_process), ~ stringr::str_replace(., ".*_", ""))) %>%
+      as.data.frame()
+    
+    # define prefix map (keys are lower-case dataset suffixes)
+    prefix_map <- list(
+      proteingroups = "pr.",
+      phosphosites  = "ph.",
+      rna           = "rna.",
+      rna_deseq     = "rna_deseq.",
+      rna_quant     = "rna_quant.",
+      acetylome     = "ac.",
+      ubiquitylome  = "ub.",
+      metabolome    = "met.",
+      metabolitepos = "metpos.",
+      metaboliteneg = "metneg.",
+      peptides      = "pep.",
+      generic       = "gen."
+    )
+    
+    # Only include datasets that exist in the current combined
+    # present_datasets <- names(prefix_map)[tolower(names(prefix_map)) %in% tolower(gsub("^feature_id_", "", colnames(combined)))]
+    present_datasets <- gsub("^feature_id_", "", colnames(combined)[tolower(gsub("^feature_id_", "", colnames(combined))) %in% tolower(names(prefix_map))])
+    
+    print(names(prefix_map))
+    print(colnames(combined))
+    print(present_datasets)
+    
+    for (ds_name in present_datasets) {
+      colname <- paste0("feature_id_", ds_name)
+      prefix <- prefix_map[[tolower(ds_name)]]
+      print(prefix)
+      
+      # Create column with prefixed IDs or "NA" placeholders
+      combined[[colname]] <- ifelse(
+        !is.na(combined[[colname]]) & combined[[colname]] != "",
+        paste0(prefix, combined[[colname]]),
+        paste0(prefix, "NA")
+      )
+    }
+    
+    print(head(combined))
+    
+    combined <- combined %>%
+      dplyr::mutate(dplyr::across(dplyr::where(is.character), ~ dplyr::na_if(., "NA"))) %>%
+      dplyr::mutate(dplyr::across(dplyr::where(is.character), ~ dplyr::na_if(., "NULL"))) %>%
+      as.data.frame()
+
+    # Build sscore_label row-wise by concatenating gene_symbol + all feature_id_* columns
+    # Use c_across() inside rowwise for robust per-row behavior
+    combined <- combined %>%
+      dplyr::rowwise() %>%
+      dplyr::mutate(
+        sscore_label = {
+          parts <- c(
+            if (!is.na(gene_symbol)) as.character(gene_symbol) else NA_character_,
+            as.character(dplyr::c_across(dplyr::all_of(columns_to_process)))
+          )
+          parts_label <- ifelse(is.na(parts), "NA", parts)
+          paste(parts_label, collapse = "_")
+        }
+      ) %>%
+      dplyr::ungroup() %>%
+      as.data.frame()
+    
+    # Create a fallback 'feature_id' column: if both metabolites & genes present then coalesce
+    if ("chebi_id" %in% colnames(combined) && "uniprot_id" %in% colnames(combined)) {
+      combined$feature_id <- dplyr::coalesce(combined$uniprot_id, combined$chebi_id)
+    } else if ("uniprot_id" %in% colnames(combined)) {
+      combined$feature_id <- combined$uniprot_id
+    } else if ("chebi_id" %in% colnames(combined)) {
+      combined$feature_id <- combined$chebi_id
+    } else {
+      combined$feature_id <- NA_character_
+    }
+    
+    final_cols <- c("sscore_label", "feature_id", "gene_symbol", "sscore", "sscore_pval", "sscore_adj_pval")
+    existing_final_cols <- final_cols[final_cols %in% colnames(combined)]
+    combined <- combined %>% dplyr::select(dplyr::all_of(existing_final_cols), dplyr::everything())
+    
+    as.data.frame(combined)
+  }
   
-  sscore_combined <- sscore_combined %>%
-    convertUniprotSymbol() %>%
-    as.data.frame() %>%
-    dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
-    dplyr::mutate(across(where(is.character), ~ na_if(., "NULL"))) %>%
-    as.data.frame() %>%
-    dplyr::mutate(dplyr::across(dplyr::all_of(columns_to_process), ~stringr::str_replace(., ".*_", ""))) %>%
-    dplyr::mutate(dplyr::across(dplyr::contains("feature_id_"), 
-                                ~{
-                                  column_name <- as.character(cur_column())
-                                  matching_string <- str_extract(column_name, "_(.*)")
-                                  
-                                  if (!is.na(matching_string)) {
-                                    prefix_variable <- paste0("prefix_", tolower(gsub("\\d", "", matching_string)))
-                                    paste(get(prefix_variable), ., sep = "")
-                                  } else {
-                                    .  # For columns without matching conditions, keep the original value
-                                  }
-                                }
-    )) %>%
-    dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
-    dplyr::mutate(across(where(is.character), ~ na_if(., "NULL"))) %>%
-    as.data.frame() %>%
-    dplyr::rowwise() %>%
-    dplyr::mutate(sscore_label = paste(c(gene_symbol, dplyr::across(dplyr::all_of(columns_to_process), as.character)), collapse = "_"),
-                  feature_id = ifelse(length(sscore_combined_list) == 2, coalesce(uniprot_id, chebi_id), uniprot_id)) %>%
-    dplyr::ungroup() %>%
-    as.data.frame() %>%
-    dplyr::select(sscore_label, feature_id, gene_symbol, sscore, sscore_pval, sscore_adj_pval, everything())
   
-  # assign("sscore_dataframe", sscore_combined, envir = .GlobalEnv)
-  message("--- finished s-score integration")
-  return(sscore_combined);
+  sscore_combined <- combine_sscore_lists(sscore_combined_list)
+  
+  # close DuckDB
+  DBI::dbDisconnect(con, shutdown = TRUE)
+  
+  message("--- FINISHED S-SCORE INTEGRATION (DuckDB)")
+  return(sscore_combined)
 }
+
+
+# sscoreIntegration <- function(data_list,
+#                               pr_w = 1,
+#                               ph_w = 1,
+#                               rna_w = 1,
+#                               metneg_w = 1,
+#                               metpos_w = 1,
+#                               pep_w = 1,
+#                               gen_w = 1){
+#   
+#   message("--- BEGINNING S-SCORE INTEGRATION")
+#   ## LOADS ----------------------------------------------------------------------
+#   prefix__id_proteingroups <- "pr."
+#   prefix__id_rna <- "rna."
+#   prefix__id_rna_deseq <- "rna_deseq."
+#   prefix__id_rna_quant <- "rna_quant."
+#   prefix__id_phosphosites <- "ph."
+#   prefix__id_acetylome <- "ac."
+#   prefix__id_ubiquitylome <- "ub."
+#   prefix__id_metabolome <- "met."
+#   prefix__id_metabolitepos <- "metpos."
+#   prefix__id_metaboliteneg <- "metneg."
+#   
+#   message("--- computing weighted z-score list")
+#   ## COMPUTE WEIGHTED ZI LIST --------------------------------------------------
+#   data_list_mod <- computeWeightedZIList(data_list,
+#                                          pr_w = pr_w,
+#                                          ph_w = ph_w,
+#                                          rna_w = rna_w,
+#                                          metneg_w = metneg_w,
+#                                          metpos_w = metpos_w,
+#                                          pep_w = pep_w,
+#                                          gen_w = gen_w)
+#   
+#   message(colnames(data_list_mod))
+#   
+#   message("--- separating my metabolite vs. non-metabolite")
+#   # separate by non-metabolomics versus metabolomics
+#   elements_to_use <- list()
+#   
+#   # non-metabolomics dataset names
+#   elements_to_use[[1]] <- names(data_list_mod)[names(data_list_mod) != "MetaboliteNeg" & 
+#                                                  names(data_list_mod) != "MetabolitePos"]
+#   # metabolomics dataset names
+#   elements_to_use[[2]] <- names(data_list_mod)[names(data_list_mod) == "MetaboliteNeg" | 
+#                                                  names(data_list_mod) == "MetabolitePos"]
+#   message(str(elements_to_use))
+#   
+#   sscore_combined_list <- list()
+#   
+#   message("--- computing s-score")
+#   ## COMPUTE S-SCORE -----------------------------------------------------------
+#   # separately for metabolomics combined dataframe and non-metabolomics combined
+#   # dataframes
+#   for (i in 1:length(elements_to_use)){
+#     ifelse(i == 1, ID_column <- "uniprot_id", ID_column <- "chebi_id")
+# 
+#     if(length(elements_to_use[[i]]) != 0){
+#       sscore_combined_list[[i]] <- data_list_mod[elements_to_use[[i]]] %>%
+#         purrr::reduce(full_join, by = ID_column) %>%
+#         computeSscore(ID_column = ID_column) %>%
+#         dplyr::arrange(sscore_adj_pval)
+#     }
+#   }
+# 
+#   message("SORTED S_SCORE DATAFRAME")
+#   message(str(sscore_combined_list))
+# 
+#   message("--- binding dataframes")
+#   ## BIND S-SCORE DF ROWS ------------------------------------------------------
+# 
+#   if (!is.null(sscore_combined_list[[1]])){
+#     sscore_combined <- sscore_combined_list[[1]] %>%
+#       dplyr::select(uniprot_id,
+#                     dplyr::starts_with("feature_id"),
+#                     sscore,
+#                     sscore_pval,
+#                     sscore_adj_pval,
+#                     dplyr::starts_with("comb_"),
+#                     dplyr::starts_with("logfc"),
+#                     dplyr::starts_with("weighted"),
+#                     dplyr::starts_with("wk"))
+# 
+#     # if metabolomics included this step combines the non-metabolomics and metabolomics
+#     # s-score dataframes
+#     if (length(sscore_combined_list) == 2){
+#       sscore_combined <- dplyr::bind_rows(sscore_combined, sscore_combined_list[[2]]) %>%
+#         dplyr::select(uniprot_id,
+#                       chebi_id,
+#                       dplyr::starts_with("feature_id"),
+#                       sscore,
+#                       sscore_pval,
+#                       sscore_adj_pval,
+#                       dplyr::starts_with("comb_"),
+#                       dplyr::starts_with("logfc"),
+#                       dplyr::starts_with("weighted"),
+#                       dplyr::starts_with("wk"))
+#     }
+#   } else {
+#     sscore_combined <- sscore_combined_list[[2]] %>%
+#       dplyr::select(uniprot_id,
+#                     chebi_id,
+#                     dplyr::starts_with("feature_id"),
+#                     sscore,
+#                     sscore_pval,
+#                     sscore_adj_pval,
+#                     dplyr::starts_with("comb_"),
+#                     dplyr::starts_with("logfc"),
+#                     dplyr::starts_with("weighted"),
+#                     dplyr::starts_with("wk")) %>%
+#       dplyr::mutate(gene_symbol = "NA")
+#   }
+# 
+#   message("COMBINED S_SCORE DATAFRAME")
+#   message(str(sscore_combined))
+#   
+#   message("--- cleaning & formatting")
+#   ## CLEAN & FORMAT DATAFRAME --------------------------------------------------
+#   columns_to_process <- sscore_combined %>% dplyr::select(starts_with("feature_id_")) %>% names()
+#   
+#   sscore_combined <- sscore_combined %>%
+#     convertUniprotSymbol() %>%
+#     as.data.frame() %>%
+#     dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
+#     dplyr::mutate(across(where(is.character), ~ na_if(., "NULL"))) %>%
+#     as.data.frame() %>%
+#     dplyr::mutate(dplyr::across(dplyr::all_of(columns_to_process), ~stringr::str_replace(., ".*_", ""))) %>%
+#     dplyr::mutate(dplyr::across(dplyr::contains("feature_id_"), 
+#                                 ~{
+#                                   column_name <- as.character(cur_column())
+#                                   matching_string <- str_extract(column_name, "_(.*)")
+#                                   
+#                                   if (!is.na(matching_string)) {
+#                                     prefix_variable <- paste0("prefix_", tolower(gsub("\\d", "", matching_string)))
+#                                     paste(get(prefix_variable), ., sep = "")
+#                                   } else {
+#                                     .  # For columns without matching conditions, keep the original value
+#                                   }
+#                                 }
+#     )) %>%
+#     dplyr::mutate(across(where(is.character), ~ na_if(., "NA"))) %>%
+#     dplyr::mutate(across(where(is.character), ~ na_if(., "NULL"))) %>%
+#     as.data.frame() %>%
+#     dplyr::rowwise() %>%
+#     dplyr::mutate(sscore_label = paste(c(gene_symbol, dplyr::across(dplyr::all_of(columns_to_process), as.character)), collapse = "_"),
+#                   feature_id = ifelse(length(sscore_combined_list) == 2, coalesce(uniprot_id, chebi_id), uniprot_id)) %>%
+#     dplyr::ungroup() %>%
+#     as.data.frame() %>%
+#     dplyr::select(sscore_label, feature_id, gene_symbol, sscore, sscore_pval, sscore_adj_pval, everything())
+#   
+#   # assign("sscore_dataframe", sscore_combined, envir = .GlobalEnv)
+#   message("--- finished s-score integration")
+#   return(sscore_combined);
+# }
 
 # PCSF FORMATTING ##############################################################
 #' @title PCSF Formatting
@@ -621,23 +839,17 @@ sscoreVolcanoPlot <- function(sscore_dataframe,
   
   message("--- formatting data")
   data = sscore_combined_genes_metabols %>%
-    
     dplyr::select(sscore_label, sscore, sscore_adj_pval) %>%
-    
     dplyr::mutate(log10_score_adj_pval = -log10(sscore_adj_pval)) %>%
-    
     dplyr::mutate(regulation = case_when((sscore_adj_pval <= my_pval & sscore > 0) ~ "Up",
                                          (sscore_adj_pval <= my_pval & sscore < 0) ~ "Down" )) %>%
     dplyr::mutate(regulation = replace_na(regulation, "NoChange")) %>%
-    
     dplyr::mutate(color = case_when(regulation == "Up" ~ up_color,
                                     regulation == "Down" ~ down_color)) %>%
     dplyr::mutate(color = replace_na(color, "gray50")) %>%
-    
     dplyr::mutate(size = case_when(regulation == "Up" ~ 4,
                                    regulation == "Down" ~ 4 )) %>%
     dplyr::mutate(size = replace_na(size, 0.2)) %>%
-    
     dplyr::mutate(alpha = case_when(regulation == "Up" ~ 1,
                                     regulation == "Down" ~ 1 )) %>%
     dplyr::mutate(alpha = replace_na(alpha, 0.5))
@@ -662,18 +874,14 @@ sscoreVolcanoPlot <- function(sscore_dataframe,
   
   # Note: A single dot in the volcano plot may be labelled with multiple features because its the combination of those features that led to the derived s-score.
   message("--- generating plot")
-  plot <- ggplot(data, aes (x = sscore,
-                            y = -log10(sscore_adj_pval),
-                            text = paste("Identifier: ", sscore_label))) +
-    
-    geom_hline(yintercept = -log10(label_pval), linetype = "dashed") + # -log10(0.05) = 1.3
-    
-    geom_point(shape = 16, size = data$size, color = data$color, alpha = 0.5) +
-    
-    scale_color_manual(values = c("red" = "red", 
-                                  "blue" = "blue",
-                                  "black" = "black")) +
-    
+  plot <- ggplot2::ggplot(data, aes (x = sscore,
+                          y = -log10(sscore_adj_pval),
+                          text = paste("Identifier: ", sscore_label))) +
+    ggplot2::geom_hline(yintercept = -log10(label_pval), linetype = "dashed") + # -log10(0.05) = 1.3
+    ggplot2::geom_point(shape = 16, size = data$size, color = data$color, alpha = 0.5) +
+    ggplot2::scale_color_manual(values = c("red" = "red", 
+                                "blue" = "blue",
+                                "black" = "black")) +
     {if(add_labels == TRUE){
       ggrepel::geom_text_repel(data = topdown, 
                                aes(label = sscore_label, size = label_size),
@@ -682,23 +890,19 @@ sscoreVolcanoPlot <- function(sscore_dataframe,
                                max.overlaps = Inf,
                                min.segment.length = 0)
     }} + 
-    
-    labs(title = "S-Score Volcano Plot",
-         x = "Integrated S-score", 
-         y = "-log10 adj. p-value",
-         caption = paste("Num UP: ", nrow(data[data$regulation == "Up",]), 
-                         " & Num DOWN: ", nrow(data[data$regulation == "Down",]),
-                         sep = "")) +
-    
-    theme_bw() + 
-    
-    theme(axis.text.x = element_text(angle = 0, vjust = 0.5, hjust = 0.5, size = 13),
-          axis.title = element_text(size = 16),
-          plot.title = element_text(size = 18),
-          plot.caption = element_text(size = 12))
+    ggplot2::labs(title = "S-Score Volcano Plot",
+                  x = "Integrated S-score", 
+                  y = "-log10 adj. p-value",
+                  caption = paste("Num UP: ", nrow(data[data$regulation == "Up",]), 
+                                  " & Num DOWN: ", nrow(data[data$regulation == "Down",]),
+                                  sep = "")) +
+    ggplot2::theme_bw() + 
+    ggplot2::theme(axis.text.x = element_text(angle = 0, vjust = 0.5, hjust = 0.5, size = 13),
+                   axis.title = element_text(size = 16),
+                   plot.title = element_text(size = 18),
+                   plot.caption = element_text(size = 12))
   
   return(plot)
-  
 }
 
 # S-SCORE VENN DIAGRAM #########################################################
@@ -827,6 +1031,7 @@ runSscoreEnrichment <- function(geneList,
                                 pval_cutoff = 0.05){
   # GENERATE GMT REFERENCES
   GMT_file <- list.files("./GMTs", pattern = gmt)
+  print(GMT_file)
   my_geneset = readr::read_delim(paste0("./GMTs/", GMT_file))
   colnames(my_geneset) <- c("pathway", "feature_ids")
   
