@@ -1,4 +1,12 @@
 
+library(shiny)
+library(tidyverse)
+library(ggplot2)
+library(markdown)
+library(Biobase)
+library(NormalyzerDE)
+library(pathview)
+library(dplyr)
 # NCmisc::list.functions.in.file("server.R", alphabetic = TRUE)
 
 source("loads.R")
@@ -329,7 +337,7 @@ server <- function(input, output, session) {
   ### REACTIVE OBJECTS ---------------------------------------------------------
   eset_prenorm <- reactive({
     eset_obj <- list()
-    
+    message("MAKING ESET PRENORM")
     for (i in 1:length(type())){
       eset_obj[[i]] <- makeEset(data()[[i]], 
                                 annotation(), 
@@ -341,13 +349,13 @@ server <- function(input, output, session) {
                                 uniprot_annotation = input$uniprot_annotation)
     }
     
-    assign("eset_prenorm", eset_obj, envir = .GlobalEnv)
+    # assign("eset_prenorm", eset_obj, envir = .GlobalEnv)
     return(eset_obj)
   })
   
   eset <- reactive({
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group))
-    
+    message("MAKING ESET")
     eset <- list()
     
     withProgress(message = "Starting data cleaning...", value = 0, {
@@ -365,7 +373,7 @@ server <- function(input, output, session) {
                                    outlier_cols = input$outlier_columns)
       }
     })
-    # assign("table_eset", eset, envir = .GlobalEnv)
+    # assign("eset", eset, envir = .GlobalEnv)
     return(eset)
   })
   
@@ -727,7 +735,7 @@ server <- function(input, output, session) {
     
     i <- which(type() == input$normplot_dataset)
     if (nrow(data.frame(Biobase::exprs(eset()[[i]]))) > 5000){
-      data <- dplyr::sample_n(data.frame(exprs(eset()[[i]])), 5000)
+      data <- dplyr::sample_n(data.frame(Biobase::exprs(eset()[[i]])), 5000)
     } else {
       data <- data.frame(Biobase::exprs(eset()[[i]]))
     }
@@ -1043,7 +1051,9 @@ server <- function(input, output, session) {
              color = input$UMAP_color,
              title_add = input$UMAP_title,
              shapes = input$UMAP_shapes,
-             add_labels = input$UMAP_labels)
+             add_labels = input$UMAP_labels,
+             min_dist = input$UMAP_min_dist,
+             use_size = input$UMAP_neighbors)
   }) %>% bindEvent(input$UMAP_button)
   
   ### RENDER UI ----------------------------------------------------------------
@@ -1054,6 +1064,13 @@ server <- function(input, output, session) {
     selectInput("UMAP_dataset",
                 label = "Choose dataset to visualize",
                 choices = options)
+  })
+  
+  output$UMAP_n_neighbors <- renderUI({
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group))
+    i <- which(type() == input$UMAP_dataset)
+    max_num <- length(Biobase::pData(eset()[[i]])$Group)
+    sliderInput("UMAP_neighbors", "", min = 2, max = max_num, value = max_num, step = 1)
   })
   
   ### PRINT/TABLE/PLOTS --------------------------------------------------------
@@ -2699,12 +2716,19 @@ server <- function(input, output, session) {
   })
   
   output$sscore_dataset_weights <- renderUI({
-    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$sscore_datasets))
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) &&
+          isTruthy(input$sscore_datasets))
     
-    i <- which(type() == input$sscore_datasets)
-    options <- data_format()[i]
+    # ensure type() and data_format() are same-length vectors/lists
+    df <- data.frame(type = type(), format = data_format(), stringsAsFactors = FALSE)
     
-    # Group into rows of 2 columns
+    # filter only selected datasets, preserving input order
+    selected <- df[df$type %in% input$sscore_datasets, , drop = FALSE]
+    selected <- selected[match(input$sscore_datasets, selected$type), ]
+    
+    options <- selected$format
+    
+    # group into rows of 2
     rows <- lapply(seq(1, length(options), by = 2), function(j) {
       cols <- list(
         column(6, numericInput(
@@ -2714,7 +2738,6 @@ server <- function(input, output, session) {
         ))
       )
       
-      # Add second column if available
       if ((j + 1) <= length(options)) {
         cols[[2]] <- column(6, numericInput(
           inputId = paste0("sscore_dataset_weight_", options[j + 1]),
@@ -2728,6 +2751,7 @@ server <- function(input, output, session) {
     
     tagList(rows)
   })
+  
   
   
   output$sscore_coef_options <- renderUI({
@@ -3756,6 +3780,79 @@ server <- function(input, output, session) {
     }
   )
   
+  output$pcsf_graphml_ppi_download <- downloadHandler(
+    filename = function() {
+      paste("PCSF_PPI_", input$network_input_type, Sys.Date(), ".graphml", sep = "")
+    },
+
+    content = function(file){
+      req(input$network_input_type)
+      shiny::validate(need(nrow(PCSF_input()) > 0, "There are no significant variables based on the applied cutoffs."))
+      
+      visIgraph <- PCSFVisNodes(pcsf_net = PCSF_network(),
+                                pcsf_input_data = PCSF_input(),
+                                graphml = TRUE) 
+      
+      igraph::write_graph(graph = visIgraph,
+                          file = file,
+                          format = "graphml")
+    }
+  )
+  
+  output$pcsf_graphml_influence_download <- downloadHandler(
+    filename = function() {
+      paste("PCSF_influence_", input$network_input_type, Sys.Date(), ".graphml", sep = "")
+    },
+    
+    content = function(file){
+      req(input$network_input_type)
+      shiny::validate(need(nrow(PCSF_input()) > 0, "There are no significant variables based on the applied cutoffs."))
+      
+      visIgraph <- PCSFVisInfluential(pcsf_net = PCSF_network(),
+                                      graphml = TRUE) 
+      
+      igraph::write_graph(graph = visIgraph,
+                          file = file,
+                          format = "graphml")
+    }
+  )
+  
+  output$pcsf_graphml_enrichedSubnet_download <- downloadHandler(
+    filename = function() {
+      paste("PCSF_enrichedSubnet_", input$network_input_type, Sys.Date(), ".graphml", sep = "")
+    },
+    
+    content = function(file){
+      req(input$network_input_type, input$PCSF_enrichment_button)
+      shiny::validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
+      
+      visIgraph <- pcsfEnrichedSubnet(pcsf_enrich_pathway = PCSF_enriched(),
+                                      graphml = TRUE)
+      
+      igraph::write_graph(graph = visIgraph,
+                          file = file,
+                          format = "graphml")
+    }
+  )
+  
+  output$pcsf_graphml_enrichedContracted_download <- downloadHandler(
+    filename = function() {
+      paste("PCSF_enrichedContracted_", input$network_input_type, Sys.Date(), ".graphml", sep = "")
+    },
+    
+    content = function(file){
+      req(input$network_input_type, input$PCSF_enrichment_button)
+      shiny::validate(need(!is.null(PCSF_enriched()), "There are no enriched clusters to display. Try choosing another database for enrichment, adjusting the cutoff values, or selecting another input."))
+      
+      visIgraph <- pcsfEnrichedContracted(pcsf_enrich_pathway = PCSF_enriched(),
+                                          graphml = TRUE)
+      
+      igraph::write_graph(graph = visIgraph,
+                          file = file,
+                          format = "graphml")
+    }
+  )
+  
   ## REPORT GENERATION #########################################################
   output$checkrender <- renderText({
     if (identical(rmarkdown::metadata$runtime, "shiny")) {
@@ -3765,10 +3862,83 @@ server <- function(input, output, session) {
     }
   })
   
+  # # Reactive for ZIP file path
+  # zip_file_path <- reactive({
+  #   file.path(tempdir(), paste0(report_file_name(), ".zip"))
+  # })
+  # 
+  # # Reactive value to track when ZIP is ready
+  # zip_ready <- reactiveVal(FALSE)
+  # 
+  # observe({
+  #   req(report_file_name())
+  #   invalidateLater(1000)
+  #   
+  #   report_folder <- file.path(tempdir(), report_file_name())
+  #   zip_target <- file.path(tempdir(), paste0(report_file_name(), ".zip"))
+  #   
+  #   if (dir.exists(report_folder) && length(list.files(report_folder, recursive = TRUE)) > 0) {
+  #     if (!file.exists(zip_target)) {
+  #       message("Zipping clean folder: ", report_folder)
+  #       
+  #       # Create a fresh temporary parent (not under the same tempdir symlink chain)
+  #       tmp_parent <- tempfile(pattern = "zip_parent_")
+  #       dir.create(tmp_parent)
+  #       on.exit({
+  #         # try to clean up the temp parent; ignore errors
+  #         try(unlink(tmp_parent, recursive = TRUE, force = TRUE), silent = TRUE)
+  #       }, add = TRUE)
+  #       
+  #       # Copy the report folder into the fresh parent (preserve structure)
+  #       copied_folder <- file.path(tmp_parent, basename(report_folder))
+  #       # recursive copy
+  #       ok <- file.copy(report_folder, copied_folder, recursive = TRUE)
+  #       if (!ok) {
+  #         warning("Failed to copy report folder for zipping; falling back to direct zip.")
+  #         # fallback: try zipping in-place (best-effort)
+  #         old_wd <- getwd()
+  #         on.exit(setwd(old_wd), add = TRUE)
+  #         setwd(dirname(report_folder))
+  #         zip::zipr(zipfile = zip_target, files = basename(report_folder))
+  #       } else {
+  #         # zip from the new clean parent so the stored paths begin with basename(report_folder)
+  #         old_wd <- getwd()
+  #         on.exit(setwd(old_wd), add = TRUE)
+  #         setwd(tmp_parent)
+  #         
+  #         zip::zipr(zipfile = zip_target, files = basename(report_folder))
+  #       }
+  #       
+  #       # optionally verify zip exists and has expected content (simple check)
+  #       if (file.exists(zip_target)) {
+  #         message("Created zip: ", zip_target)
+  #       } else {
+  #         warning("Zip creation failed.")
+  #       }
+  #     }
+  #     zip_ready(TRUE)
+  #   }
+  # })
+  # 
+  # 
+  # 
+  # # Conditionally render the download button when ZIP is ready
+  # output$download_report_ui <- renderUI({
+  #   req(zip_ready())
+  #   downloadButton("download_report", "Download Report Folder",
+  #                  style = "color: #D8EAFF; background-color: #61A6F9; border-color: 
+  #                           #61A6F9; border-radius: 10px; border-width: 2px")
+  # })
+  # 
+  # # Download handler
+  # output$download_report <- downloadHandler(
+  #   filename = function() { paste0(report_file_name(), ".zip") },
+  #   content = function(file) {
+  #     file.copy(zip_file_path(), file)
+  #   }
+  # )
+  
   ### RMD REPORT DOWNLOAD/PARAMS -----------------------------------------------
-  report_name <- reactive({
-    
-  })
   
   output$report <- downloadHandler(
     filename = function() {paste0(report_file_name(), ".html")},
@@ -3841,24 +4011,27 @@ server <- function(input, output, session) {
   
   ### REPORT NAME --------------------------------------------------------------
   report_file_name <- reactive({
+    message("MAKING FILE NAME")
     name <- paste0("OmNI_Report_", format(Sys.time(), "%y%m%d%H%M"))
     
     if (input$report_name != ""){
       name <- paste0(make.names(input$report_name), "_OmNI_Report_", format(Sys.time(), "%y%m%d%H%M"))
     } 
     
+    message("MADE FILE NAME")
     return(name)
   })
   
   #### REPORT MD PLOT -----------------------------------------------------------
   report_md_contrasts <- reactive({
     req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$group))
-    
+    message("MAKING CONTRASTS")
     contrasts <- drawMD(annot = annotation(),
                         eset = eset()[[1]],
                         type = type()[i],
                         return_logfc_index = TRUE,
                         logfc_index_choice = NULL)
+    message("MADE CONTRASTS")
   })
   
   #### REPORT LIMMA LINEAR MODEL -----------------------------------------------
@@ -4284,12 +4457,19 @@ server <- function(input, output, session) {
   })
   
   output$report_sscore_dataset_weights <- renderUI({
-    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) && isTruthy(input$report_sscore_datasets))
+    req(((isTruthy(input$data_file) && isTruthy(input$annotation_file)) || isTruthy(input$use_example_data)) &&
+          isTruthy(input$report_sscore_datasets))
     
-    i <- which(type() == input$report_sscore_datasets)
-    options <- data_format()[i]
+    # ensure type() and data_format() are same-length vectors/lists
+    df <- data.frame(type = type(), format = data_format(), stringsAsFactors = FALSE)
     
-    # Group into rows of 2 columns
+    # filter only selected datasets, preserving input order
+    selected <- df[df$type %in% input$report_sscore_datasets, , drop = FALSE]
+    selected <- selected[match(input$report_sscore_datasets, selected$type), ]
+    
+    options <- selected$format
+    
+    # group into rows of 2
     rows <- lapply(seq(1, length(options), by = 2), function(j) {
       cols <- list(
         column(6, numericInput(
@@ -4299,7 +4479,6 @@ server <- function(input, output, session) {
         ))
       )
       
-      # Add second column if available
       if ((j + 1) <= length(options)) {
         cols[[2]] <- column(6, numericInput(
           inputId = paste0("report_sscore_dataset_weight_", options[j + 1]),
@@ -4473,7 +4652,7 @@ server <- function(input, output, session) {
                 "CELEGANS_GOBP", "ZEBRAFISH_GOBP")
       
       GMT <- GMTs[grep(toupper(input$species), GMTs)]
-      
+      message(paste0("GMT: ", GMT))
       enriched <- list()
       for (i in 1:length(report_sscore_geneLists())){
         if (!grepl("CHEBI:", paste0(names(report_sscore_geneLists()[[i]]), collapse = "; "))){
@@ -4700,7 +4879,7 @@ server <- function(input, output, session) {
               enriched[[paste0(names(report_PCSF_network())[i])]] <- pcsfRunEnrichment(pcsf_net = report_PCSF_network()[[i]],
                                                                                      gmt = GMT)
               message("NON-METABOLITE ENRICHMENT PERFORMED: ", names(report_PCSF_network())[i])
-            } else if (grepl("CHEBI:", paste0(report_PCSF_network()[[i]]$gene_symbol, collapse = "; ")) && input$species == "human") {
+            } else if (grepl("CHEBI:", paste0(report_PCSF_network()[[i]]$gene_symbol, collapse = "; ")) && (input$species == "human" || input$species == "mouse")) {
               enriched[[paste0(names(report_PCSF_network())[i])]] <- pcsfRunEnrichment(pcsf_net = report_PCSF_network()[[i]],
                                                                                      gmt = "HUMAN_METABOLGENE")
               message("METABOLITE ENRICHMENT PERFORMED: ", names(report_PCSF_network())[i])
