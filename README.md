@@ -62,7 +62,7 @@ Upload and explore your datasets or use the built-in **Example Data**.
 - **Expression Matrices:** Compare **raw** and **normalized** matrices.  
 - **Normalization Plots:** Visualize quality control via violin, QQ, RLE, and density plots.  
 
-`![Data Upload](https://github.com/gracerhpotter/OmNI/raw/main/images/DataUploadOptions.png)`  
+![Data Upload](https://github.com/gracerhpotter/OmNI/raw/main/images/DataUploadOptions.png)
 
 There are a number of options for cutomization of data processing. Most options have preselections, and there are many tooltips providing information on the parameters. Once data is uploaded be sure to check that the **Group** selection (pulled from the provided annotation file) aligns with the desired analysis.
 
@@ -94,7 +94,7 @@ Conduct differential analysis within a single omic layer.
    - Supports GO, KEGG, Reactome, WikiPathways, MSigDB, and others.  
    - Results shown as dot plots, enrichment tables, gene set networks, and other visualizations from `clusterPofiler`.
 
-`![Linear Model](https://github.com/gracerhpotter/OmNI/raw/main/images/LinearModelOptions.png)`
+![Linear Model](https://github.com/gracerhpotter/OmNI/raw/main/images/LinearModelOptions.png)
 
 ---
 
@@ -128,7 +128,7 @@ Build molecular networks and perform cluster-level enrichment.
 Compile and export all results.
 
 📸 *Screenshot placeholder:*  
-`![Generate Report Tab](https://github.com/gracerhpotter/OmNI/raw/main/images/ReportPage.png)`
+![Generate Report Tab](https://github.com/gracerhpotter/OmNI/raw/main/images/ReportPage.png)
 
 ---
 
