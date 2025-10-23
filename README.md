@@ -9,7 +9,7 @@ An interactive shiny application version of the original Omics Notebook, with in
 
 An **example dataset** is included in the **Data Upload** tab so users can explore the workflow without uploading their own files.
 
-`![Example Dataset Toggle](images/ExampleDataset.png)`
+![Example Dataset Toggle](https://github.com/gracerhpotter/OmNI/raw/main/images/ExampleDataset.png)
 
 ---
 
