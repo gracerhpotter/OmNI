@@ -132,10 +132,10 @@ getUniprotAnnotation <- function(IDs,
                                  species = ""){
   
   # Uniprot entries to fetch (and col names)
-  uniprot_columns <- c("accession","cc_function", "cc_subcellular_location", "cc_disease",
+  uniprot_columns <- c("accession", "protein_name", "cc_function", "cc_subcellular_location", "cc_disease",
                      "go_p", "go_f", "go_c", "go_id")
   
-  uniprot_col_names <- c("ENTRY","Uniprot_Function", "Uniprot_Cellular_Location", "Uniprot_Disease",
+  uniprot_col_names <- c("ENTRY", "Protein.names", "Uniprot_Function", "Uniprot_Cellular_Location", "Uniprot_Disease",
                        "GO_biological_process", "GO_molecular_function", "GO_cellular_component", "GO_ID")
 
   if(genes){
