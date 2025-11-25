@@ -1,6 +1,8 @@
 
 # OmNI Shiny App
 
+[![DOI](https://zenodo.org/badge/817927556.svg)](https://doi.org/10.5281/zenodo.17714505)
+
 ## Overview
 
 An interactive shiny application version of the original Omics Notebook, with increased functionalities.
