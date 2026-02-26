@@ -1,7 +1,7 @@
 
 # OmNI Shiny App
 
-Grace Potter, Jacob A Beierle, Camron Bryant, Sadhna Phanse, Carl White, Andrew Emili, Indranil Paul, OmNI: a modular open-source framework for interactive multi-omics data integration and visualization, NAR Genomics and Bioinformatics, Volume 8, Issue 1, March 2026, lqaf206, ![https://doi.org/10.1093/nargab/lqaf206](https://doi.org/10.1093/nargab/lqaf206)
+Grace Potter, Jacob A Beierle, Camron Bryant, Sadhna Phanse, Carl White, Andrew Emili, Indranil Paul, OmNI: a modular open-source framework for interactive multi-omics data integration and visualization, NAR Genomics and Bioinformatics, Volume 8, Issue 1, March 2026, lqaf206, [https://doi.org/10.1093/nargab/lqaf206](https://doi.org/10.1093/nargab/lqaf206)
 
 [![DOI](https://zenodo.org/badge/817927556.svg)](https://doi.org/10.5281/zenodo.17714505)
 
