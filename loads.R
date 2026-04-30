@@ -10,7 +10,7 @@ cran_packages <- c("Biobase", "BiocManager", "bsicons", "bslib", "colourpicker",
                    "shinycssloaders", "tidyverse", "uwot", "VIM", "visNetwork")
 
 for (package in cran_packages){
-  if (!(package %in% installed.packages()[,"Package"])){install.packages(package, update = TRUE, ask = FALSE)}
+  if (!(package %in% installed.packages()[,"Package"])){install.packages(package, update = F, ask = FALSE)}
 }
 
 # INSTALL BIOCONDUCTOR PACKAGES
@@ -21,7 +21,7 @@ bioconductor_packages <- c('clusterProfiler', 'ComplexHeatmap', 'DBI', 'duckdb' 
                            'org.Rn.eg.db', 'org.Sc.sgd.db', "pathview", "pcaMethods", 
                            'topGO', "vsn")
 for (package in bioconductor_packages){
-  if (!(package %in% installed.packages()[,"Package"])){BiocManager::install(package, update = TRUE, ask = FALSE)}
+  if (!(package %in% installed.packages()[,"Package"])){BiocManager::install(package, update = F, ask = FALSE)}
 }
 
 # INSTALL GITHUB PACKAGES
